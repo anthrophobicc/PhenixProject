@@ -1,0 +1,17 @@
+.DS_Store
+Thumbs.db
+node_modules/
+dist/
+target/
+*.local
+sauvegarde-phenix.json
+*.carte.json
+*.calque.json
+
+# Médias, rendus et fichiers de compilation : trop lourds pour le dépôt
+communication/
+src-tauri/target/
+src-tauri/gen/
+.claude/
+*.zip
+*.mp4

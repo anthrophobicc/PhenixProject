@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phenix — plan du corpus</title>
+<style>
+:root{
+  --bg:#FBF9F5; --surface:#FFFFFF; --sunk:#F2EEE7;
+  --hair:rgba(31,29,26,.10); --hair2:rgba(31,29,26,.18);
+  --txt:#1F1D1A; --txt2:#4A463F; --dim:#8A8378;
+  --acc:#2C6E49; --acc-soft:rgba(44,110,73,.09); --acc-mid:rgba(44,110,73,.24);
+  --a1:#7A5AA8; --a2:#28607F; --a3:#A9660F;
+  --alert:#A32E22;
+  --shadow:0 1px 2px rgba(31,29,26,.04), 0 8px 24px rgba(31,29,26,.07);
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#16181A;--surface:#1D2023;--sunk:#111315;
+    --hair:rgba(230,235,240,.10);--hair2:rgba(230,235,240,.18);
+    --txt:#E3E7EA;--txt2:#B4BBC1;--dim:#7C858C;
+    --acc:#79C79A;--acc-soft:rgba(121,199,154,.11);--acc-mid:rgba(121,199,154,.26);
+    --a1:#B39BDB;--a2:#7FBCE0;--a3:#D7A75E;--alert:#DE8272;
+    --shadow:0 1px 2px rgba(0,0,0,.35),0 10px 30px rgba(0,0,0,.4);}
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--txt);
+  font-family:ui-sans-serif,-apple-system,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+  font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1020px;margin:0 auto;padding:0 20px}
+
+header{border-bottom:1px solid var(--hair);padding:34px 0 26px;margin-bottom:26px}
+h1{font-size:clamp(26px,5vw,36px);font-weight:700;letter-spacing:-.025em;margin:0 0 8px}
+.sub{color:var(--dim);font-size:16px;margin:0;max-width:56ch}
+
+.stats{display:flex;gap:0;margin:26px 0 0;border:1px solid var(--hair);border-radius:11px;overflow:hidden;background:var(--surface);flex-wrap:wrap}
+.stats div{flex:1 1 110px;padding:13px 16px;border-right:1px solid var(--hair)}
+.stats div:last-child{border-right:none}
+.stats .n{font-size:23px;font-weight:700;letter-spacing:-.02em}
+.stats .l{font-size:12px;color:var(--dim)}
+.a1 .n{color:var(--a1)} .a2 .n{color:var(--a2)} .a3 .n{color:var(--a3)}
+
+.bar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:22px 0 18px;position:sticky;top:0;background:var(--bg);padding:10px 0;z-index:5;border-bottom:1px solid var(--hair)}
+.srch{flex:1 1 220px;display:flex;align-items:center;gap:8px;background:var(--sunk);border:1px solid transparent;border-radius:9px;padding:9px 12px}
+.srch:focus-within{border-color:var(--acc-mid);background:var(--surface)}
+.srch input{flex:1;border:none;background:none;outline:none;font:inherit;font-size:14px;color:inherit;min-width:0}
+.srch svg{width:15px;height:15px;color:var(--dim);flex:0 0 auto}
+.f{border:1px solid var(--hair);border-radius:20px;padding:6px 13px;font-size:13px;color:var(--dim);background:none;cursor:pointer;font-family:inherit}
+.f:hover{color:var(--txt);border-color:var(--hair2)}
+.f.on{background:var(--acc);border-color:var(--acc);color:var(--bg);font-weight:600}
+.f.on.p1{background:var(--alert);border-color:var(--alert)}
+
+.axe{margin-bottom:14px;border:1px solid var(--hair);border-radius:12px;background:var(--surface);overflow:hidden}
+.axe>summary{
+  cursor:pointer;padding:16px 18px;font-weight:650;font-size:17px;letter-spacing:-.01em;
+  display:flex;align-items:center;gap:12px;list-style:none;
+}
+.axe>summary::-webkit-details-marker{display:none}
+.axe>summary::after{content:"▸";margin-left:auto;color:var(--dim);font-size:13px;transition:transform .15s}
+.axe[open]>summary::after{transform:rotate(90deg)}
+.axe>summary:hover{background:var(--sunk)}
+.num{width:26px;height:26px;border-radius:7px;display:grid;place-items:center;font-size:13px;font-weight:700;color:#fff;flex:0 0 auto}
+.axe.x1 .num{background:var(--a1)} .axe.x2 .num{background:var(--a2)} .axe.x3 .num{background:var(--a3)}
+.cnt{font-size:13px;color:var(--dim);font-weight:400}
+
+.cat{border-top:1px solid var(--hair)}
+.cat>summary{
+  cursor:pointer;padding:11px 18px 11px 28px;font-size:14.5px;font-weight:600;color:var(--txt2);
+  display:flex;align-items:center;gap:9px;list-style:none;
+}
+.cat>summary::-webkit-details-marker{display:none}
+.cat>summary::before{content:"▸";color:var(--dim);font-size:11px;transition:transform .15s}
+.cat[open]>summary::before{transform:rotate(90deg)}
+.cat>summary:hover{background:var(--sunk)}
+
+.list{padding:2px 14px 14px 28px}
+.item{
+  display:block;width:100%;text-align:left;border:1px solid transparent;border-radius:9px;
+  padding:10px 12px;margin-bottom:3px;cursor:pointer;background:none;font-family:inherit;color:inherit;
+}
+.item:hover{background:var(--sunk)}
+.item.open{background:var(--acc-soft);border-color:var(--acc-mid)}
+.item .row{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.item .t{font-weight:600;font-size:14.5px;letter-spacing:-.01em}
+.item .id{font-family:ui-monospace,Menlo,monospace;font-size:11px;color:var(--dim)}
+.item .d{font-size:13.5px;color:var(--dim);margin-top:5px;display:none;line-height:1.55}
+.item.open .d{display:block}
+.pr{font-size:10.5px;font-weight:700;padding:2px 7px;border-radius:20px;letter-spacing:.03em}
+.pr1{background:var(--alert);color:#fff}
+.pr2{background:var(--acc-soft);color:var(--acc)}
+.pr3{background:var(--sunk);color:var(--dim)}
+.done{background:var(--acc);color:var(--bg);width:16px;height:16px;border-radius:50%;display:inline-grid;place-items:center;font-size:10px;font-weight:800;flex:0 0 auto}
+
+.vide{padding:40px 18px;text-align:center;color:var(--dim)}
+footer{border-top:1px solid var(--hair);margin-top:40px;padding:24px 0 50px;color:var(--dim);font-size:13.5px}
+footer p{margin:0 0 8px;max-width:64ch}
+kbd{background:var(--sunk);border:1px solid var(--hair);border-radius:4px;padding:1px 5px;font-family:ui-monospace,monospace;font-size:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Plan du corpus Phenix</h1>
+  <p class="sub">Cent fiches à écrire, réparties par axe et par catégorie.
+     Cliquez sur une fiche pour voir ce qu'elle doit couvrir.</p>
+  <div class="stats" id="stats"></div>
+</header>
+
+<div class="bar">
+  <div class="srch">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+    <input id="q" type="search" placeholder="Chercher un sujet…">
+  </div>
+  <button class="f on" data-f="tout">Tout</button>
+  <button class="f p1" data-f="p1">Fondation</button>
+  <button class="f" data-f="p2">Utile</button>
+  <button class="f" data-f="p3">Ensuite</button>
+  <button class="f" data-f="fait">Déjà écrites</button>
+</div>
+
+<div id="arbre"></div>
+
+<footer>
+  <p><strong>Fondation</strong> — sans ces fiches, les autres reposent sur du vide.
+     <strong>Utile</strong> — la couche qui rend le corpus réellement exploitable.
+     <strong>Ensuite</strong> — approfondissement, une fois la base solide.</p>
+  <p>Les fiches marquées d'un ✓ sont déjà écrites et livrées avec l'application.</p>
+  <p>Astuce : <kbd>/</kbd> place le curseur dans la recherche.</p>
+</footer>
+
+</div>
+
+<script>
+/* 100 fiches à écrire — Axe 1 : 10 · Axe 2 : 50 · Axe 3 : 40
+   p = priorité (1 fondation, 2 utile, 3 approfondissement) */
+const PLAN=[
+
+/* ================== AXE 1 — LA MÉMOIRE (10) ================== */
+{a:1,c:"L'Éveil",id:"MEM-EVE-002",t:"Le langage, ou coordonner sans être ensemble",d:"Pourquoi parler permet de planifier, de mentir et de transmettre ce qu'on n'a pas vécu.",p:2},
+{a:1,c:"L'Éveil",id:"MEM-EVE-003",t:"L'outil de pierre : la première technique transmise",d:"Un savoir-faire qui traverse les générations sans support écrit. Comment il se maintient et comment il se perd.",p:3},
+
+{a:1,c:"Les révolutions agricoles",id:"MEM-AGR-002",t:"La domestication est réciproque",d:"Ce que l'homme a fait aux espèces, et ce que les espèces lui ont imposé en retour.",p:2},
+{a:1,c:"Les révolutions agricoles",id:"MEM-AGR-003",t:"Le métal change le rapport de force",d:"Pourquoi la maîtrise d'une matière première réorganise une société entière.",p:3},
+
+{a:1,c:"Cités états et premiers empires",id:"MEM-CIT-002",t:"La loi écrite : de l'arbitrage à la norme",d:"Passer du jugement au cas par cas à la règle publiée. Ce qu'on y gagne et ce qu'on y perd.",p:2},
+{a:1,c:"Cités états et premiers empires",id:"MEM-CIT-003",t:"Pourquoi les empires s'étendent puis se figent",d:"Le coût de l'administration croît plus vite que le territoire. Le mécanisme qui les arrête.",p:3},
+
+{a:1,c:"Ère des échanges et grands pôles",id:"MEM-ECH-002",t:"La monnaie : ce qu'elle remplace vraiment",d:"Elle n'apparaît pas pour faciliter le troc mais pour enregistrer des dettes. Conséquences.",p:2},
+
+{a:1,c:"Accélération technique",id:"MEM-ACC-002",t:"La vapeur, quand l'énergie cesse d'être vivante",d:"Avant : muscle, vent, eau. Après : une puissance qu'on décide. Ce que ça change à tout.",p:2},
+
+
+/* ================== AXE 2 — LA TECHNIQUE (50) ================== */
+
+/* --- Agriculture et Botanique (7) --- */
+{a:2,c:"Agriculture et Botanique",id:"TEC-BOT-004",t:"Les arbres : reconnaître, tailler, exploiter",d:"Essences courantes, usages du bois, taille et régénération.",p:3},
+{a:2,c:"Agriculture et Botanique",id:"TEC-AGR-003",t:"Le compost : fabriquer du sol",d:"Rapport carbone-azote, aération, humidité, température. Pourquoi un tas rate.",p:2},
+{a:2,c:"Agriculture et Botanique",id:"TEC-AGR-004",t:"Rotations et associations de cultures",d:"Ce qui épuise un sol, ce qui le restaure, et ce qui se plante ensemble.",p:2},
+
+/* --- Alimentation et Conservation (7) --- */
+{a:2,c:"Alimentation et Conservation",id:"TEC-ALI-003",t:"Fumage et séchage de la viande et du poisson",d:"Fumée froide, fumée chaude, salaison préalable. Ce qui marche et ce qui empoisonne.",p:2},
+{a:2,c:"Alimentation et Conservation",id:"TEC-ALI-004",t:"Faire du pain sans levure industrielle",d:"Levain naturel, farines, cuisson sans four. Le pain est le rendement calorique le plus élevé.",p:2},
+{a:2,c:"Alimentation et Conservation",id:"TEC-ALI-006",t:"Le lait : transformer avant qu'il ne tourne",d:"Caillage, égouttage, beurre, lactosérum. Une matière première très périssable et très riche.",p:3},
+{a:2,c:"Alimentation et Conservation",id:"TEC-ALI-007",t:"Le sel : produire, purifier, utiliser",d:"Évaporation, saumure, dosages de salaison. Le consommable le plus recherché après l'eau.",p:2},
+
+/* --- Chimie et Matériaux (7) --- */
+{a:2,c:"Chimie et Matériaux",id:"TEC-CHI-003",t:"La combustion : ce qui brûle et pourquoi",d:"Triangle du feu, pouvoir calorifique, combustion incomplète. Fonde le feu et le moteur.",p:2},
+{a:2,c:"Chimie et Matériaux",id:"TEC-CHI-004",t:"Colles, mastics et adhésifs improvisés",d:"Colles animales, résines, brai. Assembler quand on n'a rien pour visser.",p:3},
+{a:2,c:"Chimie et Matériaux",id:"TEC-MAT-002",t:"L'argile et la céramique",d:"Trouver, préparer, façonner, cuire. Le seul contenant fabricable de bout en bout.",p:2},
+{a:2,c:"Chimie et Matériaux",id:"TEC-MAT-004",t:"Le verre et les contenants",d:"Composition, fusion, recuit. Surtout : réutiliser, recouper, refermer étanche.",p:3},
+
+/* --- Construction et Habitat (7) --- */
+{a:2,c:"Construction et Habitat",id:"TEC-CON-002",t:"Fondations et drainage",d:"Ce qui porte, ce qui gonfle, ce qui gèle. Drainer avant de bâtir.",p:2},
+{a:2,c:"Construction et Habitat",id:"TEC-CON-003",t:"Les liants : terre, chaux, ciment",d:"Prise, résistance, réversibilité. Pourquoi la terre et la chaux reviennent.",p:2},
+{a:2,c:"Construction et Habitat",id:"TEC-CON-008",t:"Construire en terre crue",d:"Bauge, adobe, pisé, torchis. Matériau gratuit, technique exigeante.",p:3},
+
+/* --- Mécanique et Transport (7) --- */
+{a:2,c:"Mécanique et Transport",id:"TEC-MEC-002",t:"Axes, roulements et lubrification",d:"Frottement, jeu, usure. Pourquoi une machine grippe et comment l'éviter.",p:2},
+{a:2,c:"Mécanique et Transport",id:"TEC-MEC-003",t:"Transmettre un mouvement",d:"Engrenages, courroies, chaînes, rapports. Adapter vitesse et couple.",p:2},
+{a:2,c:"Mécanique et Transport",id:"TEC-MEC-006",t:"La forge : chauffer, former, tremper",d:"Températures, martelage, trempe et revenu. Refaire un outil à partir de ferraille.",p:3},
+{a:2,c:"Mécanique et Transport",id:"TEC-MEC-007",t:"Les embarcations : flottaison et stabilité",d:"Poussée, centre de gravité, franc-bord. Pourquoi un bateau chavire.",p:3},
+
+/* --- Santé et Chirurgie (8) --- */
+{a:2,c:"Santé et Chirurgie",id:"TEC-SAN-006",t:"Douleurs abdominales : distinguer le grave",d:"Les signes qui imposent de chercher de l'aide, et ceux qui permettent d'attendre.",p:2},
+{a:2,c:"Santé et Chirurgie",id:"TEC-SAN-007",t:"Sans antibiotique : ce qu'on peut et ne peut pas faire",d:"Les limites réelles du soin non médicamenteux, dites franchement.",p:2},
+{a:2,c:"Santé et Chirurgie",id:"TEC-SAN-008",t:"Grossesse et accouchement : les repères essentiels",d:"Déroulement normal, signes d'alerte, gestes utiles et gestes à ne pas faire.",p:2},
+{a:2,c:"Santé et Chirurgie",id:"TEC-SAN-011",t:"Le sommeil : mécanismes et dette",d:"Cycles, privation, effets mesurés sur la vigilance et le jugement. Données, pas conseils.",p:2},
+{a:2,c:"Santé et Chirurgie",id:"TEC-SAN-009",t:"Morsures, piqûres et envenimations",d:"Ce qui est urgent, ce qui ne l'est pas, et les gestes qui aggravent.",p:2},
+
+/* --- Énergie et Électricité (7) --- */
+{a:2,c:"Énergie et Électricité",id:"TEC-ENE-005",t:"Produire par l'eau et le vent",d:"Roue, turbine, éolienne. Puissance disponible et ordres de grandeur réalistes.",p:2},
+{a:2,c:"Énergie et Électricité",id:"TEC-ENE-006",t:"Moteur électrique et génératrice",d:"La même machine dans les deux sens. Récupérer, tester, réutiliser.",p:3},
+{a:2,c:"Énergie et Électricité",id:"TEC-ENE-007",t:"Chauffer : rendements comparés",d:"Bois, gaz, électricité, solaire thermique. Combien d'énergie pour quel résultat.",p:2},
+
+/* ================== AXE 3 — LA SURVIE (40) ================== */
+
+/* --- Feu, Eau et Ressources (6) --- */
+{a:3,c:"Feu, Eau et Ressources",id:"SURV-FEU-003",t:"Cuisiner sans ustensile",d:"Pierres chaudes, braises, cuisson enterrée, contenants improvisés.",p:2},
+{a:3,c:"Feu, Eau et Ressources",id:"SURV-EAU-003",t:"Creuser et protéger un point d'eau",d:"Où creuser, comment empêcher la contamination, comment le maintenir.",p:2},
+
+{a:3,c:"Feu, Eau et Ressources",id:"SURV-OUT-002",t:"Projeter à distance : fronde, arc, propulseur",d:"Comment une matière élastique emmagasine puis rend l'énergie. Portée réelle, précision réelle, temps d'apprentissage réel.",p:2},
+
+/* --- Mouvement et Discrétion (6) --- */
+{a:3,c:"Mouvement et Discrétion",id:"SURV-DEP-002",t:"Franchir un relief",d:"Pente, éboulis, neige, forêt dense. Quand contourner coûte moins cher que monter.",p:2},
+{a:3,c:"Mouvement et Discrétion",id:"SURV-DEP-003",t:"Se déplacer en milieu urbain dégradé",d:"Itinéraires, points de blocage, verticalité, sorties. La ville a ses propres règles.",p:2},
+{a:3,c:"Mouvement et Discrétion",id:"SURV-DIS-001",t:"Ne pas laisser de traces",d:"Sentes, feu, déchets, odeurs. Ce qui reste après votre passage.",p:2},
+
+
+/* --- Psychologie Sociale et Troc (5) --- */
+{a:3,c:"Psychologie Sociale et Troc",id:"SURV-SOC-002",t:"Désamorcer un conflit",d:"Repérer l'escalade, réduire l'enjeu, sortir sans humilier personne.",p:2},
+{a:3,c:"Psychologie Sociale et Troc",id:"SURV-SOC-003",t:"Accueillir ou refuser quelqu'un",d:"La décision la plus lourde d'un groupe. Critères, procédure, réversibilité.",p:3},
+
+{a:3,c:"Psychologie Sociale et Troc",id:"SURV-SOC-004",t:"Protéger un lieu sans le transformer en cible",d:"Alerte précoce, obstacles passifs, éclairage, discrétion. Dissuader plutôt qu'affronter.",p:2},
+
+/* --- Récupération (5) --- */
+{a:3,c:"Récupération",id:"SURV-REC-004",t:"Démonter proprement",d:"Ordre, marquage, tri des pièces. Un démontage raté rend l'objet irrécupérable.",p:2},
+{a:3,c:"Récupération",id:"SURV-REC-005",t:"Réparer un vêtement",d:"Points de couture, pièces, imperméabilisation. Le textile est votre première isolation.",p:2},
+{a:3,c:"Récupération",id:"SURV-REC-006",t:"Récupérer et stocker du carburant",d:"Dangers, contenants, dégradation dans le temps, siphonnage.",p:2},
+
+/* --- Défense, chasse et armement de fortune (5) --- */
+
+/* --- Secourisme (6) --- */
+{a:3,c:"Secourisme",id:"URG-SEC-006",t:"Constituer une trousse de secours",d:"Ce qui sert vraiment, par ordre d'utilité et de poids. Contre les listes commerciales.",p:2},
+
+/* --- Signaux et Communications (6) --- */
+{a:3,c:"Signaux et Communications",id:"SIG-COM-005",t:"Laisser un message durable",d:"Support, emplacement, contenu, date. Un message mal placé n'est jamais lu.",p:2},
+
+/* --- Protocoles d'urgence (6) --- */
+{a:3,c:"Protocoles d'urgence",id:"URG-SEI-001",t:"Séisme",d:"Pendant, juste après, répliques. Ce qui protège vraiment dans un bâtiment.",p:2},
+{a:3,c:"Protocoles d'urgence",id:"URG-NUC-001",t:"Accident nucléaire et retombées",d:"Distance, temps, écran. Se mettre à l'abri et savoir combien de temps y rester.",p:2},
+{a:3,c:"Protocoles d'urgence",id:"URG-CHIM-001",t:"Fuite chimique et nuage toxique",d:"Confinement ou évacuation, selon quoi décider. Le vent commande.",p:2}
+];
+
+const EXISTANT=[
+{
+"id": "URG-HYPO-001",
+"t": "Hypothermie",
+"a": 3,
+"c": "Protocoles d'urgence"
+},
+{
+"id": "URG-HEMO-001",
+"t": "Hémorragie externe",
+"a": 3,
+"c": "Protocoles d'urgence"
+},
+{
+"id": "URG-EAU-001",
+"t": "Rendre une eau potable",
+"a": 3,
+"c": "Feu, Eau et Ressources"
+},
+{
+"id": "SURV-ORI-001",
+"t": "S'orienter sans instrument",
+"a": 3,
+"c": "Mouvement et Discrétion"
+},
+{
+"id": "SURV-FEU-001",
+"t": "Produire et tenir un feu",
+"a": 3,
+"c": "Feu, Eau et Ressources"
+},
+{
+"id": "SURV-ABRI-001",
+"t": "Construire un abri d'urgence",
+"a": 3,
+"c": "Feu, Eau et Ressources"
+},
+{
+"id": "SURV-PLUIE-001",
+"t": "Collecter et stocker l'eau de pluie",
+"a": 3,
+"c": "Feu, Eau et Ressources"
+},
+{
+"id": "SIG-COM-001",
+"t": "Se signaler et être retrouvé",
+"a": 3,
+"c": "Signaux et Communications"
+},
+{
+"id": "TEC-MOTH-001",
+"t": "Le moteur thermique — fonctionnement complet",
+"a": 2,
+"c": "Mécanique et Transport"
+},
+{
+"id": "TEC-MOT-001",
+"t": "Les moteurs de bateau — typologie complète",
+"a": 2,
+"c": "Mécanique et Transport"
+},
+{
+"id": "TEC-ENE-001",
+"t": "Récupérer et réutiliser l'énergie électrique",
+"a": 2,
+"c": "Énergie et Électricité"
+},
+{
+"id": "MEM-AGR-001",
+"t": "Le surplus, la hiérarchie et la première dépendance",
+"a": 1,
+"c": "Les révolutions agricoles"
+},
+{
+"id": "URG-BRUL-001",
+"t": "Brûlures",
+"a": 3,
+"c": "Secourisme"
+},
+{
+"id": "TEC-CONS-001",
+"t": "Conserver les aliments sans électricité",
+"a": 2,
+"c": "Alimentation et Conservation"
+},
+{
+"id": "SURV-TROC-001",
+"t": "Échanger, négocier, tenir parole",
+"a": 3,
+"c": "Psychologie Sociale et Troc"
+},
+{
+"id": "MEM-EFF-001",
+"t": "Comment les sociétés s'effondrent",
+"a": 1,
+"c": "L'anthropocène"
+},
+{
+"id": "MEM-ACC-001",
+"t": "L'imprimerie, ou la copie qui cesse de se dégrader",
+"a": 1,
+"c": "Accélération technique"
+},
+{
+"id": "MEM-CIT-001",
+"t": "L'écriture est née des comptes, pas des poèmes",
+"a": 1,
+"c": "Cités états et premiers empires"
+},
+{
+"id": "MEM-ECH-001",
+"t": "Ce que les routes transportent vraiment",
+"a": 1,
+"c": "Ère des échanges et grands pôles"
+},
+{
+"id": "MEM-EVE-001",
+"t": "Le feu, la cuisson et ce qu'ils ont fait de nous",
+"a": 1,
+"c": "L'Éveil"
+},
+{
+"id": "SURV-GUE-001",
+"t": "Franchir un cours d'eau",
+"a": 3,
+"c": "Feu, Eau et Ressources"
+},
+{
+"id": "SURV-NUIT-001",
+"t": "Se déplacer de nuit",
+"a": 3,
+"c": "Mouvement et Discrétion"
+},
+{
+"id": "SURV-REC-001",
+"t": "Fouiller un bâtiment abandonné",
+"a": 3,
+"c": "Récupération"
+},
+{
+"id": "SURV-REC-002",
+"t": "Reconnaître ce qui est encore utilisable",
+"a": 3,
+"c": "Récupération"
+},
+{
+"id": "TEC-BOT-001",
+"t": "Identifier une plante avec méthode",
+"a": 2,
+"c": "Agriculture et Botanique"
+},
+{
+"id": "TEC-CHI-001",
+"t": "Acides, bases et pH — ce qu'il faut vraiment en retenir",
+"a": 2,
+"c": "Chimie et Matériaux"
+},
+{
+"id": "TEC-CON-001",
+"t": "Charges, murs et humidité — comprendre un bâtiment",
+"a": 2,
+"c": "Construction et Habitat"
+},
+{
+"id": "TEC-COR-001",
+"t": "La corrosion des métaux",
+"a": 2,
+"c": "Chimie et Matériaux"
+},
+{
+"id": "TEC-MAC-001",
+"t": "Les machines simples",
+"a": 2,
+"c": "Mécanique et Transport"
+},
+{
+"id": "TEC-SAN-001",
+"t": "Empêcher une plaie de s'infecter",
+"a": 2,
+"c": "Santé et Chirurgie"
+},
+{
+"id": "TEC-SAN-002",
+"t": "Ce que dit la fièvre",
+"a": 2,
+"c": "Santé et Chirurgie"
+},
+{
+"id": "TEC-SOL-001",
+"t": "Lire un sol",
+"a": 2,
+"c": "Agriculture et Botanique"
+},
+{
+"id": "TEC-SOLR-001",
+"t": "Le solaire photovoltaïque, du panneau à la prise",
+"a": 2,
+"c": "Énergie et Électricité"
+},
+{
+"id": "URG-CHAL-001",
+"t": "Coup de chaleur",
+"a": 3,
+"c": "Secourisme"
+},
+{
+"id": "URG-ETOU-001",
+"t": "Étouffement",
+"a": 3,
+"c": "Protocoles d'urgence"
+},
+{
+"id": "URG-FRAC-001",
+"t": "Fractures, entorses et immobilisation",
+"a": 3,
+"c": "Secourisme"
+},
+{
+"id": "URG-INCO-001",
+"t": "Personne inconsciente",
+"a": 3,
+"c": "Protocoles d'urgence"
+},
+{
+"id": "SURV-DEP-001",
+"t": "Marcher longtemps",
+"a": 3,
+"c": "Mouvement et Discrétion"
+},
+{
+"id": "SURV-FEU-002",
+"t": "Allumer sans briquet",
+"a": 3,
+"c": "Feu, Eau et Ressources"
+},
+{
+"id": "SURV-PSY-002",
+"t": "Décider sous stress",
+"a": 3,
+"c": "Psychologie Sociale et Troc"
+},
+{
+"id": "SURV-SOC-001",
+"t": "Organiser un petit groupe",
+"a": 3,
+"c": "Psychologie Sociale et Troc"
+},
+{
+"id": "TEC-ALI-001",
+"t": "Ce que le corps consomme",
+"a": 2,
+"c": "Alimentation et Conservation"
+},
+{
+"id": "TEC-ENE-002",
+"t": "Lire un circuit électrique",
+"a": 2,
+"c": "Énergie et Électricité"
+},
+{
+"id": "TEC-MAT-001",
+"t": "Le bois",
+"a": 2,
+"c": "Chimie et Matériaux"
+},
+{
+"id": "TEC-MEC-005",
+"t": "Le tranchant",
+"a": 2,
+"c": "Mécanique et Transport"
+},
+{
+"id": "TEC-SAN-004",
+"t": "Hygiène et transmission des maladies",
+"a": 2,
+"c": "Santé et Chirurgie"
+},
+{
+"id": "TEC-SAN-005",
+"t": "Déshydratation",
+"a": 2,
+"c": "Santé et Chirurgie"
+},
+{
+"id": "URG-INC-001",
+"t": "Incendie",
+"a": 3,
+"c": "Protocoles d'urgence"
+},
+{
+"id": "URG-SEC-001",
+"t": "Examiner une victime",
+"a": 3,
+"c": "Secourisme"
+},
+{
+"id": "URG-EFF-001",
+"t": "Quand le système s'arrête",
+"a": 3,
+"c": "Protocoles d'urgence"
+},
+{
+"id": "TEC-RAD-001",
+"t": "Construire un récepteur radio",
+"a": 2,
+"c": "Énergie et Électricité"
+},
+{
+"id": "SURV-COM-001",
+"t": "Décider si quelque chose est comestible",
+"a": 3,
+"c": "Feu, Eau et Ressources"
+},
+{
+"id": "TEC-AER-001",
+"t": "Comment vole un avion",
+"a": 2,
+"c": "Mécanique et Transport"
+},
+{
+"id": "TEC-BOT-003",
+"t": "Les plantes toxiques",
+"a": 2,
+"c": "Agriculture et Botanique"
+},
+{
+"id": "TEC-NAV-001",
+"t": "Conduire un bateau",
+"a": 2,
+"c": "Mécanique et Transport"
+},
+{
+"id": "TEC-NUI-001",
+"t": "Voir dans le noir",
+"a": 2,
+"c": "Énergie et Électricité"
+},
+{
+"id": "TEC-VOI-001",
+"t": "Conduire une voiture",
+"a": 2,
+"c": "Mécanique et Transport"
+},
+{
+"id": "SURV-ANI-001",
+"t": "Animaux dangereux",
+"a": 3,
+"c": "Mouvement et Discrétion"
+},
+{
+"id": "SURV-EAU-004",
+"t": "Filtrer avec ce qu'on a",
+"a": 3,
+"c": "Feu, Eau et Ressources"
+},
+{
+"id": "SURV-ORI-002",
+"t": "Lire une carte",
+"a": 3,
+"c": "Mouvement et Discrétion"
+},
+{
+"id": "SURV-OUT-001",
+"t": "Fabriquer un outil tranchant",
+"a": 3,
+"c": "Feu, Eau et Ressources"
+},
+{
+"id": "SURV-PSY-001",
+"t": "Tenir dans la durée",
+"a": 3,
+"c": "Psychologie Sociale et Troc"
+},
+{
+"id": "SURV-REC-003",
+"t": "Récupérer sur un véhicule",
+"a": 3,
+"c": "Récupération"
+},
+{
+"id": "TEC-CHI-002",
+"t": "Fabriquer du savon",
+"a": 2,
+"c": "Chimie et Matériaux"
+},
+{
+"id": "TEC-CON-007",
+"t": "Chauffer sans s'intoxiquer",
+"a": 2,
+"c": "Construction et Habitat"
+},
+{
+"id": "TEC-ENE-004",
+"t": "Les batteries",
+"a": 2,
+"c": "Énergie et Électricité"
+},
+{
+"id": "TEC-MAT-003",
+"t": "Fibres et cordages",
+"a": 2,
+"c": "Chimie et Matériaux"
+},
+{
+"id": "TEC-SAN-003",
+"t": "Anatomie fonctionnelle",
+"a": 2,
+"c": "Santé et Chirurgie"
+},
+{
+"id": "URG-SEC-002",
+"t": "Noyade",
+"a": 3,
+"c": "Secourisme"
+},
+{
+"id": "MEM-ANT-002",
+"t": "Les réseaux, la puissance et la fragilité",
+"a": 1,
+"c": "L'anthropocène"
+},
+{
+"id": "SIG-COM-002",
+"t": "La radio, sans jargon",
+"a": 3,
+"c": "Signaux et Communications"
+},
+{
+"id": "SIG-COM-006",
+"t": "Recueillir de l'information",
+"a": 3,
+"c": "Signaux et Communications"
+},
+{
+"id": "TEC-AGR-001",
+"t": "Semer",
+"a": 2,
+"c": "Agriculture et Botanique"
+},
+{
+"id": "TEC-ALI-005",
+"t": "Les conserves en bocal",
+"a": 2,
+"c": "Alimentation et Conservation"
+},
+{
+"id": "TEC-CON-006",
+"t": "Assainissement et eaux usées",
+"a": 2,
+"c": "Construction et Habitat"
+},
+{
+"id": "TEC-ENE-003",
+"t": "Câbler et protéger une installation",
+"a": 2,
+"c": "Énergie et Électricité"
+},
+{
+"id": "TEC-ENE-008",
+"t": "Mesurer avec un multimètre",
+"a": 2,
+"c": "Énergie et Électricité"
+},
+{
+"id": "URG-INO-001",
+"t": "Inondation",
+"a": 3,
+"c": "Protocoles d'urgence"
+},
+{
+"id": "URG-SEC-003",
+"t": "Intoxications",
+"a": 3,
+"c": "Secourisme"
+},
+{
+"id": "URG-SEC-004",
+"t": "Traumatisme crânien",
+"a": 3,
+"c": "Secourisme"
+},
+{
+"id": "URG-SEC-005",
+"t": "Malaise et douleur thoracique",
+"a": 3,
+"c": "Secourisme"
+},
+{
+"id": "URG-TEM-001",
+"t": "Tempête et vent violent",
+"a": 3,
+"c": "Protocoles d'urgence"
+},
+{
+"id": "MEM-ACC-003",
+"t": "Apprendre à se corriger",
+"a": 1,
+"c": "Accélération technique"
+},
+{
+"id": "SURV-REC-007",
+"t": "Réparer un câble, une prise, un contact",
+"a": 3,
+"c": "Récupération"
+},
+{
+"id": "SURV-RES-001",
+"t": "Se nourrir en milieu naturel",
+"a": 3,
+"c": "Feu, Eau et Ressources"
+},
+{
+"id": "SURV-RES-002",
+"t": "Pièges et pêche",
+"a": 3,
+"c": "Feu, Eau et Ressources"
+},
+{
+"id": "TEC-AGR-002",
+"t": "Conserver ses semences",
+"a": 2,
+"c": "Agriculture et Botanique"
+},
+{
+"id": "TEC-ALI-002",
+"t": "La fermentation lactique",
+"a": 2,
+"c": "Alimentation et Conservation"
+},
+{
+"id": "TEC-BOT-002",
+"t": "Les grandes familles botaniques",
+"a": 2,
+"c": "Agriculture et Botanique"
+},
+{
+"id": "TEC-CON-004",
+"t": "Toitures et étanchéité",
+"a": 2,
+"c": "Construction et Habitat"
+},
+{
+"id": "TEC-CON-005",
+"t": "Isoler un bâtiment",
+"a": 2,
+"c": "Construction et Habitat"
+},
+{
+"id": "TEC-MEC-001",
+"t": "Assembler",
+"a": 2,
+"c": "Mécanique et Transport"
+},
+{
+"id": "TEC-MEC-004",
+"t": "Le vélo",
+"a": 2,
+"c": "Mécanique et Transport"
+}
+];
+
+const AXES={1:{n:"La Mémoire",d:"Ce qui s'est passé et ce que ça nous apprend"},
+            2:{n:"La Technique",d:"Comment une chose fonctionne"},
+            3:{n:"La Survie",d:"Quoi faire, maintenant, en situation dégradée"}};
+const ORDRE={
+ 1:["L'Éveil","Les révolutions agricoles","Cités états et premiers empires","Ère des échanges et grands pôles","Accélération technique","L'anthropocène"],
+ 2:["Agriculture et Botanique","Alimentation et Conservation","Chimie et Matériaux","Construction et Habitat","Mécanique et Transport","Santé et Chirurgie","Énergie et Électricité"],
+ 3:["Feu, Eau et Ressources","Mouvement et Discrétion","Psychologie Sociale et Troc","Récupération","Secourisme","Signaux et Communications","Protocoles d'urgence"]};
+
+const TOUT=[
+  ...EXISTANT.map(f=>({...f,fait:true,p:0,d:"Déjà écrite et livrée avec l'application."})),
+  ...PLAN.map(f=>({...f,fait:false}))
+];
+let filtre="tout", q="";
+
+function visible(f){
+  if(filtre==="fait"&&!f.fait)return false;
+  if(filtre==="p1"&&(f.fait||f.p!==1))return false;
+  if(filtre==="p2"&&(f.fait||f.p!==2))return false;
+  if(filtre==="p3"&&(f.fait||f.p!==3))return false;
+  if(q){
+    const h=(f.id+" "+f.t+" "+(f.d||"")+" "+f.c).toLowerCase();
+    if(!h.includes(q))return false;
+  }
+  return true;
+}
+const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;");
+
+function stats(){
+  const p=PLAN.length, e=EXISTANT.length;
+  const n=a=>PLAN.filter(f=>f.a===a).length;
+  document.getElementById("stats").innerHTML=`
+    <div><div class="n">${p}</div><div class="l">Fiches à écrire</div></div>
+    <div class="a1"><div class="n">${n(1)}</div><div class="l">Axe 1 · Mémoire</div></div>
+    <div class="a2"><div class="n">${n(2)}</div><div class="l">Axe 2 · Technique</div></div>
+    <div class="a3"><div class="n">${n(3)}</div><div class="l">Axe 3 · Survie</div></div>
+    <div><div class="n">${e}</div><div class="l">Déjà écrites</div></div>`;
+}
+
+function dessine(){
+  const h=document.getElementById("arbre");
+  const visibles=TOUT.filter(visible);
+  if(!visibles.length){h.innerHTML=`<div class="vide">Aucune fiche ne correspond.</div>`;return;}
+  let html="";
+  for(const a of [1,2,3]){
+    const dansAxe=visibles.filter(f=>f.a===a);
+    if(!dansAxe.length)continue;
+    const aEcrire=dansAxe.filter(f=>!f.fait).length;
+    const ouvert=(q||filtre!=="tout")?" open":(a===2?"":" open");
+    html+=`<details class="axe x${a}"${ouvert}><summary>
+      <span class="num">${a}</span>
+      <span>${AXES[a].n}</span>
+      <span class="cnt">· ${AXES[a].d}</span>
+      <span class="cnt" style="margin-left:6px">${aEcrire} à écrire</span>
+    </summary>`;
+    for(const c of ORDRE[a]){
+      const items=dansAxe.filter(f=>f.c===c);
+      if(!items.length)continue;
+      const ne=items.filter(f=>!f.fait).length;
+      html+=`<details class="cat"${(q||filtre!=="tout")?" open":""}><summary>
+        ${esc(c)} <span class="cnt">${ne} à écrire</span></summary><div class="list">`;
+      items.sort((x,y)=>(x.fait?1:0)-(y.fait?1:0)||x.p-y.p);
+      for(const f of items){
+        const pr=f.fait?'<span class="done">✓</span>'
+          :`<span class="pr pr${f.p}">${["","Fondation","Utile","Ensuite"][f.p]}</span>`;
+        html+=`<button class="item" data-id="${f.id}">
+          <div class="row">${pr}<span class="t">${esc(f.t)}</span>
+          <span class="id">${f.id}</span></div>
+          <div class="d">${esc(f.d||"")}</div></button>`;
+      }
+      html+=`</div></details>`;
+    }
+    html+=`</details>`;
+  }
+  h.innerHTML=html;
+  h.querySelectorAll(".item").forEach(b=>b.onclick=()=>b.classList.toggle("open"));
+}
+
+document.querySelectorAll(".f").forEach(b=>b.onclick=()=>{
+  filtre=b.dataset.f;
+  document.querySelectorAll(".f").forEach(x=>x.classList.toggle("on",x===b));
+  dessine();
+});
+const qi=document.getElementById("q");
+qi.addEventListener("input",()=>{q=qi.value.trim().toLowerCase();dessine();});
+addEventListener("keydown",e=>{
+  if(e.key==="/"&&document.activeElement!==qi){e.preventDefault();qi.focus();}
+  if(e.key==="Escape"&&document.activeElement===qi){qi.value="";q="";dessine();qi.blur();}
+});
+
+stats();dessine();
+</script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phenix Lab — proposer une fiche</title>
+<link rel="icon" href="logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="index.html"><span class="mark"></span><span>PHENIX</span></a>
+  <nav>
+    <a href="explore.html">Explorer</a>
+    <a href="lab.html">Contribuer</a>
+    <a href="download.html">Télécharger</a>
+  </nav>
+</header>
+
+<main class="wrap" style="padding-top:34px;padding-bottom:60px">
+
+  <h1 style="font-size:30px;font-weight:700;letter-spacing:-.022em;margin:0 0 10px">Phenix Lab</h1>
+  <p class="lede" style="font-size:17px">Proposez une fiche au corpus. Pas de compte, pas d'inscription.
+    Vous pouvez rester anonyme.</p>
+
+  <div class="msg info">
+    <strong>Ce qui se passe ensuite.</strong> Votre proposition est relue avant toute intégration.
+    Elle peut devenir <em>communautaire</em>, puis <em>vérifiée</em>, et seulement après
+    <em>officielle</em>. <strong>Rien n'entre automatiquement dans le corpus officiel.</strong>
+  </div>
+
+  <details class="aide">
+    <summary>Comment écrire une bonne fiche</summary>
+    <div class="inner">
+      <h3 style="margin-top:0;font-size:16px">Le ton</h3>
+      <p>Assertif. Vouvoiement. Aucune phrase pour combler, aucun sensationnalisme.
+        Phrases courtes dans l'urgence, longues dans l'explication.</p>
+
+      <h3 style="font-size:16px">Les deux structures</h3>
+      <p><strong>Sujet urgent</strong> — Agir, puis Adapter, puis Comprendre.
+        Le lecteur n'a pas le temps : il exécute d'abord.</p>
+      <p><strong>Sujet non urgent</strong> — Agir, puis Comprendre, puis Adapter.
+        Le geste juste découle du mécanisme.</p>
+      <p>Écrivez les titres de section ainsi : <code>## AGIR</code>,
+        <code>## COMPRENDRE</code>, <code>## ADAPTER</code>.</p>
+
+      <h3 style="font-size:16px">La partie « Comprendre »</h3>
+      <p>Expliquez le <strong>mécanisme</strong>, pas seulement le fait. Le lecteur doit
+        pouvoir en déduire quoi faire dans un cas que votre fiche ne décrit pas.
+        C'est ce qui sépare une fiche utile d'une liste d'instructions.</p>
+
+      <h3 style="font-size:16px">Les balises</h3>
+      <p>Elles ne classent pas la fiche : elles orientent la lecture selon la situation
+        de celui qui cherche.</p>
+      <ul>
+        <li><strong>Temps</strong> — Flash (minutes), Court (heures), Long (jours et plus)</li>
+        <li><strong>Contexte</strong> — Seul, À deux, En groupe</li>
+        <li><strong>Risque</strong> — Discret, Exposé</li>
+        <li><strong>Matériel</strong> — Aucun, Récupération, Technique</li>
+      </ul>
+
+      <h3 style="font-size:16px">Les sources</h3>
+      <p>Préférez les sources primaires : organismes de santé, institutions scientifiques,
+        manuels techniques, publications évaluées. Sur les sujets où une erreur blesse,
+        une fiche sans source ne sera pas intégrée.</p>
+
+      <h3 style="font-size:16px">Les liens</h3>
+      <p>Reliez votre fiche aux autres avec l'identifiant entre doubles crochets :
+        <code>[[URG-EAU-001]]</code>. Placez-les <strong>dans le texte</strong>, là où
+        le lecteur en a besoin. Une fiche isolée est un article ; une fiche reliée est un chemin.</p>
+
+      <h3 style="font-size:16px">Les sujets</h3>
+      <p>Tous, tant que la qualité y est. Phenix n'est pas une base de survie : un moteur,
+        une plante, une technique manuelle, une période historique, une méthode de cuisine
+        ou d'architecture ont toute leur place.</p>
+    </div>
+  </details>
+
+  <form id="form">
+    <div class="field">
+      <label for="titre">Titre <span class="req">*</span></label>
+      <p class="help">Ce que la fiche traite, en clair. Pas de titre mystérieux.</p>
+      <input id="titre" name="titre" required maxlength="140" placeholder="ex : Purifier une eau douce">
+    </div>
+
+    <div class="field">
+      <label for="contenu">La fiche <span class="req">*</span></label>
+      <p class="help">Le texte complet. Utilisez <code>## AGIR</code>, <code>## COMPRENDRE</code>,
+        <code>## ADAPTER</code> pour les sections.</p>
+      <textarea id="contenu" name="contenu" class="tall" required
+        placeholder="::Une phrase d'accroche entre doubles deux-points.::&#10;&#10;## AGIR&#10;&#10;1. Première action.&#10;&#10;## ADAPTER&#10;&#10;## COMPRENDRE"></textarea>
+    </div>
+
+    <div class="field">
+      <label for="resume">Description courte</label>
+      <p class="help">Optionnel. Une ou deux phrases pour situer la fiche.</p>
+      <textarea id="resume" name="resume" maxlength="400"></textarea>
+    </div>
+
+    <div class="row">
+      <div class="field">
+        <label for="axe">Axe probable</label>
+        <select id="axe" name="axe">
+          <option value="">— je ne sais pas —</option>
+          <option value="1">1 — La Mémoire (histoire, sociétés)</option>
+          <option value="2">2 — La Technique (comment ça marche)</option>
+          <option value="3">3 — La Survie (quoi faire, maintenant)</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="categorie">Catégorie proposée</label>
+        <input id="categorie" name="categorie" maxlength="80" placeholder="ex : Mécanique et Transport">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="field">
+        <label for="langue">Langue de la fiche</label>
+        <select id="langue" name="langue">
+          <option value="fr">Français</option>
+          <option value="en">English</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="urgence">Type</label>
+        <select id="urgence" name="urgence">
+          <option value="savoir">Savoir général</option>
+          <option value="urgence">Situation urgente</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="sources">Sources</label>
+      <p class="help">Une par ligne. Un lien, un titre d'ouvrage, un organisme.</p>
+      <textarea id="sources" name="sources" placeholder="OMS — Directives sur la qualité de l'eau de boisson&#10;https://..."></textarea>
+    </div>
+
+    <div class="field">
+      <label for="note">Note à l'éditeur</label>
+      <p class="help">Pourquoi cette fiche ? Qu'apporte-t-elle ? Y a-t-il quelque chose
+        à éviter ou à vérifier ?</p>
+      <textarea id="note" name="note"></textarea>
+    </div>
+
+    <div class="field">
+      <label for="images">Images ou schémas</label>
+      <p class="help">Optionnel. Vous devez avoir le droit de les partager.</p>
+      <input type="file" id="images" name="images" accept="image/*" multiple>
+    </div>
+
+    <div class="field">
+      <label for="auteur">Votre nom ou pseudonyme</label>
+      <p class="help">Optionnel. Laissez vide pour rester anonyme — cela ne change rien
+        à l'examen de votre proposition.</p>
+      <input id="auteur" name="auteur" maxlength="60" placeholder="anonyme">
+    </div>
+
+    <div class="field">
+      <label for="contact">Contact</label>
+      <p class="help">Optionnel. Uniquement si vous voulez être prévenu ou pouvoir
+        répondre à une demande de correction.</p>
+      <input id="contact" name="contact" type="email" maxlength="120" placeholder="vous@exemple.fr">
+    </div>
+
+    <!-- Piège à robots : invisible pour les humains, rempli par les automates. -->
+    <div style="position:absolute;left:-9999px" aria-hidden="true">
+      <label for="site">Ne pas remplir</label>
+      <input id="site" name="site" tabindex="-1" autocomplete="off">
+    </div>
+
+    <div id="retour"></div>
+
+    <p style="margin-top:26px">
+      <button type="submit" class="btn primary" id="submit"
+        style="font-size:16px;padding:14px 28px">Envoyer ma proposition</button>
+    </p>
+
+    <p class="small" style="margin-top:16px">
+      En envoyant, vous acceptez que votre fiche puisse être publiée sous licence
+      CC BY-SA 4.0 si elle est retenue. Vous restez libre d'en faire ce que vous voulez
+      par ailleurs.
+    </p>
+  </form>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="small">
+      <a href="index.html">Accueil</a> ·
+      <a href="explore.html">Explorer</a> ·
+      <a href="download.html">Télécharger</a>
+    </p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="lab.js"></script>
+</body>
+</html>

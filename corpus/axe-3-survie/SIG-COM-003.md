@@ -1,0 +1,114 @@
+---
+id: SIG-COM-003
+titre: Le morse
+axe: 3
+categorie: Signaux et Communications
+temps: Court
+contexte: 2
+risque: Discret
+materiel: Rien
+priorite: normale
+origine: officielle
+tags: [morse, signal, communication, code, lumiere, radio, sos]
+sources: ["UIT-R M.1677-1 — Code Morse international", "Code international des signaux — signalisation lumineuse", "COLREG, annexe IV — signaux de détresse", "ARRL — apprentissage du morse, méthodes Koch et Farnsworth"]
+---
+
+::Le morse tient sur une page et s'apprend en une soirée. Il passe par tout ce qui s'allume, s'éteint, sonne ou se tape : une lampe, un miroir, un sifflet, un tuyau, un talkie-walkie.::
+
+## COMPRENDRE
+
+### Deux signes, et des silences
+
+Tout le code repose sur deux signes : le **point**, bref, et le **trait**, long. Le reste est une affaire de rythme, qui se compte en unités :
+
+- un point dure **une** unité, un trait **trois** ;
+- entre deux signes d'une même lettre : **une** unité de silence ;
+- entre deux lettres : **trois** unités ;
+- entre deux mots : **sept** unités.
+
+**Les silences portent autant de sens que les signaux.** Un message aux silences irréguliers devient illisible même quand chaque signe est juste. C'est la première chose à soigner, avant la vitesse.
+
+Le code a été pensé pour aller vite : les lettres les plus fréquentes ont reçu les codes les plus courts. E est un seul point, T un seul trait ; les lettres rares comme Q ou Y en demandent quatre.
+
+### Le code complet
+
+| Lettre | Code | Lettre | Code |
+|---|---|---|---|
+| A | • — | N | — • |
+| B | — • • • | O | — — — |
+| C | — • — • | P | • — — • |
+| D | — • • | Q | — — • — |
+| E | • | R | • — • |
+| F | • • — • | S | • • • |
+| G | — — • | T | — |
+| H | • • • • | U | • • — |
+| I | • • | V | • • • — |
+| J | • — — — | W | • — — |
+| K | — • — | X | — • • — |
+| L | • — • • | Y | — • — — |
+| M | — — | Z | — — • • |
+
+| Chiffre | Code | Chiffre | Code |
+|---|---|---|---|
+| 1 | • — — — — | 6 | — • • • • |
+| 2 | • • — — — | 7 | — — • • • |
+| 3 | • • • — — | 8 | — — — • • |
+| 4 | • • • • — | 9 | — — — — • |
+| 5 | • • • • • | 0 | — — — — — |
+
+### Décoder avec l'arbre
+
+Partez du haut. Chaque point vous envoie à gauche, chaque trait à droite. Là où le signal s'arrête, vous tenez votre lettre. C'est plus rapide que de chercher dans un tableau, et c'est ce que les débutants retiennent le plus vite.
+
+![L'arbre de décodage du morse](data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NjAgMzE4IiB3aWR0aD0iNTYwIiBoZWlnaHQ9IjMxOCI+CjxyZWN0IHdpZHRoPSI1NjAiIGhlaWdodD0iMzE4IiByeD0iMTAiIGZpbGw9IiNGNEYyRUMiLz4KPHJlY3QgeD0iMjQyIiB5PSIxNCIgd2lkdGg9Ijc2IiBoZWlnaHQ9IjI2IiByeD0iMTMiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZT0iIzFGMUQxQSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KPHRleHQgeD0iMjgwIiB5PSIzMS41IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktc2Fucy1zZXJpZixzeXN0ZW0tdWksLWFwcGxlLXN5c3RlbSxTZWdvZSBVSSxIZWx2ZXRpY2EsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgZm9udC13ZWlnaHQ9IjcwMCIgbGV0dGVyLXNwYWNpbmc9IjEuMiIgZmlsbD0iIzFGMUQxQSI+RMOJUEFSVDwvdGV4dD4KPGxpbmUgeDE9IjI4MC4wIiB5MT0iNDAiIHgyPSIxNDAuMCIgeTI9IjY5IiBzdHJva2U9IiNBOTY2MEYiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtZGFzaGFycmF5PSIwIDYiLz48bGluZSB4MT0iMjgwLjAiIHkxPSI0MCIgeDI9IjQyMC4wIiB5Mj0iNjkiIHN0cm9rZT0iIzhBODM3OCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1kYXNoYXJyYXk9IjEwIDUiLz48bGluZSB4MT0iMTQwLjAiIHkxPSI5OSIgeDI9IjcwLjAiIHkyPSIxMjgiIHN0cm9rZT0iIzhBODM3OCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1kYXNoYXJyYXk9IjAgNiIvPjxsaW5lIHgxPSIxNDAuMCIgeTE9Ijk5IiB4Mj0iMjEwLjAiIHkyPSIxMjgiIHN0cm9rZT0iI0E5NjYwRiIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1kYXNoYXJyYXk9IjEwIDUiLz48bGluZSB4MT0iNDIwLjAiIHkxPSI5OSIgeDI9IjM1MC4wIiB5Mj0iMTI4IiBzdHJva2U9IiM4QTgzNzgiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtZGFzaGFycmF5PSIwIDYiLz48bGluZSB4MT0iNDIwLjAiIHkxPSI5OSIgeDI9IjQ5MC4wIiB5Mj0iMTI4IiBzdHJva2U9IiM4QTgzNzgiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtZGFzaGFycmF5PSIxMCA1Ii8+PGxpbmUgeDE9IjcwLjAiIHkxPSIxNTYiIHgyPSIzNS4wIiB5Mj0iMTg3IiBzdHJva2U9IiM4QTgzNzgiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtZGFzaGFycmF5PSIwIDYiLz48bGluZSB4MT0iNzAuMCIgeTE9IjE1NiIgeDI9IjEwNS4wIiB5Mj0iMTg3IiBzdHJva2U9IiM4QTgzNzgiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtZGFzaGFycmF5PSIxMCA1Ii8+PGxpbmUgeDE9IjIxMC4wIiB5MT0iMTU2IiB4Mj0iMTc1LjAiIHkyPSIxODciIHN0cm9rZT0iIzhBODM3OCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1kYXNoYXJyYXk9IjAgNiIvPjxsaW5lIHgxPSIyMTAuMCIgeTE9IjE1NiIgeDI9IjI0NS4wIiB5Mj0iMTg3IiBzdHJva2U9IiNBOTY2MEYiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtZGFzaGFycmF5PSIxMCA1Ii8+PGxpbmUgeDE9IjM1MC4wIiB5MT0iMTU2IiB4Mj0iMzE1LjAiIHkyPSIxODciIHN0cm9rZT0iIzhBODM3OCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1kYXNoYXJyYXk9IjAgNiIvPjxsaW5lIHgxPSIzNTAuMCIgeTE9IjE1NiIgeDI9IjM4NS4wIiB5Mj0iMTg3IiBzdHJva2U9IiM4QTgzNzgiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtZGFzaGFycmF5PSIxMCA1Ii8+PGxpbmUgeDE9IjQ5MC4wIiB5MT0iMTU2IiB4Mj0iNDU1LjAiIHkyPSIxODciIHN0cm9rZT0iIzhBODM3OCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1kYXNoYXJyYXk9IjAgNiIvPjxsaW5lIHgxPSI0OTAuMCIgeTE9IjE1NiIgeDI9IjUyNS4wIiB5Mj0iMTg3IiBzdHJva2U9IiM4QTgzNzgiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtZGFzaGFycmF5PSIxMCA1Ii8+PGxpbmUgeDE9IjM1LjAiIHkxPSIyMTMiIHgyPSIxNy41IiB5Mj0iMjQ3IiBzdHJva2U9IiM4QTgzNzgiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtZGFzaGFycmF5PSIwIDYiLz48bGluZSB4MT0iMzUuMCIgeTE9IjIxMyIgeDI9IjUyLjUiIHkyPSIyNDciIHN0cm9rZT0iIzhBODM3OCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1kYXNoYXJyYXk9IjEwIDUiLz48bGluZSB4MT0iMTA1LjAiIHkxPSIyMTMiIHgyPSI4Ny41IiB5Mj0iMjQ3IiBzdHJva2U9IiM4QTgzNzgiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtZGFzaGFycmF5PSIwIDYiLz48bGluZSB4MT0iMTc1LjAiIHkxPSIyMTMiIHgyPSIxNTcuNSIgeTI9IjI0NyIgc3Ryb2tlPSIjOEE4Mzc4IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWRhc2hhcnJheT0iMCA2Ii8+PGxpbmUgeDE9IjI0NS4wIiB5MT0iMjEzIiB4Mj0iMjI3LjUiIHkyPSIyNDciIHN0cm9rZT0iI0E5NjYwRiIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1kYXNoYXJyYXk9IjAgNiIvPjxsaW5lIHgxPSIyNDUuMCIgeTE9IjIxMyIgeDI9IjI2Mi41IiB5Mj0iMjQ3IiBzdHJva2U9IiM4QTgzNzgiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtZGFzaGFycmF5PSIxMCA1Ii8+PGxpbmUgeDE9IjMxNS4wIiB5MT0iMjEzIiB4Mj0iMjk3LjUiIHkyPSIyNDciIHN0cm9rZT0iIzhBODM3OCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1kYXNoYXJyYXk9IjAgNiIvPjxsaW5lIHgxPSIzMTUuMCIgeTE9IjIxMyIgeDI9IjMzMi41IiB5Mj0iMjQ3IiBzdHJva2U9IiM4QTgzNzgiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtZGFzaGFycmF5PSIxMCA1Ii8+PGxpbmUgeDE9IjM4NS4wIiB5MT0iMjEzIiB4Mj0iMzY3LjUiIHkyPSIyNDciIHN0cm9rZT0iIzhBODM3OCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1kYXNoYXJyYXk9IjAgNiIvPjxsaW5lIHgxPSIzODUuMCIgeTE9IjIxMyIgeDI9IjQwMi41IiB5Mj0iMjQ3IiBzdHJva2U9IiM4QTgzNzgiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtZGFzaGFycmF5PSIxMCA1Ii8+PGxpbmUgeDE9IjQ1NS4wIiB5MT0iMjEzIiB4Mj0iNDM3LjUiIHkyPSIyNDciIHN0cm9rZT0iIzhBODM3OCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1kYXNoYXJyYXk9IjAgNiIvPjxsaW5lIHgxPSI0NTUuMCIgeTE9IjIxMyIgeDI9IjQ3Mi41IiB5Mj0iMjQ3IiBzdHJva2U9IiM4QTgzNzgiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtZGFzaGFycmF5PSIxMCA1Ii8+PGNpcmNsZSBjeD0iMTQwLjAiIGN5PSI4NCIgcj0iMTUiIGZpbGw9IiNBOTY2MEYiIHN0cm9rZT0iI0E5NjYwRiIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48dGV4dCB4PSIxNDAuMCIgeT0iODkuNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InVpLXNhbnMtc2VyaWYsc3lzdGVtLXVpLC1hcHBsZS1zeXN0ZW0sU2Vnb2UgVUksSGVsdmV0aWNhLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNGRkZGRkYiPkU8L3RleHQ+PGNpcmNsZSBjeD0iNDIwLjAiIGN5PSI4NCIgcj0iMTUiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZT0iIzFGMUQxQSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48dGV4dCB4PSI0MjAuMCIgeT0iODkuNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InVpLXNhbnMtc2VyaWYsc3lzdGVtLXVpLC1hcHBsZS1zeXN0ZW0sU2Vnb2UgVUksSGVsdmV0aWNhLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxRjFEMUEiPlQ8L3RleHQ+PGNpcmNsZSBjeD0iNzAuMCIgY3k9IjE0MiIgcj0iMTQiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZT0iIzFGMUQxQSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48dGV4dCB4PSI3MC4wIiB5PSIxNDcuMDQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJ1aS1zYW5zLXNlcmlmLHN5c3RlbS11aSwtYXBwbGUtc3lzdGVtLFNlZ29lIFVJLEhlbHZldGljYSxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjE1IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMUYxRDFBIj5JPC90ZXh0PjxjaXJjbGUgY3g9IjIxMC4wIiBjeT0iMTQyIiByPSIxNCIgZmlsbD0iI0E5NjYwRiIgc3Ryb2tlPSIjQTk2NjBGIiBzdHJva2Utd2lkdGg9IjEuNSIvPjx0ZXh0IHg9IjIxMC4wIiB5PSIxNDcuMDQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJ1aS1zYW5zLXNlcmlmLHN5c3RlbS11aSwtYXBwbGUtc3lzdGVtLFNlZ29lIFVJLEhlbHZldGljYSxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjE1IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjRkZGRkZGIj5BPC90ZXh0PjxjaXJjbGUgY3g9IjM1MC4wIiBjeT0iMTQyIiByPSIxNCIgZmlsbD0iI0ZGRkZGRiIgc3Ryb2tlPSIjMUYxRDFBIiBzdHJva2Utd2lkdGg9IjEuNSIvPjx0ZXh0IHg9IjM1MC4wIiB5PSIxNDcuMDQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJ1aS1zYW5zLXNlcmlmLHN5c3RlbS11aSwtYXBwbGUtc3lzdGVtLFNlZ29lIFVJLEhlbHZldGljYSxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjE1IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMUYxRDFBIj5OPC90ZXh0PjxjaXJjbGUgY3g9IjQ5MC4wIiBjeT0iMTQyIiByPSIxNCIgZmlsbD0iI0ZGRkZGRiIgc3Ryb2tlPSIjMUYxRDFBIiBzdHJva2Utd2lkdGg9IjEuNSIvPjx0ZXh0IHg9IjQ5MC4wIiB5PSIxNDcuMDQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJ1aS1zYW5zLXNlcmlmLHN5c3RlbS11aSwtYXBwbGUtc3lzdGVtLFNlZ29lIFVJLEhlbHZldGljYSxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjE1IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMUYxRDFBIj5NPC90ZXh0PjxjaXJjbGUgY3g9IjM1LjAiIGN5PSIyMDAiIHI9IjEzIiBmaWxsPSIjRkZGRkZGIiBzdHJva2U9IiMxRjFEMUEiIHN0cm9rZS13aWR0aD0iMS41Ii8+PHRleHQgeD0iMzUuMCIgeT0iMjA0LjY4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktc2Fucy1zZXJpZixzeXN0ZW0tdWksLWFwcGxlLXN5c3RlbSxTZWdvZSBVSSxIZWx2ZXRpY2EsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzFGMUQxQSI+UzwvdGV4dD48Y2lyY2xlIGN4PSIxMDUuMCIgY3k9IjIwMCIgcj0iMTMiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZT0iIzFGMUQxQSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48dGV4dCB4PSIxMDUuMCIgeT0iMjA0LjY4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktc2Fucy1zZXJpZixzeXN0ZW0tdWksLWFwcGxlLXN5c3RlbSxTZWdvZSBVSSxIZWx2ZXRpY2EsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzFGMUQxQSI+VTwvdGV4dD48Y2lyY2xlIGN4PSIxNzUuMCIgY3k9IjIwMCIgcj0iMTMiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZT0iIzFGMUQxQSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48dGV4dCB4PSIxNzUuMCIgeT0iMjA0LjY4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktc2Fucy1zZXJpZixzeXN0ZW0tdWksLWFwcGxlLXN5c3RlbSxTZWdvZSBVSSxIZWx2ZXRpY2EsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzFGMUQxQSI+UjwvdGV4dD48Y2lyY2xlIGN4PSIyNDUuMCIgY3k9IjIwMCIgcj0iMTMiIGZpbGw9IiNBOTY2MEYiIHN0cm9rZT0iI0E5NjYwRiIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48dGV4dCB4PSIyNDUuMCIgeT0iMjA0LjY4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktc2Fucy1zZXJpZixzeXN0ZW0tdWksLWFwcGxlLXN5c3RlbSxTZWdvZSBVSSxIZWx2ZXRpY2EsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI0ZGRkZGRiI+VzwvdGV4dD48Y2lyY2xlIGN4PSIzMTUuMCIgY3k9IjIwMCIgcj0iMTMiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZT0iIzFGMUQxQSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48dGV4dCB4PSIzMTUuMCIgeT0iMjA0LjY4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktc2Fucy1zZXJpZixzeXN0ZW0tdWksLWFwcGxlLXN5c3RlbSxTZWdvZSBVSSxIZWx2ZXRpY2EsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzFGMUQxQSI+RDwvdGV4dD48Y2lyY2xlIGN4PSIzODUuMCIgY3k9IjIwMCIgcj0iMTMiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZT0iIzFGMUQxQSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48dGV4dCB4PSIzODUuMCIgeT0iMjA0LjY4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktc2Fucy1zZXJpZixzeXN0ZW0tdWksLWFwcGxlLXN5c3RlbSxTZWdvZSBVSSxIZWx2ZXRpY2EsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzFGMUQxQSI+SzwvdGV4dD48Y2lyY2xlIGN4PSI0NTUuMCIgY3k9IjIwMCIgcj0iMTMiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZT0iIzFGMUQxQSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48dGV4dCB4PSI0NTUuMCIgeT0iMjA0LjY4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktc2Fucy1zZXJpZixzeXN0ZW0tdWksLWFwcGxlLXN5c3RlbSxTZWdvZSBVSSxIZWx2ZXRpY2EsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzFGMUQxQSI+RzwvdGV4dD48Y2lyY2xlIGN4PSI1MjUuMCIgY3k9IjIwMCIgcj0iMTMiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZT0iIzFGMUQxQSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48dGV4dCB4PSI1MjUuMCIgeT0iMjA0LjY4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktc2Fucy1zZXJpZixzeXN0ZW0tdWksLWFwcGxlLXN5c3RlbSxTZWdvZSBVSSxIZWx2ZXRpY2EsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzFGMUQxQSI+TzwvdGV4dD48Y2lyY2xlIGN4PSIxNy41IiBjeT0iMjU4IiByPSIxMSIgZmlsbD0iI0ZGRkZGRiIgc3Ryb2tlPSIjMUYxRDFBIiBzdHJva2Utd2lkdGg9IjEuNSIvPjx0ZXh0IHg9IjE3LjUiIHk9IjI2MS45NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InVpLXNhbnMtc2VyaWYsc3lzdGVtLXVpLC1hcHBsZS1zeXN0ZW0sU2Vnb2UgVUksSGVsdmV0aWNhLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTIiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxRjFEMUEiPkg8L3RleHQ+PGNpcmNsZSBjeD0iNTIuNSIgY3k9IjI1OCIgcj0iMTEiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZT0iIzFGMUQxQSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48dGV4dCB4PSI1Mi41IiB5PSIyNjEuOTYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJ1aS1zYW5zLXNlcmlmLHN5c3RlbS11aSwtYXBwbGUtc3lzdGVtLFNlZ29lIFVJLEhlbHZldGljYSxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMUYxRDFBIj5WPC90ZXh0PjxjaXJjbGUgY3g9Ijg3LjUiIGN5PSIyNTgiIHI9IjExIiBmaWxsPSIjRkZGRkZGIiBzdHJva2U9IiMxRjFEMUEiIHN0cm9rZS13aWR0aD0iMS41Ii8+PHRleHQgeD0iODcuNSIgeT0iMjYxLjk2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktc2Fucy1zZXJpZixzeXN0ZW0tdWksLWFwcGxlLXN5c3RlbSxTZWdvZSBVSSxIZWx2ZXRpY2EsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzFGMUQxQSI+RjwvdGV4dD48Y2lyY2xlIGN4PSIxNTcuNSIgY3k9IjI1OCIgcj0iMTEiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZT0iIzFGMUQxQSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48dGV4dCB4PSIxNTcuNSIgeT0iMjYxLjk2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktc2Fucy1zZXJpZixzeXN0ZW0tdWksLWFwcGxlLXN5c3RlbSxTZWdvZSBVSSxIZWx2ZXRpY2EsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzFGMUQxQSI+TDwvdGV4dD48Y2lyY2xlIGN4PSIyMjcuNSIgY3k9IjI1OCIgcj0iMTEiIGZpbGw9IiNBOTY2MEYiIHN0cm9rZT0iI0E5NjYwRiIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48dGV4dCB4PSIyMjcuNSIgeT0iMjYxLjk2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktc2Fucy1zZXJpZixzeXN0ZW0tdWksLWFwcGxlLXN5c3RlbSxTZWdvZSBVSSxIZWx2ZXRpY2EsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI0ZGRkZGRiI+UDwvdGV4dD48Y2lyY2xlIGN4PSIyNjIuNSIgY3k9IjI1OCIgcj0iMTEiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZT0iIzFGMUQxQSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48dGV4dCB4PSIyNjIuNSIgeT0iMjYxLjk2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktc2Fucy1zZXJpZixzeXN0ZW0tdWksLWFwcGxlLXN5c3RlbSxTZWdvZSBVSSxIZWx2ZXRpY2EsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzFGMUQxQSI+SjwvdGV4dD48Y2lyY2xlIGN4PSIyOTcuNSIgY3k9IjI1OCIgcj0iMTEiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZT0iIzFGMUQxQSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48dGV4dCB4PSIyOTcuNSIgeT0iMjYxLjk2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktc2Fucy1zZXJpZixzeXN0ZW0tdWksLWFwcGxlLXN5c3RlbSxTZWdvZSBVSSxIZWx2ZXRpY2EsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzFGMUQxQSI+QjwvdGV4dD48Y2lyY2xlIGN4PSIzMzIuNSIgY3k9IjI1OCIgcj0iMTEiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZT0iIzFGMUQxQSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48dGV4dCB4PSIzMzIuNSIgeT0iMjYxLjk2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktc2Fucy1zZXJpZixzeXN0ZW0tdWksLWFwcGxlLXN5c3RlbSxTZWdvZSBVSSxIZWx2ZXRpY2EsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzFGMUQxQSI+WDwvdGV4dD48Y2lyY2xlIGN4PSIzNjcuNSIgY3k9IjI1OCIgcj0iMTEiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZT0iIzFGMUQxQSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48dGV4dCB4PSIzNjcuNSIgeT0iMjYxLjk2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktc2Fucy1zZXJpZixzeXN0ZW0tdWksLWFwcGxlLXN5c3RlbSxTZWdvZSBVSSxIZWx2ZXRpY2EsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzFGMUQxQSI+QzwvdGV4dD48Y2lyY2xlIGN4PSI0MDIuNSIgY3k9IjI1OCIgcj0iMTEiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZT0iIzFGMUQxQSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48dGV4dCB4PSI0MDIuNSIgeT0iMjYxLjk2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktc2Fucy1zZXJpZixzeXN0ZW0tdWksLWFwcGxlLXN5c3RlbSxTZWdvZSBVSSxIZWx2ZXRpY2EsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzFGMUQxQSI+WTwvdGV4dD48Y2lyY2xlIGN4PSI0MzcuNSIgY3k9IjI1OCIgcj0iMTEiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZT0iIzFGMUQxQSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48dGV4dCB4PSI0MzcuNSIgeT0iMjYxLjk2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktc2Fucy1zZXJpZixzeXN0ZW0tdWksLWFwcGxlLXN5c3RlbSxTZWdvZSBVSSxIZWx2ZXRpY2EsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzFGMUQxQSI+WjwvdGV4dD48Y2lyY2xlIGN4PSI0NzIuNSIgY3k9IjI1OCIgcj0iMTEiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZT0iIzFGMUQxQSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48dGV4dCB4PSI0NzIuNSIgeT0iMjYxLjk2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0idWktc2Fucy1zZXJpZixzeXN0ZW0tdWksLWFwcGxlLXN5c3RlbSxTZWdvZSBVSSxIZWx2ZXRpY2EsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzFGMUQxQSI+UTwvdGV4dD4KPGxpbmUgeDE9IjIyIiB5MT0iMjk0IiB4Mj0iNTIiIHkyPSIyOTQiIHN0cm9rZT0iIzhBODM3OCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1kYXNoYXJyYXk9IjAgNiIvPgo8dGV4dCB4PSI2MCIgeT0iMjk4IiBmb250LWZhbWlseT0idWktc2Fucy1zZXJpZixzeXN0ZW0tdWksLWFwcGxlLXN5c3RlbSxTZWdvZSBVSSxIZWx2ZXRpY2EsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMS41IiBmaWxsPSIjMUYxRDFBIj5wb2ludCA9IMOgIGdhdWNoZTwvdGV4dD4KPGxpbmUgeDE9IjE4MCIgeTE9IjI5NCIgeDI9IjIxMCIgeTI9IjI5NCIgc3Ryb2tlPSIjOEE4Mzc4IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWRhc2hhcnJheT0iMTAgNSIvPgo8dGV4dCB4PSIyMTgiIHk9IjI5OCIgZm9udC1mYW1pbHk9InVpLXNhbnMtc2VyaWYsc3lzdGVtLXVpLC1hcHBsZS1zeXN0ZW0sU2Vnb2UgVUksSGVsdmV0aWNhLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEuNSIgZmlsbD0iIzFGMUQxQSI+dHJhaXQgPSDDoCBkcm9pdGU8L3RleHQ+Cjx0ZXh0IHg9IjUzOCIgeT0iMjk4IiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LWZhbWlseT0idWktc2Fucy1zZXJpZixzeXN0ZW0tdWksLWFwcGxlLXN5c3RlbSxTZWdvZSBVSSxIZWx2ZXRpY2EsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMS41IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjQTk2NjBGIj5leGVtcGxlIDog4oCiIOKAlCDigJQg4oCiID0gUDwvdGV4dD4KPC9zdmc+)
+
+### Les signaux qui servent vraiment
+
+- **SOS** : • • • — — — • • •, envoyé **d'un bloc, sans silence entre les lettres**, puis répété. C'est le signal de détresse international, par radio comme par tout autre moyen.
+- **R** (• — •) : reçu, compris.
+- **K** (— • —) : à vous, j'attends votre réponse.
+- **AR** (• — • — •, d'un bloc) : fin du message.
+- **Le point d'interrogation** (• • — — • •) : répétez, je n'ai pas compris.
+- **Huit points** (• • • • • • • •) : erreur, je reprends le mot.
+
+## AGIR
+
+### Envoyer
+
+1. **Écrivez le message d'abord**, le plus court possible. Chaque lettre coûte du temps et de l'attention, des deux côtés.
+2. **Appelez** : une suite de A (• —) jusqu'à ce que l'autre réponde par des T (—). C'est la procédure des signaux lumineux en mer, et elle se comprend partout.
+3. **Allez lentement.** Cinq mots par minute suffisent. Un signe net vaut mieux que dix signes brouillés.
+4. **Tenez le rythme** : un, trois, un, trois, sept. Comptez dans votre tête au début.
+5. **Terminez par AR**, et attendez **R**. Sans réponse, recommencez le message entier.
+
+### Recevoir
+
+1. **Notez tout, tout de suite**, en points et en traits, sans essayer de décoder pendant l'écoute. Un espace entre les lettres, une barre entre les mots.
+2. **Décodez ensuite**, au calme, avec l'arbre ou le tableau.
+3. **Une lettre illisible ne bloque pas le mot.** Laissez un blanc : le sens se reconstruit souvent tout seul.
+4. **Répondez R** si tout est clair, **le point d'interrogation** pour faire répéter.
+
+### Apprendre en une soirée
+
+- **Apprenez par l'oreille, pas par les yeux.** A se dit « ti-taa », B « taa-ti-ti-ti ». Une lettre se reconnaît à son air, d'un bloc ; compter les points ne marche plus dès que ça va un peu vite.
+- **Commencez par les lettres courtes** : E et T, puis I A N M, puis S U R W D K G O. En une heure, vous tenez la moitié de l'alphabet.
+- **Des lettres rapides, de longs silences.** Chaque lettre à sa vitesse normale, mais beaucoup d'espace entre elles au début : c'est la méthode Farnsworth, et elle évite de prendre un mauvais rythme qu'il faudrait désapprendre.
+- **Dix minutes par jour valent mieux qu'une heure par semaine.**
+
+## ADAPTER
+
+**Avec une lampe.** Lampe de poche, phares, bougie masquée par la main. De nuit, une lampe se voit à plusieurs kilomètres. Visez l'autre et gardez la lampe immobile. **Émettre de la lumière, c'est se montrer** : la décision se prend comme dans [[SIG-COM-001]].
+
+**Avec le soleil.** Un miroir envoie des éclats visibles de très loin par temps clair. Masquez et démasquez avec la main plutôt que de bouger le miroir : la visée reste en place. La technique de visée est dans [[SIG-COM-001]].
+
+**Avec un son.** Sifflet, klaxon, cloche. Un son porte moins loin qu'une lumière de nuit, mais il contourne les obstacles et ne demande pas de se voir.
+
+**En tapant.** Sur un tuyau, une cloison, une coque de bateau : le métal porte le son très loin dans un bâtiment. Un trait est difficile à taper ; remplacez-le par deux coups rapprochés ou par un grattement, **à condition d'en convenir avant**.
+
+**Avec un talkie-walkie.** Appuyez sur l'alternat bref et long sans parler : l'autre entend le canal s'ouvrir et se fermer. Cela passe parfois quand la voix ne passe plus, dans le bruit ou en limite de portée — voir [[SIG-COM-002]].
+
+**Vous voulez rester discret.** Une lumière vue par celui à qui elle est destinée l'est aussi par tous ceux qui se trouvent dans l'axe. Masquez la lampe par l'arrière et les côtés, émettez court, changez d'emplacement — voir [[SURV-NUIT-001]].
+
+**Vous êtes plusieurs à l'apprendre.** Convenez d'abréviations pour ce qui revient souvent : lieux, heures, prénoms. Un code privé raccourcit le morse, il ne le remplace pas.
+
+**Vous avez tout oublié.** Il reste SOS, que tout le monde connaît : trois brèves, trois longues, trois brèves, d'un bloc, et on recommence.
