@@ -1,68 +1,104 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en" data-page-lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Télécharger Phenix</title>
+<title data-i18n="dl.title">Download — Phenix</title>
+<meta name="description" content="Download Phenix Base: one 1.8 MB file, every sheet inside, works offline.">
+<meta name="theme-color" content="#040806">
+<script>try{var t=localStorage.getItem("phenix-theme");if(t&&t!=="phosphore")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<meta property="og:title" content="Phenix">
+<meta property="og:description" content="Download Phenix Base: one 1.8 MB file, every sheet inside, works offline.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://anthrophobicc.github.io/PhenixProject/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="logo.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="img/icone-180.png">
 <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 <header class="nav">
   <a class="brand" href="index.html"><span class="mark"></span><span>PHENIX</span></a>
   <nav>
-    <a href="explore.html">Explorer</a>
-    <a href="lab.html">Contribuer</a>
-    <a href="download.html">Télécharger</a>
+    <a href="explore.html" data-i18n="nav.explore">Explore</a>
+    <a href="devices.html" data-i18n="nav.devices">Devices</a>
+    <a href="lab.html" data-i18n="nav.contribute">Contribute</a>
+    <a href="download.html" data-i18n="nav.download">Download</a>
+    <button class="lang" type="button" aria-label="Language">FR</button>
+    <span class="themes" role="group" aria-label="Theme">
+      <button type="button" data-theme-set="phosphore" title="Phosphor" aria-label="Phosphor theme" style="--c1:#040806;--c2:#39FF6A"></button>
+      <button type="button" data-theme-set="ambre" title="Amber" aria-label="Amber theme" style="--c1:#0A0703;--c2:#FFB000"></button>
+      <button type="button" data-theme-set="papier" title="Paper" aria-label="Paper theme" style="--c1:#F4F2EC;--c2:#2F6E2A"></button>
+    </span>
   </nav>
 </header>
-
 <main class="wrap" style="padding-top:34px;padding-bottom:60px">
-  <h1 style="font-size:30px;font-weight:700;letter-spacing:-.022em;margin:0 0 10px">Télécharger Phenix</h1>
-  <p class="lede" style="font-size:17px">Un seul fichier. Aucune installation. Il fonctionne hors ligne.</p>
+  <h1 style="font-size:30px;margin:0 0 10px;color:var(--acc);text-shadow:var(--glow)" data-i18n="dl.h1">Download Phenix Base</h1>
+  <p class="lede" style="font-size:17px;margin:0" data-i18n="dl.lede">One file. No install. Works offline.</p>
 
-  <div class="act primary" style="margin-top:26px">
-    <b>Phenix — application complète</b>
-    <span>Un fichier HTML. Téléchargez-le, ouvrez-le, c'est tout.</span>
-    <p style="margin-top:14px"><a class="btn primary" href="phenix.html" download>Télécharger l'application</a></p>
+  <div class="act primary" id="phone" style="margin-top:26px">
+    <b data-i18n="dl.ph">On your phone</b>
+    <span data-i18n="dl.phs">Open the app in your browser, then add it to your home screen. It gets its own icon and keeps working without internet.</span>
+    <p style="margin-top:14px"><a class="btn primary" href="phenix.html" data-i18n="dl.phbtn">Open the app</a></p>
+    <ol class="etapes">
+      <li data-i18n="dl.ph1"><strong>iPhone</strong>: open it in Safari, tap the Share button, then <em>Add to Home Screen</em>.</li>
+      <li data-i18n="dl.ph2"><strong>Android</strong>: open it in Chrome, tap the ⋮ menu, then <em>Install app</em> or <em>Add to Home screen</em>.</li>
+      <li data-i18n="dl.ph3">Open it once with a connection. After that, the sheets, your own sheets and your markers work offline.</li>
+    </ol>
+  </div>
+
+  <div class="act" style="margin-top:12px">
+    <b data-i18n="dl.card">Phenix Base — the full app</b>
+    <span data-i18n="dl.cards">One HTML file with every sheet inside. Download it, open it, that's it.</span>
+    <p style="margin-top:14px"><a class="btn primary" href="phenix.html" download data-i18n="dl.btn">Download the app (1.8 MB)</a></p>
   </div>
 
   <div class="band" style="border:none;padding:34px 0 0">
-    <h2>Comment ça marche</h2>
+    <h2 data-i18n="dl.how">How it works</h2>
     <ol>
-      <li><strong>Téléchargez le fichier.</strong> Il pèse environ 1,6 Mo, avec toutes les fiches dedans.</li>
-      <li><strong>Ouvrez-le</strong> en double-cliquant dessus. Il s'ouvre dans votre navigateur.</li>
-      <li><strong>Utilisez-le.</strong> Les fiches ne demandent aucune connexion.</li>
+      <li data-i18n="dl.h1s"><strong>Download the file.</strong> About 1.8 MB, every sheet included.</li>
+      <li data-i18n="dl.h2s"><strong>Open it</strong> with a double click. It opens in your browser.</li>
+      <li data-i18n="dl.h3s"><strong>Use it.</strong> The sheets need no connection.</li>
     </ol>
 
-    <h2>Vos données</h2>
-    <p>Tout reste sur votre appareil. Rien n'est envoyé nulle part, il n'y a ni compte
-      ni serveur. Vos fiches, cartes et repères sont enregistrés automatiquement et
-      retrouvés à la réouverture.</p>
-    <p><strong>Exportez régulièrement votre sauvegarde</strong> depuis Paramètres.
-      C'est ce qui vous permet de passer d'un appareil à l'autre et de ne rien perdre
-      si vous effacez les données de votre navigateur.</p>
+    <h2 data-i18n="dl.data">Your data</h2>
+    <p data-i18n="dl.data1">Everything stays on your device. Nothing is sent anywhere, there's no account and no server. Your sheets, maps and markers are saved automatically and are still there when you reopen it.</p>
+    <p data-i18n="dl.data2"><strong>Export your backup regularly</strong> from Settings. That's how you move from one device to another, and how you lose nothing if you clear your browser data.</p>
 
-    <h2>Ce qui a besoin d'une connexion</h2>
-    <p>Uniquement le chargement d'une nouvelle zone de carte et la recherche d'un lieu.
-      Une fois une zone enregistrée, elle se consulte hors ligne. Tout le reste
-      — fiches, création, bibliothèque, modules — fonctionne sans réseau.</p>
+    <h2 data-i18n="dl.net">What needs a connection</h2>
+    <p data-i18n="dl.netp">Only loading a new map area and searching for a place. Once an area is saved, it works offline. Everything else, sheets, writing, bookshelf, modules, works without a network.</p>
 
-    <h2>Version pour ordinateur</h2>
-    <p>La version Windows est disponible : un installateur de 1,7 Mo. macOS et Linux
-      sont en préparation. <strong>Le fichier HTML reste l'application principale</strong> :
-      il fait déjà tout, et il ne s'installe pas.</p>
-    <p><a class="btn" href="https://github.com/anthrophobicc/phenix/releases/latest/download/Phenix_0.1.0_x64-setup.exe" rel="noopener">Télécharger pour Windows</a></p>
+    <h2 data-i18n="dl.win">Windows version</h2>
+    <p data-i18n="dl.winp">The Windows version is available: a 1.8 MB installer. macOS and Linux are on the way. <strong>The HTML file stays the main app</strong>: it already does everything, and needs no install.</p>
+    <p class="small" data-i18n="dl.winwarn">The app isn't signed yet, so Windows may warn you. Click <em>More info</em>, then <em>Run anyway</em>.</p>
+    <p><a class="btn" href="dl/Phenix_0.1.0_x64-setup.exe" download data-i18n="dl.winbtn">Download for Windows</a></p>
 
-    <h2>Le code et le corpus</h2>
-    <p>Tout est ouvert. Le logiciel est sous licence MIT, les fiches sous licence
-      CC BY-SA 4.0. Vous pouvez copier, modifier et redistribuer les deux.</p>
-    <p><a class="btn" href="https://github.com/anthrophobicc/phenix" rel="noopener">Voir le dépôt</a></p>
+    <h2 data-i18n="dl.code">Code and sheets</h2>
+    <p data-i18n="dl.codep">Everything is open. The software is under the MIT licence, the sheets under CC BY-SA 4.0. You can copy, modify and share both.</p>
+    <p><a class="btn" href="https://github.com/anthrophobicc/PhenixProject" rel="noopener" data-i18n="dl.repo">See the repository</a></p>
   </div>
 </main>
+<footer>
+  <div class="wrap">
+    <p data-i18n="foot.motto"><strong>Phenix</strong> — knowledge is your only immunity.</p>
+    <p class="small">
+      <a href="explore.html" data-i18n="nav.explore">Explore</a> ·
+      <a href="devices.html" data-i18n="nav.devices">Devices</a> ·
+      <a href="lab.html" data-i18n="nav.contribute">Contribute</a> ·
+      <a href="download.html" data-i18n="nav.download">Download</a> ·
+      <a href="soutenir.html" data-i18n="nav.support">Support</a> ·
+      <a href="https://www.instagram.com/phenixprjct/" rel="noopener">Instagram</a> ·
+      <a href="https://www.reddit.com/r/PhenixProject/" rel="noopener">Reddit</a> ·
+      <a href="https://github.com/anthrophobicc/PhenixProject" rel="noopener">GitHub</a>
+    </p>
+    <p class="small dim" data-i18n="foot.licence">Software under the MIT licence · sheets under CC BY-SA 4.0</p>
+  </div>
+</footer>
+<script src="i18n.js"></script>
 
-<footer><div class="wrap"><p class="small">
-  <a href="index.html">Accueil</a> · <a href="explore.html">Explorer</a> · <a href="lab.html">Contribuer</a>
-</p></div></footer>
 </body>
 </html>

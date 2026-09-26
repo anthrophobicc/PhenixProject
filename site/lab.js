@@ -1,20 +1,28 @@
 /* =========================================================================
    PHENIX LAB — envoi d'une proposition
-   Remplacez les deux valeurs ci-dessous par celles de votre projet Supabase.
-   Elles se trouvent dans Supabase → Project Settings → API.
+   Remplacez les deux valeurs ci-dessous par celles de votre projet Supabase
+   (Supabase → Project Settings → API), et ajoutez dans lab.html, avant lab.js :
+   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
    La clé « anon » est publique par nature : c'est prévu pour, à condition
-   que les règles de sécurité soient bien celles décrites dans BACKEND.md.
+   que les règles de sécurité soient bien celles décrites dans docs/BACKEND.md.
    ========================================================================= */
 const SUPABASE_URL = "https://VOTRE-PROJET.supabase.co";
 const SUPABASE_ANON = "VOTRE_CLE_ANON";
+
+const REDDIT = "https://www.reddit.com/r/PhenixProject/";
+const TICKET = "https://github.com/anthrophobicc/PhenixProject/issues/new?template=proposer-fiche.md";
 
 const form = document.getElementById("form");
 const retour = document.getElementById("retour");
 const bouton = document.getElementById("submit");
 
+// Les messages suivent la langue choisie sur le site.
+const M = (en, fr) => (document.documentElement.lang === "fr" ? fr : en);
+const libelleBouton = () => M("Send my proposal", "Envoyer ma proposition");
+
 let sb = null;
 try {
-  if (!SUPABASE_URL.includes("VOTRE-PROJET")) {
+  if (!SUPABASE_URL.includes("VOTRE-PROJET") && window.supabase) {
     sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
   }
 } catch (e) { /* la bibliothèque n'a pas chargé : on le gère à l'envoi */ }
@@ -24,36 +32,27 @@ function message(type, html) {
   retour.scrollIntoView({ behavior: "smooth", block: "center" });
 }
 
-/* Un identifiant lisible, du type SUB-2026-0042.
-   Le numéro définitif est attribué par la base ; celui-ci sert d'accusé
-   de réception immédiat pour la personne. */
-function referenceProvisoire() {
-  const an = new Date().getFullYear();
-  const n = Math.floor(Math.random() * 9000 + 1000);
-  return `SUB-${an}-${n}`;
-}
-
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   // Piège à robots : si ce champ est rempli, on fait semblant d'accepter.
   if (document.getElementById("site").value) {
-    message("ok", "Contribution reçue.");
+    message("ok", M("Contribution received.", "Contribution reçue."));
     return;
   }
 
   const titre = document.getElementById("titre").value.trim();
   const contenu = document.getElementById("contenu").value.trim();
 
-  if (titre.length < 4) return message("ko", "Le titre est trop court.");
+  if (titre.length < 4) return message("ko", M("The title is too short.", "Le titre est trop court."));
   if (contenu.length < 200) {
-    return message("ko",
-      "La fiche fait moins de 200 caractères. Une proposition doit être suffisamment " +
-      "développée pour être évaluée — reprenez l'aide au-dessus si besoin.");
+    return message("ko", M(
+      "The sheet is under 200 characters. A proposal needs enough substance to be reviewed: see the guide above if needed.",
+      "La fiche fait moins de 200 caractères. Une proposition doit être suffisamment développée pour être évaluée : reprenez l'aide au-dessus si besoin."));
   }
 
   bouton.disabled = true;
-  bouton.textContent = "Envoi en cours…";
+  bouton.textContent = M("Sending…", "Envoi en cours…");
 
   const proposition = {
     titre,
@@ -69,18 +68,20 @@ form.addEventListener("submit", async (e) => {
     contact: document.getElementById("contact").value.trim() || null,
     statut: "submitted"
   };
+  const nomFichier = (titre.replace(/\W+/g, "-").toLowerCase() || "fiche") + ".md";
+  const canaux = M(
+    `post it on <a href="${REDDIT}" rel="noopener">r/PhenixProject</a>, or <a href="${TICKET}" rel="noopener">open a ticket on GitHub</a> and attach it.`,
+    `publiez-la sur <a href="${REDDIT}" rel="noopener">r/PhenixProject</a>, ou <a href="${TICKET}" rel="noopener">ouvrez un ticket sur GitHub</a> et joignez-la.`);
 
-  // --- Si le backend n'est pas encore branché, on n'abandonne pas la personne :
+  // --- Tant que le backend n'est pas branché, on n'abandonne pas la personne :
   //     on lui rend son travail sous forme de fichier.
   if (!sb) {
-    const fichier = construireMarkdown(proposition);
-    telecharger(fichier, (titre.replace(/\W+/g, "-").toLowerCase() || "fiche") + ".md");
+    telecharger(construireMarkdown(proposition), nomFichier);
     bouton.disabled = false;
-    bouton.textContent = "Envoyer ma proposition";
-    return message("info",
-      "<strong>L'envoi automatique n'est pas encore actif.</strong><br>" +
-      "Votre fiche vient d'être téléchargée sur votre appareil au format .md. " +
-      "Rien n'est perdu : envoyez ce fichier par le canal indiqué sur la page d'accueil.");
+    bouton.textContent = libelleBouton();
+    return message("info", M(
+      "<strong>Automatic sending isn't live yet.</strong><br>Your sheet was just saved on your device as a .md file. Nothing is lost: ",
+      "<strong>L'envoi automatique n'est pas encore actif.</strong><br>Votre fiche vient d'être enregistrée sur votre appareil au format .md. Rien n'est perdu : ") + canaux);
   }
 
   try {
@@ -98,24 +99,25 @@ form.addEventListener("submit", async (e) => {
     }
 
     form.reset();
-    message("ok",
-      `<strong>Contribution reçue.</strong><br>` +
-      `Référence : <strong>${data.reference}</strong> — notez-la si vous souhaitez en reparler.<br>` +
-      (envoyees ? `${envoyees} image(s) jointe(s).<br>` : "") +
-      (ratees ? `<em>${ratees} image(s) n'ont pas pu être envoyées.</em><br>` : "") +
-      `Elle sera examinée avant toute intégration au corpus Phenix.`);
+    message("ok", M(
+      `<strong>Contribution received.</strong><br>Reference: <strong>${data.reference}</strong>. Keep it if you want to talk about it later.<br>` +
+        (envoyees ? `${envoyees} image(s) attached.<br>` : "") +
+        (ratees ? `<em>${ratees} image(s) could not be sent.</em><br>` : "") +
+        "It will be reviewed before anything enters the Phenix library.",
+      `<strong>Contribution reçue.</strong><br>Référence : <strong>${data.reference}</strong>. Notez-la si vous souhaitez en reparler.<br>` +
+        (envoyees ? `${envoyees} image(s) jointe(s).<br>` : "") +
+        (ratees ? `<em>${ratees} image(s) n'ont pas pu être envoyées.</em><br>` : "") +
+        "Elle sera examinée avant toute intégration au corpus Phenix."));
   } catch (err) {
     // On ne laisse jamais quelqu'un perdre ce qu'il vient d'écrire.
-    const fichier = construireMarkdown(proposition);
-    telecharger(fichier, (titre.replace(/\W+/g, "-").toLowerCase() || "fiche") + ".md");
-    message("ko",
-      "<strong>L'envoi a échoué.</strong><br>" +
-      "Votre fiche vient d'être téléchargée sur votre appareil pour que rien ne soit perdu. " +
-      "Réessayez plus tard, ou envoyez le fichier par un autre canal.<br>" +
-      `<span class="small">Détail : ${err.message || err}</span>`);
+    telecharger(construireMarkdown(proposition), nomFichier);
+    message("ko", M(
+      "<strong>Sending failed.</strong><br>Your sheet was just saved on your device so nothing is lost. Try again later, or ",
+      "<strong>L'envoi a échoué.</strong><br>Votre fiche vient d'être enregistrée sur votre appareil pour que rien ne soit perdu. Réessayez plus tard, ou ") +
+      canaux + `<br><span class="small">${M("Detail", "Détail")} : ${err.message || err}</span>`);
   } finally {
     bouton.disabled = false;
-    bouton.textContent = "Envoyer ma proposition";
+    bouton.textContent = libelleBouton();
   }
 });
 
@@ -127,10 +129,10 @@ id: SUB-${Date.now()}
 titre: ${p.titre}
 axe: ${p.axe || 3}
 categorie: ${p.categorie || ""}
-temps: 
-contexte: 
-risque: 
-materiel: 
+temps:
+contexte:
+risque:
+materiel:
 priorite: ${p.urgence ? "flash" : "normale"}
 origine: communaute
 langue: ${p.langue}

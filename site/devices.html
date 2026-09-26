@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" data-page-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="dev.title">Devices — Phenix</title>
+<meta name="description" content="Phenix 001 and 002: small, tough, repairable devices that carry the library offline.">
+<meta name="theme-color" content="#040806">
+<script>try{var t=localStorage.getItem("phenix-theme");if(t&&t!=="phosphore")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<meta property="og:title" content="Phenix">
+<meta property="og:description" content="Phenix 001 and 002: small, tough, repairable devices that carry the library offline.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://anthrophobicc.github.io/PhenixProject/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="logo.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="img/icone-180.png">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="index.html"><span class="mark"></span><span>PHENIX</span></a>
+  <nav>
+    <a href="explore.html" data-i18n="nav.explore">Explore</a>
+    <a href="devices.html" data-i18n="nav.devices">Devices</a>
+    <a href="lab.html" data-i18n="nav.contribute">Contribute</a>
+    <a href="download.html" data-i18n="nav.download">Download</a>
+    <button class="lang" type="button" aria-label="Language">FR</button>
+    <span class="themes" role="group" aria-label="Theme">
+      <button type="button" data-theme-set="phosphore" title="Phosphor" aria-label="Phosphor theme" style="--c1:#040806;--c2:#39FF6A"></button>
+      <button type="button" data-theme-set="ambre" title="Amber" aria-label="Amber theme" style="--c1:#0A0703;--c2:#FFB000"></button>
+      <button type="button" data-theme-set="papier" title="Paper" aria-label="Paper theme" style="--c1:#F4F2EC;--c2:#2F6E2A"></button>
+    </span>
+  </nav>
+</header>
+<main class="wrap" style="padding-top:34px;padding-bottom:60px;max-width:900px">
+  <span class="concept" data-i18n="dev.badge">Prototype · in design</span>
+  <h1 style="font-size:32px;margin:0 0 10px;color:var(--acc);text-shadow:var(--glow)" data-i18n="dev.h1">Phenix devices</h1>
+  <p class="lede" style="font-size:18px;margin:0" data-i18n="dev.lede">Two small, tough devices designed to be cheap and built only from common parts, so they can be repaired with what's left in old electronics.</p>
+
+  <section class="appareil">
+    <div class="visuel"><img src="img/phenix-001.svg" alt="Concept render of Phenix 001, a pocket reader with an e-ink screen and a D-pad"></div>
+    <div>
+      <h2 style="font-size:22px;margin:0 0 10px;color:var(--acc)" data-i18n="dev.001">Phenix 001 — the pocket reader</h2>
+      <p data-i18n="dev.001p">The size of a Flipper Zero, and it holds a whole library. An e-ink screen you can read in full sun, a steel case, a D-pad, and a microSD slot on top.</p>
+      <ul class="specs">
+        <li><b data-i18n="dev.001a.k">Screen</b><span data-i18n="dev.001a">E-ink, readable in full sun. Color e-ink on the C version.</span></li>
+        <li><b data-i18n="dev.001b.k">Storage</b><span data-i18n="dev.001b">32 to 64 GB built in (target), plus microSD: room for a whole regional library, its maps and its diagrams.</span></li>
+        <li><b data-i18n="dev.001c.k">Case</b><span data-i18n="dev.001c">Steel, with a laser-engraved logo. Five colorways, the same parts inside.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="appareil inverse">
+    <div class="visuel"><img src="img/phenix-002.svg" alt="Concept render of Phenix 002, a calculator-sized terminal with a color screen and a keyboard" style="max-height:480px"></div>
+    <div>
+      <h2 style="font-size:22px;margin:0 0 10px;color:var(--acc)" data-i18n="dev.002">Phenix 002 — closer to a calculator than a computer</h2>
+      <p data-i18n="dev.002p">About the size of a paperback. A color screen, a real keyboard, and a long-range radio to send messages when there's no network left.</p>
+      <ul class="specs">
+        <li><b data-i18n="dev.002a.k">Radio</b><span data-i18n="dev.002a">LoRa long-range radio: messages between devices, no network needed.</span></li>
+        <li><b data-i18n="dev.002b.k">Storage</b><span data-i18n="dev.002b">256 GB built in (target), and room for two or three SD cards at once.</span></li>
+        <li><b data-i18n="dev.002c.k">Diagnostic</b><span data-i18n="dev.002c">A diagnostic port to test a salvaged part before you wire it in.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="band">
+    <h2 data-i18n="dev.built">Built from what the world already has</h2>
+    <div class="quatre">
+      <div><h3 data-i18n="dev.q1">Common parts only</h3><p data-i18n="dev.q1p">No custom parts: every component has a twin in everyday devices. When a screen breaks or a battery dies, the replacement is probably already lying in a drawer somewhere.</p></div>
+      <div><h3 data-i18n="dev.q2">Opens with a screwdriver</h3><p data-i18n="dev.q2p">No glue, no special screws: every layer comes apart. Cracked screen? Wire in one from an old device with four jumper wires, and it reads again.</p></div>
+      <div><h3 data-i18n="dev.q3">They share everything</h3><p data-i18n="dev.q3p">Plug two together, by cable or magnetic pins, and they swap sheets, maps and notes, checking every signature. Each device becomes another copy of the library.</p></div>
+      <div><h3 data-i18n="dev.q4">Power when there's none</h3><p data-i18n="dev.q4p">18650 cells, the most common battery size in the world, in a LiFePO4 pack chosen for safety and long life. It charges over USB-C, magnetic pins, a clip-on crank or a folding solar panel.</p></div>
+    </div>
+  </div>
+
+  <div class="band">
+    <h2 data-i18n="dev.versions">Read the version on the logo</h2>
+    <p data-i18n="dev.versionsp">A painted ring around the engraved logo tells you which model you're holding: none for the base model, yellow for color e-ink, blue for the local AI assistant, both for both.</p>
+    <div class="large"><img src="img/phenix-001-versions.svg" alt="The four versions of Phenix 001, told apart by the rings around the logo"></div>
+    <p data-i18n="dev.colors">Five colorways — brushed steel, plain grey, military green, matte black, signal red — and exactly the same parts inside.</p>
+    <div class="large"><img src="img/phenix-001-coloris.svg" alt="Phenix 001 in five colorways"></div>
+  </div>
+
+  <div class="band">
+    <h2 data-i18n="dev.price">A price anyone can pay</h2>
+    <p data-i18n="dev.pricep">The goal is a device that's genuinely cheap: cheap enough for every school, village and town hall to have one, like the defibrillator next to the door.</p>
+    <p class="note" data-i18n="dev.honest">Concept renders, not the final design. No dates and no prices until a prototype works.</p>
+    <p data-i18n="dev.help">Want to help build it? Electronics, firmware, case design, testing: come and talk on <a href="https://www.reddit.com/r/PhenixProject/" rel="noopener">r/PhenixProject</a> or open an issue on <a href="https://github.com/anthrophobicc/PhenixProject" rel="noopener">GitHub</a>.</p>
+    <p><a class="btn primary" href="https://www.instagram.com/phenixprjct/" rel="noopener" data-i18n="dev.follow">Follow the build on Instagram</a></p>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <p data-i18n="foot.motto"><strong>Phenix</strong> — knowledge is your only immunity.</p>
+    <p class="small">
+      <a href="explore.html" data-i18n="nav.explore">Explore</a> ·
+      <a href="devices.html" data-i18n="nav.devices">Devices</a> ·
+      <a href="lab.html" data-i18n="nav.contribute">Contribute</a> ·
+      <a href="download.html" data-i18n="nav.download">Download</a> ·
+      <a href="soutenir.html" data-i18n="nav.support">Support</a> ·
+      <a href="https://www.instagram.com/phenixprjct/" rel="noopener">Instagram</a> ·
+      <a href="https://www.reddit.com/r/PhenixProject/" rel="noopener">Reddit</a> ·
+      <a href="https://github.com/anthrophobicc/PhenixProject" rel="noopener">GitHub</a>
+    </p>
+    <p class="small dim" data-i18n="foot.licence">Software under the MIT licence · sheets under CC BY-SA 4.0</p>
+  </div>
+</footer>
+<script src="i18n.js"></script>
+
+</body>
+</html>

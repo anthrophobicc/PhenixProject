@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-page-lang="en" data-alt="fiche-tec-ene-001.html" data-kind="fiche">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Electrical energy in everyday objects — Phenix</title>
+<meta name="description" content="Electrical energy in everyday objects — Phenix">
+<meta name="theme-color" content="#040806">
+<script>try{var t=localStorage.getItem("phenix-theme");if(t&&t!=="phosphore")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<meta property="og:title" content="Phenix">
+<meta property="og:description" content="Electrical energy in everyday objects — Phenix">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://anthrophobicc.github.io/PhenixProject/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="logo.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="img/icone-180.png">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="fiche.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="index.html"><span class="mark"></span><span>PHENIX</span></a>
+  <nav>
+    <a href="explore.html" data-i18n="nav.explore">Explore</a>
+    <a href="devices.html" data-i18n="nav.devices">Devices</a>
+    <a href="lab.html" data-i18n="nav.contribute">Contribute</a>
+    <a href="download.html" data-i18n="nav.download">Download</a>
+    <button class="lang" type="button" aria-label="Language">FR</button>
+    <span class="themes" role="group" aria-label="Theme">
+      <button type="button" data-theme-set="phosphore" title="Phosphor" aria-label="Phosphor theme" style="--c1:#040806;--c2:#39FF6A"></button>
+      <button type="button" data-theme-set="ambre" title="Amber" aria-label="Amber theme" style="--c1:#0A0703;--c2:#FFB000"></button>
+      <button type="button" data-theme-set="papier" title="Paper" aria-label="Paper theme" style="--c1:#F4F2EC;--c2:#2F6E2A"></button>
+    </span>
+  </nav>
+</header>
+<main class="wrap fiche">
+  <p class="fil"><a href="explore.html" data-i18n="nav.explore">Explore</a> › Technique › Energy and electricity</p>
+  
+  <div class="tags">
+    
+    <span class="tag off" data-i18n="tag.off">Official</span>
+  </div>
+  <h1>Electrical energy in everyday objects</h1>
+  <p class="meta">Axis 2 · Technique · Energy and electricity</p>
+  <div class="bals"><div><span>Time</span><b>Long</b></div><div><span>Context</span><b>Alone</b></div><div><span>Risk</span><b>Discreet</b></div><div><span>Gear</span><b>Technical</b></div></div>
+  <article class="prose"><p class="lede-f">An electrical setup can be read with four values and a single calculation. Everything else follows from them.</p>
+<h2>Reading a setup</h2>
+<p>It all starts with a rating plate. Four values, and nothing else is needed to decide.</p>
+<ul><li><strong>The voltage</strong>, in volts. This is the value that destroys. Powering a device at the wrong voltage kills it immediately, sometimes violently.</li><li><strong>The current</strong>, in amps. What the device draws.</li><li><strong>The power</strong>, in watts. Often written down; with direct current, it&#x27;s the voltage multiplied by the current.</li><li><strong>The type of current.</strong> A straight line for direct current, a wavy line for alternating current. They&#x27;re not variations of the same thing.</li></ul>
+<p>The relationships between voltage, current and resistance, and wiring in series and in parallel, are detailed in <span title="TEC-ENE-002">Lire un circuit électrique</span>.</p>
+<p>One calculation is used every day. Power in watts multiplied by a duration in hours gives energy in watt-hours. It&#x27;s the only unit that lets you compare a need with a reserve. A capacity in amp-hours says nothing on its own: multiply it by the nominal voltage. That&#x27;s why two batteries advertised with the same capacity can hold very different amounts of energy.</p>
+<p>Once you have that calculation, sizing becomes trivial: add up your watt-hours per day, compare them with what you store, and you know how many days you can last. The same calculation decides whether electric propulsion is realistic, see <a href="fiche-tec-mot-001-en.html">Boat engines — the complete guide</a>.</p>
+<h2>Handling rules</h2>
+<ol><li><strong>Switch off and check there&#x27;s no voltage before touching anything.</strong> An unplugged device isn&#x27;t a safe device.</li><li><strong>Read the plate before plugging anything in.</strong> Always.</li><li><strong>Respect polarity with direct current.</strong> It has a direction. Reversing it destroys electronics instantly, without warning.</li><li><strong>Set aside any deformed lithium cell.</strong> Swollen, punctured, crushed: it can&#x27;t be repaired and it can&#x27;t be tested. It can go into <span class="glo" tabindex="0">thermal runaway<span class="glob">A self-sustaining chain reaction inside a damaged lithium cell, which needs no outside oxygen.</span></span>.</li><li><strong>Never touch the large capacitors in a switch-mode power supply, a microwave or a camera flash.</strong> They hold a charge that can kill for several minutes after being unplugged, sometimes much longer.</li></ol>
+<h2>Where to find what</h2>
+<p><strong>You&#x27;re looking for storage.</strong> Standard cylindrical lithium cells are found in a large share of power-tool and laptop battery packs. A dead pack is rarely dead as a whole: it&#x27;s almost always one or two cells dragging the rest down, while the others are still good.</p>
+<p><strong>You have no battery-management electronics.</strong> Then prefer lead-acid. Batteries from UPS units and alarm systems keep a residual charge for a long time and can be recharged with basic means. That&#x27;s their decisive advantage over lithium, which needs precise management or it can catch fire.</p>
+<p><strong>You&#x27;re looking for power generation.</strong> Solar panels from road signs, garden lights and street furniture are everywhere, rarely watched, and produce power straight away. Sizing a full setup is covered in <span title="TEC-SOLR-001">Le solaire photovoltaïque, du panneau à la prise</span>.</p>
+<p><strong>You&#x27;re salvaging on the spot.</strong> Sorting out what can still be used is in <a href="fiche-surv-rec-002-en.html">Telling what&#x27;s still usable</a>, and the search method is in <span title="SURV-REC-001">Fouiller un bâtiment abandonné</span>.</p>
+<p><strong>You want to go further.</strong> Wiring into a system, overcurrent protection, earthing and live work belong in separate sheets. These are subjects where a mistake is deadly, not just expensive: they&#x27;re covered on their own, never at the end of a sheet.</p></article>
+  
+  <div class="blk"><h4 data-i18n="fiche.back">Sheets that lead here</h4><a class="item" href="fiche-urg-brul-001-en.html"><h3>Burns</h3><div class="meta">Axis 3</div></a><a class="item" href="fiche-surv-ene-001-en.html"><h3>Powering a circuit without the grid</h3><div class="meta">Axis 3</div></a><a class="item" href="fiche-surv-rec-002-en.html"><h3>Telling what&#x27;s still usable</h3><div class="meta">Axis 3</div></a><a class="item" href="fiche-surv-rec-016-en.html"><h3>Salvaging from any wreck</h3><div class="meta">Axis 3</div></a><a class="item" href="fiche-surv-rec-007-en.html"><h3>Repairing a cable, a plug, a contact</h3><div class="meta">Axis 3</div></a><a class="item" href="fiche-tec-rad-001-en.html"><h3>Building a radio receiver</h3><div class="meta">Axis 2</div></a><a class="item" href="fiche-tec-moth-001-en.html"><h3>The combustion engine — how it all works</h3><div class="meta">Axis 2</div></a><a class="item" href="fiche-tec-mot-001-en.html"><h3>Boat engines — the complete guide</h3><div class="meta">Axis 2</div></a></div>
+  <div class="blk cta">
+    <p data-i18n="fiche.cta"><strong>This sheet is part of Phenix.</strong> The app holds the whole library, the maps and the bookshelf, and works offline.</p>
+    <p><a class="btn primary" href="download.html" data-i18n="home.b2">Download Phenix Base</a>
+       <a class="btn" href="lab.html" data-i18n="sup.btn">Write a sheet</a></p>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <p data-i18n="foot.motto"><strong>Phenix</strong> — knowledge is your only immunity.</p>
+    <p class="small">
+      <a href="explore.html" data-i18n="nav.explore">Explore</a> ·
+      <a href="devices.html" data-i18n="nav.devices">Devices</a> ·
+      <a href="lab.html" data-i18n="nav.contribute">Contribute</a> ·
+      <a href="download.html" data-i18n="nav.download">Download</a> ·
+      <a href="soutenir.html" data-i18n="nav.support">Support</a> ·
+      <a href="https://www.instagram.com/phenixprjct/" rel="noopener">Instagram</a> ·
+      <a href="https://www.reddit.com/r/PhenixProject/" rel="noopener">Reddit</a> ·
+      <a href="https://github.com/anthrophobicc/PhenixProject" rel="noopener">GitHub</a>
+    </p>
+    <p class="small dim" data-i18n="foot.licence">Software under the MIT licence · sheets under CC BY-SA 4.0</p>
+  </div>
+</footer>
+<script src="i18n.js"></script>
+
+</body>
+</html>

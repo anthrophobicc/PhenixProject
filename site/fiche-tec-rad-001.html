@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr" data-page-lang="fr" data-alt="fiche-tec-rad-001-en.html" data-kind="fiche">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Construire un récepteur radio — Phenix</title>
+<meta name="description" content="Construire un récepteur radio — Phenix">
+<meta name="theme-color" content="#040806">
+<script>try{var t=localStorage.getItem("phenix-theme");if(t&&t!=="phosphore")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<meta property="og:title" content="Phenix">
+<meta property="og:description" content="Construire un récepteur radio — Phenix">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://anthrophobicc.github.io/PhenixProject/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="logo.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="img/icone-180.png">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="fiche.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="index.html"><span class="mark"></span><span>PHENIX</span></a>
+  <nav>
+    <a href="explore.html" data-i18n="nav.explore">Explorer</a>
+    <a href="devices.html" data-i18n="nav.devices">Appareils</a>
+    <a href="lab.html" data-i18n="nav.contribute">Contribuer</a>
+    <a href="download.html" data-i18n="nav.download">Télécharger</a>
+    <button class="lang" type="button" aria-label="Language">EN</button>
+    <span class="themes" role="group" aria-label="Theme">
+      <button type="button" data-theme-set="phosphore" title="Phosphor" aria-label="Phosphor theme" style="--c1:#040806;--c2:#39FF6A"></button>
+      <button type="button" data-theme-set="ambre" title="Amber" aria-label="Amber theme" style="--c1:#0A0703;--c2:#FFB000"></button>
+      <button type="button" data-theme-set="papier" title="Paper" aria-label="Paper theme" style="--c1:#F4F2EC;--c2:#2F6E2A"></button>
+    </span>
+  </nav>
+</header>
+<main class="wrap fiche">
+  <p class="fil"><a href="explore.html" data-i18n="nav.explore">Explorer</a> › La Technique › Énergie et Électricité</p>
+  
+  <div class="tags">
+    
+    <span class="tag off" data-i18n="tag.off">Officielle</span>
+  </div>
+  <h1>Construire un récepteur radio</h1>
+  <p class="meta">Axe 2 · La Technique · Énergie et Électricité</p>
+  <div class="bals"><div><span>Temps</span><b>Long</b></div><div><span>Contexte</span><b>Seul</b></div><div><span>Risque</span><b>Discret</b></div><div><span>Matériel</span><b>Récupération</b></div></div>
+  <article class="prose"><p class="lede-f">Un récepteur qui ne demande aucune source d&#x27;énergie est possible. Il tire toute sa puissance de l&#x27;onde elle-même.</p>
+<h2>Ce qu&#x27;une onde transporte</h2>
+<p>Un émetteur fait osciller un courant dans une antenne, ce qui rayonne une onde. Cette onde fait osciller un courant, infiniment plus faible, dans toute autre antenne qu&#x27;elle rencontre.</p>
+<p>Le problème n&#x27;est donc jamais de capter : <strong>toutes les stations arrivent en même temps sur votre fil</strong>. Le problème est d&#x27;en isoler une et d&#x27;en extraire le son.</p>
+<p>Une onde seule ne porte rien. On lui fait porter un signal en faisant varier son amplitude au rythme du son : c&#x27;est la <strong>modulation d&#x27;amplitude</strong>, celle des ondes moyennes et des grandes ondes. C&#x27;est la seule que l&#x27;on puisse démoduler sans électronique active, et c&#x27;est ce qui rend ce montage possible.</p>
+<p>Un récepteur à détection comporte quatre parties, pas une de plus : une <strong>antenne</strong> qui capte, un <strong>circuit accordé</strong> qui sélectionne, un <strong>détecteur</strong> qui extrait le son, un <strong>écouteur</strong> qui le restitue.</p>
+<h2>Le circuit accordé</h2>
+<p>Une bobine associée à un condensateur résonne à une fréquence précise, comme un diapason sur une note. À cette fréquence la réponse est maximale, ailleurs elle s&#x27;effondre. C&#x27;est ce qui sépare les stations.</p>
+<p>Plus la bobine ou le condensateur sont grands, plus la fréquence reçue est basse.</p>
+<p><strong>La bobine</strong> s&#x27;obtient en enroulant du fil de cuivre isolé, jointif et régulier, sur un cylindre isolant : tube de carton, bouteille, manche de bois. De l&#x27;ordre de cent tours sur un diamètre de cinq à sept centimètres couvre les ondes moyennes. Le fil émaillé se récupère dans tout transformateur, moteur, relais ou haut-parleur.</p>
+<p><strong>L&#x27;accord</strong> se règle de deux façons. Un condensateur variable pris sur un vieux poste est l&#x27;idéal. À défaut, on gratte l&#x27;émail sur une bande le long de la bobine et l&#x27;on fait glisser un contact le long des spires : on change le nombre de tours actifs, donc la fréquence. C&#x27;est plus grossier et cela fonctionne.</p>
+<p><strong>Un condensateur se fabrique</strong> : deux surfaces conductrices séparées par un isolant. Deux feuilles d&#x27;aluminium enroulées avec du papier entre elles ; ou deux tubes recouverts d&#x27;aluminium et emboîtés coulissants, ce qui donne une valeur variable.</p>
+<h2>Le détecteur, la pièce décisive</h2>
+<p>Un signal modulé en amplitude oscille symétriquement autour de zéro : sa moyenne est nulle, et un écouteur n&#x27;en tirerait rien. Il faut ne garder qu&#x27;une moitié de l&#x27;oscillation, ce qui fait apparaître l&#x27;enveloppe, c&#x27;est-à-dire le son. Il faut donc un composant qui laisse passer le courant dans un seul sens.</p>
+<p><strong>Une diode au germanium</strong> est le meilleur choix : elle conduit dès une très faible tension, ce qui compte quand le signal est minuscule. Elle se récupère sur d&#x27;anciens appareils. Une diode au silicium fonctionne mais exige un signal plus fort, donc une meilleure antenne.</p>
+<p><strong>Sans diode, un contact ponctuel suffit.</strong> C&#x27;est le principe historique du poste à galène : une pointe métallique posée sur un cristal semi-conducteur conduit mieux dans un sens que dans l&#x27;autre. Les montages de campagne utilisaient une lame d&#x27;acier bleui, oxydée, et une mine de crayon taillée en pointe appuyée dessus par un ressort souple. On déplace la pointe jusqu&#x27;à trouver le point sensible, et il faut le rechercher après chaque choc.</p>
+<p>Le contact doit rester <strong>léger et exploratoire</strong>. Trop appuyé, il conduit dans les deux sens et le son disparaît.</p>
+<h2>L&#x27;écouteur</h2>
+<p>C&#x27;est le point qui fait échouer la plupart des tentatives. La puissance disponible est infime : un haut-parleur ordinaire, de basse impédance, ne produira rien.</p>
+<p>Il faut un <strong>écouteur à haute impédance</strong> — écouteur piézoélectrique, ou écouteur magnétique ancien. Ils se récupèrent sur d&#x27;anciens téléphones, appareils auditifs, appareils de mesure. À défaut, un écouteur ordinaire branché à travers un petit transformateur d&#x27;adaptation — bobine de relais, transformateur de récupération — améliore beaucoup les choses.</p>
+<h2>L&#x27;antenne et la terre</h2>
+<p>C&#x27;est ici que la réception se gagne ou se perd, bien plus que dans le reste du montage.</p>
+<p><strong>L&#x27;antenne</strong> doit être longue et haute : un fil isolé de dix à trente mètres, tendu le plus haut possible, à l&#x27;écart des murs et des masses métalliques. La longueur compte, la hauteur davantage.</p>
+<p><strong>La terre est indispensable et systématiquement négligée.</strong> Le circuit doit se refermer. Un piquet métallique enfoncé dans un sol humide, une canalisation d&#x27;eau métallique, un radiateur relié à la terre. Sans terre correcte, un récepteur à détection ne fonctionne pratiquement pas.</p>
+<p>Une règle sans exception : <strong>on n&#x27;installe jamais une antenne au-dessus, en travers ou près d&#x27;une ligne électrique</strong>, et on ne la laisse pas en place par temps d&#x27;orage. Un long fil élevé capte aussi les décharges atmosphériques.</p>
+<h2>Le montage et le réglage</h2>
+<p>L&#x27;antenne arrive à une extrémité de la bobine, l&#x27;autre extrémité va à la terre. Le condensateur d&#x27;accord se place aux bornes de la bobine. Le détecteur prélève le signal sur la bobine et l&#x27;envoie à l&#x27;écouteur, dont l&#x27;autre borne rejoint la terre. Un petit condensateur en parallèle sur l&#x27;écouteur lisse le résultat et améliore nettement le son.</p>
+<p>Le réglage se fait dans cet ordre : établir une bonne terre, tendre la plus longue antenne possible, chercher le point sensible du détecteur, puis seulement balayer l&#x27;accord lentement.</p>
+<h2>Ce que ce récepteur peut et ne peut pas</h2>
+<p>Il reçoit les émissions en modulation d&#x27;amplitude, ondes moyennes et grandes ondes. Elles portent très loin, particulièrement la nuit, et couvrent d&#x27;immenses territoires depuis peu d&#x27;émetteurs. C&#x27;est le type de diffusion retenu pour l&#x27;information de sécurité, et c&#x27;est ce qui rend ce montage utile plutôt que pittoresque — voir <span title="URG-EFF-001">Quand le système s&#x27;arrête</span>.</p>
+<p>Il ne reçoit pas la modulation de fréquence ni les émissions numériques : leur démodulation demande une électronique active, donc une alimentation.</p>
+<p>Il ne transmet rien. Recevoir est passif, silencieux et discret ; émettre demande de l&#x27;énergie, une antenne accordée, et occupe des fréquences dont d&#x27;autres ont besoin. Dans une situation dégradée, le rôle premier d&#x27;un poste est d&#x27;écouter — voir <a href="fiche-sig-com-001.html">Se signaler et être retrouvé</a>.</p>
+<h2>Améliorer un poste existant</h2>
+<p>Si vous avez un récepteur à piles, trois gestes valent mieux qu&#x27;un montage complet. Rallonger l&#x27;antenne, en reliant un long fil à l&#x27;antenne télescopique ou en l&#x27;enroulant autour. Relier le poste à une bonne terre. Et l&#x27;éloigner des structures métalliques et des appareils électroniques, qui produisent un bruit électrique important.</p>
+<p>Un poste consomme très peu et s&#x27;alimente depuis n&#x27;importe quelle source continue à la bonne tension : le calcul est dans <a href="fiche-tec-ene-001.html">L’énergie électrique dans les objets</a>, les branchements dans <span title="TEC-ENE-002">Lire un circuit électrique</span>.</p></article>
+  <div class="blk"><h4>Sources</h4><div class="src">ARRL — The Radio Amateur&#x27;s Handbook, récepteurs à détection</div><div class="src">Terman F. E., Radio Engineers&#x27; Handbook</div><div class="src">US Army Signal Corps — field expedient receivers, documentation historique</div></div>
+  <div class="blk"><h4 data-i18n="fiche.back">Fiches qui mènent ici</h4><a class="item" href="fiche-sig-com-002.html"><h3>La radio, sans jargon</h3><div class="meta">Axe 3</div></a><a class="item" href="fiche-surv-rec-006.html"><h3>Récupérer sur un char</h3><div class="meta">Axe 3</div></a></div>
+  <div class="blk cta">
+    <p data-i18n="fiche.cta"><strong>Cette fiche fait partie de Phenix.</strong> L'application contient tout le corpus, les cartes et la bibliothèque, et fonctionne hors ligne.</p>
+    <p><a class="btn primary" href="download.html" data-i18n="home.b2">Télécharger Phenix Base</a>
+       <a class="btn" href="lab.html" data-i18n="sup.btn">Proposer une fiche</a></p>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <p data-i18n="foot.motto"><strong>Phenix</strong> — le savoir est votre seule immunité.</p>
+    <p class="small">
+      <a href="explore.html" data-i18n="nav.explore">Explorer</a> ·
+      <a href="devices.html" data-i18n="nav.devices">Appareils</a> ·
+      <a href="lab.html" data-i18n="nav.contribute">Contribuer</a> ·
+      <a href="download.html" data-i18n="nav.download">Télécharger</a> ·
+      <a href="soutenir.html" data-i18n="nav.support">Soutenir</a> ·
+      <a href="https://www.instagram.com/phenixprjct/" rel="noopener">Instagram</a> ·
+      <a href="https://www.reddit.com/r/PhenixProject/" rel="noopener">Reddit</a> ·
+      <a href="https://github.com/anthrophobicc/PhenixProject" rel="noopener">GitHub</a>
+    </p>
+    <p class="small dim" data-i18n="foot.licence">Logiciel sous licence MIT · fiches sous licence CC BY-SA 4.0</p>
+  </div>
+</footer>
+<script src="i18n.js"></script>
+
+</body>
+</html>

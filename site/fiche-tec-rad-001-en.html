@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" data-page-lang="en" data-alt="fiche-tec-rad-001.html" data-kind="fiche">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Building a radio receiver — Phenix</title>
+<meta name="description" content="Building a radio receiver — Phenix">
+<meta name="theme-color" content="#040806">
+<script>try{var t=localStorage.getItem("phenix-theme");if(t&&t!=="phosphore")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<meta property="og:title" content="Phenix">
+<meta property="og:description" content="Building a radio receiver — Phenix">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://anthrophobicc.github.io/PhenixProject/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="logo.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="img/icone-180.png">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="fiche.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="index.html"><span class="mark"></span><span>PHENIX</span></a>
+  <nav>
+    <a href="explore.html" data-i18n="nav.explore">Explore</a>
+    <a href="devices.html" data-i18n="nav.devices">Devices</a>
+    <a href="lab.html" data-i18n="nav.contribute">Contribute</a>
+    <a href="download.html" data-i18n="nav.download">Download</a>
+    <button class="lang" type="button" aria-label="Language">FR</button>
+    <span class="themes" role="group" aria-label="Theme">
+      <button type="button" data-theme-set="phosphore" title="Phosphor" aria-label="Phosphor theme" style="--c1:#040806;--c2:#39FF6A"></button>
+      <button type="button" data-theme-set="ambre" title="Amber" aria-label="Amber theme" style="--c1:#0A0703;--c2:#FFB000"></button>
+      <button type="button" data-theme-set="papier" title="Paper" aria-label="Paper theme" style="--c1:#F4F2EC;--c2:#2F6E2A"></button>
+    </span>
+  </nav>
+</header>
+<main class="wrap fiche">
+  <p class="fil"><a href="explore.html" data-i18n="nav.explore">Explore</a> › Technique › Energy and electricity</p>
+  
+  <div class="tags">
+    
+    <span class="tag off" data-i18n="tag.off">Official</span>
+  </div>
+  <h1>Building a radio receiver</h1>
+  <p class="meta">Axis 2 · Technique · Energy and electricity</p>
+  <div class="bals"><div><span>Time</span><b>Long</b></div><div><span>Context</span><b>Alone</b></div><div><span>Risk</span><b>Discreet</b></div><div><span>Gear</span><b>Salvage</b></div></div>
+  <article class="prose"><p class="lede-f">A receiver that needs no power source is possible. It draws all its power from the radio wave itself.</p>
+<h2>What a radio wave carries</h2>
+<p>A transmitter makes a current oscillate in an antenna, which radiates a wave. That wave makes a current oscillate, infinitely weaker, in any other antenna it meets.</p>
+<p>So the problem is never picking up a signal: <strong>every station arrives on your wire at the same time</strong>. The problem is isolating one of them and getting the sound out of it.</p>
+<p>A wave on its own carries nothing. It&#x27;s made to carry a signal by varying its strength in time with the sound: that&#x27;s <strong>amplitude modulation</strong> (AM), the kind used on medium wave and long wave. It&#x27;s the only kind you can demodulate without active electronics, and that&#x27;s what makes this build possible.</p>
+<p>A detector receiver has four parts, not one more: an <strong>antenna</strong> that picks up, a <strong>tuned circuit</strong> that selects, a <strong>detector</strong> that extracts the sound, and an <strong>earpiece</strong> that plays it.</p>
+<h2>The tuned circuit</h2>
+<p>A coil combined with a capacitor resonates at one precise frequency, like a tuning fork on a note. At that frequency the response is strongest; everywhere else it collapses. That&#x27;s what separates the stations.</p>
+<p>The bigger the coil or the capacitor, the lower the frequency you receive.</p>
+<p><strong>The coil</strong> is made by winding insulated copper wire, turns tight together and even, on an insulating cylinder: a cardboard tube, a bottle, a wooden handle. Around a hundred turns on a diameter of five to seven centimeters (2 to 3 inches) covers medium wave. Enameled wire can be salvaged from any transformer, motor, relay or loudspeaker.</p>
+<p><strong>Tuning</strong> is done in one of two ways. A variable capacitor taken from an old radio is ideal. Failing that, scrape the enamel off in a strip along the coil and slide a contact along the turns: you change the number of active turns, and so the frequency. It&#x27;s cruder, and it works.</p>
+<p><strong>A capacitor can be made</strong>: two conductive surfaces separated by an insulator. Two sheets of aluminum foil rolled up with paper between them; or two tubes covered in aluminum foil that slide into each other, which gives a variable value.</p>
+<h2>The detector, the decisive part</h2>
+<p>An amplitude-modulated signal swings symmetrically around zero: its average is zero, and an earpiece would get nothing out of it. You need to keep only one half of the oscillation, which brings out the envelope — in other words, the sound. So you need a component that lets current through in one direction only.</p>
+<p><strong>A germanium diode</strong> is the best choice: it conducts at a very low voltage, which matters when the signal is tiny. It can be salvaged from old devices. A silicon diode works, but it needs a stronger signal, and so a better antenna.</p>
+<p><strong>Without a diode, a point contact is enough.</strong> It&#x27;s the historical principle of the crystal radio: a metal point resting on a semiconducting crystal conducts better in one direction than in the other. Field sets used a blued, oxidized steel blade, with a pencil lead sharpened to a point and pressed on it by a light spring. You move the point until you find the sensitive spot, and you have to find it again after every knock.</p>
+<p>The contact must stay <strong>light and exploratory</strong>. Pressed too hard, it conducts both ways and the sound disappears.</p>
+<h2>The earpiece</h2>
+<p>This is where most attempts fail. The available power is tiny: an ordinary low-impedance loudspeaker will produce nothing.</p>
+<p>You need a <strong>high-impedance earpiece</strong> — a piezoelectric earpiece, or an old magnetic one. They can be salvaged from old telephones, hearing aids and measuring instruments. Failing that, an ordinary earpiece connected through a small matching transformer — a relay coil, a salvaged transformer — makes things much better.</p>
+<h2>The antenna and the ground</h2>
+<p>This is where reception is won or lost, far more than in the rest of the build.</p>
+<p><strong>The antenna</strong> must be long and high: an insulated wire ten to thirty meters long (30 to 100 feet), strung as high as possible, away from walls and large metal objects. Length matters; height matters more.</p>
+<p><strong>The ground is essential and always neglected.</strong> The circuit has to close. A metal stake driven into damp soil, a metal water pipe, a radiator connected to earth. Without a proper ground, a detector receiver barely works at all.</p>
+<p>One rule with no exceptions: <strong>never put up an antenna above, across or near a power line</strong>, and don&#x27;t leave it up during a thunderstorm. A long, high wire also picks up lightning discharges.</p>
+<h2>Assembly and tuning</h2>
+<p>The antenna goes to one end of the coil; the other end goes to ground. The tuning capacitor goes across the coil&#x27;s terminals. The detector takes the signal off the coil and sends it to the earpiece, whose other terminal goes back to ground. A small capacitor across the earpiece smooths the result and clearly improves the sound.</p>
+<p>Tune in this order: set up a good ground, string the longest antenna you can, find the detector&#x27;s sensitive spot, and only then sweep the tuning, slowly.</p>
+<h2>What this receiver can and can&#x27;t do</h2>
+<p>It receives amplitude-modulated broadcasts, on medium wave and long wave. They carry very far, especially at night, and cover huge areas from a few transmitters. It&#x27;s the kind of broadcasting chosen for safety information, and that&#x27;s what makes this build useful rather than quaint — see <span title="URG-EFF-001">Quand le système s&#x27;arrête</span>.</p>
+<p>It doesn&#x27;t receive FM or digital broadcasts: demodulating them takes active electronics, and so a power supply.</p>
+<p>It transmits nothing. Receiving is passive, silent and discreet; transmitting takes power and a tuned antenna, and it occupies frequencies other people need. In a degraded situation, a radio&#x27;s first job is to listen — see <a href="fiche-sig-com-001-en.html">Signaling and getting found</a>.</p>
+<h2>Improving an existing radio</h2>
+<p>If you have a battery radio, three steps beat a complete build. Extend the antenna, by connecting a long wire to the telescopic antenna or wrapping it around it. Connect the radio to a good ground. And keep it away from metal structures and electronic devices, which produce a lot of electrical noise.</p>
+<p>A radio uses very little power and runs from any direct-current source at the right voltage: the math is in <a href="fiche-tec-ene-001-en.html">Electrical energy in everyday objects</a>, the connections in <span title="TEC-ENE-002">Lire un circuit électrique</span>.</p></article>
+  <div class="blk"><h4>Sources</h4><div class="src">ARRL — The Radio Amateur&#x27;s Handbook, detector receivers</div><div class="src">Terman F. E., Radio Engineers&#x27; Handbook</div><div class="src">US Army Signal Corps — field expedient receivers, historical documentation</div></div>
+  <div class="blk"><h4 data-i18n="fiche.back">Sheets that lead here</h4><a class="item" href="fiche-sig-com-002-en.html"><h3>Radio, without the jargon</h3><div class="meta">Axis 3</div></a><a class="item" href="fiche-surv-rec-006-en.html"><h3>Salvaging from a tank</h3><div class="meta">Axis 3</div></a></div>
+  <div class="blk cta">
+    <p data-i18n="fiche.cta"><strong>This sheet is part of Phenix.</strong> The app holds the whole library, the maps and the bookshelf, and works offline.</p>
+    <p><a class="btn primary" href="download.html" data-i18n="home.b2">Download Phenix Base</a>
+       <a class="btn" href="lab.html" data-i18n="sup.btn">Write a sheet</a></p>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <p data-i18n="foot.motto"><strong>Phenix</strong> — knowledge is your only immunity.</p>
+    <p class="small">
+      <a href="explore.html" data-i18n="nav.explore">Explore</a> ·
+      <a href="devices.html" data-i18n="nav.devices">Devices</a> ·
+      <a href="lab.html" data-i18n="nav.contribute">Contribute</a> ·
+      <a href="download.html" data-i18n="nav.download">Download</a> ·
+      <a href="soutenir.html" data-i18n="nav.support">Support</a> ·
+      <a href="https://www.instagram.com/phenixprjct/" rel="noopener">Instagram</a> ·
+      <a href="https://www.reddit.com/r/PhenixProject/" rel="noopener">Reddit</a> ·
+      <a href="https://github.com/anthrophobicc/PhenixProject" rel="noopener">GitHub</a>
+    </p>
+    <p class="small dim" data-i18n="foot.licence">Software under the MIT licence · sheets under CC BY-SA 4.0</p>
+  </div>
+</footer>
+<script src="i18n.js"></script>
+
+</body>
+</html>

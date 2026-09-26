@@ -1,11 +1,11 @@
-// Recopie les fiches traduites dans l'application : bloc CORPUS_EN de app/phenix.html,
-// puis les deux copies identiques (app/index.html et site/phenix.html).
-// Usage : node traductions/synchroniser.js
+// Recopie les fiches traduites dans l'application : bloc CORPUS_EN de app/phenix.html, puis sa copie app/index.html.
+// site/phenix.html est produit à partir de app/phenix.html par outils/construire-site.js : relancez-le ensuite.
+// Usage : node traductions/synchroniser.js && node outils/construire-site.js
 const fs = require("fs");
 const path = require("path");
 
 const RACINE = path.resolve(__dirname, "..");
-const CIBLES = ["app/phenix.html", "app/index.html", "site/phenix.html"].map((f) => path.join(RACINE, f));
+const CIBLES = ["app/phenix.html", "app/index.html"].map((f) => path.join(RACINE, f));
 
 // Identifiants du corpus de référence : une traduction doit toujours correspondre à une fiche existante.
 const ids = new Set();

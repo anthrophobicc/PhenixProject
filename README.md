@@ -17,6 +17,10 @@ Le logiciel n'est qu'un lecteur. **Si Phenix disparaît, les fiches restent lisi
 
 C'est tout. Le fichier s'ouvre dans votre navigateur et fonctionne hors ligne.
 
+### Sur téléphone
+
+Ouvrez https://anthrophobicc.github.io/PhenixProject/phenix.html, puis ajoutez la page à l'écran d'accueil (iPhone : Safari, Partager, *Sur l'écran d'accueil* ; Android : Chrome, menu ⋮, *Installer l'application*). Elle a sa propre icône et continue de marcher sans connexion. À la première ouverture, elle suit la langue du téléphone.
+
 ### Application de bureau
 
 Le projet Tauri est dans `src-tauri/`. Voir [BUILD.md](BUILD.md) pour fabriquer un `.exe`, un `.dmg` ou un `.AppImage`. L'application pèse moins de 10 Mo et écrit vos données directement sur votre ordinateur.
@@ -79,7 +83,7 @@ sources: ["ICAR-MEDCOM — Classification suisse de l'hypothermie"]
 ### Les trois axes
 
 - **Axe 1 — La Mémoire.** Ce qui s'est passé et ce que ça nous apprend.
-- **Axe 2 — La Technique.** Comment une chose fonctionne. On explique, on n'agit pas.
+- **Axe 2 — La Technique.** Comment une chose fonctionne, et les données techniques qui vont avec : plans, cotes, unités, tableaux de référence. On explique et on renseigne ; le geste à faire va en Axe 3.
 - **Axe 3 — La Survie.** Quoi faire, maintenant, dans une situation dégradée.
 
 Quand un sujet relève des deux, la règle est l'intention et non la matière. *Réparer un câble* va en Axe 3, *comment fonctionne un câble* va en Axe 2, et les deux fiches se citent l'une l'autre. **On n'écrit jamais deux fois la même chose : on relie.**
@@ -116,7 +120,7 @@ Elles sont réelles et assumées. Les connaître évite les mauvaises surprises.
 
 - **L'enregistrement dépend du mode d'ouverture.** En application de bureau, tout est écrit sur le disque. Dans un navigateur, tout est enregistré localement et survit à la fermeture. Dans certains aperçus restreints, aucun enregistrement n'est possible : l'indicateur en haut à droite vous le dit, et l'export manuel devient obligatoire.
 - **Les tuiles de carte proviennent d'OpenStreetMap**, dont la politique d'usage interdit le téléchargement en masse. Les zones enregistrables sont donc volontairement limitées. Une source de tuiles dédiée est nécessaire avant toute diffusion large.
-- **Le corpus est encore petit.** Cent soixante-seize fiches, là où le projet en vise des milliers. Toutes les catégories des trois axes ont au moins une fiche.
+- **Le corpus est encore petit.** Cent quatre-vingts fiches, dont quarante traduites en anglais, là où le projet en vise des milliers. Toutes les catégories des trois axes ont au moins une fiche.
 - **Le corpus est embarqué dans le fichier de l'application.** Ajouter une fiche demande de la reporter à deux endroits. C'est le prix du fichier unique sans dépendance.
 - **Aucune vérification cryptographique** des fiches n'est encore implémentée. À la place, le logiciel connaît la liste des fiches qu'il embarque : toute fiche importée est communautaire, quoi que dise son en-tête. Cela empêche l'usurpation locale, pas la diffusion d'une copie modifiée du logiciel lui-même.
 - **Aucune fonctionnalité communautaire en ligne.** Les contributions passent par ce dépôt.
@@ -179,7 +183,11 @@ Conservez vos sauvegardes en plusieurs exemplaires et en plusieurs endroits. Une
 
 Le dossier `site/` contient un site statique prêt pour GitHub Pages : présentation,
 lecture des fiches sans installation, téléchargement, et **Phenix Lab**, le formulaire
-de contribution pensé pour le téléphone.
+de contribution pensé pour le téléphone. Il est entièrement produit par
+`node outils/construire-site.js`, y compris `site/phenix.html` (l'application de `app/`,
+installable sur téléphone grâce à `manifest.webmanifest` et `sw.js`) et `links.html`,
+la page de liens prévue pour la bio Instagram. Après avoir ajouté ou traduit une fiche,
+relancez-le en dernier.
 
 - [MISE-EN-LIGNE.md](docs/MISE-EN-LIGNE.md) — du dépôt vide à l'adresse publique
 - [BACKEND.md](docs/BACKEND.md) — recevoir et modérer les contributions

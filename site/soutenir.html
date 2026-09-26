@@ -1,53 +1,77 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en" data-page-lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Soutenir Phenix</title>
+<title data-i18n="sup.title">Support — Phenix</title>
+<meta name="description" content="How to support Phenix.">
+<meta name="theme-color" content="#040806">
+<script>try{var t=localStorage.getItem("phenix-theme");if(t&&t!=="phosphore")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<meta property="og:title" content="Phenix">
+<meta property="og:description" content="How to support Phenix.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://anthrophobicc.github.io/PhenixProject/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="logo.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="img/icone-180.png">
 <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 <header class="nav">
   <a class="brand" href="index.html"><span class="mark"></span><span>PHENIX</span></a>
   <nav>
-    <a href="explore.html">Explorer</a>
-    <a href="lab.html">Contribuer</a>
-    <a href="download.html">Télécharger</a>
+    <a href="explore.html" data-i18n="nav.explore">Explore</a>
+    <a href="devices.html" data-i18n="nav.devices">Devices</a>
+    <a href="lab.html" data-i18n="nav.contribute">Contribute</a>
+    <a href="download.html" data-i18n="nav.download">Download</a>
+    <button class="lang" type="button" aria-label="Language">FR</button>
+    <span class="themes" role="group" aria-label="Theme">
+      <button type="button" data-theme-set="phosphore" title="Phosphor" aria-label="Phosphor theme" style="--c1:#040806;--c2:#39FF6A"></button>
+      <button type="button" data-theme-set="ambre" title="Amber" aria-label="Amber theme" style="--c1:#0A0703;--c2:#FFB000"></button>
+      <button type="button" data-theme-set="papier" title="Paper" aria-label="Paper theme" style="--c1:#F4F2EC;--c2:#2F6E2A"></button>
+    </span>
   </nav>
 </header>
-
 <main class="wrap" style="padding-top:34px;padding-bottom:60px">
-  <h1 style="font-size:30px;font-weight:700;letter-spacing:-.022em;margin:0 0 10px">Soutenir Phenix</h1>
-  <p class="lede" style="font-size:17px">Le projet coûte aujourd'hui zéro euro à faire tourner.
-    Ce n'est pas un hasard : c'est une contrainte de conception.</p>
-
+  <h1 style="font-size:30px;margin:0 0 10px;color:var(--acc);text-shadow:var(--glow)" data-i18n="sup.h1">Support Phenix</h1>
+  <p class="lede" style="font-size:17px;margin:0" data-i18n="sup.lede">Today the project costs zero euros to run. That's not luck: it's a design constraint.</p>
   <div class="band" style="border:none;padding:30px 0 0">
-    <h2>La façon la plus utile de soutenir</h2>
-    <p><strong>Écrire une fiche.</strong> Le logiciel est fini bien avant le corpus.
-      Une bonne fiche sourcée vaut plus qu'un don.</p>
-    <p><a class="btn primary" href="lab.html">Proposer une fiche</a></p>
-
-    <h2>Autrement</h2>
+    <h2 data-i18n="sup.best">The most useful way to help</h2>
+    <p data-i18n="sup.bestp"><strong>Write a sheet.</strong> The software will be finished long before the library. A good, sourced sheet is worth more than a donation.</p>
+    <p><a class="btn primary" href="lab.html" data-i18n="sup.btn">Write a sheet</a></p>
+    <h2 data-i18n="sup.other">Other ways</h2>
     <ul>
-      <li>Signaler une erreur dans une fiche existante</li>
-      <li>Traduire une fiche vers l'anglais</li>
-      <li>Relire les propositions sur un sujet que vous connaissez</li>
-      <li>Faire connaître le projet</li>
+      <li data-i18n="sup.o1">Report a mistake in an existing sheet</li>
+      <li data-i18n="sup.o2">Translate a sheet into your language</li>
+      <li data-i18n="sup.o3">Review proposals on a subject you know</li>
+      <li data-i18n="sup.o4">Spread the word: <a href="https://www.instagram.com/phenixprjct/" rel="noopener">@phenixprjct</a> on Instagram, <a href="https://www.reddit.com/r/PhenixProject/" rel="noopener">r/PhenixProject</a> on Reddit</li>
     </ul>
-
-    <h2>Argent</h2>
-    <p>Il n'y a pas encore de moyen de donner, et c'est volontaire : tant que le projet
-      ne coûte rien, demander de l'argent serait malhonnête.</p>
-    <p>Ce qui deviendra payant, et seulement avec le volume : un serveur de tuiles
-      cartographiques dédié, un certificat de signature pour l'application de bureau,
-      un nom de domaine. Ces postes seront annoncés ici avec leur montant réel
-      au moment où ils se poseront.</p>
+    <h2 data-i18n="sup.money">Money</h2>
+    <p data-i18n="sup.m1">There's no way to donate yet, on purpose: as long as the project costs nothing, asking for money would be dishonest.</p>
+    <p data-i18n="sup.m2">What will cost money, and only with volume: a dedicated map tile server, a signing certificate for the desktop app, a domain name. They'll be announced here, with their real cost, when they come up.</p>
   </div>
 </main>
+<footer>
+  <div class="wrap">
+    <p data-i18n="foot.motto"><strong>Phenix</strong> — knowledge is your only immunity.</p>
+    <p class="small">
+      <a href="explore.html" data-i18n="nav.explore">Explore</a> ·
+      <a href="devices.html" data-i18n="nav.devices">Devices</a> ·
+      <a href="lab.html" data-i18n="nav.contribute">Contribute</a> ·
+      <a href="download.html" data-i18n="nav.download">Download</a> ·
+      <a href="soutenir.html" data-i18n="nav.support">Support</a> ·
+      <a href="https://www.instagram.com/phenixprjct/" rel="noopener">Instagram</a> ·
+      <a href="https://www.reddit.com/r/PhenixProject/" rel="noopener">Reddit</a> ·
+      <a href="https://github.com/anthrophobicc/PhenixProject" rel="noopener">GitHub</a>
+    </p>
+    <p class="small dim" data-i18n="foot.licence">Software under the MIT licence · sheets under CC BY-SA 4.0</p>
+  </div>
+</footer>
+<script src="i18n.js"></script>
 
-<footer><div class="wrap"><p class="small">
-  <a href="index.html">Accueil</a> · <a href="explore.html">Explorer</a> · <a href="download.html">Télécharger</a>
-</p></div></footer>
 </body>
 </html>

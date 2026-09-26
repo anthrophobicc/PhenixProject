@@ -1,146 +1,213 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en" data-page-lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Explorer — Phenix</title>
+<title data-i18n="exp.title">Explore — Phenix</title>
+<meta name="description" content="Read Phenix sheets online, nothing to install.">
+<meta name="theme-color" content="#040806">
+<script>try{var t=localStorage.getItem("phenix-theme");if(t&&t!=="phosphore")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<meta property="og:title" content="Phenix">
+<meta property="og:description" content="Read Phenix sheets online, nothing to install.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://anthrophobicc.github.io/PhenixProject/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="logo.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="img/icone-180.png">
 <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 <header class="nav">
   <a class="brand" href="index.html"><span class="mark"></span><span>PHENIX</span></a>
-  <nav><a href="explore.html">Explorer</a><a href="lab.html">Contribuer</a><a href="download.html">Télécharger</a></nav>
+  <nav>
+    <a href="explore.html" data-i18n="nav.explore">Explore</a>
+    <a href="devices.html" data-i18n="nav.devices">Devices</a>
+    <a href="lab.html" data-i18n="nav.contribute">Contribute</a>
+    <a href="download.html" data-i18n="nav.download">Download</a>
+    <button class="lang" type="button" aria-label="Language">FR</button>
+    <span class="themes" role="group" aria-label="Theme">
+      <button type="button" data-theme-set="phosphore" title="Phosphor" aria-label="Phosphor theme" style="--c1:#040806;--c2:#39FF6A"></button>
+      <button type="button" data-theme-set="ambre" title="Amber" aria-label="Amber theme" style="--c1:#0A0703;--c2:#FFB000"></button>
+      <button type="button" data-theme-set="papier" title="Paper" aria-label="Paper theme" style="--c1:#F4F2EC;--c2:#2F6E2A"></button>
+    </span>
+  </nav>
 </header>
 <main class="wrap" style="padding-top:34px;padding-bottom:60px">
-  <h1 style="font-size:30px;font-weight:700;letter-spacing:-.022em;margin:0 0 10px">Explorer le corpus</h1>
-  <p class="lede" style="font-size:17px">16 fiches, lisibles ici sans rien installer.</p>
-
+  <h1 style="font-size:30px;margin:0 0 10px;color:var(--acc);text-shadow:var(--glow)" data-i18n="exp.h1">Explore the library</h1>
+  <p class="lede" style="font-size:17px;margin:0" data-i18n="exp.lede">43 sheets you can read right here, nothing to install. The app holds all 183.</p>
   <div class="filters" id="filters">
-    <button class="on" data-f="tout">Tout</button>
-    <button data-f="urgence">Urgences</button>
-    <button data-f="1">Axe 1 — Mémoire</button>
-    <button data-f="2">Axe 2 — Technique</button>
-    <button data-f="3">Axe 3 — Survie</button>
+    <button class="on" data-f="tout" data-i18n="exp.all">All</button>
+    <button data-f="urgence" data-i18n="exp.urg">Emergencies</button>
+    <button data-f="1" data-i18n="exp.x1">Axis 1 — Memory</button>
+    <button data-f="2" data-i18n="exp.x2">Axis 2 — Technique</button>
+    <button data-f="3" data-i18n="exp.x3">Axis 3 — Survival</button>
+  </div>
+  <div class="list" id="list"><a class="item" data-axe="3" data-prio="flash" href="fiche-urg-ana-001-en.html" data-href-en="fiche-urg-ana-001-en.html" data-href-fr="fiche-urg-ana-001.html">
+  <h3 data-i18n="t.URG-ANA-001">Anaphylaxis</h3>
+  <div class="meta" data-i18n="m.URG-ANA-001">Axis 3 · Emergency protocols</div>
+  <div class="tags" style="margin-top:9px"><span class="tag urg" data-i18n="tag.urg">Emergency</span><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="3" data-prio="flash" href="fiche-urg-card-001-en.html" data-href-en="fiche-urg-card-001-en.html" data-href-fr="fiche-urg-card-001.html">
+  <h3 data-i18n="t.URG-CARD-001">Cardiac arrest</h3>
+  <div class="meta" data-i18n="m.URG-CARD-001">Axis 3 · Emergency protocols</div>
+  <div class="tags" style="margin-top:9px"><span class="tag urg" data-i18n="tag.urg">Emergency</span><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="3" data-prio="flash" href="fiche-urg-brul-001-en.html" data-href-en="fiche-urg-brul-001-en.html" data-href-fr="fiche-urg-brul-001.html">
+  <h3 data-i18n="t.URG-BRUL-001">Burns</h3>
+  <div class="meta" data-i18n="m.URG-BRUL-001">Axis 3 · First aid</div>
+  <div class="tags" style="margin-top:9px"><span class="tag urg" data-i18n="tag.urg">Emergency</span><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="3" data-prio="flash" href="fiche-urg-chal-001-en.html" data-href-en="fiche-urg-chal-001-en.html" data-href-fr="fiche-urg-chal-001.html">
+  <h3 data-i18n="t.URG-CHAL-001">Heatstroke</h3>
+  <div class="meta" data-i18n="m.URG-CHAL-001">Axis 3 · First aid</div>
+  <div class="tags" style="margin-top:9px"><span class="tag urg" data-i18n="tag.urg">Emergency</span><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="3" data-prio="flash" href="fiche-urg-res-001-en.html" data-href-en="fiche-urg-res-001-en.html" data-href-fr="fiche-urg-res-001.html">
+  <h3 data-i18n="t.URG-RES-001">Shutting off water, gas and power</h3>
+  <div class="meta" data-i18n="m.URG-RES-001">Axis 3 · Emergency protocols</div>
+  <div class="tags" style="margin-top:9px"><span class="tag urg" data-i18n="tag.urg">Emergency</span><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="3" data-prio="flash" href="fiche-urg-etou-001-en.html" data-href-en="fiche-urg-etou-001-en.html" data-href-fr="fiche-urg-etou-001.html">
+  <h3 data-i18n="t.URG-ETOU-001">Choking</h3>
+  <div class="meta" data-i18n="m.URG-ETOU-001">Axis 3 · Emergency protocols</div>
+  <div class="tags" style="margin-top:9px"><span class="tag urg" data-i18n="tag.urg">Emergency</span><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="3" data-prio="flash" href="fiche-urg-sec-001-en.html" data-href-en="fiche-urg-sec-001-en.html" data-href-fr="fiche-urg-sec-001.html">
+  <h3 data-i18n="t.URG-SEC-001">Examining a casualty</h3>
+  <div class="meta" data-i18n="m.URG-SEC-001">Axis 3 · First aid</div>
+  <div class="tags" style="margin-top:9px"><span class="tag urg" data-i18n="tag.urg">Emergency</span><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="3" data-prio="flash" href="fiche-urg-frac-001-en.html" data-href-en="fiche-urg-frac-001-en.html" data-href-fr="fiche-urg-frac-001.html">
+  <h3 data-i18n="t.URG-FRAC-001">Fractures, sprains and splinting</h3>
+  <div class="meta" data-i18n="m.URG-FRAC-001">Axis 3 · First aid</div>
+  <div class="tags" style="margin-top:9px"><span class="tag urg" data-i18n="tag.urg">Emergency</span><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="3" data-prio="flash" href="fiche-urg-hemo-001-en.html" data-href-en="fiche-urg-hemo-001-en.html" data-href-fr="fiche-urg-hemo-001.html">
+  <h3 data-i18n="t.URG-HEMO-001">Severe external bleeding</h3>
+  <div class="meta" data-i18n="m.URG-HEMO-001">Axis 3 · Emergency protocols</div>
+  <div class="tags" style="margin-top:9px"><span class="tag urg" data-i18n="tag.urg">Emergency</span><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="3" data-prio="flash" href="fiche-urg-hypo-001-en.html" data-href-en="fiche-urg-hypo-001-en.html" data-href-fr="fiche-urg-hypo-001.html">
+  <h3 data-i18n="t.URG-HYPO-001">Hypothermia</h3>
+  <div class="meta" data-i18n="m.URG-HYPO-001">Axis 3 · Emergency protocols</div>
+  <div class="tags" style="margin-top:9px"><span class="tag urg" data-i18n="tag.urg">Emergency</span><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="3" data-prio="flash" href="fiche-urg-inc-001-en.html" data-href-en="fiche-urg-inc-001-en.html" data-href-fr="fiche-urg-inc-001.html">
+  <h3 data-i18n="t.URG-INC-001">House fire</h3>
+  <div class="meta" data-i18n="m.URG-INC-001">Axis 3 · Emergency protocols</div>
+  <div class="tags" style="margin-top:9px"><span class="tag urg" data-i18n="tag.urg">Emergency</span><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="3" data-prio="flash" href="fiche-urg-sec-003-en.html" data-href-en="fiche-urg-sec-003-en.html" data-href-fr="fiche-urg-sec-003.html">
+  <h3 data-i18n="t.URG-SEC-003">Poisoning</h3>
+  <div class="meta" data-i18n="m.URG-SEC-003">Axis 3 · First aid</div>
+  <div class="tags" style="margin-top:9px"><span class="tag urg" data-i18n="tag.urg">Emergency</span><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="3" data-prio="flash" href="fiche-urg-sec-005-en.html" data-href-en="fiche-urg-sec-005-en.html" data-href-fr="fiche-urg-sec-005.html">
+  <h3 data-i18n="t.URG-SEC-005">Feeling faint and chest pain</h3>
+  <div class="meta" data-i18n="m.URG-SEC-005">Axis 3 · First aid</div>
+  <div class="tags" style="margin-top:9px"><span class="tag urg" data-i18n="tag.urg">Emergency</span><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="3" data-prio="flash" href="fiche-urg-sec-002-en.html" data-href-en="fiche-urg-sec-002-en.html" data-href-fr="fiche-urg-sec-002.html">
+  <h3 data-i18n="t.URG-SEC-002">Drowning</h3>
+  <div class="meta" data-i18n="m.URG-SEC-002">Axis 3 · First aid</div>
+  <div class="tags" style="margin-top:9px"><span class="tag urg" data-i18n="tag.urg">Emergency</span><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="3" data-prio="flash" href="fiche-urg-inco-001-en.html" data-href-en="fiche-urg-inco-001-en.html" data-href-fr="fiche-urg-inco-001.html">
+  <h3 data-i18n="t.URG-INCO-001">Unconscious person</h3>
+  <div class="meta" data-i18n="m.URG-INCO-001">Axis 3 · Emergency protocols</div>
+  <div class="tags" style="margin-top:9px"><span class="tag urg" data-i18n="tag.urg">Emergency</span><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="3" data-prio="flash" href="fiche-urg-eau-001-en.html" data-href-en="fiche-urg-eau-001-en.html" data-href-fr="fiche-urg-eau-001.html">
+  <h3 data-i18n="t.URG-EAU-001">Making water safe to drink</h3>
+  <div class="meta" data-i18n="m.URG-EAU-001">Axis 3 · Fire, water and resources</div>
+  <div class="tags" style="margin-top:9px"><span class="tag urg" data-i18n="tag.urg">Emergency</span><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="3" data-prio="flash" href="fiche-urg-inc-002-en.html" data-href-en="fiche-urg-inc-002-en.html" data-href-fr="fiche-urg-inc-002.html">
+  <h3 data-i18n="t.URG-INC-002">Using a fire extinguisher</h3>
+  <div class="meta" data-i18n="m.URG-INC-002">Axis 3 · Emergency protocols</div>
+  <div class="tags" style="margin-top:9px"><span class="tag urg" data-i18n="tag.urg">Emergency</span><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="3" data-prio="flash" href="fiche-sig-com-001-en.html" data-href-en="fiche-sig-com-001-en.html" data-href-fr="fiche-sig-com-001.html">
+  <h3 data-i18n="t.SIG-COM-001">Signaling and getting found</h3>
+  <div class="meta" data-i18n="m.SIG-COM-001">Axis 3 · Signals and communications</div>
+  <div class="tags" style="margin-top:9px"><span class="tag urg" data-i18n="tag.urg">Emergency</span><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="3" data-prio="flash" href="fiche-urg-veh-001-en.html" data-href-en="fiche-urg-veh-001-en.html" data-href-fr="fiche-urg-veh-001.html">
+  <h3 data-i18n="t.URG-VEH-001">Getting out of a sinking car</h3>
+  <div class="meta" data-i18n="m.URG-VEH-001">Axis 3 · Emergency protocols</div>
+  <div class="tags" style="margin-top:9px"><span class="tag urg" data-i18n="tag.urg">Emergency</span><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="3" data-prio="flash" href="fiche-urg-sec-004-en.html" data-href-en="fiche-urg-sec-004-en.html" data-href-fr="fiche-urg-sec-004.html">
+  <h3 data-i18n="t.URG-SEC-004">Head injury</h3>
+  <div class="meta" data-i18n="m.URG-SEC-004">Axis 3 · First aid</div>
+  <div class="tags" style="margin-top:9px"><span class="tag urg" data-i18n="tag.urg">Emergency</span><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="3" data-prio="normale" href="fiche-surv-ene-001-en.html" data-href-en="fiche-surv-ene-001-en.html" data-href-fr="fiche-surv-ene-001.html">
+  <h3 data-i18n="t.SURV-ENE-001">Powering a circuit without the grid</h3>
+  <div class="meta" data-i18n="m.SURV-ENE-001">Axis 3 · Fire, water and resources</div>
+  <div class="tags" style="margin-top:9px"><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="3" data-prio="normale" href="fiche-surv-pluie-001-en.html" data-href-en="fiche-surv-pluie-001-en.html" data-href-fr="fiche-surv-pluie-001.html">
+  <h3 data-i18n="t.SURV-PLUIE-001">Collecting and storing rainwater</h3>
+  <div class="meta" data-i18n="m.SURV-PLUIE-001">Axis 3 · Fire, water and resources</div>
+  <div class="tags" style="margin-top:9px"><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="3" data-prio="normale" href="fiche-surv-abri-001-en.html" data-href-en="fiche-surv-abri-001-en.html" data-href-fr="fiche-surv-abri-001.html">
+  <h3 data-i18n="t.SURV-ABRI-001">Building an emergency shelter</h3>
+  <div class="meta" data-i18n="m.SURV-ABRI-001">Axis 3 · Fire, water and resources</div>
+  <div class="tags" style="margin-top:9px"><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="3" data-prio="normale" href="fiche-surv-troc-001-en.html" data-href-en="fiche-surv-troc-001-en.html" data-href-fr="fiche-surv-troc-001.html">
+  <h3 data-i18n="t.SURV-TROC-001">Trading, negotiating, keeping your word</h3>
+  <div class="meta" data-i18n="m.SURV-TROC-001">Axis 3 · Social psychology and barter</div>
+  <div class="tags" style="margin-top:9px"><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="3" data-prio="normale" href="fiche-sig-com-002-en.html" data-href-en="fiche-sig-com-002-en.html" data-href-fr="fiche-sig-com-002.html">
+  <h3 data-i18n="t.SIG-COM-002">Radio, without the jargon</h3>
+  <div class="meta" data-i18n="m.SIG-COM-002">Axis 3 · Signals and communications</div>
+  <div class="tags" style="margin-top:9px"><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="3" data-prio="normale" href="fiche-sig-com-003-en.html" data-href-en="fiche-sig-com-003-en.html" data-href-fr="fiche-sig-com-003.html">
+  <h3 data-i18n="t.SIG-COM-003">Morse code</h3>
+  <div class="meta" data-i18n="m.SIG-COM-003">Axis 3 · Signals and communications</div>
+  <div class="tags" style="margin-top:9px"><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="3" data-prio="normale" href="fiche-surv-rec-010-en.html" data-href-en="fiche-surv-rec-010-en.html" data-href-fr="fiche-surv-rec-010.html">
+  <h3 data-i18n="t.SURV-REC-010">Ammunition and unexploded ordnance</h3>
+  <div class="meta" data-i18n="m.SURV-REC-010">Axis 3 · Salvage</div>
+  <div class="tags" style="margin-top:9px"><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="3" data-prio="normale" href="fiche-surv-rec-020-en.html" data-href-en="fiche-surv-rec-020-en.html" data-href-fr="fiche-surv-rec-020.html">
+  <h3 data-i18n="t.SURV-REC-020">Opening a can without a can opener</h3>
+  <div class="meta" data-i18n="m.SURV-REC-020">Axis 3 · Salvage</div>
+  <div class="tags" style="margin-top:9px"><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="3" data-prio="normale" href="fiche-surv-feu-001-en.html" data-href-en="fiche-surv-feu-001-en.html" data-href-fr="fiche-surv-feu-001.html">
+  <h3 data-i18n="t.SURV-FEU-001">Making and keeping a fire</h3>
+  <div class="meta" data-i18n="m.SURV-FEU-001">Axis 3 · Fire, water and resources</div>
+  <div class="tags" style="margin-top:9px"><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="3" data-prio="normale" href="fiche-surv-rec-002-en.html" data-href-en="fiche-surv-rec-002-en.html" data-href-fr="fiche-surv-rec-002.html">
+  <h3 data-i18n="t.SURV-REC-002">Telling what&#x27;s still usable</h3>
+  <div class="meta" data-i18n="m.SURV-REC-002">Axis 3 · Salvage</div>
+  <div class="tags" style="margin-top:9px"><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="3" data-prio="normale" href="fiche-surv-rec-016-en.html" data-href-en="fiche-surv-rec-016-en.html" data-href-fr="fiche-surv-rec-016.html">
+  <h3 data-i18n="t.SURV-REC-016">Salvaging from any wreck</h3>
+  <div class="meta" data-i18n="m.SURV-REC-016">Axis 3 · Salvage</div>
+  <div class="tags" style="margin-top:9px"><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="3" data-prio="normale" href="fiche-surv-rec-006-en.html" data-href-en="fiche-surv-rec-006-en.html" data-href-fr="fiche-surv-rec-006.html">
+  <h3 data-i18n="t.SURV-REC-006">Salvaging from a tank</h3>
+  <div class="meta" data-i18n="m.SURV-REC-006">Axis 3 · Salvage</div>
+  <div class="tags" style="margin-top:9px"><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="3" data-prio="normale" href="fiche-surv-rec-021-en.html" data-href-en="fiche-surv-rec-021-en.html" data-href-fr="fiche-surv-rec-021.html">
+  <h3 data-i18n="t.SURV-REC-021">Salvaging a laptop</h3>
+  <div class="meta" data-i18n="m.SURV-REC-021">Axis 3 · Salvage</div>
+  <div class="tags" style="margin-top:9px"><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="3" data-prio="normale" href="fiche-surv-rec-007-en.html" data-href-en="fiche-surv-rec-007-en.html" data-href-fr="fiche-surv-rec-007.html">
+  <h3 data-i18n="t.SURV-REC-007">Repairing a cable, a plug, a contact</h3>
+  <div class="meta" data-i18n="m.SURV-REC-007">Axis 3 · Salvage</div>
+  <div class="tags" style="margin-top:9px"><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="3" data-prio="normale" href="fiche-surv-ori-001-en.html" data-href-en="fiche-surv-ori-001-en.html" data-href-fr="fiche-surv-ori-001.html">
+  <h3 data-i18n="t.SURV-ORI-001">Finding your way without instruments</h3>
+  <div class="meta" data-i18n="m.SURV-ORI-001">Axis 3 · Movement and stealth</div>
+  <div class="tags" style="margin-top:9px"><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="3" data-prio="normale" href="fiche-surv-rec-019-en.html" data-href-en="fiche-surv-rec-019-en.html" data-href-fr="fiche-surv-rec-019.html">
+  <h3 data-i18n="t.SURV-REC-019">An engine that won&#x27;t start</h3>
+  <div class="meta" data-i18n="m.SURV-REC-019">Axis 3 · Salvage</div>
+  <div class="tags" style="margin-top:9px"><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="2" data-prio="normale" href="fiche-tec-rad-001-en.html" data-href-en="fiche-tec-rad-001-en.html" data-href-fr="fiche-tec-rad-001.html">
+  <h3 data-i18n="t.TEC-RAD-001">Building a radio receiver</h3>
+  <div class="meta" data-i18n="m.TEC-RAD-001">Axis 2 · Energy and electricity</div>
+  <div class="tags" style="margin-top:9px"><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="2" data-prio="normale" href="fiche-tec-ene-001-en.html" data-href-en="fiche-tec-ene-001-en.html" data-href-fr="fiche-tec-ene-001.html">
+  <h3 data-i18n="t.TEC-ENE-001">Electrical energy in everyday objects</h3>
+  <div class="meta" data-i18n="m.TEC-ENE-001">Axis 2 · Energy and electricity</div>
+  <div class="tags" style="margin-top:9px"><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="2" data-prio="normale" href="fiche-tec-cons-001-en.html" data-href-en="fiche-tec-cons-001-en.html" data-href-fr="fiche-tec-cons-001.html">
+  <h3 data-i18n="t.TEC-CONS-001">Preserving food</h3>
+  <div class="meta" data-i18n="m.TEC-CONS-001">Axis 2 · Food and preservation</div>
+  <div class="tags" style="margin-top:9px"><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="2" data-prio="normale" href="fiche-tec-moth-001-en.html" data-href-en="fiche-tec-moth-001-en.html" data-href-fr="fiche-tec-moth-001.html">
+  <h3 data-i18n="t.TEC-MOTH-001">The combustion engine — how it all works</h3>
+  <div class="meta" data-i18n="m.TEC-MOTH-001">Axis 2 · Mechanics and transport</div>
+  <div class="tags" style="margin-top:9px"><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="2" data-prio="normale" href="fiche-tec-mot-001-en.html" data-href-en="fiche-tec-mot-001-en.html" data-href-fr="fiche-tec-mot-001.html">
+  <h3 data-i18n="t.TEC-MOT-001">Boat engines — the complete guide</h3>
+  <div class="meta" data-i18n="m.TEC-MOT-001">Axis 2 · Mechanics and transport</div>
+  <div class="tags" style="margin-top:9px"><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="1" data-prio="normale" href="fiche-mem-eff-001-en.html" data-href-en="fiche-mem-eff-001-en.html" data-href-fr="fiche-mem-eff-001.html">
+  <h3 data-i18n="t.MEM-EFF-001">How societies collapse</h3>
+  <div class="meta" data-i18n="m.MEM-EFF-001">Axis 1 · What repeats itself</div>
+  <div class="tags" style="margin-top:9px"><span class="tag off" data-i18n="tag.off">Official</span></div></a><a class="item" data-axe="1" data-prio="normale" href="fiche-mem-agr-001-en.html" data-href-en="fiche-mem-agr-001-en.html" data-href-fr="fiche-mem-agr-001.html">
+  <h3 data-i18n="t.MEM-AGR-001">Surplus, hierarchy and the first dependence</h3>
+  <div class="meta" data-i18n="m.MEM-AGR-001">Axis 1 · The agricultural revolutions</div>
+  <div class="tags" style="margin-top:9px"><span class="tag off" data-i18n="tag.off">Official</span></div></a></div>
+
+  <div class="band" style="margin-top:44px">
+    <h2 data-i18n="exp.status">Statuses</h2>
+    <p><span class="tag off" data-i18n="tag.off">Official</span> <span data-i18n="exp.st1">Reviewed and added to the Phenix library. Versioned, protected against overwriting.</span></p>
+    <p><span class="tag ver" data-i18n="tag.ver">Verified</span> <span data-i18n="exp.st2">Community contribution whose sources have been checked.</span></p>
+    <p><span class="tag com" data-i18n="tag.com">Community</span> <span data-i18n="exp.st3">Published contribution, not yet verified. Readable, and flagged as such.</span></p>
+    <p class="note" data-i18n="exp.stnote">The number of reads or votes is never proof of accuracy. A sheet only becomes official after an explicit review.</p>
   </div>
 
-  <div class="list" id="list"><a class="item" data-axe="3" data-prio="flash" href="fiche-urg-hypo-001.html">
-  <h3>Hypothermie</h3>
-  <div class="meta">Axe 3 · Protocoles d&#x27;urgence</div>
-  <div class="tags" style="margin-top:9px">
-    <span class="tag urg">Urgence</span>
-    <span class="tag off">Officielle</span>
-  </div></a><a class="item" data-axe="3" data-prio="flash" href="fiche-urg-hemo-001.html">
-  <h3>Hémorragie externe</h3>
-  <div class="meta">Axe 3 · Protocoles d&#x27;urgence</div>
-  <div class="tags" style="margin-top:9px">
-    <span class="tag urg">Urgence</span>
-    <span class="tag off">Officielle</span>
-  </div></a><a class="item" data-axe="3" data-prio="flash" href="fiche-urg-eau-001.html">
-  <h3>Rendre une eau potable</h3>
-  <div class="meta">Axe 3 · Feu, Eau et Ressources</div>
-  <div class="tags" style="margin-top:9px">
-    <span class="tag urg">Urgence</span>
-    <span class="tag off">Officielle</span>
-  </div></a><a class="item" data-axe="3" data-prio="normale" href="fiche-surv-ori-001.html">
-  <h3>S&#x27;orienter sans instrument</h3>
-  <div class="meta">Axe 3 · Mouvement et Discrétion</div>
-  <div class="tags" style="margin-top:9px">
-    
-    <span class="tag off">Officielle</span>
-  </div></a><a class="item" data-axe="3" data-prio="normale" href="fiche-surv-feu-001.html">
-  <h3>Produire et tenir un feu</h3>
-  <div class="meta">Axe 3 · Feu, Eau et Ressources</div>
-  <div class="tags" style="margin-top:9px">
-    
-    <span class="tag off">Officielle</span>
-  </div></a><a class="item" data-axe="3" data-prio="normale" href="fiche-surv-abri-001.html">
-  <h3>Construire un abri d&#x27;urgence</h3>
-  <div class="meta">Axe 3 · Feu, Eau et Ressources</div>
-  <div class="tags" style="margin-top:9px">
-    
-    <span class="tag off">Officielle</span>
-  </div></a><a class="item" data-axe="3" data-prio="normale" href="fiche-surv-pluie-001.html">
-  <h3>Collecter et stocker l&#x27;eau de pluie</h3>
-  <div class="meta">Axe 3 · Feu, Eau et Ressources</div>
-  <div class="tags" style="margin-top:9px">
-    
-    <span class="tag off">Officielle</span>
-  </div></a><a class="item" data-axe="3" data-prio="flash" href="fiche-sig-com-001.html">
-  <h3>Se signaler et être retrouvé</h3>
-  <div class="meta">Axe 3 · Signaux et Communications</div>
-  <div class="tags" style="margin-top:9px">
-    <span class="tag urg">Urgence</span>
-    <span class="tag off">Officielle</span>
-  </div></a><a class="item" data-axe="2" data-prio="normale" href="fiche-tec-moth-001.html">
-  <h3>Le moteur thermique — fonctionnement complet</h3>
-  <div class="meta">Axe 2 · Mécanique et Transport</div>
-  <div class="tags" style="margin-top:9px">
-    
-    <span class="tag off">Officielle</span>
-  </div></a><a class="item" data-axe="2" data-prio="normale" href="fiche-tec-mot-001.html">
-  <h3>Les moteurs de bateau — typologie complète</h3>
-  <div class="meta">Axe 2 · Mécanique et Transport</div>
-  <div class="tags" style="margin-top:9px">
-    
-    <span class="tag off">Officielle</span>
-  </div></a><a class="item" data-axe="2" data-prio="normale" href="fiche-tec-ene-001.html">
-  <h3>Récupérer et réutiliser l&#x27;énergie électrique</h3>
-  <div class="meta">Axe 2 · Énergie et Électricité</div>
-  <div class="tags" style="margin-top:9px">
-    
-    <span class="tag off">Officielle</span>
-  </div></a><a class="item" data-axe="1" data-prio="normale" href="fiche-mem-agr-001.html">
-  <h3>Le surplus, la hiérarchie et la première dépendance</h3>
-  <div class="meta">Axe 1 · Les révolutions agricoles</div>
-  <div class="tags" style="margin-top:9px">
-    
-    <span class="tag off">Officielle</span>
-  </div></a><a class="item" data-axe="3" data-prio="flash" href="fiche-urg-brul-001.html">
-  <h3>Brûlures</h3>
-  <div class="meta">Axe 3 · Secourisme</div>
-  <div class="tags" style="margin-top:9px">
-    <span class="tag urg">Urgence</span>
-    <span class="tag off">Officielle</span>
-  </div></a><a class="item" data-axe="2" data-prio="normale" href="fiche-tec-cons-001.html">
-  <h3>Conserver les aliments sans électricité</h3>
-  <div class="meta">Axe 2 · Alimentation et Conservation</div>
-  <div class="tags" style="margin-top:9px">
-    
-    <span class="tag off">Officielle</span>
-  </div></a><a class="item" data-axe="3" data-prio="normale" href="fiche-surv-troc-001.html">
-  <h3>Échanger, négocier, tenir parole</h3>
-  <div class="meta">Axe 3 · Psychologie Sociale et Troc</div>
-  <div class="tags" style="margin-top:9px">
-    
-    <span class="tag off">Officielle</span>
-  </div></a><a class="item" data-axe="1" data-prio="normale" href="fiche-mem-eff-001.html">
-  <h3>Comment les sociétés s&#x27;effondrent</h3>
-  <div class="meta">Axe 1 · L&#x27;anthropocène</div>
-  <div class="tags" style="margin-top:9px">
-    
-    <span class="tag off">Officielle</span>
-  </div></a></div>
-
-  <div class="band" style="border-top:1px solid var(--hair);margin-top:44px">
-    <h2>Statuts</h2>
-    <p><span class="tag off">Officielle</span> Relue et intégrée au corpus Phenix. Versionnée, protégée contre l'écrasement.</p>
-    <p><span class="tag ver">Vérifiée</span> Contribution communautaire dont les sources ont été contrôlées.</p>
-    <p><span class="tag com">Communauté</span> Contribution publiée mais non vérifiée. Lisible, signalée comme telle.</p>
-    <p class="note">Le nombre de lectures ou de votes n'est jamais une preuve d'exactitude.
-      Une fiche ne devient officielle que par une validation explicite.</p>
-  </div>
-
-  <div class="band" style="border:none">
-    <h2>Aller plus loin</h2>
-    <p>L'application contient l'intégralité du corpus, les cartes hors ligne, la bibliothèque
-      et les modules — sans connexion.</p>
-    <p><a class="btn primary" href="download.html">Télécharger Phenix</a></p>
+  <div class="band">
+    <h2 data-i18n="exp.more">Go further</h2>
+    <p data-i18n="exp.morep">The app holds the whole library, offline maps, the bookshelf and the modules, with no connection.</p>
+    <p><a class="btn primary" href="download.html" data-i18n="home.b2">Download Phenix Base</a></p>
   </div>
 </main>
-<footer><div class="wrap"><p class="small">
-<a href="index.html">Accueil</a> · <a href="explore.html">Explorer</a> · <a href="lab.html">Contribuer</a> · <a href="download.html">Télécharger</a>
-</p></div></footer>
+<footer>
+  <div class="wrap">
+    <p data-i18n="foot.motto"><strong>Phenix</strong> — knowledge is your only immunity.</p>
+    <p class="small">
+      <a href="explore.html" data-i18n="nav.explore">Explore</a> ·
+      <a href="devices.html" data-i18n="nav.devices">Devices</a> ·
+      <a href="lab.html" data-i18n="nav.contribute">Contribute</a> ·
+      <a href="download.html" data-i18n="nav.download">Download</a> ·
+      <a href="soutenir.html" data-i18n="nav.support">Support</a> ·
+      <a href="https://www.instagram.com/phenixprjct/" rel="noopener">Instagram</a> ·
+      <a href="https://www.reddit.com/r/PhenixProject/" rel="noopener">Reddit</a> ·
+      <a href="https://github.com/anthrophobicc/PhenixProject" rel="noopener">GitHub</a>
+    </p>
+    <p class="small dim" data-i18n="foot.licence">Software under the MIT licence · sheets under CC BY-SA 4.0</p>
+  </div>
+</footer>
+<script src="i18n.js"></script>
 <script>
 const B=document.querySelectorAll("#filters button");
 const I=document.querySelectorAll("#list .item");
@@ -153,4 +220,5 @@ B.forEach(b=>b.onclick=()=>{
   });
 });
 </script>
-</body></html>
+</body>
+</html>

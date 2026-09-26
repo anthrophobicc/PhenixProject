@@ -32,13 +32,13 @@ sources: ["National Fire Protection Association — fire safety data", "Sapeurs-
 
 **Si vos vêtements prennent feu :** arrêtez-vous, jetez-vous au sol, roulez. Courir alimente les flammes.
 
-**Ne combattez un départ de feu que s'il est plus petit que vous**, que vous avez une issue derrière vous, et que vous savez ce qui brûle. Dans le doute, sortez.
+**Ne combattez un départ de feu que s'il est plus petit que vous**, que vous avez une issue derrière vous, et que vous savez ce qui brûle. Dans le doute, sortez. Le bon geste avec un extincteur : [[URG-INC-002]].
 
 ## ADAPTER
 
 **C'est un feu de friture ou d'huile.** N'y jetez jamais d'eau : elle se vaporise instantanément et projette l'huile enflammée. Coupez la source de chaleur et étouffez avec un couvercle ou un linge épais mouillé essoré.
 
-**C'est un feu électrique.** Coupez le courant avant tout. L'eau conduit l'électricité, voir [[TEC-ENE-001]] pour la coupure.
+**C'est un feu électrique.** Coupez le courant avant tout. L'eau conduit l'électricité, voir [[URG-RES-001]] pour la coupure.
 
 **C'est un feu de cheminée ou de conduit.** Ne l'alimentez plus, fermez les arrivées d'air, et éloignez ce qui touche le conduit dans les autres pièces. La chaleur traverse les murs et met le feu à l'étage.
 

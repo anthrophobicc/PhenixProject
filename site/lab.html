@@ -1,201 +1,177 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en" data-page-lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Phenix Lab — proposer une fiche</title>
+<title data-i18n="lab.title">Phenix Lab — write a sheet</title>
+<meta name="description" content="Write a sheet for the Phenix library. No account needed.">
+<meta name="theme-color" content="#040806">
+<script>try{var t=localStorage.getItem("phenix-theme");if(t&&t!=="phosphore")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<meta property="og:title" content="Phenix">
+<meta property="og:description" content="Write a sheet for the Phenix library. No account needed.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://anthrophobicc.github.io/PhenixProject/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="logo.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="img/icone-180.png">
 <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-
 <header class="nav">
   <a class="brand" href="index.html"><span class="mark"></span><span>PHENIX</span></a>
   <nav>
-    <a href="explore.html">Explorer</a>
-    <a href="lab.html">Contribuer</a>
-    <a href="download.html">Télécharger</a>
+    <a href="explore.html" data-i18n="nav.explore">Explore</a>
+    <a href="devices.html" data-i18n="nav.devices">Devices</a>
+    <a href="lab.html" data-i18n="nav.contribute">Contribute</a>
+    <a href="download.html" data-i18n="nav.download">Download</a>
+    <button class="lang" type="button" aria-label="Language">FR</button>
+    <span class="themes" role="group" aria-label="Theme">
+      <button type="button" data-theme-set="phosphore" title="Phosphor" aria-label="Phosphor theme" style="--c1:#040806;--c2:#39FF6A"></button>
+      <button type="button" data-theme-set="ambre" title="Amber" aria-label="Amber theme" style="--c1:#0A0703;--c2:#FFB000"></button>
+      <button type="button" data-theme-set="papier" title="Paper" aria-label="Paper theme" style="--c1:#F4F2EC;--c2:#2F6E2A"></button>
+    </span>
   </nav>
 </header>
-
 <main class="wrap" style="padding-top:34px;padding-bottom:60px">
+  <h1 style="font-size:30px;margin:0 0 10px;color:var(--acc);text-shadow:var(--glow)">Phenix Lab</h1>
+  <p class="lede" style="font-size:17px;margin:0 0 18px" data-i18n="lab.lede">Write a sheet for the library. No account, no sign-up. You can stay anonymous.</p>
 
-  <h1 style="font-size:30px;font-weight:700;letter-spacing:-.022em;margin:0 0 10px">Phenix Lab</h1>
-  <p class="lede" style="font-size:17px">Proposez une fiche au corpus. Pas de compte, pas d'inscription.
-    Vous pouvez rester anonyme.</p>
-
-  <div class="msg info">
-    <strong>Ce qui se passe ensuite.</strong> Votre proposition est relue avant toute intégration.
-    Elle peut devenir <em>communautaire</em>, puis <em>vérifiée</em>, et seulement après
-    <em>officielle</em>. <strong>Rien n'entre automatiquement dans le corpus officiel.</strong>
-  </div>
+  <div class="msg info" data-i18n="lab.next"><strong>What happens next.</strong> Your proposal is reviewed before anything goes in. It can become <em>community</em>, then <em>verified</em>, and only then <em>official</em>. <strong>Nothing enters the official library automatically.</strong></div>
 
   <details class="aide">
-    <summary>Comment écrire une bonne fiche</summary>
+    <summary data-i18n="lab.guide">How to write a good sheet</summary>
     <div class="inner">
-      <h3 style="margin-top:0;font-size:16px">Le ton</h3>
-      <p>Assertif. Vouvoiement. Aucune phrase pour combler, aucun sensationnalisme.
-        Phrases courtes dans l'urgence, longues dans l'explication.</p>
-
-      <h3 style="font-size:16px">Les deux structures</h3>
-      <p><strong>Sujet urgent</strong> — Agir, puis Adapter, puis Comprendre.
-        Le lecteur n'a pas le temps : il exécute d'abord.</p>
-      <p><strong>Sujet non urgent</strong> — Agir, puis Comprendre, puis Adapter.
-        Le geste juste découle du mécanisme.</p>
-      <p>Écrivez les titres de section ainsi : <code>## AGIR</code>,
-        <code>## COMPRENDRE</code>, <code>## ADAPTER</code>.</p>
-
-      <h3 style="font-size:16px">La partie « Comprendre »</h3>
-      <p>Expliquez le <strong>mécanisme</strong>, pas seulement le fait. Le lecteur doit
-        pouvoir en déduire quoi faire dans un cas que votre fiche ne décrit pas.
-        C'est ce qui sépare une fiche utile d'une liste d'instructions.</p>
-
-      <h3 style="font-size:16px">Les balises</h3>
-      <p>Elles ne classent pas la fiche : elles orientent la lecture selon la situation
-        de celui qui cherche.</p>
+      <h3 style="margin-top:0;font-size:15px" data-i18n="lab.g1">Tone</h3>
+      <p data-i18n="lab.g1p">Assertive. Plain words. No filler, no sensationalism. Short sentences in an emergency, longer ones to explain.</p>
+      <h3 style="font-size:15px" data-i18n="lab.g2">The two structures</h3>
+      <p data-i18n="lab.g2a"><strong>Urgent topic</strong> — Act, then Adapt, then Understand. The reader has no time: they act first.</p>
+      <p data-i18n="lab.g2b"><strong>Non-urgent topic</strong> — Act, then Understand, then Adapt. The right move comes from the mechanism.</p>
+      <p data-i18n="lab.g2c">Write the section titles like this: <code>## ACT</code>, <code>## UNDERSTAND</code>, <code>## ADAPT</code>.</p>
+      <h3 style="font-size:15px" data-i18n="lab.g3">The “Understand” part</h3>
+      <p data-i18n="lab.g3p">Explain the <strong>mechanism</strong>, not just the fact. The reader should be able to work out what to do in a case your sheet doesn't describe. That's what separates a useful sheet from a list of instructions.</p>
+      <h3 style="font-size:15px" data-i18n="lab.g4">Tags</h3>
+      <p data-i18n="lab.g4p">They don't classify the sheet: they guide the reader according to their situation.</p>
       <ul>
-        <li><strong>Temps</strong> — Flash (minutes), Court (heures), Long (jours et plus)</li>
-        <li><strong>Contexte</strong> — Seul, À deux, En groupe</li>
-        <li><strong>Risque</strong> — Discret, Exposé</li>
-        <li><strong>Matériel</strong> — Aucun, Récupération, Technique</li>
+        <li data-i18n="lab.g4a"><strong>Time</strong> — Flash (minutes), Short (hours), Long (days or more)</li>
+        <li data-i18n="lab.g4b"><strong>Context</strong> — Alone, Two people, Group</li>
+        <li data-i18n="lab.g4c"><strong>Risk</strong> — Discreet, Exposed</li>
+        <li data-i18n="lab.g4d"><strong>Gear</strong> — None, Salvage, Technical</li>
       </ul>
-
-      <h3 style="font-size:16px">Les sources</h3>
-      <p>Préférez les sources primaires : organismes de santé, institutions scientifiques,
-        manuels techniques, publications évaluées. Sur les sujets où une erreur blesse,
-        une fiche sans source ne sera pas intégrée.</p>
-
-      <h3 style="font-size:16px">Les liens</h3>
-      <p>Reliez votre fiche aux autres avec l'identifiant entre doubles crochets :
-        <code>[[URG-EAU-001]]</code>. Placez-les <strong>dans le texte</strong>, là où
-        le lecteur en a besoin. Une fiche isolée est un article ; une fiche reliée est un chemin.</p>
-
-      <h3 style="font-size:16px">Les sujets</h3>
-      <p>Tous, tant que la qualité y est. Phenix n'est pas une base de survie : un moteur,
-        une plante, une technique manuelle, une période historique, une méthode de cuisine
-        ou d'architecture ont toute leur place.</p>
+      <h3 style="font-size:15px" data-i18n="lab.g5">Sources</h3>
+      <p data-i18n="lab.g5p">Prefer primary sources: health agencies, scientific institutions, technical manuals, peer-reviewed papers. On topics where a mistake hurts people, a sheet without sources won't be added.</p>
+      <h3 style="font-size:15px" data-i18n="lab.g6">Links</h3>
+      <p data-i18n="lab.g6p">Link your sheet to others with the ID between double brackets: <code>[[URG-EAU-001]]</code>. Put them <strong>in the text</strong>, where the reader needs them. A lone sheet is an article; a linked sheet is a path.</p>
+      <h3 style="font-size:15px" data-i18n="lab.g7">Topics</h3>
+      <p data-i18n="lab.g7p">All of them, as long as the quality is there. Phenix is not just a survival database: an engine, a plant, a craft, a period of history, a cooking or building method all belong here.</p>
     </div>
   </details>
 
   <form id="form">
     <div class="field">
-      <label for="titre">Titre <span class="req">*</span></label>
-      <p class="help">Ce que la fiche traite, en clair. Pas de titre mystérieux.</p>
-      <input id="titre" name="titre" required maxlength="140" placeholder="ex : Purifier une eau douce">
+      <label for="titre"><span data-i18n="lab.f1">Title</span> <span class="req">*</span></label>
+      <p class="help" data-i18n="lab.f1h">What the sheet covers, plainly. No mysterious titles.</p>
+      <input id="titre" name="titre" required maxlength="140" placeholder="e.g. Purify fresh water" data-i18n-ph="lab.f1p">
     </div>
-
     <div class="field">
-      <label for="contenu">La fiche <span class="req">*</span></label>
-      <p class="help">Le texte complet. Utilisez <code>## AGIR</code>, <code>## COMPRENDRE</code>,
-        <code>## ADAPTER</code> pour les sections.</p>
-      <textarea id="contenu" name="contenu" class="tall" required
-        placeholder="::Une phrase d'accroche entre doubles deux-points.::&#10;&#10;## AGIR&#10;&#10;1. Première action.&#10;&#10;## ADAPTER&#10;&#10;## COMPRENDRE"></textarea>
+      <label for="contenu"><span data-i18n="lab.f2">The sheet</span> <span class="req">*</span></label>
+      <p class="help" data-i18n="lab.f2h">The full text. Use <code>## ACT</code>, <code>## UNDERSTAND</code>, <code>## ADAPT</code> for the sections.</p>
+      <textarea id="contenu" name="contenu" class="tall" required placeholder="::One hook sentence between double colons.::&#10;&#10;## ACT&#10;&#10;1. First action.&#10;&#10;## ADAPT&#10;&#10;## UNDERSTAND" data-i18n-ph="lab.f2p"></textarea>
     </div>
-
     <div class="field">
-      <label for="resume">Description courte</label>
-      <p class="help">Optionnel. Une ou deux phrases pour situer la fiche.</p>
+      <label for="resume"><span data-i18n="lab.f3">Short description</span></label>
+      <p class="help" data-i18n="lab.f3h">Optional. One or two sentences to frame the sheet.</p>
       <textarea id="resume" name="resume" maxlength="400"></textarea>
     </div>
-
     <div class="row">
       <div class="field">
-        <label for="axe">Axe probable</label>
+        <label for="axe"><span data-i18n="lab.f4">Likely axis</span></label>
         <select id="axe" name="axe">
-          <option value="">— je ne sais pas —</option>
-          <option value="1">1 — La Mémoire (histoire, sociétés)</option>
-          <option value="2">2 — La Technique (comment ça marche)</option>
-          <option value="3">3 — La Survie (quoi faire, maintenant)</option>
+          <option value="" data-i18n="lab.f4o0">— I don't know —</option>
+          <option value="1" data-i18n="lab.f4o1">1 — Memory (history, societies)</option>
+          <option value="2" data-i18n="lab.f4o2">2 — Technique (how things work)</option>
+          <option value="3" data-i18n="lab.f4o3">3 — Survival (what to do, now)</option>
         </select>
       </div>
       <div class="field">
-        <label for="categorie">Catégorie proposée</label>
-        <input id="categorie" name="categorie" maxlength="80" placeholder="ex : Mécanique et Transport">
+        <label for="categorie"><span data-i18n="lab.f5">Suggested category</span></label>
+        <input id="categorie" name="categorie" maxlength="80" placeholder="e.g. Mechanics and transport" data-i18n-ph="lab.f5p">
       </div>
     </div>
-
     <div class="row">
       <div class="field">
-        <label for="langue">Langue de la fiche</label>
+        <label for="langue"><span data-i18n="lab.f6">Language of the sheet</span></label>
         <select id="langue" name="langue">
-          <option value="fr">Français</option>
           <option value="en">English</option>
+          <option value="fr">Français</option>
+          <option value="autre" data-i18n="lab.f6o">Another language</option>
         </select>
       </div>
       <div class="field">
         <label for="urgence">Type</label>
         <select id="urgence" name="urgence">
-          <option value="savoir">Savoir général</option>
-          <option value="urgence">Situation urgente</option>
+          <option value="savoir" data-i18n="lab.f7a">General knowledge</option>
+          <option value="urgence" data-i18n="lab.f7b">Urgent situation</option>
         </select>
       </div>
     </div>
-
     <div class="field">
       <label for="sources">Sources</label>
-      <p class="help">Une par ligne. Un lien, un titre d'ouvrage, un organisme.</p>
-      <textarea id="sources" name="sources" placeholder="OMS — Directives sur la qualité de l'eau de boisson&#10;https://..."></textarea>
+      <p class="help" data-i18n="lab.f8h">One per line. A link, a book title, an organisation.</p>
+      <textarea id="sources" name="sources" placeholder="WHO — Guidelines for drinking-water quality&#10;https://..." data-i18n-ph="lab.f8p"></textarea>
     </div>
-
     <div class="field">
-      <label for="note">Note à l'éditeur</label>
-      <p class="help">Pourquoi cette fiche ? Qu'apporte-t-elle ? Y a-t-il quelque chose
-        à éviter ou à vérifier ?</p>
+      <label for="note"><span data-i18n="lab.f9">Note to the editor</span></label>
+      <p class="help" data-i18n="lab.f9h">Why this sheet? What does it add? Anything to avoid or double-check?</p>
       <textarea id="note" name="note"></textarea>
     </div>
-
     <div class="field">
-      <label for="images">Images ou schémas</label>
-      <p class="help">Optionnel. Vous devez avoir le droit de les partager.</p>
+      <label for="images"><span data-i18n="lab.f10">Images or diagrams</span></label>
+      <p class="help" data-i18n="lab.f10h">Optional. You must have the right to share them.</p>
       <input type="file" id="images" name="images" accept="image/*" multiple>
     </div>
-
     <div class="field">
-      <label for="auteur">Votre nom ou pseudonyme</label>
-      <p class="help">Optionnel. Laissez vide pour rester anonyme — cela ne change rien
-        à l'examen de votre proposition.</p>
-      <input id="auteur" name="auteur" maxlength="60" placeholder="anonyme">
+      <label for="auteur"><span data-i18n="lab.f11">Your name or nickname</span></label>
+      <p class="help" data-i18n="lab.f11h">Optional. Leave it empty to stay anonymous: it changes nothing in how your proposal is reviewed.</p>
+      <input id="auteur" name="auteur" maxlength="60" placeholder="anonymous" data-i18n-ph="lab.f11p">
     </div>
-
     <div class="field">
       <label for="contact">Contact</label>
-      <p class="help">Optionnel. Uniquement si vous voulez être prévenu ou pouvoir
-        répondre à une demande de correction.</p>
-      <input id="contact" name="contact" type="email" maxlength="120" placeholder="vous@exemple.fr">
+      <p class="help" data-i18n="lab.f12h">Optional. Only if you want to be notified, or to answer a correction request.</p>
+      <input id="contact" name="contact" type="email" maxlength="120" placeholder="you@example.com" data-i18n-ph="lab.f12p">
     </div>
-
     <!-- Piège à robots : invisible pour les humains, rempli par les automates. -->
     <div style="position:absolute;left:-9999px" aria-hidden="true">
-      <label for="site">Ne pas remplir</label>
+      <label for="site">Leave empty</label>
       <input id="site" name="site" tabindex="-1" autocomplete="off">
     </div>
-
     <div id="retour"></div>
-
     <p style="margin-top:26px">
-      <button type="submit" class="btn primary" id="submit"
-        style="font-size:16px;padding:14px 28px">Envoyer ma proposition</button>
+      <button type="submit" class="btn primary" id="submit" style="font-size:15px;padding:14px 28px" data-i18n="lab.send">Send my proposal</button>
     </p>
-
-    <p class="small" style="margin-top:16px">
-      En envoyant, vous acceptez que votre fiche puisse être publiée sous licence
-      CC BY-SA 4.0 si elle est retenue. Vous restez libre d'en faire ce que vous voulez
-      par ailleurs.
-    </p>
+    <p class="small" style="margin-top:16px" data-i18n="lab.cc">By sending, you agree that your sheet may be published under the CC BY-SA 4.0 licence if it's accepted. You stay free to do whatever you want with it elsewhere.</p>
   </form>
 </main>
-
 <footer>
   <div class="wrap">
+    <p data-i18n="foot.motto"><strong>Phenix</strong> — knowledge is your only immunity.</p>
     <p class="small">
-      <a href="index.html">Accueil</a> ·
-      <a href="explore.html">Explorer</a> ·
-      <a href="download.html">Télécharger</a>
+      <a href="explore.html" data-i18n="nav.explore">Explore</a> ·
+      <a href="devices.html" data-i18n="nav.devices">Devices</a> ·
+      <a href="lab.html" data-i18n="nav.contribute">Contribute</a> ·
+      <a href="download.html" data-i18n="nav.download">Download</a> ·
+      <a href="soutenir.html" data-i18n="nav.support">Support</a> ·
+      <a href="https://www.instagram.com/phenixprjct/" rel="noopener">Instagram</a> ·
+      <a href="https://www.reddit.com/r/PhenixProject/" rel="noopener">Reddit</a> ·
+      <a href="https://github.com/anthrophobicc/PhenixProject" rel="noopener">GitHub</a>
     </p>
+    <p class="small dim" data-i18n="foot.licence">Software under the MIT licence · sheets under CC BY-SA 4.0</p>
   </div>
 </footer>
-
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="i18n.js"></script>
 <script src="lab.js"></script>
 </body>
 </html>

@@ -1,83 +1,108 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-page-lang="fr" data-alt="fiche-tec-mot-001-en.html" data-kind="fiche">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Les moteurs de bateau — typologie complète — Phenix</title>
-<meta name="description" content="Les moteurs de bateau — typologie complète — fiche Phenix, axe 2.">
-<meta property="og:title" content="Les moteurs de bateau — typologie complète — Phenix">
+<meta name="description" content="Les moteurs de bateau — typologie complète — Phenix">
+<meta name="theme-color" content="#040806">
+<script>try{var t=localStorage.getItem("phenix-theme");if(t&&t!=="phosphore")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<meta property="og:title" content="Phenix">
+<meta property="og:description" content="Les moteurs de bateau — typologie complète — Phenix">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://anthrophobicc.github.io/PhenixProject/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="logo.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="img/icone-180.png">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="fiche.css">
 </head>
 <body>
 <header class="nav">
   <a class="brand" href="index.html"><span class="mark"></span><span>PHENIX</span></a>
-  <nav><a href="explore.html">Explorer</a><a href="lab.html">Contribuer</a><a href="download.html">Télécharger</a></nav>
+  <nav>
+    <a href="explore.html" data-i18n="nav.explore">Explorer</a>
+    <a href="devices.html" data-i18n="nav.devices">Appareils</a>
+    <a href="lab.html" data-i18n="nav.contribute">Contribuer</a>
+    <a href="download.html" data-i18n="nav.download">Télécharger</a>
+    <button class="lang" type="button" aria-label="Language">EN</button>
+    <span class="themes" role="group" aria-label="Theme">
+      <button type="button" data-theme-set="phosphore" title="Phosphor" aria-label="Phosphor theme" style="--c1:#040806;--c2:#39FF6A"></button>
+      <button type="button" data-theme-set="ambre" title="Amber" aria-label="Amber theme" style="--c1:#0A0703;--c2:#FFB000"></button>
+      <button type="button" data-theme-set="papier" title="Paper" aria-label="Paper theme" style="--c1:#F4F2EC;--c2:#2F6E2A"></button>
+    </span>
+  </nav>
 </header>
 <main class="wrap fiche">
-  <p class="fil"><a href="explore.html">Explorer</a> › La Technique › Mécanique et Transport</p>
+  <p class="fil"><a href="explore.html" data-i18n="nav.explore">Explorer</a> › La Technique › Mécanique et Transport</p>
+  
   <div class="tags">
     
-    <span class="tag off">Officielle</span>
+    <span class="tag off" data-i18n="tag.off">Officielle</span>
   </div>
   <h1>Les moteurs de bateau — typologie complète</h1>
   <p class="meta">Axe 2 · La Technique · Mécanique et Transport</p>
-  <div class="bals">
-    <div><span>Temps</span><b>Long</b></div>
-    <div><span>Contexte</span><b>Seul</b></div>
-    <div><span>Risque</span><b>Discret</b></div>
-    <div><span>Matériel</span><b>Technique</b></div>
-  </div>
-  <article class="prose"><p class="lede-f">Un moteur de bateau ne se distingue pas d&#x27;un moteur terrestre par sa mécanique. Il s&#x27;en distingue par ce qu&#x27;il subit.</p>
-<h2 class="step s-comp">COMPRENDRE</h2>
+  <div class="bals"><div><span>Temps</span><b>Long</b></div><div><span>Contexte</span><b>Seul</b></div><div><span>Risque</span><b>Discret</b></div><div><span>Matériel</span><b>Technique</b></div></div>
+  <article class="prose"><p class="lede-f">Un moteur marin ne se distingue pas d&#x27;un moteur terrestre par sa mécanique, mais par ce qu&#x27;il subit.</p>
 <p>Trois contraintes définissent toute motorisation marine, et elles expliquent chaque choix technique qui suit.</p>
 <p><strong>La charge est permanente.</strong> Un moteur de voiture passe l&#x27;essentiel de sa vie en charge partielle. Un moteur de bateau pousse une masse d&#x27;eau en continu, sans temps mort, sans descente. Il travaille près de son régime de couple maximal pendant des heures. C&#x27;est pourquoi un moteur de voiture transplanté sur un bateau casse : il n&#x27;a jamais été dimensionné pour ça. Le fonctionnement commun aux deux est décrit dans <a href="fiche-tec-moth-001.html">Le moteur thermique — fonctionnement complet</a>.</p>
 <p><strong>Le refroidissement se fait par l&#x27;eau où l&#x27;on navigue.</strong> C&#x27;est gratuit, illimité, et corrosif. Toute la conception marine tourne autour de ce compromis.</p>
 <p><strong>Une panne n&#x27;est pas un arrêt sur le bas-côté.</strong> La redondance et la réparabilité ne sont pas du luxe.</p>
-<h3>Le classement par implantation</h3>
+<h2>Le classement par implantation</h2>
 <p><strong>Hors-bord.</strong> Bloc complet — moteur, transmission, hélice — accroché au tableau arrière. Il bascule pour relever l&#x27;hélice, il se démonte entièrement, il se remplace en quelques minutes. C&#x27;est la motorisation la plus réparable et la plus interchangeable qui existe sur l&#x27;eau. Sa faiblesse est la position du poids, haut et en arrière.</p>
 <p><strong>In-bord.</strong> Moteur à l&#x27;intérieur de la coque, arbre traversant la coque via un presse-étoupe, hélice sous la carène. Poids bas et centré, donc bien meilleure tenue de mer. En contrepartie : un passage de coque à étancher en permanence, un arbre à aligner au dixième de millimètre, un accès contraint, et une ligne d&#x27;arbre qui impose l&#x27;inclinaison de l&#x27;hélice.</p>
 <p><strong>Semi-hors-bord, dit embase Z.</strong> Moteur dedans, transmission dehors sur une embase orientable. Compromis entre les deux : rendement d&#x27;hélice d&#x27;un hors-bord, poids interne d&#x27;un in-bord. Complexité mécanique nettement supérieure, et un soufflet en caoutchouc traversant la coque dont la rupture coule le bateau.</p>
 <p><strong>Propulsion par jet.</strong> Une pompe aspire l&#x27;eau et l&#x27;éjecte. Aucun appendice sous la coque, donc navigation en eau très peu profonde et absence de risque de blessure par hélice. Rendement médiocre à basse vitesse, sensibilité aux corps flottants aspirés.</p>
 <p><strong>Pod électrique.</strong> Moteur électrique immergé dans une nacelle orientable à 360 degrés. Manœuvrabilité totale sans propulseur d&#x27;étrave. Sur les grandes unités, un groupe diesel produit l&#x27;électricité et les pods propulsent : cela découple production et propulsion, et permet de couper des générateurs quand la demande baisse.</p>
-<h3>Le classement par cycle</h3>
+<h2>Le classement par cycle</h2>
 <p><strong>Deux temps.</strong> Une explosion par tour. Puissance élevée pour un poids faible, très peu de pièces mobiles, réparabilité exceptionnelle. Il consomme davantage, il fume, et il rejette une part d&#x27;huile imbrûlée. Les réglementations d&#x27;émissions l&#x27;ont fait reculer partout, mais dans un contexte de réparation autonome, sa simplicité redevient décisive. Sur les modèles à injection directe, une grande partie du défaut de consommation disparaît.</p>
 <p><strong>Quatre temps.</strong> Sobre, propre, silencieux, coupleux à bas régime. Circuit d&#x27;huile séparé donc vidanges, plus de pièces, davantage de choses à comprendre avant d&#x27;intervenir.</p>
 <p><strong>Diesel.</strong> Couple énorme à bas régime, exactement ce que demande une hélice. Pas de circuit d&#x27;allumage à corroder — un avantage considérable en atmosphère saline. Durée de vie très supérieure. En contrepartie : masse importante, injection haute pression intolérante à l&#x27;eau, démarrage difficile par grand froid.</p>
-<p><strong>Électrique.</strong> Couple maximal dès l&#x27;arrêt, silence total, aucune vibration, aucun échappement. La limite est l&#x27;énergie embarquée, et son calcul est dans <a href="fiche-tec-ene-001.html">Récupérer et réutiliser l&#x27;énergie électrique</a>. En usage lent et court — pêche, canaux, annexes — c&#x27;est déjà supérieur à tout le reste.</p>
+<p><strong>Électrique.</strong> Couple maximal dès l&#x27;arrêt, silence total, aucune vibration, aucun échappement. La limite est l&#x27;énergie embarquée, et son calcul est dans <a href="fiche-tec-ene-001.html">L’énergie électrique dans les objets</a>. En usage lent et court — pêche, canaux, annexes — c&#x27;est déjà supérieur à tout le reste.</p>
 <p><strong>Vapeur.</strong> Marginal aujourd&#x27;hui, mais mentionné pour une raison précise : c&#x27;est le seul type qui accepte <strong>n&#x27;importe quel combustible solide</strong>. Bois, charbon, déchets. Dans une logique de rupture d&#x27;approvisionnement en carburant raffiné, c&#x27;est la seule motorisation qui reste alimentable indéfiniment.</p>
-<h3>Le refroidissement, là où tout se joue</h3>
+<h2>Le refroidissement, là où tout se joue</h2>
 <p><strong>Circuit ouvert.</strong> L&#x27;eau de navigation traverse directement le moteur. Simple, léger, peu de pièces. Elle dépose du sel, elle corrode, elle entartre. Un moteur à circuit ouvert en mer se rince à l&#x27;eau douce après chaque sortie, sinon il se détruit lentement de l&#x27;intérieur.</p>
 <p><strong>Circuit fermé.</strong> Un circuit interne de liquide de refroidissement cède sa chaleur à l&#x27;eau de mer dans un échangeur. L&#x27;eau salée ne touche jamais le moteur. Plus lourd, plus cher, incomparablement plus durable.</p>
 <p>Dans les deux cas, <strong>la turbine de pompe à eau en caoutchouc est la pièce d&#x27;usure critique</strong>. Elle est détruite en quelques secondes si le moteur tourne hors de l&#x27;eau, parce qu&#x27;elle est lubrifiée et refroidie par l&#x27;eau qu&#x27;elle pompe. C&#x27;est la première pièce de rechange à posséder, avant toutes les autres.</p>
-<h3>L&#x27;hélice</h3>
+<h2>L&#x27;hélice</h2>
 <p>Deux nombres la définissent : le <strong>diamètre</strong>, qui détermine la surface d&#x27;eau brassée, et le <strong>pas</strong>, la distance théorique parcourue en un tour. Grand pas et petit diamètre pour la vitesse, petit pas et grand diamètre pour la poussée.</p>
 <p>Une hélice surdimensionnée empêche le moteur d&#x27;atteindre son régime maximal et le fait travailler en surcharge permanente : c&#x27;est la cause la plus fréquente de destruction lente d&#x27;un moteur marin. Une hélice sous-dimensionnée laisse le moteur s&#x27;emballer sans produire de poussée.</p>
-<p>La <strong>cavitation</strong> — formation de bulles de vapeur par chute de pression sur le dos des pales — érode physiquement le métal et fait perdre la poussée. Elle signale toujours un problème de géométrie, de profondeur d&#x27;immersion ou de régime.</p>
-<h2 class="step s-agir">AGIR</h2>
-<ol>
-<li><strong>Regardez où il est.</strong> Dehors, dedans, ou mi-chemin : vous savez déjà comment y accéder et ce qu&#x27;il faut démonter.</li>
-<li><strong>Cherchez la bougie.</strong> Présente : essence. Absente : diesel.</li>
-<li><strong>Cherchez la jauge d&#x27;huile.</strong> Présente : quatre temps. Absente et carburant mélangé : deux temps.</li>
-<li><strong>Suivez le circuit d&#x27;eau depuis la prise sous la coque.</strong> Directement au bloc : circuit ouvert. Par un échangeur : circuit fermé.</li>
-<li><strong>Trouvez le témoin d&#x27;eau à l&#x27;échappement.</strong> Pas de filet d&#x27;eau au démarrage : coupez immédiatement, la turbine est en train de mourir.</li>
-<li><strong>Relevez la plaque.</strong> Puissance, régime maximal, année, numéro de série.</li>
-</ol>
-<h2 class="step s-adapt">ADAPTER</h2>
+<p>La <strong><span class="glo" tabindex="0">cavitation<span class="glob">Formation de bulles de vapeur par chute de pression sur les pales, qui érode le métal et fait perdre la poussée.</span></span></strong> — formation de bulles de vapeur par chute de pression sur le dos des pales — érode physiquement le métal et fait perdre la poussée. Elle signale toujours un problème de géométrie, de profondeur d&#x27;immersion ou de régime.</p>
+<h2>Identifier une motorisation marine</h2>
+<ol><li><strong>Regardez où il est.</strong> Dehors, dedans, ou mi-chemin : vous savez déjà comment y accéder et ce qu&#x27;il faut démonter.</li><li><strong>Cherchez la bougie.</strong> Présente : essence. Absente : diesel.</li><li><strong>Cherchez la jauge d&#x27;huile.</strong> Présente : quatre temps. Absente et carburant mélangé : deux temps.</li><li><strong>Suivez le circuit d&#x27;eau depuis la prise sous la coque.</strong> Directement au bloc : circuit ouvert. Par un échangeur : circuit fermé.</li><li><strong>Trouvez le témoin d&#x27;eau à l&#x27;échappement.</strong> Pas de filet d&#x27;eau au démarrage : coupez immédiatement, la turbine est en train de mourir.</li><li><strong>Relevez la plaque.</strong> Puissance, régime maximal, année, numéro de série.</li></ol>
+<h2>Critères de choix</h2>
 <p><strong>Vous devez choisir une motorisation à construire ou à récupérer.</strong> Diesel in-bord si vous cherchez la durée et le couple. Hors-bord deux temps si vous cherchez la réparabilité et l&#x27;interchangeabilité. Électrique si vos trajets sont courts et votre production électrique existe.</p>
 <p><strong>Vous n&#x27;avez plus de carburant raffiné.</strong> Le diesel accepte des huiles végétales filtrées avec des adaptations. La vapeur accepte tout ce qui brûle. L&#x27;essence n&#x27;accepte à peu près rien d&#x27;autre qu&#x27;elle-même.</p>
+<p><strong>Vous devez manœuvrer vous-même.</strong> Les gestes, le balisage et les règles de barre sont dans <span title="TEC-NAV-001">Conduire un bateau</span>.</p>
 <p><strong>Vous cannibalisez.</strong> Un hors-bord se transporte entier, se monte sur n&#x27;importe quelle coque munie d&#x27;un tableau arrière, et s&#x27;échange comme une pièce. C&#x27;est la motorisation la plus proche d&#x27;un standard universel sur l&#x27;eau.</p></article>
   
-  <div class="blk"><h4>Fiches qui mènent ici</h4><a class="item" href="fiche-tec-moth-001.html"><h3>Le moteur thermique — fonctionnement complet</h3><div class="meta">Axe 2</div></a><a class="item" href="fiche-tec-ene-001.html"><h3>Récupérer et réutiliser l&#x27;énergie électrique</h3><div class="meta">Axe 2</div></a></div>
+  <div class="blk"><h4 data-i18n="fiche.back">Fiches qui mènent ici</h4><a class="item" href="fiche-tec-ene-001.html"><h3>L’énergie électrique dans les objets</h3><div class="meta">Axe 2</div></a><a class="item" href="fiche-tec-moth-001.html"><h3>Le moteur thermique — fonctionnement complet</h3><div class="meta">Axe 2</div></a></div>
   <div class="blk cta">
-    <p><strong>Cette fiche fait partie de Phenix.</strong> L'application contient tout le corpus,
-    les cartes et la bibliothèque, et fonctionne hors ligne.</p>
-    <p><a class="btn primary" href="download.html">Télécharger Phenix</a>
-       <a class="btn" href="lab.html">Proposer une fiche</a></p>
+    <p data-i18n="fiche.cta"><strong>Cette fiche fait partie de Phenix.</strong> L'application contient tout le corpus, les cartes et la bibliothèque, et fonctionne hors ligne.</p>
+    <p><a class="btn primary" href="download.html" data-i18n="home.b2">Télécharger Phenix Base</a>
+       <a class="btn" href="lab.html" data-i18n="sup.btn">Proposer une fiche</a></p>
   </div>
 </main>
-<footer><div class="wrap"><p class="small">
-<a href="index.html">Accueil</a> · <a href="explore.html">Explorer</a> · <a href="lab.html">Contribuer</a> · <a href="download.html">Télécharger</a>
-</p></div></footer>
-</body></html>
+<footer>
+  <div class="wrap">
+    <p data-i18n="foot.motto"><strong>Phenix</strong> — le savoir est votre seule immunité.</p>
+    <p class="small">
+      <a href="explore.html" data-i18n="nav.explore">Explorer</a> ·
+      <a href="devices.html" data-i18n="nav.devices">Appareils</a> ·
+      <a href="lab.html" data-i18n="nav.contribute">Contribuer</a> ·
+      <a href="download.html" data-i18n="nav.download">Télécharger</a> ·
+      <a href="soutenir.html" data-i18n="nav.support">Soutenir</a> ·
+      <a href="https://www.instagram.com/phenixprjct/" rel="noopener">Instagram</a> ·
+      <a href="https://www.reddit.com/r/PhenixProject/" rel="noopener">Reddit</a> ·
+      <a href="https://github.com/anthrophobicc/PhenixProject" rel="noopener">GitHub</a>
+    </p>
+    <p class="small dim" data-i18n="foot.licence">Logiciel sous licence MIT · fiches sous licence CC BY-SA 4.0</p>
+  </div>
+</footer>
+<script src="i18n.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" data-page-lang="en" data-alt="fiche-surv-ene-001.html" data-kind="fiche">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Powering a circuit without the grid — Phenix</title>
+<meta name="description" content="Powering a circuit without the grid — Phenix">
+<meta name="theme-color" content="#040806">
+<script>try{var t=localStorage.getItem("phenix-theme");if(t&&t!=="phosphore")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<meta property="og:title" content="Phenix">
+<meta property="og:description" content="Powering a circuit without the grid — Phenix">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://anthrophobicc.github.io/PhenixProject/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="logo.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="img/icone-180.png">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="fiche.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="index.html"><span class="mark"></span><span>PHENIX</span></a>
+  <nav>
+    <a href="explore.html" data-i18n="nav.explore">Explore</a>
+    <a href="devices.html" data-i18n="nav.devices">Devices</a>
+    <a href="lab.html" data-i18n="nav.contribute">Contribute</a>
+    <a href="download.html" data-i18n="nav.download">Download</a>
+    <button class="lang" type="button" aria-label="Language">FR</button>
+    <span class="themes" role="group" aria-label="Theme">
+      <button type="button" data-theme-set="phosphore" title="Phosphor" aria-label="Phosphor theme" style="--c1:#040806;--c2:#39FF6A"></button>
+      <button type="button" data-theme-set="ambre" title="Amber" aria-label="Amber theme" style="--c1:#0A0703;--c2:#FFB000"></button>
+      <button type="button" data-theme-set="papier" title="Paper" aria-label="Paper theme" style="--c1:#F4F2EC;--c2:#2F6E2A"></button>
+    </span>
+  </nav>
+</header>
+<main class="wrap fiche">
+  <p class="fil"><a href="explore.html" data-i18n="nav.explore">Explore</a> › Survival › Fire, water and resources</p>
+  
+  <div class="tags">
+    
+    <span class="tag off" data-i18n="tag.off">Official</span>
+  </div>
+  <h1>Powering a circuit without the grid</h1>
+  <p class="meta">Axis 3 · Survival · Fire, water and resources</p>
+  <div class="bals"><div><span>Time</span><b>Long</b></div><div><span>Context</span><b>Alone</b></div><div><span>Risk</span><b>Discreet</b></div><div><span>Gear</span><b>Technical</b></div></div>
+  <article class="prose"><p class="lede-f">Only one rule kills in this field, and it kills someone other than you: isolate before you feed power in. Everything else is just sizing.</p>
+<p>How the grid works is in <span title="TEC-RES-001">Les réseaux, de la source à la prise</span>; the reasoning about current is in <span title="TEC-ENE-002">Lire un circuit électrique</span> and <span title="TEC-ENE-003">Câbler et protéger une installation</span>.</p>
+<h2 class="step s-comp">UNDERSTAND</h2>
+<h3>Backfeeding, and why it comes first</h3>
+<p>If you feed current into a building&#x27;s wiring while it&#x27;s still connected to the grid, that current flows back: to the panel, to the service connection, to the neighborhood transformer. <strong>And there it does the opposite of what a transformer normally does: it steps the voltage up.</strong> A few hundred volts become several thousand on the line.</p>
+<p>Two consequences, both serious. <strong>A line worker on a line they&#x27;ve locked out as dead gets electrocuted by your setup.</strong> And when the power comes back, your source and the grid end up fighting each other: everything plugged in is destroyed, often with a fire.</p>
+<p><strong>That&#x27;s why isolating always comes before powering anything.</strong> It isn&#x27;t paperwork, it&#x27;s the whole point.</p>
+<h3>How to isolate properly</h3>
+<p><strong>A transfer switch</strong> is a mechanical device with two mutually exclusive positions: grid, or backup source. It physically can&#x27;t be in both at once. It&#x27;s the only clean solution, and it exists in a manual version that&#x27;s simple and cheap.</p>
+<p><strong>An open main breaker</strong> is the absolute minimum if you don&#x27;t have a transfer switch: you cut the main supply, firmly, before anything else.</p>
+<p><strong>And the solution that avoids the whole problem: don&#x27;t feed anything into the building&#x27;s wiring at all.</strong> An extension cord from the generator or the inverter straight to the appliance. It&#x27;s less convenient, it&#x27;s completely safe, and it&#x27;s what you should do for as long as you don&#x27;t have a transfer switch.</p>
+<h3>Grounding</h3>
+<p>A standalone source needs a ground reference, or the residual-current protections detect nothing and a fault doesn&#x27;t trip anything. Many portable generators use a special arrangement where both conductors are isolated from ground: that&#x27;s safe for an appliance plugged in directly, and it stops being safe once you power a building&#x27;s wiring. <strong>Read the generator&#x27;s rating plate: it tells you.</strong></p>
+<h3>Sizing, in two numbers</h3>
+<p><strong>Running power</strong>: what the appliance draws while it&#x27;s working.</p>
+<p><strong>Starting power</strong>: what it pulls for a second when it switches on. Anything with a motor — fridge, freezer, pump, compressor — pulls <strong>three to eight times its rated power</strong> when it starts. A 150 W fridge can ask for 900 W for one second.</p>
+<p>It&#x27;s the number one cause of breakdowns on undersized generators, and it doesn&#x27;t show on the label.</p>
+<h2 class="step s-agir">ACT</h2>
+<p><strong>1. List what really needs power</strong>, in this order: food cooling, water if it needs a pump, light, communication, charging. Electric heating is beyond any reasonable standalone source.</p>
+<p><strong>2. Add up the running powers, then add the biggest starting power in the lot.</strong> That&#x27;s your real need.</p>
+<p><strong>3. Choose where you plug in.</strong></p>
+<ul><li>One or two appliances: an extension cord straight from the source. Nothing else to do.</li><li>The whole building: a transfer switch, and nothing else.</li><li>Never: a male-to-male cord plugged into a wall outlet. That setup is what kills line workers and burns houses down, and there&#x27;s no excuse for it.</li></ul>
+<p><strong>4. Keep the generator outside, always.</strong> An engine produces carbon monoxide, which has no smell, and it kills in an open garage, under a porch roof, in a ventilated basement. Ten meters (30 feet) from any opening, exhaust downwind. See <span title="URG-AIR-001">Air contaminé</span> and <span title="TEC-CON-007">La combustion et l’évacuation des fumées</span>.</p>
+<p><strong>5. Take care of your extension cords.</strong> A wire that&#x27;s too thin over a long run drops the voltage and heats the cable: the appliance struggles, the cord melts. Unroll a cord reel completely before drawing power through it — coiled up, it heats like a heating element.</p>
+<p><strong>6. Protect the circuit.</strong> A fuse or a breaker at the source, always. A shorted car battery melts a tool in seconds and starts a fire.</p>
+<h2 class="step s-adapt">ADAPT</h2>
+<p><strong>You have a car battery and nothing else.</strong> That&#x27;s already a lot. Direct 12 V lighting — see <span title="SURV-LUM-001">Fabriquer une lampe</span> —, charging devices, a small fan, a radio. With an inverter, mains voltage (230 V, or 120 V in North America) for small loads. Watch the discharge: a starter battery run down too low won&#x27;t come back. See <span title="TEC-ENE-004">Les batteries</span>.</p>
+<p><strong>You have a solar panel.</strong> Panel, charge controller, battery, then the loads. <strong>The charge controller isn&#x27;t optional</strong>: without it, the panel destroys the battery. See <span title="TEC-SOLR-001">Le solaire photovoltaïque, du panneau à la prise</span>.</p>
+<p><strong>You want to power the fridge.</strong> It&#x27;s the best use of a limited source, and there&#x27;s a trick: a full freezer stays cold for a very long time with the door shut. Power it for a few hours, twice a day, rather than all the time — you cut its consumption by a factor of three without losing anything.</p>
+<p><strong>You&#x27;re powering a pump.</strong> Look at the starting power first: it&#x27;s the appliance that most often stalls a generator.</p>
+<p><strong>All you have is a bike, a drill or an engine.</strong> A car alternator driven mechanically produces current. Human output is modest — about a hundred watts sustained, see <span title="MEM-ANT-003">Les ordres de grandeur du monde actuel</span> — but it&#x27;s enough for charging. See <a href="fiche-tec-ene-001-en.html">Electrical energy in everyday objects</a>.</p>
+<p><strong>You&#x27;re tempted to hook up somewhere other than your own wiring.</strong> Two facts, without moral commentary. It&#x27;s theft, and it&#x27;s detected remotely by the meters at the substation. And in every country where it happens, it&#x27;s <strong>the leading cause of electrocution and fire in informal electrical work</strong> — illegal hookups mostly kill the people who make them and their neighbors. This library doesn&#x27;t cover it.</p>
+<p><strong>The power comes back.</strong> Switch off your source, flip the transfer switch, and reconnect gradually. Turning everything back on at once after a long outage trips the breakers, at your place as well as across the neighborhood.</p></article>
+  <div class="blk"><h4>Sources</h4><div class="src">NF C 15-100 (French wiring standard) — low-voltage installations, provisions for backup sources</div><div class="src">Enedis (French grid operator) — safety instructions for connecting generators</div><div class="src">Electrical safety reports on backfeed accidents</div><div class="src">Manufacturer documentation for transfer switches and inverters</div></div>
+  
+  <div class="blk cta">
+    <p data-i18n="fiche.cta"><strong>This sheet is part of Phenix.</strong> The app holds the whole library, the maps and the bookshelf, and works offline.</p>
+    <p><a class="btn primary" href="download.html" data-i18n="home.b2">Download Phenix Base</a>
+       <a class="btn" href="lab.html" data-i18n="sup.btn">Write a sheet</a></p>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <p data-i18n="foot.motto"><strong>Phenix</strong> — knowledge is your only immunity.</p>
+    <p class="small">
+      <a href="explore.html" data-i18n="nav.explore">Explore</a> ·
+      <a href="devices.html" data-i18n="nav.devices">Devices</a> ·
+      <a href="lab.html" data-i18n="nav.contribute">Contribute</a> ·
+      <a href="download.html" data-i18n="nav.download">Download</a> ·
+      <a href="soutenir.html" data-i18n="nav.support">Support</a> ·
+      <a href="https://www.instagram.com/phenixprjct/" rel="noopener">Instagram</a> ·
+      <a href="https://www.reddit.com/r/PhenixProject/" rel="noopener">Reddit</a> ·
+      <a href="https://github.com/anthrophobicc/PhenixProject" rel="noopener">GitHub</a>
+    </p>
+    <p class="small dim" data-i18n="foot.licence">Software under the MIT licence · sheets under CC BY-SA 4.0</p>
+  </div>
+</footer>
+<script src="i18n.js"></script>
+
+</body>
+</html>

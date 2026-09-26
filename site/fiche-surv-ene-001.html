@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr" data-page-lang="fr" data-alt="fiche-surv-ene-001-en.html" data-kind="fiche">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alimenter un circuit sans le réseau — Phenix</title>
+<meta name="description" content="Alimenter un circuit sans le réseau — Phenix">
+<meta name="theme-color" content="#040806">
+<script>try{var t=localStorage.getItem("phenix-theme");if(t&&t!=="phosphore")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<meta property="og:title" content="Phenix">
+<meta property="og:description" content="Alimenter un circuit sans le réseau — Phenix">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://anthrophobicc.github.io/PhenixProject/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="logo.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="img/icone-180.png">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="fiche.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="index.html"><span class="mark"></span><span>PHENIX</span></a>
+  <nav>
+    <a href="explore.html" data-i18n="nav.explore">Explorer</a>
+    <a href="devices.html" data-i18n="nav.devices">Appareils</a>
+    <a href="lab.html" data-i18n="nav.contribute">Contribuer</a>
+    <a href="download.html" data-i18n="nav.download">Télécharger</a>
+    <button class="lang" type="button" aria-label="Language">EN</button>
+    <span class="themes" role="group" aria-label="Theme">
+      <button type="button" data-theme-set="phosphore" title="Phosphor" aria-label="Phosphor theme" style="--c1:#040806;--c2:#39FF6A"></button>
+      <button type="button" data-theme-set="ambre" title="Amber" aria-label="Amber theme" style="--c1:#0A0703;--c2:#FFB000"></button>
+      <button type="button" data-theme-set="papier" title="Paper" aria-label="Paper theme" style="--c1:#F4F2EC;--c2:#2F6E2A"></button>
+    </span>
+  </nav>
+</header>
+<main class="wrap fiche">
+  <p class="fil"><a href="explore.html" data-i18n="nav.explore">Explorer</a> › La Survie › Feu, Eau et Ressources</p>
+  
+  <div class="tags">
+    
+    <span class="tag off" data-i18n="tag.off">Officielle</span>
+  </div>
+  <h1>Alimenter un circuit sans le réseau</h1>
+  <p class="meta">Axe 3 · La Survie · Feu, Eau et Ressources</p>
+  <div class="bals"><div><span>Temps</span><b>Long</b></div><div><span>Contexte</span><b>Seul</b></div><div><span>Risque</span><b>Discret</b></div><div><span>Matériel</span><b>Technique</b></div></div>
+  <article class="prose"><p class="lede-f">Une seule règle tue dans ce domaine, et elle tue quelqu&#x27;un d&#x27;autre que vous : on isole avant d&#x27;injecter. Tout le reste n&#x27;est que dimensionnement.</p>
+<p>Le fonctionnement du réseau est dans <span title="TEC-RES-001">Les réseaux, de la source à la prise</span>, le raisonnement sur le courant dans <span title="TEC-ENE-002">Lire un circuit électrique</span> et <span title="TEC-ENE-003">Câbler et protéger une installation</span>.</p>
+<h2 class="step s-comp">COMPRENDRE</h2>
+<h3>La rétro-alimentation, et pourquoi c&#x27;est la première chose</h3>
+<p>Si vous injectez du courant dans une installation encore reliée au réseau, ce courant remonte : jusqu&#x27;au tableau, jusqu&#x27;au branchement, jusqu&#x27;au transformateur du quartier. <strong>Et là il fait l&#x27;inverse de ce que fait un transformateur en temps normal : il monte la tension.</strong> Quelques centaines de volts deviennent plusieurs milliers sur la ligne.</p>
+<p>Deux conséquences, et elles sont toutes les deux graves. <strong>Un agent qui travaille sur une ligne qu&#x27;il a consignée comme hors tension se fait électrocuter par votre installation.</strong> Et au retour du courant, votre source et le réseau se retrouvent en opposition : tout ce qui est branché est détruit, souvent avec un incendie.</p>
+<p><strong>C&#x27;est pour cela que l&#x27;isolement précède toujours l&#x27;alimentation.</strong> Ce n&#x27;est pas une formalité administrative, c&#x27;est le point entier.</p>
+<h3>Comment on isole correctement</h3>
+<p><strong>L&#x27;inverseur de source</strong> est un organe mécanique à deux positions exclusives : réseau, ou source de secours. Il ne peut physiquement pas être dans les deux à la fois. C&#x27;est la seule solution propre, et elle existe en version manuelle, simple et peu coûteuse.</p>
+<p><strong>Le disjoncteur de branchement ouvert</strong> est le minimum absolu si vous n&#x27;avez pas d&#x27;inverseur : on coupe l&#x27;arrivée générale, franchement, avant toute chose.</p>
+<p><strong>Et la solution qui évite tout le problème : ne rien injecter dans l&#x27;installation du tout.</strong> Une rallonge depuis le groupe ou l&#x27;onduleur jusqu&#x27;à l&#x27;appareil, directement. C&#x27;est moins confortable, c&#x27;est totalement sûr, et c&#x27;est ce qu&#x27;il faut faire tant qu&#x27;on n&#x27;a pas d&#x27;inverseur.</p>
+<h3>La terre</h3>
+<p>Une source autonome doit avoir une référence de terre, sinon les protections différentielles ne détectent rien et un défaut ne coupe pas. Beaucoup de groupes portables ont un régime particulier où les deux conducteurs sont isolés de la terre : c&#x27;est sûr pour un appareil branché directement, et ça ne l&#x27;est plus dès qu&#x27;on alimente une installation. <strong>Lisez la plaque du groupe, elle le dit.</strong></p>
+<h3>Le dimensionnement, en deux chiffres</h3>
+<p><strong>La puissance de régime</strong>, celle que l&#x27;appareil consomme en fonctionnement.</p>
+<p><strong>La puissance de démarrage</strong>, celle qu&#x27;il appelle pendant une seconde à l&#x27;allumage. Tout ce qui a un moteur — réfrigérateur, congélateur, pompe, compresseur — appelle <strong>trois à huit fois sa puissance nominale</strong> au démarrage. Un réfrigérateur de 150 W peut demander 900 W pendant une seconde.</p>
+<p>C&#x27;est la cause numéro un des pannes de groupes sous-dimensionnés, et elle ne se voit pas sur l&#x27;étiquette.</p>
+<h2 class="step s-agir">AGIR</h2>
+<p><strong>1. Faites la liste de ce qui doit vraiment être alimenté</strong>, et dans cet ordre : le froid alimentaire, l&#x27;eau si elle demande une pompe, la lumière, la communication, la recharge. Le chauffage électrique est hors de portée de toute source autonome raisonnable.</p>
+<p><strong>2. Additionnez les puissances de régime, et ajoutez la plus grosse puissance de démarrage du lot.</strong> C&#x27;est votre besoin réel.</p>
+<p><strong>3. Choisissez où vous branchez.</strong></p>
+<ul><li>Un ou deux appareils : rallonge directe depuis la source. Rien d&#x27;autre à faire.</li><li>Toute l&#x27;installation : inverseur de source, et rien d&#x27;autre.</li><li>Jamais : une prise mâle-mâle branchée dans une prise murale. Ce montage est ce qui tue les agents et ce qui brûle les maisons, et il n&#x27;a aucune excuse.</li></ul>
+<p><strong>4. Mettez le groupe dehors, toujours.</strong> Un moteur thermique produit du monoxyde de carbone, inodore, et il tue dans un garage ouvert, sous un auvent, dans une cave ventilée. Dix mètres d&#x27;une ouverture, échappement au vent. Voir <span title="URG-AIR-001">Air contaminé</span> et <span title="TEC-CON-007">La combustion et l’évacuation des fumées</span>.</p>
+<p><strong>5. Soignez les rallonges.</strong> Une section trop faible sur une grande longueur fait chuter la tension et chauffer le câble : l&#x27;appareil peine, la rallonge fond. Déroulez complètement un enrouleur avant de tirer dessus — enroulé, il chauffe comme une bobine de chauffage.</p>
+<p><strong>6. Protégez.</strong> Un fusible ou un disjoncteur au départ de la source, toujours. Une batterie de voiture qui se court-circuite fait fondre un outil en quelques secondes et démarre un incendie.</p>
+<h2 class="step s-adapt">ADAPTER</h2>
+<p><strong>Vous avez une batterie de voiture et rien d&#x27;autre.</strong> C&#x27;est déjà beaucoup. Éclairage en 12 V direct — voir <span title="SURV-LUM-001">Fabriquer une lampe</span> —, recharge d&#x27;appareils, petit ventilateur, radio. Avec un convertisseur, du 230 V pour les petites puissances. Surveillez la décharge : une batterie de démarrage descendue trop bas ne remonte pas. Voir <span title="TEC-ENE-004">Les batteries</span>.</p>
+<p><strong>Vous avez un panneau solaire.</strong> Panneau, régulateur, batterie, puis les usages. <strong>Le régulateur n&#x27;est pas optionnel</strong> : sans lui, le panneau détruit la batterie. Voir <span title="TEC-SOLR-001">Le solaire photovoltaïque, du panneau à la prise</span>.</p>
+<p><strong>Vous voulez alimenter le réfrigérateur.</strong> C&#x27;est le meilleur usage d&#x27;une source limitée, et il y a une astuce : un congélateur plein tient très longtemps fermé. Alimentez-le par périodes de quelques heures, deux fois par jour, plutôt qu&#x27;en continu — vous divisez la consommation par trois sans rien perdre.</p>
+<p><strong>Vous alimentez une pompe.</strong> Regardez la puissance de démarrage avant tout : c&#x27;est l&#x27;appareil qui fait le plus souvent caler un groupe.</p>
+<p><strong>Vous n&#x27;avez qu&#x27;un vélo, une perceuse ou un moteur.</strong> Un alternateur de voiture entraîné mécaniquement produit du courant. Le rendement humain est modeste — une centaine de watts soutenus, voir <span title="MEM-ANT-003">Les ordres de grandeur du monde actuel</span> — mais c&#x27;est suffisant pour recharger. Voir <a href="fiche-tec-ene-001.html">L’énergie électrique dans les objets</a>.</p>
+<p><strong>Vous êtes tenté de vous raccorder ailleurs qu&#x27;à votre propre installation.</strong> Deux faits, sans commentaire moral. C&#x27;est un vol, qui se constate à distance par les compteurs du poste. Et c&#x27;est, dans tous les pays où c&#x27;est pratiqué, <strong>la première cause d&#x27;électrocution et d&#x27;incendie du travail électrique informel</strong> — les raccordements sauvages tuent surtout ceux qui les font et leurs voisins de palier. Ce corpus n&#x27;en traite pas.</p>
+<p><strong>Le courant revient.</strong> Coupez votre source, basculez l&#x27;inverseur, et rebranchez progressivement. Tout rallumer d&#x27;un coup après une coupure longue fait redisjoncter, chez vous comme sur le quartier.</p></article>
+  <div class="blk"><h4>Sources</h4><div class="src">NF C 15-100 — Installations électriques à basse tension, dispositions sur les sources de remplacement</div><div class="src">Enedis — Consignes de sécurité sur le raccordement de groupes électrogènes</div><div class="src">Rapports de sécurité électrique sur les accidents de rétro-alimentation</div><div class="src">Documentation constructeurs d&#x27;inverseurs de source et d&#x27;onduleurs</div></div>
+  
+  <div class="blk cta">
+    <p data-i18n="fiche.cta"><strong>Cette fiche fait partie de Phenix.</strong> L'application contient tout le corpus, les cartes et la bibliothèque, et fonctionne hors ligne.</p>
+    <p><a class="btn primary" href="download.html" data-i18n="home.b2">Télécharger Phenix Base</a>
+       <a class="btn" href="lab.html" data-i18n="sup.btn">Proposer une fiche</a></p>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <p data-i18n="foot.motto"><strong>Phenix</strong> — le savoir est votre seule immunité.</p>
+    <p class="small">
+      <a href="explore.html" data-i18n="nav.explore">Explorer</a> ·
+      <a href="devices.html" data-i18n="nav.devices">Appareils</a> ·
+      <a href="lab.html" data-i18n="nav.contribute">Contribuer</a> ·
+      <a href="download.html" data-i18n="nav.download">Télécharger</a> ·
+      <a href="soutenir.html" data-i18n="nav.support">Soutenir</a> ·
+      <a href="https://www.instagram.com/phenixprjct/" rel="noopener">Instagram</a> ·
+      <a href="https://www.reddit.com/r/PhenixProject/" rel="noopener">Reddit</a> ·
+      <a href="https://github.com/anthrophobicc/PhenixProject" rel="noopener">GitHub</a>
+    </p>
+    <p class="small dim" data-i18n="foot.licence">Logiciel sous licence MIT · fiches sous licence CC BY-SA 4.0</p>
+  </div>
+</footer>
+<script src="i18n.js"></script>
+
+</body>
+</html>
