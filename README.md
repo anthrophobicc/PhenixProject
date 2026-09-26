@@ -108,8 +108,10 @@ Les fiches **officielles** sont livrées avec le logiciel et relues avant intég
 - Cartes hors ligne par zone, avec calques de repères séparés
 - Fusion de cartes et de calques
 - Bibliothèque d'ouvrages complets importables
-- Modules importables et exportables
-- Quatre thèmes, deux dispositions
+- Quatre modules intégrés : **Inventaire** (cases, lieux, alertes de péremption et de stock bas, export CSV), **Notes** (reliées aux fiches par `[[ID]]`), **Calendrier** (événements, répétition annuelle) et **Convertisseur** (unités, températures, batteries et solaire). Leurs données voyagent avec la sauvegarde.
+- Modules de la communauté importables et exportables
+- Huit thèmes, deux dispositions (colonnes, ou liste en haut et lecture centrée)
+- Sur téléphone : menu déroulant des vues, panneau des cartes rangé dans un tiroir, bouton de retour au corpus pendant la lecture
 - Import et export en `.md` et `.json`
 
 ---

@@ -529,6 +529,155 @@ body.fs .sheet{padding-top:26px}
   font-family:ui-sans-serif,system-ui,sans-serif;font-size:12px;color:var(--dim);
   white-space:nowrap;flex:0 0 auto;
 }
+/* ---------- MENU DES VUES (téléphone) ---------- */
+.vuemenu{display:none;position:relative;margin-left:4px}
+.vuebtn{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--acc);border-color:var(--acc-mid);padding:8px 13px}
+.vuebtn .chev{font-size:11px;opacity:.8;transition:transform .15s}
+.vuemenu.ouvert .vuebtn .chev{transform:rotate(180deg)}
+.vueliste{display:none;position:absolute;top:calc(100% + 8px);left:0;min-width:230px;z-index:3000;
+  background:var(--surface);border:1px solid var(--hair2);border-radius:12px;padding:6px;box-shadow:0 18px 44px rgba(0,0,0,.35)}
+.vuemenu.ouvert .vueliste{display:block}
+.vueitem{display:block;width:100%;text-align:left;padding:12px 14px;border-radius:8px;font-size:15px;color:var(--txt);font-family:ui-sans-serif,system-ui,sans-serif}
+.vueitem:hover{background:var(--sunk)}
+.vueitem.on{color:var(--acc);background:var(--acc-soft);font-weight:600}
+@media (max-width:760px){.tabs{display:none}.vuemenu{display:block}}
+
+/* ---------- CARTES : tout le panneau dans un tiroir (téléphone) ---------- */
+.mmenu{display:none}
+@media (max-width:1040px){
+  .mapside{max-height:none;position:relative;z-index:1100;flex:0 0 auto}
+  .mtabs{padding:8px 10px 6px;align-items:center}
+  .mmenu{display:flex;flex:0 0 auto;align-items:center;gap:7px;padding:7px 12px;border:1px solid var(--hair2);border-radius:8px;
+    color:var(--acc);font-size:12.5px;font-weight:600;font-family:ui-sans-serif,system-ui,sans-serif}
+  .mmenu .burger{display:grid;gap:3px}.mmenu .burger i{display:block;width:15px;height:2px;background:currentColor;border-radius:2px}
+  .mapside.ouvert .mmenu{background:var(--acc);color:var(--inv);border-color:var(--acc)}
+  .mpanel{flex:none}
+  .mapside:not(.ouvert) .mtool > :not(#placeQ):not(#calqueSel){display:none}
+  .mapside:not(.ouvert) .mlist,.mapside:not(.ouvert) .mfoot,.mapside:not(.ouvert) .mcats{display:none}
+  .mapside:not(.ouvert) .mtool{padding-bottom:10px}
+  .mapside:not(.ouvert) #placeQ,.mapside:not(.ouvert) #calqueSel{margin-bottom:0}
+  .mapside.ouvert .mpanel.on{position:absolute;left:0;right:0;top:100%;max-height:66vh;overflow-y:auto;-webkit-overflow-scrolling:touch;
+    background:var(--bg);border-bottom:1px solid var(--hair2);box-shadow:0 22px 44px rgba(0,0,0,.35);padding-top:10px}
+  .mapside.ouvert .mlist{overflow:visible;flex:none;padding-bottom:6px}
+  .mapside.ouvert .mfoot{margin-top:0}
+}
+
+/* ---------- LECTURE : retour au corpus ---------- */
+.trail .tcorpus{color:var(--acc);font-weight:600;border:1px solid var(--acc-mid);padding:5px 12px;font-size:13px}
+.trail .tcorpus:hover{background:var(--acc-soft);color:var(--acc)}
+
+/* ---------- MODULES ---------- */
+.mod-tete{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+.mod-tete h1{margin:0!important}
+.mod-retour{color:var(--acc);border-color:var(--acc-mid);font-weight:600}
+.mod-cartes{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px;margin-top:20px}
+.mod-carte{display:flex;gap:14px;align-items:flex-start;text-align:left;border:1px solid var(--hair2);border-radius:12px;background:var(--surface);padding:16px;cursor:pointer;transition:border-color .13s,background .13s}
+.mod-carte:hover{border-color:var(--acc);background:var(--acc-soft)}
+.mod-ico{flex:0 0 46px;height:46px;border-radius:11px;display:grid;place-items:center;color:var(--acc);background:var(--acc-soft);border:1px solid var(--acc-mid)}
+.mod-ico svg{width:26px;height:26px}
+.mod-carte h4{margin:0 0 4px;font-size:15.5px;font-family:ui-sans-serif,system-ui,sans-serif;font-weight:650;color:var(--txt)}
+.mod-carte p{margin:0;font-size:12.5px;color:var(--dim);line-height:1.5;font-family:ui-sans-serif,system-ui,sans-serif}
+.mod-carte .mod-resume{margin-top:8px;font-size:12px;color:var(--acc);font-weight:600;font-family:ui-sans-serif,system-ui,sans-serif}
+.mod-barre{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:16px 0 12px}
+.mod-barre input,.mod-barre select{border:1px solid var(--hair);border-radius:8px;background:var(--surface);padding:9px 11px;font-size:13.5px;color:var(--txt)}
+.mod-barre input[type=search]{flex:1 1 180px;min-width:0}
+.mod-onglets{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;margin-top:10px;-webkit-overflow-scrolling:touch}
+.mod-onglets .seg{white-space:nowrap;padding:7px 14px;font-size:13px}
+.mod-alertes{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.mod-alerte{border-radius:20px;padding:5px 12px;font-size:12px;font-weight:600;border:1px solid;font-family:ui-sans-serif,system-ui,sans-serif}
+.mod-alerte.perime{color:var(--alert);border-color:var(--alert)}
+.mod-alerte.bientot{color:var(--warn);border-color:var(--warn)}
+.mod-alerte.bas{color:var(--bleu);border-color:var(--bleu)}
+.mod-alerte.on{background:var(--sunk)}
+.mod-vide{padding:26px 4px;color:var(--dim);font-size:13.5px;line-height:1.6;font-family:ui-sans-serif,system-ui,sans-serif}
+
+/* Inventaire : une grille de cases, comme un inventaire de jeu, en plus sobre */
+.inv-grille{display:grid;grid-template-columns:repeat(9,1fr);gap:6px;padding:8px;border-radius:10px;background:var(--sunk);border:1px solid var(--hair2)}
+@media (max-width:600px){.inv-grille{grid-template-columns:repeat(5,1fr)}}
+.inv-case{position:relative;aspect-ratio:1;border-radius:6px;background:var(--surface);display:grid;place-items:center;color:var(--acc);cursor:pointer;
+  box-shadow:inset 2px 2px 0 rgba(0,0,0,.28),inset -2px -2px 0 rgba(255,255,255,.07);border:1px solid var(--hair);transition:border-color .1s,transform .1s}
+.inv-case:hover{border-color:var(--acc)}
+.inv-case:active{transform:scale(.96)}
+.inv-case svg{width:52%;height:52%}
+.inv-case .q{position:absolute;right:5px;bottom:2px;font:700 14px/1 ui-monospace,Menlo,monospace;color:var(--txt);text-shadow:1px 1px 0 var(--bg),-1px -1px 0 var(--bg)}
+.inv-case .pt{position:absolute;top:5px;right:5px;width:8px;height:8px;border-radius:50%}
+.inv-case .pt.perime{background:var(--alert)}.inv-case .pt.bientot{background:var(--warn)}.inv-case .pt.bas{background:var(--bleu)}
+.inv-case.vide{cursor:default;color:var(--dim)}
+.inv-case.vide:hover{border-color:var(--hair)}
+.inv-case.plus{cursor:pointer;font-size:26px;font-weight:300;color:var(--acc)}
+.inv-case.plus:hover{border-color:var(--acc)}
+.inv-nom{margin-top:10px;font-size:12px;color:var(--dim);font-family:ui-sans-serif,system-ui,sans-serif;min-height:18px}
+.inv-liste{border:1px solid var(--hair);border-radius:10px;overflow:hidden}
+.inv-ligne{display:flex;align-items:center;gap:12px;padding:11px 13px;border-bottom:1px solid var(--hair);cursor:pointer;font-family:ui-sans-serif,system-ui,sans-serif}
+.inv-ligne:last-child{border-bottom:0}
+.inv-ligne:hover{background:var(--sunk)}
+.inv-ligne .ic{flex:0 0 34px;height:34px;border-radius:8px;display:grid;place-items:center;color:var(--acc);background:var(--acc-soft)}
+.inv-ligne .ic svg{width:20px;height:20px}
+.inv-ligne .tx{flex:1;min-width:0}
+.inv-ligne .tt{font-size:14px;font-weight:600;color:var(--txt);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.inv-ligne .ds{font-size:12px;color:var(--dim)}
+.inv-ligne .qt{font:700 15px ui-monospace,Menlo,monospace;color:var(--txt)}
+.inv-ligne .ds .perime{color:var(--alert)}.inv-ligne .ds .bientot{color:var(--warn)}.inv-ligne .ds .bas{color:var(--bleu)}
+.inv-qte{display:flex;gap:6px;align-items:center}
+.inv-qte input{flex:1;min-width:0}
+.inv-qte .btn{min-width:44px;font-size:18px;padding:6px 0}
+
+/* Notes */
+.note-carte{border:1px solid var(--hair);border-radius:10px;background:var(--surface);padding:13px 15px;margin-bottom:9px;cursor:pointer;font-family:ui-sans-serif,system-ui,sans-serif}
+.note-carte:hover{border-color:var(--acc)}
+.note-carte .tt{font-size:15px;font-weight:650;color:var(--txt);display:flex;gap:8px;align-items:center}
+.note-carte .ex{font-size:13px;color:var(--dim);margin-top:4px;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.note-carte .dt{font-size:11.5px;color:var(--dim);margin-top:6px;opacity:.8}
+.note-epingle{color:var(--acc);font-size:12px}
+.note-titre{width:100%;border:0;border-bottom:1px solid var(--hair);background:transparent;font-size:22px;font-weight:700;padding:8px 0;margin:10px 0 12px;color:var(--txt);font-family:ui-sans-serif,system-ui,sans-serif}
+.note-texte{width:100%;min-height:50vh;border:1px solid var(--hair);border-radius:10px;background:var(--surface);padding:14px;font-size:15px;line-height:1.6;color:var(--txt);resize:vertical;font-family:ui-sans-serif,system-ui,sans-serif}
+.note-apercu{border:1px solid var(--hair);border-radius:10px;padding:6px 18px;min-height:30vh}
+
+/* Calendrier */
+.cal-tete{display:flex;align-items:center;gap:8px;margin:16px 0 10px}
+.cal-tete .mois{flex:1;font-size:18px;font-weight:650;text-transform:capitalize;font-family:ui-sans-serif,system-ui,sans-serif;color:var(--txt)}
+.cal-grille{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.cal-jsem{text-align:center;font-size:11px;letter-spacing:.08em;color:var(--dim);padding:4px 0;font-family:ui-monospace,Menlo,monospace}
+.cal-jour{aspect-ratio:1;border-radius:9px;border:1px solid var(--hair);background:var(--surface);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
+  cursor:pointer;font-size:14px;color:var(--txt);font-family:ui-sans-serif,system-ui,sans-serif}
+.cal-jour.hors{opacity:.35}
+.cal-jour.auj{border-color:var(--acc);color:var(--acc);font-weight:700}
+.cal-jour.sel{background:var(--acc);color:var(--inv);border-color:var(--acc)}
+.cal-points{display:flex;gap:3px;height:6px}
+.cal-points i{width:6px;height:6px;border-radius:50%;display:block}
+.cal-evt{display:flex;align-items:center;gap:11px;padding:11px 13px;border:1px solid var(--hair);border-radius:10px;background:var(--surface);margin-bottom:8px;cursor:pointer;font-family:ui-sans-serif,system-ui,sans-serif}
+.cal-evt:hover{border-color:var(--acc)}
+.cal-evt .pt{flex:0 0 10px;height:10px;border-radius:50%}
+.cal-evt .tt{font-size:14px;font-weight:600;color:var(--txt)}
+.cal-evt .ds{font-size:12px;color:var(--dim)}
+.cal-sec{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);font-weight:600;margin:20px 0 10px;font-family:ui-sans-serif,system-ui,sans-serif}
+
+/* Convertisseur */
+.conv-entree{display:flex;gap:8px;margin:14px 0}
+.conv-entree input{flex:1;min-width:0;font-size:22px;font-weight:600;border:1px solid var(--acc-mid);border-radius:10px;background:var(--surface);padding:11px 13px;color:var(--txt)}
+.conv-entree select{flex:0 0 auto;max-width:48%;border:1px solid var(--hair2);border-radius:10px;background:var(--surface);padding:10px;font-size:14px;color:var(--txt)}
+.conv-res{border:1px solid var(--hair);border-radius:10px;overflow:hidden}
+.conv-ligne{display:flex;justify-content:space-between;gap:12px;padding:11px 14px;border-bottom:1px solid var(--hair);font-family:ui-sans-serif,system-ui,sans-serif}
+.conv-ligne:last-child{border-bottom:0}
+.conv-ligne .u{color:var(--dim);font-size:13px}
+.conv-ligne .v{font:600 15px ui-monospace,Menlo,monospace;color:var(--txt);text-align:right;word-break:break-all}
+.conv-ligne.src{background:var(--acc-soft)}.conv-ligne.src .v{color:var(--acc)}
+.conv-champs{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin:14px 0}
+.conv-champs label{display:block;font-size:12px;color:var(--dim);margin-bottom:5px;font-family:ui-sans-serif,system-ui,sans-serif}
+.conv-champs input{width:100%;border:1px solid var(--hair2);border-radius:9px;background:var(--surface);padding:9px 11px;font-size:16px;color:var(--txt)}
+@media (max-width:600px){.docwrap{padding:26px 16px 90px}}
+.view,.docview,.mod-onglets{min-width:0}
+/* Disposition « Centré » : la liste en haut sur plusieurs colonnes, la lecture centrée en dessous, les axes derrière le bouton. */
+@media (min-width:1041px){
+  body.centre #v-fiches{flex-direction:column}
+  body.centre .rail{display:none}
+  body.centre .rail.show{display:block;position:absolute;top:52px;bottom:0;left:0;z-index:60;box-shadow:var(--shadow)}
+  body.centre .listcol{width:100%;flex:0 0 auto;max-height:36vh;border-right:0;border-bottom:1px solid var(--hair)}
+  body.centre .flist{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:0 12px;align-content:start}
+  body.centre .flist > .fhead,body.centre .flist > .void{grid-column:1/-1}
+  body.centre .read{flex:1}
+}
+
 @media (max-width:600px){.parcd{display:none}}
 @media (max-width:600px){
   .topbar{padding:0 8px;gap:4px}
@@ -776,6 +925,7 @@ body.fs .sheet{padding-top:26px}
 <div class="screen" id="scr-app">
   <header class="topbar" id="topbar">
     <div class="brandbtn" id="homeBtn"><div class="mark"></div><span>PHENIX</span></div>
+    <div class="vuemenu" id="vueMenu"><button class="btn vuebtn" id="vueBtn" type="button"><span id="vueNom">Fiches</span><span class="chev">▾</span></button><div class="vueliste" id="vueListe"></div></div>
     <nav class="tabs">
       <button class="tab on" data-view="fiches" data-i18n>Fiches</button>
       <button class="tab" data-view="cartes" data-i18n>Cartes</button>
@@ -841,6 +991,7 @@ body.fs .sheet{padding-top:26px}
           <div class="mtabs">
             <button class="mtab on" data-m="cartes" data-i18n>Calque carte</button>
             <button class="mtab" data-m="reperes" data-i18n>Calque repères</button>
+            <button class="mmenu" id="mapMenu" type="button" aria-label="Menu"><span class="burger"><i></i><i></i><i></i></span></button>
           </div>
 
           <div class="mpanel on" id="mp-cartes">
@@ -868,9 +1019,9 @@ body.fs .sheet{padding-top:26px}
                 <button class="btn" style="flex:1" id="newCalque" data-i18n>+ Calque</button>
                 <button class="btn" style="flex:1" id="renCalque" data-i18n>Renommer</button>
               </div>
-              <div class="hint" style="margin-top:7px">Cliquez sur la carte pour poser un repère. Les coordonnées sont absolues : un calque fonctionne sur n'importe quelle carte.</div>
+              <div class="hint" style="margin-top:7px" data-i18n>Cliquez sur la carte pour poser un repère. Les coordonnées sont absolues : un calque fonctionne sur n'importe quelle carte.</div>
             </div>
-            <div style="border-bottom:1px solid var(--line);padding:8px 0">
+            <div class="mcats" style="border-bottom:1px solid var(--line);padding:8px 0">
               <div style="padding:0 13px 5px;font-family:ui-monospace,monospace;font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--dim)" data-i18n>Catégories affichées</div>
               <div id="catList"></div>
             </div>
@@ -6747,6 +6898,8 @@ Un contact dégradé n'est pas une coupure franche : c'est une résistance qui a
 
 **Vous n'avez pas de ruban isolant.** Une gaine thermorétractable est meilleure ; à défaut, du ruban adhésif épais, du caoutchouc de chambre à air découpé en bande et étiré en spires serrées, ou une immersion dans une matière plastique fondue.
 
+**Vous n'avez aucun outil.** Grattez avec ce que vous avez : une clé de maison, le bord d'une pièce, une pierre, du sable sur un chiffon. Une cosse de batterie desserrée s'enfonce sur une borne conique : poussez-la à fond, tapez-la avec une pierre, puis tournez-la pour la bloquer. En dernier recours, une bande d'aluminium (papier de chewing-gum, canette découpée) glissée entre la cosse et la borne rattrape le jeu, le temps de repartir. **Ne reliez jamais les deux bornes avec un objet en métal** : une batterie de voiture débite des centaines d'ampères et le métal devient brûlant.
+
 **Vous n'avez rien pour souder.** Une jonction mécanique bien faite fonctionne des années. Ce qui compte est le serrage, la surface de contact et la protection contre l'humidité, pas la soudure elle-même.
 
 **Les fils ne sont pas du même métal.** Cuivre et aluminium en contact direct se corrodent — voir [[TEC-COR-001]]. Utilisez un connecteur prévu, ou intercalez une pièce adaptée.
@@ -6754,7 +6907,6 @@ Un contact dégradé n'est pas une coupure franche : c'est une résistance qui a
 **C'est un câble d'un appareil que vous voulez alimenter autrement.** Vérifiez tension, polarité et puissance avant tout branchement. Une inversion de polarité en courant continu détruit instantanément — voir [[TEC-ENE-001]] et [[TEC-ENE-002]].
 
 **C'est sur un véhicule.** Les câbles y sont abondants, souples et de sections variées : c'est le meilleur gisement de matière première — voir [[SURV-REC-003]].
-
 ---
 id: SURV-RES-001
 titre: Se nourrir en milieu naturel
@@ -16278,6 +16430,8 @@ A degraded contact isn't a clean break: it's resistance appearing. It heats up, 
 
 **You have no electrical tape.** Heat-shrink tubing is better; failing that, thick adhesive tape, inner-tube rubber cut into a strip and stretched on in tight turns, or dipping the joint in melted plastic.
 
+**You have no tools at all.** Scrape with whatever you have: a house key, the edge of a coin, a stone, sand on a rag. A loose battery clamp sits on a tapered post: push it all the way down, tap it with a stone, then twist it to lock it. As a last resort, a strip of aluminium (a gum wrapper, a cut-up can) slipped between the clamp and the post takes up the slack long enough to get going. **Never bridge the two terminals with anything metal**: a car battery can push hundreds of amps and the metal turns red-hot.
+
 **You have nothing to solder with.** A well-made mechanical joint works for years. What counts is the tightness, the contact surface and protection from moisture, not the solder itself.
 
 **The wires aren't the same metal.** Copper and aluminum in direct contact corrode — see [[TEC-COR-001]]. Use a connector designed for it, or put a suitable part between them.
@@ -17994,7 +18148,8 @@ function etatLeger(){
     playlists:PLAYLISTS, favoris:[...FAVORIS],
     calques:CALQUES, ouvrages:OUVRAGES, modules:MODULES, meta:META,
     axesPerso:AXES_PERSO, catsPerso:CATS_PERSO,
-    theme:document.body.dataset.theme, layout, perso:THEME_PERSO, lang:LANG};
+    theme:document.body.dataset.theme, layout, perso:THEME_PERSO, lang:LANG,
+    notes:NOTES, inventaire:INVENTAIRE, agenda:AGENDA};
 }
 function etatCartes(){ return {v:2, cartes:CARTES}; }
 
@@ -18009,6 +18164,9 @@ function appliquerEtat(j){
   if(j.calques&&j.calques.length){CALQUES=j.calques;curCalque=0;}
   if(j.ouvrages)OUVRAGES=j.ouvrages;
   if(j.modules)MODULES=j.modules;
+  if(j.notes)NOTES=j.notes;
+  if(j.inventaire)INVENTAIRE=j.inventaire;
+  if(j.agenda)AGENDA=j.agenda;
   if(j.meta)META={...META,...j.meta};
   if(j.axesPerso)AXES_PERSO=j.axesPerso;
   if(j.catsPerso)CATS_PERSO=j.catsPerso;
@@ -18684,8 +18842,7 @@ function drawTrail(){
   const t=$("trail");
   if(!current||TRAIL.length<1){t.className="trail hide";t.innerHTML="";return;}
   t.className="trail";
-  const back=TRAIL.length>1?`<button class="tback" id="trBack">← Retour</button>`:"";
-  t.innerHTML=back+`<button class="tcrumb" id="trHome">Corpus</button>`+
+  t.innerHTML=`<button class="tback tcorpus" id="trHome">← Corpus</button>`+
     TRAIL.map((id,i)=>{
       const f=FICHES.find(x=>x.id===id);if(!f)return "";
       const here=i===TRAIL.length-1;
@@ -19074,7 +19231,7 @@ const StoredLayer=L.GridLayer.extend({
     const T=this.carte.tiles;
     const fin=()=>fini&&fini(null,cv);
 
-    setTimeout(()=>{
+    setTimeout(()=>{try{
       // 1. tuile exacte
       const exact=T[co.z+"/"+co.x+"/"+co.y];
       if(exact){imgTuile(exact,im=>{ctx.drawImage(im,0,0,taille.x,taille.y);fin();},fin);return;}
@@ -19083,9 +19240,10 @@ const StoredLayer=L.GridLayer.extend({
       let x=co.x,y=co.y;
       for(let z=co.z-1;z>=0;z--){
         x=Math.floor(x/2);y=Math.floor(y/2);
+        const f=Math.pow(2,co.z-z);          // combien de tuiles par côté
+        if(f>512)break;                       // au-delà, l'agrandissement n'a plus de sens
         const src=T[z+"/"+x+"/"+y];
         if(src){
-          const f=Math.pow(2,co.z-z);        // combien de tuiles par côté
           const pas=256/f;                    // taille du morceau dans la source
           const sx=(co.x-x*f)*pas, sy=(co.y-y*f)*pas;
           imgTuile(src,im=>{
@@ -19094,7 +19252,6 @@ const StoredLayer=L.GridLayer.extend({
           },fin);
           return;
         }
-        if(f>512)break;                       // au-delà, l'agrandissement n'a plus de sens
       }
 
       // 3. des descendants plus fins : on les recompose en mosaïque
@@ -19119,7 +19276,7 @@ const StoredLayer=L.GridLayer.extend({
 
       // 4. rien à cet endroit
       hachures(ctx,taille.x,taille.y);fin();
-    },0);
+    }catch(e){hachures(ctx,taille.x,taille.y);fin();}},0);
 
     return cv;
   }
@@ -19161,7 +19318,7 @@ function openCarte(i){
   setTimeout(()=>{map.invalidateSize();if(storeLayer)storeLayer.redraw();},800);
   drawCartes();
   const zones=(c.zones&&c.zones.length)||1;
-  toast(`Carte « ${c.nom} » chargée — si l'écran est noir, dézoomez ou zoomez légèrement`+(zones>1?` — ${zones} zones`:""));
+  toast(`Carte « ${c.nom} » chargée`+(zones>1?` — ${zones} zones`:""));
 }
 function drawCartes(){
   const h=$("carteList");h.innerHTML="";
@@ -19501,47 +19658,6 @@ function drawOuvrage(){
   });
 }
 
-function drawModules(){
-  const m=[
-    {n:"Notes",d:"Journal de bord local, séparé du corpus. Vous écrivez par-dessus, jamais dedans.",s:"soon"},
-    {n:"Inventaire",d:"Ce que vous possédez, où, en quelle quantité. Se croise avec la balise Matériel.",s:"soon"},
-    {n:"Calendrier",d:"Saisons, semis, relevés, échéances. Sans réseau.",s:"soon"},
-    {n:"Convertisseur",d:"Unités, dosages, énergie, rendements.",s:"soon"},
-    {n:"Assistant local",d:"Routage vers les fiches et composition de listes de lecture selon la situation décrite. Il indexe, il n'invente pas.",s:"soon"},
-    {n:"Liaison radio",d:"Échange de fiches et de calques entre terminaux, sans infrastructure.",s:"soon"}
-  ];
-  $("modWrap").innerHTML=`<div class="kick">Modules</div><h1>Extensions</h1>
-  <p style="color:var(--dim);max-width:62ch">Chaque module est indépendant. Le retrait d'un module ne casse jamais la consultation du corpus. C'est la règle qui gouverne toute l'architecture, et elle ne se négocie pas.</p>
-  <div style="margin:18px 0;display:flex;gap:7px;flex-wrap:wrap">
-    <button class="btn primary" id="modImp">${tr("Installer un module")}</button>
-    <input type="file" id="modImpF" accept=".json,.phenixmod" multiple hidden>
-    <button class="btn" id="modExp">${tr("Exporter les modules installés")}</button>
-  </div>
-  ${MODULES.length?`<div class="kick" style="margin-top:8px">${tr("Installés")}</div><div class="cardgrid">${MODULES.map((x,i)=>`
-    <div class="gcard"><h4>${esc(x.nom)}</h4><p>${esc(x.description||"—")}</p>
-    <div class="st avail">${esc(x.version||"communauté")}</div>
-    <button class="btn danger" style="margin-top:10px" data-mdel="${i}">Désinstaller</button></div>`).join("")}</div>`:""}
-  <div class="kick" style="margin-top:24px">Officiels</div>
-  <div class="cardgrid">${m.map(x=>`<div class="gcard"><h4>${x.n}</h4><p>${x.d}</p><div class="st ${x.s}">${x.s==="avail"?"Disponible":"À venir"}</div></div>`).join("")}</div>`;
-  $("modImp").onclick=()=>$("modImpF").click();
-  $("modImpF").onchange=e=>{
-    const arr=[...e.target.files];if(!arr.length)return;let d=0;
-    arr.forEach(file=>{const r=new FileReader();
-      r.onload=()=>{try{const j=JSON.parse(r.result);
-        if(j.type==="phenix-module"&&j.nom)MODULES.push(j);
-        else if(j.modules)MODULES=MODULES.concat(j.modules);
-        else toast("Fichier non reconnu");}catch(x){toast(tr("Fichier illisible"));}
-        if(++d===arr.length){save();drawModules();toast("Module(s) installé(s)");}};
-      r.readAsText(file);});
-  };
-  $("modExp").onclick=()=>{
-    if(!MODULES.length){toast(tr("Aucun module installé"));return;}
-    dl(JSON.stringify({type:"phenix-modules",v:1,modules:MODULES}),"modules-phenix.json","application/json");
-    toast(tr("Modules exportés"));
-  };
-  $("modWrap").querySelectorAll("[data-mdel]").forEach(b=>b.onclick=()=>{
-    if(confirm("Désinstaller ce module ?")){MODULES.splice(+b.dataset.mdel,1);save();drawModules();}});
-}
 function drawDoc(){
   $("docWrap").innerHTML=`<div class="kick">${tr("Documentation")}</div><h1>Écrire une fiche</h1><div class="prose">
   <p class="lede">Une fiche Phenix est un fichier texte ordinaire. Il s'ouvre partout, aujourd'hui et dans trente ans.</p>
@@ -19693,7 +19809,7 @@ function drawParam(){
   $("expAll").onclick=()=>{
     dl(JSON.stringify({type:"phenix-sauvegarde",v:1,fiches:FICHES.filter(f=>f.origine!=="officielle"),
       playlists:PLAYLISTS,cartes:CARTES,calques:CALQUES,favoris:[...FAVORIS],
-      modules:MODULES,ouvrages:OUVRAGES,meta:META,axesPerso:AXES_PERSO,catsPerso:CATS_PERSO,
+      modules:MODULES,notes:NOTES,inventaire:INVENTAIRE,agenda:AGENDA,ouvrages:OUVRAGES,meta:META,axesPerso:AXES_PERSO,catsPerso:CATS_PERSO,
       theme:document.body.dataset.theme,layout},null,2),
       "sauvegarde-phenix.json","application/json");
     toast(tr("Sauvegarde exportée"));
@@ -19707,6 +19823,9 @@ function drawParam(){
       if(j.calques){CALQUES=j.calques;curCalque=0;}
       if(j.favoris)FAVORIS=new Set(j.favoris);
       if(j.modules)MODULES=j.modules;
+      if(j.notes)NOTES=j.notes;
+      if(j.inventaire)INVENTAIRE=j.inventaire;
+      if(j.agenda)AGENDA=j.agenda;
       if(j.ouvrages)OUVRAGES=j.ouvrages;
       if(j.theme)setTheme(j.theme);
       if(j.layout)setLayout(j.layout);
@@ -19889,7 +20008,9 @@ function reinitPerso(){
   document.body.style.fontFamily="";
   const st=$("persoFont");if(st)st.textContent="";
 }
-function setLayout(id){layout=id;save();document.body.classList.toggle("centre",id==="centre");if(map)setTimeout(()=>map.invalidateSize(),80);}
+// Le bouton Axes apparaît quand la colonne des axes est masquée : petit écran, ou disposition centrée.
+function majRailBtn(){const b=document.getElementById("railBtn");if(b)b.style.display=(innerWidth<=1000||layout==="centre")?"":"none";}
+function setLayout(id){layout=id;save();document.body.classList.toggle("centre",id==="centre");majRailBtn();$("rail").classList.remove("show");if(map)setTimeout(()=>map.invalidateSize(),80);}
 function drawThemePick(){
   const h=$("themePick");h.innerHTML="";
   THEMES.forEach(t=>{const b=document.createElement("button");
@@ -19946,6 +20067,8 @@ function switchView(v){
   if(v==="modules")drawModules();
   if(v==="doc")drawDoc();
   if(v==="param")drawParam();
+  majVueMenu();
+  if(v!=="cartes")fermerTiroirCartes();
 }
 document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>switchView(t.dataset.view));
 $("q").addEventListener("input",e=>{sel.q=e.target.value;drawList();});
@@ -19967,7 +20090,451 @@ document.addEventListener("keydown",e=>{
   }
 });
 $("mask").onclick=e=>{if(e.target.id==="mask")$("mask").classList.remove("on");};
-addEventListener("resize",()=>{$("railBtn").style.display=innerWidth<=1000?"":"none";if(map)map.invalidateSize();});
+addEventListener("resize",()=>{majRailBtn();if(map)map.invalidateSize();});
+
+// Traductions anglaises des modules officiels, de la navigation sur téléphone et du retour au corpus.
+Object.assign(EN,{
+"Modules":"Modules","Chaque module est indépendant. Le retrait d'un module ne casse jamais la consultation du corpus.":"Each module is independent. Removing one never breaks reading the library.",
+"À venir":"Coming soon","Modules de la communauté":"Community modules","Installer un module":"Install a module","Exporter les modules installés":"Export installed modules",
+"communauté":"community","Désinstaller":"Uninstall","Désinstaller ce module ?":"Uninstall this module?","Fichier non reconnu":"File not recognised","Fichier illisible":"Unreadable file",
+"Module(s) installé(s)":"Module(s) installed","Aucun module installé":"No module installed","Modules exportés":"Modules exported",
+"objets":"items","objet":"item","alertes":"alerts","alerte":"alert","notes":"notes","note":"note","Prochain :":"Next:","Aucun événement":"No events","catégories":"categories",
+"Inventaire":"Inventory","Ce que vous avez, où, combien, jusqu'à quand. Alertes de péremption et de stock bas.":"What you have, where, how many, until when. Expiry and low-stock alerts.",
+"Notes":"Notes","Journal de bord local, séparé du corpus. Reliez vos notes aux fiches avec [[ID]].":"A local logbook, separate from the library. Link your notes to sheets with [[ID]].",
+"Calendrier":"Calendar","Semis, récoltes, relevés, échéances, rappels. Sans réseau.":"Sowing, harvests, readings, deadlines, reminders. No network needed.",
+"Convertisseur":"Converter","Longueurs, masses, volumes, températures, pressions, énergie et batteries.":"Lengths, masses, volumes, temperatures, pressures, energy and batteries.",
+"Assistant local":"Local assistant","Routage vers les fiches et composition de listes de lecture selon la situation décrite. Il indexe, il n'invente pas.":"Routes you to the right sheets and builds reading lists for the situation you describe. It indexes, it doesn't invent.",
+"Liaison radio":"Radio link","Échange de fiches et de calques entre terminaux, sans infrastructure.":"Exchanges sheets and layers between devices, with no infrastructure.",
+"Tout":"All","Lieux…":"Places…","Chercher un objet…":"Search items…","Toutes catégories":"All categories","Tri : nom":"Sort: name","Tri : quantité":"Sort: quantity","Tri : péremption":"Sort: expiry",
+"Liste":"List","Grille":"Grid","Objet":"Item","Ajouter":"Add","Touchez une case pour voir ou modifier l'objet.":"Tap a slot to see or edit the item.",
+"Inventaire vide : ajoutez votre premier objet.":"Empty inventory: add your first item.","Rien ici pour l'instant.":"Nothing here yet.","Exporter en CSV":"Export as CSV","Inventaire exporté":"Inventory exported",
+"Nouvel objet":"New item","Nom":"Name","ex : bouteilles d'eau 1,5 L":"e.g. 1.5 L water bottles","Catégorie":"Category","Quantité":"Quantity","unité":"unit","Lieu":"Place",
+"Péremption":"Expiry date","Alerte quand il en reste":"Alert when down to","pas d'alerte":"no alert","Note":"Note","Supprimer":"Delete","Annuler":"Cancel","Enregistrer":"Save",
+"Supprimer cet objet ?":"Delete this item?","Objet ajouté":"Item added","Objet enregistré":"Item saved","Lieux":"Places",
+"Un lieu, c'est un sac, une pièce, une voiture, une cache. Les objets d'un lieu supprimé passent dans le premier lieu.":"A place is a bag, a room, a car, a cache. Items from a deleted place move to the first one.",
+"Nouveau lieu":"New place","Terminé":"Done",
+"Eau":"Water","Nourriture":"Food","Soins":"First aid","Outils":"Tools","Énergie":"Energy","Lumière":"Light","Feu":"Fire","Communication":"Communication","Vêtements":"Clothing","Documents":"Documents","Divers":"Misc",
+"Périmé":"Expired","Périme bientôt":"Expires soon","Stock bas":"Low stock",
+"Chercher dans les notes…":"Search notes…","Aucune note ne correspond.":"No note matches.",
+"Aucune note. Un relevé, une idée, un numéro utile : tout ce qui n'est pas une fiche va ici.":"No notes yet. A reading, an idea, a useful number: anything that isn't a sheet goes here.",
+"Épinglée":"Pinned","Épingler":"Pin","Titre":"Title","Écrivez ici. [[URG-EAU-001]] crée un lien vers une fiche.":"Write here. [[URG-EAU-001]] links to a sheet.",
+"Enregistré automatiquement":"Saved automatically","Supprimer cette note ?":"Delete this note?",
+"Aujourd'hui":"Today","Rien ce jour-là.":"Nothing that day.","Événement":"Event","Dans les 60 prochains jours":"In the next 60 days","Aucun événement à venir.":"No upcoming events.",
+"chaque année":"every year","Nouvel événement":"New event","ex : semer les tomates":"e.g. sow the tomatoes","Date":"Date","Revient chaque année":"Repeats every year","Supprimer cet événement ?":"Delete this event?",
+"Semis":"Sowing","Récolte":"Harvest","Relevé":"Reading","Échéance":"Deadline","Rappel":"Reminder","Autre":"Other",
+"Longueur":"Length","Masse":"Mass","Volume":"Volume","Température":"Temperature","Vitesse":"Speed","Pression":"Pressure","Puissance":"Power","Batterie et solaire":"Battery and solar",
+"millimètre":"millimetre","centimètre":"centimetre","mètre":"metre","kilomètre":"kilometre","pouce":"inch","pied":"foot","yard":"yard","mile":"mile","mille marin":"nautical mile",
+"milligramme":"milligram","gramme":"gram","kilogramme":"kilogram","tonne":"tonne","once":"ounce","livre (lb)":"pound (lb)","stone":"stone",
+"millilitre":"millilitre","centilitre":"centilitre","litre":"litre","mètre cube":"cubic metre","cuillère à café (5 mL)":"teaspoon (5 mL)","cuillère à soupe (15 mL)":"tablespoon (15 mL)",
+"tasse US":"US cup","once liquide US":"US fluid ounce","pinte US":"US pint","gallon US":"US gallon","gallon impérial":"imperial gallon",
+"mètre par seconde":"metre per second","kilomètre-heure":"kilometre per hour","mile par heure":"mile per hour","nœud":"knot",
+"pascal":"pascal","kilopascal":"kilopascal","bar":"bar","psi":"psi","atmosphère":"atmosphere","millimètre de mercure":"millimetre of mercury",
+"joule":"joule","kilojoule":"kilojoule","wattheure":"watt-hour","kilowattheure":"kilowatt-hour","calorie":"calorie","kilocalorie":"kilocalorie",
+"watt":"watt","kilowatt":"kilowatt","cheval-vapeur":"metric horsepower","horsepower":"horsepower","BTU par heure":"BTU per hour",
+"degré Celsius":"degree Celsius","degré Fahrenheit":"degree Fahrenheit","kelvin":"kelvin","En dessous du zéro absolu : impossible.":"Below absolute zero: impossible.",
+"Capacité (mAh)":"Capacity (mAh)","Tension (V)":"Voltage (V)","Appareil branché (W)":"Device plugged in (W)","Panneau solaire (W)":"Solar panel (W)","Heures de plein soleil":"Hours of full sun",
+"Énergie stockée":"Stored energy","Autonomie avec cet appareil":"Runtime with this device","Recharge solaire par jour":"Solar charge per day","Jours de soleil pour la remplir":"Sunny days to fill it",
+"Rendements estimés : 85 % pour la conversion, 70 % pour le panneau (angle, chaleur, poussière). Une batterie de téléphone : environ 3,7 V.":"Estimated efficiency: 85% for conversion, 70% for the panel (angle, heat, dust). A phone battery: about 3.7 V.",
+"Menu":"Menu",
+"Cliquez sur la carte pour poser un repère. Les coordonnées sont absolues : un calque fonctionne sur n'importe quelle carte.":"Tap the map to drop a marker. Coordinates are absolute: a layer works on any map."
+});
+
+/* ============================ MODULES OFFICIELS ============================
+   Inventaire, Notes, Calendrier, Convertisseur. Leurs données vivent dans la sauvegarde
+   ordinaire (etatLeger) : enregistrées, exportées et importées comme le reste.
+   Fermer ou vider un module ne touche jamais au corpus. */
+let NOTES=[], INVENTAIRE={items:[],lieux:["Sac","Maison","Voiture"]}, AGENDA=[];
+let modCourant=null;
+const modId=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+const jourISO=(d)=>{const x=new Date(d);return x.getFullYear()+"-"+String(x.getMonth()+1).padStart(2,"0")+"-"+String(x.getDate()).padStart(2,"0");};
+const langueDates=()=>LANG==="en"?"en-GB":"fr-FR";
+const pl=(n,un,plusieurs)=>tr((LANG==="en"?n!==1:n>1)?plusieurs:un);
+const svgIco=(corps)=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${corps}</svg>`;
+
+const MODS_OFFICIELS=[
+  {id:"inventaire",n:"Inventaire",d:"Ce que vous avez, où, combien, jusqu'à quand. Alertes de péremption et de stock bas.",
+   ico:'<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>'},
+  {id:"notes",n:"Notes",d:"Journal de bord local, séparé du corpus. Reliez vos notes aux fiches avec [[ID]].",
+   ico:'<path d="M5 3h10l4 4v14H5z"/><path d="M15 3v4h4M8 12h8M8 16h6"/>'},
+  {id:"calendrier",n:"Calendrier",d:"Semis, récoltes, relevés, échéances, rappels. Sans réseau.",
+   ico:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>'},
+  {id:"convertisseur",n:"Convertisseur",d:"Longueurs, masses, volumes, températures, pressions, énergie et batteries.",
+   ico:'<path d="M4 8h13l-3-3M20 16H7l3 3"/>'},
+];
+const MODS_AVENIR=[
+  {n:"Assistant local",d:"Routage vers les fiches et composition de listes de lecture selon la situation décrite. Il indexe, il n'invente pas."},
+  {n:"Liaison radio",d:"Échange de fiches et de calques entre terminaux, sans infrastructure."},
+];
+
+function drawModules(){
+  if(modCourant==="inventaire")return drawInventaire();
+  if(modCourant==="notes")return drawNotes();
+  if(modCourant==="calendrier")return drawCalendrier();
+  if(modCourant==="convertisseur")return drawConvertisseur();
+  const resume={
+    inventaire:()=>{const a=INVENTAIRE.items.filter(it=>invEtat(it)).length;return INVENTAIRE.items.length+" "+pl(INVENTAIRE.items.length,"objet","objets")+(a?" · "+a+" "+pl(a,"alerte","alertes"):"");},
+    notes:()=>NOTES.length+" "+pl(NOTES.length,"note","notes"),
+    calendrier:()=>{const p=prochains(365)[0];return p?tr("Prochain :")+" "+p.e.titre+", "+new Date(p.iso).toLocaleDateString(langueDates(),{day:"numeric",month:"short"}):tr("Aucun événement");},
+    convertisseur:()=>Object.keys(CONV).length+" "+tr("catégories"),
+  };
+  $("modWrap").innerHTML=`<div class="kick">Modules</div><h1>${tr("Modules")}</h1>
+  <p style="color:var(--dim);max-width:62ch">${tr("Chaque module est indépendant. Le retrait d'un module ne casse jamais la consultation du corpus.")}</p>
+  <div class="mod-cartes">${MODS_OFFICIELS.map(m=>`<button class="mod-carte" data-mod="${m.id}">
+    <span class="mod-ico">${svgIco(m.ico)}</span>
+    <span><h4>${tr(m.n)}</h4><p>${tr(m.d)}</p><div class="mod-resume">${esc(resume[m.id]())}</div></span></button>`).join("")}</div>
+  <div class="kick" style="margin-top:30px">${tr("À venir")}</div>
+  <div class="cardgrid" style="margin-top:10px">${MODS_AVENIR.map(x=>`<div class="gcard"><h4>${tr(x.n)}</h4><p>${tr(x.d)}</p><div class="st soon">${tr("À venir")}</div></div>`).join("")}</div>
+  <div class="kick" style="margin-top:30px">${tr("Modules de la communauté")}</div>
+  <div style="margin:10px 0;display:flex;gap:7px;flex-wrap:wrap">
+    <button class="btn" id="modImp">${tr("Installer un module")}</button>
+    <input type="file" id="modImpF" accept=".json,.phenixmod" multiple hidden>
+    <button class="btn" id="modExp">${tr("Exporter les modules installés")}</button>
+  </div>
+  ${MODULES.length?`<div class="cardgrid">${MODULES.map((x,i)=>`
+    <div class="gcard"><h4>${esc(x.nom)}</h4><p>${esc(x.description||"—")}</p>
+    <div class="st avail">${esc(x.version||tr("communauté"))}</div>
+    <button class="btn danger" style="margin-top:10px" data-mdel="${i}">${tr("Désinstaller")}</button></div>`).join("")}</div>`:""}`;
+  $("modWrap").querySelectorAll("[data-mod]").forEach(b=>b.onclick=()=>ouvrirModule(b.dataset.mod));
+  $("modImp").onclick=()=>$("modImpF").click();
+  $("modImpF").onchange=e=>{
+    const arr=[...e.target.files];if(!arr.length)return;let d=0;
+    arr.forEach(file=>{const r=new FileReader();
+      r.onload=()=>{try{const j=JSON.parse(r.result);
+        if(j.type==="phenix-module"&&j.nom)MODULES.push(j);
+        else if(j.modules)MODULES=MODULES.concat(j.modules);
+        else toast(tr("Fichier non reconnu"));}catch(x){toast(tr("Fichier illisible"));}
+        if(++d===arr.length){save();drawModules();toast(tr("Module(s) installé(s)"));}};
+      r.readAsText(file);});
+  };
+  $("modExp").onclick=()=>{
+    if(!MODULES.length){toast(tr("Aucun module installé"));return;}
+    dl(JSON.stringify({type:"phenix-modules",v:1,modules:MODULES}),"modules-phenix.json","application/json");
+    toast(tr("Modules exportés"));
+  };
+  $("modWrap").querySelectorAll("[data-mdel]").forEach(b=>b.onclick=()=>{
+    if(confirm(tr("Désinstaller ce module ?"))){MODULES.splice(+b.dataset.mdel,1);save();drawModules();}});
+}
+function ouvrirModule(id){modCourant=id;drawModules();const v=$("modWrap").closest(".docview");if(v)v.scrollTop=0;}
+function enteteModule(titre,extra=""){
+  return `<div class="mod-tete"><button class="btn mod-retour" id="modRetour">← ${tr("Modules")}</button><h1>${tr(titre)}</h1>${extra}</div>`;
+}
+function brancherRetour(){$("modRetour").onclick=()=>{modCourant=null;noteOuverte=null;drawModules();};}
+function fenetre(titre,corps,boutons){
+  $("modal").innerHTML=`<div class="mh">${titre}</div><div class="mb">${corps}</div><div class="mf">${boutons}</div>`;
+  $("mask").classList.add("on");
+}
+const fermerFenetre=()=>$("mask").classList.remove("on");
+
+/* ---------------- Inventaire ---------------- */
+const INV_CATS=[
+  {id:"eau",n:"Eau",svg:'<path d="M12 3C9 8 6 11 6 15a6 6 0 0 0 12 0c0-4-3-7-6-12z"/>'},
+  {id:"nourriture",n:"Nourriture",svg:'<rect x="6" y="5" width="12" height="15" rx="2"/><path d="M6 9h12M6 16h12"/>'},
+  {id:"soins",n:"Soins",svg:'<rect x="4" y="4" width="16" height="16" rx="3"/><path d="M12 8v8M8 12h8"/>'},
+  {id:"outils",n:"Outils",svg:'<path d="M14.5 5.5a4 4 0 0 0-5 5L4 16l4 4 5.5-5.5a4 4 0 0 0 5-5l-2.5 2.5-2.5-.5-.5-2.5z"/>'},
+  {id:"energie",n:"Énergie",svg:'<rect x="3" y="7" width="16" height="10" rx="2"/><path d="M21 10v4M11 9l-2 4h4l-2 4"/>'},
+  {id:"lumiere",n:"Lumière",svg:'<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9V16h7v-2.1A6 6 0 0 0 12 3z"/>'},
+  {id:"feu",n:"Feu",svg:'<path d="M12 3c1 4 5 5 5 10a5 5 0 0 1-10 0c0-3 2-4 2-7 1.5 1 2.5 2.5 2.5 4.5C13 9 12.5 6 12 3z"/>'},
+  {id:"comm",n:"Communication",svg:'<rect x="7" y="8" width="10" height="13" rx="2"/><path d="M10 8l5-5M10 17h4"/>'},
+  {id:"vetements",n:"Vêtements",svg:'<path d="M8 3l-5 4 3 3 2-1v12h8V9l2 1 3-3-5-4c0 2-2 3-4 3S8 5 8 3z"/>'},
+  {id:"documents",n:"Documents",svg:'<path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/>'},
+  {id:"divers",n:"Divers",svg:'<path d="M3 8l9-5 9 5-9 5z"/><path d="M3 8v8l9 5 9-5V8M12 13v8"/>'},
+];
+const invCat=(id)=>INV_CATS.find(c=>c.id===id)||INV_CATS[INV_CATS.length-1];
+let invLieu="tout",invVue="grille",invQ="",invFiltreCat="",invTri="nom",invAlerte="";
+function invEtat(it){
+  if(it.peremption){const j=(new Date(it.peremption+"T23:59:59")-Date.now())/86400000;if(j<0)return "perime";if(j<=30)return "bientot";}
+  if(it.mini!==""&&it.mini!=null&&+it.qte<=+it.mini)return "bas";
+  return "";
+}
+const ETATS_INV={perime:"Périmé",bientot:"Périme bientôt",bas:"Stock bas"};
+const LIEUX_DEFAUT={fr:["Sac","Maison","Voiture"],en:["Bag","Home","Car"]};
+function lieuxSelonLangue(){
+  const autre=LIEUX_DEFAUT[LANG==="en"?"fr":"en"],voulu=LIEUX_DEFAUT[LANG==="en"?"en":"fr"];
+  if(JSON.stringify(INVENTAIRE.lieux)!==JSON.stringify(autre))return;
+  INVENTAIRE.items.forEach(it=>{const i=autre.indexOf(it.lieu);if(i>=0)it.lieu=voulu[i];});
+  const i=autre.indexOf(invLieu);if(i>=0)invLieu=voulu[i];
+  INVENTAIRE.lieux=[...voulu];
+}
+function drawInventaire(){
+  lieuxSelonLangue();
+  const tous=INVENTAIRE.items;
+  const compte={perime:0,bientot:0,bas:0};tous.forEach(it=>{const e=invEtat(it);if(e)compte[e]++;});
+  const L=tous.filter(it=>(invLieu==="tout"||it.lieu===invLieu)&&(!invFiltreCat||it.cat===invFiltreCat)&&(!invAlerte||invEtat(it)===invAlerte)
+    &&(!invQ||(it.nom+" "+(it.note||"")).toLowerCase().includes(invQ.toLowerCase())));
+  L.sort((a,b)=>invTri==="qte"?(+b.qte)-(+a.qte):invTri==="peremption"?((a.peremption||"9999")<(b.peremption||"9999")?-1:1):a.nom.localeCompare(b.nom,langueDates()));
+  const cols=innerWidth<=600?5:9;
+  const total=Math.max(Math.ceil((L.length+1)/cols)*cols,cols*3);
+  const dateFr=(d)=>d?new Date(d+"T12:00:00").toLocaleDateString(langueDates(),{day:"numeric",month:"short",year:"numeric"}):"";
+  $("modWrap").innerHTML=enteteModule("Inventaire")+`
+  <div class="mod-onglets" id="ivLieux">${["tout",...INVENTAIRE.lieux].map(l=>`<button class="seg ${invLieu===l?"on":""}" data-l="${esc(l)}">${l==="tout"?tr("Tout"):esc(l)}</button>`).join("")}
+    <button class="seg" id="ivLieuxG">${tr("Lieux…")}</button></div>
+  <div class="mod-barre">
+    <input type="search" id="ivQ" placeholder="${tr("Chercher un objet…")}" value="${esc(invQ)}">
+    <select id="ivCat"><option value="">${tr("Toutes catégories")}</option>${INV_CATS.map(c=>`<option value="${c.id}" ${invFiltreCat===c.id?"selected":""}>${tr(c.n)}</option>`).join("")}</select>
+    <select id="ivTri"><option value="nom" ${invTri==="nom"?"selected":""}>${tr("Tri : nom")}</option><option value="qte" ${invTri==="qte"?"selected":""}>${tr("Tri : quantité")}</option><option value="peremption" ${invTri==="peremption"?"selected":""}>${tr("Tri : péremption")}</option></select>
+    <button class="btn" id="ivVue">${tr(invVue==="grille"?"Liste":"Grille")}</button>
+    <button class="btn primary" id="ivAjout">+ ${tr("Objet")}</button>
+  </div>
+  ${compte.perime+compte.bientot+compte.bas?`<div class="mod-alertes">${Object.keys(compte).filter(k=>compte[k]).map(k=>`<button class="mod-alerte ${k} ${invAlerte===k?"on":""}" data-a="${k}">${compte[k]} · ${tr(ETATS_INV[k])}</button>`).join("")}</div>`:""}
+  ${invVue==="grille"
+    ?`<div class="inv-grille">${Array.from({length:total},(_,i)=>{
+        const it=L[i];
+        if(it){const e=invEtat(it);return `<button class="inv-case" data-it="${it.id}" title="${esc(it.nom)}">${svgIco(invCat(it.cat).svg)}<span class="q">${esc(String(it.qte))}</span>${e?`<span class="pt ${e}"></span>`:""}</button>`;}
+        return i===L.length?`<button class="inv-case plus" id="ivPlus" title="${tr("Ajouter")}">+</button>`:`<div class="inv-case vide"></div>`;
+      }).join("")}</div><div class="inv-nom" id="ivNomSurvol">${L.length?tr("Touchez une case pour voir ou modifier l'objet."):tr("Inventaire vide : ajoutez votre premier objet.")}</div>`
+    :(L.length?`<div class="inv-liste">${L.map(it=>{const e=invEtat(it);return `<div class="inv-ligne" data-it="${it.id}">
+        <span class="ic">${svgIco(invCat(it.cat).svg)}</span>
+        <span class="tx"><div class="tt">${esc(it.nom)}</div><div class="ds">${esc(it.lieu||"")}${it.peremption?" · "+dateFr(it.peremption):""}${e?` · <b class="${e}">${tr(ETATS_INV[e])}</b>`:""}</div></span>
+        <span class="qt">${esc(String(it.qte))}${it.unite?" "+esc(it.unite):""}</span></div>`;}).join("")}</div>`
+      :`<div class="mod-vide">${tr("Rien ici pour l'instant.")}</div>`)}
+  <div style="margin-top:18px;display:flex;gap:8px;flex-wrap:wrap"><button class="btn" id="ivCsv">${tr("Exporter en CSV")}</button></div>`;
+  brancherRetour();
+  const W=$("modWrap");
+  W.querySelectorAll("#ivLieux [data-l]").forEach(b=>b.onclick=()=>{invLieu=b.dataset.l;drawInventaire();});
+  $("ivLieuxG").onclick=gererLieux;
+  $("ivQ").oninput=e=>{invQ=e.target.value;const pos=e.target.selectionStart;drawInventaire();const q=$("ivQ");q.focus();q.setSelectionRange(pos,pos);};
+  $("ivCat").onchange=e=>{invFiltreCat=e.target.value;drawInventaire();};
+  $("ivTri").onchange=e=>{invTri=e.target.value;drawInventaire();};
+  $("ivVue").onclick=()=>{invVue=invVue==="grille"?"liste":"grille";drawInventaire();};
+  $("ivAjout").onclick=()=>invEditer(null);
+  if($("ivPlus"))$("ivPlus").onclick=()=>invEditer(null);
+  W.querySelectorAll("[data-a]").forEach(b=>b.onclick=()=>{invAlerte=invAlerte===b.dataset.a?"":b.dataset.a;drawInventaire();});
+  W.querySelectorAll("[data-it]").forEach(b=>{
+    b.onclick=()=>invEditer(INVENTAIRE.items.find(x=>x.id===b.dataset.it));
+    b.onmouseenter=()=>{const it=INVENTAIRE.items.find(x=>x.id===b.dataset.it);if(it&&$("ivNomSurvol"))$("ivNomSurvol").textContent=it.nom+" · "+it.qte+(it.unite?" "+it.unite:"")+(it.lieu?" · "+it.lieu:"");};
+  });
+  $("ivCsv").onclick=()=>{
+    const q=(v)=>`"${String(v??"").replace(/"/g,'""')}"`;
+    const lignes=[["nom","categorie","quantite","unite","lieu","peremption","alerte","note"].join(";")]
+      .concat(INVENTAIRE.items.map(it=>[it.nom,tr(invCat(it.cat).n),it.qte,it.unite,it.lieu,it.peremption,it.mini,it.note].map(q).join(";")));
+    dl("﻿"+lignes.join("\n"),"inventaire-phenix.csv","text/csv");toast(tr("Inventaire exporté"));
+  };
+}
+function invEditer(it){
+  const neuf=!it;
+  const o=it?{...it}:{id:modId(),nom:"",cat:"divers",qte:1,unite:"",lieu:invLieu!=="tout"?invLieu:(INVENTAIRE.lieux[0]||""),peremption:"",mini:"",note:""};
+  fenetre(tr(neuf?"Nouvel objet":"Objet"),`
+    <div class="fld"><label>${tr("Nom")}</label><input id="ivN" value="${esc(o.nom)}" placeholder="${tr("ex : bouteilles d'eau 1,5 L")}"></div>
+    <div class="fld"><label>${tr("Catégorie")}</label><div class="segs" id="ivC">${INV_CATS.map(c=>`<button class="seg ${c.id===o.cat?"on":""}" data-v="${c.id}">${tr(c.n)}</button>`).join("")}</div></div>
+    <div class="fld"><label>${tr("Quantité")}</label><div class="inv-qte"><button class="btn" id="ivMoins">−</button><input id="ivQt" type="number" min="0" step="any" value="${esc(String(o.qte))}"><button class="btn" id="ivPlus1">+</button><input id="ivU" value="${esc(o.unite||"")}" placeholder="${tr("unité")}"></div></div>
+    <div class="fld"><label>${tr("Lieu")}</label><select id="ivL">${INVENTAIRE.lieux.map(l=>`<option value="${esc(l)}" ${l===o.lieu?"selected":""}>${esc(l)}</option>`).join("")}</select></div>
+    <div class="fld"><label>${tr("Péremption")}</label><input id="ivD" type="date" value="${esc(o.peremption||"")}"></div>
+    <div class="fld"><label>${tr("Alerte quand il en reste")}</label><input id="ivA" type="number" min="0" step="any" value="${esc(String(o.mini??""))}" placeholder="${tr("pas d'alerte")}"></div>
+    <div class="fld"><label>${tr("Note")}</label><textarea id="ivT">${esc(o.note||"")}</textarea></div>`,
+    `${neuf?"":`<button class="btn danger" id="ivSuppr">${tr("Supprimer")}</button>`}<button class="btn" id="ivX">${tr("Annuler")}</button><button class="btn primary" id="ivOk">${tr("Enregistrer")}</button>`);
+  $("ivC").querySelectorAll(".seg").forEach(s=>s.onclick=()=>{o.cat=s.dataset.v;$("ivC").querySelectorAll(".seg").forEach(x=>x.classList.toggle("on",x===s));});
+  const pas=(d)=>{const v=Math.max(0,(parseFloat($("ivQt").value)||0)+d);$("ivQt").value=Math.round(v*1000)/1000;};
+  $("ivMoins").onclick=()=>pas(-1);$("ivPlus1").onclick=()=>pas(1);
+  $("ivX").onclick=fermerFenetre;
+  if($("ivSuppr"))$("ivSuppr").onclick=()=>{if(!confirm(tr("Supprimer cet objet ?")))return;INVENTAIRE.items=INVENTAIRE.items.filter(x=>x.id!==o.id);save();fermerFenetre();drawInventaire();};
+  $("ivOk").onclick=()=>{
+    o.nom=$("ivN").value.trim();if(!o.nom){$("ivN").focus();return;}
+    o.qte=parseFloat($("ivQt").value)||0;o.unite=$("ivU").value.trim();o.lieu=$("ivL").value;o.peremption=$("ivD").value;
+    o.mini=$("ivA").value===""?"":parseFloat($("ivA").value);o.note=$("ivT").value.trim();
+    const i=INVENTAIRE.items.findIndex(x=>x.id===o.id);if(i>=0)INVENTAIRE.items[i]=o;else INVENTAIRE.items.push(o);
+    save();fermerFenetre();drawInventaire();toast(tr(neuf?"Objet ajouté":"Objet enregistré"));
+  };
+  setTimeout(()=>{if(neuf)$("ivN").focus();},50);
+}
+function gererLieux(){
+  fenetre(tr("Lieux"),`<div class="hint" style="margin-bottom:10px">${tr("Un lieu, c'est un sac, une pièce, une voiture, une cache. Les objets d'un lieu supprimé passent dans le premier lieu.")}</div>
+    <div id="lxListe">${INVENTAIRE.lieux.map((l,i)=>`<div style="display:flex;gap:6px;margin-bottom:7px"><input data-li="${i}" value="${esc(l)}" style="flex:1;border:1px solid var(--hair);border-radius:7px;background:var(--surface);padding:8px 10px">
+      <button class="btn danger" data-ld="${i}" ${INVENTAIRE.lieux.length<2?"disabled":""}>✕</button></div>`).join("")}</div>
+    <div style="display:flex;gap:6px;margin-top:10px"><input id="lxNeuf" placeholder="${tr("Nouveau lieu")}" style="flex:1;border:1px solid var(--hair);border-radius:7px;background:var(--surface);padding:8px 10px"><button class="btn" id="lxAjout">+ ${tr("Ajouter")}</button></div>`,
+    `<button class="btn primary" id="lxOk">${tr("Terminé")}</button>`);
+  const appliquer=()=>{$("modal").querySelectorAll("[data-li]").forEach(inp=>{const i=+inp.dataset.li,ancien=INVENTAIRE.lieux[i],neuf=inp.value.trim()||ancien;
+    if(neuf!==ancien){INVENTAIRE.items.forEach(it=>{if(it.lieu===ancien)it.lieu=neuf;});if(invLieu===ancien)invLieu=neuf;INVENTAIRE.lieux[i]=neuf;}});};
+  $("modal").querySelectorAll("[data-ld]").forEach(b=>b.onclick=()=>{appliquer();const i=+b.dataset.ld,l=INVENTAIRE.lieux[i];INVENTAIRE.lieux.splice(i,1);
+    INVENTAIRE.items.forEach(it=>{if(it.lieu===l)it.lieu=INVENTAIRE.lieux[0];});if(invLieu===l)invLieu="tout";save();gererLieux();});
+  $("lxAjout").onclick=()=>{appliquer();const v=$("lxNeuf").value.trim();if(v&&!INVENTAIRE.lieux.includes(v))INVENTAIRE.lieux.push(v);save();gererLieux();};
+  $("lxOk").onclick=()=>{appliquer();save();fermerFenetre();drawInventaire();};
+}
+
+/* ---------------- Notes ---------------- */
+let noteOuverte=null,notesQ="",noteApercu=false;
+function drawNotes(){
+  if(noteOuverte){const n=NOTES.find(x=>x.id===noteOuverte);if(n)return drawNote(n);noteOuverte=null;}
+  const L=NOTES.filter(n=>!notesQ||(n.titre+" "+n.texte).toLowerCase().includes(notesQ.toLowerCase()))
+    .sort((a,b)=>(b.epingle?1:0)-(a.epingle?1:0)||b.modifie-a.modifie);
+  $("modWrap").innerHTML=enteteModule("Notes")+`
+  <div class="mod-barre"><input type="search" id="ntQ" placeholder="${tr("Chercher dans les notes…")}" value="${esc(notesQ)}"><button class="btn primary" id="ntNeuf">+ ${tr("Note")}</button></div>
+  ${L.length?L.map(n=>`<div class="note-carte" data-n="${n.id}"><div class="tt">${n.epingle?`<span class="note-epingle">●</span>`:""}${esc(n.titre||tr("Sans titre"))}</div>
+    <div class="ex">${esc((n.texte||"").slice(0,220))}</div><div class="dt">${dateCourte(n.modifie)}</div></div>`).join("")
+    :`<div class="mod-vide">${tr(notesQ?"Aucune note ne correspond.":"Aucune note. Un relevé, une idée, un numéro utile : tout ce qui n'est pas une fiche va ici.")}</div>`}`;
+  brancherRetour();
+  $("ntQ").oninput=e=>{notesQ=e.target.value;const pos=e.target.selectionStart;drawNotes();const q=$("ntQ");q.focus();q.setSelectionRange(pos,pos);};
+  $("ntNeuf").onclick=()=>{const n={id:modId(),titre:"",texte:"",cree:Date.now(),modifie:Date.now(),epingle:false};NOTES.push(n);noteOuverte=n.id;noteApercu=false;save();drawNotes();setTimeout(()=>$("ntTitre")&&$("ntTitre").focus(),50);};
+  $("modWrap").querySelectorAll("[data-n]").forEach(c=>c.onclick=()=>{noteOuverte=c.dataset.n;noteApercu=false;drawNotes();});
+}
+function drawNote(n){
+  $("modWrap").innerHTML=`<div class="mod-tete"><button class="btn mod-retour" id="ntRetour">← ${tr("Notes")}</button>
+    <span style="flex:1"></span>
+    <button class="btn ${n.epingle?"primary":""}" id="ntEp">${tr(n.epingle?"Épinglée":"Épingler")}</button>
+    <button class="btn" id="ntAp">${tr(noteApercu?"Éditer":"Aperçu")}</button>
+    <button class="btn danger" id="ntSuppr">${tr("Supprimer")}</button></div>
+  <input class="note-titre" id="ntTitre" placeholder="${tr("Titre")}" value="${esc(n.titre)}">
+  ${noteApercu?`<div class="note-apercu prose">${md(n.texte||"")}</div>`
+    :`<textarea class="note-texte" id="ntTexte" placeholder="${tr("Écrivez ici. [[URG-EAU-001]] crée un lien vers une fiche.")}">${esc(n.texte)}</textarea>`}
+  <div class="hint" style="margin-top:8px">${tr("Enregistré automatiquement")} · ${dateCourte(n.modifie)}</div>`;
+  const maj=()=>{n.modifie=Date.now();save();};
+  $("ntRetour").onclick=()=>{noteOuverte=null;if(!n.titre&&!n.texte){NOTES=NOTES.filter(x=>x!==n);save();}drawNotes();};
+  $("ntTitre").oninput=e=>{n.titre=e.target.value;maj();};
+  if($("ntTexte"))$("ntTexte").oninput=e=>{n.texte=e.target.value;maj();};
+  $("ntEp").onclick=()=>{n.epingle=!n.epingle;maj();drawNote(n);};
+  $("ntAp").onclick=()=>{noteApercu=!noteApercu;drawNote(n);};
+  $("ntSuppr").onclick=()=>{if(!confirm(tr("Supprimer cette note ?")))return;NOTES=NOTES.filter(x=>x!==n);noteOuverte=null;save();drawNotes();};
+  // Les liens [[ID]] de l'aperçu ouvrent la fiche, comme dans le corpus.
+  $("modWrap").querySelectorAll("a.lk[data-goto]").forEach(a=>a.onclick=e=>{e.preventDefault();switchView("fiches");openFiche(a.dataset.goto);});
+}
+
+/* ---------------- Calendrier ---------------- */
+const CAT_EVT=[
+  {id:"semis",n:"Semis",c:"var(--acc)"},{id:"recolte",n:"Récolte",c:"var(--warn)"},{id:"releve",n:"Relevé",c:"var(--bleu)"},
+  {id:"echeance",n:"Échéance",c:"var(--alert)"},{id:"rappel",n:"Rappel",c:"var(--txt2)"},{id:"autre",n:"Autre",c:"var(--dim)"},
+];
+const catEvt=(id)=>CAT_EVT.find(c=>c.id===id)||CAT_EVT[CAT_EVT.length-1];
+let calMois=null,calJour=null;
+const evtsDuJour=(iso)=>AGENDA.filter(e=>e.date===iso||(e.annuel&&e.date.slice(5)===iso.slice(5)&&e.date<=iso));
+function prochains(jours){
+  const out=[],d=new Date();d.setHours(12,0,0,0);
+  for(let i=0;i<jours&&out.length<40;i++){const iso=jourISO(d);evtsDuJour(iso).forEach(e=>out.push({e,iso}));d.setDate(d.getDate()+1);}
+  return out;
+}
+function drawCalendrier(){
+  if(!calMois){const d=new Date();calMois=new Date(d.getFullYear(),d.getMonth(),1);}
+  if(!calJour)calJour=jourISO(Date.now());
+  const an=calMois.getFullYear(),mo=calMois.getMonth(),auj=jourISO(Date.now());
+  const decal=(new Date(an,mo,1).getDay()+6)%7;     // lundi en premier
+  const debut=new Date(an,mo,1-decal);
+  const cases=Array.from({length:42},(_,i)=>{const d=new Date(debut);d.setDate(debut.getDate()+i);return d;});
+  const jsem=LANG==="en"?["M","T","W","T","F","S","S"]:["L","M","M","J","V","S","D"];
+  const duJour=evtsDuJour(calJour);
+  const avenir=prochains(60).filter(p=>p.iso>auj||p.iso===auj).slice(0,8);
+  const ligneEvt=(e,iso)=>`<div class="cal-evt" data-e="${e.id}"><span class="pt" style="background:${catEvt(e.cat).c}"></span>
+    <span><div class="tt">${esc(e.titre)}</div><div class="ds">${tr(catEvt(e.cat).n)}${e.annuel?" · "+tr("chaque année"):""}${iso?" · "+new Date(iso+"T12:00:00").toLocaleDateString(langueDates(),{weekday:"short",day:"numeric",month:"short"}):""}${e.note?" · "+esc(e.note.slice(0,60)):""}</div></span></div>`;
+  $("modWrap").innerHTML=enteteModule("Calendrier")+`
+  <div class="cal-tete"><button class="btn" id="calP">‹</button><div class="mois">${calMois.toLocaleDateString(langueDates(),{month:"long",year:"numeric"})}</div>
+    <button class="btn" id="calA">${tr("Aujourd'hui")}</button><button class="btn" id="calS">›</button></div>
+  <div class="cal-grille">${jsem.map(j=>`<div class="cal-jsem">${j}</div>`).join("")}
+    ${cases.map(d=>{const iso=jourISO(d),ev=evtsDuJour(iso);
+      return `<button class="cal-jour ${d.getMonth()!==mo?"hors":""} ${iso===auj?"auj":""} ${iso===calJour?"sel":""}" data-j="${iso}">${d.getDate()}
+        <span class="cal-points">${ev.slice(0,3).map(e=>`<i style="background:${iso===calJour?"var(--inv)":catEvt(e.cat).c}"></i>`).join("")}</span></button>`;}).join("")}</div>
+  <div class="cal-sec">${new Date(calJour+"T12:00:00").toLocaleDateString(langueDates(),{weekday:"long",day:"numeric",month:"long"})}</div>
+  ${duJour.length?duJour.map(e=>ligneEvt(e,null)).join(""):`<div class="hint" style="margin-bottom:10px">${tr("Rien ce jour-là.")}</div>`}
+  <button class="btn primary" id="calAjout">+ ${tr("Événement")}</button>
+  <div class="cal-sec">${tr("Dans les 60 prochains jours")}</div>
+  ${avenir.length?avenir.map(p=>ligneEvt(p.e,p.iso)).join(""):`<div class="hint">${tr("Aucun événement à venir.")}</div>`}`;
+  brancherRetour();
+  $("calP").onclick=()=>{calMois=new Date(an,mo-1,1);drawCalendrier();};
+  $("calS").onclick=()=>{calMois=new Date(an,mo+1,1);drawCalendrier();};
+  $("calA").onclick=()=>{const d=new Date();calMois=new Date(d.getFullYear(),d.getMonth(),1);calJour=jourISO(d);drawCalendrier();};
+  $("modWrap").querySelectorAll("[data-j]").forEach(b=>b.onclick=()=>{calJour=b.dataset.j;drawCalendrier();});
+  $("calAjout").onclick=()=>calEditer(null);
+  $("modWrap").querySelectorAll("[data-e]").forEach(b=>b.onclick=()=>calEditer(AGENDA.find(x=>x.id===b.dataset.e)));
+}
+function calEditer(e){
+  const neuf=!e;
+  const o=e?{...e}:{id:modId(),titre:"",date:calJour||jourISO(Date.now()),cat:"rappel",annuel:false,note:""};
+  fenetre(tr(neuf?"Nouvel événement":"Événement"),`
+    <div class="fld"><label>${tr("Titre")}</label><input id="ceT" value="${esc(o.titre)}" placeholder="${tr("ex : semer les tomates")}"></div>
+    <div class="fld"><label>${tr("Date")}</label><input id="ceD" type="date" value="${esc(o.date)}"></div>
+    <div class="fld"><label>${tr("Catégorie")}</label><div class="segs" id="ceC">${CAT_EVT.map(c=>`<button class="seg ${c.id===o.cat?"on":""}" data-v="${c.id}">${tr(c.n)}</button>`).join("")}</div></div>
+    <label style="display:flex;gap:9px;align-items:center;margin-bottom:14px;font-size:13.5px"><input type="checkbox" id="ceA" ${o.annuel?"checked":""}> ${tr("Revient chaque année")}</label>
+    <div class="fld"><label>${tr("Note")}</label><textarea id="ceN">${esc(o.note||"")}</textarea></div>`,
+    `${neuf?"":`<button class="btn danger" id="ceSuppr">${tr("Supprimer")}</button>`}<button class="btn" id="ceX">${tr("Annuler")}</button><button class="btn primary" id="ceOk">${tr("Enregistrer")}</button>`);
+  $("ceC").querySelectorAll(".seg").forEach(s=>s.onclick=()=>{o.cat=s.dataset.v;$("ceC").querySelectorAll(".seg").forEach(x=>x.classList.toggle("on",x===s));});
+  $("ceX").onclick=fermerFenetre;
+  if($("ceSuppr"))$("ceSuppr").onclick=()=>{if(!confirm(tr("Supprimer cet événement ?")))return;AGENDA=AGENDA.filter(x=>x.id!==o.id);save();fermerFenetre();drawCalendrier();};
+  $("ceOk").onclick=()=>{
+    o.titre=$("ceT").value.trim();if(!o.titre){$("ceT").focus();return;}
+    o.date=$("ceD").value||jourISO(Date.now());o.annuel=$("ceA").checked;o.note=$("ceN").value.trim();
+    const i=AGENDA.findIndex(x=>x.id===o.id);if(i>=0)AGENDA[i]=o;else AGENDA.push(o);
+    calJour=o.date;const d=new Date(o.date+"T12:00:00");calMois=new Date(d.getFullYear(),d.getMonth(),1);
+    save();fermerFenetre();drawCalendrier();
+  };
+  setTimeout(()=>{if(neuf)$("ceT").focus();},50);
+}
+
+/* ---------------- Convertisseur ---------------- */
+const CONV={
+  longueur:{n:"Longueur",u:[["mm","millimètre",0.001],["cm","centimètre",0.01],["m","mètre",1],["km","kilomètre",1000],["in","pouce",0.0254],["ft","pied",0.3048],["yd","yard",0.9144],["mi","mile",1609.344],["NM","mille marin",1852]]},
+  masse:{n:"Masse",u:[["mg","milligramme",1e-6],["g","gramme",0.001],["kg","kilogramme",1],["t","tonne",1000],["oz","once",0.028349523125],["lb","livre (lb)",0.45359237],["st","stone",6.35029318]]},
+  volume:{n:"Volume",u:[["mL","millilitre",0.001],["cL","centilitre",0.01],["L","litre",1],["m³","mètre cube",1000],["c. à c.","cuillère à café (5 mL)",0.005],["c. à s.","cuillère à soupe (15 mL)",0.015],["cup","tasse US",0.2365882365],["fl oz","once liquide US",0.0295735295625],["pt","pinte US",0.473176473],["gal","gallon US",3.785411784],["gal UK","gallon impérial",4.54609]]},
+  temperature:{n:"Température",special:"temp"},
+  vitesse:{n:"Vitesse",u:[["m/s","mètre par seconde",1],["km/h","kilomètre-heure",1/3.6],["mph","mile par heure",0.44704],["kn","nœud",1852/3600]]},
+  pression:{n:"Pression",u:[["Pa","pascal",1],["kPa","kilopascal",1000],["bar","bar",100000],["psi","psi",6894.757293168],["atm","atmosphère",101325],["mmHg","millimètre de mercure",133.322387415]]},
+  energie:{n:"Énergie",u:[["J","joule",1],["kJ","kilojoule",1000],["Wh","wattheure",3600],["kWh","kilowattheure",3.6e6],["cal","calorie",4.184],["kcal","kilocalorie",4184],["BTU","BTU",1055.05585]]},
+  puissance:{n:"Puissance",u:[["W","watt",1],["kW","kilowatt",1000],["ch","cheval-vapeur",735.49875],["hp","horsepower",745.69987158],["BTU/h","BTU par heure",0.29307107]]},
+  batterie:{n:"Batterie et solaire",special:"batterie"},
+};
+let convCat="longueur",convVal="1",convDe=null,convBat={mah:"10000",v:"3.7",w:"5",pv:"20",soleil:"4"};
+function fmtNb(x,dec=6){
+  if(!isFinite(x))return "—";
+  const a=Math.abs(x);
+  if(a!==0&&(a<1e-4||a>=1e10))return x.toExponential(3).replace(".",LANG==="en"?".":",");
+  return (+x.toPrecision(7)).toLocaleString(langueDates(),{maximumFractionDigits:dec});
+}
+function drawConvertisseur(){
+  const c=CONV[convCat];
+  let corps="";
+  if(c.u){
+    if(!convDe||!c.u.some(u=>u[0]===convDe))convDe=c.u.find(u=>u[2]===1)?.[0]||c.u[0][0];
+    const v=parseFloat(String(convVal).replace(",","."));const f=c.u.find(u=>u[0]===convDe)[2];
+    corps=`<div class="conv-entree"><input id="cvV" inputmode="decimal" value="${esc(convVal)}"><select id="cvDe">${c.u.map(u=>`<option value="${esc(u[0])}" ${u[0]===convDe?"selected":""}>${esc(u[0])} · ${tr(u[1])}</option>`).join("")}</select></div>
+    <div class="conv-res">${c.u.map(u=>`<div class="conv-ligne ${u[0]===convDe?"src":""}"><span class="u">${tr(u[1])} (${esc(u[0])})</span><span class="v">${isNaN(v)?"—":fmtNb(v*f/u[2])}</span></div>`).join("")}</div>`;
+  }else if(c.special==="temp"){
+    if(!["C","F","K"].includes(convDe))convDe="C";
+    const v=parseFloat(String(convVal).replace(",","."));
+    const k=isNaN(v)?NaN:convDe==="C"?v+273.15:convDe==="F"?(v-32)*5/9+273.15:v;
+    const res=[["C","degré Celsius",k-273.15],["F","degré Fahrenheit",(k-273.15)*9/5+32],["K","kelvin",k]];
+    corps=`<div class="conv-entree"><input id="cvV" inputmode="decimal" value="${esc(convVal)}"><select id="cvDe">${res.map(r=>`<option value="${r[0]}" ${r[0]===convDe?"selected":""}>${r[0]==="K"?"K":"°"+r[0]} · ${tr(r[1])}</option>`).join("")}</select></div>
+    <div class="conv-res">${res.map(r=>`<div class="conv-ligne ${r[0]===convDe?"src":""}"><span class="u">${tr(r[1])}</span><span class="v">${isNaN(k)?"—":fmtNb(r[2])} ${r[0]==="K"?"K":"°"+r[0]}</span></div>`).join("")}</div>
+    ${!isNaN(k)&&k<0?`<div class="hint" style="margin-top:8px;color:var(--alert)">${tr("En dessous du zéro absolu : impossible.")}</div>`:""}`;
+  }else{
+    const b=convBat,n=(x)=>parseFloat(String(x).replace(",","."));
+    const wh=n(b.mah)*n(b.v)/1000, auto=wh*0.85/n(b.w), jour=n(b.pv)*n(b.soleil)*0.7;
+    corps=`<div class="conv-champs">
+      <div><label>${tr("Capacité (mAh)")}</label><input data-b="mah" inputmode="decimal" value="${esc(b.mah)}"></div>
+      <div><label>${tr("Tension (V)")}</label><input data-b="v" inputmode="decimal" value="${esc(b.v)}"></div>
+      <div><label>${tr("Appareil branché (W)")}</label><input data-b="w" inputmode="decimal" value="${esc(b.w)}"></div>
+      <div><label>${tr("Panneau solaire (W)")}</label><input data-b="pv" inputmode="decimal" value="${esc(b.pv)}"></div>
+      <div><label>${tr("Heures de plein soleil")}</label><input data-b="soleil" inputmode="decimal" value="${esc(b.soleil)}"></div></div>
+    <div class="conv-res">
+      <div class="conv-ligne src"><span class="u">${tr("Énergie stockée")}</span><span class="v">${fmtNb(wh,1)} Wh</span></div>
+      <div class="conv-ligne"><span class="u">${tr("Autonomie avec cet appareil")}</span><span class="v">${isFinite(auto)?fmtNb(auto,1)+" h":"—"}</span></div>
+      <div class="conv-ligne"><span class="u">${tr("Recharge solaire par jour")}</span><span class="v">${fmtNb(jour,1)} Wh</span></div>
+      <div class="conv-ligne"><span class="u">${tr("Jours de soleil pour la remplir")}</span><span class="v">${jour>0?fmtNb(wh/jour,1):"—"}</span></div></div>
+    <div class="hint" style="margin-top:8px">${tr("Rendements estimés : 85 % pour la conversion, 70 % pour le panneau (angle, chaleur, poussière). Une batterie de téléphone : environ 3,7 V.")}</div>`;
+  }
+  $("modWrap").innerHTML=enteteModule("Convertisseur")+`
+  <div class="mod-onglets" id="cvCats">${Object.entries(CONV).map(([id,x])=>`<button class="seg ${id===convCat?"on":""}" data-c="${id}">${tr(x.n)}</button>`).join("")}</div>
+  ${corps}`;
+  brancherRetour();
+  $("cvCats").querySelectorAll("[data-c]").forEach(b=>b.onclick=()=>{convCat=b.dataset.c;convDe=null;drawConvertisseur();});
+  if($("cvV")){
+    $("cvV").oninput=e=>{convVal=e.target.value;const pos=e.target.selectionStart;drawConvertisseur();const i=$("cvV");i.focus();i.setSelectionRange(pos,pos);};
+    $("cvDe").onchange=e=>{convDe=e.target.value;drawConvertisseur();};
+  }
+  $("modWrap").querySelectorAll("[data-b]").forEach(inp=>inp.oninput=e=>{convBat[inp.dataset.b]=e.target.value;const k=inp.dataset.b,pos=e.target.selectionStart;drawConvertisseur();const i=$("modWrap").querySelector(`[data-b="${k}"]`);i.focus();i.setSelectionRange(pos,pos);});
+}
+
+/* ============================ NAVIGATION SUR TÉLÉPHONE ============================ */
+// Le choix de la vue : un menu déroulant à la place des onglets, trop nombreux pour un petit écran.
+function majVueMenu(){const on=document.querySelector(".tab.on");if(on&&$("vueNom"))$("vueNom").textContent=on.textContent.trim();}
+$("vueBtn").onclick=e=>{
+  e.stopPropagation();
+  const m=$("vueMenu");
+  if(!m.classList.toggle("ouvert"))return;
+  $("vueListe").innerHTML=[...document.querySelectorAll(".tab")].map(t=>`<button class="vueitem ${t.classList.contains("on")?"on":""}" data-v="${t.dataset.view}">${esc(t.textContent.trim())}</button>`).join("");
+  $("vueListe").querySelectorAll("[data-v]").forEach(b=>b.onclick=()=>{m.classList.remove("ouvert");switchView(b.dataset.v);});
+};
+document.addEventListener("click",e=>{if(!e.target.closest("#vueMenu"))$("vueMenu").classList.remove("ouvert");});
+// La vue Cartes : sur téléphone, tout le panneau (outils, listes, boutons) se range dans un tiroir.
+function fermerTiroirCartes(){const s=document.querySelector(".mapside");if(s&&s.classList.contains("ouvert")){s.classList.remove("ouvert");setTimeout(()=>{if(map)map.invalidateSize();},60);}}
+$("mapMenu").onclick=()=>{document.querySelector(".mapside").classList.toggle("ouvert");setTimeout(()=>{if(map)map.invalidateSize();},60);};
+$("carteList").addEventListener("click",e=>{if(innerWidth<=1040&&e.target.closest(".mrow")&&e.target.dataset.x===undefined)fermerTiroirCartes();});
+$("pinlist").addEventListener("click",e=>{if(innerWidth<=1040&&e.target.closest(".mrow"))fermerTiroirCartes();});
+majVueMenu();
 
 /* Première ouverture, sans sauvegarde : l'application suit la langue choisie sur le site
    (même origine) ou, à défaut, celle du système. Ouverte depuis le site, elle en reprend le thème. */
@@ -19983,7 +20550,7 @@ function premiereOuverture(){
 loadCorpus();
 detecterStockage();
 charger().then(trouve=>{if(!trouve)premiereOuverture();draw();drawThemePick();ETAT_SAUV=STOCKAGE==="aucun"?"impossible":"ok";majStockage();});
-$("railBtn").style.display=innerWidth<=1000?"":"none";
+majRailBtn();
 </script>
 </body>
 </html>

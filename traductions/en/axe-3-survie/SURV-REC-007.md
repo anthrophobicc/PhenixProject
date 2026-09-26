@@ -54,6 +54,8 @@ A degraded contact isn't a clean break: it's resistance appearing. It heats up, 
 
 **You have no electrical tape.** Heat-shrink tubing is better; failing that, thick adhesive tape, inner-tube rubber cut into a strip and stretched on in tight turns, or dipping the joint in melted plastic.
 
+**You have no tools at all.** Scrape with whatever you have: a house key, the edge of a coin, a stone, sand on a rag. A loose battery clamp sits on a tapered post: push it all the way down, tap it with a stone, then twist it to lock it. As a last resort, a strip of aluminium (a gum wrapper, a cut-up can) slipped between the clamp and the post takes up the slack long enough to get going. **Never bridge the two terminals with anything metal**: a car battery can push hundreds of amps and the metal turns red-hot.
+
 **You have nothing to solder with.** A well-made mechanical joint works for years. What counts is the tightness, the contact surface and protection from moisture, not the solder itself.
 
 **The wires aren't the same metal.** Copper and aluminum in direct contact corrode — see [[TEC-COR-001]]. Use a connector designed for it, or put a suitable part between them.

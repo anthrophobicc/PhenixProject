@@ -54,6 +54,8 @@ Un contact dégradé n'est pas une coupure franche : c'est une résistance qui a
 
 **Vous n'avez pas de ruban isolant.** Une gaine thermorétractable est meilleure ; à défaut, du ruban adhésif épais, du caoutchouc de chambre à air découpé en bande et étiré en spires serrées, ou une immersion dans une matière plastique fondue.
 
+**Vous n'avez aucun outil.** Grattez avec ce que vous avez : une clé de maison, le bord d'une pièce, une pierre, du sable sur un chiffon. Une cosse de batterie desserrée s'enfonce sur une borne conique : poussez-la à fond, tapez-la avec une pierre, puis tournez-la pour la bloquer. En dernier recours, une bande d'aluminium (papier de chewing-gum, canette découpée) glissée entre la cosse et la borne rattrape le jeu, le temps de repartir. **Ne reliez jamais les deux bornes avec un objet en métal** : une batterie de voiture débite des centaines d'ampères et le métal devient brûlant.
+
 **Vous n'avez rien pour souder.** Une jonction mécanique bien faite fonctionne des années. Ce qui compte est le serrage, la surface de contact et la protection contre l'humidité, pas la soudure elle-même.
 
 **Les fils ne sont pas du même métal.** Cuivre et aluminium en contact direct se corrodent — voir [[TEC-COR-001]]. Utilisez un connecteur prévu, ou intercalez une pièce adaptée.
