@@ -34,7 +34,7 @@ L'eau elle-même ne « périme » pas. Ce qui se développe, ce sont les microbe
 
 1. Lavez le récipient à l'eau savonneuse, rincez, puis désinfectez : une cuillère à café d'eau de Javel dans un litre d'eau, agitée partout, puis rincée.
 2. Remplissez à l'eau du robinet traitée (déjà chlorée).
-3. Pour une conservation longue, ajoutez **2 gouttes d'eau de Javel ordinaire (sans parfum) par litre**, attendez 30 minutes : une légère odeur de chlore doit rester.
+3. Pour une conservation longue, ajoutez de l'eau de Javel **sans parfum** : **4 à 5 gouttes par litre** pour la Javel française à 2,6 % de chlore actif, **2 gouttes** pour une Javel à 5 ou 6 %. Attendez 30 minutes : une légère odeur de chlore doit rester. Voir [[TEC-CHI-009]].
 4. Fermez, **étiquetez avec la date**.
 
 **Où** : au frais, dans le noir, loin des carburants, des produits ménagers et des pesticides. Pas en plein soleil.

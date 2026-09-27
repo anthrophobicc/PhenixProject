@@ -22982,6 +22982,534 @@ Un cyclone (ouragan dans l'Atlantique, typhon dans le Pacifique) est une énorme
 **En mer ou au bord de l'eau** : on ne va pas regarder les vagues. Chaque cyclone emporte des curieux.
 
 L'inondation et ses gestes : [[URG-INO-001]]. Une tempête en métropole : [[URG-TEM-001]].
+
+---
+id: TEC-ENE-016
+titre: Le 12 volts à la maison
+axe: 2
+categorie: Énergie et Électricité
+temps: Long
+contexte: 1
+risque: Discret
+materiel: Technique
+priorite: normale
+origine: officielle
+tags: [12 volts, batterie, solaire, fusible, section de cable, convertisseur, eclairage led, autonomie]
+sources: ["Norme NF C 15-100, installations en très basse tension", "Victron Energy, Wiring Unlimited (dimensionnement des câbles et fusibles en courant continu)", "Guides d'installation électrique des camping-cars et des bateaux"]
+---
+
+::Le 12 volts, c'est l'électricité des voitures, des bateaux et des camping-cars. Sans danger pour le corps, simple, compatible avec les batteries et les panneaux solaires. Mais il a un piège : il met le feu aux fils trop fins.::
+
+## Pourquoi le 12 volts
+
+- **Il ne tue pas** au toucher : on peut câbler sans électricien.
+- **Il se stocke directement** dans une batterie, sans conversion.
+- **Tout ce qui sert en crise existe en 12 V** : lampes LED, chargeurs USB, radios, ventilateurs, pompes à eau, réfrigérateurs de camping.
+
+## Les éléments
+
+1. **Une batterie** : plomb (AGM, gel) ou lithium fer phosphate (LiFePO4), plus légère et qui supporte d'être vidée presque entièrement. Voir [[TEC-ENE-004]].
+2. **De quoi la charger** : panneau solaire avec régulateur, chargeur sur secteur, alternateur de voiture, groupe. Voir [[TEC-SOLR-001]].
+3. **Un fusible au plus près de la batterie**, sur le fil positif.
+4. **Des câbles de bonne section.**
+5. **Un petit tableau** de fusibles pour chaque circuit : éclairage, prises USB, pompe.
+
+## Le piège : les fils
+
+À tension basse, pour la même puissance, **le courant est vingt fois plus fort** qu'en 230 V. Un fil trop fin chauffe et perd de la tension.
+
+| Courant | Longueur (aller et retour compris) | Section conseillée |
+|---|---|---|
+| 5 A (éclairage) | jusqu'à 10 m | 1,5 à 2,5 mm² |
+| 10 A (pompe, frigo) | jusqu'à 10 m | 4 mm² |
+| 20 A | jusqu'à 10 m | 6 à 10 mm² |
+| Convertisseur 1 000 W | moins de 2 m | 25 mm² et plus |
+
+**Dans le doute, plus gros.** Un fil de lampe de salon sur une batterie de voiture peut prendre feu en quelques secondes en cas de court-circuit.
+
+## Le fusible qui sauve
+
+**Une batterie en court-circuit** peut débiter des centaines d'ampères : les fils rougissent et l'isolant brûle. **Le fusible doit être à moins de 20 cm de la borne positive**, calibré pour protéger le fil. C'est la règle la plus importante de toute installation 12 V.
+
+## Le convertisseur (onduleur)
+
+Il fabrique du 230 V à partir du 12 V, pour les appareils qui n'existent pas en 12 V. Mais il **consomme même à vide**, perd 10 à 15 % de l'énergie, et un appareil de 1 000 W tire près de 100 A sur la batterie. **Tout ce qui peut rester en 12 V ou en USB y reste.**
+
+## Ce qu'on alimente avec quoi
+
+Une batterie de 100 Ah en 12 V stocke environ **1 200 Wh**, dont 600 utilisables en plomb, presque tout en lithium. Cela fait par exemple : cinq lampes LED de 5 W pendant 10 heures, quatre recharges de téléphone, une radio toute la journée, et il en reste. Voir [[TEC-ENE-014]].
+
+---
+id: TEC-ENE-015
+titre: Les bouteilles de gaz
+axe: 2
+categorie: Énergie et Électricité
+temps: Court
+contexte: 1
+risque: Discret
+materiel: Technique
+priorite: normale
+origine: officielle
+tags: [gaz, butane, propane, bouteille, detendeur, flexible, fuite, camping]
+sources: ["Comité français du butane et du propane (CFBP), règles d'utilisation des bouteilles", "INRS, fiches toxicologiques du butane et du propane", "Arrêté du 2 août 1977 relatif aux installations de gaz dans les bâtiments d'habitation"]
+---
+
+::Une bouteille de gaz fait la cuisine et le chauffage pendant des semaines sans réseau. Elle ne pose problème que mal choisie, mal raccordée, couchée, ou rangée à la cave.::
+
+## Butane ou propane
+
+| | Butane | Propane |
+|---|---|---|
+| Usage | **À l'intérieur** : cuisinière, chauffage d'appoint | **À l'extérieur** : citerne, barbecue, chauffage de la maison depuis dehors |
+| Froid | **Ne se vaporise plus vers 0 °C** : inutilisable dehors en hiver | Fonctionne jusqu'à −40 °C |
+| Stockage | Jamais au soleil ni près d'une source de chaleur | Toujours dehors, jamais dans un sous-sol |
+
+**Tous deux sont plus lourds que l'air** : une fuite coule au sol et remplit les caves, les vides sanitaires, les fosses. On ne stocke jamais une bouteille en sous-sol. Voir [[URG-GAZ-001]].
+
+## Raccorder
+
+- **Un détendeur adapté au gaz** : en France, environ 28-30 millibars pour le butane, 37 millibars pour le propane. Un détendeur de butane sur du propane donne des flammes trop fortes.
+- **Un tuyau ou flexible en bon état et dans sa date** : la date limite est imprimée dessus. Un tuyau caoutchouc périmé se fendille.
+- **Des colliers de serrage** sur les tuyaux souples.
+- **Vérifiez chaque raccordement** à l'eau savonneuse, robinet ouvert : pas de bulles, pas de fuite.
+
+## Utiliser
+
+- **Bouteille debout, toujours.** Couchée, le gaz liquide passe dans le détendeur et l'appareil : grandes flammes incontrôlées.
+- **Fermez le robinet de la bouteille** après usage, et avant de la changer.
+- **Une pièce aérée** : un chauffage d'appoint au gaz consomme l'oxygène et produit de la vapeur d'eau et parfois du monoxyde de carbone. Voir [[TEC-CON-010]].
+- **Jamais chauffer une bouteille**, même pour « en tirer plus » par grand froid.
+
+## Les astuces
+
+- **Savoir ce qui reste** : versez un filet d'eau chaude le long de la bouteille, puis passez la main. **La partie froide** est celle qui contient encore du liquide. Ou pesez-la : la tare (poids à vide) est gravée sur le col.
+- **Une bouteille qui givre** en fonctionnement donne plus qu'elle ne peut vaporiser : baissez l'appareil, ou passez au propane par grand froid.
+- **Les cartouches de camping** (butane, ou mélange butane-propane pour le froid) font le même travail en petit. Une cartouche de 450 g fait environ une heure et demie de réchaud à pleine flamme.
+- **Réserve de crise** : deux bouteilles, une en service, une pleine. Une bouteille de 13 kg cuisine plusieurs semaines pour une famille.
+
+---
+id: TEC-CON-015
+titre: La plomberie de base et les fuites
+axe: 2
+categorie: Construction et Habitat
+temps: Court
+contexte: 1
+risque: Discret
+materiel: Technique
+priorite: normale
+origine: officielle
+tags: [plomberie, fuite, robinet, joint, siphon, bouchon, canalisation, gel, vanne]
+sources: ["DTU 60.1, plomberie sanitaire pour bâtiments", "Guides pratiques de plomberie des enseignes de bricolage et des fabricants de robinetterie", "Retours d'expérience des plombiers sur les dégâts des eaux les plus fréquents"]
+---
+
+::Neuf dégâts des eaux sur dix commencent par une petite fuite qu'on a laissée « pour plus tard ». Savoir où couper l'eau et changer un joint évite la moitié des factures et toutes les nuits à éponger.::
+
+## Couper l'eau
+
+- **La vanne générale**, près du compteur (souvent dans un regard dehors, au sous-sol ou sous l'évier). **Repérez-la aujourd'hui**, testez-la : une vanne qui n'a pas tourné depuis dix ans est parfois grippée.
+- **Les robinets d'arrêt** sous les lavabos, derrière les toilettes, sur l'arrivée du chauffe-eau et de la machine à laver : ils coupent un seul appareil.
+
+Voir aussi [[URG-RES-001]].
+
+## Les tuyaux
+
+- **Cuivre** : rigide, soudé ou raccordé par écrous.
+- **PER** (tubes souples de couleur, rouge pour le chaud, bleu pour le froid) et **multicouche** : raccords à sertir ou à visser.
+- **PVC gris** : les évacuations, collées.
+- **Les flexibles** qui relient les robinets aux tuyaux : ils vieillissent et éclatent. **Changez-les tous les dix ans environ.**
+
+## Les fuites courantes
+
+- **Un robinet qui goutte** : le joint ou la cartouche est usé. Coupez l'eau, démontez la tête, emportez l'ancienne pièce au magasin pour la même.
+- **Les toilettes qui coulent** en continu dans la cuvette : le joint du clapet de chasse est usé ou entartré. Un nettoyage au vinaigre ou un joint neuf.
+- **Un raccord qui suinte** : resserrez d'un quart de tour, pas plus. Si ça continue, refaites l'étanchéité : ruban de téflon sur un filetage, ou filasse et pâte.
+- **Un siphon qui fuit** : dévissez-le au-dessus d'une bassine, nettoyez, vérifiez le joint, revissez à la main.
+
+## Les dépannages de fortune
+
+- **Un trou d'épingle dans un tuyau** : un morceau de chambre à air serré par deux colliers de serrage, en attendant mieux. Une pâte époxy de réparation sur un tuyau sec. Voir [[SURV-REC-030]].
+- **Un tuyau gelé** : dégelez-le au sèche-cheveux ou avec des chiffons chauds, en partant du robinet ouvert vers le gel. **Jamais de flamme** : le tuyau éclate ou brûle ce qu'il y a derrière.
+- **Un évier bouché** : ventouse d'abord (en bouchant le trop-plein), puis démontage du siphon, puis furet. Les déboucheurs chimiques en dernier, jamais mélangés. Voir [[TEC-CHI-006]].
+
+## Les astuces de plombier
+
+- **Relevez le compteur le soir et le matin**, sans avoir tiré d'eau : s'il a tourné, il y a une fuite quelque part.
+- **Une tache qui s'agrandit au plafond** : coupez l'eau de l'étage au-dessus tout de suite, puis cherchez.
+- **Avant un départ long**, coupez la vanne générale.
+- **Dans une maison froide en hiver**, vidangez les tuyaux (vanne fermée, robinets ouverts, en bas) pour qu'ils ne gèlent pas. Voir [[TEC-CON-012]].
+
+---
+id: TEC-CON-014
+titre: Les toilettes sèches
+axe: 2
+categorie: Construction et Habitat
+temps: Long
+contexte: 2+
+risque: Discret
+materiel: Récupération
+priorite: normale
+origine: officielle
+tags: [toilettes seches, compost, sciure, urine, assainissement, eau, jardin]
+sources: ["Jenkins J., The Humanure Handbook, 4e édition", "Arrêté du 7 septembre 2009 relatif aux prescriptions techniques des installations d'assainissement non collectif (toilettes sèches)", "Organisation mondiale de la santé, Guidelines for the safe use of wastewater, excreta and greywater, volume 4, 2006"]
+---
+
+::Une chasse d'eau envoie chaque jour dix à trente litres d'eau potable dans les égouts pour emporter un demi-litre de déchets. Les toilettes sèches font la même chose avec une poignée de sciure, sans odeur, et rendent de la terre au bout de deux ans.::
+
+## Le principe
+
+Après chaque passage, on recouvre les matières d'une **matière sèche riche en carbone** : sciure, copeaux de bois, feuilles broyées, paille hachée. Elle absorbe l'humidité, bloque les odeurs et les mouches, et prépare le compostage.
+
+## Le modèle le plus simple
+
+1. **Une caisse en bois** avec un abattant de toilettes, et un **seau** de 20 litres dessous.
+2. **Un bac de sciure** à côté, avec une louche ou un gobelet.
+3. **Après chaque passage**, une louche de sciure, sur les selles et sur le papier.
+4. **Le seau plein** (tous les quelques jours pour une famille) se vide sur un **tas de compost dédié**, se rince, et repart.
+
+**Séparer l'urine** (un urinoir, ou un séparateur à l'avant de la cuvette) rend le seau beaucoup moins lourd et presque sans odeur. L'urine diluée est un excellent engrais, et un activateur de compost.
+
+## Composter sans danger
+
+- **Un tas à part**, pas celui du potager, en bac fermé, sur la terre, loin des points d'eau.
+- **Couvert de paille** à chaque apport.
+- **Un tas bien fait chauffe** à 50 ou 60 °C, ce qui tue la plupart des germes.
+- **On laisse reposer au moins un an** après le dernier apport, deux ans pour plus de sûreté. Deux bacs : un qui se remplit, un qui mûrit.
+- **Le compost obtenu** va d'abord aux arbres fruitiers, aux haies, aux fleurs ; pour les légumes qui se mangent crus, seulement un compost bien mûr, et jamais directement sur les feuilles.
+
+## Ce qu'il faut savoir
+
+- **Pas d'odeur** si la sciure couvre bien : une odeur signale un manque de matière sèche.
+- **L'hiver**, le tas chauffe moins : on laisse simplement le temps faire.
+- **Les médicaments** passent en partie dans les selles : ce n'est pas un problème à l'échelle d'un jardin, si le compost a eu le temps de mûrir.
+- **En France, les toilettes sèches sont autorisées** dans une maison, à condition de ne pas créer de nuisance ni de pollution, et d'avoir de quoi traiter les eaux de la cuisine et de la salle de bain.
+
+Version d'urgence avec un seau et des sacs : [[SURV-HYG-002]]. Le compost en général : [[TEC-AGR-003]].
+
+---
+id: TEC-CON-013
+titre: Rafraîchir une maison sans climatisation
+axe: 2
+categorie: Construction et Habitat
+temps: Court
+contexte: 1
+risque: Discret
+materiel: Récupération
+priorite: normale
+origine: officielle
+tags: [chaleur, rafraichir, volets, ventilation nocturne, ombre, canicule, maison, evaporation]
+sources: ["ADEME, Garder son logement frais en été", "CEREMA, confort d'été des bâtiments : protections solaires et ventilation nocturne", "Givoni B., Passive and Low Energy Cooling of Buildings, Wiley"]
+---
+
+::Une maison se rafraîchit la nuit et se défend le jour. Un volet extérieur fermé arrête la chaleur avant qu'elle entre ; un rideau intérieur la laisse entrer, puis la garde.::
+
+## Le principe
+
+La chaleur entre de trois façons : **le soleil par les vitres**, **l'air chaud par les ouvertures**, **la chaleur des murs et du toit** chauffés toute la journée. On bloque les trois le jour, et on évacue la nuit.
+
+## Le jour : se défendre
+
+- **Protections extérieures d'abord** : volets, stores extérieurs, toiles tendues devant les fenêtres. Elles arrêtent le soleil **avant** la vitre, et sont plusieurs fois plus efficaces qu'un rideau intérieur, qui chauffe derrière la vitre.
+- **Fenêtres fermées** tant que l'air dehors est plus chaud que dedans.
+- **Moins de chaleur à l'intérieur** : pas de four, peu de plaques, lampes LED, appareils débranchés (chargeurs, box, télé en veille chauffent aussi).
+- **Côté sud et ouest** en priorité : c'est là que le soleil tape le plus fort et le plus tard.
+
+## La nuit : évacuer
+
+- **Tout ouvrir dès que l'air dehors est plus frais**, souvent à partir de 22 h jusqu'au petit matin.
+- **Créer un courant d'air** : fenêtres ouvertes sur deux façades opposées, portes intérieures ouvertes. Un ventilateur posé dans une fenêtre, soufflant **vers l'extérieur** dans une pièce et une autre fenêtre ouverte ailleurs, aspire l'air frais à travers toute la maison.
+- **Les murs épais** (pierre, béton) stockent la fraîcheur de la nuit et la rendent le jour : c'est pourquoi les vieilles maisons restent fraîches.
+
+## Rafraîchir par l'eau
+
+- **Un linge humide** tendu devant une fenêtre ouverte ou devant un ventilateur rafraîchit l'air qui passe, surtout par temps sec.
+- **Des bassines d'eau** et des serpillières mouillées au sol, en climat sec.
+- **Le corps d'abord** : c'est souvent plus efficace de rafraîchir les gens que la pièce. Voir [[SURV-CRI-003]].
+
+## À plus long terme
+
+- **Planter** des arbres à feuilles caduques côté sud et ouest : ombre l'été, soleil l'hiver. Une vigne sur une pergola fait pareil en deux ou trois ans.
+- **Peindre le toit ou les murs en clair** renvoie une grande partie du soleil.
+- **Isoler le toit** : l'isolation qui garde la chaleur l'hiver garde la fraîcheur l'été. Voir [[TEC-CON-005]].
+
+**Le piège** : une pièce sous un toit non isolé devient invivable l'après-midi. On y dort la nuit seulement si on a pu l'aérer, et on vit en bas le jour.
+
+---
+id: TEC-CHI-010
+titre: Le béton et le mortier
+axe: 2
+categorie: Chimie et Matériaux
+temps: Court
+contexte: 2
+risque: Discret
+materiel: Technique
+priorite: normale
+origine: officielle
+tags: [beton, mortier, ciment, sable, gravier, dosage, cure, maconnerie]
+sources: ["Norme NF EN 206, béton : spécification, performances, production et conformité", "Cimbéton, guides pratiques du béton", "Portland Cement Association, Design and Control of Concrete Mixtures, 17e édition"]
+---
+
+::Le béton ne sèche pas : il durcit en fixant l'eau dans une réaction chimique. Laissé à sécher au soleil, il devient poussiéreux et fragile. Gardé humide une semaine, il devient de la pierre.::
+
+## Les ingrédients
+
+- **Le ciment** : une poudre grise qui, avec l'eau, forme une colle minérale qui durcit en quelques heures et continue de durcir pendant des semaines.
+- **Le sable** et **le gravier** : le squelette. Le ciment colle les grains entre eux.
+- **L'eau** : juste ce qu'il faut. **Trop d'eau rend le béton plus facile à couler et beaucoup plus faible.**
+
+## Les dosages de chantier (en volumes, au seau)
+
+| Mélange | Ciment | Sable | Gravier | Usage |
+|---|---|---|---|---|
+| Mortier de montage | 1 | 3 à 4 | - | Monter des briques, des parpaings, des pierres |
+| Mortier d'enduit | 1 | 3 | - | Enduire un mur |
+| Béton courant | 1 | 2 | 3 | Dalles, fondations, poteaux |
+| Béton maigre | 1 | 3 | 5 | Remplissage, propreté, calage |
+
+Un sac de 35 kg de ciment donne environ 0,1 m³ de béton courant.
+
+## Gâcher à la main
+
+1. **Mélangez à sec** ciment, sable et gravier sur une planche ou dans une brouette, jusqu'à une couleur uniforme.
+2. **Faites un cratère** au milieu, versez une partie de l'eau.
+3. **Ramenez les bords** vers le centre avec la pelle, ajoutez l'eau petit à petit.
+4. **Le bon béton** tient en tas sans couler, et une trace de truelle y reste nette.
+
+## La cure : ce qui fait la différence
+
+- **Gardez le béton humide** au moins **7 jours** : arrosage, bâche plastique, toile de jute mouillée.
+- **Protégez-le du soleil et du vent** qui le sèchent trop vite, et du **gel** les premiers jours, qui le fait éclater.
+- **Il atteint sa résistance au bout de 28 jours.** On ne charge pas une dalle la première semaine.
+
+## Ce qu'il faut savoir
+
+- **Le béton résiste à l'écrasement, pas à la traction** : une dalle ou une poutre sans armatures d'acier (fers à béton, treillis) casse en travers. L'acier doit être noyé avec quelques centimètres de béton autour, sinon il rouille.
+- **Le ciment brûle la peau** : il est très alcalin. Gants, manches longues, lunettes. Une brûlure au ciment ne fait pas mal tout de suite.
+- **Les vieux murs en pierre** se montent et se réparent au **mortier de chaux**, qui laisse respirer le mur ; le ciment les fait pourrir d'humidité. Voir [[TEC-CHI-003]].
+- **Sans ciment** : la chaux, la terre crue (pisé, torchis), la pierre sèche, bien plus anciennes et encore debout. Voir [[TEC-CON-001]].
+
+Les fondations : [[TEC-CON-002]].
+
+---
+id: TEC-CHI-009
+titre: L'eau de Javel
+axe: 2
+categorie: Chimie et Matériaux
+temps: Court
+contexte: 1
+risque: Discret
+materiel: Rien
+priorite: normale
+origine: officielle
+tags: [eau de javel, hypochlorite, chlore, desinfection, dilution, eau potable, surfaces]
+sources: ["Organisation mondiale de la santé, Guidelines for Drinking-water Quality, 4e édition (chloration)", "Centers for Disease Control and Prevention, Making water safe in an emergency", "Organisation mondiale de la santé, Infection prevention and control : solutions chlorées à 0,1 % et 0,5 %"]
+---
+
+::Une bouteille d'eau de Javel désinfecte l'eau de boisson d'une famille pendant des mois, nettoie une pièce de malade, et coûte un euro. Mal dosée ou mal mélangée, elle empoisonne.::
+
+## Ce que c'est
+
+Une solution d'**hypochlorite de sodium** dans l'eau. Son pouvoir se mesure en **pourcentage de chlore actif**, écrit sur l'étiquette :
+
+- **2,6 %** : l'eau de Javel française prête à l'emploi en bouteille ;
+- **9,6 %** : les berlingots concentrés, à diluer ;
+- **5 à 6 %** : la concentration courante aux États-Unis et dans beaucoup de pays.
+
+**Toujours sans parfum ni additif** pour l'eau de boisson.
+
+## Les dosages utiles
+
+| Usage | Dosage |
+|---|---|
+| Désinfecter l'eau de boisson (claire) | **4 à 5 gouttes de Javel 2,6 % par litre**, ou 2 gouttes de Javel à 5-6 %. Attendre 30 minutes. |
+| Eau trouble | Filtrer d'abord à travers un tissu, puis doubler la dose |
+| Surfaces, vaisselle, linge d'un malade (0,1 %) | **Un verre (250 ml) de Javel 2,6 % dans 6 litres d'eau** |
+| Sang, vomissements, selles (0,5 %) | **1 volume de Javel 2,6 % pour 4 volumes d'eau** |
+
+**Le bon dosage pour l'eau de boisson** laisse une **légère odeur de chlore** après 30 minutes. Pas d'odeur : recommencez la dose et attendez encore. Trop fort : laissez reposer à l'air libre, le chlore s'évapore. Voir [[URG-EAU-001]].
+
+## Les règles
+
+- **Jamais mélangée** avec un autre produit : avec un acide (vinaigre, détartrant, nettoyant WC), elle dégage du **chlore gazeux** ; avec de l'ammoniaque ou de l'urine concentrée, des **chloramines**. Les deux brûlent les poumons. Voir [[TEC-CHI-006]].
+- **Diluée dans de l'eau froide**, jamais chaude.
+- **Les solutions diluées se préparent chaque jour** : elles perdent leur force en quelques heures à quelques jours.
+- **La bouteille elle-même s'affaiblit** avec le temps, la chaleur et la lumière : au frais et dans le noir, elle garde l'essentiel de sa force quelques mois. Une vieille Javel se dose plus fort.
+- **Gants et aération** ; rincer à l'eau abondante en cas de projection dans les yeux.
+
+## En fabriquer sans magasin
+
+Le courant électrique qui traverse de l'**eau très salée** entre deux électrodes en graphite (mines de crayon, électrodes de piles usagées) produit de l'hypochlorite : c'est le principe des petits électrochlorateurs utilisés dans les villages sans approvisionnement. Avec une batterie de 12 volts, quelques heures, en plein air (il se dégage un peu de chlore gazeux), on obtient une solution faible, qu'on dose plus fort et qu'on utilise dans la journée. Sans moyen de mesure, l'odeur de chlore après 30 minutes reste le repère.
+
+## Ce qu'elle ne fait pas
+
+Elle ne tue pas tout : certains parasites de l'eau (cryptosporidium) lui résistent, et elle ne retire aucun produit chimique. Pour une eau douteuse, l'ébullition reste la référence. Voir [[URG-EAU-001]].
+
+---
+id: TEC-CHI-008
+titre: L'alcool et les désinfectants
+axe: 2
+categorie: Chimie et Matériaux
+temps: Court
+contexte: 1
+risque: Discret
+materiel: Rien
+priorite: normale
+origine: officielle
+tags: [alcool, desinfectant, gel hydroalcoolique, antiseptique, chlorhexidine, 70 degres, methanol]
+sources: ["Organisation mondiale de la santé, Guide to Local Production: WHO-recommended Handrub Formulations, 2010", "Centers for Disease Control and Prevention, Guideline for Disinfection and Sterilization in Healthcare Facilities, 2008", "ANSM, antiseptiques et désinfectants : bon usage"]
+---
+
+::L'alcool pur désinfecte moins bien que l'alcool à 70 %. L'eau aide l'alcool à pénétrer les microbes au lieu de les sécher en surface. Bien des idées reçues sur les désinfectants tombent ainsi à la lecture des faits.::
+
+## Antiseptique ou désinfectant
+
+- **Un antiseptique** s'applique sur la peau et les plaies : chlorhexidine, povidone iodée, alcool sur peau saine.
+- **Un désinfectant** s'applique sur les surfaces et les objets : eau de Javel, alcool, produits professionnels.
+
+## L'alcool
+
+- **Le plus efficace est à 70 %** (entre 60 et 80 %) d'éthanol ou d'isopropanol. Pur, il s'évapore trop vite et agit moins bien.
+- **Il tue** la plupart des bactéries et beaucoup de virus en quelques secondes.
+- **Il tue mal** certains virus des gastro-entérites (norovirus) et **pas du tout** les spores. Pour ceux-là : eau de Javel et lavage au savon.
+- **Il brûle** : pas de flamme, de cigarette ni de poêle à côté d'un gel frais sur les mains.
+
+**Le gel hydroalcoolique de l'OMS**, préparé partout dans le monde : environ 80 % d'éthanol (ou 75 % d'isopropanol), un peu de glycérol pour protéger la peau, un peu d'eau oxygénée contre les contaminations, et de l'eau.
+
+## Les autres
+
+- **Chlorhexidine** : l'antiseptique des plaies, incolore, peu irritant. Voir [[URG-SEC-009]].
+- **Povidone iodée** : antiseptique large, colore la peau en brun. Pas chez les nouveau-nés ni en cas de problème de thyroïde.
+- **Eau de Javel** : le désinfectant des surfaces, du linge et de l'eau. Voir [[TEC-CHI-009]].
+- **Eau oxygénée** : mousse beaucoup, mais abîme les tissus d'une plaie. À éviter dans les plaies ouvertes.
+- **Vinaigre** : nettoie et détartre, **mais ne désinfecte presque pas**.
+
+## Sans rien de tout ça
+
+- **Le savon et l'eau** retirent les microbes des mains aussi bien que le gel, et mieux quand les mains sont sales.
+- **L'ébullition** stérilise les instruments : 10 minutes dans l'eau bouillante.
+- **Le soleil** : le linge séché en plein soleil, et l'eau claire exposée six heures en bouteille transparente au soleil, sont en partie désinfectés par les ultraviolets.
+
+## Les pièges
+
+- **L'alcool à brûler, le lave-glace et l'alcool ménager** ne se boivent jamais : ils peuvent contenir du méthanol, qui rend aveugle et tue. Un alcool désinfectant non identifié ne va pas dans une boisson.
+- **Désinfecter une surface sale ne sert à rien** : on nettoie d'abord, on désinfecte ensuite.
+- **Le temps de contact compte** : un désinfectant essuyé tout de suite n'a pas agi.
+
+---
+id: TEC-CHI-007
+titre: Lire une étiquette de danger
+axe: 2
+categorie: Chimie et Matériaux
+temps: Court
+contexte: 1
+risque: Discret
+materiel: Rien
+priorite: normale
+origine: officielle
+tags: [pictogrammes, clp, fiche de securite, plaque orange, adr, numero onu, danger chimique]
+sources: ["Règlement (CE) n° 1272/2008 (CLP) : classification, étiquetage et emballage", "Accord européen relatif au transport international des marchandises dangereuses par route (ADR)", "INRS, ED 6150 : étiquetage des produits chimiques"]
+---
+
+::Un losange rouge sur un bidon, une plaque orange sur un camion : ce sont des phrases complètes pour qui sait les lire. Elles disent ce qui brûle, ce qui ronge, ce qui empoisonne, et ce qu'il ne faut pas faire.::
+
+## Les neuf pictogrammes
+
+Un losange à bord rouge, un symbole noir :
+
+| Symbole | Danger |
+|---|---|
+| Bombe qui explose | Explosif |
+| Flamme | Inflammable |
+| Flamme au-dessus d'un cercle | Comburant : fait brûler plus fort ce qui brûle |
+| Bouteille de gaz | Gaz sous pression |
+| Liquide qui ronge une main et une surface | Corrosif : brûle la peau, les yeux, le métal |
+| Tête de mort | Toxique : peut tuer à faible dose |
+| Point d'exclamation | Irritant, nocif, ou dangereux pour la couche d'ozone |
+| Silhouette avec une étoile sur la poitrine | Danger grave pour la santé : cancer, malformations, allergie respiratoire |
+| Arbre mort et poisson | Dangereux pour l'environnement |
+
+**Le mot d'avertissement** : **« Danger »** pour les produits les plus dangereux, **« Attention »** pour les autres.
+
+**Les phrases** : les **mentions H** décrivent le danger (H2 pour les dangers physiques, H3 pour la santé, H4 pour l'environnement) ; les **conseils P** disent comment se protéger et quoi faire en cas d'accident.
+
+## La fiche de données de sécurité
+
+Tout produit professionnel a une fiche de 16 rubriques. Les plus utiles en urgence :
+
+- **Rubrique 2** : les dangers ;
+- **Rubrique 4** : les premiers secours ;
+- **Rubrique 5** : comment éteindre un feu de ce produit ;
+- **Rubrique 7** : comment le stocker ;
+- **Rubrique 8** : quelles protections porter.
+
+## La plaque orange des camions et des citernes
+
+Deux nombres, l'un au-dessus de l'autre :
+
+- **en haut, le code danger** : le premier chiffre dit le danger principal (2 gaz, 3 liquide inflammable, 4 solide inflammable, 5 comburant, 6 toxique, 8 corrosif). Un chiffre doublé renforce le danger (33 : très inflammable). **Un X devant : ne jamais mettre d'eau.**
+- **en bas, le numéro ONU** de la matière.
+
+Quelques numéros courants : **1203** essence, **1202** gazole, **1965** gaz de pétrole liquéfié, **1005** ammoniac, **1017** chlore.
+
+**Un accident de camion avec plaque orange** : on s'éloigne, contre le vent, et on donne les deux nombres aux pompiers au téléphone. Ils savent immédiatement ce qu'il y a dedans. Voir [[SURV-CRI-006]].
+
+## Ce qu'on en retient
+
+- **Pas de pictogramme ne veut pas dire sans danger** : l'eau de Javel, l'essence et les médicaments tuent aussi.
+- **Deux pictogrammes différents** sur deux produits : on ne les mélange pas. Voir [[TEC-CHI-006]].
+
+---
+id: TEC-CHI-006
+titre: Les produits dangereux de la maison
+axe: 2
+categorie: Chimie et Matériaux
+temps: Court
+contexte: 1
+risque: Discret
+materiel: Rien
+priorite: normale
+origine: officielle
+tags: [produits menagers, intoxication, melanges, javel, ammoniaque, deboucheur, enfants, centre antipoison]
+sources: ["Centres antipoison et de toxicovigilance de France, données sur les intoxications domestiques", "ANSES, fiches sur les mélanges de produits ménagers", "American Association of Poison Control Centers, Household chemical safety"]
+---
+
+::Sous l'évier d'une cuisine ordinaire, il y a de quoi fabriquer un gaz toxique en versant deux produits dans le même seau. Chaque année, des gens s'intoxiquent en voulant « nettoyer plus fort ».::
+
+## Les mélanges interdits
+
+| Mélange | Ce qui se forme | Effet |
+|---|---|---|
+| **Javel + acide** (vinaigre, détartrant, nettoyant WC, anticalcaire) | Chlore gazeux | Brûle les yeux et les poumons |
+| **Javel + ammoniaque** (certains nettoyants vitres) | Chloramines | Toux, œdème pulmonaire |
+| **Javel + alcool** | Chloroforme et dérivés | Malaise, toxicité |
+| **Eau oxygénée + vinaigre** | Acide peracétique | Corrosif |
+| **Deux déboucheurs différents** (un acide et un basique) | Réaction violente, projections bouillantes | Brûlures |
+
+**La règle** : **un produit à la fois**, rincer entre deux, aérer.
+
+## Les plus dangereux
+
+- **Déboucheurs de canalisations** : soude caustique ou acide sulfurique concentrés. Brûlures graves de la peau, des yeux, de la bouche.
+- **Pastilles de lave-vaisselle et capsules de lessive** : caustiques, et attirantes pour un enfant.
+- **Antigel** (éthylène glycol) : il a un goût sucré, et quelques gorgées tuent un enfant, et un chien.
+- **Lave-glace, alcool à brûler** : contiennent souvent du méthanol, qui rend aveugle et tue.
+- **Pétrole lampant, huile de lampe, white-spirit** : avalés, ils passent dans les poumons et provoquent une pneumonie grave.
+- **Piles bouton** : voir [[TEC-ENE-012]].
+- **Médicaments** : la première cause d'intoxication des enfants.
+
+## Ranger
+
+- **Dans le contenant d'origine**, jamais dans une bouteille d'eau ou de soda : c'est la cause classique des intoxications d'enfants et d'adultes distraits.
+- **En hauteur, fermé à clé** s'il y a des enfants.
+- **Loin de la nourriture.**
+
+## En cas d'accident
+
+- **Avalé** : **ne faites pas vomir**, ne donnez **ni lait ni eau**, gardez l'emballage. Appelez le **centre antipoison** de votre région ou le **15**.
+- **Dans les yeux** : rincez à l'eau courante **15 minutes**, paupières écartées.
+- **Sur la peau** : retirez les vêtements touchés, rincez 15 minutes.
+- **Respiré** : sortez à l'air frais, aérez, et appelez si ça ne passe pas.
+
+Lire les étiquettes et les pictogrammes : [[TEC-CHI-007]]. Les intoxications en général : [[URG-SEC-003]].
 `;
 /* Versions anglaises des fiches officielles, même identifiant. Source : traductions/en/. */
 const CORPUS_EN=String.raw`
