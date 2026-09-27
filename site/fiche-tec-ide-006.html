@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr" data-page-lang="fr" data-alt="fiche-tec-ide-006-en.html" data-kind="fiche">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Le terminal de paiement — Phenix</title>
+<meta name="description" content="Le terminal de paiement — Phenix">
+<meta name="theme-color" content="#040806">
+<script>try{var t=localStorage.getItem("phenix-theme");if(t&&t!=="phosphore")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<meta property="og:title" content="Phenix">
+<meta property="og:description" content="Le terminal de paiement — Phenix">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://anthrophobicc.github.io/PhenixProject/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="logo.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="img/icone-180.png">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="fiche.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="index.html"><span class="mark"></span><span>PHENIX</span></a>
+  <nav>
+    <a href="explore.html" data-i18n="nav.explore">Explorer</a>
+    <a href="devices.html" data-i18n="nav.devices">Appareils</a>
+    <a href="lab.html" data-i18n="nav.contribute">Phenix Lab</a>
+    <a href="hub.html" data-i18n="nav.hub">Phenix Hub</a>
+    <a href="download.html" data-i18n="nav.download">Télécharger</a>
+    <button class="lang" type="button" aria-label="Language">EN</button>
+    <span class="themes" role="group" aria-label="Theme">
+      <button type="button" data-theme-set="phosphore" title="Phosphor" aria-label="Phosphor theme" style="--c1:#040806;--c2:#39FF6A"></button>
+      <button type="button" data-theme-set="ambre" title="Amber" aria-label="Amber theme" style="--c1:#0A0703;--c2:#FFB000"></button>
+      <button type="button" data-theme-set="papier" title="Paper" aria-label="Paper theme" style="--c1:#F4F2EC;--c2:#2F6E2A"></button>
+    </span>
+  </nav>
+</header>
+<main class="wrap fiche">
+  <p class="fil"><a href="explore.html" data-i18n="nav.explore">Explorer</a> › La Technique › Information et Données</p>
+  
+  <div class="tags">
+    
+    <span class="tag off" data-i18n="tag.off">Officielle</span>
+  </div>
+  <h1>Le terminal de paiement</h1>
+  <p class="meta">Axe 2 · La Technique · Information et Données</p>
+  <div class="bals"><div><span>Temps</span><b>Court</b></div><div><span>Contexte</span><b>Seul</b></div><div><span>Risque</span><b>Discret</b></div><div><span>Matériel</span><b>Technique</b></div></div>
+  <article class="prose"><p class="lede-f">Une carte bancaire ne contient pas d&#x27;argent. Elle contient une clé qui prouve que c&#x27;est bien elle. Le terminal ne paie rien : il pose une question à la banque, et attend la réponse.</p>
+<h2>Ce qu&#x27;il y a dans la carte</h2>
+<p>La puce est un vrai petit ordinateur, avec une mémoire protégée. Elle garde une <strong>clé secrète</strong> qu&#x27;elle ne révèle jamais, même à celui qui la lit. À chaque paiement, elle s&#x27;en sert pour calculer un <strong>cryptogramme</strong> : un code unique, valable pour cette opération, ce montant, ce jour.</p>
+<p>C&#x27;est ce qui rend une carte à puce difficile à copier. On peut lire son numéro, pas sa clé ; et un cryptogramme volé ne sert qu&#x27;une fois.</p>
+<p><strong>La piste magnétique</strong>, au dos, contient seulement le numéro et la date. Elle se copie facilement : c&#x27;est pour cela qu&#x27;elle ne sert presque plus en Europe.</p>
+<h2>Ce qui se passe en deux secondes</h2>
+<ol><li><strong>Lecture.</strong> Le terminal parle à la puce, par contact ou par radio.</li><li><strong>Le code.</strong> Vous tapez votre code. En Europe, c&#x27;est le plus souvent <strong>la puce elle-même qui le vérifie</strong> : le code ne part pas vers la banque. Trois erreurs et elle se bloque.</li><li><strong>La demande.</strong> Le terminal envoie le montant et le cryptogramme à la banque du commerçant (<strong>l&#x27;acquéreur</strong>).</li><li><strong>Le réseau.</strong> L&#x27;acquéreur transmet par le réseau de la carte (CB, Visa, Mastercard) à <strong>votre banque</strong>, l&#x27;émetteur.</li><li><strong>La décision.</strong> Votre banque vérifie le cryptogramme, le solde ou le plafond, les signes de fraude, et répond oui ou non.</li><li><strong>Le ticket.</strong> La réponse revient par le même chemin. Tout cela dure une à trois secondes.</li></ol>
+<p><strong>L&#x27;argent, lui, ne bouge pas encore.</strong> Le soir, le terminal envoie toutes les opérations de la journée en un lot (la <strong>télécollecte</strong>). Les banques compensent entre elles, et le commerçant est crédité un ou deux jours plus tard, moins une commission.</p>
+<h2>Le sans contact</h2>
+<p>La carte contient une petite antenne. Le terminal émet un champ radio à <strong>13,56 MHz</strong> qui alimente la puce à quelques centimètres, sans pile. Les terminaux de paiement sont conçus pour lire à moins de 4 cm environ.</p>
+<p>Pour aller vite, on saute le code sous un certain montant, <strong>50 euros en France</strong>. Pour limiter les risques en cas de vol, la carte compte les paiements sans code : passé un montant cumulé ou un nombre d&#x27;opérations, elle demande le code au paiement suivant.</p>
+<p><strong>Le téléphone</strong> fonctionne de la même façon, mais le numéro de carte est remplacé par un numéro de substitution, et c&#x27;est votre empreinte ou votre visage qui remplace le code.</p>
+<h2>Pourquoi ça peut dire non</h2>
+<ul><li>Plafond de paiement atteint (souvent sur 7 ou 30 jours glissants).</li><li>Carte bloquée, expirée, ou puce usée : essayez le sans contact, ou l&#x27;inverse.</li><li>Soupçon de fraude : achat inhabituel, pays inhabituel. Votre application bancaire le signale souvent.</li><li><strong>Pas de réseau.</strong></li></ul>
+<h2>Quand le réseau tombe</h2>
+<p>Un terminal a besoin de deux choses : <strong>du courant et une liaison</strong> (ligne fixe, internet, ou carte SIM pour les terminaux mobiles).</p>
+<p>Certains terminaux savent accepter un paiement <strong>hors ligne</strong> sous un petit montant fixé par la banque (le plafond de sol) : la puce vérifie le code et la carte seule, l&#x27;opération est stockée et envoyée plus tard. C&#x27;est un risque pour le commerçant, qui le limite ou le refuse.</p>
+<p>Lors d&#x27;une coupure étendue, comme en Espagne et au Portugal le 28 avril 2025, les terminaux s&#x27;arrêtent avec le reste : les magasins encore ouverts n&#x27;acceptent plus que <strong>les espèces</strong>. Gardez-en un peu chez vous, en petites coupures. Voir <span title="TEC-RES-001">Les réseaux, de la source à la prise</span>.</p>
+<h2>Se protéger</h2>
+<ul><li><strong>Cachez le clavier</strong> quand vous tapez le code : une caméra ou un regard suffit à le voler, et la carte se vole ensuite.</li><li><strong>Regardez le terminal</strong> d&#x27;un distributeur ou d&#x27;une pompe à essence : une façade qui bouge, un lecteur épais, un clavier en relief peuvent cacher un copieur.</li><li><strong>Le montant affiché</strong> est celui que vous acceptez : lisez-le avant de présenter la carte.</li><li><strong>Une carte perdue</strong> se fait opposer tout de suite, par l&#x27;application ou par le numéro de votre banque. En France, le numéro interbancaire d&#x27;opposition est le 0 892 705 705.</li><li>Le sans contact volé est limité par le compteur de la carte ; le paiement en ligne avec vos numéros est le vrai risque. Surveillez vos relevés.</li></ul></article>
+  <div class="blk"><h4>Sources</h4><div class="src">EMVCo, EMV Integrated Circuit Card Specifications for Payment Systems, livres 1 à 4</div><div class="src">Groupement des Cartes Bancaires CB, règles de fonctionnement du paiement sans contact</div><div class="src">Banque de France, Observatoire de la sécurité des moyens de paiement, rapport annuel</div><div class="src">ISO/IEC 14443, cartes sans contact de proximité</div></div>
+  
+  <section class="blk">
+    <h4 data-i18n="fiche.commu">Utile ? Quelque chose à ajouter ?</h4>
+    <div id="communaute" data-cible="TEC-IDE-006"></div>
+  </section>
+  <div class="blk cta">
+    <p data-i18n="fiche.cta"><strong>Cette fiche fait partie de Phenix.</strong> L'application contient tout le corpus, les cartes et la bibliothèque, et fonctionne hors ligne.</p>
+    <p><a class="btn primary" href="download.html" data-i18n="home.b2">Télécharger Phenix Base</a>
+       <a class="btn" href="lab.html#ecrire" data-i18n="sup.btn">Proposer une fiche</a></p>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <p data-i18n="foot.motto"><strong>Phenix</strong> — le savoir est votre seule immunité.</p>
+    <p class="small">
+      <a href="explore.html" data-i18n="nav.explore">Explorer</a> ·
+      <a href="devices.html" data-i18n="nav.devices">Appareils</a> ·
+      <a href="lab.html" data-i18n="nav.contribute">Phenix Lab</a> ·
+      <a href="hub.html" data-i18n="nav.hub">Phenix Hub</a> ·
+      <a href="download.html" data-i18n="nav.download">Télécharger</a> ·
+      <a href="soutenir.html" data-i18n="nav.support">Soutenir</a> ·
+      <a href="https://www.instagram.com/phenixprjct/" rel="noopener">Instagram</a> ·
+      <a href="https://www.reddit.com/r/PhenixProject/" rel="noopener">Reddit</a> ·
+      <a href="https://github.com/anthrophobicc/PhenixProject" rel="noopener">GitHub</a>
+    </p>
+    <p class="small dim" data-i18n="foot.licence">Logiciel sous licence MIT · fiches sous licence CC BY-SA 4.0</p>
+  </div>
+</footer>
+<script src="i18n.js"></script>
+<script src="en-ligne.js"></script><script src="communaute.js"></script>
+</body>
+</html>

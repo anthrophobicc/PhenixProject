@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" data-page-lang="en" data-alt="fiche-tec-ide-004.html" data-kind="fiche">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Security cameras — Phenix</title>
+<meta name="description" content="Security cameras — Phenix">
+<meta name="theme-color" content="#040806">
+<script>try{var t=localStorage.getItem("phenix-theme");if(t&&t!=="phosphore")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<meta property="og:title" content="Phenix">
+<meta property="og:description" content="Security cameras — Phenix">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://anthrophobicc.github.io/PhenixProject/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="logo.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="img/icone-180.png">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="fiche.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="index.html"><span class="mark"></span><span>PHENIX</span></a>
+  <nav>
+    <a href="explore.html" data-i18n="nav.explore">Explore</a>
+    <a href="devices.html" data-i18n="nav.devices">Devices</a>
+    <a href="lab.html" data-i18n="nav.contribute">Phenix Lab</a>
+    <a href="hub.html" data-i18n="nav.hub">Phenix Hub</a>
+    <a href="download.html" data-i18n="nav.download">Download</a>
+    <button class="lang" type="button" aria-label="Language">FR</button>
+    <span class="themes" role="group" aria-label="Theme">
+      <button type="button" data-theme-set="phosphore" title="Phosphor" aria-label="Phosphor theme" style="--c1:#040806;--c2:#39FF6A"></button>
+      <button type="button" data-theme-set="ambre" title="Amber" aria-label="Amber theme" style="--c1:#0A0703;--c2:#FFB000"></button>
+      <button type="button" data-theme-set="papier" title="Paper" aria-label="Paper theme" style="--c1:#F4F2EC;--c2:#2F6E2A"></button>
+    </span>
+  </nav>
+</header>
+<main class="wrap fiche">
+  <p class="fil"><a href="explore.html" data-i18n="nav.explore">Explore</a> › Technique › Information et Données</p>
+  
+  <div class="tags">
+    
+    <span class="tag off" data-i18n="tag.off">Official</span>
+  </div>
+  <h1>Security cameras</h1>
+  <p class="meta">Axis 2 · Technique · Information et Données</p>
+  <div class="bals"><div><span>Time</span><b>Short</b></div><div><span>Context</span><b>Alone</b></div><div><span>Risk</span><b>Discreet</b></div><div><span>Gear</span><b>Technical</b></div></div>
+  <article class="prose"><p class="lede-f">A camera doesn&#x27;t see better than you. It sees longer, without blinking, and it keeps everything. That&#x27;s its only strength, and its weaknesses come from the same place.</p>
+<h2>What&#x27;s inside</h2>
+<p>A security camera is a camera that takes 15 to 30 pictures a second, non-stop.</p>
+<p><strong>The lens</strong> gathers light. Its focal length decides everything: short, it sees wide but details are small; long, it sees far but narrow. A camera cannot see everything in detail at once.</p>
+<p><strong>The sensor</strong> turns light into pixels. More pixels let you zoom into the image, but only if the lens and the light keep up.</p>
+<p><strong>The infrared filter.</strong> By day, a small filter blocks infrared to keep colours right. At night, it slides away with a little click, the camera switches to black and white and lights the scene itself with <strong>infrared LEDs</strong>.</p>
+<p><strong>The processor</strong> compresses the image and sends it. It often also handles motion detection, sometimes recognition of people or vehicles.</p>
+<h2>Night vision</h2>
+<p>Infrared LEDs at <strong>850 nm</strong> give off a dull red glow, visible to the eye when you look at the camera in the dark. Those at <strong>940 nm</strong> are invisible, but reach less far.</p>
+<p>This lighting has a limited range, often 20 to 30 m (65 to 100 ft). Beyond it, the image is black. See <span title="TEC-NUI-001">Voir dans le noir</span> for night vision in general.</p>
+<p><strong>A phone camera sees infrared</strong>: film the camera in the dark, its LEDs show up as purple or white dots.</p>
+<h2>Analogue or IP</h2>
+<p><strong>Analogue cameras</strong> (and their modern HD versions over coaxial cable) send a raw video signal to a recorder, the <strong>DVR</strong>. Everything stays in the building.</p>
+<p><strong>IP cameras</strong> are small computers on the network. They send a digital stream to a network recorder (<strong>NVR</strong>), a server or a cloud. Many are powered by the network cable itself (<strong>PoE</strong>, Power over Ethernet).</p>
+<p><strong>Consumer WiFi cameras</strong> almost always send their footage to the maker&#x27;s servers. Without internet, many do nothing more, or only record to their memory card.</p>
+<h2>Why compression matters</h2>
+<p>Raw video would fill a disk in a few hours. The <strong>H.264</strong> and <strong>H.265</strong> codecs keep only what changes from one frame to the next. An empty car park costs almost nothing; a street in the rain or a tree in the wind costs a lot, because everything moves.</p>
+<p>In practice, a recorder often keeps <strong>one to four weeks</strong>, then overwrites the oldest footage. <strong>If you need a recording, ask for it quickly.</strong></p>
+<h2>Detect, recognise, identify</h2>
+<p>The European standard EN 62676-4 sets what you can expect from an image according to how many pixels cover one metre of the scene:</p>
+<table><thead><tr><th>Goal</th><th>Pixels per metre</th><th>What you can tell</th></tr></thead><tbody><tr><td>Detect</td><td>25</td><td>Someone is there</td></tr><tr><td>Observe</td><td>62</td><td>What they&#x27;re doing, their clothes</td></tr><tr><td>Recognise</td><td>125</td><td>It&#x27;s someone you know</td></tr><tr><td>Identify</td><td>250</td><td>You can establish who it is</td></tr></tbody></table>
+<p>A 4K camera covering a 40 m (130 ft) wide car park gives about 100 pixels per metre: it may recognise, it doesn&#x27;t identify. <strong>That&#x27;s why footage on the TV news is so blurry.</strong></p>
+<h2>What fools a camera</h2>
+<ul><li><strong>Backlight</strong>: a figure in front of a glass door or headlights turns black. So-called WDR cameras partly compensate.</li><li><strong>Window reflections</strong>: a camera behind a window, at night, sees only the reflection of its own LEDs.</li><li><strong>Rain, snow, spider webs</strong> in front of the lens trigger motion detection endlessly, or blind the image at night.</li><li><strong>Angle</strong>: a camera mounted too high sees only the tops of heads and cap peaks.</li><li><strong>The network</strong>: a poorly protected IP camera, with its factory password, can be reached from the internet. Entire websites list open cameras.</li></ul>
+<h2>Installing your own</h2>
+<ol><li>Decide <strong>what you want to see</strong>: the entrance, a driveway, a letterbox. One camera per need, not one camera for everything.</li><li>Mount it <strong>2.5 to 3 m (8 to 10 ft) high</strong>, low enough to see faces, high enough not to be torn down.</li><li>Avoid backlight: not facing east or west, not facing a lamp.</li><li><strong>Change the password</strong> at install, update it, and if possible keep it on a separate network.</li><li>Prefer <strong>local</strong> recording (card, NVR): it works without internet.</li></ol>
+<p><strong>The law.</strong> In France, an individual may only film their own property. The public street, the garden or the neighbours&#x27; windows are off limits. Employees must be informed, and footage may not be kept more than a month. Rules differ by country. City cameras follow other rules, see <a href="fiche-tec-ide-005-en.html">Public CCTV</a>.</p></article>
+  <div class="blk"><h4>Sources</h4><div class="src">Standard EN 62676-4, video surveillance systems, application guidelines</div><div class="src">CNIL (French data protection authority), practical guides on video surveillance</div><div class="src">Technical documentation of the H.264 and H.265 codecs (ITU-T)</div></div>
+  <div class="blk"><h4 data-i18n="fiche.back">Sheets that lead here</h4><a class="item" href="fiche-tec-ide-005-en.html"><h3>Public CCTV</h3><div class="meta">Axis 2</div></a></div>
+  <section class="blk">
+    <h4 data-i18n="fiche.commu">Useful? Anything to add?</h4>
+    <div id="communaute" data-cible="TEC-IDE-004"></div>
+  </section>
+  <div class="blk cta">
+    <p data-i18n="fiche.cta"><strong>This sheet is part of Phenix.</strong> The app holds the whole library, the maps and the bookshelf, and works offline.</p>
+    <p><a class="btn primary" href="download.html" data-i18n="home.b2">Download Phenix Base</a>
+       <a class="btn" href="lab.html#ecrire" data-i18n="sup.btn">Write a sheet</a></p>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <p data-i18n="foot.motto"><strong>Phenix</strong> — knowledge is your only immunity.</p>
+    <p class="small">
+      <a href="explore.html" data-i18n="nav.explore">Explore</a> ·
+      <a href="devices.html" data-i18n="nav.devices">Devices</a> ·
+      <a href="lab.html" data-i18n="nav.contribute">Phenix Lab</a> ·
+      <a href="hub.html" data-i18n="nav.hub">Phenix Hub</a> ·
+      <a href="download.html" data-i18n="nav.download">Download</a> ·
+      <a href="soutenir.html" data-i18n="nav.support">Support</a> ·
+      <a href="https://www.instagram.com/phenixprjct/" rel="noopener">Instagram</a> ·
+      <a href="https://www.reddit.com/r/PhenixProject/" rel="noopener">Reddit</a> ·
+      <a href="https://github.com/anthrophobicc/PhenixProject" rel="noopener">GitHub</a>
+    </p>
+    <p class="small dim" data-i18n="foot.licence">Software under the MIT licence · sheets under CC BY-SA 4.0</p>
+  </div>
+</footer>
+<script src="i18n.js"></script>
+<script src="en-ligne.js"></script><script src="communaute.js"></script>
+</body>
+</html>
