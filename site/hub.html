@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" data-page-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="hub.title">Phenix Hub</title>
+<meta name="description" content="Phenix Hub: download the official Phenix library, the versions communities make for their language or region, and the sheets people write. One file, readable offline.">
+<meta name="theme-color" content="#040806">
+<script>try{var t=localStorage.getItem("phenix-theme");if(t&&t!=="phosphore")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<meta property="og:title" content="Phenix">
+<meta property="og:description" content="Phenix Hub: download the official Phenix library, the versions communities make for their language or region, and the sheets people write. One file, readable offline.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://anthrophobicc.github.io/PhenixProject/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="logo.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="img/icone-180.png">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="index.html"><span class="mark"></span><span>PHENIX</span></a>
+  <nav>
+    <a href="explore.html" data-i18n="nav.explore">Explore</a>
+    <a href="devices.html" data-i18n="nav.devices">Devices</a>
+    <a href="lab.html" data-i18n="nav.contribute">Phenix Lab</a>
+    <a href="hub.html" data-i18n="nav.hub">Phenix Hub</a>
+    <a href="download.html" data-i18n="nav.download">Download</a>
+    <button class="lang" type="button" aria-label="Language">FR</button>
+    <span class="themes" role="group" aria-label="Theme">
+      <button type="button" data-theme-set="phosphore" title="Phosphor" aria-label="Phosphor theme" style="--c1:#040806;--c2:#39FF6A"></button>
+      <button type="button" data-theme-set="ambre" title="Amber" aria-label="Amber theme" style="--c1:#0A0703;--c2:#FFB000"></button>
+      <button type="button" data-theme-set="papier" title="Paper" aria-label="Paper theme" style="--c1:#F4F2EC;--c2:#2F6E2A"></button>
+    </span>
+  </nav>
+</header>
+<main class="wrap hub" style="padding-top:34px;padding-bottom:60px">
+  <p class="kicker" data-i18n="hub.k">Phenix Hub · every version of the library</p>
+  <h1 class="lab-titre" data-i18n="hub.h1">Take the version you need.</h1>
+  <p class="lede" data-i18n="hub.lede">The official library, the versions communities make for their language or their region, and the sheets people write. Each one is a single file that Phenix Base opens offline, on a phone, a computer or one of our devices.</p>
+
+  <section class="hub-off" aria-labelledby="hubOffTitre">
+    <div class="hub-off-tete">
+      <p class="kicker" data-i18n="hub.o.k">Current official version</p>
+      <h2 id="hubOffTitre">Phenix <span class="hub-num">2026.09.27</span></h2>
+      <p data-i18n="hub.o.p">189 sheets, checked by the team, sourced and linked to each other. The one built into the app, free under CC BY-SA 4.0.</p>
+    </div>
+    <div class="hub-fichiers">
+      <a class="hub-fichier" href="hub/phenix-officielle-fr.json" download>
+        <b>Français</b><span data-i18n="hub.o.fr">189 sheets · 1.3 MB</span>
+      </a>
+      <a class="hub-fichier" href="hub/phenix-officielle-en.json" download>
+        <b>English</b><span data-i18n="hub.o.en">49 translated, the others in French for now · 1.2 MB</span>
+      </a>
+    </div>
+    <p class="hub-nouv"><b data-i18n="hub.o.new">New in this version:</b> <a href="fiche-urg-mer-001-en.html">Caught in a rip current</a>, <a href="fiche-surv-ori-004-en.html">Measuring with your hand</a>, <a href="fiche-surv-mar-001-en.html">Sailors&#x27; tricks</a>, <a href="fiche-surv-met-001-en.html">Reading tomorrow&#x27;s weather in the sky</a>, <a href="fiche-surv-eau-005-en.html">Finding water</a>, <a href="fiche-surv-ori-005-en.html">Telling time without a watch</a></p>
+    <p class="small dim"><span data-i18n="hub.o.fp">Fingerprint</span> <code>5781c41b5d61</code> · 2026-09-27 · <a href="https://github.com/anthrophobicc/PhenixProject/tree/main/corpus" rel="noopener" data-i18n="hub.o.src">the source files on GitHub</a></p>
+  </section>
+
+  <section class="hub-sec" id="versions">
+    <div class="hub-barre">
+      <h2 data-i18n="hub.v.h">Community versions</h2>
+      <a class="btn" href="#publier" data-i18n="hub.v.pub">Publish a version</a>
+    </div>
+    <p class="dim" data-i18n="hub.v.p">A language, a region, a sailing club, a village: every community can make its own Phenix, starting from the official one. Vote for the ones you trust. Each one is checked before it shows up here.</p>
+    <div id="hubVersions" class="hub-liste"><p class="dim small">…</p></div>
+  </section>
+
+  <section class="hub-sec" id="fiches">
+    <div class="hub-barre">
+      <h2 data-i18n="hub.f.h">Sheets written by people</h2>
+      <button class="btn" type="button" id="hubToutes" hidden data-i18n="hub.f.all">Download them all</button>
+    </div>
+    <p class="dim" data-i18n="hub.f.p">Proposed in <a href="lab.html">Phenix Lab</a>, voted on by the community. Download one to read it in Phenix Base, or take them all in one file. They are not checked by the team yet: read them with a critical eye.</p>
+    <div id="hubFiches" class="hub-liste"><p class="dim small">…</p></div>
+  </section>
+
+  <section class="hub-sec" id="publier">
+    <h2 data-i18n="hub.p.h">Publish your version</h2>
+    <ol class="lab-etapes">
+      <li data-i18n="hub.p.e1"><b>Start from the official version</b>: download it above, or open Phenix Base.</li>
+      <li data-i18n="hub.p.e2"><b>Translate, adapt, add</b> your sheets, in Phenix Base or in any text editor.</li>
+      <li data-i18n="hub.p.e3"><b>Export it</b>: Phenix Base › Modules › Phenix Hub › Create my version.</li>
+      <li data-i18n="hub.p.e4"><b>Send it here.</b> The team checks it is what it says it is, then it shows up for everyone.</li>
+    </ol>
+    <form id="formVersion" autocomplete="off">
+      <div class="field">
+        <label for="vFichier"><span data-i18n="hub.p.f">The version file (.json)</span> <span class="req">*</span></label>
+        <p class="help" data-i18n="hub.p.fh">The file Phenix Base exports with “Create my version”. 25 MB at most.</p>
+        <input type="file" id="vFichier" accept=".json,application/json" required>
+        <p class="help" id="vApercu"></p>
+      </div>
+      <div class="row">
+        <div class="field"><label for="vNom"><span data-i18n="hub.p.n">Name</span> <span class="req">*</span></label>
+          <input id="vNom" required minlength="3" maxlength="80" placeholder="e.g. Phenix in Spanish" data-i18n-ph="hub.p.np"></div>
+        <div class="field"><label for="vLangue"><span data-i18n="hub.p.l">Language</span> <span class="req">*</span></label>
+          <input id="vLangue" required minlength="2" maxlength="12" placeholder="e.g. es, zh, pt-BR" data-i18n-ph="hub.p.lp"></div>
+      </div>
+      <div class="field"><label for="vCommu"><span data-i18n="hub.p.c">Community</span></label>
+        <input id="vCommu" maxlength="80" placeholder="Who it&#x27;s for or who made it: a country, a region, a group" data-i18n-ph="hub.p.cp"></div>
+      <div class="field"><label for="vDesc"><span data-i18n="hub.p.d">What makes it different</span></label>
+        <textarea id="vDesc" maxlength="1200" placeholder="Translated sheets, local sheets added, what you changed and why" data-i18n-ph="hub.p.dp"></textarea></div>
+      <div class="row">
+        <div class="field"><label for="vAuteur"><span data-i18n="hub.p.a">Your name or nickname</span></label>
+          <input id="vAuteur" maxlength="60" placeholder="optional" data-i18n-ph="hub.p.ap"></div>
+        <div class="field"><label for="vContact">Contact</label>
+          <input id="vContact" maxlength="120" placeholder="Email or Instagram, private (optional)" data-i18n-ph="hub.p.kp"></div>
+      </div>
+      <div style="position:absolute;left:-9999px" aria-hidden="true"><input id="vSite" tabindex="-1" autocomplete="off"></div>
+      <div id="retourVersion"></div>
+      <p><button type="submit" class="btn primary" id="vEnvoyer" data-i18n="hub.p.b">Send my version</button></p>
+      <p class="small" data-i18n="hub.p.cc">By sending, you agree that your version may be shared under the CC BY-SA 4.0 licence, like the official one.</p>
+    </form>
+  </section>
+
+  <section class="hub-sec">
+    <h2 data-i18n="hub.u.h">Using a downloaded version</h2>
+    <ul>
+      <li data-i18n="hub.u.1"><strong>In Phenix Base</strong>, on a phone or a computer: drop the file on the window, or go to Modules › Phenix Hub › Open a version file. Then choose the version you read. Your own sheets are never touched, and the official version is always one tap away.</li>
+      <li data-i18n="hub.u.2"><strong>Anywhere else</strong>: it's plain JSON with the text of each sheet in Markdown. Any device, any program can read it, today and in twenty years.</li>
+      <li data-i18n="hub.u.3"><strong>Keep a copy</strong> on a USB stick or an SD card. That's the whole point: knowledge that doesn't depend on a server.</li>
+    </ul>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <p data-i18n="foot.motto"><strong>Phenix</strong> — knowledge is your only immunity.</p>
+    <p class="small">
+      <a href="explore.html" data-i18n="nav.explore">Explore</a> ·
+      <a href="devices.html" data-i18n="nav.devices">Devices</a> ·
+      <a href="lab.html" data-i18n="nav.contribute">Phenix Lab</a> ·
+      <a href="hub.html" data-i18n="nav.hub">Phenix Hub</a> ·
+      <a href="download.html" data-i18n="nav.download">Download</a> ·
+      <a href="soutenir.html" data-i18n="nav.support">Support</a> ·
+      <a href="https://www.instagram.com/phenixprjct/" rel="noopener">Instagram</a> ·
+      <a href="https://www.reddit.com/r/PhenixProject/" rel="noopener">Reddit</a> ·
+      <a href="https://github.com/anthrophobicc/PhenixProject" rel="noopener">GitHub</a>
+    </p>
+    <p class="small dim" data-i18n="foot.licence">Software under the MIT licence · sheets under CC BY-SA 4.0</p>
+  </div>
+</footer>
+<script src="i18n.js"></script>
+<script src="en-ligne.js"></script><script src="communaute.js"></script><script src="hub.js"></script>
+</body>
+</html>

@@ -5,12 +5,16 @@
 "use strict";
 const fs = require("fs");
 const path = require("path");
+const crypto = require("crypto");
+const { versionOfficielle } = require("./version-officielle");
 
 const RACINE = path.join(__dirname, "..");
 const SITE = path.join(RACINE, "site");
 const DEPOT = "https://github.com/anthrophobicc/PhenixProject";
 // Les dernières fiches parues, montrées en tête de l'accueil (les plus récentes d'abord).
-const NOUVELLES = ["URG-VEH-001", "SURV-REC-021", "URG-INC-002", "SURV-REC-020"];
+const NOUVELLES = ["SURV-MAR-001", "SURV-ORI-005", "SURV-MET-001", "URG-MER-001"];
+// Au tout premier catalogue du Hub, faute de version précédente à comparer : les fiches parues avec lui.
+const NOUVELLES_HUB = ["URG-MER-001", "SURV-ORI-004", "SURV-MAR-001", "SURV-MET-001", "SURV-EAU-005", "SURV-ORI-005"];
 // Adresse publique du site : les aperçus de lien (og:image) exigent une URL absolue.
 const ADRESSE = "https://anthrophobicc.github.io/PhenixProject/";
 const INSTA = "https://www.instagram.com/phenixprjct/";
@@ -196,6 +200,7 @@ function nav(lang) {
     ${tx("a", "nav.explore", "Explore", "Explorer", 'href="explore.html"', lang)}
     ${tx("a", "nav.devices", "Devices", "Appareils", 'href="devices.html"', lang)}
     ${tx("a", "nav.contribute", "Phenix Lab", "Phenix Lab", 'href="lab.html"', lang)}
+    ${tx("a", "nav.hub", "Phenix Hub", "Phenix Hub", 'href="hub.html"', lang)}
     ${tx("a", "nav.download", "Download", "Télécharger", 'href="download.html"', lang)}
     <button class="lang" type="button" aria-label="Language">${lang === "fr" ? "EN" : "FR"}</button>
     <span class="themes" role="group" aria-label="Theme">
@@ -214,6 +219,7 @@ function pied(lang) {
       ${tx("a", "nav.explore", "Explore", "Explorer", 'href="explore.html"', lang)} ·
       ${tx("a", "nav.devices", "Devices", "Appareils", 'href="devices.html"', lang)} ·
       ${tx("a", "nav.contribute", "Phenix Lab", "Phenix Lab", 'href="lab.html"', lang)} ·
+      ${tx("a", "nav.hub", "Phenix Hub", "Phenix Hub", 'href="hub.html"', lang)} ·
       ${tx("a", "nav.download", "Download", "Télécharger", 'href="download.html"', lang)} ·
       ${tx("a", "nav.support", "Support", "Soutenir", 'href="soutenir.html"', lang)} ·
       <a href="${INSTA}" rel="noopener">Instagram</a> ·
@@ -271,6 +277,7 @@ function accueil() {
       <a class="act primary wide" href="phenix.html">${tx("b", "home.a0", "Open the app", "Ouvrir l'application")}${tx("span", "home.a0s", "On your phone or your computer, right in the browser. Add it to your home screen and it works without internet.", "Sur téléphone ou sur ordinateur, directement dans le navigateur. Ajoutez-la à l'écran d'accueil et elle marche sans internet.")}</a>
       <a class="act" href="explore.html">${tx("b", "home.a1", "Explore", "Explorer")}${tx("span", "home.a1s", "Read the sheets, nothing to install", "Lire les fiches sans rien installer")}</a>
       <a class="act" href="lab.html">${tx("b", "home.a2", "Phenix Lab", "Phenix Lab")}${tx("span", "home.a2s", "Suggest, vote and comment on the next sheets", "Proposez, votez et commentez les prochaines fiches")}</a>
+      <a class="act" href="hub.html">${tx("b", "home.a5", "Phenix Hub", "Phenix Hub")}${tx("span", "home.a5s", "Every version of the library: official, community, yours", "Toutes les versions de la bibliothèque : officielle, des communautés, la vôtre")}</a>
       <a class="act" href="download.html">${tx("b", "home.a3", "Download", "Télécharger")}${tx("span", "home.a3s", "Phenix Base, the full app, offline", "Phenix Base, l'application complète, hors ligne")}</a>
       <a class="act" href="soutenir.html">${tx("b", "home.a4", "Support", "Soutenir")}${tx("span", "home.a4s", "Help the project last", "Aider le projet à durer")}</a>
     </div>
@@ -670,6 +677,139 @@ function lab() {
   return page({ titreHtml: tx("title", "lab.title2", "Phenix Lab", "Phenix Lab"), desc: "Phenix Lab: suggest sheets, vote and comment. The best proposals become official sheets in the Phenix library. No account needed.", corps, scripts: '<script src="en-ligne.js"></script><script src="communaute.js"></script><script src="lab.js"></script>' });
 }
 
+/* ---------- Phenix Hub : la version officielle, un fichier par langue ---------- */
+// Tirée de l'application elle-même (app/phenix.html) : ce qu'on télécharge ici est exactement ce qu'elle embarque.
+// Le numéro de version change seulement quand le texte change ; le catalogue garde la liste des fiches
+// pour annoncer les nouvelles à la version suivante.
+const HUB = path.join(SITE, "hub");
+function construireOfficielle(appHtml) {
+  const v = versionOfficielle(appHtml.replace(/\r\n?/g, "\n"));
+  fs.mkdirSync(HUB, { recursive: true });
+  const cheminCat = path.join(HUB, "catalogue.json");
+  let avant = null;
+  try { avant = JSON.parse(fs.readFileSync(cheminCat, "utf8")).officielle; } catch { avant = null; }
+  const meme = avant && avant.empreinte === v.empreinte;
+  const jour = new Date().toISOString().slice(0, 10);
+  const version = meme ? avant.version : jour.replace(/-/g, ".");
+  const date = meme ? avant.date : jour;
+  const ids = v.fr.map((f) => f.id);
+  const nouvelles = meme ? avant.nouvelles : avant ? ids.filter((id) => !avant.ids.includes(id)) : NOUVELLES_HUB.filter((id) => ids.includes(id));
+  const off = { version, date, empreinte: v.empreinte, nouvelles, ids };
+  for (const langue of ["fr", "en"]) {
+    const fiches = v[langue];
+    const texte = JSON.stringify({
+      type: "phenix-version", format: 1, reference: "officielle-" + langue, officielle: true,
+      nom: langue === "fr" ? "Phenix, version officielle" : "Phenix, official version",
+      langue, version, date, empreinte: v.empreinte, licence: "CC BY-SA 4.0", source: DEPOT,
+      nb_fiches: fiches.length, fiches,
+    });
+    const nom = `phenix-officielle-${langue}.json`;
+    fs.writeFileSync(path.join(HUB, nom), texte);
+    off[langue] = {
+      fichier: nom, nb: fiches.length, traduites: fiches.filter((f) => f.langue === langue).length,
+      taille: Buffer.byteLength(texte), sha256: crypto.createHash("sha256").update(texte).digest("hex"),
+    };
+  }
+  fs.writeFileSync(cheminCat, JSON.stringify({ officielle: off }));
+  return off;
+}
+
+/* ---------- Phenix Hub : toutes les versions de la bibliothèque ---------- */
+function hub(off) {
+  const [frMB, frMO] = mo(off.fr.taille), [enMB, enMO] = mo(off.en.taille);
+  const nouv = off.nouvelles.filter((id) => FR_F[id]);
+  const lien = lienPour("en");
+  const corps = `<main class="wrap hub" style="padding-top:34px;padding-bottom:60px">
+  ${tx("p", "hub.k", "Phenix Hub · every version of the library", "Phenix Hub · toutes les versions de la bibliothèque", 'class="kicker"')}
+  ${tx("h1", "hub.h1", "Take the version you need.", "Prenez la version qu'il vous faut.", 'class="lab-titre"')}
+  ${tx("p", "hub.lede", "The official library, the versions communities make for their language or their region, and the sheets people write. Each one is a single file that Phenix Base opens offline, on a phone, a computer or one of our devices.", "La bibliothèque officielle, les versions que les communautés font pour leur langue ou leur région, et les fiches que les gens écrivent. Chacune tient dans un seul fichier que Phenix Base ouvre hors ligne, sur un téléphone, un ordinateur ou l'un de nos appareils.", 'class="lede"')}
+
+  <section class="hub-off" aria-labelledby="hubOffTitre">
+    <div class="hub-off-tete">
+      ${tx("p", "hub.o.k", "Current official version", "Version officielle actuelle", 'class="kicker"')}
+      <h2 id="hubOffTitre">Phenix <span class="hub-num">${off.version}</span></h2>
+      ${tx("p", "hub.o.p", `${off.fr.nb} sheets, checked by the team, sourced and linked to each other. The one built into the app, free under CC BY-SA 4.0.`, `${off.fr.nb} fiches, vérifiées par l'équipe, sourcées et reliées entre elles. Celle qui est intégrée à l'application, libre sous CC BY-SA 4.0.`)}
+    </div>
+    <div class="hub-fichiers">
+      <a class="hub-fichier" href="hub/${off.fr.fichier}" download>
+        <b>Français</b>${tx("span", "hub.o.fr", `${off.fr.nb} sheets · ${frMB}`, `${off.fr.nb} fiches · ${frMO}`)}
+      </a>
+      <a class="hub-fichier" href="hub/${off.en.fichier}" download>
+        <b>English</b>${tx("span", "hub.o.en", `${off.en.traduites} translated, the others in French for now · ${enMB}`, `${off.en.traduites} traduites, les autres en français pour l'instant · ${enMO}`)}
+      </a>
+    </div>
+    ${nouv.length ? `<p class="hub-nouv">${tx("b", "hub.o.new", "New in this version:", "Nouveau dans cette version :")} ${nouv.map(lien).join(", ")}</p>` : ""}
+    <p class="small dim">${tx("span", "hub.o.fp", "Fingerprint", "Empreinte")} <code>${off.empreinte}</code> · ${off.date} · ${tx("a", "hub.o.src", "the source files on GitHub", "les fichiers source sur GitHub", `href="${DEPOT}/tree/main/corpus" rel="noopener"`)}</p>
+  </section>
+
+  <section class="hub-sec" id="versions">
+    <div class="hub-barre">
+      ${tx("h2", "hub.v.h", "Community versions", "Les versions des communautés")}
+      ${tx("a", "hub.v.pub", "Publish a version", "Publier une version", 'class="btn" href="#publier"')}
+    </div>
+    ${tx("p", "hub.v.p", "A language, a region, a sailing club, a village: every community can make its own Phenix, starting from the official one. Vote for the ones you trust. Each one is checked before it shows up here.", "Une langue, une région, un club de voile, un village : chaque communauté peut faire son Phenix, en partant de l'officiel. Votez pour celles en qui vous avez confiance. Chacune est vérifiée avant d'apparaître ici.", 'class="dim"')}
+    <div id="hubVersions" class="hub-liste"><p class="dim small">…</p></div>
+  </section>
+
+  <section class="hub-sec" id="fiches">
+    <div class="hub-barre">
+      ${tx("h2", "hub.f.h", "Sheets written by people", "Les fiches écrites par les gens")}
+      ${tx("button", "hub.f.all", "Download them all", "Tout télécharger", 'class="btn" type="button" id="hubToutes" hidden')}
+    </div>
+    ${tx("p", "hub.f.p", 'Proposed in <a href="lab.html">Phenix Lab</a>, voted on by the community. Download one to read it in Phenix Base, or take them all in one file. They are not checked by the team yet: read them with a critical eye.', 'Proposées dans <a href="lab.html">Phenix Lab</a>, votées par la communauté. Téléchargez-en une pour la lire dans Phenix Base, ou prenez-les toutes en un seul fichier. L\'équipe ne les a pas encore vérifiées : lisez-les avec un œil critique.', 'class="dim"')}
+    <div id="hubFiches" class="hub-liste"><p class="dim small">…</p></div>
+  </section>
+
+  <section class="hub-sec" id="publier">
+    ${tx("h2", "hub.p.h", "Publish your version", "Publier votre version")}
+    <ol class="lab-etapes">
+      ${tx("li", "hub.p.e1", "<b>Start from the official version</b>: download it above, or open Phenix Base.", "<b>Partez de la version officielle</b> : téléchargez-la plus haut, ou ouvrez Phenix Base.")}
+      ${tx("li", "hub.p.e2", "<b>Translate, adapt, add</b> your sheets, in Phenix Base or in any text editor.", "<b>Traduisez, adaptez, ajoutez</b> vos fiches, dans Phenix Base ou dans n'importe quel éditeur de texte.")}
+      ${tx("li", "hub.p.e3", "<b>Export it</b>: Phenix Base › Modules › Phenix Hub › Create my version.", "<b>Exportez-la</b> : Phenix Base › Modules › Phenix Hub › Créer ma version.")}
+      ${tx("li", "hub.p.e4", "<b>Send it here.</b> The team checks it is what it says it is, then it shows up for everyone.", "<b>Envoyez-la ici.</b> L'équipe vérifie qu'elle est bien ce qu'elle annonce, puis elle apparaît pour tout le monde.")}
+    </ol>
+    <form id="formVersion" autocomplete="off">
+      <div class="field">
+        <label for="vFichier">${tx("span", "hub.p.f", "The version file (.json)", "Le fichier de la version (.json)")} <span class="req">*</span></label>
+        ${tx("p", "hub.p.fh", "The file Phenix Base exports with “Create my version”. 25 MB at most.", "Le fichier que Phenix Base exporte avec « Créer ma version ». 25 Mo au plus.", 'class="help"')}
+        <input type="file" id="vFichier" accept=".json,application/json" required>
+        <p class="help" id="vApercu"></p>
+      </div>
+      <div class="row">
+        <div class="field"><label for="vNom">${tx("span", "hub.p.n", "Name", "Nom")} <span class="req">*</span></label>
+          <input id="vNom" required minlength="3" maxlength="80" ${ph("hub.p.np", "e.g. Phenix in Spanish", "ex : Phenix en espagnol")}></div>
+        <div class="field"><label for="vLangue">${tx("span", "hub.p.l", "Language", "Langue")} <span class="req">*</span></label>
+          <input id="vLangue" required minlength="2" maxlength="12" ${ph("hub.p.lp", "e.g. es, zh, pt-BR", "ex : es, zh, pt-BR")}></div>
+      </div>
+      <div class="field"><label for="vCommu">${tx("span", "hub.p.c", "Community", "Communauté")}</label>
+        <input id="vCommu" maxlength="80" ${ph("hub.p.cp", "Who it's for or who made it: a country, a region, a group", "Pour qui ou par qui : un pays, une région, un groupe")}></div>
+      <div class="field"><label for="vDesc">${tx("span", "hub.p.d", "What makes it different", "Ce qu'elle a de particulier")}</label>
+        <textarea id="vDesc" maxlength="1200" ${ph("hub.p.dp", "Translated sheets, local sheets added, what you changed and why", "Fiches traduites, fiches locales ajoutées, ce que vous avez changé et pourquoi")}></textarea></div>
+      <div class="row">
+        <div class="field"><label for="vAuteur">${tx("span", "hub.p.a", "Your name or nickname", "Votre nom ou pseudonyme")}</label>
+          <input id="vAuteur" maxlength="60" ${ph("hub.p.ap", "optional", "facultatif")}></div>
+        <div class="field"><label for="vContact">Contact</label>
+          <input id="vContact" maxlength="120" ${ph("hub.p.kp", "Email or Instagram, private (optional)", "E-mail ou Instagram, privé (facultatif)")}></div>
+      </div>
+      <div style="position:absolute;left:-9999px" aria-hidden="true"><input id="vSite" tabindex="-1" autocomplete="off"></div>
+      <div id="retourVersion"></div>
+      <p>${tx("button", "hub.p.b", "Send my version", "Envoyer ma version", 'type="submit" class="btn primary" id="vEnvoyer"')}</p>
+      ${tx("p", "hub.p.cc", "By sending, you agree that your version may be shared under the CC BY-SA 4.0 licence, like the official one.", "En envoyant, vous acceptez que votre version soit partagée sous licence CC BY-SA 4.0, comme l'officielle.", 'class="small"')}
+    </form>
+  </section>
+
+  <section class="hub-sec">
+    ${tx("h2", "hub.u.h", "Using a downloaded version", "Utiliser une version téléchargée")}
+    <ul>
+      ${tx("li", "hub.u.1", "<strong>In Phenix Base</strong>, on a phone or a computer: drop the file on the window, or go to Modules › Phenix Hub › Open a version file. Then choose the version you read. Your own sheets are never touched, and the official version is always one tap away.", "<strong>Dans Phenix Base</strong>, sur téléphone ou sur ordinateur : lâchez le fichier sur la fenêtre, ou passez par Modules › Phenix Hub › Ouvrir un fichier de version. Choisissez ensuite la version que vous lisez. Vos fiches personnelles ne sont jamais touchées, et la version officielle reste à un clic.")}
+      ${tx("li", "hub.u.2", "<strong>Anywhere else</strong>: it's plain JSON with the text of each sheet in Markdown. Any device, any program can read it, today and in twenty years.", "<strong>Partout ailleurs</strong> : c'est du JSON tout simple, avec le texte de chaque fiche en Markdown. N'importe quel appareil, n'importe quel programme peut le lire, aujourd'hui comme dans vingt ans.")}
+      ${tx("li", "hub.u.3", "<strong>Keep a copy</strong> on a USB stick or an SD card. That's the whole point: knowledge that doesn't depend on a server.", "<strong>Gardez-en une copie</strong> sur une clé USB ou une carte SD. C'est tout l'intérêt : un savoir qui ne dépend d'aucun serveur.")}
+    </ul>
+  </section>
+</main>`;
+  return page({ titreHtml: tx("title", "hub.title", "Phenix Hub", "Phenix Hub"), desc: "Phenix Hub: download the official Phenix library, the versions communities make for their language or region, and the sheets people write. One file, readable offline.", corps, scripts: '<script src="en-ligne.js"></script><script src="communaute.js"></script><script src="hub.js"></script>' });
+}
+
 /* ---------- Soutenir ---------- */
 function soutenir() {
   const corps = `<main class="wrap" style="padding-top:34px;padding-bottom:60px">
@@ -879,6 +1019,7 @@ function liens() {
     ${lien("explore.html", "ln.exp", "Read the sheets", "Lire les fiches", "ln.exps", "First aid, water, repairs, energy, memory of the world", "Secours, eau, réparation, énergie, mémoire du monde")}
     ${lien("lab.html?origine=bio#idee", "ln.idee", "Suggest a sheet", "Proposer une fiche", "ln.idees", "Ten seconds, no account. The best ideas become sheets.", "Dix secondes, sans compte. Les meilleures idées deviennent des fiches.")}
     ${lien("lab.html#propositions", "ln.com", "Phenix Lab", "Phenix Lab", "ln.coms", "Vote and comment on what readers propose", "Votez et commentez ce que proposent les lecteurs")}
+    ${lien("hub.html", "ln.hub", "Phenix Hub", "Phenix Hub", "ln.hubs", "Download the library: official, your language, your region", "Télécharger la bibliothèque : officielle, votre langue, votre région")}
     ${lien("devices.html", "ln.dev", "The devices", "Les appareils", "ln.devs", "Phenix 001 and 002, pocket readers in design", "Phenix 001 et 002, des lecteurs de poche en conception")}
     ${lien("lab.html#ecrire", "ln.lab", "Write a sheet", "Écrire une fiche", "ln.labs", "Share what you know. No account needed.", "Partagez ce que vous savez. Aucun compte nécessaire.")}
     ${lien("download.html", "ln.win", "Windows version", "Version Windows", "ln.wins", "The full app, installed on your PC", "L'application complète, installée sur votre PC")}
@@ -951,6 +1092,8 @@ ecrire("index.html", accueil());
 ecrire("explore.html", explorer());
 ecrire("download.html", telecharger());
 ecrire("lab.html", lab());
+const OFFICIELLE = construireOfficielle(fs.readFileSync(path.join(RACINE, "app", "phenix.html"), "utf8"));
+ecrire("hub.html", hub(OFFICIELLE));
 ecrire("soutenir.html", soutenir());
 ecrire("devices.html", appareils());
 ecrire("links.html", liens());

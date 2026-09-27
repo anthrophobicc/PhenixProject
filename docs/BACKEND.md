@@ -1,4 +1,4 @@
-# Phenix en ligne : propositions, votes, commentaires (Supabase)
+# Phenix en ligne : propositions, votes, commentaires, versions (Supabase)
 
 Branché le 26/09/2026. Projet Supabase **phenix** (organisation Phenix, offre gratuite, région Europe).
 Adresse : `https://ecdyahykwtqdierxlemb.supabase.co`. Tableau de bord : https://supabase.com/dashboard/project/ecdyahykwtqdierxlemb
@@ -10,6 +10,7 @@ Adresse : `https://ecdyahykwtqdierxlemb.supabase.co`. Tableau de bord : https://
 | Site, page Lab (`lab.html`) | Envoyer une idée de fiche en 10 secondes, ou une fiche complète avec images | table `propositions` (privée) |
 | Site, sous chaque fiche | Voter « Utile », commenter | tables `votes` et `commentaires` |
 | Application (site et .exe) | « Proposer au corpus » > « Envoyer maintenant » ; « Utile » et commentaires sous les fiches officielles | mêmes tables |
+| Site, page Hub (`hub.html`) et module Phenix Hub de l'application | Publier la version de sa communauté (un fichier .json), voter, commenter, télécharger | table `versions` (invisible tant que ce n'est pas vérifié) et dossier Storage `versions` |
 | Story Instagram, bio | Lien `lab.html?origine=story#idee` (ou `?origine=bio`) : on sait d'où vient la personne | colonne `origine` |
 
 ## Lire ce qui arrive (sur téléphone aussi)
@@ -22,9 +23,17 @@ Tableau de bord > **Table Editor** > `propositions`. Chaque ligne a une référe
 - **Un commentaire à retirer** : table `commentaires`, décocher `visible`.
 - Images jointes : **Storage** > dossier `propositions` > dossier de la référence.
 
+## Les versions (Phenix Hub)
+
+À lancer une fois : `supabase/03-hub.sql` (SQL Editor > coller > Run). Il contient aussi `02-lab-public.sql`.
+
+- **La version officielle** n'est pas dans la base : `outils/construire-site.js` la tire de l'application et l'écrit dans `site/hub/` (un fichier par langue, plus `catalogue.json`). Son numéro change seulement quand le texte des fiches change.
+- **Une version envoyée** arrive dans Table Editor > `versions`, invisible. Pour la vérifier : Storage > `versions` > dossier de sa référence (`VER-2026-001`) > télécharger le fichier, l'ouvrir dans Phenix Base (glisser le fichier sur la fenêtre), la lire. Si elle est ce qu'elle annonce : cocher `visible`. Elle apparaît alors sur la page Hub et dans l'application, où l'on vote et l'on commente.
+- Une version de quelqu'un d'autre ne peut jamais passer pour l'officielle : l'application ne la marque officielle que si elle l'a lue elle-même sur le site, et toute fiche importée est nettoyée (pas de HTML, pas de lien piégé).
+
 ## Sécurité
 
-- Le public ne touche aucune table directement. Il passe par quatre fonctions (`proposer`, `signaler`, `voter`, `commenter`) et trois vues en lecture (`propositions_publiques`, `votes_publics`, `commentaires_publics`). Tout le schéma est dans `supabase/01-propositions.sql`.
+- Le public ne touche aucune table directement. Il passe par des fonctions (`proposer`, `signaler`, `voter`, `commenter`, `publier_version`, `compter_telechargement`) et des vues en lecture (`propositions_publiques`, `votes_publics`, `commentaires_publics`, `versions_publiques`). Le schéma est dans `supabase/01-propositions.sql` et `supabase/03-hub.sql`.
 - La clé écrite dans le site et l'application est la clé **publishable** : elle est faite pour être publique. La clé **secret** ne doit jamais sortir du tableau de bord.
 - Garde-fous : 5 envois par appareil en 10 minutes, 200 propositions et 300 commentaires par heure au total, pas de lien dans les commentaires, images de 5 Mo au plus et seulement juste après une proposition. L'adresse IP n'est jamais gardée (seulement une empreinte qui change chaque jour).
 - Le mot de passe de la base a été généré par Supabase à la création. Si un jour il te faut une connexion directe à la base : Project Settings > Database > Reset database password.

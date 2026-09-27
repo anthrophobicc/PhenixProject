@@ -111,6 +111,7 @@ Les fiches **officielles** sont livrées avec le logiciel et relues avant intég
 - Quatre modules intégrés : **Inventaire** (cases, lieux, alertes de péremption et de stock bas, export CSV), **Notes** (reliées aux fiches par `[[ID]]`), **Calendrier** (événements, répétition annuelle) et **Convertisseur** (unités, températures, batteries et solaire). Leurs données voyagent avec la sauvegarde.
 - Modules de la communauté importables et exportables
 - **Phenix Lab**, quand il y a du réseau : proposer une idée ou une fiche entière, voter « utile » et commenter sous chaque fiche officielle et sous les propositions publiées. Tout le reste marche sans connexion.
+- **Phenix Hub** : toutes les versions de la bibliothèque. L'officielle est intégrée ; les communautés publient la leur (une langue, une région, un groupe) ; on choisit celle qu'on lit, on l'enregistre en un fichier, on crée et on publie la sienne. Les fiches écrites dans Phenix Lab s'ajoutent à sa bibliothèque d'un clic. Une version ne remplace jamais rien : l'officielle reste à un clic, les fiches personnelles ne sont pas touchées.
 - Huit thèmes, deux dispositions (colonnes, ou liste en haut et lecture centrée)
 - Sur téléphone : menu déroulant des vues, panneau des cartes rangé dans un tiroir, bouton de retour au corpus pendant la lecture
 - Import et export en `.md` et `.json`
@@ -123,7 +124,7 @@ Elles sont réelles et assumées. Les connaître évite les mauvaises surprises.
 
 - **L'enregistrement dépend du mode d'ouverture.** En application de bureau, tout est écrit sur le disque. Dans un navigateur, tout est enregistré localement et survit à la fermeture. Dans certains aperçus restreints, aucun enregistrement n'est possible : l'indicateur en haut à droite vous le dit, et l'export manuel devient obligatoire.
 - **Les tuiles de carte proviennent d'OpenStreetMap**, dont la politique d'usage interdit le téléchargement en masse. Les zones enregistrables sont donc volontairement limitées. Une source de tuiles dédiée est nécessaire avant toute diffusion large.
-- **Le corpus est encore petit.** Cent quatre-vingt-trois fiches, dont quarante-quatre traduites en anglais, là où le projet en vise des milliers. Toutes les catégories des trois axes ont au moins une fiche.
+- **Le corpus est encore petit.** Cent quatre-vingt-neuf fiches, dont quarante-neuf traduites en anglais, là où le projet en vise des milliers. Toutes les catégories des trois axes ont au moins une fiche.
 - **Le corpus est embarqué dans le fichier de l'application.** Ajouter une fiche demande de la reporter à deux endroits. C'est le prix du fichier unique sans dépendance.
 - **Aucune vérification cryptographique** des fiches n'est encore implémentée. À la place, le logiciel connaît la liste des fiches qu'il embarque : toute fiche importée est communautaire, quoi que dise son en-tête. Cela empêche l'usurpation locale, pas la diffusion d'une copie modifiée du logiciel lui-même.
 - **Les fonctions en ligne sont jeunes.** Les propositions, votes et commentaires passent par une base Supabase gratuite (voir `docs/BACKEND.md`) : sans compte, avec des garde-fous contre les envois en rafale, et une relecture humaine avant toute publication.

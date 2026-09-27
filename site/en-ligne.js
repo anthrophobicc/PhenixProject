@@ -71,5 +71,16 @@ window.PHENIX_EN_LIGNE = (function () {
       var nom = reference + "/" + Date.now() + "-" + encodeURIComponent(fichier.name.replace(/[^\w.\-]/g, "_"));
       return appel("/storage/v1/object/propositions/" + nom, { methode: "POST", corps: fichier, entetes: { "Content-Type": fichier.type || "application/octet-stream" } });
     },
+    // Phenix Hub : les versions publiées par les communautés (voir supabase/03-hub.sql).
+    versions: function () { return lire("versions_publiques", "select=*&order=votes.desc,cree_le.desc&limit=100"); },
+    publierVersion: function (m) { return rpc("publier_version", { p: m }); },
+    deposerVersion: function (chemin, texte) {
+      return appel("/storage/v1/object/versions/" + chemin.split("/").map(encodeURIComponent).join("/"), { methode: "POST", corps: texte, entetes: { "Content-Type": "application/json" } });
+    },
+    fichierVersion: function (chemin) {
+      return fetch(BASE + "/storage/v1/object/versions/" + chemin.split("/").map(encodeURIComponent).join("/"), { headers: { apikey: CLE } })
+        .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.text(); });
+    },
+    compterTelechargement: function (ref) { return rpc("compter_telechargement", { ref: ref }).catch(function () { return null; }); },
   };
 })();

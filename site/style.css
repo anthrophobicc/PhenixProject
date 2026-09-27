@@ -335,3 +335,28 @@ footer strong{color:var(--acc)}
 .prop-texte h4{margin:14px 0 6px;color:var(--acc);font-size:14px;letter-spacing:.08em}
 .prop-texte p{margin:0 0 10px}
 .prop-texte .ref{font-family:var(--mono);font-size:13px;color:var(--acc)}
+/* Phenix Hub : la version officielle en tête, puis les versions des communautés et les fiches des gens. */
+.hub-off{border:1px solid var(--acc);border-radius:14px;padding:20px 20px 14px;margin:8px 0 34px;background:linear-gradient(180deg,var(--acc-soft),transparent 70%),var(--surface);box-shadow:var(--shadow)}
+.hub-off h2{font-size:clamp(24px,5vw,32px);margin:2px 0 6px;color:var(--acc);text-shadow:var(--glow)}
+.hub-off .kicker{margin:0}
+.hub-num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.hub-fichiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;margin:14px 0 10px}
+.hub-fichier{display:block;text-decoration:none;border:1px solid var(--hair2);border-radius:10px;padding:13px 14px 12px 46px;position:relative;background:var(--sunk);color:var(--txt2)}
+.hub-fichier::before{content:"";position:absolute;left:14px;top:14px;width:18px;height:18px;background:var(--acc);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3v12M6 10l6 6 6-6M4 20h16'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3v12M6 10l6 6 6-6M4 20h16'/%3E%3C/svg%3E") center/contain no-repeat}
+.hub-fichier b{display:block;color:var(--acc);font-size:16px}
+.hub-fichier span{display:block;font-size:13.5px;margin-top:2px}
+.hub-fichier:hover{border-color:var(--acc);box-shadow:var(--shadow)}
+.hub-nouv{font-size:14.5px;color:var(--txt2);margin:4px 0 8px}
+.hub-nouv b{color:var(--acc)}
+.hub-sec{margin:0 0 38px}
+.hub-sec h2{color:var(--acc);font-size:22px;margin:0}
+.hub-barre{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.hub-liste{display:flex;flex-direction:column;gap:10px;margin-top:12px}
+.hub-liste .prop{display:flex;gap:14px;margin:0;align-items:flex-start}
+.hub-fiche{display:flex;align-items:center;gap:12px;border:1px solid var(--hair2);border-radius:10px;padding:11px 14px;background:var(--surface)}
+.hub-fiche > div{flex:1;min-width:0}
+.hub-fiche h3{margin:0 0 3px;font-size:16px;overflow-wrap:anywhere}
+.hub-fiche h3 a{color:var(--txt);text-decoration:none}
+.hub-fiche h3 a:hover{color:var(--acc)}
+.hub-fiche .btn{padding:8px 12px;font-size:13px;font-family:var(--mono)}
+.hub code{font-family:var(--mono);font-size:12.5px}

@@ -228,6 +228,8 @@ const cible = decodeURIComponent(location.hash.slice(1));
 if (/^SUB-\d{4}-\d+$/.test(cible)) { OUVERTE = cible; TRI = "new"; document.querySelectorAll("[data-tri]").forEach((x) => x.classList.toggle("on", x.dataset.tri === "new")); montrer("propositions", true); }
 else montrer(cible === "communaute" ? "propositions" : cible, !cible);
 charger();
+// Changer de langue réécrit aussi les cartes affichées par ce script.
+document.querySelectorAll(".lang").forEach((b) => b.addEventListener("click", () => setTimeout(() => { if (TOUTES.length) afficher(); }, 0)));
 
 /* Reconstruit une fiche au format Phenix, prête à être ouverte dans l'application. */
 function construireMarkdown(p) {
