@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-page-lang="en" data-alt="fiche-tec-ide-007.html" data-kind="fiche">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The green screen — Phenix</title>
+<meta name="description" content="The green screen — Phenix">
+<meta name="theme-color" content="#040806">
+<script>try{var t=localStorage.getItem("phenix-theme");if(t&&t!=="phosphore")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<meta property="og:title" content="Phenix">
+<meta property="og:description" content="The green screen — Phenix">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://anthrophobicc.github.io/PhenixProject/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="logo.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="img/icone-180.png">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="fiche.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="index.html"><span class="mark"></span><span>PHENIX</span></a>
+  <nav>
+    <a href="explore.html" data-i18n="nav.explore">Explore</a>
+    <a href="devices.html" data-i18n="nav.devices">Devices</a>
+    <a href="lab.html" data-i18n="nav.contribute">Phenix Lab</a>
+    <a href="hub.html" data-i18n="nav.hub">Phenix Hub</a>
+    <a href="download.html" data-i18n="nav.download">Download</a>
+    <button class="lang" type="button" aria-label="Language">FR</button>
+    <span class="themes" role="group" aria-label="Theme">
+      <button type="button" data-theme-set="phosphore" title="Phosphor" aria-label="Phosphor theme" style="--c1:#040806;--c2:#39FF6A"></button>
+      <button type="button" data-theme-set="ambre" title="Amber" aria-label="Amber theme" style="--c1:#0A0703;--c2:#FFB000"></button>
+      <button type="button" data-theme-set="papier" title="Paper" aria-label="Paper theme" style="--c1:#F4F2EC;--c2:#2F6E2A"></button>
+    </span>
+  </nav>
+</header>
+<main class="wrap fiche">
+  <p class="fil"><a href="explore.html" data-i18n="nav.explore">Explore</a> › Technique › Information et Données</p>
+  
+  <div class="tags">
+    
+    <span class="tag off" data-i18n="tag.off">Official</span>
+  </div>
+  <h1>The green screen</h1>
+  <p class="meta">Axis 2 · Technique · Information et Données</p>
+  <div class="bals"><div><span>Time</span><b>Short</b></div><div><span>Context</span><b>Alone</b></div><div><span>Risk</span><b>Discreet</b></div><div><span>Gear</span><b>Technical</b></div></div>
+  <article class="prose"><p class="lede-f">A green screen doesn&#x27;t replace the set. It replaces a colour. All the work is making sure that colour only exists behind you.</p>
+<h2>The principle</h2>
+<p>The camera films a person in front of a single, even colour. The software finds every pixel of that colour and makes it transparent. Another image slides in behind. That&#x27;s <strong>keying</strong>, or <em>chroma key</em>.</p>
+<p>It&#x27;s the same idea as the TV weather map, film special effects, or the background of any video creator.</p>
+<h2>Why green, and why sometimes blue</h2>
+<p><strong>Green</strong> is the colour furthest from human skin, whatever its tone. And camera sensors have twice as many green pixels as red or blue: green is the most detailed colour, so the easiest to cut out cleanly.</p>
+<p><strong>Blue</strong> is used when the subject wears green, for night scenes, and gives less coloured reflection on skin. But it needs more light.</p>
+<p>Absolute rule: <strong>no clothing, accessory or object in the colour of the screen.</strong> It would become transparent. Watch out for shiny things too, glasses, watches, jewellery: they reflect the screen.</p>
+<h2>The three laws of lighting</h2>
+<p>Lighting makes 80% of the result. Software can&#x27;t save a badly lit screen.</p>
+<ol><li><strong>The screen must be even.</strong> No darker corners, no creases, no glare. Two soft lights at 45 degrees on either side of the screen, rather than one in front.</li><li><strong>Light the subject separately</strong>, with their own lights, as for any video.</li><li><strong>Keep the subject away from the screen: at least 1.5 to 2 metres</strong> (5 to 6.5 ft). Too close, the green reflects onto shoulders and hair, that&#x27;s <em>spill</em>, and the subject&#x27;s shadow falls on the screen.</li></ol>
+<h2>Camera settings</h2>
+<ul><li><strong>Fast shutter speed</strong> (1/100 s or faster): motion blur mixes subject and green, and the key gets messy.</li><li><strong>Focus on the subject.</strong> A slightly blurred screen keys even better.</li><li><strong>Don&#x27;t overexpose</strong>: a blown-out green becomes almost white.</li><li><strong>The highest resolution possible</strong>, and a lightly compressed format if the camera offers one.</li></ul>
+<h2>The software</h2>
+<p>Free software is enough: OBS for live, DaVinci Resolve, CapCut or Shotcut for editing. The setting always goes in the same order:</p>
+<ol><li>pick the colour to remove with the eyedropper, on a mid-tone area of the screen;</li><li>raise the tolerance until the whole screen disappears, no more;</li><li>soften the edges a little;</li><li>turn on <strong>spill suppression</strong>, which removes the green reflection on the outlines.</li></ol>
+<h2>Tips from people who do it every day</h2>
+<ul><li><strong>Iron the fabric</strong>, or stretch it on a frame. Every crease makes a shadow, and every shadow is another shade of green. A wall painted matte green beats a creased cloth.</li><li><strong>Frame wide, crop later.</strong> If the subject goes off the screen, even by a finger, it&#x27;s lost. Frame the shot, then mask everything outside the screen with a rough mask (<em>garbage matte</em>).</li><li><strong>Fine hair</strong> is the real test. A light placed behind the subject, towards the top of the head, separates hair from the screen and makes the key much cleaner.</li><li><strong>The final background decides the lighting.</strong> If the new background is a sunset, light the subject warm and from the side. A subject lit like an office, dropped onto a beach, fools no one.</li><li><strong>No green screen?</strong> A blue sheet, a plain wall, a clear sky behind you. The software accepts any colour, as long as it&#x27;s even and absent from the subject.</li><li><strong>New AI tools</strong> cut out subjects without a green screen. They get hands and hair wrong when moving: the green screen stays more reliable as soon as you move.</li></ul></article>
+  <div class="blk"><h4>Sources</h4><div class="src">Foster J., The Green Screen Handbook: Real-World Production Techniques, Sybex</div><div class="src">OBS Studio and DaVinci Resolve documentation, keying filters</div><div class="src">Brinkmann R., The Art and Science of Digital Compositing, Morgan Kaufmann</div></div>
+  
+  <section class="blk">
+    <h4 data-i18n="fiche.commu">Useful? Anything to add?</h4>
+    <div id="communaute" data-cible="TEC-IDE-007"></div>
+  </section>
+  <div class="blk cta">
+    <p data-i18n="fiche.cta"><strong>This sheet is part of Phenix.</strong> The app holds the whole library, the maps and the bookshelf, and works offline.</p>
+    <p><a class="btn primary" href="download.html" data-i18n="home.b2">Download Phenix Base</a>
+       <a class="btn" href="lab.html#ecrire" data-i18n="sup.btn">Write a sheet</a></p>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <p data-i18n="foot.motto"><strong>Phenix</strong> — knowledge is your only immunity.</p>
+    <p class="small">
+      <a href="explore.html" data-i18n="nav.explore">Explore</a> ·
+      <a href="devices.html" data-i18n="nav.devices">Devices</a> ·
+      <a href="lab.html" data-i18n="nav.contribute">Phenix Lab</a> ·
+      <a href="hub.html" data-i18n="nav.hub">Phenix Hub</a> ·
+      <a href="download.html" data-i18n="nav.download">Download</a> ·
+      <a href="soutenir.html" data-i18n="nav.support">Support</a> ·
+      <a href="https://www.instagram.com/phenixprjct/" rel="noopener">Instagram</a> ·
+      <a href="https://www.reddit.com/r/PhenixProject/" rel="noopener">Reddit</a> ·
+      <a href="https://github.com/anthrophobicc/PhenixProject" rel="noopener">GitHub</a>
+    </p>
+    <p class="small dim" data-i18n="foot.licence">Software under the MIT licence · sheets under CC BY-SA 4.0</p>
+  </div>
+</footer>
+<script src="i18n.js"></script>
+<script src="en-ligne.js"></script><script src="communaute.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr" data-page-lang="fr" data-alt="fiche-tec-ide-007-en.html" data-kind="fiche">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Le fond vert — Phenix</title>
+<meta name="description" content="Le fond vert — Phenix">
+<meta name="theme-color" content="#040806">
+<script>try{var t=localStorage.getItem("phenix-theme");if(t&&t!=="phosphore")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<meta property="og:title" content="Phenix">
+<meta property="og:description" content="Le fond vert — Phenix">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://anthrophobicc.github.io/PhenixProject/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="logo.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="img/icone-180.png">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="fiche.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="index.html"><span class="mark"></span><span>PHENIX</span></a>
+  <nav>
+    <a href="explore.html" data-i18n="nav.explore">Explorer</a>
+    <a href="devices.html" data-i18n="nav.devices">Appareils</a>
+    <a href="lab.html" data-i18n="nav.contribute">Phenix Lab</a>
+    <a href="hub.html" data-i18n="nav.hub">Phenix Hub</a>
+    <a href="download.html" data-i18n="nav.download">Télécharger</a>
+    <button class="lang" type="button" aria-label="Language">EN</button>
+    <span class="themes" role="group" aria-label="Theme">
+      <button type="button" data-theme-set="phosphore" title="Phosphor" aria-label="Phosphor theme" style="--c1:#040806;--c2:#39FF6A"></button>
+      <button type="button" data-theme-set="ambre" title="Amber" aria-label="Amber theme" style="--c1:#0A0703;--c2:#FFB000"></button>
+      <button type="button" data-theme-set="papier" title="Paper" aria-label="Paper theme" style="--c1:#F4F2EC;--c2:#2F6E2A"></button>
+    </span>
+  </nav>
+</header>
+<main class="wrap fiche">
+  <p class="fil"><a href="explore.html" data-i18n="nav.explore">Explorer</a> › La Technique › Information et Données</p>
+  
+  <div class="tags">
+    
+    <span class="tag off" data-i18n="tag.off">Officielle</span>
+  </div>
+  <h1>Le fond vert</h1>
+  <p class="meta">Axe 2 · La Technique · Information et Données</p>
+  <div class="bals"><div><span>Temps</span><b>Court</b></div><div><span>Contexte</span><b>Seul</b></div><div><span>Risque</span><b>Discret</b></div><div><span>Matériel</span><b>Technique</b></div></div>
+  <article class="prose"><p class="lede-f">Le fond vert ne remplace pas le décor. Il remplace une couleur. Tout le travail consiste à ce que cette couleur n&#x27;existe que derrière vous.</p>
+<h2>Le principe</h2>
+<p>La caméra filme une personne devant un fond d&#x27;une seule couleur, uniforme. Le logiciel repère tous les pixels de cette couleur et les rend transparents. On glisse une autre image derrière. C&#x27;est l&#x27;<strong>incrustation</strong>, ou <em>chroma key</em>.</p>
+<p>C&#x27;est la même idée que la météo à la télévision, les effets spéciaux au cinéma, ou le fond de n&#x27;importe quel créateur de vidéo.</p>
+<h2>Pourquoi vert, et pourquoi parfois bleu</h2>
+<p><strong>Le vert</strong> est la couleur la plus éloignée de la peau humaine, quelle que soit sa teinte. Et les capteurs des caméras ont deux fois plus de pixels verts que de rouges ou de bleus : le vert est la couleur la plus détaillée, donc la plus facile à découper proprement.</p>
+<p><strong>Le bleu</strong> sert quand le sujet porte du vert, pour les scènes de nuit, et donne moins de reflets colorés sur la peau. Mais il demande plus de lumière.</p>
+<p>Règle absolue : <strong>pas de vêtement, d&#x27;accessoire ou d&#x27;objet de la couleur du fond.</strong> Il deviendrait transparent. Attention aussi aux objets brillants, lunettes, montres, bijoux : ils reflètent le fond.</p>
+<h2>Les trois lois de l&#x27;éclairage</h2>
+<p>C&#x27;est l&#x27;éclairage qui fait 80 % du résultat. Un logiciel ne rattrape pas un fond mal éclairé.</p>
+<ol><li><strong>Le fond doit être uniforme.</strong> Pas de zone plus sombre dans les coins, pas de pli, pas de reflet. Deux lampes diffuses, à 45 degrés de chaque côté du fond, au lieu d&#x27;une seule en face.</li><li><strong>Le sujet s&#x27;éclaire à part</strong>, avec ses propres lampes, comme pour n&#x27;importe quelle vidéo.</li><li><strong>Éloignez le sujet du fond : 1,5 à 2 mètres au moins.</strong> Trop près, le vert se reflète sur les épaules et les cheveux, c&#x27;est le <em>débordement</em>, et l&#x27;ombre du sujet tombe sur le fond.</li></ol>
+<h2>Les réglages de la caméra</h2>
+<ul><li><strong>Vitesse d&#x27;obturation élevée</strong> (1/100 s ou plus) : le flou de mouvement mélange le sujet et le vert, et le détourage bave.</li><li><strong>Mise au point sur le sujet.</strong> Un fond légèrement flou se découpe même mieux.</li><li><strong>Pas trop d&#x27;exposition</strong> : un vert brûlé devient presque blanc.</li><li><strong>La meilleure définition possible</strong>, et un format peu compressé si la caméra le propose.</li></ul>
+<h2>Le logiciel</h2>
+<p>Les logiciels gratuits suffisent : OBS pour le direct, DaVinci Resolve, CapCut ou Shotcut pour le montage. Le réglage suit toujours le même ordre :</p>
+<ol><li>choisir la couleur à retirer avec la pipette, sur une zone moyenne du fond ;</li><li>monter la tolérance jusqu&#x27;à ce que tout le fond disparaisse, pas plus ;</li><li>adoucir un peu les bords ;</li><li>activer la <strong>suppression du débordement</strong> (<em>spill suppression</em>), qui retire le reflet vert sur les contours.</li></ol>
+<h2>Les astuces de ceux qui en font tous les jours</h2>
+<ul><li><strong>Un tissu se repasse</strong>, ou se tend sur un cadre. Chaque pli fait une ombre, et chaque ombre est une autre teinte de vert. Un mur peint en vert mat vaut mieux qu&#x27;un tissu froissé.</li><li><strong>Découpez large, recadrez après.</strong> Si le sujet sort du fond, même d&#x27;un doigt, il est perdu. Faites le cadre, puis masquez tout ce qui dépasse du fond avec un masque grossier (<em>garbage matte</em>).</li><li><strong>Les cheveux fins</strong> sont l&#x27;épreuve de vérité. Une lumière placée derrière le sujet, vers le haut de sa tête, sépare les cheveux du fond et rend le détourage beaucoup plus propre.</li><li><strong>Le décor d&#x27;arrivée décide de la lumière.</strong> Si le fond final est un coucher de soleil, éclairez le sujet chaud et de côté. Un sujet éclairé comme dans un bureau posé sur une plage ne trompe personne.</li><li><strong>Pas de fond vert ?</strong> Un drap bleu, un mur uni, un ciel dégagé derrière vous. Le logiciel accepte n&#x27;importe quelle couleur, pourvu qu&#x27;elle soit uniforme et absente du sujet.</li><li><strong>Les nouveaux outils d&#x27;intelligence artificielle</strong> détourent sans fond vert. Ils se trompent sur les mains et les cheveux en mouvement : le fond vert reste plus fiable dès qu&#x27;on bouge.</li></ul></article>
+  <div class="blk"><h4>Sources</h4><div class="src">Foster J., The Green Screen Handbook: Real-World Production Techniques, Sybex</div><div class="src">Documentation OBS Studio et DaVinci Resolve, filtres d&#x27;incrustation</div><div class="src">Brinkmann R., The Art and Science of Digital Compositing, Morgan Kaufmann</div></div>
+  
+  <section class="blk">
+    <h4 data-i18n="fiche.commu">Utile ? Quelque chose à ajouter ?</h4>
+    <div id="communaute" data-cible="TEC-IDE-007"></div>
+  </section>
+  <div class="blk cta">
+    <p data-i18n="fiche.cta"><strong>Cette fiche fait partie de Phenix.</strong> L'application contient tout le corpus, les cartes et la bibliothèque, et fonctionne hors ligne.</p>
+    <p><a class="btn primary" href="download.html" data-i18n="home.b2">Télécharger Phenix Base</a>
+       <a class="btn" href="lab.html#ecrire" data-i18n="sup.btn">Proposer une fiche</a></p>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <p data-i18n="foot.motto"><strong>Phenix</strong> — le savoir est votre seule immunité.</p>
+    <p class="small">
+      <a href="explore.html" data-i18n="nav.explore">Explorer</a> ·
+      <a href="devices.html" data-i18n="nav.devices">Appareils</a> ·
+      <a href="lab.html" data-i18n="nav.contribute">Phenix Lab</a> ·
+      <a href="hub.html" data-i18n="nav.hub">Phenix Hub</a> ·
+      <a href="download.html" data-i18n="nav.download">Télécharger</a> ·
+      <a href="soutenir.html" data-i18n="nav.support">Soutenir</a> ·
+      <a href="https://www.instagram.com/phenixprjct/" rel="noopener">Instagram</a> ·
+      <a href="https://www.reddit.com/r/PhenixProject/" rel="noopener">Reddit</a> ·
+      <a href="https://github.com/anthrophobicc/PhenixProject" rel="noopener">GitHub</a>
+    </p>
+    <p class="small dim" data-i18n="foot.licence">Logiciel sous licence MIT · fiches sous licence CC BY-SA 4.0</p>
+  </div>
+</footer>
+<script src="i18n.js"></script>
+<script src="en-ligne.js"></script><script src="communaute.js"></script>
+</body>
+</html>
