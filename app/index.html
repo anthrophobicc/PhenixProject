@@ -927,6 +927,26 @@ body.fs .sheet{padding-top:26px}
   .prose{font-size:16px}
   .tabs{overflow-x:auto;-webkit-overflow-scrolling:touch}
 }
+/* Lecture concentrée : sur grand écran, les axes et la liste se rangent, la fiche prend la place. */
+#lectBtn{display:none}
+@media (min-width:1041px){
+  #lectBtn.vu{display:inline-block}
+  body.lecture #v-fiches>.rail,body.lecture #v-fiches>.listcol{display:none}
+  body.lecture .sheet{max-width:740px}
+  body.lecture #lectBtn{border-color:var(--acc);color:var(--acc);background:var(--acc-soft)}
+}
+/* Éditeur : le titre au-dessus du texte, visible sur tous les écrans. */
+.edtitre{flex:0 0 auto;width:100%;border:0;border-bottom:1px solid var(--hair);background:var(--bg);padding:18px 34px 14px;font-family:ui-sans-serif,system-ui,sans-serif;font-size:22px;font-weight:650;letter-spacing:-.015em;color:var(--txt)}
+.edtitre:focus{outline:none;border-bottom-color:var(--acc-mid)}
+.edtitre::placeholder{color:var(--dim);font-weight:500}
+#edInfos,.edmetax{display:none}
+@media (max-width:1040px){
+  #edInfos{display:inline-block}
+  .edmeta.show{width:min(340px,94vw);left:0}
+  .edmetax{display:block;width:100%;margin-bottom:16px}
+  .edtitre{padding:14px 20px 12px;font-size:19px}
+  #edText{padding:18px 20px}
+}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
@@ -976,6 +996,7 @@ body.fs .sheet{padding-top:26px}
     <div class="sp">
       <div class="savind" id="savInd" title="État d'enregistrement"><span class="dot"></span><span id="stockLbl"></span></div>
       <button class="btn" id="railBtn" style="display:none" data-i18n>Axes</button>
+      <button class="btn vu" id="lectBtn" title="Lecture concentrée : range les axes et la liste" data-i18n-title data-i18n>Lecture</button>
       <button class="btn ghost" id="fsBtn" title="Plein écran" data-i18n-title>⛶</button>
       <button class="btn primary" id="newFiche" data-i18n>+ Fiche</button>
     </div>
@@ -1014,6 +1035,7 @@ body.fs .sheet{padding-top:26px}
         <div class="edbody">
           <div class="edmeta" id="edmeta"></div>
           <div class="edwrap">
+            <input id="mTi" class="edtitre" maxlength="160" placeholder="Titre de la fiche" data-i18n-ph>
             <textarea id="edText" spellcheck="true"></textarea>
             <div class="edprev" id="edPrev"></div>
             <div class="edfoot"><span id="edCount">0 mot</span><span id="edId">—</span><span id="edMode"></span>
@@ -22280,6 +22302,8 @@ function buildBar(){
   TOOLS.forEach(t=>{if(t.sep){const s=document.createElement("span");s.className="tbsep";h.appendChild(s);return;}
     const b=document.createElement("button");b.className="tb";b.innerHTML=LANG==="en"&&t.en?t.en:t.l;b.title=tr(t.t);b.onclick=()=>applyTool(LANG==="en"&&t.lineEn?{...t,line:t.lineEn}:t);h.appendChild(b);});
   const sp=document.createElement("span");sp.style.marginLeft="auto";h.appendChild(sp);
+  const inf=document.createElement("button");inf.className="btn";inf.id="edInfos";inf.textContent=tr("Infos");
+  inf.title=tr("Axe, catégorie, balises, sources");inf.onclick=()=>$("edmeta").classList.toggle("show");h.appendChild(inf);
   const pv=document.createElement("button");pv.className="btn";pv.id="pvBtn";pv.textContent=tr("Aperçu");
   pv.onclick=togglePreview;h.appendChild(pv);
   const sv=document.createElement("button");sv.className="btn primary";sv.textContent=tr("Enregistrer");sv.onclick=saveFiche;h.appendChild(sv);
@@ -22326,17 +22350,22 @@ function togglePreview(){
   }
 }
 function count(){const w=$("edText").value.trim().split(/\s+/).filter(Boolean).length;$("edCount").textContent=w+(LANG==="en"?" word":" mot")+(w>1?"s":"");}
+let idAvantEdition="";
 function openEditor(f){
+  idAvantEdition=f?f.id:"";
   editing=f?JSON.parse(JSON.stringify(f)):{id:"",titre:"",axe:3,categorie:"",temps:"",contexte:"",risque:"",materiel:"",priorite:"normale",origine:"communaute",tags:[],sources:[],corps:LANG==="en"?"::Opening line.::\n\n## ACT\n\n## ADAPT\n\n## UNDERSTAND\n":"::Phrase d'accroche.::\n\n## COMPRENDRE\n\n## AGIR\n\n## ADAPTER\n"};
   $("read").style.display="none";$("editor").style.display="flex";
-  buildBar();buildMeta();$("edText").value=editing.corps;$("edId").textContent=editing.id||tr("nouvelle fiche");
+  buildBar();buildMeta();$("edText").value=editing.corps;
+  $("mTi").value=editing.titre||"";$("mTi").oninput=()=>{dirty=true;};
+  $("edmeta").classList.remove("show");
+  if(!f)setTimeout(()=>$("mTi").focus(),60);$("edId").textContent=editing.id||tr("nouvelle fiche");
   count();dirty=false;$("edPrev").classList.remove("on");$("edText").style.display="";$("edMode").textContent="";document.body.classList.add("reading");
 }
-function closeEditor(){$("editor").style.display="none";$("read").style.display="";editing=null;dirty=false;}
+function closeEditor(){$("edmeta").classList.remove("show");$("editor").style.display="none";$("read").style.display="";editing=null;dirty=false;}
 function buildMeta(){
   const h=$("edmeta"),f=editing;
-  h.innerHTML=`<div class="fld"><label>${tr("Titre")}</label><input id="mTi" value="${esc(f.titre)}"></div>
-  <div class="fld"><label>Identifiant</label><input id="mId" value="${esc(f.id)}" placeholder="SURV-EAU-003"></div>
+  h.innerHTML=`<button class="btn edmetax" id="mFerme" type="button">${tr("Fermer les infos")}</button>
+  <div class="fld"><label>Identifiant</label><input id="mId" value="${esc(f.id)}" placeholder="SURV-EAU-003" ${OFFICIELLES.has(f.id)?"readonly":""}></div>
   <div class="fld"><label>${tr("Axe")}</label><select id="mAx">
     ${tousAxes().map(a=>`<option value="${a.n}" ${f.axe===a.n?"selected":""}>${estPerso(a.n)?"◆":a.n} — ${esc(a.nom)}</option>`).join("")}
     <option value="__new">+ ${tr("Créer un axe…")}</option>
@@ -22382,6 +22411,7 @@ function buildMeta(){
     $("mChW").style.display=$("mPa").value?"":"none";
   };
   remplirMeres();
+  $("mFerme").onclick=()=>h.classList.remove("show");
   $("mPa").onchange=()=>{
     $("mChW").style.display=$("mPa").value?"":"none";
     if($("mPa").value&&!$("mCh").value){
@@ -22435,8 +22465,10 @@ function lireTags(v){
   return [...new Set(String(v).split(",").map(t=>t.trim().toLowerCase()).filter(Boolean))].slice(0,10);
 }
 function saveFiche(){
-  const f=editing;f.titre=$("mTi").value.trim()||"Sans titre";
-  f.id=($("mId").value.trim()||"FICHE-"+Date.now()).toUpperCase();
+  const f=editing,avant=idAvantEdition;f.titre=$("mTi").value.trim()||"Sans titre";
+  f.id=($("mId").value.trim()||avant||"FICHE-"+Date.now()).toUpperCase();
+  if(avant&&OFFICIELLES.has(avant))f.id=avant;
+  if(f.id!==avant&&FICHES.some(x=>x.id===f.id)){toast(tr("Cet identifiant est déjà pris par une autre fiche."));$("edmeta").classList.add("show");$("mId").focus();return;}
   const va=$("mAx").value, vc=$("mCa").value;
   f.axe = va==="__new" ? (f.axe||3) : (+va||3);
   f.categorie = vc==="__new" ? (f.categorie||"") : vc;
@@ -22446,7 +22478,14 @@ function saveFiche(){
   f.chapitre=f.parent?(parseInt($("mCh").value,10)||1):0;
   f.corps=$("edText").value;
   if(!OFFICIELLES.has(f.id))f.origine="communaute";
-  const i=FICHES.findIndex(x=>x.id===f.id);
+  if(avant&&f.id!==avant){
+    // Renommage : on garde l'historique, les favoris, les listes et les chapitres rattachés.
+    if(META[avant]){META[f.id]=META[avant];delete META[avant];}
+    if(FAVORIS.has(avant)){FAVORIS.delete(avant);FAVORIS.add(f.id);}
+    PLAYLISTS.forEach(p=>{p.ids=p.ids.map(x=>x===avant?f.id:x);});
+    FICHES.forEach(x=>{if(x.parent===avant)x.parent=f.id;});
+  }
+  const i=FICHES.findIndex(x=>x.id===(avant||f.id));
   const nouvelle=i<0;
   if(i>=0)FICHES[i]=f;else FICHES.push(f);
   meta(f.id)[nouvelle?"cree":"modifie"]=Date.now();
@@ -23464,6 +23503,14 @@ function pleinEcran(){
 }
 $("fsBtn").onclick=pleinEcran;
 
+/* Lecture concentrée : sur grand écran, les axes et la liste se rangent pour laisser toute la place à la fiche. */
+function lectureConcentree(on){
+  document.body.classList.toggle("lecture",on);
+  try{localStorage.setItem("phenix-lecture",on?"1":"");}catch(e){}
+}
+$("lectBtn").onclick=()=>lectureConcentree(!document.body.classList.contains("lecture"));
+try{if(localStorage.getItem("phenix-lecture"))lectureConcentree(true);}catch(e){}
+
 /* En plein écran, la barre se déploie quand le pointeur monte tout en haut,
    et se rétracte quand il redescend. Elle reste visible tant qu'un menu
    ou un champ de la barre a le focus. */
@@ -23484,6 +23531,7 @@ function switchView(v){
   document.querySelectorAll(".view").forEach(x=>x.classList.remove("on"));
   $("v-"+v).classList.add("on");
   $("newFiche").style.display=v==="fiches"?"":"none";
+  $("lectBtn").classList.toggle("vu",v==="fiches");
   if(v==="cartes"){initMap();drawCartes();drawCalques();drawPins();setTimeout(()=>map.invalidateSize(),80);}
   if(v==="biblio")drawBiblio();
   if(v==="modules")drawModules();
@@ -23509,6 +23557,7 @@ document.addEventListener("keydown",e=>{
     if($("mask").classList.contains("on"))$("mask").classList.remove("on");
     else if(editing){if(!dirty||confirm(tr("Abandonner les modifications ?"))){closeEditor();drawRead();}}
     else if(document.body.classList.contains("reading")&&innerWidth<=1000)document.body.classList.remove("reading");
+    else if(document.body.classList.contains("lecture")&&tag!=="INPUT"&&tag!=="TEXTAREA"&&tag!=="SELECT")lectureConcentree(false);
   }
 });
 $("mask").onclick=e=>{if(e.target.id==="mask")$("mask").classList.remove("on");};
@@ -24053,6 +24102,9 @@ async function chargerHub(){
   if($("hubVoirLab"))$("hubVoirLab").onclick=()=>ouvrirModule("lab");
 }
 Object.assign(EN,{
+"Lecture":"Reading","Lecture concentrée : range les axes et la liste":"Focused reading: hides the axes and the list",
+"Titre de la fiche":"Sheet title","Infos":"Details","Fermer les infos":"Close details","Axe, catégorie, balises, sources":"Axis, category, tags, sources",
+"Cet identifiant est déjà pris par une autre fiche.":"This identifier is already used by another sheet.",
 "Texte de la version":"Text from the version","fiches ajoutées":"sheets added","fiche ajoutée":"sheet added","déjà là":"already there",
 "Déjà dans votre bibliothèque":"Already in your library","Ajouter à ma bibliothèque":"Add to my library",
 "Ce fichier n'est pas une version de Phenix.":"This file isn't a Phenix version.","Cette version ne contient aucune fiche.":"This version has no sheets.",
