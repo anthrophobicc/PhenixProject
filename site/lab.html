@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title data-i18n="lab.title">Phenix Lab — write a sheet</title>
-<meta name="description" content="Write a sheet for the Phenix library. No account needed.">
+<title data-i18n="lab.title2">Phenix Lab</title>
+<meta name="description" content="Phenix Lab: suggest sheets, vote and comment. The best proposals become official sheets in the Phenix library. No account needed.">
 <meta name="theme-color" content="#040806">
 <script>try{var t=localStorage.getItem("phenix-theme");if(t&&t!=="phosphore")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <meta property="og:title" content="Phenix">
-<meta property="og:description" content="Write a sheet for the Phenix library. No account needed.">
+<meta property="og:description" content="Phenix Lab: suggest sheets, vote and comment. The best proposals become official sheets in the Phenix library. No account needed.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://anthrophobicc.github.io/PhenixProject/img/og.png">
 <meta property="og:image:width" content="1200">
@@ -26,7 +26,7 @@
   <nav>
     <a href="explore.html" data-i18n="nav.explore">Explore</a>
     <a href="devices.html" data-i18n="nav.devices">Devices</a>
-    <a href="lab.html" data-i18n="nav.contribute">Contribute</a>
+    <a href="lab.html" data-i18n="nav.contribute">Phenix Lab</a>
     <a href="download.html" data-i18n="nav.download">Download</a>
     <button class="lang" type="button" aria-label="Language">FR</button>
     <span class="themes" role="group" aria-label="Theme">
@@ -36,11 +36,59 @@
     </span>
   </nav>
 </header>
-<main class="wrap" style="padding-top:34px;padding-bottom:60px">
-  <h1 style="font-size:30px;margin:0 0 10px;color:var(--acc);text-shadow:var(--glow)">Phenix Lab</h1>
-  <p class="lede" style="font-size:17px;margin:0 0 18px" data-i18n="lab.lede">Write a sheet for the library. No account, no sign-up. You can stay anonymous.</p>
+<main class="wrap lab" style="padding-top:34px;padding-bottom:60px">
+  <p class="kicker" data-i18n="lab.k">Phenix Lab · the community workshop</p>
+  <h1 class="lab-titre" data-i18n="lab.h1">The library is written here.</h1>
+  <p class="lede" data-i18n="lab.lede2">Suggest a sheet, vote for the ones you want, improve them in the comments. The best proposals become official sheets in the app, readable by everyone, offline. No account needed.</p>
+  <ol class="lab-etapes">
+    <li data-i18n="lab.e1"><b>Suggest</b> an idea in ten seconds, or write the whole sheet.</li>
+    <li data-i18n="lab.e2"><b>The community votes</b> and comments. What people need rises to the top.</li>
+    <li data-i18n="lab.e3"><b>The team checks</b> the sources, the safety and the clarity.</li>
+    <li data-i18n="lab.e4"><b>It becomes official</b> and ships in the app, readable offline.</li>
+  </ol>
+  <div class="lab-onglets" role="tablist">
+    <button type="button" role="tab" data-onglet="propositions"><span data-i18n="lab.o1">Proposals</span><span class="nb" id="nbProps"></span></button>
+    <button type="button" role="tab" data-onglet="idee"><span data-i18n="lab.o2">Suggest an idea</span></button>
+    <button type="button" role="tab" data-onglet="ecrire"><span data-i18n="lab.o3">Write a sheet</span></button>
+  </div>
 
-  <div class="msg info" data-i18n="lab.next"><strong>What happens next.</strong> Your proposal is reviewed before anything goes in. It can become <em>community</em>, then <em>verified</em>, and only then <em>official</em>. <strong>Nothing enters the official library automatically.</strong></div>
+  <section class="lab-panneau" id="o-propositions" role="tabpanel">
+    <div class="lab-outils">
+      <div class="lab-tri" role="group">
+        <button type="button" data-tri="top" class="on">Top</button>
+        <button type="button" data-tri="new"><span data-i18n="lab.new">New</span></button>
+      </div>
+      <select id="filtreType" aria-label="Type">
+        <option value="" data-i18n="lab.ft0">Everything</option>
+        <option value="idee" data-i18n="lab.ft1">Ideas</option>
+        <option value="fiche" data-i18n="lab.ft2">Sheets</option>
+        <option value="correction" data-i18n="lab.ft3">Corrections</option>
+      </select>
+    </div>
+    <div id="retourLab"></div>
+    <div id="liste-communaute" class="lab-liste"><p class="dim small">…</p></div>
+  </section>
+
+  <section class="lab-panneau" id="o-idee" role="tabpanel" hidden>
+    <div class="idee">
+      <h2 data-i18n="lab.q.h">Got an idea for a sheet? Ten seconds.</h2>
+      <p class="help" data-i18n="lab.q.p2">Tell us what you'd want to know how to do. It shows up in Proposals, where people vote for it.</p>
+      <form id="formIdee" autocomplete="off">
+        <div class="field"><input id="ideeTexte" required minlength="3" maxlength="140" placeholder="e.g. How to purify water with a plastic bottle" data-i18n-ph="lab.q.i"></div>
+        <div class="field"><textarea id="ideeDetail" maxlength="4000" placeholder="Details, your situation, what you already know (optional)" data-i18n-ph="lab.q.d"></textarea></div>
+        <div class="row">
+          <div class="field"><input id="ideeAuteur" maxlength="60" placeholder="Nickname (optional)" data-i18n-ph="lab.q.a"></div>
+          <div class="field"><input id="ideeContact" maxlength="120" placeholder="Email or Instagram, to hear back (optional, private)" data-i18n-ph="lab.q.c"></div>
+        </div>
+        <div style="position:absolute;left:-9999px" aria-hidden="true"><input id="idSite" tabindex="-1" autocomplete="off"></div>
+        <div id="retourIdee"></div>
+        <p><button type="submit" class="btn primary" data-i18n="lab.q.b">Send my idea</button></p>
+      </form>
+    </div>
+  </section>
+
+  <section class="lab-panneau" id="o-ecrire" role="tabpanel" hidden>
+  <div class="msg info" data-i18n="lab.next2"><strong>What happens next.</strong> Your sheet shows up in Proposals, where people vote and comment. The team reviews it before anything enters the official library: it can become <em>community</em>, then <em>verified</em>, and only then <em>official</em>.</div>
 
   <details class="aide">
     <summary data-i18n="lab.guide">How to write a good sheet</summary>
@@ -49,7 +97,7 @@
       <p data-i18n="lab.g1p">Assertive. Plain words. No filler, no sensationalism. Short sentences in an emergency, longer ones to explain.</p>
       <h3 style="font-size:15px" data-i18n="lab.g2">The two structures</h3>
       <p data-i18n="lab.g2a"><strong>Urgent topic</strong> — Act, then Adapt, then Understand. The reader has no time: they act first.</p>
-      <p data-i18n="lab.g2b"><strong>Non-urgent topic</strong> — Act, then Understand, then Adapt. The right move comes from the mechanism.</p>
+      <p data-i18n="lab.g2b"><strong>Non-urgent topic</strong>: Understand, then Act, then Adapt. The right move comes from the mechanism.</p>
       <p data-i18n="lab.g2c">Write the section titles like this: <code>## ACT</code>, <code>## UNDERSTAND</code>, <code>## ADAPT</code>.</p>
       <h3 style="font-size:15px" data-i18n="lab.g3">The “Understand” part</h3>
       <p data-i18n="lab.g3p">Explain the <strong>mechanism</strong>, not just the fact. The reader should be able to work out what to do in a case your sheet doesn't describe. That's what separates a useful sheet from a list of instructions.</p>
@@ -154,6 +202,7 @@
     </p>
     <p class="small" style="margin-top:16px" data-i18n="lab.cc">By sending, you agree that your sheet may be published under the CC BY-SA 4.0 licence if it's accepted. You stay free to do whatever you want with it elsewhere.</p>
   </form>
+  </section>
 </main>
 <footer>
   <div class="wrap">
@@ -161,7 +210,7 @@
     <p class="small">
       <a href="explore.html" data-i18n="nav.explore">Explore</a> ·
       <a href="devices.html" data-i18n="nav.devices">Devices</a> ·
-      <a href="lab.html" data-i18n="nav.contribute">Contribute</a> ·
+      <a href="lab.html" data-i18n="nav.contribute">Phenix Lab</a> ·
       <a href="download.html" data-i18n="nav.download">Download</a> ·
       <a href="soutenir.html" data-i18n="nav.support">Support</a> ·
       <a href="https://www.instagram.com/phenixprjct/" rel="noopener">Instagram</a> ·
@@ -172,6 +221,6 @@
   </div>
 </footer>
 <script src="i18n.js"></script>
-<script src="lab.js"></script>
+<script src="en-ligne.js"></script><script src="communaute.js"></script><script src="lab.js"></script>
 </body>
 </html>

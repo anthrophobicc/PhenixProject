@@ -110,6 +110,7 @@ Les fiches **officielles** sont livrées avec le logiciel et relues avant intég
 - Bibliothèque d'ouvrages complets importables
 - Quatre modules intégrés : **Inventaire** (cases, lieux, alertes de péremption et de stock bas, export CSV), **Notes** (reliées aux fiches par `[[ID]]`), **Calendrier** (événements, répétition annuelle) et **Convertisseur** (unités, températures, batteries et solaire). Leurs données voyagent avec la sauvegarde.
 - Modules de la communauté importables et exportables
+- **Phenix Lab**, quand il y a du réseau : proposer une idée ou une fiche entière, voter « utile » et commenter sous chaque fiche officielle et sous les propositions publiées. Tout le reste marche sans connexion.
 - Huit thèmes, deux dispositions (colonnes, ou liste en haut et lecture centrée)
 - Sur téléphone : menu déroulant des vues, panneau des cartes rangé dans un tiroir, bouton de retour au corpus pendant la lecture
 - Import et export en `.md` et `.json`
@@ -122,10 +123,10 @@ Elles sont réelles et assumées. Les connaître évite les mauvaises surprises.
 
 - **L'enregistrement dépend du mode d'ouverture.** En application de bureau, tout est écrit sur le disque. Dans un navigateur, tout est enregistré localement et survit à la fermeture. Dans certains aperçus restreints, aucun enregistrement n'est possible : l'indicateur en haut à droite vous le dit, et l'export manuel devient obligatoire.
 - **Les tuiles de carte proviennent d'OpenStreetMap**, dont la politique d'usage interdit le téléchargement en masse. Les zones enregistrables sont donc volontairement limitées. Une source de tuiles dédiée est nécessaire avant toute diffusion large.
-- **Le corpus est encore petit.** Cent quatre-vingts fiches, dont quarante traduites en anglais, là où le projet en vise des milliers. Toutes les catégories des trois axes ont au moins une fiche.
+- **Le corpus est encore petit.** Cent quatre-vingt-trois fiches, dont quarante-quatre traduites en anglais, là où le projet en vise des milliers. Toutes les catégories des trois axes ont au moins une fiche.
 - **Le corpus est embarqué dans le fichier de l'application.** Ajouter une fiche demande de la reporter à deux endroits. C'est le prix du fichier unique sans dépendance.
 - **Aucune vérification cryptographique** des fiches n'est encore implémentée. À la place, le logiciel connaît la liste des fiches qu'il embarque : toute fiche importée est communautaire, quoi que dise son en-tête. Cela empêche l'usurpation locale, pas la diffusion d'une copie modifiée du logiciel lui-même.
-- **Aucune fonctionnalité communautaire en ligne.** Les contributions passent par ce dépôt.
+- **Les fonctions en ligne sont jeunes.** Les propositions, votes et commentaires passent par une base Supabase gratuite (voir `docs/BACKEND.md`) : sans compte, avec des garde-fous contre les envois en rafale, et une relecture humaine avant toute publication.
 
 ---
 
@@ -140,7 +141,9 @@ Elles sont réelles et assumées. Les connaître évite les mauvaises surprises.
 
 ## Contribuer
 
-Les contributions se font par *pull request* sur ce dépôt.
+Le plus simple : la page **Lab** du site, ou le module **Phenix Lab** de l'application. Une idée prend dix secondes ; une fiche complète peut avoir des images. Sans compte.
+
+Les contributions se font aussi par *pull request* sur ce dépôt.
 
 **Pour proposer une fiche :**
 
@@ -153,6 +156,12 @@ Les contributions se font par *pull request* sur ce dépôt.
 **Le ton.** Assertif, vouvoiement, aucune phrase pour combler. Phrases courtes dans l'urgence, longues dans l'explication. Le rythme de la fiche est le rythme de la situation.
 
 **Ce qui sera refusé :** contenu sans source sur un sujet où l'erreur blesse, procédures médicales relevant d'une formation, techniques dont l'efficacité n'est pas établie.
+
+---
+
+## Lire la bibliothèque sur un petit écran
+
+`node outils/export-flipper.js` écrit toutes les fiches en texte simple dans `sortie-flipper/phenix/` (une fiche par fichier, rangées par langue et par axe) : de quoi les lire sur un Flipper Zero ou sur le premier prototype du Phenix 001. Le plan du prototype est dans `materiel/mvp-001.md`.
 
 ---
 

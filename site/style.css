@@ -268,3 +268,70 @@ footer strong{color:var(--acc)}
 .quatre > div{background:var(--surface);border:1px solid var(--hair);border-radius:6px;padding:16px}
 .quatre h3{margin:0 0 6px;font-size:15px;color:var(--acc)}
 .quatre p{margin:0;font-size:14.5px;color:var(--txt2)}
+
+/* ---------- Phenix Lab en ligne : idée rapide, communauté, votes et commentaires ---------- */
+.idee{border:1px solid var(--acc-mid);background:var(--acc-soft);border-radius:12px;padding:18px 18px 4px;margin:6px 0 10px}
+.idee h2{margin:0 0 6px;font-size:21px;color:var(--acc)}
+.idee .field{margin-bottom:12px}
+.commu{display:flex;flex-direction:column;gap:12px;margin-top:8px}
+.commu-barre{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.btn.vote{padding:8px 14px;font-size:14px}
+.btn.vote b{margin-left:4px}
+.btn.vote.on{background:var(--acc);border-color:var(--acc);color:var(--ink)}
+.commu-liste{display:flex;flex-direction:column;gap:8px}
+.commu-com{border-left:2px solid var(--hair2);padding:2px 0 2px 12px}
+.commu-com p{margin:3px 0 0;white-space:pre-wrap;overflow-wrap:anywhere}
+.commu-form{display:flex;flex-direction:column;gap:8px}
+.commu-form textarea,.commu-form input{width:100%;box-sizing:border-box;background:var(--surface);color:var(--txt);border:1px solid var(--hair2);border-radius:8px;padding:10px 12px;font:inherit}
+.commu-form textarea{min-height:70px;resize:vertical}
+.commu-envoi{display:flex;gap:8px}
+.commu-envoi input{flex:1;min-width:0}
+.commu-msg{color:var(--alert);margin:0}
+.prop{border:1px solid var(--hair2);border-radius:12px;padding:14px 16px;margin:12px 0;background:var(--surface)}
+.prop h3{margin:8px 0 6px;font-size:18px}
+.prop-tete{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.prop details summary{cursor:pointer;color:var(--txt2)}
+.prop-texte{white-space:pre-wrap;overflow-wrap:anywhere;font:inherit;font-size:14.5px;line-height:1.6;margin:10px 0 0}
+
+/* ---------- Phenix Lab : l'atelier de la communauté ---------- */
+.lab-titre{font-size:clamp(30px,6vw,46px);margin:6px 0 10px;color:var(--acc);text-shadow:var(--glow);text-wrap:balance}
+.lab .lede{font-size:17px;margin:0 0 20px;max-width:62ch}
+.lab-etapes{list-style:none;counter-reset:etape;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:0;margin:0 0 26px}
+.lab-etapes li{counter-increment:etape;border:1px solid var(--hair2);border-radius:10px;padding:12px 12px 12px 44px;position:relative;font-size:14px;line-height:1.45;background:var(--surface)}
+.lab-etapes li::before{content:counter(etape);position:absolute;left:12px;top:11px;width:22px;height:22px;border-radius:50%;background:var(--acc);color:var(--ink);font:700 13px/22px var(--mono);text-align:center}
+.lab-etapes b{color:var(--acc)}
+@media (max-width:760px){.lab-etapes{grid-template-columns:1fr 1fr}}
+@media (max-width:460px){.lab-etapes{grid-template-columns:1fr}}
+.lab-onglets{display:flex;gap:6px;border-bottom:1px solid var(--hair2);margin-bottom:18px;overflow-x:auto}
+.lab-onglets button{background:none;border:0;border-bottom:3px solid transparent;color:var(--dim);font:700 15px var(--sans);padding:10px 12px;cursor:pointer;white-space:nowrap}
+.lab-onglets button.on{color:var(--acc);border-bottom-color:var(--acc)}
+.lab-onglets .nb{margin-left:6px;font-family:var(--mono);font-size:12px;color:var(--dim)}
+.lab-outils{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
+.lab-tri{display:inline-flex;border:1px solid var(--hair2);border-radius:8px;overflow:hidden}
+.lab-tri button{background:none;border:0;color:var(--txt2);font:600 14px var(--sans);padding:8px 14px;cursor:pointer}
+.lab-tri button.on{background:var(--acc);color:var(--ink)}
+.lab-outils select{background:var(--surface);color:var(--txt);border:1px solid var(--hair2);border-radius:8px;padding:8px 10px;font:inherit}
+.lab-liste{display:flex;flex-direction:column;gap:12px}
+.lab-liste .prop{display:flex;gap:14px;margin:0;align-items:flex-start}
+.prop.neuve{border-color:var(--acc);box-shadow:var(--shadow)}
+.prop-vote .vote{display:flex;flex-direction:column;align-items:center;gap:2px;min-width:52px;padding:8px 6px;border:1px solid var(--hair2);border-radius:10px;background:var(--sunk);color:var(--txt2);cursor:pointer;font:700 15px var(--mono)}
+.prop-vote .vote span{font-size:13px}
+.prop-vote .vote.on{background:var(--acc);border-color:var(--acc);color:var(--ink)}
+.prop-corps{flex:1;min-width:0}
+.prop-extrait{margin:4px 0 6px;color:var(--txt2);overflow-wrap:anywhere}
+.prop-actions{display:flex;gap:16px;flex-wrap:wrap;margin-top:6px}
+.lien{background:none;border:0;padding:0;color:var(--acc);font:600 14px var(--sans);cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.prop-detail{margin-top:12px;border-top:1px solid var(--hair);padding-top:12px}
+.tag.st-new{background:none;color:var(--dim);border:1px solid var(--hair2)}
+.tag.st-rev{background:none;color:var(--warn);border:1px solid var(--hair2)}
+.tag.st-com{background:rgba(230,255,77,.08);color:var(--warn);border:1px solid rgba(230,255,77,.3)}
+.tag.st-ver{background:rgba(92,242,255,.08);color:var(--cyan);border:1px solid rgba(92,242,255,.3)}
+.tag.st-off{background:var(--acc-soft);color:var(--acc);border:1px solid var(--acc-mid)}
+.lab-vide{border:1px dashed var(--hair2);border-radius:12px;padding:22px;text-align:center}
+.lab-vide p{margin:0 0 12px;color:var(--txt2)}
+.prop.attente{border-style:dashed}
+.prop .vote:disabled{opacity:.45;cursor:default}
+.prop-texte{font-size:15px;line-height:1.65;overflow-wrap:anywhere}
+.prop-texte h4{margin:14px 0 6px;color:var(--acc);font-size:14px;letter-spacing:.08em}
+.prop-texte p{margin:0 0 10px}
+.prop-texte .ref{font-family:var(--mono);font-size:13px;color:var(--acc)}

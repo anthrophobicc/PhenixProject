@@ -195,7 +195,7 @@ function nav(lang) {
   <nav>
     ${tx("a", "nav.explore", "Explore", "Explorer", 'href="explore.html"', lang)}
     ${tx("a", "nav.devices", "Devices", "Appareils", 'href="devices.html"', lang)}
-    ${tx("a", "nav.contribute", "Contribute", "Contribuer", 'href="lab.html"', lang)}
+    ${tx("a", "nav.contribute", "Phenix Lab", "Phenix Lab", 'href="lab.html"', lang)}
     ${tx("a", "nav.download", "Download", "Télécharger", 'href="download.html"', lang)}
     <button class="lang" type="button" aria-label="Language">${lang === "fr" ? "EN" : "FR"}</button>
     <span class="themes" role="group" aria-label="Theme">
@@ -213,7 +213,7 @@ function pied(lang) {
     <p class="small">
       ${tx("a", "nav.explore", "Explore", "Explorer", 'href="explore.html"', lang)} ·
       ${tx("a", "nav.devices", "Devices", "Appareils", 'href="devices.html"', lang)} ·
-      ${tx("a", "nav.contribute", "Contribute", "Contribuer", 'href="lab.html"', lang)} ·
+      ${tx("a", "nav.contribute", "Phenix Lab", "Phenix Lab", 'href="lab.html"', lang)} ·
       ${tx("a", "nav.download", "Download", "Télécharger", 'href="download.html"', lang)} ·
       ${tx("a", "nav.support", "Support", "Soutenir", 'href="soutenir.html"', lang)} ·
       <a href="${INSTA}" rel="noopener">Instagram</a> ·
@@ -270,7 +270,7 @@ function accueil() {
     <div class="actions">
       <a class="act primary wide" href="phenix.html">${tx("b", "home.a0", "Open the app", "Ouvrir l'application")}${tx("span", "home.a0s", "On your phone or your computer, right in the browser. Add it to your home screen and it works without internet.", "Sur téléphone ou sur ordinateur, directement dans le navigateur. Ajoutez-la à l'écran d'accueil et elle marche sans internet.")}</a>
       <a class="act" href="explore.html">${tx("b", "home.a1", "Explore", "Explorer")}${tx("span", "home.a1s", "Read the sheets, nothing to install", "Lire les fiches sans rien installer")}</a>
-      <a class="act" href="lab.html">${tx("b", "home.a2", "Contribute", "Contribuer")}${tx("span", "home.a2s", "Write down what you know, for everyone", "Inscrire ce que vous savez, pour tout le monde")}</a>
+      <a class="act" href="lab.html">${tx("b", "home.a2", "Phenix Lab", "Phenix Lab")}${tx("span", "home.a2s", "Suggest, vote and comment on the next sheets", "Proposez, votez et commentez les prochaines fiches")}</a>
       <a class="act" href="download.html">${tx("b", "home.a3", "Download", "Télécharger")}${tx("span", "home.a3s", "Phenix Base, the full app, offline", "Phenix Base, l'application complète, hors ligne")}</a>
       <a class="act" href="soutenir.html">${tx("b", "home.a4", "Support", "Soutenir")}${tx("span", "home.a4s", "Help the project last", "Aider le projet à durer")}</a>
     </div>
@@ -499,11 +499,59 @@ function telecharger() {
 
 /* ---------- Contribuer (Phenix Lab) ---------- */
 function lab() {
-  const corps = `<main class="wrap" style="padding-top:34px;padding-bottom:60px">
-  <h1 style="font-size:30px;margin:0 0 10px;color:var(--acc);text-shadow:var(--glow)">Phenix Lab</h1>
-  ${tx("p", "lab.lede", "Write a sheet for the library. No account, no sign-up. You can stay anonymous.", "Proposez une fiche au corpus. Pas de compte, pas d'inscription. Vous pouvez rester anonyme.", 'class="lede" style="font-size:17px;margin:0 0 18px"')}
+  const corps = `<main class="wrap lab" style="padding-top:34px;padding-bottom:60px">
+  ${tx("p", "lab.k", "Phenix Lab · the community workshop", "Phenix Lab · l'atelier de la communauté", 'class="kicker"')}
+  ${tx("h1", "lab.h1", "The library is written here.", "La bibliothèque s'écrit ici.", 'class="lab-titre"')}
+  ${tx("p", "lab.lede2", "Suggest a sheet, vote for the ones you want, improve them in the comments. The best proposals become official sheets in the app, readable by everyone, offline. No account needed.", "Proposez une fiche, votez pour celles que vous voulez, améliorez-les dans les commentaires. Les meilleures propositions deviennent des fiches officielles dans l'application, lisibles par tous, hors ligne. Sans compte.", 'class="lede"')}
+  <ol class="lab-etapes">
+    ${tx("li", "lab.e1", "<b>Suggest</b> an idea in ten seconds, or write the whole sheet.", "<b>Proposez</b> une idée en dix secondes, ou écrivez toute la fiche.")}
+    ${tx("li", "lab.e2", "<b>The community votes</b> and comments. What people need rises to the top.", "<b>La communauté vote</b> et commente. Ce dont les gens ont besoin monte en tête.")}
+    ${tx("li", "lab.e3", "<b>The team checks</b> the sources, the safety and the clarity.", "<b>L'équipe vérifie</b> les sources, la sécurité et la clarté.")}
+    ${tx("li", "lab.e4", "<b>It becomes official</b> and ships in the app, readable offline.", "<b>Elle devient officielle</b> et part dans l'application, lisible hors ligne.")}
+  </ol>
+  <div class="lab-onglets" role="tablist">
+    <button type="button" role="tab" data-onglet="propositions">${tx("span", "lab.o1", "Proposals", "Propositions")}<span class="nb" id="nbProps"></span></button>
+    <button type="button" role="tab" data-onglet="idee">${tx("span", "lab.o2", "Suggest an idea", "Proposer une idée")}</button>
+    <button type="button" role="tab" data-onglet="ecrire">${tx("span", "lab.o3", "Write a sheet", "Écrire une fiche")}</button>
+  </div>
 
-  ${tx("div", "lab.next", "<strong>What happens next.</strong> Your proposal is reviewed before anything goes in. It can become <em>community</em>, then <em>verified</em>, and only then <em>official</em>. <strong>Nothing enters the official library automatically.</strong>", "<strong>Ce qui se passe ensuite.</strong> Votre proposition est relue avant toute intégration. Elle peut devenir <em>communautaire</em>, puis <em>vérifiée</em>, et seulement après <em>officielle</em>. <strong>Rien n'entre automatiquement dans le corpus officiel.</strong>", 'class="msg info"')}
+  <section class="lab-panneau" id="o-propositions" role="tabpanel">
+    <div class="lab-outils">
+      <div class="lab-tri" role="group">
+        <button type="button" data-tri="top" class="on">Top</button>
+        <button type="button" data-tri="new">${tx("span", "lab.new", "New", "Nouveau")}</button>
+      </div>
+      <select id="filtreType" aria-label="Type">
+        ${tx("option", "lab.ft0", "Everything", "Tout", 'value=""')}
+        ${tx("option", "lab.ft1", "Ideas", "Idées", 'value="idee"')}
+        ${tx("option", "lab.ft2", "Sheets", "Fiches", 'value="fiche"')}
+        ${tx("option", "lab.ft3", "Corrections", "Corrections", 'value="correction"')}
+      </select>
+    </div>
+    <div id="retourLab"></div>
+    <div id="liste-communaute" class="lab-liste"><p class="dim small">…</p></div>
+  </section>
+
+  <section class="lab-panneau" id="o-idee" role="tabpanel" hidden>
+    <div class="idee">
+      ${tx("h2", "lab.q.h", "Got an idea for a sheet? Ten seconds.", "Une idée de fiche ? Dix secondes.")}
+      ${tx("p", "lab.q.p2", "Tell us what you'd want to know how to do. It shows up in Proposals, where people vote for it.", "Dites-nous ce que vous aimeriez savoir faire. Elle apparaît dans Propositions, où les gens votent pour elle.", 'class="help"')}
+      <form id="formIdee" autocomplete="off">
+        <div class="field"><input id="ideeTexte" required minlength="3" maxlength="140" ${ph("lab.q.i", "e.g. How to purify water with a plastic bottle", "ex : Purifier de l'eau avec une bouteille en plastique")}></div>
+        <div class="field"><textarea id="ideeDetail" maxlength="4000" ${ph("lab.q.d", "Details, your situation, what you already know (optional)", "Précisions, votre situation, ce que vous savez déjà (facultatif)")}></textarea></div>
+        <div class="row">
+          <div class="field"><input id="ideeAuteur" maxlength="60" ${ph("lab.q.a", "Nickname (optional)", "Pseudo (facultatif)")}></div>
+          <div class="field"><input id="ideeContact" maxlength="120" ${ph("lab.q.c", "Email or Instagram, to hear back (optional, private)", "E-mail ou Instagram, pour une réponse (facultatif, privé)")}></div>
+        </div>
+        <div style="position:absolute;left:-9999px" aria-hidden="true"><input id="idSite" tabindex="-1" autocomplete="off"></div>
+        <div id="retourIdee"></div>
+        <p>${tx("button", "lab.q.b", "Send my idea", "Envoyer mon idée", 'type="submit" class="btn primary"')}</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="lab-panneau" id="o-ecrire" role="tabpanel" hidden>
+  ${tx("div", "lab.next2", "<strong>What happens next.</strong> Your sheet shows up in Proposals, where people vote and comment. The team reviews it before anything enters the official library: it can become <em>community</em>, then <em>verified</em>, and only then <em>official</em>.", "<strong>Ce qui se passe ensuite.</strong> Votre fiche apparaît dans Propositions, où les gens votent et commentent. L'équipe la relit avant toute entrée dans la bibliothèque officielle : elle peut devenir <em>communautaire</em>, puis <em>vérifiée</em>, et seulement après <em>officielle</em>.", 'class="msg info"')}
 
   <details class="aide">
     ${tx("summary", "lab.guide", "How to write a good sheet", "Comment écrire une bonne fiche")}
@@ -512,7 +560,7 @@ function lab() {
       ${tx("p", "lab.g1p", "Assertive. Plain words. No filler, no sensationalism. Short sentences in an emergency, longer ones to explain.", "Assertif. Vouvoiement. Aucune phrase pour combler, aucun sensationnalisme. Phrases courtes dans l'urgence, longues dans l'explication.")}
       ${tx("h3", "lab.g2", "The two structures", "Les deux structures", 'style="font-size:15px"')}
       ${tx("p", "lab.g2a", "<strong>Urgent topic</strong> — Act, then Adapt, then Understand. The reader has no time: they act first.", "<strong>Sujet urgent</strong> — Agir, puis Adapter, puis Comprendre. Le lecteur n'a pas le temps : il exécute d'abord.")}
-      ${tx("p", "lab.g2b", "<strong>Non-urgent topic</strong> — Act, then Understand, then Adapt. The right move comes from the mechanism.", "<strong>Sujet non urgent</strong> — Agir, puis Comprendre, puis Adapter. Le geste juste découle du mécanisme.")}
+      ${tx("p", "lab.g2b", "<strong>Non-urgent topic</strong>: Understand, then Act, then Adapt. The right move comes from the mechanism.", "<strong>Sujet non urgent</strong> : Comprendre, puis Agir, puis Adapter. Le geste juste découle du mécanisme.")}
       ${tx("p", "lab.g2c", "Write the section titles like this: <code>## ACT</code>, <code>## UNDERSTAND</code>, <code>## ADAPT</code>.", "Écrivez les titres de section ainsi : <code>## AGIR</code>, <code>## COMPRENDRE</code>, <code>## ADAPTER</code>.")}
       ${tx("h3", "lab.g3", "The “Understand” part", "La partie « Comprendre »", 'style="font-size:15px"')}
       ${tx("p", "lab.g3p", "Explain the <strong>mechanism</strong>, not just the fact. The reader should be able to work out what to do in a case your sheet doesn't describe. That's what separates a useful sheet from a list of instructions.", "Expliquez le <strong>mécanisme</strong>, pas seulement le fait. Le lecteur doit pouvoir en déduire quoi faire dans un cas que votre fiche ne décrit pas. C'est ce qui sépare une fiche utile d'une liste d'instructions.")}
@@ -617,8 +665,9 @@ function lab() {
     </p>
     ${tx("p", "lab.cc", "By sending, you agree that your sheet may be published under the CC BY-SA 4.0 licence if it's accepted. You stay free to do whatever you want with it elsewhere.", "En envoyant, vous acceptez que votre fiche puisse être publiée sous licence CC BY-SA 4.0 si elle est retenue. Vous restez libre d'en faire ce que vous voulez par ailleurs.", 'class="small" style="margin-top:16px"')}
   </form>
+  </section>
 </main>`;
-  return page({ titreHtml: tx("title", "lab.title", "Phenix Lab — write a sheet", "Phenix Lab — proposer une fiche"), desc: "Write a sheet for the Phenix library. No account needed.", corps, scripts: '<script src="lab.js"></script>' });
+  return page({ titreHtml: tx("title", "lab.title2", "Phenix Lab", "Phenix Lab"), desc: "Phenix Lab: suggest sheets, vote and comment. The best proposals become official sheets in the Phenix library. No account needed.", corps, scripts: '<script src="en-ligne.js"></script><script src="communaute.js"></script><script src="lab.js"></script>' });
 }
 
 /* ---------- Soutenir ---------- */
@@ -732,7 +781,7 @@ function pageFiche(id, lang) {
   const seulFr = lang === "fr" && !EN_F[id];
   const corps = `<main class="wrap fiche">
   <p class="fil">${tx("a", "nav.explore", "Explore", "Explorer", 'href="explore.html"', lang)} › ${esc(AXES[axe][i])} › ${esc(cat)}</p>
-  ${seulFr ? tx("p", "fiche.onlyfr", 'This sheet is only in French for now. <a href="lab.html">Help translate it →</a>', "Cette fiche n'existe qu'en français pour l'instant.", 'class="onlyfr" data-only="en" hidden', lang) : ""}
+  ${seulFr ? tx("p", "fiche.onlyfr", 'This sheet is only in French for now. <a href="lab.html#ecrire">Help translate it →</a>', "Cette fiche n'existe qu'en français pour l'instant.", 'class="onlyfr" data-only="en" hidden', lang) : ""}
   <div class="tags">
     ${f.priorite === "flash" ? tx("span", "tag.urg", "Emergency", "Urgence", 'class="tag urg"', lang) : ""}
     ${tx("span", "tag.off", "Official", "Officielle", 'class="tag off"', lang)}
@@ -743,14 +792,18 @@ function pageFiche(id, lang) {
   <article class="prose">${rendre(src.corps, lienPour(lang))}</article>
   ${sources.length ? `<div class="blk"><h4>Sources</h4>${sources.map((s) => `<div class="src">${esc(s)}</div>`).join("")}</div>` : ""}
   ${retours.length ? `<div class="blk">${tx("h4", "fiche.back", "Sheets that lead here", "Fiches qui mènent ici", "", lang)}${retours.map(lienRetour).join("")}</div>` : ""}
+  <section class="blk">
+    ${tx("h4", "fiche.commu", "Useful? Anything to add?", "Utile ? Quelque chose à ajouter ?", "", lang)}
+    <div id="communaute" data-cible="${id}"></div>
+  </section>
   <div class="blk cta">
     ${tx("p", "fiche.cta", "<strong>This sheet is part of Phenix.</strong> The app holds the whole library, the maps and the bookshelf, and works offline.", "<strong>Cette fiche fait partie de Phenix.</strong> L'application contient tout le corpus, les cartes et la bibliothèque, et fonctionne hors ligne.", "", lang)}
     <p>${tx("a", "home.b2", "Download Phenix Base", "Télécharger Phenix Base", 'class="btn primary" href="download.html"', lang)}
-       ${tx("a", "sup.btn", "Write a sheet", "Proposer une fiche", 'class="btn" href="lab.html"', lang)}</p>
+       ${tx("a", "sup.btn", "Write a sheet", "Proposer une fiche", 'class="btn" href="lab.html#ecrire"', lang)}</p>
   </div>
 </main>`;
   const desc = `${src.meta.titre} — Phenix`;
-  return page({ lang, alt, fiche: true, titreHtml: `<title>${esc(src.meta.titre)} — Phenix</title>`, desc, css: ["fiche.css"], corps });
+  return page({ lang, alt, fiche: true, titreHtml: `<title>${esc(src.meta.titre)} — Phenix</title>`, desc, css: ["fiche.css"], corps, scripts: '<script src="en-ligne.js"></script><script src="communaute.js"></script>' });
 }
 
 /* ---------- Script de langue ---------- */
@@ -824,8 +877,10 @@ function liens() {
     ${lien("phenix.html", "ln.app", "Open the app", "Ouvrir l'application", "ln.apps", "On your phone or your computer. Nothing to install to try it.", "Sur téléphone ou sur ordinateur. Rien à installer pour l'essayer.", "act primary")}
     ${lien("download.html#phone", "ln.inst", "Put it on your phone", "La mettre sur votre téléphone", "ln.insts", "Home screen icon, works offline. No store, no account.", "Une icône sur l'écran d'accueil, marche hors ligne. Sans store ni compte.")}
     ${lien("explore.html", "ln.exp", "Read the sheets", "Lire les fiches", "ln.exps", "First aid, water, repairs, energy, memory of the world", "Secours, eau, réparation, énergie, mémoire du monde")}
+    ${lien("lab.html?origine=bio#idee", "ln.idee", "Suggest a sheet", "Proposer une fiche", "ln.idees", "Ten seconds, no account. The best ideas become sheets.", "Dix secondes, sans compte. Les meilleures idées deviennent des fiches.")}
+    ${lien("lab.html#propositions", "ln.com", "Phenix Lab", "Phenix Lab", "ln.coms", "Vote and comment on what readers propose", "Votez et commentez ce que proposent les lecteurs")}
     ${lien("devices.html", "ln.dev", "The devices", "Les appareils", "ln.devs", "Phenix 001 and 002, pocket readers in design", "Phenix 001 et 002, des lecteurs de poche en conception")}
-    ${lien("lab.html", "ln.lab", "Write a sheet", "Écrire une fiche", "ln.labs", "Share what you know. No account needed.", "Partagez ce que vous savez. Aucun compte nécessaire.")}
+    ${lien("lab.html#ecrire", "ln.lab", "Write a sheet", "Écrire une fiche", "ln.labs", "Share what you know. No account needed.", "Partagez ce que vous savez. Aucun compte nécessaire.")}
     ${lien("download.html", "ln.win", "Windows version", "Version Windows", "ln.wins", "The full app, installed on your PC", "L'application complète, installée sur votre PC")}
     ${lien(REDDIT, "ln.red", "Reddit", "Reddit", "ln.reds", "Discuss the project on r/PhenixProject", "Discuter du projet sur r/PhenixProject")}
     ${lien(DEPOT, "ln.git", "GitHub", "GitHub", "ln.gits", "Code and sheets, open to everyone", "Le code et les fiches, ouverts à tous")}
