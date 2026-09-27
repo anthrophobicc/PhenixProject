@@ -1348,14 +1348,17 @@ const EN={
 "Électronique et Numérique":"Electronics and Computing",
 "Terre et Climat":"Earth and Climate",
 "Métiers et Savoir-faire":"Trades and Skills",
+"Métal et Atelier":"Metal and Workshop",
+"Crises et Catastrophes":"Crises and Disasters",
+"Milieux et Climats":"Environments and Climates",
 "Ce qui se répète":"What Repeats"
 };
 const tr=s=>LANG==="en"?(EN[s]??s):s;
 
 const AXES=[
  {n:1,nom:"La Mémoire",cats:["L'Éveil","Les révolutions agricoles","Cités états et premiers empires","Ère des échanges et grands pôles","Accélération technique","L'anthropocène","Ce qui se répète"]},
- {n:2,nom:"La Technique",cats:["Agriculture et Botanique","Alimentation et Conservation","Chimie et Matériaux","Construction et Habitat","Mécanique et Transport","Santé et Chirurgie","Énergie et Électricité","Électronique et Numérique","Information et Données","Terre et Climat","Métiers et Savoir-faire","Culture et Loisirs"]},
- {n:3,nom:"La Survie",cats:["Feu, Eau et Ressources","Mouvement et Discrétion","Psychologie Sociale et Troc","Récupération","Secourisme","Signaux et Communications","Protocoles d'urgence","Armement et Défense"]}
+ {n:2,nom:"La Technique",cats:["Agriculture et Botanique","Alimentation et Conservation","Chimie et Matériaux","Métal et Atelier","Construction et Habitat","Mécanique et Transport","Santé et Chirurgie","Énergie et Électricité","Électronique et Numérique","Information et Données","Terre et Climat","Métiers et Savoir-faire","Culture et Loisirs"]},
+ {n:3,nom:"La Survie",cats:["Feu, Eau et Ressources","Mouvement et Discrétion","Psychologie Sociale et Troc","Récupération","Secourisme","Signaux et Communications","Protocoles d'urgence","Crises et Catastrophes","Milieux et Climats","Armement et Défense"]}
 ];
 const BALISES={
  temps:{label:"Temps",vals:["Flash","Court","Long"]},
@@ -18290,6 +18293,871 @@ Certaines forêts ont besoin du feu : des pins ne libèrent leurs graines que da
 La fumée des incendies contient des particules fines qui descendent profondément dans les poumons. Elle voyage sur des centaines, voire des milliers de kilomètres. Les jours de fumée, un masque filtrant de type FFP2 protège bien mieux qu'un masque chirurgical, voir [[TEC-SAN-006]].
 
 Que font les pompiers : [[TEC-TER-002]]. Que faire soi-même face au feu : [[URG-FEU-001]].
+
+---
+id: URG-GAZ-001
+titre: Fuite de gaz
+axe: 3
+categorie: Protocoles d'urgence
+temps: Flash
+contexte: 1
+risque: Exposé
+materiel: Rien
+priorite: flash
+origine: officielle
+tags: [gaz, fuite, odeur, explosion, butane, propane, gaz naturel, urgence]
+sources: ["GRDF, consignes en cas d'odeur de gaz et numéro Urgence Sécurité Gaz", "Ministère de la Transition écologique, sécurité des installations de gaz domestique", "INRS, fiches sur le propane, le butane et le méthane"]
+---
+
+::Une odeur de gaz dans une maison ne tue presque jamais par elle-même. C'est l'étincelle d'un interrupteur qui tue. Tout le protocole tient en une idée : ne rien allumer, ne rien éteindre, sortir.::
+
+## AGIR
+
+1. **Ne touchez à aucun interrupteur**, ni pour allumer ni pour éteindre. Pas de sonnette, pas d'interphone, pas de volet électrique, pas de briquet, pas de cigarette.
+2. **Ouvrez les fenêtres et les portes** en grand, en passant.
+3. **Fermez le robinet de gaz** : au compteur pour le gaz de ville, sur la bouteille ou la citerne pour le butane et le propane.
+4. **Sortez**, faites sortir tout le monde, et ne prenez pas l'ascenseur.
+5. **Appelez une fois dehors**, à distance : les secours (18 ou 112) et, en France, le numéro Urgence Sécurité Gaz de GRDF, **0 800 47 33 33**, gratuit, jour et nuit.
+6. **N'y retournez pas** avant le feu vert des secours.
+
+## ADAPTER
+
+**L'odeur est faible, près de la cuisinière** : un bouton de brûleur mal fermé, une flamme soufflée par un courant d'air ou une casserole qui a débordé. Fermez le bouton, aérez largement, attendez que l'odeur disparaisse avant de rallumer quoi que ce soit.
+
+**Butane et propane (bouteilles, citernes)** : ils sont **plus lourds que l'air**. Ils coulent au sol et s'accumulent dans les caves, les sous-sols, les fosses de garage. Aérez par le bas, et ne descendez pas dans une cave qui sent le gaz.
+
+**Gaz de ville (méthane)** : plus léger que l'air, il monte. Aérez par le haut.
+
+**Dans un immeuble** : prévenez les voisins en frappant aux portes, pas en sonnant.
+
+**Chercher une petite fuite sur un raccord** : de l'eau savonneuse au pinceau, robinet ouvert. Des bulles, c'est là. **Jamais une flamme pour chercher une fuite.**
+
+**Quelqu'un est inconscient dans la pièce** : aérez d'abord, sortez-le vite en retenant votre respiration, puis voir [[URG-INCO-001]].
+
+## COMPRENDRE
+
+Le gaz naturel et le propane n'ont presque pas d'odeur. On leur ajoute un produit soufré qui sent fort pour qu'une fuite se remarque bien avant d'être dangereuse. **Si ça sent, il est encore temps.**
+
+Le gaz n'explose que mélangé à l'air dans une proportion précise, entre environ 5 et 15 % pour le méthane, 2 et 10 % pour le propane. Il faut ensuite une étincelle : un interrupteur, le relais d'un frigo, la sonnette. D'où la règle de ne toucher à rien d'électrique.
+
+**Le tuyau souple en caoutchouc** qui relie une bouteille à une cuisinière porte une date de péremption imprimée : passé cette date, il se fendille et fuit. Changez-le.
+
+À ne pas confondre avec le **monoxyde de carbone**, qui n'a aucune odeur et vient d'un appareil qui brûle mal, pas d'une fuite : voir [[TEC-CON-010]]. Pour couper le gaz, l'eau et l'électricité : [[URG-RES-001]].
+
+---
+id: URG-FOU-001
+titre: Foudre et orage
+axe: 3
+categorie: Protocoles d'urgence
+temps: Flash
+contexte: 1
+risque: Exposé
+materiel: Rien
+priorite: flash
+origine: officielle
+tags: [foudre, orage, eclair, montagne, randonnee, voiture, arret cardiaque]
+sources: ["Météo-France, conseils de comportement en cas d'orage", "National Weather Service (États-Unis), Lightning Safety", "Cooper M. A., Holle R., Reducing Lightning Injuries Worldwide, Springer, 2019"]
+---
+
+::Si vous entendez le tonnerre, vous êtes à portée de la foudre. Pas besoin qu'il pleuve sur vous : un éclair peut frapper à plus de dix kilomètres de l'orage.::
+
+## AGIR
+
+1. **Mettez-vous à l'abri dans un bâtiment en dur ou dans une voiture fermée**, dès le premier coup de tonnerre.
+2. **Restez-y 30 minutes après le dernier tonnerre.** Beaucoup de foudroyés sont frappés à la fin de l'orage, en ressortant trop tôt.
+3. **À l'intérieur** : éloignez-vous des fenêtres, n'utilisez pas le téléphone fixe, évitez douche et bain pendant l'orage (la foudre voyage par les tuyaux et les fils).
+
+### Personne foudroyée
+
+- **On peut la toucher tout de suite** : un corps foudroyé ne garde aucune charge électrique.
+- **Elle ne respire pas : massage cardiaque immédiat**, défibrillateur. Voir [[URG-CARD-001]]. La foudre arrête souvent le cœur et la respiration, et les réanimations réussissent plus souvent qu'ailleurs, même quand la victime paraît morte.
+- **Plusieurs victimes** : occupez-vous d'abord de celles qui ne bougent pas et ne respirent pas. Celles qui crient respirent.
+
+## ADAPTER
+
+**Pris dehors, sans abri** :
+
+- quittez les sommets, les crêtes, les arêtes, les pylônes, les arbres isolés ;
+- éloignez-vous de l'eau, des clôtures métalliques, des remontées mécaniques ;
+- dans un groupe, **écartez-vous de plusieurs mètres les uns des autres** : un seul éclair ne touchera pas tout le monde ;
+- dans une forêt, restez sous des arbres bas au milieu d'arbres de même hauteur, jamais sous le plus grand ;
+- **accroupissez-vous pieds joints**, sur un sac ou une corde enroulée, en dernier recours. Ne vous allongez pas : le courant se propage dans le sol.
+
+**En montagne**, les orages d'été éclatent souvent l'après-midi : partez tôt, soyez redescendu des crêtes avant midi. Des cheveux qui se dressent, un bourdonnement sur les bâtons ou les pierres : la foudre est imminente, quittez l'endroit immédiatement.
+
+**En bateau** : descendez dans la cabine, éloignez-vous du mât et des parties métalliques.
+
+## COMPRENDRE
+
+**Compter les secondes** entre l'éclair et le tonnerre, puis diviser par trois, donne la distance de l'orage en kilomètres. Moins de 30 secondes, soit 10 km : vous êtes en danger.
+
+**La voiture protège** grâce à sa carrosserie métallique, qui conduit le courant autour de l'habitacle jusqu'au sol, et non grâce aux pneus. Une voiture décapotable ou à carrosserie plastique ne protège pas.
+
+**La foudre ne tombe pas qu'une fois au même endroit** : elle frappe de préférence ce qui dépasse, et un point haut peut être touché plusieurs fois dans le même orage.
+
+La plupart des personnes foudroyées survivent, souvent avec des brûlures, des troubles de l'audition ou de la mémoire qui demandent un suivi médical. Pour l'électricité du réseau, voir [[URG-ELEC-001]].
+
+---
+id: URG-ELEC-001
+titre: Électrocution
+axe: 3
+categorie: Protocoles d'urgence
+temps: Flash
+contexte: 2
+risque: Exposé
+materiel: Rien
+priorite: flash
+origine: officielle
+tags: [electrocution, electrisation, courant, ligne electrique, secourisme, arret cardiaque, brulure]
+sources: ["Croix-Rouge française et Protection civile, référentiel PSC1 (électrisation)", "European Resuscitation Council Guidelines 2021, special circumstances : électrisation", "Enedis, consignes de sécurité à proximité des lignes électriques tombées"]
+---
+
+::Le premier réflexe tue le sauveteur : attraper la victime. Avant de la toucher, on coupe le courant. Toujours.::
+
+## AGIR
+
+1. **Ne touchez pas la victime tant qu'elle est en contact avec le courant.**
+2. **Coupez le courant** : disjoncteur général, prise débranchée, interrupteur de l'appareil.
+3. **Impossible de couper ?** Mettez-vous sur quelque chose de sec et isolant (planche, tapis en caoutchouc, pile de journaux), puis **écartez la victime ou le fil avec un objet sec et non métallique** : manche à balai en bois, chaise en bois, bâton sec. Jamais les mains, jamais un objet mouillé.
+4. **Appelez le 15 ou le 112.**
+5. **Elle ne respire pas** : massage cardiaque tout de suite, défibrillateur dès qu'il arrive. Voir [[URG-CARD-001]].
+6. **Elle respire** : mettez-la en position latérale de sécurité si elle est inconsciente, voir [[URG-INCO-001]]. Refroidissez les brûlures à l'eau, voir [[URG-BRUL-001]].
+
+## ADAPTER
+
+**Une ligne électrique est tombée au sol** : restez à **au moins dix mètres**, et empêchez les autres d'approcher. Le sol autour du câble est sous tension : deux pieds écartés peuvent suffire à faire passer le courant par les jambes. Pour vous éloigner, **marchez à tout petits pas, les pieds joints**, sans les écarter. Aucune tentative de sauvetage sur une ligne haute tension : seuls les techniciens du réseau peuvent la couper.
+
+**Vous êtes dans une voiture et un câble est tombé dessus** : restez à l'intérieur, appelez, attendez. Si la voiture brûle, **sautez dehors pieds joints** sans jamais toucher en même temps la voiture et le sol, puis éloignez-vous à petits pas.
+
+**Dans l'eau** (piscine, baignoire, inondation avec du courant) : coupez d'abord, entrez ensuite.
+
+**La victime dit que ça va** après une électrisation : elle doit quand même voir un médecin si elle a perdu connaissance, si elle a une brûlure, si le courant a traversé le thorax (d'une main à l'autre, ou d'une main aux pieds), si elle est enceinte, ou si c'était de la haute tension. Un trouble du rythme cardiaque peut apparaître dans les heures qui suivent.
+
+## COMPRENDRE
+
+Ce n'est pas la tension qui tue, c'est le courant qui traverse le corps et le chemin qu'il prend. Quelques dizaines de milliampères qui passent par le cœur suffisent à le faire fibriller. C'est pourquoi le **différentiel 30 mA** du tableau électrique sauve des vies : il coupe avant ce seuil. Voir [[TEC-ENE-011]].
+
+Le courant alternatif du secteur contracte les muscles : la victime qui tient un fil **ne peut souvent pas le lâcher**. Elle a besoin qu'on coupe pour elle.
+
+Les brûlures électriques sont trompeuses : un petit point noir à l'entrée et à la sortie, et des dégâts profonds entre les deux, dans les muscles.
+
+La foudre est un cas à part : voir [[URG-FOU-001]].
+
+---
+id: SURV-DEP-002
+titre: Le sac
+axe: 3
+categorie: Mouvement et Discrétion
+temps: Court
+contexte: 1
+risque: Discret
+materiel: Récupération
+priorite: normale
+origine: officielle
+tags: [sac a dos, poids, reglage, evacuation, marche, charge, sac d'urgence]
+sources: ["Fédération française de randonnée pédestre, préparer son sac", "US Army, FM 21-18 Foot Marches (charges et portage)", "Ministère de l'Intérieur, kit d'urgence familial"]
+---
+
+::Un sac trop lourd ne vous emmène nulle part. Au-delà d'un quart de votre poids, vous ne marchez plus : vous portez. Le bon sac est celui qu'on peut porter une journée entière.::
+
+## COMPRENDRE
+
+**Le poids.** Pour marcher longtemps, visez **au plus 20 à 25 % de votre poids** (15 à 20 kg pour un adulte de 75 kg), et moins pour une journée de marche rapide. Chaque kilo en trop se paie en ampoules, en genoux et en kilomètres perdus.
+
+**Les hanches portent, pas les épaules.** Un sac bien réglé met environ les trois quarts de sa charge sur les hanches, par la ceinture. Les bretelles ne font que le tenir contre le dos.
+
+## AGIR
+
+### Le remplir
+
+- **Le lourd au centre, contre le dos**, entre les omoplates : eau, nourriture, outils. Un sac qui tire en arrière épuise.
+- **Le léger et encombrant en bas** : sac de couchage, vêtements.
+- **Ce qui sert souvent en haut et dans les poches** : lampe, trousse de secours, carte, veste de pluie, en-cas.
+- **Tout en sacs étanches** : un sac à dos n'est jamais étanche, un sac poubelle à l'intérieur fait l'affaire.
+
+### Le régler
+
+1. Desserrez toutes les sangles, enfilez le sac.
+2. **La ceinture sur les os des hanches** (le haut du bassin), serrée franchement.
+3. **Les bretelles** ensuite, jusqu'à ce qu'elles épousent les épaules sans porter.
+4. **Les rappels de charge** (petites sangles en haut des bretelles) tirés à environ 45 degrés, pour plaquer le haut du sac.
+5. **La sangle de poitrine** à hauteur des aisselles, sans gêner la respiration.
+
+### Le contenu de base
+
+- **Eau** : deux litres, et de quoi en trouver et la rendre potable. Voir [[URG-EAU-001]].
+- **Manger** : de quoi tenir deux ou trois jours, dense et sans cuisson.
+- **Se protéger** : veste de pluie, couche chaude, bonnet, couverture de survie, change de chaussettes.
+- **Voir et être vu** : lampe frontale et piles, sifflet.
+- **Soigner** : trousse de secours, médicaments personnels.
+- **Faire** : couteau, briquet et allumettes, cordelette, ruban adhésif.
+- **S'orienter et communiquer** : carte papier, téléphone, batterie externe, un peu d'espèces, copie des papiers.
+
+## ADAPTER
+
+**Le sac est trop lourd** : sortez tout sur le sol et retirez tout ce qui n'a pas servi lors de votre dernière sortie, sauf la trousse de secours et la couche chaude. Les « au cas où » font la moitié du poids.
+
+**Pas de sac à dos** : un sac de sport porté en travers, une valise à roulettes sur route, un chariot ou une poussette pour le lourd. Les roues portent mieux que le dos sur un sol plat.
+
+**Avec des enfants** : chaque enfant qui marche porte son petit sac avec son eau, son doudou et un vêtement chaud. Un adulte ne peut pas tout porter.
+
+**Discrétion** : un sac militaire neuf et bourré attire l'œil ; un vieux sac de randonnée ou de sport passe partout. Voir [[SURV-DEP-001]] pour marcher longtemps avec.
+
+---
+id: SURV-CRI-007
+titre: Tsunami
+axe: 3
+categorie: Crises et Catastrophes
+temps: Flash
+contexte: 1
+risque: Exposé
+materiel: Rien
+priorite: flash
+origine: officielle
+tags: [tsunami, raz-de-maree, seisme, cote, vague, evacuation, hauteur]
+sources: ["UNESCO, Commission océanographique intergouvernementale, Tsunami Glossary et consignes au public", "CENALT (Centre national d'alerte aux tsunamis, France)", "Retours d'expérience des tsunamis de 2004 (océan Indien) et 2011 (Tōhoku)"]
+---
+
+::En 2004, une petite fille de dix ans a sauvé une plage entière en Thaïlande parce qu'elle avait appris à l'école que la mer qui se retire d'un coup annonce la vague. Le savoir, ici, c'est littéralement des minutes de vie.::
+
+## AGIR
+
+**Trois signaux suffisent. Un seul, et vous partez tout de suite, sans attendre d'alerte :**
+
+- **un séisme fort ou long** ressenti sur la côte (difficile de tenir debout, ou plus de 20 secondes) ;
+- **la mer qui se retire** anormalement, découvrant les fonds ;
+- **un grondement** venant de la mer, comme un train ou un avion.
+
+1. **Montez.** Le plus haut possible, le plus vite possible : colline, falaise, étages d'un immeuble solide en béton (troisième étage au moins).
+2. **À pied**, sauf si la route vers la hauteur est dégagée. Les voitures bouchent les routes et les gens meurent dedans.
+3. **Ne descendez pas voir.** La première vague n'est souvent pas la plus haute.
+4. **Restez en hauteur** plusieurs heures, jusqu'à la fin d'alerte officielle. Les vagues arrivent en séries, espacées de 10 minutes à plus d'une heure.
+
+## ADAPTER
+
+**Pas de hauteur à portée** : partez **à l'intérieur des terres**, le plus loin possible de la côte et des embouchures, perpendiculairement au rivage.
+
+**Emporté par l'eau** : accrochez-vous à ce qui flotte (arbre, porte, planche), protégez votre tête. L'eau charrie des voitures, du bois, des débris : c'est eux qui blessent.
+
+**En bateau au port** : si le temps le permet, sortir vers le large, où la vague est basse ; au port, elle déferle. Sinon, abandonnez le bateau et montez.
+
+**Une alerte officielle** (sirène, message sur le téléphone, radio) : partez même si la mer paraît calme.
+
+## COMPRENDRE
+
+Un tsunami n'est pas une grosse vague de tempête. C'est **toute la colonne d'eau** de l'océan soulevée par un séisme sous-marin, un glissement de terrain ou une éruption. Au large, la vague fait à peine un mètre et file à la vitesse d'un avion ; près des côtes, elle ralentit et monte, et l'eau continue d'arriver pendant de longues minutes, comme une marée qui ne s'arrête pas.
+
+**La mer qui se retire** avant la vague est le creux de l'onde qui arrive en premier. Les gens qui vont ramasser les poissons sur le sable découvert sont ceux qui meurent.
+
+**En France**, les côtes méditerranéennes, les Antilles et la Polynésie sont exposées. Le séisme d'origine peut être lointain : on ne le sent alors pas, et seule l'alerte ou le retrait de la mer préviennent.
+
+La fiche sur les séismes : [[SURV-CRI-002]].
+
+---
+id: SURV-CRI-006
+titre: Accident chimique industriel
+axe: 3
+categorie: Crises et Catastrophes
+temps: Flash
+contexte: 2+
+risque: Discret
+materiel: Rien
+priorite: flash
+origine: officielle
+tags: [chimique, seveso, nuage toxique, confinement, sirene, usine, gaz, decontamination]
+sources: ["Ministère de la Transition écologique, georisques.gouv.fr : consignes en cas d'accident industriel", "INERIS, dossiers sur les accidents industriels majeurs et les nuages toxiques", "Plans particuliers d'intervention (PPI) des sites Seveso seuil haut"]
+---
+
+::Un nuage toxique passe en quelques dizaines de minutes. Ceux qui s'en sortent le mieux sont ceux qui se sont enfermés vite et bien. Ceux qui prennent la voiture pour fuir roulent souvent dedans.::
+
+## AGIR
+
+1. **À la sirène** (son montant et descendant, trois fois une minute) ou au message FR-Alert : **entrez dans le bâtiment le plus proche**.
+2. **Fermez et calfeutrez** : portes, fenêtres, aérations. Bas de porte et bouches d'aération bouchés avec des serviettes mouillées ou du ruban adhésif.
+3. **Arrêtez la ventilation**, la climatisation, la hotte, le chauffage à air pulsé.
+4. **Ni flamme ni cigarette** : certains gaz brûlent ou explosent.
+5. **Ne téléphonez pas** sauf urgence, n'allez pas chercher les enfants à l'école, écoutez la radio.
+6. **À la fin de l'alerte** (son continu de 30 secondes) : aérez largement.
+
+## ADAPTER
+
+**Vous êtes dehors, face au nuage** : éloignez-vous **perpendiculairement au vent**, jamais dans son sens ni à contre-sens. Couvrez nez et bouche avec un tissu, humide si possible. Entrez dans le premier bâtiment.
+
+**Quelle pièce choisir** : une pièce sans fenêtre ou avec peu d'ouvertures, avec un point d'eau si possible. Pour le chlore et la plupart des gaz toxiques, plus lourds que l'air, **montez aux étages**. Pour l'ammoniac, plus léger, restez plutôt bas. Sans information, une pièce intérieure au premier étage est un bon compromis.
+
+**Vous avez été touché par le produit** (peau qui brûle, yeux qui piquent, vêtements imprégnés) : retirez les vêtements en les coupant plutôt qu'en les passant par la tête, **rincez la peau et les yeux à l'eau pendant 15 minutes**, et appelez le 15.
+
+**Vous êtes en voiture** : fermez les vitres, coupez la ventilation, sortez de la zone si la route est dégagée **perpendiculairement au vent**, sinon entrez dans un bâtiment.
+
+## COMPRENDRE
+
+**L'odeur ne dit rien de fiable.** Certains gaz dangereux ne sentent rien, d'autres sentent fort à des doses inoffensives, et le sulfure d'hydrogène anesthésie l'odorat à forte dose : quand l'odeur d'œuf pourri disparaît, ce n'est pas bon signe.
+
+**Le confinement fonctionne parce que le nuage passe.** Une maison fermée laisse entrer l'air extérieur lentement : pendant le temps où le nuage traverse le quartier, l'air intérieur reste bien moins concentré. Après son passage, on aère pour évacuer ce qui est entré.
+
+**Autour de chaque site Seveso seuil haut**, les habitants reçoivent une plaquette avec les consignes et le type de produits en cause. Si vous habitez près d'une usine, d'un dépôt ou d'un port, lisez-la : elle vous dit dans quelle direction partir et quoi faire.
+
+L'air contaminé en général et les masques : [[URG-AIR-001]], [[TEC-SAN-006]]. Les explosifs et le nitrate d'ammonium : [[TEC-CHI-004]].
+
+---
+id: SURV-CRI-005
+titre: Accident nucléaire
+axe: 3
+categorie: Crises et Catastrophes
+temps: Flash
+contexte: 2+
+risque: Discret
+materiel: Rien
+priorite: flash
+origine: officielle
+tags: [nucleaire, centrale, iode, confinement, evacuation, radioactivite, sirene]
+sources: ["Autorité de sûreté nucléaire et de radioprotection (ASNR), consignes en cas d'accident nucléaire", "Campagnes nationales de distribution de comprimés d'iode stable, posologie officielle", "Organisation mondiale de la santé, Iodine thyroid blocking: guidelines for use in planning and responding to radiological and nuclear emergencies, 2017"]
+---
+
+::En cas d'accident de centrale, le premier geste qui protège n'est ni l'iode ni la fuite. C'est rentrer dans un bâtiment et fermer. Tout le reste attend les consignes.::
+
+## AGIR
+
+1. **À l'alerte** (sirène au son montant et descendant, message FR-Alert sur le téléphone, radio) : **rentrez dans le bâtiment en dur le plus proche.** Pas de voiture, qui ne protège presque pas.
+2. **Fermez** portes et fenêtres, **arrêtez la ventilation** et la climatisation.
+3. **N'allez pas chercher vos enfants à l'école** : l'école les met à l'abri, et vous vous exposeriez dehors.
+4. **Écoutez la radio**, et ne téléphonez que pour une urgence : les lignes servent aux secours.
+5. **Prenez l'iode seulement quand le préfet le demande**, à la dose de votre âge (tableau ci-dessous).
+6. **Évacuez si l'ordre est donné**, par les itinéraires indiqués.
+
+## L'iode stable
+
+Les comprimés d'iodure de potassium dosés à 65 mg sont distribués autour des centrales et disponibles en pharmacie.
+
+| Âge | Dose |
+|---|---|
+| Adultes et plus de 12 ans, femmes enceintes | 2 comprimés (130 mg) |
+| 3 à 12 ans | 1 comprimé (65 mg) |
+| 1 mois à 3 ans | ½ comprimé (32,5 mg) |
+| Moins d'un mois | ¼ de comprimé (16,25 mg) |
+
+Dissous dans un peu d'eau, de lait ou de jus. **Une seule prise**, sauf consigne contraire. Les femmes enceintes, les enfants et les jeunes sont prioritaires.
+
+## ADAPTER
+
+**Vous étiez dehors pendant le passage du nuage** : en rentrant, retirez les vêtements extérieurs, mettez-les dans un sac fermé, douchez-vous, cheveux compris. Cela enlève l'essentiel de la contamination.
+
+**Les aliments** : ne mangez pas les légumes du jardin, les fruits cueillis, le lait des bêtes du coin tant que les autorités ne l'ont pas autorisé. Les conserves et ce qui était à l'intérieur ne craignent rien.
+
+**Vous êtes loin de la centrale** : restez chez vous. Les routes bouchées par ceux qui fuient sans consigne sont un danger en soi.
+
+## COMPRENDRE
+
+**L'iode ne protège que la thyroïde**, et seulement contre l'iode radioactif, l'un des produits rejetés par un réacteur accidenté. La thyroïde saturée d'iode stable n'absorbe plus l'iode radioactif. Ce n'est pas un « comprimé anti-radiation » : il ne protège d'aucune autre substance, et pris sans raison il peut dérégler la thyroïde. Il est le plus efficace pris juste avant l'exposition ou dans les premières heures.
+
+**Le confinement réduit fortement la dose** reçue : les murs arrêtent une grande partie du rayonnement, et les fenêtres fermées empêchent la poussière d'entrer. C'est la raison pour laquelle c'est le premier réflexe.
+
+**Tchernobyl (1986) et Fukushima (2011)** ont montré que l'essentiel des cancers de la thyroïde chez les enfants venait du lait contaminé bu dans les semaines suivantes. D'où la consigne sur les aliments, aussi importante que l'iode.
+
+Les retombées d'une arme nucléaire et les abris sont traités dans [[TEC-CON-009]]. L'air contaminé en général : [[URG-AIR-001]].
+
+---
+id: SURV-CRI-004
+titre: Évacuer en dix minutes
+axe: 3
+categorie: Crises et Catastrophes
+temps: Flash
+contexte: 2+
+risque: Discret
+materiel: Rien
+priorite: flash
+origine: officielle
+tags: [evacuation, sac d'urgence, papiers, medicaments, depart, famille, animaux]
+sources: ["Ministère de l'Intérieur, Je me protège en famille : le kit d'urgence", "FEMA, Ready.gov : Make a Plan et Build a Kit", "Croix-Rouge française, préparer son sac d'évacuation"]
+---
+
+::Quand les pompiers frappent à la porte, on n'a jamais le temps qu'on croyait. Ce qui part avec vous est ce qui était prêt, ou ce qui est sur cette liste.::
+
+## AGIR
+
+**Dans l'ordre, et on arrête là où le temps s'arrête**
+
+1. **Les personnes et les animaux.** Qui est là, qui manque, qui doit être aidé.
+2. **Les médicaments** : le traitement de chacun pour une semaine au moins, et les ordonnances.
+3. **Les lunettes, les appareils** (auditifs, respiratoires), le lait et les couches pour un bébé.
+4. **Le téléphone, son chargeur, une batterie externe.**
+5. **Les papiers** : pièces d'identité, carte vitale, assurance, et l'argent liquide.
+6. **Les clés** de la maison et de la voiture.
+7. **De l'eau** (au moins deux litres par personne) et de quoi grignoter.
+8. **Des vêtements chauds et de pluie**, de bonnes chaussures, même en été.
+9. **Une lampe, une radio**, si elles sont à portée de main.
+10. **Le doudou de l'enfant.** Ça paraît futile, ça ne l'est pas : un enfant calme est un enfant qu'on peut évacuer.
+
+**Avant de fermer la porte** : coupez le gaz, l'eau et l'électricité si les secours le demandent ou si vous avez le temps ([[URG-RES-001]]). Fermez à clé.
+
+## ADAPTER
+
+**Préparer un sac à l'avance** évite tout le reste. Un sac à dos par personne, près de la porte, avec : copie des papiers, une semaine de médicaments, eau, barres énergétiques, lampe frontale, piles, radio, batterie externe chargée, vêtements de rechange, couverture de survie, trousse de secours, un peu d'espèces. Vérifiez-le à chaque changement d'heure.
+
+**Photographiez tous vos papiers** et gardez les photos dans le téléphone et sur un stockage en ligne. Un passeport brûlé se refait bien plus vite quand on en a une copie.
+
+**Convenez d'un point de rendez-vous** et d'un contact hors de la région que tout le monde appelle en cas de séparation. Les réseaux locaux saturent, les appels vers loin passent souvent mieux.
+
+**Animaux** : cage de transport, laisse, croquettes pour trois jours. Beaucoup de gens refusent de partir sans leur animal et restent en danger : prévoyez-le.
+
+**Vous partez en voiture** : réservoir jamais sous la moitié en période de risque, et suivez les itinéraires indiqués, pas le GPS, qui peut vous envoyer vers le danger.
+
+Le détail de ce qu'un sac doit contenir et comment le porter : [[SURV-DEP-002]].
+
+## COMPRENDRE
+
+Une évacuation se décide en quelques minutes : inondation, feu de forêt, fuite industrielle, digue qui menace. Dans la panique, les gens prennent n'importe quoi et oublient l'essentiel : les médicaments, les lunettes, le chargeur, les papiers. **L'ordre compte plus que la quantité.**
+
+---
+id: SURV-CRI-003
+titre: Canicule
+axe: 3
+categorie: Crises et Catastrophes
+temps: Long
+contexte: 2+
+risque: Discret
+materiel: Rien
+priorite: normale
+origine: officielle
+tags: [canicule, chaleur, deshydratation, personnes agees, ventilateur, nuit, coup de chaleur]
+sources: ["Santé publique France, Plan national canicule et recommandations au grand public", "Organisation mondiale de la santé, Heat and health, fiche d'information", "Morris N. et al., Electric fan use for cooling during hot weather, The Lancet Planetary Health, 2021"]
+---
+
+::En août 2003, la canicule a tué environ 15 000 personnes en France, presque toutes âgées, seules, dans des appartements fermés. La chaleur ne tue pas d'un coup : elle use pendant des jours ceux qu'on oublie.::
+
+## COMPRENDRE
+
+Le corps se refroidit en transpirant : la sueur qui s'évapore emporte la chaleur. Quand l'air est trop chaud et trop humide, ou que le corps manque d'eau, ce système sature. La température interne monte, jour après jour, surtout si les nuits ne rafraîchissent plus.
+
+**Les plus exposés** : les personnes âgées (elles ont moins soif et transpirent moins), les bébés, les malades du cœur ou des reins, ceux qui prennent certains médicaments (diurétiques, certains traitements de la tension ou psychiatriques), ceux qui travaillent dehors, et tous ceux qui vivent seuls.
+
+## AGIR
+
+**La maison**
+
+- **Fermez tout le jour** : fenêtres, volets, rideaux, côté soleil surtout. **Ouvrez tout la nuit** et au petit matin, pour faire des courants d'air.
+- **Un drap mouillé** tendu devant une fenêtre ouverte ou devant un ventilateur rafraîchit l'air qui passe.
+- **Vivez dans la pièce la plus fraîche**, souvent en bas et au nord. Dormez-y aussi.
+
+**Le corps**
+
+- **Buvez régulièrement sans attendre la soif**, et mangez normalement (le sel de la nourriture compte). Pas d'alcool, qui déshydrate.
+- **Mouillez-vous la peau** (brumisateur, gant humide, douche fraîche) et mettez-vous devant un ventilateur. C'est l'évaporation qui refroidit.
+- **Les pieds dans une bassine d'eau fraîche**, un linge humide sur la nuque : simple et efficace.
+- **Évitez de sortir et de faire des efforts** aux heures les plus chaudes, en général de 11 h à 21 h.
+
+**Les autres**
+
+- **Appelez ou passez voir chaque jour** les personnes âgées ou isolées que vous connaissez. En 2003, beaucoup de victimes sont mortes chez elles sans que personne ne passe.
+- Les mairies tiennent un registre des personnes vulnérables : signalez-y quelqu'un qui vit seul.
+
+## ADAPTER
+
+**Au-delà de 35 °C environ**, un ventilateur qui souffle de l'air brûlant sur une peau sèche peut réchauffer au lieu de rafraîchir. Mouillez toujours la peau avant.
+
+**Une voiture au soleil** : sa température intérieure gagne une vingtaine de degrés en une heure. **Jamais un enfant ni un animal dedans**, même « cinq minutes ».
+
+**Signes d'alerte** : confusion, propos bizarres, peau brûlante, maux de tête violents, vomissements, arrêt de la transpiration. C'est un coup de chaleur, une urgence vitale : voir [[URG-CHAL-001]] et appelez le 15.
+
+**Une canicule avec une coupure de courant** : plus de ventilateur ni de frigo. Les linges humides, l'ombre et l'eau deviennent tout. Voir [[SURV-CRI-001]].
+
+**Un bébé** : le déshabiller, lui proposer à boire souvent, le rafraîchir avec un linge humide, jamais de couverture sur la poussette (elle devient une étuve).
+
+---
+id: SURV-CRI-002
+titre: Séisme
+axe: 3
+categorie: Crises et Catastrophes
+temps: Flash
+contexte: 1
+risque: Exposé
+materiel: Rien
+priorite: flash
+origine: officielle
+tags: [seisme, tremblement de terre, repliques, decombres, tsunami, gaz, urgence]
+sources: ["Ministère de l'Intérieur et BRGM, consignes en cas de séisme (georisques.gouv.fr)", "Earthquake Country Alliance et US Geological Survey, Drop, Cover and Hold On", "Croix-Rouge américaine, recommandations sur le « triangle de vie » et les encadrements de porte"]
+---
+
+::Pendant la secousse, on ne court pas. On se baisse, on s'abrite, on s'accroche. Ce qui tue dans un séisme, c'est surtout ce qui tombe.::
+
+## AGIR
+
+### Pendant la secousse
+
+1. **Baissez-vous** tout de suite, avant d'être jeté au sol.
+2. **Abritez-vous** sous une table ou un bureau solide. Rien de solide à proximité : accroupi contre un mur intérieur, les bras sur la tête et la nuque.
+3. **Accrochez-vous** au pied de la table et bougez avec elle jusqu'à la fin de la secousse.
+4. **Restez à l'intérieur.** On se fait tuer en sortant sous les chutes de tuiles, de vitres et de façades. Loin des fenêtres, des étagères, des lustres.
+
+### Juste après
+
+1. **Mettez des chaussures** : le sol est couvert de verre.
+2. **Sentez le gaz.** Une odeur : fermez le robinet, ouvrez, sortez, rien d'électrique. Voir [[URG-GAZ-001]].
+3. **Sortez par l'escalier, jamais par l'ascenseur**, et éloignez-vous des bâtiments, des murs, des lignes électriques.
+4. **Attendez-vous aux répliques**, parfois presque aussi fortes que le choc principal. Ne rentrez pas dans un bâtiment fissuré.
+5. **Envoyez des SMS plutôt que d'appeler** : les réseaux saturent, un SMS passe là où un appel échoue.
+
+## ADAPTER
+
+**Au lit** : restez-y, couvrez-vous la tête avec l'oreiller, sauf si un lustre ou une étagère lourde est juste au-dessus.
+
+**Dehors** : allez au milieu d'un espace dégagé, loin des façades, des murs, des arbres et des câbles.
+
+**En voiture** : arrêtez-vous loin des ponts, des tunnels, des immeubles et des lignes électriques, et restez dans la voiture pendant la secousse.
+
+**Près de la mer** : une secousse forte ou longue (plus de 20 secondes), ou la mer qui se retire d'un coup, et vous montez immédiatement en hauteur ou à l'intérieur des terres, **sans attendre d'alerte**. Voir [[SURV-CRI-007]].
+
+**Coincé sous des décombres** : protégez votre bouche et votre nez de la poussière avec un tissu, ne criez pas en continu (vous avalez la poussière et vous vous épuisez), **tapez sur un tuyau ou un mur** par séries régulières, ou sifflez. Les sauveteurs écoutent les bruits répétés.
+
+## COMPRENDRE
+
+**Les encadrements de porte ne protègent pas** dans une maison moderne : ils ne sont pas plus solides que le reste, et la porte vous bat dessus. C'est un souvenir des maisons en adobe d'autrefois.
+
+**Le « triangle de vie »**, qui conseille de s'allonger à côté d'un meuble plutôt que dessous, a été démenti par les organismes de secours : sous une table solide, on est protégé de ce qui tombe, qui est la vraie cause des blessures.
+
+**La magnitude** mesure l'énergie libérée à la source. **L'intensité** mesure ce qu'on ressent à un endroit donné : elle dépend de la distance, du sol et des bâtiments. Un séisme modéré sous un sol meuble peut faire plus de dégâts qu'un fort séisme sous du rocher.
+
+**Préparer en dix minutes** : fixer au mur les meubles hauts et le chauffe-eau, ranger le lourd en bas, une paire de chaussures et une lampe au pied du lit, savoir couper le gaz et l'eau ([[URG-RES-001]]).
+
+---
+id: SURV-CRI-001
+titre: Coupure d'électricité de plusieurs jours
+axe: 3
+categorie: Crises et Catastrophes
+temps: Long
+contexte: 2+
+risque: Discret
+materiel: Récupération
+priorite: normale
+origine: officielle
+tags: [coupure, electricite, black-out, frigo, eau, chauffage, eclairage, telephone]
+sources: ["USDA Food Safety and Inspection Service, Keeping Food Safe During an Emergency", "Ministère de l'Intérieur, Je me protège en famille (guide de préparation aux situations d'urgence)", "Retours d'expérience de la panne ibérique du 28 avril 2025 et de la tempête de 1999 en France"]
+---
+
+::Les deux premières heures, tout le monde attend que ça revienne. Ceux qui s'en sortent bien sont ceux qui ont agi pendant ces deux heures-là.::
+
+## COMPRENDRE
+
+Sans électricité, tout ce qui en dépend s'arrête en cascade, pas en même temps :
+
+- **Tout de suite** : lumière, frigo, box internet, pompes de chaudière, plaques, portails, ascenseurs, terminaux de paiement.
+- **En quelques heures** : les antennes de téléphone, qui tiennent sur batterie de une à quelques heures. Puis les stations-service, dont les pompes sont électriques.
+- **En un à deux jours** : l'eau au robinet dans beaucoup de communes, quand les réservoirs se vident sans pompes pour les remplir. Les étages élevés perdent la pression en premier. Les stations de relevage des eaux usées s'arrêtent aussi.
+
+## AGIR
+
+**Dans la première heure**
+
+1. **Remplissez tout ce qui tient l'eau** tant qu'il y a de la pression : baignoire (pour les toilettes et le lavage), casseroles, bouteilles (pour boire).
+2. **Ne rouvrez plus le frigo ni le congélateur.** Fermé, un frigo garde le froid environ 4 heures ; un congélateur plein, environ 48 heures, 24 s'il est à moitié vide.
+3. **Débranchez** les appareils fragiles (ordinateur, télé, box) pour les protéger du retour du courant.
+4. **Faites le plein de ce qui s'épuise** : retrait d'espèces si un distributeur marche encore, carburant, piles.
+5. **Mettez les téléphones en économie d'énergie**, un seul allumé par foyer à la fois.
+
+**Les jours suivants**
+
+- **Mangez dans l'ordre** : le frigo d'abord, le congélateur ensuite, les conserves en dernier.
+- **Chauffez une seule pièce**, la plus petite et la mieux isolée, et vivez-y. Voir [[TEC-CON-012]].
+- **Éclairez à la lampe frontale ou LED**. Une bougie par pièce au maximum, jamais sans surveillance.
+- **Informez-vous par la radio** à piles ou à manivelle : la radio locale du service public donne les consignes.
+- **Rechargez sur la voiture**, moteur tournant dehors, jamais dans un garage fermé. Voir [[TEC-ENE-014]].
+
+## ADAPTER
+
+**Groupe électrogène, barbecue, réchaud** : toujours dehors, loin des fenêtres. Le monoxyde de carbone tue chaque hiver des familles entières pendant les coupures. Voir [[TEC-CON-010]].
+
+**Quelqu'un dépend d'un appareil** (concentrateur d'oxygène, pompe, dialyse) : c'est la priorité absolue. Prévenez tout de suite les secours ou le fournisseur de l'appareil, avant que sa batterie ne soit vide.
+
+**L'eau du robinet revient trouble ou marron** : laissez couler, puis faites-la bouillir tant que la mairie n'a pas levé l'alerte. Voir [[URG-EAU-001]].
+
+**Les toilettes ne se vident plus** : un seau d'eau versé d'un coup dans la cuvette suffit à chasser. En rez-de-chaussée ou en sous-sol, si les eaux usées remontent, fermez les couvercles et bouchez les siphons de sol.
+
+**Le courant revient** : ne rebranchez pas tout d'un coup. Pour le congélateur : un aliment qui contient encore des cristaux de glace se recongèle ; ce qui est resté plus de deux heures au-dessus de 4 °C (viande, poisson, laitages, plats cuisinés) se jette.
+
+**Astuces de ceux qui ont déjà vécu une panne longue**
+
+- Des bouteilles d'eau congelées dans le congélateur avant l'hiver : du froid en réserve, puis de l'eau potable.
+- Un réservoir de voiture jamais sous la moitié.
+- Un peu d'espèces en petites coupures à la maison : le 28 avril 2025, en Espagne et au Portugal, seuls ceux qui en avaient ont pu acheter quelque chose.
+- Une lampe frontale par personne, rangée au même endroit. Chercher une lampe dans le noir avec la lampe du téléphone vide la batterie qu'on voudrait garder.
+
+---
+id: TEC-ENE-014
+titre: Recharger un téléphone sans réseau électrique
+axe: 2
+categorie: Énergie et Électricité
+temps: Court
+contexte: 1
+risque: Discret
+materiel: Récupération
+priorite: normale
+origine: officielle
+tags: [telephone, recharge, batterie externe, usb, voiture, solaire, dynamo, coupure]
+sources: ["USB Implementers Forum, spécifications USB 2.0 et USB Power Delivery (tensions et courants)", "Fiches techniques de batteries externes et de panneaux solaires USB", "Retours d'expérience des coupures longues (tempêtes, séismes)"]
+---
+
+::Un téléphone plein tient des jours si on le traite bien, et quelques heures si on le laisse chercher un réseau mort. Avant de chercher une prise, on arrête de gaspiller.::
+
+## D'abord, faire durer
+
+- **Mode avion** dès que le réseau est coupé : un téléphone qui cherche une antenne vide sa batterie deux à trois fois plus vite.
+- **Mode économie d'énergie**, luminosité au minimum, localisation et Bluetooth coupés.
+- **Un seul téléphone allumé par foyer**, les autres éteints, rallumés à heures fixes.
+- **Éteint, un téléphone ne consomme presque rien** : c'est la meilleure réserve.
+
+## Les sources, de la meilleure à la pire
+
+**La batterie externe.** Une batterie de 10 000 mAh recharge un téléphone deux fois environ, une de 20 000 mAh quatre fois. Rechargez-les dès que le courant revient, même brièvement.
+
+**La voiture.** Un chargeur USB sur la prise allume-cigare charge aussi vite qu'une prise murale. **Moteur tournant et à l'extérieur** : moteur coupé, une recharge de téléphone pompe peu sur une batterie de voiture en bon état, mais plusieurs recharges d'affilée peuvent empêcher de redémarrer. Jamais moteur tournant dans un garage.
+
+**Le panneau solaire USB.** Un panneau pliant de 20 à 30 watts charge un téléphone en plein soleil en quelques heures. Par temps couvert, le courant chute fortement : chargez plutôt une batterie externe avec le panneau, et le téléphone avec la batterie. Voir [[TEC-SOLR-001]].
+
+**La dynamo à manivelle** (lampes et radios de secours). Utile pour un appel d'urgence : quelques minutes de manivelle donnent quelques minutes de communication. Pas pour une recharge complète.
+
+**Les ordinateurs portables, les onduleurs, les trottinettes et vélos électriques, les outils sans fil.** Tous contiennent des batteries. Un portable allumé charge un téléphone par sa prise USB. Une batterie d'outil sans fil, avec un adaptateur USB vendu pour la marque, devient une batterie externe.
+
+**Les piles.** Un boîtier à piles AA avec sortie USB dépanne : quatre piles alcalines donnent environ une demi-recharge.
+
+## Ce qui ne marche pas
+
+- **Le citron, la pomme de terre, la pile maison** : quelques milliampères, là où un téléphone en demande mille. Voir [[SURV-ENE-002]].
+- **Brancher un fil USB coupé directement sur une batterie de 12 volts** : un téléphone attend 5 volts. Il faut un convertisseur 12 V vers USB.
+
+## Les astuces
+
+- **Un câble court et de bonne qualité** charge plus vite et chauffe moins.
+- **Charger jusqu'à 80 %** suffit en crise, et c'est deux fois plus rapide que les derniers 20 %.
+- **Le froid vide une batterie** : un téléphone gardé dans une poche intérieure tient plus longtemps qu'au fond d'un sac.
+- **Rechargez en premier ce qui sert à tout le monde** : la radio, la lampe, le téléphone qui a du réseau.
+
+---
+id: TEC-ENE-013
+titre: Le groupe électrogène
+axe: 2
+categorie: Énergie et Électricité
+temps: Court
+contexte: 1
+risque: Exposé
+materiel: Technique
+priorite: normale
+origine: officielle
+tags: [groupe electrogene, generateur, essence, inverter, puissance, carburant, monoxyde]
+sources: ["INRS, utilisation des groupes électrogènes portables", "Consumer Product Safety Commission (États-Unis), Portable Generator Safety", "Notices techniques des fabricants de groupes à onduleur (inverter)"]
+---
+
+::Un groupe électrogène transforme de l'essence en électricité avec un rendement médiocre, beaucoup de bruit et un gaz mortel. Bien utilisé, il sauve un congélateur, une pompe ou une maison entière. Mal utilisé, il tue une famille dans son garage.::
+
+## Comment il marche
+
+Un petit moteur thermique fait tourner un **alternateur**, qui produit du courant alternatif en 230 volts. Deux familles :
+
+- **Le groupe classique** : moteur à régime fixe, courant de qualité moyenne. Bon pour les outils, les pompes, l'éclairage, les radiateurs.
+- **Le groupe à onduleur (inverter)** : le courant est redressé puis refabriqué proprement par une électronique. Plus silencieux, plus économe (le moteur ralentit quand on consomme peu), et sans danger pour les ordinateurs, les box, les chargeurs et les chaudières électroniques.
+
+## Choisir la puissance
+
+Additionnez la puissance de ce que vous voulez faire tourner **en même temps**, et regardez les moteurs : un frigo, un congélateur, une pompe ou un compresseur demandent **deux à trois fois leur puissance** pendant une seconde au démarrage.
+
+| Appareil | Puissance typique |
+|---|---|
+| Frigo ou congélateur | 100 à 200 W (pointe 600 W au démarrage) |
+| Box internet et téléphone | 20 W |
+| Éclairage LED de la maison | 50 à 100 W |
+| Pompe de puits | 500 à 1 000 W |
+| Circulateur de chaudière | 50 à 100 W |
+| Radiateur électrique | 1 000 à 2 000 W |
+| Bouilloire, four, plaque | 2 000 W et plus |
+
+Un groupe de **2 à 3 kW** fait tourner frigo, congélateur, éclairage et petits appareils. Le chauffage électrique et la cuisine électrique demandent bien plus, et vident le réservoir en quelques heures.
+
+## Le carburant
+
+- Un groupe de 2 à 3 kW consomme environ **un litre d'essence par heure** à mi-charge.
+- **L'essence vieillit** : en quelques mois, elle s'oxyde et encrasse le carburateur. Ajoutez un stabilisant pour la stocker, et vidangez le carburateur (ou laissez tourner jusqu'à la panne sèche) avant de ranger le groupe.
+- **Stockez le carburant** dans des jerricans homologués, dehors ou dans un abri ventilé, loin de toute flamme.
+- **Faites le plein moteur arrêté et froid** : une goutte d'essence sur le pot d'échappement chaud suffit à enflammer le groupe.
+
+## Les règles qui sauvent
+
+- **Toujours dehors, à au moins cinq mètres des ouvertures**, échappement orienté loin de la maison. Jamais dans un garage, une cave, un abri de jardin, même porte ouverte. Voir [[TEC-CON-010]].
+- **Jamais branché sur une prise murale** avec un câble à deux fiches mâles : il renverrait du courant dans le réseau, tuerait un technicien sur la ligne et grillerait le groupe au retour du courant. Pour alimenter l'installation, il faut un **inverseur de source** posé par un électricien. Voir [[TEC-ENE-011]].
+- **Rallonges** adaptées à la puissance, entièrement déroulées (un enrouleur plein chauffe), protégées de la pluie.
+- **Mise à la terre** selon la notice, surtout si le groupe alimente plusieurs appareils.
+
+## Les astuces de ceux qui en vivent
+
+- **Faites-le tourner deux heures, arrêtez deux heures** : un congélateur fermé tient très bien, et vous divisez la consommation par deux.
+- **Démarrez-le une fois par mois** hors saison, quelques minutes en charge : un groupe qui dort deux ans ne démarre pas le jour J.
+- **Le bruit porte loin** : de nuit, un groupe signale une maison habitée et approvisionnée à des centaines de mètres. Pensez-y quand la situation se tend.
+- **Pour une coupure de quelques jours**, une batterie nomade (une grosse batterie lithium avec prises et panneau solaire) fait moins, mais en silence, sans carburant et à l'intérieur. Voir [[TEC-SOLR-001]].
+
+---
+id: TEC-CON-012
+titre: Chauffer une seule pièce
+axe: 2
+categorie: Construction et Habitat
+temps: Court
+contexte: 2+
+risque: Discret
+materiel: Récupération
+priorite: normale
+origine: officielle
+tags: [chauffage, froid, piece, isolation, hiver, coupure, economie]
+sources: ["ADEME, conseils pour réduire ses besoins de chauffage", "Retours d'expérience des hivers sans chauffage (Ukraine 2022-2023, Texas février 2021)", "Kearny C., Nuclear War Survival Skills, chapitre sur le maintien au chaud"]
+---
+
+::Chauffer une maison entière sans réseau est impossible. Chauffer une pièce bien choisie, avec tout le monde dedans, est facile. Tout l'art est de rétrécir l'espace à défendre.::
+
+## Choisir la pièce
+
+- **Petite**, au centre de la maison, avec peu de murs donnant dehors.
+- **Peu ou pas de fenêtres**, et pas de baie vitrée.
+- **Pas au dernier étage** sous un toit mal isolé, ni au sol d'une maison sans isolation par-dessous.
+- **Avec une source de chaleur possible** et sûre : un poêle, ou assez d'espace pour la chaleur des corps.
+
+## La fermer
+
+1. **Fermez les portes** des autres pièces, et calfeutrez le bas de celle de la pièce choisie avec un boudin, une couverture roulée, des vêtements.
+2. **Doublez les fenêtres** : rideaux épais, couvertures, cartons, papier bulle collé sur la vitre (le côté bulles contre le verre), film plastique tendu.
+3. **Isolez le sol** avec des tapis, des couvertures, des cartons.
+4. **Baissez le plafond** si la pièce est haute : une bâche ou des draps tendus au-dessus de l'espace de vie gardent la chaleur à hauteur des corps.
+
+## La chauffer
+
+- **Les corps humains** produisent chacun environ 100 watts, autant qu'une vieille ampoule. Quatre personnes dans une petite pièce bien fermée gagnent plusieurs degrés.
+- **Une tente dans la pièce** : monter une tente ou un abri de couvertures sur le lit, et y dormir à plusieurs. C'est la plus petite pièce possible.
+- **Des bouillottes** (ou des bouteilles en plastique épais remplies d'eau chaude, enveloppées), dans les lits une demi-heure avant de se coucher.
+- **Un poêle ou un chauffage à combustion** : seulement s'il a un conduit ou une aération prévue, avec un détecteur de monoxyde de carbone. Voir [[TEC-CON-010]] et [[TEC-CON-011]].
+- **Des bougies** chauffent très peu et font brûler des maisons chaque hiver. Elles éclairent, elles ne chauffent pas.
+
+## Garder la chaleur sur soi
+
+- **Des couches** plutôt qu'un seul gros vêtement : laine ou synthétique près du corps, jamais de coton mouillé.
+- **Bonnet, chaussettes et gants** à l'intérieur : la tête, les mains et les pieds perdent beaucoup.
+- **Manger et boire chaud** : le corps a besoin de calories pour produire sa chaleur. Voir [[TEC-ALI-001]].
+- **Bouger un peu** plusieurs fois par jour.
+
+## Les pièges
+
+- **La condensation** : une pièce fermée où l'on vit et respire se remplit d'humidité. Aérez cinq minutes, deux fois par jour, en grand : on perd moins de chaleur qu'à laisser une fenêtre entrouverte en permanence, et l'air sec se réchauffe plus vite.
+- **Le groupe électrogène ou le barbecue à l'intérieur** pour chauffer : c'est la première cause de décès pendant les coupures d'hiver.
+- **Les tuyaux d'eau** des pièces non chauffées peuvent geler et éclater : fermez l'eau et vidangez si le gel dure. Voir [[URG-RES-001]].
+
+L'hypothermie et ses signes : [[URG-HYPO-001]].
+
+---
+id: TEC-CON-011
+titre: Le poêle à bois
+axe: 2
+categorie: Construction et Habitat
+temps: Long
+contexte: 1
+risque: Discret
+materiel: Technique
+priorite: normale
+origine: officielle
+tags: [poele a bois, chauffage, bois, ramonage, conduit, allumage, rendement]
+sources: ["ADEME, Se chauffer au bois (guide pratique)", "DTU 24.1, travaux de fumisterie (conduits de fumée)", "Flamme Verte, recommandations d'installation et d'utilisation des appareils de chauffage au bois"]
+---
+
+::Un poêle chauffe avec du bois sec, un bon tirage et un feu vif. Il encrasse, enfume et intoxique avec du bois humide et un feu qui couve la nuit. La différence, c'est la façon de le conduire.::
+
+## Comment il chauffe
+
+Un poêle brûle le bois dans une chambre fermée et renvoie la chaleur de deux façons : par **rayonnement** (la fonte ou l'acier chaud, la vitre) et par **convection** (l'air qui circule autour). Un poêle moderne rend 70 à 85 % de l'énergie du bois, contre 10 à 15 % pour une cheminée ouverte, qui aspire surtout l'air chaud de la maison vers le ciel.
+
+## Le bois
+
+- **Sec avant tout** : moins de 20 % d'humidité, soit **deux ans de séchage** à l'abri de la pluie, sous un toit, avec de l'air sur les côtés. Un bois humide dépense son énergie à évaporer son eau, chauffe mal et encrasse le conduit.
+- **Test de terrain** : deux bûches sèches cognées l'une contre l'autre sonnent clair ; les bouts sont fendillés et grisés.
+- **Feuillus durs** (chêne, hêtre, charme, frêne) pour durer ; **résineux** et bois tendres pour allumer et relancer.
+- **Jamais** de bois traité, peint, d'aggloméré, de palettes traitées, de plastique : fumées toxiques et conduit abîmé.
+
+## Allumer par le haut
+
+La méthode qui fume le moins et prend le mieux :
+
+1. Les grosses bûches en bas, croisées.
+2. Des bûches moyennes au-dessus, puis du petit bois.
+3. Le papier ou l'allume-feu **tout en haut**.
+4. Toutes les arrivées d'air ouvertes, et on allume.
+
+Le feu descend de lui-même, le conduit chauffe vite et tire dès le début.
+
+## Conduire le feu
+
+- **Recharger sur des braises vives**, peu de bûches à la fois, et laisser l'air ouvert quelques minutes après chaque charge.
+- **Ne pas étouffer le feu la nuit** en fermant tout l'air : il couve, fait de la fumée froide, du goudron dans le conduit (le bistre) et du monoxyde de carbone. Voir [[TEC-CON-010]].
+- **Une vitre qui noircit** dit que le bois est humide ou que l'air est trop fermé.
+
+## La sécurité
+
+- **Ramonage** du conduit deux fois par an, dont une pendant la saison de chauffe, par un professionnel. C'est obligatoire en France, et les assureurs le demandent après un incendie.
+- **Un feu de cheminée** (grondement, flammes ou étincelles en haut du conduit) : fermez les arrivées d'air, n'y jetez jamais d'eau, appelez le 18.
+- **Distances** : respectez celles de la notice entre le poêle, le conduit et tout ce qui brûle (murs en bois, meubles, rideaux). Une plaque de sol non combustible devant la porte.
+- **Un détecteur de fumée et un détecteur de monoxyde de carbone** dans la maison.
+- **Les cendres** gardent des braises plusieurs jours : dans un seau métallique avec couvercle, dehors, jamais dans un sac ou une poubelle en plastique.
+
+## Les astuces des anciens
+
+- **Une bûche de ramonage** ne remplace pas le ramoneur ; elle sert entre deux passages.
+- **Une bouilloire ou une casserole d'eau** posée sur le poêle humidifie l'air sec de l'hiver, et fournit de l'eau chaude gratuite.
+- **Le dessus d'un poêle** cuit, mijote et fait chauffer l'eau : en cas de coupure de courant, c'est la cuisine de la maison. Voir [[SURV-CRI-001]].
+- **Des briques ou des pierres** posées sur ou autour du poêle stockent la chaleur et la rendent des heures après l'extinction.
+
+---
+id: TEC-CON-010
+titre: Le monoxyde de carbone
+axe: 2
+categorie: Construction et Habitat
+temps: Court
+contexte: 1
+risque: Discret
+materiel: Rien
+priorite: normale
+origine: officielle
+tags: [monoxyde de carbone, intoxication, chauffage, groupe electrogene, detecteur, combustion]
+sources: ["Santé publique France, surveillance des intoxications au monoxyde de carbone", "INRS, fiche toxicologique n° 47 : monoxyde de carbone", "Ministère de la Santé, campagnes de prévention des intoxications au CO"]
+---
+
+::Il n'a ni odeur, ni couleur, ni goût. Il donne mal à la tête, puis envie de dormir, et on s'endort. Chaque hiver, en France, il tue une centaine de personnes et en intoxique des milliers.::
+
+## D'où il vient
+
+Le monoxyde de carbone (CO) naît de toute **combustion qui manque d'air** : poêle, cheminée, chaudière, chauffe-eau, gazinière, brasero, barbecue, groupe électrogène, moteur. Une flamme bien alimentée produit surtout du gaz carbonique, inoffensif ; une flamme étouffée produit du monoxyde. Voir [[TEC-CON-007]].
+
+**Les situations qui tuent**
+
+- un groupe électrogène ou un barbecue utilisé dans une maison, un garage ou une cave, même porte ouverte ;
+- un chauffage d'appoint à combustion (pétrole, gaz) dans une pièce fermée ;
+- un conduit de cheminée bouché (nid d'oiseau, suie) ou une chaudière mal entretenue ;
+- une voiture qui tourne dans un garage, ou à l'arrêt dans la neige avec le pot d'échappement bouché ;
+- les aérations bouchées pour garder la chaleur.
+
+## Ce qu'il fait
+
+Il prend la place de l'oxygène dans le sang, en s'y fixant plus de deux cents fois plus fort. Les organes s'asphyxient lentement.
+
+**Les signes** : maux de tête, fatigue, nausées, vertiges, puis confusion, somnolence, perte de connaissance. **Signe qui trompe** : plusieurs personnes du même foyer malades en même temps, ou qui vont mieux quand elles sortent, et les animaux touchés aussi. Ce n'est pas une gastro.
+
+## Que faire
+
+1. **Aérez immédiatement** : portes et fenêtres grandes ouvertes.
+2. **Arrêtez l'appareil** si c'est possible sans rester dans la pièce.
+3. **Sortez tout le monde.**
+4. **Appelez le 15, le 18 ou le 112**, même si les symptômes passent : le traitement se fait à l'oxygène, parfois en caisson hyperbare, et des séquelles peuvent apparaître des semaines plus tard.
+5. **Ne rentrez pas** avant qu'un professionnel ait vérifié l'installation.
+
+## Se protéger
+
+- **Un détecteur de monoxyde de carbone** par étage où se trouve un appareil à combustion, surtout près des chambres. Il coûte le prix d'un repas.
+- **Ramonage** des conduits une ou deux fois par an, entretien annuel de la chaudière.
+- **Ne jamais boucher** une grille d'aération.
+- **Groupe électrogène à plus de cinq mètres de la maison**, échappement orienté loin des fenêtres. Voir [[TEC-ENE-013]].
+- **Voiture bloquée dans la neige** : dégagez le pot d'échappement avant de faire tourner le moteur pour chauffer, et entrouvrez une fenêtre.
+
+**Ce que savent les pompiers** : une flamme de gazinière bleue et nette brûle bien ; jaune, orange ou qui fait de la suie, elle manque d'air et produit du monoxyde. Des traces noires au-dessus d'un appareil, de la buée anormale sur les vitres, une odeur de brûlé : faites vérifier.
 `;
 /* Versions anglaises des fiches officielles, même identifiant. Source : traductions/en/. */
 const CORPUS_EN=String.raw`
