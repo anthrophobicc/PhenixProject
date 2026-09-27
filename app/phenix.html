@@ -24376,6 +24376,606 @@ Doses habituelles chez l'adulte, à titre de repère : en temps normal, c'est au
 Chaque traitement inutile sélectionne des bactéries qui résistent. Des infections autrefois banales redeviennent mortelles faute d'antibiotique efficace. **C'est pourquoi on les garde pour les vraies infections bactériennes.**
 
 L'infection d'une plaie : [[TEC-SAN-001]]. La fièvre : [[TEC-SAN-002]]. Les morsures : [[TEC-SAN-013]].
+
+---
+id: TEC-IDE-011
+titre: Les unités et les conversions
+axe: 2
+categorie: Information et Données
+temps: Court
+contexte: 1
+risque: Discret
+materiel: Rien
+priorite: normale
+origine: officielle
+tags: [unites, conversions, pouce, livre, gallon, fahrenheit, psi, calories, mesures]
+sources: ["Bureau international des poids et mesures, Le Système international d'unités (SI), 9e édition", "NIST, Special Publication 811 : Guide for the Use of the International System of Units", "NIST Handbook 44 (unités usuelles américaines)"]
+---
+
+::Un manuel américain, une notice de pompe, une carte marine, une recette anglaise : le monde n'utilise pas les mêmes unités. Une erreur de conversion a détruit une sonde spatiale en 1999. Voici les chiffres qui évitent les vôtres.::
+
+## Longueurs
+
+| Unité | Équivalent |
+|---|---|
+| 1 pouce (in, ″) | 2,54 cm |
+| 1 pied (ft, ′) | 30,48 cm (12 pouces) |
+| 1 yard | 91,44 cm |
+| 1 mile | 1,609 km |
+| 1 mille marin | 1,852 km |
+
+## Masses
+
+| Unité | Équivalent |
+|---|---|
+| 1 once (oz) | 28,35 g |
+| 1 livre (lb) | 453,6 g (16 onces) |
+| 1 tonne américaine (short ton) | 907 kg |
+
+## Volumes
+
+| Unité | Équivalent |
+|---|---|
+| 1 cuillère à café | 5 ml |
+| 1 cuillère à soupe | 15 ml |
+| 1 tasse (cup américaine) | 240 ml environ |
+| 1 once liquide américaine (fl oz) | 29,6 ml |
+| 1 gallon américain | 3,785 litres |
+| 1 gallon britannique | 4,546 litres |
+| 1 baril de pétrole | 159 litres |
+
+## Températures
+
+- **°F = °C × 1,8 + 32** ; **°C = (°F − 32) ÷ 1,8**.
+- Repères : 0 °C = 32 °F ; 37 °C = 98,6 °F ; 100 °C = 212 °F ; −40 °C = −40 °F.
+- De tête : doublez les °C et ajoutez 30 pour une approximation des °F.
+
+## Pressions
+
+- **1 bar = 100 kPa = 14,5 psi.** Un pneu à 2,5 bars est à 36 psi.
+- 1 atmosphère = 1,013 bar.
+
+## Énergie, puissance, vitesse
+
+- **1 kWh = 3,6 MJ.** 1 kcal (la « calorie » des étiquettes) = 4,184 kJ.
+- **1 cheval-vapeur** = 736 W (cheval métrique) ; 1 horsepower anglo-saxon = 746 W.
+- **1 nœud** = 1,852 km/h. **m/s × 3,6 = km/h.**
+- **1 Ah à 12 V = 12 Wh.** Voir [[TEC-ENE-016]].
+
+## Surfaces
+
+- 1 hectare = 10 000 m² = 2,47 acres ; 1 acre = 4 047 m².
+
+## Les astuces
+
+- **Vérifiez l'ordre de grandeur** après chaque conversion : une dose, une pression ou une distance qui paraît dix fois trop grande l'est sans doute.
+- **En médecine, jamais de conversion de tête** : écrivez le calcul, faites-le vérifier. Voir [[TEC-SAN-009]].
+- **Le corps mesure aussi** : empan, pas, pouce. Voir [[SURV-ORI-004]]. Tracer et mesurer à l'atelier : [[TEC-ATE-002]].
+
+---
+id: TEC-IDE-010
+titre: Reconnaître une fausse information
+axe: 2
+categorie: Information et Données
+temps: Court
+contexte: 1
+risque: Discret
+materiel: Rien
+priorite: normale
+origine: officielle
+tags: [fausse information, rumeur, verification, source, image, reseaux sociaux, crise]
+sources: ["Caulfield M., méthode SIFT (Stop, Investigate, Find, Trace), 2019", "Vosoughi S., Roy D., Aral S., The spread of true and false news online, Science, 2018", "AFP Factuel et Les Décodeurs (Le Monde), guides de vérification"]
+---
+
+::Une étude sur des millions de messages l'a mesuré : les fausses nouvelles se diffusent plus loin et plus vite que les vraies, parce qu'elles sont plus surprenantes et plus émouvantes. En crise, une rumeur peut faire plus de dégâts que l'événement lui-même.::
+
+## Quatre gestes (la méthode SIFT)
+
+1. **S'arrêter.** Le message vous met en colère, vous fait peur, confirme exactement ce que vous pensiez ? C'est précisément le moment de ne pas partager tout de suite.
+2. **Vérifier la source.** Qui dit ça ? Un média connu, une administration, un inconnu, un compte créé la semaine dernière ? Cherchez le nom de la source avec le mot « fiable » ou « fake ».
+3. **Chercher d'autres sources.** Une information importante est reprise par plusieurs médias sérieux. Si personne d'autre n'en parle, prudence.
+4. **Remonter à l'origine.** La citation, l'étude, la vidéo : d'où viennent-elles vraiment ? Souvent, l'original dit autre chose.
+
+## Les pièges classiques
+
+- **La vieille image** d'une autre catastrophe présentée comme d'aujourd'hui. Une **recherche d'image inversée** (dans les moteurs de recherche, en déposant l'image) retrouve sa première apparition.
+- **La capture d'écran** d'un faux article ou d'un faux tweet : on cherche l'original sur le site lui-même.
+- **Le « transférez à tous vos contacts »**, le « les médias vous le cachent », l'urgence sans source.
+- **La vraie information sortie de son contexte** : un chiffre juste, mais d'une autre année ou d'un autre pays.
+- **L'image ou la voix fabriquée** par intelligence artificielle : mains étranges, textes illisibles, voix sans respiration naturelle. En cas de doute, on attend une confirmation.
+
+## En crise
+
+- **Les consignes officielles** passent par les alertes, la radio publique et les comptes vérifiés des autorités. Voir [[SIG-COM-012]].
+- **Une rumeur de pénurie** crée la pénurie : chacun court acheter, et les rayons se vident vraiment.
+- **Avant de transmettre**, demandez-vous : est-ce que je sais d'où ça vient ? Si non, on ne transmet pas, ou on le dit clairement.
+
+Recueillir et recouper l'information sur le terrain : [[SIG-COM-006]].
+
+---
+id: TEC-ELN-008
+titre: Mots de passe et sécurité de base
+axe: 2
+categorie: Électronique et Numérique
+temps: Court
+contexte: 1
+risque: Discret
+materiel: Rien
+priorite: normale
+origine: officielle
+tags: [mot de passe, securite, double authentification, hameconnage, gestionnaire, mises a jour, piratage]
+sources: ["ANSSI et Cybermalveillance.gouv.fr, recommandations sur les mots de passe", "NIST, SP 800-63B Digital Identity Guidelines", "Cybermalveillance.gouv.fr, reconnaître l'hameçonnage"]
+---
+
+::La plupart des comptes piratés ne le sont pas par un génie : ils le sont parce que le même mot de passe court servait partout, et qu'un site l'a laissé fuir. Trois habitudes suffisent à se mettre hors de portée de la grande majorité des attaques.::
+
+## Les trois habitudes
+
+**1. Un mot de passe long et unique par compte important**
+
+- **La longueur compte plus que la complexité** : quatre ou cinq mots au hasard (« cheval-lampe-orage-tulipe ») sont plus solides et plus faciles à retenir que « P@ssw0rd! ».
+- **Jamais le même** pour la messagerie, la banque et les autres sites : quand un site fuit, les pirates essaient le même mot de passe partout.
+- **Un gestionnaire de mots de passe** retient tout pour vous derrière un seul mot de passe maître très long.
+
+**2. La double authentification**
+
+Un deuxième code en plus du mot de passe, envoyé sur le téléphone ou généré par une application. **Activez-la sur la messagerie en premier** : c'est elle qui permet de réinitialiser tous les autres comptes. Une application de codes vaut mieux qu'un SMS.
+
+**3. Les mises à jour**
+
+Téléphone, ordinateur, navigateur, box : les mises à jour bouchent les failles connues. Un appareil jamais mis à jour est une porte ouverte.
+
+## Reconnaître l'hameçonnage
+
+Un message qui vous demande d'agir **vite**, de **cliquer**, de **payer** ou de **donner un code** :
+
+- un colis bloqué, une amende à régler, un compte « suspendu », un remboursement ;
+- un lien dont l'adresse ne correspond pas exactement au site officiel ;
+- un proche qui écrit d'un nouveau numéro et demande de l'argent en urgence.
+
+**La règle** : on ne clique pas, on va soi-même sur le site ou l'application officielle, ou on rappelle le proche sur son numéro habituel. **Aucun service sérieux ne demande un code reçu par SMS.**
+
+## Les astuces
+
+- **Les codes de récupération** des comptes principaux, imprimés et gardés avec vos papiers. Voir [[TEC-ELN-007]].
+- **Le verrouillage** du téléphone par code, pas seulement par dessin.
+- **Les réseaux WiFi publics** : pas d'opérations bancaires dessus sans précaution.
+- **En cas de piratage** : changez le mot de passe de la messagerie depuis un autre appareil, déconnectez toutes les sessions, prévenez vos contacts, et en France signalez sur cybermalveillance.gouv.fr.
+
+Se rendre moins visible en général : [[SIG-COM-007]].
+
+---
+id: TEC-ELN-007
+titre: Sauvegarder ses données
+axe: 2
+categorie: Électronique et Numérique
+temps: Court
+contexte: 1
+risque: Discret
+materiel: Technique
+priorite: normale
+origine: officielle
+tags: [sauvegarde, donnees, 3-2-1, cle usb, disque dur, cloud, papier, photos, documents]
+sources: ["ANSSI, recommandations de sauvegarde pour les particuliers et les TPE", "US-CERT (CISA), Data Backup Options", "Backblaze, études de fiabilité des disques durs"]
+---
+
+::Une donnée qui n'existe qu'à un seul endroit n'existe pas vraiment : elle attend de disparaître. Un téléphone volé, un disque qui lâche, un incendie, et dix ans de photos et de papiers s'en vont.::
+
+## La règle du 3-2-1
+
+- **3 copies** de ce qui compte ;
+- sur **2 supports** différents (disque, clé, cloud, papier) ;
+- dont **1 ailleurs** que chez vous (chez un proche, au travail, en ligne).
+
+## Ce qui mérite d'être sauvegardé
+
+- **Les papiers** : pièces d'identité, permis, titres de propriété, contrats, diplômes, ordonnances, dossiers médicaux. Photographiés ou scannés.
+- **Les photos et vidéos** de famille.
+- **Les contacts** : numéros de téléphone et adresses.
+- **Les accès** : codes de récupération des comptes, liste des comptes importants.
+- **Ce qui fait votre travail**, et votre bibliothèque de connaissances hors ligne, comme celle de Phenix.
+
+## Les supports et leur durée
+
+| Support | Pour | Méfiance |
+|---|---|---|
+| Disque dur externe | Grosses sauvegardes à la maison | Mécanique fragile : une chute le tue |
+| Disque SSD, clé USB, carte SD | Transport, petites copies | Débranchés des années, ils peuvent perdre des données : on les rebranche une fois par an |
+| Stockage en ligne | La copie « ailleurs » | Dépend d'internet et d'une entreprise ; chiffrez ce qui est sensible |
+| **Papier** | L'essentiel vital | Le seul support lisible sans électricité ni appareil |
+
+## Le minimum papier
+
+Une enveloppe étanche, chez vous et une copie chez un proche :
+
+- **les numéros** de la famille, des proches, du médecin, de l'assurance ;
+- **les traitements** de chacun, leurs doses, les allergies, les groupes sanguins ;
+- **les photocopies** des pièces d'identité ;
+- **les codes de récupération** de vos comptes principaux (messagerie, banque) ;
+- **les adresses** des points de rendez-vous convenus en cas de crise. Voir [[SURV-CRI-004]].
+
+## Les astuces
+
+- **Programmez une sauvegarde automatique** : celles qu'on fait « quand on y pense » ne se font pas.
+- **Testez une restauration** une fois par an : une sauvegarde qu'on ne sait pas relire ne vaut rien.
+- **Une clé USB dans le sac d'évacuation**, chiffrée, avec les papiers scannés.
+- **Les mots de passe** de tout cela : [[TEC-ELN-008]].
+
+---
+id: TEC-ELN-006
+titre: Un appareil qui ne s'allume plus
+axe: 2
+categorie: Électronique et Numérique
+temps: Court
+contexte: 1
+risque: Discret
+materiel: Technique
+priorite: normale
+origine: officielle
+tags: [panne, depannage, appareil, alimentation, fusible, condensateur, telephone mouille, reparation]
+sources: ["iFixit, guides de réparation et méthode de diagnostic", "Repair Café (fondation), fiches de diagnostic des petits appareils", "INRS, risques électriques liés aux condensateurs des appareils secteur"]
+---
+
+::La moitié des appareils « morts » apportés dans les ateliers de réparation ont une panne bête : une prise, un câble, un fusible, une pile qui a coulé. On commence toujours par le plus simple, et on finit rarement par le plus compliqué.::
+
+## Dans l'ordre
+
+1. **L'alimentation** : la prise marche-t-elle (testez-la avec une lampe) ? Le câble est-il abîmé, le chargeur chaud et silencieux ou froid et mort ? Essayez un autre chargeur, un autre câble.
+2. **Les piles ou la batterie** : vides, mal posées, oxydées ? **Une coulure blanche** sur les contacts se nettoie au vinaigre ou au jus de citron, puis on frotte à la gomme. Voir [[TEC-ENE-012]].
+3. **La réinitialisation** : batterie retirée si possible, bouton marche appuyé 30 secondes, puis on remet tout. Beaucoup d'appareils bloqués repartent.
+4. **Le fusible** : dans la fiche, dans l'appareil, sur la carte. Un fusible grillé se voit (fil coupé, verre noirci) ou se teste au multimètre. Remplacez-le **par le même calibre**. S'il regrille aussitôt, il y a un court-circuit derrière. Voir [[TEC-ENE-011]].
+5. **Les yeux et le nez** : ouvrez (appareil débranché), regardez. **Un condensateur gonflé** (dessus bombé, fendu, ou qui a fui) est la panne la plus courante des alimentations et des écrans. Une odeur de brûlé, un composant noirci, une piste coupée.
+6. **Les connecteurs** : une nappe mal enfoncée, une prise de charge desserrée ou encrassée (une aiguille en bois pour retirer la poussière tassée).
+
+## L'appareil a pris l'eau
+
+- **Éteignez-le tout de suite**, ne le rallumez pas pour « voir s'il marche ».
+- **Retirez la batterie** si possible, la carte SIM, les cartes.
+- **Séchez à l'air**, dans un endroit sec et tiède, ouvert si possible, **48 heures au moins**.
+- **Le riz ne sert à rien** : il n'absorbe pas mieux que l'air, et ses poussières entrent dans les prises.
+- **L'eau de mer ou sucrée** corrode vite : un nettoyage des cartes à l'alcool isopropylique, au pinceau, sauve souvent l'appareil.
+
+## Le danger
+
+**Les appareils branchés sur le secteur** (alimentations, micro-ondes, vieux téléviseurs, écrans) contiennent des **condensateurs qui gardent une charge mortelle** longtemps après avoir été débranchés. Le micro-ondes en particulier : on ne l'ouvre pas sans savoir décharger son condensateur haute tension. Les petits appareils à piles, les téléphones et les ordinateurs portables sont sans danger électrique.
+
+## Les astuces des réparateurs
+
+- **Photographiez chaque étape** du démontage : c'est le mode d'emploi du remontage.
+- **Rangez les vis** dans l'ordre, dans une boîte à œufs ou sur un papier où l'on dessine leur emplacement.
+- **Un appareil sans panne visible** se répare souvent en remplaçant la pièce la plus sollicitée : batterie, prise de charge, alimentation.
+- **Récupérez** ce qui peut servir sur l'appareil irréparable : voir [[SURV-REC-021]].
+
+Souder un composant : [[TEC-ELN-005]].
+
+---
+id: TEC-ELN-005
+titre: Souder en électronique
+axe: 2
+categorie: Électronique et Numérique
+temps: Court
+contexte: 1
+risque: Discret
+materiel: Technique
+priorite: normale
+origine: officielle
+tags: [soudure, fer a souder, etain, flux, electronique, reparation, dessoudage, cable]
+sources: ["IPC-A-610, Acceptability of Electronic Assemblies (aspect des soudures)", "Adafruit Learning System, Adafruit Guide to Excellent Soldering", "INRS, fumées de soudage à l'étain et flux"]
+---
+
+::Une bonne soudure se fait en trois secondes : on chauffe les deux pièces, on apporte l'étain sur elles, pas sur le fer, et il coule tout seul. La plupart des soudures ratées l'ont été parce qu'on a fait fondre l'étain sur la panne.::
+
+## Le matériel
+
+- **Un fer à souder** de 25 à 60 watts, idéalement à température réglable (320 à 370 °C selon l'étain).
+- **De l'étain à âme décapante** (le flux est à l'intérieur du fil) : l'étain au plomb (60/40) fond plus bas et se travaille plus facilement ; l'étain sans plomb demande un peu plus de chaleur.
+- **Une éponge humide** ou de la laine de laiton pour nettoyer la panne.
+- **De la tresse à dessouder** ou une pompe à dessouder.
+- **De la gaine thermorétractable** pour isoler les raccords de fils.
+
+## Le geste
+
+1. **Nettoyez et étamez la panne** : une fine couche d'étain brillant dessus aide la chaleur à passer.
+2. **Posez la panne contre les deux pièces à la fois** (la patte du composant et la pastille du circuit, ou les deux fils).
+3. **Après une à deux secondes, apportez l'étain sur les pièces**, de l'autre côté de la panne : il fond au contact des pièces chaudes et coule autour.
+4. **Retirez l'étain, puis le fer**, sans bouger la pièce pendant que ça refroidit.
+
+**Une bonne soudure** est brillante, lisse, en forme de petit cône ou de volcan, qui épouse la patte. **Une mauvaise** est terne, granuleuse, en boule posée dessus : c'est une soudure froide, qui lâchera.
+
+## Relier deux fils
+
+1. Dénudez 1 cm, enfilez d'abord la gaine thermorétractable sur l'un des fils.
+2. **Étamez chaque fil** séparément.
+3. Torsadez-les ou mettez-les côte à côte, chauffez, ajoutez un peu d'étain.
+4. Faites glisser la gaine sur la soudure et chauffez-la pour qu'elle se resserre.
+
+## Dessouder
+
+La tresse posée sur la soudure, la panne par-dessus : l'étain fondu remonte dans la tresse par capillarité. Coupez la partie pleine et recommencez.
+
+## Les astuces
+
+- **Aérez** : les fumées de flux irritent les poumons. Travaillez près d'une fenêtre ou avec un petit ventilateur qui les éloigne.
+- **Lavez-vous les mains** après avoir manipulé de l'étain au plomb.
+- **Posez toujours le fer sur son support** : il brûle la main, la table et les câbles.
+- **Sans fer électrique** : une grosse tige de cuivre ou un clou épais chauffé sur un réchaud permet quelques soudures de dépannage sur de gros fils.
+- **Récupérer des composants** sur une carte : chauffez chaque patte et tirez doucement, ou chauffez toute la zone à l'air chaud.
+
+Réparer un câble sans souder : [[SURV-REC-007]]. Le multimètre pour vérifier : [[TEC-ENE-008]].
+
+---
+id: TEC-ATE-005
+titre: Reconnaître les métaux
+axe: 2
+categorie: Métal et Atelier
+temps: Court
+contexte: 1
+risque: Discret
+materiel: Rien
+priorite: normale
+origine: officielle
+tags: [metaux, acier, fer, aluminium, cuivre, laiton, inox, aimant, etincelles, recuperation]
+sources: ["ASM International, Metals Handbook, Desk Edition", "Guides des ferrailleurs et récupérateurs de métaux (identification des métaux)", "Weygers A., The Complete Modern Blacksmith, Ten Speed Press"]
+---
+
+::Un aimant, une meuleuse et une lime suffisent à reconnaître la plupart des métaux de récupération. Et savoir que le vieux ressort de lame de camion est en acier à outil, c'est avoir la matière d'un bon couteau.::
+
+## Les tests
+
+**L'aimant**
+
+- **Il colle franchement** : fer, acier, fonte.
+- **Il ne colle pas ou à peine** : aluminium, cuivre, laiton, bronze, plomb, zinc, et la plupart des **inox** de cuisine.
+
+**La couleur et le poids**
+
+- **Cuivre** : rouge orangé, lourd, devient brun puis vert en vieillissant.
+- **Laiton** : jaune doré (robinets, raccords, douilles).
+- **Bronze** : brun doré, plus sombre.
+- **Aluminium** : gris clair, **très léger**, ne rouille pas (il blanchit).
+- **Plomb** : gris terne, **très lourd, mou**, se raye à l'ongle.
+- **Zinc et acier galvanisé** : gris mat, cristallin sur les surfaces neuves.
+
+**Les étincelles à la meuleuse** (sur l'acier)
+
+- **Acier doux** : longues étincelles jaunes, peu d'éclatements.
+- **Acier à forte teneur en carbone** (outils, ressorts) : étincelles courtes et **éclatant en petites étoiles**. Plus il y a d'étoiles, plus il y a de carbone.
+- **Fonte** : étincelles courtes, rouges, peu nombreuses.
+- **Inox** : étincelles orangées, courtes, peu d'éclats.
+
+**La lime**
+
+Une lime qui **glisse sans mordre** : acier trempé (outil, ressort, roulement). Une lime qui mord facilement : acier doux ou métal tendre.
+
+## Où trouver les bons aciers
+
+- **Lames de ressort** de voitures et de camions, **limes usées**, **lames de scie** : acier à outil, excellent pour faire des couteaux, des burins, des ciseaux. Voir [[SURV-OUT-001]].
+- **Barres d'armature, cornières, tubes** : acier doux, pour souder et construire.
+- **Rails** : acier dur, enclume de fortune. Voir [[TEC-MEC-013]].
+- **Roulements à billes** : acier très dur, cassant.
+
+## Ce qu'il faut savoir
+
+- **Ne chauffez ni ne soudez l'acier galvanisé** sans aération : les fumées de zinc donnent la « fièvre des fondeurs », des frissons et de la fièvre pendant une journée.
+- **Le plomb** est toxique : jamais pour la vaisselle, ni pour ce qui touche l'eau de boisson, et on se lave les mains après l'avoir manipulé.
+- **Le cuivre** est le métal qui a le plus de valeur en récupération : câbles électriques, tuyaux, bobinages de moteurs.
+- **L'aluminium fond vers 660 °C** : un feu de charbon de bois bien ventilé suffit pour le couler dans un moule en sable. Aucune humidité dans le moule ni dans la ferraille : l'eau piégée sous le métal liquide provoque des projections.
+
+La corrosion des métaux : [[TEC-COR-001]].
+
+---
+id: TEC-ATE-004
+titre: Affûter tous les outils
+axe: 2
+categorie: Métal et Atelier
+temps: Court
+contexte: 1
+risque: Discret
+materiel: Technique
+priorite: normale
+origine: officielle
+tags: [affutage, pierre a aiguiser, morfil, couteau, ciseau a bois, hache, scie, angle]
+sources: ["Lee L., The Complete Guide to Sharpening, Taunton Press", "Guides des couteliers de Thiers, affûtage des lames", "Guides des bûcherons, affûtage des haches et des scies"]
+---
+
+::Un outil émoussé est plus dangereux qu'un outil tranchant : il glisse, on force, et c'est la main qui prend. Affûter, c'est trois règles : le bon angle, toujours le même, et du plus gros grain au plus fin.::
+
+## Le principe
+
+Affûter, c'est **user deux faces jusqu'à ce qu'elles se rejoignent en une arête fine**.
+
+1. **Tenez un angle constant** sur toute la longueur de la lame, à chaque passe.
+2. **Travaillez jusqu'au morfil** : une petite bavure de métal qui se forme de l'autre côté du tranchant, qu'on sent au doigt en glissant du dos vers le fil (jamais le long du fil). Tant qu'il n'y a pas de morfil, l'arête n'est pas formée.
+3. **Passez aux grains plus fins**, puis **retirez le morfil** par quelques passes légères alternées de chaque côté, et sur un cuir ou du papier journal.
+
+**Les pierres** : grosse (autour de 200 à 400) pour une lame abîmée, moyenne (1 000) pour l'affûtage courant, fine (3 000 à 6 000) pour le poli. Avec de l'eau ou de l'huile selon la pierre, jamais à sec.
+
+## Les angles
+
+| Outil | Angle par face (environ) |
+|---|---|
+| Couteau de cuisine | 15 à 20° |
+| Couteau de poche, de travail | 20 à 25° |
+| Ciseau à bois, rabot | 25 à 30° (un seul biseau) |
+| Hache, serpe | 25 à 30°, fil légèrement bombé |
+| Outils de jardin (bêche, binette) | 30 à 45°, à la lime |
+
+**Un repère simple** : deux pièces de monnaie empilées sous le dos d'un couteau posé à plat sur la pierre donnent à peu près 15°.
+
+## Chaque outil
+
+- **Couteau** : passes régulières de la base à la pointe, comme pour trancher une fine couche de la pierre.
+- **Ciseau à bois** : un seul biseau, le dos parfaitement plat et poli.
+- **Hache** : à la lime puis à la pierre ronde, en mouvements circulaires. Le fil reste un peu bombé pour ne pas s'ébrécher.
+- **Scie** : une lime triangulaire, dent par dent, puis **l'avoyage** (écarter légèrement les dents alternativement) pour que la lame ne coince pas.
+- **Tronçonneuse** : lime ronde du bon diamètre, voir [[TEC-MEC-017]].
+- **Ciseaux** : seulement le biseau extérieur de chaque lame, à la pierre fine.
+
+## Sans pierre
+
+- **Le cul d'une tasse en céramique** : l'anneau non émaillé dessous est une pierre fine parfaite.
+- **Le haut d'une vitre de voiture**, légèrement baissée.
+- **Un galet de rivière** à grain fin, une brique, le bord d'une marche en béton pour dégrossir.
+- **Une ceinture en cuir** pour finir.
+
+**Tester** : une lame bien affûtée tranche une feuille de papier tenue en l'air sans l'accrocher. La théorie du tranchant : [[TEC-MEC-005]].
+
+---
+id: TEC-ATE-003
+titre: Scier, percer, limer
+axe: 2
+categorie: Métal et Atelier
+temps: Court
+contexte: 1
+risque: Discret
+materiel: Technique
+priorite: normale
+origine: officielle
+tags: [scier, percer, limer, scie a metaux, foret, pointeau, lime, atelier]
+sources: ["INRS, travail du bois et des métaux : risques et bonnes pratiques", "Machinery's Handbook, Industrial Press (vitesses de perçage et lubrification)", "Guides de l'artisan : ajustage et limage"]
+---
+
+::Scier, percer et limer sont les trois gestes de base de tout atelier. Aucun ne demande de force : ils demandent de laisser l'outil travailler.::
+
+## Scier
+
+**Le bois**
+
+- **Amorcez** par quelques petits coups tirés, la lame guidée par le pouce contre le trait (le pouce au-dessus des dents).
+- **De longs mouvements** sur toute la longueur de la lame, sans appuyer : c'est la lame qui coupe.
+- **La pièce bien tenue** et le trait **à côté** de la chute, pas dessus.
+- **En fin de coupe**, soutenez la chute pour qu'elle n'arrache pas un éclat.
+
+**Le métal (scie à métaux)**
+
+- **Les dents vers l'avant** : la scie coupe en poussant.
+- **Au moins trois dents dans l'épaisseur** : denture fine pour les tubes et tôles minces, grosse pour les pièces épaisses.
+- **Un rythme lent**, une cinquantaine d'allers-retours par minute, toute la longueur de la lame, en soulageant au retour.
+- **Une goutte d'huile** sur l'acier épais.
+
+## Percer
+
+- **Le métal** : marquez le centre au **pointeau** (un coup de marteau) pour que le foret ne glisse pas. Commencez par un petit foret, puis le bon diamètre.
+- **Vitesse lente pour les gros forets et le métal**, rapide pour les petits et le bois. Un foret qui fume ou bleuit tourne trop vite ou manque d'huile.
+- **Huile de coupe** sur l'acier : elle refroidit et fait durer le foret. Rien sur l'aluminium ou un peu d'alcool, rien sur le laiton.
+- **Une planche martyre dessous** : le bois ne s'éclate pas à la sortie.
+- **Jamais une petite pièce tenue à la main** : un foret qui accroche la fait tourner comme une lame. Étau ou serre-joint.
+- **Cheveux attachés, pas de gants** près d'une perceuse qui tourne : le gant s'enroule et la main suit.
+
+## Limer
+
+- **La lime coupe en poussant**, jamais en tirant : on soulage au retour.
+- **Tenue à deux mains**, bien à plat, en croisant les passes pour voir où l'on enlève de la matière.
+- **Une carde** (brosse métallique) nettoie les dents encrassées. Un peu de craie frottée sur la lime évite qu'elle s'encrasse sur l'aluminium.
+- **Une lime ne se jette jamais en vrac** avec d'autres outils : ses dents s'ébrèchent.
+
+## Les astuces d'atelier
+
+- **Une scie qui dévie** : elle est mal affûtée ou mal avoyée (ses dents ne sont plus écartées également). Voir [[TEC-ATE-004]].
+- **Un trou trop petit** s'agrandit à la lime ronde, pas en forçant un foret plus gros de travers.
+- **Couper un boulon rouillé** : dégrippant la veille, puis scie à métaux entre l'écrou et la pièce.
+
+Les outils de base : [[TEC-ATE-001]]. Tracer avant de couper : [[TEC-ATE-002]].
+
+---
+id: TEC-ATE-002
+titre: Mesurer et tracer
+axe: 2
+categorie: Métal et Atelier
+temps: Court
+contexte: 1
+risque: Discret
+materiel: Technique
+priorite: normale
+origine: officielle
+tags: [mesurer, tracer, equerre, niveau, 3-4-5, fil a plomb, niveau a eau, cordeau]
+sources: ["Guides des compagnons du devoir : traçage en menuiserie et en maçonnerie", "Wood Magazine, Measuring and marking fundamentals", "Pythagore et la corde à nœuds des bâtisseurs (principe du triangle 3-4-5)"]
+---
+
+::Mesurer deux fois, couper une fois. Le proverbe est vieux parce qu'il a raison : la plupart des pièces ratées l'ont été au crayon, pas à la scie.::
+
+## Mesurer juste
+
+- **Le crochet du mètre ruban bouge** exprès : il avance de son épaisseur pour une mesure extérieure (accroché au bout) et recule pour une mesure intérieure (poussé contre un mur). S'il est tordu, toutes vos mesures sont fausses.
+- **Mesurez depuis la même référence** pour toutes les pièces d'un même ouvrage.
+- **Pour une longue pièce**, marquez au crayon, puis vérifiez depuis l'autre bout.
+- **Un pied à coulisse** mesure au dixième de millimètre : diamètres de tuyaux, de vis, épaisseurs.
+
+## Tracer net
+
+- **Un crayon bien taillé** pour le bois, une **pointe à tracer** pour le métal (un clou affûté fait l'affaire).
+- **Un trait, puis un « V »** qui montre de quel côté du trait on coupe : la lame enlève quelques millimètres.
+- **Le cordeau à tracer** (une ficelle passée dans de la craie, tendue et pincée) trace une ligne droite de plusieurs mètres en une seconde.
+
+## L'angle droit sans équerre : le 3-4-5
+
+Un triangle dont les côtés mesurent **3, 4 et 5** (mètres, pieds, ou n'importe quelle unité) a **toujours un angle droit** entre les côtés de 3 et de 4.
+
+1. Mesurez 3 m sur un côté depuis le coin, 4 m sur l'autre.
+2. Ajustez l'angle jusqu'à ce que la diagonale entre les deux marques fasse exactement 5 m.
+
+C'est ainsi qu'on implante une maison, une terrasse, un potager bien carré. Doublez (6-8-10) pour plus de précision.
+
+**Vérifier un rectangle** : ses deux diagonales doivent être égales.
+
+## Horizontal et vertical
+
+- **Le niveau à bulle** : la bulle entre les deux traits. Retournez-le bout pour bout sur la même surface : s'il ne donne pas la même lecture, c'est lui qui est faux.
+- **Le fil à plomb** : un poids au bout d'une ficelle donne la verticale parfaite.
+- **Le niveau à eau** : un long tuyau transparent rempli d'eau, sans bulle. L'eau est au même niveau aux deux bouts, même à vingt mètres de distance ou autour d'un obstacle. C'est l'outil des maçons pour reporter une hauteur d'un bout à l'autre d'un terrain.
+
+## Sans instrument
+
+La main, le pas et le pouce mesurent aussi : [[SURV-ORI-004]]. Les conversions entre unités : [[TEC-IDE-011]].
+
+---
+id: TEC-ATE-001
+titre: Les outils à main indispensables
+axe: 2
+categorie: Métal et Atelier
+temps: Court
+contexte: 1
+risque: Discret
+materiel: Technique
+priorite: normale
+origine: officielle
+tags: [outils, atelier, marteau, tournevis, pince, cles, scie, trousse]
+sources: ["Jackson A., Day D., Collins Complete DIY Manual, HarperCollins", "Guides des compagnons du devoir sur l'outillage de base", "Normes ISO des empreintes de vis (Phillips, Pozidriv, Torx)"]
+---
+
+::Une vingtaine d'outils à main réparent presque tout ce qu'il y a dans une maison, une voiture ou un jardin. Ils ne tombent jamais en panne de batterie, et un bon outil acheté une fois dure une vie.::
+
+## La base, dans l'ordre d'utilité
+
+| Outil | À quoi il sert | Ce qu'il faut savoir |
+|---|---|---|
+| **Tournevis** plats et cruciformes | Visser, faire levier léger | Cruciforme Phillips et Pozidriv sont différents : le mauvais abîme la vis |
+| **Pince universelle** | Tenir, tordre, couper du fil | La plus polyvalente |
+| **Pince-étau** (type grip) | Bloquer, tenir comme un étau, dévisser une tête abîmée | Remplace à elle seule plusieurs outils |
+| **Pince coupante** | Couper fils et câbles | Pas sur l'acier trempé |
+| **Clés plates ou mixtes**, 8 à 19 mm | Boulons de voiture, de vélo, de machines | Le jeu 8-10-13-17-19 couvre l'essentiel |
+| **Clé à molette** | Dépanner toutes les tailles | Abîme les écrous serrés : en dernier recours |
+| **Clés Allen** (hexagonales) | Vélos, meubles, machines | En jeu, 2 à 10 mm |
+| **Marteau** à arrache-clou | Clouer, déclouer, frapper | 300 à 500 g pour commencer |
+| **Mètre ruban** et crayon | Mesurer, marquer | Voir [[TEC-ATE-002]] |
+| **Cutter** | Couper carton, plastique, isolant | Lames de rechange |
+| **Scie égoïne** et **scie à métaux** | Bois et métal | Voir [[TEC-ATE-003]] |
+| **Lime** et **pierre à affûter** | Ébavurer, ajuster, affûter | Voir [[TEC-ATE-004]] |
+| **Pied-de-biche** | Démonter, faire levier, ouvrir | L'outil des récupérateurs. Voir [[SURV-REC-011]] |
+| **Serre-joints** et petit **étau** | Tenir la pièce pour avoir les deux mains libres | La moitié de la sécurité en atelier |
+| **Perceuse à main** (chignole) | Percer sans électricité | Lente mais inusable |
+
+**À ajouter** : niveau à bulle, équerre, burin, chasse-goupille, pistolet à colle ou colle forte, ruban adhésif, fil de fer, dégrippant.
+
+## Les règles de ceux qui en vivent
+
+- **Le bon outil, à la bonne taille** : un tournevis trop petit ou une clé qui a du jeu arrondit la tête, et on ne dévisse plus jamais la pièce.
+- **Tirer plutôt que pousser** une clé : si elle glisse, on ne se fracasse pas la main contre le métal.
+- **La pièce tenue**, pas la main : un étau ou un serre-joint, surtout pour percer ou scier.
+- **Ranger au sec**, un chiffon huilé dessus de temps en temps : un outil rouillé coupe mal et glisse.
+- **Acheter moins mais mieux** : un bon outil d'occasion vaut mieux qu'un neuf bas de gamme qui plie au premier effort. Les vide-greniers en regorgent.
+
+Assembler proprement : [[TEC-MEC-001]]. Réparer quand on n'a pas la pièce : [[SURV-REC-030]].
 `;
 /* Versions anglaises des fiches officielles, même identifiant. Source : traductions/en/. */
 const CORPUS_EN=String.raw`
