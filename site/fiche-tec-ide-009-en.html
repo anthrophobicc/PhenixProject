@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-page-lang="en" data-alt="fiche-tec-ide-009.html" data-kind="fiche">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Phenix devices — Phenix</title>
+<meta name="description" content="The Phenix devices — Phenix">
+<meta name="theme-color" content="#040806">
+<script>try{var t=localStorage.getItem("phenix-theme");if(t&&t!=="phosphore")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<meta property="og:title" content="Phenix">
+<meta property="og:description" content="The Phenix devices — Phenix">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://anthrophobicc.github.io/PhenixProject/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="logo.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="img/icone-180.png">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="fiche.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="index.html"><span class="mark"></span><span>PHENIX</span></a>
+  <nav>
+    <a href="explore.html" data-i18n="nav.explore">Explore</a>
+    <a href="devices.html" data-i18n="nav.devices">Devices</a>
+    <a href="lab.html" data-i18n="nav.contribute">Phenix Lab</a>
+    <a href="hub.html" data-i18n="nav.hub">Phenix Hub</a>
+    <a href="download.html" data-i18n="nav.download">Download</a>
+    <button class="lang" type="button" aria-label="Language">FR</button>
+    <span class="themes" role="group" aria-label="Theme">
+      <button type="button" data-theme-set="phosphore" title="Phosphor" aria-label="Phosphor theme" style="--c1:#040806;--c2:#39FF6A"></button>
+      <button type="button" data-theme-set="ambre" title="Amber" aria-label="Amber theme" style="--c1:#0A0703;--c2:#FFB000"></button>
+      <button type="button" data-theme-set="papier" title="Paper" aria-label="Paper theme" style="--c1:#F4F2EC;--c2:#2F6E2A"></button>
+    </span>
+  </nav>
+</header>
+<main class="wrap fiche">
+  <p class="fil"><a href="explore.html" data-i18n="nav.explore">Explore</a> › Technique › Information et Données</p>
+  
+  <div class="tags">
+    
+    <span class="tag off" data-i18n="tag.off">Official</span>
+  </div>
+  <h1>The Phenix devices</h1>
+  <p class="meta">Axis 2 · Technique · Information et Données</p>
+  <div class="bals"><div><span>Time</span><b>Long</b></div><div><span>Context</span><b>Alone</b></div><div><span>Risk</span><b>Discreet</b></div><div><span>Gear</span><b>Technical</b></div></div>
+  <article class="prose"><p class="lede-f">A Phenix device should be buildable from parts found everywhere, repairable with a soldering iron, and hold the whole library in a pocket. Everything is open: the plans, the code, the mistakes.</p>
+<p><strong>Everything below is at prototype stage.</strong> Nothing is for sale. The 3D renders of the devices are concepts; only the WiFi hotspot has already worked on a real phone.</p>
+<h2>The two devices</h2>
+<p><strong>Phenix 001, the small one.</strong> A pocket reader, no bigger than a small remote control, holding the whole library on a memory card and showing it on a small, frugal screen. Common parts, a case you open with a screwdriver, a replaceable battery.</p>
+<p><strong>Phenix 002, the big one.</strong> A larger device, with a colour screen wide enough to read maps. Two memory card slots under a rubber flap: it can <strong>read a Phenix 001&#x27;s card, check its library and repair damaged sheets</strong>. Modules plug onto pins: solar panel, dynamo, lamp. And a broken Phenix should be able to run again on a salvaged screen, even one from an old payment terminal.</p>
+<h2>What already exists: the Phenix hotspot</h2>
+<p>This is the first prototype that works. An electronic board costing a few euros opens a WiFi network called <strong>Phenix</strong>, with no password. <strong>Any phone that connects to it opens the whole library</strong>, without internet and without installing anything: the page opens by itself, like a hotel WiFi portal.</p>
+<p><strong>The parts</strong></p>
+<table><thead><tr><th>Part</th><th>Role</th><th>Rough price</th></tr></thead><tbody><tr><td>ESP32-C3 &quot;Super Mini&quot;</td><td>The brain and the WiFi</td><td>3 to 5 €</td></tr><tr><td>USB-C cable</td><td>Power and programming</td><td>already at home</td></tr><tr><td>Power bank</td><td>Battery life</td><td>already at home</td></tr><tr><td>Micro SD card module (optional)</td><td>For a bigger library</td><td>1 to 2 €</td></tr></tbody></table>
+<p><strong>Two versions</strong></p>
+<ul><li><strong>Without an SD card</strong>: the full app, compressed (under one megabyte), is written straight into the board&#x27;s memory. Nothing to solder. This is the version that worked.</li><li><strong>With an SD card</strong>: the library sits on a FAT32 micro SD card, prepared on the computer. Wiring: CS to GPIO7, MOSI to GPIO6, SCK to GPIO4, MISO to GPIO5, plus 3.3 V and ground.</li></ul>
+<p><strong>Building it</strong></p>
+<ol><li>Install <strong>Arduino IDE 2</strong>, add Espressif&#x27;s ESP32 boards, choose the <strong>ESP32C3 Dev Module</strong> board.</li><li>In the Tools menu: <strong>Partition Scheme: Huge APP</strong>, and <strong>USB CDC On Boot: Enabled</strong>.</li><li>Open the hotspot program, in the <strong>materiel/phenix-001-v0</strong> folder of the repository, and upload.</li><li>If the upload won&#x27;t start: unplug, <strong>hold the BOOT button down</strong>, plug back in, release, try again.</li><li>On the phone: WiFi settings, network <strong>Phenix</strong>. If the page doesn&#x27;t open by itself, type <strong>192.168.4.1</strong> in the browser.</li></ol>
+<h2>What was tried, and what we learned</h2>
+<p><strong>The screen of an old Nokia phone</strong>: the idea was to reuse the colour screen of a dead phone. Two obstacles stopped it: a 24-pin connector with pins 0.4 mm apart, almost impossible to solder without fine equipment, and a backlight needing about 13 volts. <strong>Lesson</strong>: for a device everyone must be able to rebuild, a screen module sold for microcontrollers, already on its small board, beats an exotic salvaged part. See <a href="fiche-tec-eln-001-en.html">Screens</a>.</p>
+<p><strong>Next planned</strong>: a 2.8-inch colour screen with a built-in SD card reader, or a 2.9-inch <strong>electronic ink</strong> screen, which keeps its page without power and reads in full sun, see <a href="fiche-tec-eln-003-en.html">The electronic ink screen</a>.</p>
+<h2>The principles behind the design</h2>
+<ul><li><strong>Parts found everywhere</strong>, online and in electronics shops, replaceable one by one.</li><li><strong>Everything is documented</strong>: schematics, code, parts list, in the public repository. A device whose insides nobody knows can&#x27;t be repaired.</li><li><strong>The library stays readable without the device</strong>: they&#x27;re the same text files as everywhere else. An SD card pulled from a broken Phenix reads on any computer.</li><li><strong>Energy first</strong>: a device that must last far from sockets picks its components for their consumption before their power.</li></ul>
+<p>The project as a whole is presented in <a href="fiche-tec-ide-008-en.html">The Phenix project</a>.</p></article>
+  <div class="blk"><h4>Sources</h4><div class="src">Phenix project repository: materiel/phenix-001-v0/LISEZMOI.md, borne-sans-sd.ino, borne.ino, ecran.ino</div><div class="src">Espressif Systems, ESP32-C3 Series Datasheet and arduino-esp32 documentation</div><div class="src">Andy Brown, Generic Nokia LCD hacking board (pinouts of Nokia phone screens)</div></div>
+  <div class="blk"><h4 data-i18n="fiche.back">Sheets that lead here</h4><a class="item" href="fiche-tec-eln-003-en.html"><h3>The electronic ink screen</h3><div class="meta">Axis 2</div></a><a class="item" href="fiche-tec-ide-008-en.html"><h3>The Phenix project</h3><div class="meta">Axis 2</div></a><a class="item" href="fiche-tec-eln-001-en.html"><h3>Screens</h3><div class="meta">Axis 2</div></a></div>
+  <section class="blk">
+    <h4 data-i18n="fiche.commu">Useful? Anything to add?</h4>
+    <div id="communaute" data-cible="TEC-IDE-009"></div>
+  </section>
+  <div class="blk cta">
+    <p data-i18n="fiche.cta"><strong>This sheet is part of Phenix.</strong> The app holds the whole library, the maps and the bookshelf, and works offline.</p>
+    <p><a class="btn primary" href="download.html" data-i18n="home.b2">Download Phenix Base</a>
+       <a class="btn" href="lab.html#ecrire" data-i18n="sup.btn">Write a sheet</a></p>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <p data-i18n="foot.motto"><strong>Phenix</strong> — knowledge is your only immunity.</p>
+    <p class="small">
+      <a href="explore.html" data-i18n="nav.explore">Explore</a> ·
+      <a href="devices.html" data-i18n="nav.devices">Devices</a> ·
+      <a href="lab.html" data-i18n="nav.contribute">Phenix Lab</a> ·
+      <a href="hub.html" data-i18n="nav.hub">Phenix Hub</a> ·
+      <a href="download.html" data-i18n="nav.download">Download</a> ·
+      <a href="soutenir.html" data-i18n="nav.support">Support</a> ·
+      <a href="https://www.instagram.com/phenixprjct/" rel="noopener">Instagram</a> ·
+      <a href="https://www.reddit.com/r/PhenixProject/" rel="noopener">Reddit</a> ·
+      <a href="https://github.com/anthrophobicc/PhenixProject" rel="noopener">GitHub</a>
+    </p>
+    <p class="small dim" data-i18n="foot.licence">Software under the MIT licence · sheets under CC BY-SA 4.0</p>
+  </div>
+</footer>
+<script src="i18n.js"></script>
+<script src="en-ligne.js"></script><script src="communaute.js"></script>
+</body>
+</html>

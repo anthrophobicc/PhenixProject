@@ -99,6 +99,7 @@ Déjà faites : [x] TEC-AGR-001 Semer · [x] TEC-AGR-002 Conserver ses semences 
 Déjà faites : [x] TEC-ALI-001 Ce que le corps consomme · [x] TEC-ALI-002 La fermentation lactique · [x] TEC-ALI-003 Le séchage · [x] TEC-ALI-004 Le salage · [x] TEC-ALI-005 Les conserves en bocal · [x] TEC-ALI-006 Le fumage · [x] TEC-CONS-001 La conservation des aliments
 
 ### Nutrition
+- [x] TEC-ALI-007 Ce que contiennent les fruits
 - [ ] Les carences : scorbut, béribéri, pellagre `P1`
 - [ ] Manger assez avec peu : les rations de base `P1`
 - [ ] Nourrir un enfant, un bébé `P1`
@@ -138,6 +139,8 @@ Déjà faites : [x] TEC-ALI-001 Ce que le corps consomme · [x] TEC-ALI-002 La f
 Déjà faites : [x] TEC-CHI-001 Acides, bases et pH · [x] TEC-CHI-002 Fabriquer du savon · [x] TEC-CHI-003 La chaux · [x] TEC-COR-001 La corrosion · [x] TEC-BAL-001 La balistique · [x] TEC-MAT-001 Le bois · [x] TEC-MAT-003 Fibres et cordages · [x] TEC-MAT-004 à 007 Vêtement, couture, fil, sac
 
 ### Chimie de base
+- [x] TEC-CHI-005 La combustion spontanée
+- [x] TEC-MAT-008 Les cintres (vêtements, voûtes, cintrage des tubes)
 - [ ] Les produits dangereux de la maison et leurs mélanges interdits `P1`
 - [ ] Lire une étiquette de danger et une fiche de sécurité `P1`
 - [ ] L'alcool et les désinfectants `P1`
@@ -245,7 +248,9 @@ Déjà faites : [x] TEC-ENE-001 L'énergie électrique dans les objets · [x] TE
 - [ ] Les onduleurs et convertisseurs `P2`
 - [ ] Le 12 volts dans une maison `P1`
 - [ ] Recharger un téléphone sans réseau `P1`
-- [ ] Les piles : lesquelles, combien de temps, recharger ou pas `P2`
+- [x] TEC-ENE-012 Les piles
+- [x] TEC-ENE-011 Le disjoncteur
+- [x] TEC-ENE-010 Les lampadaires
 - [ ] Le gaz : bouteilles, détendeurs, fuites `P1`
 - [ ] Le biogaz `P3`
 - [ ] Le bois énergie : sécher, stocker, rendement `P2`
@@ -269,6 +274,8 @@ Déjà faites : [x] TEC-ENE-001 L'énergie électrique dans les objets · [x] TE
 ## Électronique et Numérique `nouvelle catégorie`
 
 ### Électronique
+- [x] TEC-ELN-001 Les écrans (avec les chapitres TEC-ELN-002 LCD et TEC-ELN-003 encre électronique)
+- [x] TEC-ELN-004 Les LED
 - [ ] Les composants de base : résistance, condensateur, diode, transistor `P2`
 - [ ] Souder en électronique `P1`
 - [ ] Dépanner un appareil qui ne s'allume plus `P1`
@@ -294,6 +301,44 @@ Déjà faites : [x] TEC-ENE-001 L'énergie électrique dans les objets · [x] TE
 - [ ] Le GPS : comment il marche, quand il ment `P2`
 - [ ] Les satellites de communication `P3`
 
+## Terre et Climat `nouvelle catégorie`
+
+- [x] TEC-TER-001 Les feux de forêt
+- [x] TEC-TER-002 La lutte contre les feux de forêt
+- [ ] Les séismes : ce qui se passe sous nos pieds `P1`
+- [ ] Les volcans `P2`
+- [ ] Les inondations et les crues `P1`
+- [ ] Les tempêtes, cyclones et tornades `P2`
+- [ ] La météo : pourquoi il pleut, pourquoi il vente `P2`
+- [ ] Le climat et ses changements `P2`
+- [ ] Les glissements de terrain et les avalanches `P3`
+- [ ] Les marées et les courants `P3`
+- [ ] Le cycle de l'eau et les nappes `P2`
+
+## Métiers et Savoir-faire `nouvelle catégorie`
+
+- [x] TEC-MET-001 Les métiers qui comptent
+### Soigner
+- [ ] Le métier d'infirmier `P1`
+- [ ] Le métier de sage-femme `P2`
+- [ ] Le métier de pharmacien `P2`
+- [ ] Le métier de vétérinaire `P3`
+### Construire et entretenir
+- [ ] Le métier de plombier `P1`
+- [ ] Le métier d'électricien `P1`
+- [ ] Le métier de mécanicien `P1`
+- [ ] Le métier de couvreur `P2`
+- [ ] Le métier de forgeron `P2`
+- [ ] Le métier de soudeur `P2`
+### Nourrir
+- [ ] Le métier de maraîcher `P1`
+- [ ] Le métier de boulanger `P2`
+- [ ] Le métier de boucher `P2`
+- [ ] Le métier d'apiculteur `P3`
+### Transmettre
+- [ ] Le métier de radioamateur `P2`
+- [ ] Le métier d'enseignant `P3`
+
 ## Information et Données
 
 Déjà faites : [x] TEC-IDE-001 L'identification · [x] TEC-IDE-002 Le fait religieux · [x] TEC-IDE-003 La fiche Phenix · [x] TEC-IDE-004 Les caméras de surveillance · [x] TEC-IDE-005 La vidéosurveillance publique · [x] TEC-IDE-006 Le terminal de paiement
@@ -302,6 +347,8 @@ Déjà faites : [x] TEC-IDE-001 L'identification · [x] TEC-IDE-002 Le fait reli
 - [ ] Les banques et les distributeurs `P2`
 - [ ] Les cartes d'identité et passeports : ce que la puce contient `P3`
 - [x] TEC-IDE-007 Le fond vert
+- [x] TEC-IDE-008 Le projet Phenix
+- [x] TEC-IDE-009 Les appareils Phenix
 - [ ] Le code-barres et le QR code `P3`
 - [ ] Le badge et la carte sans contact `P3`
 - [ ] Les radars et la lecture de plaques `P3`
@@ -320,6 +367,8 @@ Déjà faites : [x] TEC-IDE-001 L'identification · [x] TEC-IDE-002 Le fait reli
 Déjà faites : [x] TEC-MAC-001 Les machines simples · [x] TEC-MEC-001 Assembler · [x] TEC-MEC-004 Le vélo · [x] TEC-MEC-005 Le tranchant · [x] TEC-MEC-006 Le drone · [x] TEC-MEC-007 L'impression 3D · [x] TEC-MEC-008 Le tir à l'arc · [x] TEC-MOTH-001 Le moteur thermique · [x] TEC-MOT-001 Les moteurs de bateau · [x] TEC-AER-001 Comment vole un avion · [x] TEC-NAV-001 Conduire un bateau · [x] TEC-VOI-001 Conduire une voiture
 
 ### La voiture
+- [x] TEC-MEC-010 Le pneu
+- [x] TEC-MEC-011 La bougie d'allumage
 - [ ] L'entretien qui compte `P1`
 - [ ] Changer une roue `P1`
 - [ ] La batterie et le démarrage `P1`
@@ -337,6 +386,8 @@ Déjà faites : [x] TEC-MAC-001 Les machines simples · [x] TEC-MEC-001 Assemble
 - [ ] Le scooter et le vélo électrique `P3`
 - [ ] Le tracteur `P3`
 - [ ] Le camion et le permis poids lourd `P3`
+- [x] TEC-MEC-012 Le bogie
+- [x] TEC-MEC-013 La voie ferrée
 - [ ] Le train : comment il marche `P3`
 - [x] TEC-MEC-009 Conduire un métro
 
@@ -456,6 +507,7 @@ Déjà faites : [x] SURV-REC-001 à 022 (bâtiment abandonné, véhicule, épave
 - [ ] Récupérer sur un parachute et une voile `P3`
 
 ### Réparer et transformer
+- [x] SURV-REC-024 Réparer un pneu
 - [ ] Réparer sans pièce détachée `P1`
 - [ ] Le fil de fer, le ruban adhésif et le collier de serrage `P1`
 - [ ] Transformer un bidon en poêle, en four, en seau `P2`
@@ -470,6 +522,7 @@ Déjà faites : [x] SURV-REC-001 à 022 (bâtiment abandonné, véhicule, épave
 Déjà faites : [x] SURV-FEU-001 Produire et tenir un feu · [x] SURV-FEU-002 Allumer sans briquet · [x] SURV-EAU-004 Filtrer · [x] SURV-EAU-005 Trouver de l'eau · [x] URG-EAU-001 Rendre une eau potable · [x] SURV-PLUIE-001 L'eau de pluie · [x] SURV-ABRI-001 Abri d'urgence · [x] SURV-COM-001 Comestible ou pas · [x] SURV-RES-001 Se nourrir en milieu naturel · [x] SURV-RES-002 Pièges et pêche · [x] SURV-RES-003 Lieux stratégiques · [x] SURV-GUE-001 Franchir un cours d'eau · [x] SURV-LUM-001 Fabriquer une lampe · [x] SURV-OUT-001 Outil tranchant · [x] SURV-ENE-001 Circuit sans réseau
 
 ### Le feu
+- [x] SURV-ENE-002 Fabriquer une pile
 - [ ] Le feu sous la pluie `P1`
 - [ ] Le feu discret, sans fumée `P2`
 - [ ] Garder la braise d'un jour à l'autre `P2`
@@ -627,7 +680,7 @@ Déjà faites : [x] URG-AIR-001 · URG-ANA-001 · URG-CARD-001 · URG-EFF-001 et
 - [ ] Éruption volcanique `P2`
 - [ ] Cyclone et ouragan `P1`
 - [ ] Tornade `P2`
-- [ ] Feu de forêt `P1`
+- [x] URG-FEU-001 Feu de forêt, se défendre et s'en sortir
 - [ ] Canicule `P1`
 - [ ] Sécheresse longue `P2`
 - [ ] Grand froid et tempête de neige `P1`

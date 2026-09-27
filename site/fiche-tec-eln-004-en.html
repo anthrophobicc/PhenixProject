@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-page-lang="en" data-alt="fiche-tec-eln-004.html" data-kind="fiche">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LEDs — Phenix</title>
+<meta name="description" content="LEDs — Phenix">
+<meta name="theme-color" content="#040806">
+<script>try{var t=localStorage.getItem("phenix-theme");if(t&&t!=="phosphore")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<meta property="og:title" content="Phenix">
+<meta property="og:description" content="LEDs — Phenix">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://anthrophobicc.github.io/PhenixProject/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="logo.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="img/icone-180.png">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="fiche.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="index.html"><span class="mark"></span><span>PHENIX</span></a>
+  <nav>
+    <a href="explore.html" data-i18n="nav.explore">Explore</a>
+    <a href="devices.html" data-i18n="nav.devices">Devices</a>
+    <a href="lab.html" data-i18n="nav.contribute">Phenix Lab</a>
+    <a href="hub.html" data-i18n="nav.hub">Phenix Hub</a>
+    <a href="download.html" data-i18n="nav.download">Download</a>
+    <button class="lang" type="button" aria-label="Language">FR</button>
+    <span class="themes" role="group" aria-label="Theme">
+      <button type="button" data-theme-set="phosphore" title="Phosphor" aria-label="Phosphor theme" style="--c1:#040806;--c2:#39FF6A"></button>
+      <button type="button" data-theme-set="ambre" title="Amber" aria-label="Amber theme" style="--c1:#0A0703;--c2:#FFB000"></button>
+      <button type="button" data-theme-set="papier" title="Paper" aria-label="Paper theme" style="--c1:#F4F2EC;--c2:#2F6E2A"></button>
+    </span>
+  </nav>
+</header>
+<main class="wrap fiche">
+  <p class="fil"><a href="explore.html" data-i18n="nav.explore">Explore</a> › Technique › Électronique et Numérique</p>
+  
+  <div class="tags">
+    
+    <span class="tag off" data-i18n="tag.off">Official</span>
+  </div>
+  <h1>LEDs</h1>
+  <p class="meta">Axis 2 · Technique · Électronique et Numérique</p>
+  <div class="bals"><div><span>Time</span><b>Short</b></div><div><span>Context</span><b>Alone</b></div><div><span>Risk</span><b>Discreet</b></div><div><span>Gear</span><b>Technical</b></div></div>
+  <article class="prose"><p class="lede-f">An LED is a piece of crystal that glows when current flows through it the right way. It replaced the filament bulb in fifteen years, because it makes the same light with ten times less energy.</p>
+<h2>What happens inside</h2>
+<p>An LED (light-emitting diode) is a <strong>diode</strong>: a component that only lets current through in one direction. At its heart, two layers of semiconductor meet. When current flows, electrons drop from one energy level to another, each releasing a grain of light.</p>
+<p><strong>The colour depends on the material</strong>, not on a filter: red and infrared have existed since the 1960s, efficient blue only arrived in the 1990s, which earned its inventors the 2014 Nobel Prize in Physics. <strong>A white LED</strong> is a blue LED coated with a yellow powder (a phosphor): blue and yellow mixed look white.</p>
+<h2>Useful numbers</h2>
+<p><strong>Each colour needs its own voltage</strong>, called the forward voltage:</p>
+<table><thead><tr><th>Colour</th><th>Typical forward voltage</th></tr></thead><tbody><tr><td>Infrared</td><td>1.2 to 1.5 V</td></tr><tr><td>Red, orange, yellow</td><td>1.8 to 2.2 V</td></tr><tr><td>Green, blue, white</td><td>2.8 to 3.4 V</td></tr></tbody></table>
+<p><strong>A small 3 or 5 mm indicator LED</strong> handles about <strong>20 milliamps</strong>. Beyond that, it heats up and dies.</p>
+<p><strong>Direction matters.</strong> The longer leg is plus (the anode). The flat side of the LED&#x27;s rim is minus (the cathode). Wired backwards, it doesn&#x27;t light, and beyond a few volts backwards it can burn out.</p>
+<h2>The golden rule: always limit the current</h2>
+<p>An LED connected straight to a battery that&#x27;s too strong burns out in a fraction of a second: once past its forward voltage, it lets through as much current as it&#x27;s given. So you put <strong>a resistor in series</strong>, worked out like this:</p>
+<p><strong>R = (source voltage − LED voltage) ÷ desired current</strong></p>
+<p>Example: a white LED (3 V) on a 5 V USB supply, at 20 mA: (5 − 3) ÷ 0.02 = <strong>100 ohms</strong>. When in doubt, take the next value up: the LED will be a little dimmer, and live longer. See <span title="TEC-ENE-002">Lire un circuit électrique</span>.</p>
+<h2>Lighting</h2>
+<ul><li><strong>Efficiency</strong>: an LED bulb produces about 100 lumens per watt or more, against 10 to 15 for a filament bulb. For the same light, <strong>ten times less energy</strong>: that&#x27;s what makes lighting possible on a small battery or a solar panel.</li><li><strong>Lifetime</strong>: the LEDs themselves last tens of thousands of hours. In a bulb, it&#x27;s almost always <strong>the power electronics that fail first</strong>, because of heat. An LED bulb shut inside a sealed ceiling fitting lives much shorter.</li><li><strong>Heat</strong> is the enemy: a power LED must be mounted on a metal heatsink.</li></ul>
+<h2>Screens</h2>
+<ul><li><strong>LCD</strong>: LEDs serve as the backlight, see <a href="fiche-tec-eln-002-en.html">The liquid crystal display (LCD)</a>.</li><li><strong>OLED</strong>: each sub-pixel is a tiny organic LED making its own light. Perfect blacks and infinite contrast, but pixels wear over time and a still image left for months can leave a mark.</li><li><strong>Giant screens</strong> in stadiums and on buildings: a mosaic of ordinary LEDs, visible in full sun.</li></ul>
+<h2>Tinkerer&#x27;s tips</h2>
+<ul><li><strong>Testing an LED</strong>: a multimeter on diode mode lights it faintly. Or a 3 V button cell, legs pinched on it: a red, green or white LED lights up with no resistor, because the cell can&#x27;t supply enough current to burn it.</li><li><strong>Seeing infrared</strong>: a remote control&#x27;s LED is invisible to the eye, but a phone camera sees it flash purple. It&#x27;s the quickest remote test there is.</li><li><strong>An LED bulb that no longer lights</strong> often has just one dead LED in a chain wired in series: a black burnt dot on its surface gives it away. Bridging that LED with a wire sometimes brings the others back. <strong>Careful: these bulbs run straight off 230 volts mains; only touch them unplugged, with the capacitors discharged.</strong></li><li><strong>Squeezing the last drop from a spent battery</strong>: a small circuit called a &quot;joule thief&quot; (a transistor, a resistor, a coil wound on a small ferrite ring) boosts the voltage of a half-dead 1.5 V battery to light a white LED for hours.</li><li><strong>12 V LED strips</strong> can be cut every three LEDs or so, at the marked points. They connect straight to a car or motorbike battery, with no resistor to add: it&#x27;s already on the strip.</li></ul>
+<p>To light an LED without the grid, see <a href="fiche-surv-ene-001-en.html">Powering a circuit without the grid</a> and <a href="fiche-surv-ene-002-en.html">Making a battery</a>.</p></article>
+  <div class="blk"><h4>Sources</h4><div class="src">Schubert E. F., Light-Emitting Diodes, Cambridge University Press, 2nd edition</div><div class="src">Nobel Foundation, Nobel Prize in Physics 2014: efficient blue light-emitting diodes (Akasaki, Amano, Nakamura)</div><div class="src">US Department of Energy, LED Lighting Facts and reports on LED lamp lifetime</div></div>
+  <div class="blk"><h4 data-i18n="fiche.back">Sheets that lead here</h4><a class="item" href="fiche-surv-ene-002-en.html"><h3>Making a battery</h3><div class="meta">Axis 3</div></a><a class="item" href="fiche-tec-eln-002-en.html"><h3>The liquid crystal display (LCD)</h3><div class="meta">Axis 2</div></a><a class="item" href="fiche-tec-eln-001-en.html"><h3>Screens</h3><div class="meta">Axis 2</div></a></div>
+  <section class="blk">
+    <h4 data-i18n="fiche.commu">Useful? Anything to add?</h4>
+    <div id="communaute" data-cible="TEC-ELN-004"></div>
+  </section>
+  <div class="blk cta">
+    <p data-i18n="fiche.cta"><strong>This sheet is part of Phenix.</strong> The app holds the whole library, the maps and the bookshelf, and works offline.</p>
+    <p><a class="btn primary" href="download.html" data-i18n="home.b2">Download Phenix Base</a>
+       <a class="btn" href="lab.html#ecrire" data-i18n="sup.btn">Write a sheet</a></p>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <p data-i18n="foot.motto"><strong>Phenix</strong> — knowledge is your only immunity.</p>
+    <p class="small">
+      <a href="explore.html" data-i18n="nav.explore">Explore</a> ·
+      <a href="devices.html" data-i18n="nav.devices">Devices</a> ·
+      <a href="lab.html" data-i18n="nav.contribute">Phenix Lab</a> ·
+      <a href="hub.html" data-i18n="nav.hub">Phenix Hub</a> ·
+      <a href="download.html" data-i18n="nav.download">Download</a> ·
+      <a href="soutenir.html" data-i18n="nav.support">Support</a> ·
+      <a href="https://www.instagram.com/phenixprjct/" rel="noopener">Instagram</a> ·
+      <a href="https://www.reddit.com/r/PhenixProject/" rel="noopener">Reddit</a> ·
+      <a href="https://github.com/anthrophobicc/PhenixProject" rel="noopener">GitHub</a>
+    </p>
+    <p class="small dim" data-i18n="foot.licence">Software under the MIT licence · sheets under CC BY-SA 4.0</p>
+  </div>
+</footer>
+<script src="i18n.js"></script>
+<script src="en-ligne.js"></script><script src="communaute.js"></script>
+</body>
+</html>

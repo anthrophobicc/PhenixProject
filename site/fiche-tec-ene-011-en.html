@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" data-page-lang="en" data-alt="fiche-tec-ene-011.html" data-kind="fiche">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The circuit breaker — Phenix</title>
+<meta name="description" content="The circuit breaker — Phenix">
+<meta name="theme-color" content="#040806">
+<script>try{var t=localStorage.getItem("phenix-theme");if(t&&t!=="phosphore")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<meta property="og:title" content="Phenix">
+<meta property="og:description" content="The circuit breaker — Phenix">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://anthrophobicc.github.io/PhenixProject/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="logo.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="img/icone-180.png">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="fiche.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="index.html"><span class="mark"></span><span>PHENIX</span></a>
+  <nav>
+    <a href="explore.html" data-i18n="nav.explore">Explore</a>
+    <a href="devices.html" data-i18n="nav.devices">Devices</a>
+    <a href="lab.html" data-i18n="nav.contribute">Phenix Lab</a>
+    <a href="hub.html" data-i18n="nav.hub">Phenix Hub</a>
+    <a href="download.html" data-i18n="nav.download">Download</a>
+    <button class="lang" type="button" aria-label="Language">FR</button>
+    <span class="themes" role="group" aria-label="Theme">
+      <button type="button" data-theme-set="phosphore" title="Phosphor" aria-label="Phosphor theme" style="--c1:#040806;--c2:#39FF6A"></button>
+      <button type="button" data-theme-set="ambre" title="Amber" aria-label="Amber theme" style="--c1:#0A0703;--c2:#FFB000"></button>
+      <button type="button" data-theme-set="papier" title="Paper" aria-label="Paper theme" style="--c1:#F4F2EC;--c2:#2F6E2A"></button>
+    </span>
+  </nav>
+</header>
+<main class="wrap fiche">
+  <p class="fil"><a href="explore.html" data-i18n="nav.explore">Explore</a> › Technique › Energy and electricity</p>
+  
+  <div class="tags">
+    
+    <span class="tag off" data-i18n="tag.off">Official</span>
+  </div>
+  <h1>The circuit breaker</h1>
+  <p class="meta">Axis 2 · Technique · Energy and electricity</p>
+  <div class="bals"><div><span>Time</span><b>Short</b></div><div><span>Context</span><b>Alone</b></div><div><span>Risk</span><b>Discreet</b></div><div><span>Gear</span><b>Technical</b></div></div>
+  <article class="prose"><p class="lede-f">A circuit breaker doesn&#x27;t protect your appliances. It protects your wires from fire, and the RCD protects your body. When it trips, it&#x27;s telling you something: understand what before you switch it back on.</p>
+<h2>What it watches</h2>
+<p>An electric wire heats up when current flows through it. Too much current and it gets hot enough to melt its insulation and start a fire inside the wall. <strong>The breaker cuts first.</strong> It watches for two different dangers, with two mechanisms:</p>
+<ul><li><strong>Overload</strong>: too many appliances on the same circuit. The current is a little too high, for a long time. A <strong>bimetallic strip</strong> (two metals bonded together that expand differently) heats, bends and trips the breaker after a few seconds to a few minutes.</li><li><strong>Short circuit</strong>: two wires touching. The current becomes enormous at once. A <strong>coil</strong> creates a magnetic field that opens the contact within a few milliseconds.</li></ul>
+<h2>Reading a breaker</h2>
+<p><strong>The rating</strong>, in amps, is printed on it: the current it lets through continuously. In France, the standard ties the rating to the size of the wire it protects (other countries have their own tables, on the same principle):</p>
+<table><thead><tr><th>Circuit</th><th>Wire</th><th>Rating</th></tr></thead><tbody><tr><td>Lighting</td><td>1.5 mm²</td><td>10 A (16 A allowed)</td></tr><tr><td>Ordinary sockets</td><td>1.5 mm² or 2.5 mm²</td><td>16 A or 20 A</td></tr><tr><td>Washing machine, dishwasher, oven</td><td>2.5 mm²</td><td>20 A</td></tr><tr><td>Hob</td><td>6 mm²</td><td>32 A</td></tr></tbody></table>
+<p><strong>Never a higher rating than the wire can take.</strong> Replacing a 16 A breaker that keeps tripping with a 32 A one removes the protection: the wire will heat until something burns.</p>
+<p><strong>The letter</strong> in front of the rating (B, C or D) says when it cuts instantly: C for ordinary household use, B for long runs, D for motors with a hard start.</p>
+<h2>The RCD: the one that saves lives</h2>
+<p>Current that leaves by the live wire must come back by the neutral. If some is missing, it&#x27;s escaping somewhere else: through a wet appliance, a damaged wire, <strong>or a person</strong>. The <strong>residual current device</strong> (RCD) compares the two and cuts as soon as the difference reaches its threshold: <strong>30 milliamps</strong> for those protecting people, within a few tens of milliseconds. Fast enough that an electric shock doesn&#x27;t become electrocution.</p>
+<ul><li>It has a <strong>test button</strong>: press it once a month, it must cut cleanly.</li><li>It comes as <strong>type AC</strong> and <strong>type A</strong>: in France, type A is required on hob and washing machine circuits, whose electronics produce leaks a type AC can miss.</li></ul>
+<p><strong>The main switch</strong> near the meter cuts the whole house. It is often residual-current too, with a higher threshold and a slight delay, so that the 30 mA devices act first.</p>
+<h2>It tripped: read the message</h2>
+<ul><li><strong>It trips again immediately</strong> when switched back on: a <strong>short circuit</strong>. Unplug everything on that circuit, switch on, then plug in one appliance at a time. The culprit trips it when plugged back in.</li><li><strong>It trips after a few minutes</strong>, when everything runs at once: an <strong>overload</strong>. Spread appliances across other circuits.</li><li><strong>The RCD trips</strong>: a <strong>leak</strong>. Look for water: an outdoor socket, a bathroom, an appliance that took on moisture, a water heater. Same method: unplug everything, switch on, plug back in one at a time.</li><li><strong>It trips during storms</strong>: a surge, or water getting in somewhere.</li></ul>
+<h2>An electrician&#x27;s tips</h2>
+<ul><li><strong>Never hold the lever up</strong> to stop a breaker tripping. Modern ones cut anyway, old ones don&#x27;t, and that&#x27;s how fires start.</li><li><strong>A breaker that&#x27;s warm or smells hot</strong> almost always has a loose terminal screw. A bad contact heats up, see <span title="TEC-ENE-003">Câbler et protéger une installation</span>.</li><li><strong>Label your panel</strong> on a day when everything works. On the day you need to cut the kitchen in the dark, you won&#x27;t have time to search.</li><li><strong>Old fuses</strong> are replaced with a fuse of the same rating, never with copper wire or kitchen foil.</li><li><strong>Before power returns after a long outage</strong>, switch off circuits for fragile or dangerous appliances (heaters, oven, pumps), and switch them back on one by one: the grid often comes back with surges.</li><li><strong>A generator is never connected to a wall socket</strong> with a cable with two male plugs. It would feed power back into the grid and can kill a technician working on the line hundreds of metres away. It needs a transfer switch, fitted by an electrician. See <a href="fiche-urg-res-001-en.html">Shutting off water, gas and power</a>.</li></ul></article>
+  <div class="blk"><h4>Sources</h4><div class="src">French standard NF C 15-100, low-voltage electrical installations</div><div class="src">Standard EN 60898-1, circuit breakers for household installations</div><div class="src">Standards EN 61008 and 61009, residual current devices</div><div class="src">Promotelec, electrical installation guides</div></div>
+  
+  <section class="blk">
+    <h4 data-i18n="fiche.commu">Useful? Anything to add?</h4>
+    <div id="communaute" data-cible="TEC-ENE-011"></div>
+  </section>
+  <div class="blk cta">
+    <p data-i18n="fiche.cta"><strong>This sheet is part of Phenix.</strong> The app holds the whole library, the maps and the bookshelf, and works offline.</p>
+    <p><a class="btn primary" href="download.html" data-i18n="home.b2">Download Phenix Base</a>
+       <a class="btn" href="lab.html#ecrire" data-i18n="sup.btn">Write a sheet</a></p>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <p data-i18n="foot.motto"><strong>Phenix</strong> — knowledge is your only immunity.</p>
+    <p class="small">
+      <a href="explore.html" data-i18n="nav.explore">Explore</a> ·
+      <a href="devices.html" data-i18n="nav.devices">Devices</a> ·
+      <a href="lab.html" data-i18n="nav.contribute">Phenix Lab</a> ·
+      <a href="hub.html" data-i18n="nav.hub">Phenix Hub</a> ·
+      <a href="download.html" data-i18n="nav.download">Download</a> ·
+      <a href="soutenir.html" data-i18n="nav.support">Support</a> ·
+      <a href="https://www.instagram.com/phenixprjct/" rel="noopener">Instagram</a> ·
+      <a href="https://www.reddit.com/r/PhenixProject/" rel="noopener">Reddit</a> ·
+      <a href="https://github.com/anthrophobicc/PhenixProject" rel="noopener">GitHub</a>
+    </p>
+    <p class="small dim" data-i18n="foot.licence">Software under the MIT licence · sheets under CC BY-SA 4.0</p>
+  </div>
+</footer>
+<script src="i18n.js"></script>
+<script src="en-ligne.js"></script><script src="communaute.js"></script>
+</body>
+</html>

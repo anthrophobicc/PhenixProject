@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" data-page-lang="en" data-alt="fiche-tec-eln-003.html" data-kind="fiche">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The electronic ink screen — Phenix</title>
+<meta name="description" content="The electronic ink screen — Phenix">
+<meta name="theme-color" content="#040806">
+<script>try{var t=localStorage.getItem("phenix-theme");if(t&&t!=="phosphore")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<meta property="og:title" content="Phenix">
+<meta property="og:description" content="The electronic ink screen — Phenix">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://anthrophobicc.github.io/PhenixProject/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="logo.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="img/icone-180.png">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="fiche.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="index.html"><span class="mark"></span><span>PHENIX</span></a>
+  <nav>
+    <a href="explore.html" data-i18n="nav.explore">Explore</a>
+    <a href="devices.html" data-i18n="nav.devices">Devices</a>
+    <a href="lab.html" data-i18n="nav.contribute">Phenix Lab</a>
+    <a href="hub.html" data-i18n="nav.hub">Phenix Hub</a>
+    <a href="download.html" data-i18n="nav.download">Download</a>
+    <button class="lang" type="button" aria-label="Language">FR</button>
+    <span class="themes" role="group" aria-label="Theme">
+      <button type="button" data-theme-set="phosphore" title="Phosphor" aria-label="Phosphor theme" style="--c1:#040806;--c2:#39FF6A"></button>
+      <button type="button" data-theme-set="ambre" title="Amber" aria-label="Amber theme" style="--c1:#0A0703;--c2:#FFB000"></button>
+      <button type="button" data-theme-set="papier" title="Paper" aria-label="Paper theme" style="--c1:#F4F2EC;--c2:#2F6E2A"></button>
+    </span>
+  </nav>
+</header>
+<main class="wrap fiche">
+  <p class="fil"><a href="explore.html" data-i18n="nav.explore">Explore</a> › Technique › Électronique et Numérique</p>
+  
+  <div class="tags">
+    
+    <span class="tag off" data-i18n="tag.off">Official</span>
+  </div>
+  <h1>The electronic ink screen</h1>
+  <p class="meta">Axis 2 · Technique · Électronique et Numérique</p>
+  <div class="bals"><div><span>Time</span><b>Short</b></div><div><span>Context</span><b>Alone</b></div><div><span>Risk</span><b>Discreet</b></div><div><span>Gear</span><b>Technical</b></div></div>
+  <article class="prose"><p class="lede-f">An e-reader with a dead battery still shows its last page. A screen that keeps its picture without power is exactly what a device built to last needs.</p>
+<h2>The principle</h2>
+<p>The screen is filled with <strong>microcapsules</strong> thinner than a hair. Each holds a clear liquid and thousands of <strong>pigment particles</strong>: white ones charged one way, black ones charged the other.</p>
+<p>Electrodes above and below each dot create an electric field. Depending on its direction, it pulls the white or the black particles to the surface. The dot turns white or black. This is <strong>electrophoresis</strong>, the movement of charged particles in a liquid.</p>
+<p>The invention came out of MIT in the late 1990s; the company E Ink industrialised it, and the first consumer e-reader used it in 2004.</p>
+<h2>What makes it unique</h2>
+<p><strong>It is bistable.</strong> Once moved, the particles stay where they are, without power. The screen only uses energy <strong>while the picture changes</strong>. A page displayed for a week costs nothing.</p>
+<p><strong>It is reflective.</strong> Like paper, it bounces ambient light back. It reads perfectly in full sun, from every angle, and tires the eyes less than a lit screen. In the dark, it needs a front light: a row of LEDs along the edge lighting the surface from above.</p>
+<h2>Its limits</h2>
+<ul><li><strong>Slow</strong>: a picture changes in a few tenths of a second. No video, jerky animations.</li><li><strong>Ghosting</strong>: the previous picture leaves a faint trace. The screen regularly &quot;cleans&quot; itself by flashing all black then all white: that flash is normal.</li><li><strong>Cold</strong>: below about 0 °C (32 °F), the liquid thickens and picture changes become slow or incomplete. Many displays are rated for 0 to 50 °C. <strong>The picture already shown, however, stays.</strong></li><li><strong>Colour</strong> exists in two versions: with colour filters over the black-and-white screen (pale colours, fast), or with pigments of several colours in each capsule (vivid colours, but a picture change takes several seconds).</li><li><strong>Price</strong>: for the same size, more expensive than an LCD.</li></ul>
+<h2>Where you find it</h2>
+<ul><li>E-readers and some writing tablets.</li><li><strong>Electronic shelf labels</strong> in supermarkets: each one is a small electronic ink display with a button cell that lasts years, updated by radio.</li><li>Timetable displays at some solar-powered bus stops.</li><li>Watches and badges with very long battery life.</li></ul>
+<h2>Why it&#x27;s the survival screen</h2>
+<p>A reading device that must work for weeks far from any socket has three needs: use almost nothing, be readable in daylight, and <strong>show something even when its battery is empty</strong>. Electronic ink is the only technology that ticks all three. That&#x27;s why it is considered for offline reading devices, see <a href="fiche-tec-ide-009-en.html">The Phenix devices</a>.</p>
+<h2>Tips</h2>
+<ul><li><strong>A dead e-reader keeps its last page</strong>: if you leave a map, a list of frequencies or an emergency sheet on it before it dies, the information stays readable.</li><li><strong>A screen frozen halfway</strong> after a cold snap often recovers if you warm it against your body, then force a full refresh.</li><li><strong>For a build</strong>, electronic ink modules from 1.5 to 7.5 inches driven over SPI cost from about ten to a few tens of euros. You send the whole picture, then let the screen refresh, often 2 to 15 seconds depending on the model.</li><li><strong>Don&#x27;t leave an electronic ink screen in full sun behind a window</strong>: heat and ultraviolet eventually yellow and damage the capsules.</li></ul></article>
+  <div class="blk"><h4>Sources</h4><div class="src">Comiskey B., Albert J., Yoshizawa H., Jacobson J., An electrophoretic ink for all-printed reflective electronic displays, Nature, 1998</div><div class="src">E Ink Holdings, datasheets for Carta, Kaleido and Spectra displays</div><div class="src">Heikenfeld J. et al., Review Paper: A critical review of the present and future prospects for electronic paper, Journal of the SID, 2011</div></div>
+  <div class="blk"><h4 data-i18n="fiche.back">Sheets that lead here</h4><a class="item" href="fiche-tec-ide-009-en.html"><h3>The Phenix devices</h3><div class="meta">Axis 2</div></a><a class="item" href="fiche-tec-eln-001-en.html"><h3>Screens</h3><div class="meta">Axis 2</div></a></div>
+  <section class="blk">
+    <h4 data-i18n="fiche.commu">Useful? Anything to add?</h4>
+    <div id="communaute" data-cible="TEC-ELN-003"></div>
+  </section>
+  <div class="blk cta">
+    <p data-i18n="fiche.cta"><strong>This sheet is part of Phenix.</strong> The app holds the whole library, the maps and the bookshelf, and works offline.</p>
+    <p><a class="btn primary" href="download.html" data-i18n="home.b2">Download Phenix Base</a>
+       <a class="btn" href="lab.html#ecrire" data-i18n="sup.btn">Write a sheet</a></p>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <p data-i18n="foot.motto"><strong>Phenix</strong> — knowledge is your only immunity.</p>
+    <p class="small">
+      <a href="explore.html" data-i18n="nav.explore">Explore</a> ·
+      <a href="devices.html" data-i18n="nav.devices">Devices</a> ·
+      <a href="lab.html" data-i18n="nav.contribute">Phenix Lab</a> ·
+      <a href="hub.html" data-i18n="nav.hub">Phenix Hub</a> ·
+      <a href="download.html" data-i18n="nav.download">Download</a> ·
+      <a href="soutenir.html" data-i18n="nav.support">Support</a> ·
+      <a href="https://www.instagram.com/phenixprjct/" rel="noopener">Instagram</a> ·
+      <a href="https://www.reddit.com/r/PhenixProject/" rel="noopener">Reddit</a> ·
+      <a href="https://github.com/anthrophobicc/PhenixProject" rel="noopener">GitHub</a>
+    </p>
+    <p class="small dim" data-i18n="foot.licence">Software under the MIT licence · sheets under CC BY-SA 4.0</p>
+  </div>
+</footer>
+<script src="i18n.js"></script>
+<script src="en-ligne.js"></script><script src="communaute.js"></script>
+</body>
+</html>

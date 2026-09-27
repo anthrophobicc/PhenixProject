@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr" data-page-lang="fr" data-alt="fiche-tec-eln-004-en.html" data-kind="fiche">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Les LED — Phenix</title>
+<meta name="description" content="Les LED — Phenix">
+<meta name="theme-color" content="#040806">
+<script>try{var t=localStorage.getItem("phenix-theme");if(t&&t!=="phosphore")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<meta property="og:title" content="Phenix">
+<meta property="og:description" content="Les LED — Phenix">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://anthrophobicc.github.io/PhenixProject/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="logo.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="img/icone-180.png">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="fiche.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="index.html"><span class="mark"></span><span>PHENIX</span></a>
+  <nav>
+    <a href="explore.html" data-i18n="nav.explore">Explorer</a>
+    <a href="devices.html" data-i18n="nav.devices">Appareils</a>
+    <a href="lab.html" data-i18n="nav.contribute">Phenix Lab</a>
+    <a href="hub.html" data-i18n="nav.hub">Phenix Hub</a>
+    <a href="download.html" data-i18n="nav.download">Télécharger</a>
+    <button class="lang" type="button" aria-label="Language">EN</button>
+    <span class="themes" role="group" aria-label="Theme">
+      <button type="button" data-theme-set="phosphore" title="Phosphor" aria-label="Phosphor theme" style="--c1:#040806;--c2:#39FF6A"></button>
+      <button type="button" data-theme-set="ambre" title="Amber" aria-label="Amber theme" style="--c1:#0A0703;--c2:#FFB000"></button>
+      <button type="button" data-theme-set="papier" title="Paper" aria-label="Paper theme" style="--c1:#F4F2EC;--c2:#2F6E2A"></button>
+    </span>
+  </nav>
+</header>
+<main class="wrap fiche">
+  <p class="fil"><a href="explore.html" data-i18n="nav.explore">Explorer</a> › La Technique › Électronique et Numérique</p>
+  
+  <div class="tags">
+    
+    <span class="tag off" data-i18n="tag.off">Officielle</span>
+  </div>
+  <h1>Les LED</h1>
+  <p class="meta">Axe 2 · La Technique · Électronique et Numérique</p>
+  <div class="bals"><div><span>Temps</span><b>Court</b></div><div><span>Contexte</span><b>Seul</b></div><div><span>Risque</span><b>Discret</b></div><div><span>Matériel</span><b>Technique</b></div></div>
+  <article class="prose"><p class="lede-f">Une LED, c&#x27;est un morceau de cristal qui s&#x27;illumine quand le courant le traverse dans le bon sens. Elle a remplacé l&#x27;ampoule à filament en quinze ans, parce qu&#x27;elle fait la même lumière avec dix fois moins d&#x27;énergie.</p>
+<h2>Ce qui se passe dedans</h2>
+<p>Une LED (diode électroluminescente) est une <strong>diode</strong> : un composant qui ne laisse passer le courant que dans un sens. Au cœur, deux couches de semi-conducteur se touchent. Quand le courant passe, des électrons tombent d&#x27;un niveau d&#x27;énergie à un autre en libérant chacun un grain de lumière.</p>
+<p><strong>La couleur dépend du matériau</strong>, pas d&#x27;un filtre : le rouge et l&#x27;infrarouge sont connus depuis les années 1960, le bleu efficace n&#x27;est arrivé que dans les années 1990, ce qui a valu le prix Nobel de physique 2014 à ses inventeurs. <strong>La LED blanche</strong> est une LED bleue recouverte d&#x27;une poudre jaune (un phosphore) : le mélange bleu et jaune donne du blanc.</p>
+<h2>Les chiffres utiles</h2>
+<p><strong>Chaque couleur demande sa tension</strong>, appelée tension de seuil :</p>
+<table><thead><tr><th>Couleur</th><th>Tension de seuil typique</th></tr></thead><tbody><tr><td>Infrarouge</td><td>1,2 à 1,5 V</td></tr><tr><td>Rouge, orange, jaune</td><td>1,8 à 2,2 V</td></tr><tr><td>Verte, bleue, blanche</td><td>2,8 à 3,4 V</td></tr></tbody></table>
+<p><strong>Une petite LED témoin</strong> de 3 ou 5 mm supporte environ <strong>20 milliampères</strong>. Au-delà, elle chauffe et meurt.</p>
+<p><strong>Le sens compte.</strong> La patte la plus longue est le plus (l&#x27;anode). Le côté plat du bord de la LED est le moins (la cathode). Branchée à l&#x27;envers, elle ne s&#x27;allume pas, et au-delà de quelques volts à l&#x27;envers, elle peut griller.</p>
+<h2>La règle d&#x27;or : toujours limiter le courant</h2>
+<p>Une LED branchée directement sur une pile trop forte grille en une fraction de seconde : dès qu&#x27;elle dépasse sa tension de seuil, elle laisse passer autant de courant qu&#x27;on lui en donne. On met donc <strong>une résistance en série</strong>, calculée ainsi :</p>
+<p><strong>R = (tension de la source − tension de la LED) ÷ courant voulu</strong></p>
+<p>Exemple : une LED blanche (3 V) sur une alimentation USB de 5 V, à 20 mA : (5 − 3) ÷ 0,02 = <strong>100 ohms</strong>. En cas de doute, prenez la valeur au-dessus : la LED éclairera un peu moins, et vivra plus longtemps. Voir <span title="TEC-ENE-002">Lire un circuit électrique</span>.</p>
+<h2>L&#x27;éclairage</h2>
+<ul><li><strong>Rendement</strong> : une ampoule LED produit environ 100 lumens par watt ou plus, contre 10 à 15 pour une ampoule à filament. Pour la même lumière, <strong>dix fois moins d&#x27;énergie</strong> : c&#x27;est ce qui rend l&#x27;éclairage possible sur une petite batterie ou un panneau solaire.</li><li><strong>Durée de vie</strong> : les LED elles-mêmes durent des dizaines de milliers d&#x27;heures. Dans une ampoule, c&#x27;est presque toujours <strong>l&#x27;électronique d&#x27;alimentation qui lâche d&#x27;abord</strong>, à cause de la chaleur. Une ampoule LED enfermée dans un plafonnier étanche vit beaucoup moins longtemps.</li><li><strong>La chaleur</strong> est l&#x27;ennemie : une LED de puissance doit être collée sur un radiateur métallique.</li></ul>
+<h2>Les écrans</h2>
+<ul><li><strong>LCD</strong> : les LED servent de lampe arrière, voir <a href="fiche-tec-eln-002.html">L&#x27;écran à cristaux liquides (LCD)</a>.</li><li><strong>OLED</strong> : chaque sous-pixel est une minuscule LED organique qui fait sa propre lumière. Noirs parfaits et contraste infini, mais les pixels s&#x27;usent à la longue et une image fixe laissée des mois peut rester marquée.</li><li><strong>Écrans géants</strong> des stades et des façades : une mosaïque de LED classiques, visibles en plein soleil.</li></ul>
+<h2>Les astuces de bricoleur</h2>
+<ul><li><strong>Tester une LED</strong> : un multimètre en position diode l&#x27;allume faiblement. Ou une pile bouton de 3 V, pattes pincées dessus : une LED rouge, verte ou blanche s&#x27;allume sans résistance, car la pile ne peut pas fournir assez de courant pour la griller.</li><li><strong>Voir l&#x27;infrarouge</strong> : la LED d&#x27;une télécommande est invisible à l&#x27;œil, mais l&#x27;appareil photo d&#x27;un téléphone la voit clignoter en violet. C&#x27;est le test de télécommande le plus rapide qui existe.</li><li><strong>Une ampoule LED qui ne s&#x27;allume plus</strong> n&#x27;a souvent qu&#x27;une seule LED morte sur une chaîne montée en série : un point noir brûlé à sa surface la trahit. Ponter cette LED avec un fil suffit parfois à faire repartir les autres. <strong>Attention : ces ampoules fonctionnent directement sur le 230 volts, on n&#x27;y touche que débranchées et condensateurs déchargés.</strong></li><li><strong>Tirer la dernière goutte d&#x27;une pile usée</strong> : un petit montage appelé « voleur de joules » (un transistor, une résistance, une bobine enroulée sur une petite ferrite) élève la tension d&#x27;une pile de 1,5 V à moitié morte pour allumer une LED blanche des heures durant.</li><li><strong>Les bandes de LED en 12 V</strong> se coupent tous les trois LED environ, aux marques prévues. Elles se branchent directement sur une batterie de voiture ou de moto, sans résistance à ajouter : elle est déjà sur la bande.</li></ul>
+<p>Pour allumer une LED sans réseau, voir <a href="fiche-surv-ene-001.html">Alimenter un circuit sans le réseau</a> et <a href="fiche-surv-ene-002.html">Fabriquer une pile</a>.</p></article>
+  <div class="blk"><h4>Sources</h4><div class="src">Schubert E. F., Light-Emitting Diodes, Cambridge University Press, 2e édition</div><div class="src">Fondation Nobel, Prix Nobel de physique 2014 : diodes électroluminescentes bleues efficaces (Akasaki, Amano, Nakamura)</div><div class="src">US Department of Energy, LED Lighting Facts et rapports sur la durée de vie des lampes LED</div></div>
+  <div class="blk"><h4 data-i18n="fiche.back">Fiches qui mènent ici</h4><a class="item" href="fiche-surv-ene-002.html"><h3>Fabriquer une pile</h3><div class="meta">Axe 3</div></a><a class="item" href="fiche-tec-eln-002.html"><h3>L&#x27;écran à cristaux liquides (LCD)</h3><div class="meta">Axe 2</div></a><a class="item" href="fiche-tec-eln-001.html"><h3>Les écrans</h3><div class="meta">Axe 2</div></a></div>
+  <section class="blk">
+    <h4 data-i18n="fiche.commu">Utile ? Quelque chose à ajouter ?</h4>
+    <div id="communaute" data-cible="TEC-ELN-004"></div>
+  </section>
+  <div class="blk cta">
+    <p data-i18n="fiche.cta"><strong>Cette fiche fait partie de Phenix.</strong> L'application contient tout le corpus, les cartes et la bibliothèque, et fonctionne hors ligne.</p>
+    <p><a class="btn primary" href="download.html" data-i18n="home.b2">Télécharger Phenix Base</a>
+       <a class="btn" href="lab.html#ecrire" data-i18n="sup.btn">Proposer une fiche</a></p>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <p data-i18n="foot.motto"><strong>Phenix</strong> — le savoir est votre seule immunité.</p>
+    <p class="small">
+      <a href="explore.html" data-i18n="nav.explore">Explorer</a> ·
+      <a href="devices.html" data-i18n="nav.devices">Appareils</a> ·
+      <a href="lab.html" data-i18n="nav.contribute">Phenix Lab</a> ·
+      <a href="hub.html" data-i18n="nav.hub">Phenix Hub</a> ·
+      <a href="download.html" data-i18n="nav.download">Télécharger</a> ·
+      <a href="soutenir.html" data-i18n="nav.support">Soutenir</a> ·
+      <a href="https://www.instagram.com/phenixprjct/" rel="noopener">Instagram</a> ·
+      <a href="https://www.reddit.com/r/PhenixProject/" rel="noopener">Reddit</a> ·
+      <a href="https://github.com/anthrophobicc/PhenixProject" rel="noopener">GitHub</a>
+    </p>
+    <p class="small dim" data-i18n="foot.licence">Logiciel sous licence MIT · fiches sous licence CC BY-SA 4.0</p>
+  </div>
+</footer>
+<script src="i18n.js"></script>
+<script src="en-ligne.js"></script><script src="communaute.js"></script>
+</body>
+</html>
