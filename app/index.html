@@ -1336,13 +1336,16 @@ const EN={
 "Armement et Défense":"Weapons and Defense",
 "Information et Données":"Information and Data",
 "Culture et Loisirs":"Culture and Leisure",
+"Électronique et Numérique":"Electronics and Computing",
+"Terre et Climat":"Earth and Climate",
+"Métiers et Savoir-faire":"Trades and Skills",
 "Ce qui se répète":"What Repeats"
 };
 const tr=s=>LANG==="en"?(EN[s]??s):s;
 
 const AXES=[
  {n:1,nom:"La Mémoire",cats:["L'Éveil","Les révolutions agricoles","Cités états et premiers empires","Ère des échanges et grands pôles","Accélération technique","L'anthropocène","Ce qui se répète"]},
- {n:2,nom:"La Technique",cats:["Agriculture et Botanique","Alimentation et Conservation","Chimie et Matériaux","Construction et Habitat","Mécanique et Transport","Santé et Chirurgie","Énergie et Électricité","Information et Données","Culture et Loisirs"]},
+ {n:2,nom:"La Technique",cats:["Agriculture et Botanique","Alimentation et Conservation","Chimie et Matériaux","Construction et Habitat","Mécanique et Transport","Santé et Chirurgie","Énergie et Électricité","Électronique et Numérique","Information et Données","Terre et Climat","Métiers et Savoir-faire","Culture et Loisirs"]},
  {n:3,nom:"La Survie",cats:["Feu, Eau et Ressources","Mouvement et Discrétion","Psychologie Sociale et Troc","Récupération","Secourisme","Signaux et Communications","Protocoles d'urgence","Armement et Défense"]}
 ];
 const BALISES={
@@ -16805,6 +16808,640 @@ Tout le reste est un pari sur la solidité de l'arme et de vos mains. **Un 9 × 
 ## Le droit
 
 En France, les munitions suivent la catégorie de l'arme : leur achat demande en général le même titre que l'arme (licence de tir, permis de chasser, autorisation). Les règles changent beaucoup d'un pays à l'autre. Une arme ou des munitions trouvées se signalent à la police ou à la gendarmerie : voir [[SURV-ARM-001]].
+
+---
+id: SURV-ENE-002
+titre: Fabriquer une pile
+axe: 3
+categorie: Feu, Eau et Ressources
+temps: Court
+contexte: 1
+risque: Discret
+materiel: Récupération
+priorite: normale
+origine: officielle
+tags: [pile, citron, volta, aluminium, sel, vinaigre, electricite, led, sans reseau]
+sources: ["Volta A., On the Electricity excited by the mere Contact of conducting Substances of different kinds, Philosophical Transactions of the Royal Society, 1800", "Linden D., Reddy T., Handbook of Batteries, McGraw-Hill (couples électrochimiques et potentiels standard)", "Royal Society of Chemistry, Education : aluminium-air cell et piles à fruits (fiches expérimentales)"]
+---
+
+::Deux métaux différents et un peu de vinaigre font de l'électricité. Pas assez pour charger un téléphone, mais assez pour allumer une lumière dans le noir, et ça, avec rien, c'est déjà beaucoup.::
+
+## COMPRENDRE
+
+Une pile, c'est **deux métaux différents** qui ne se touchent pas, et **un électrolyte** entre eux : un liquide ou une pâte qui conduit les charges, eau salée, vinaigre, jus de citron. Le métal le plus « pressé » de se dissoudre (le zinc, l'aluminium, le magnésium) cède des électrons, qui passent par le fil pour rejoindre l'autre côté. Voir [[TEC-ENE-012]].
+
+**La tension dépend du couple de métaux**, pas de la taille :
+
+| Couple | Tension par cellule, environ |
+|---|---|
+| Zinc et cuivre | 0,8 à 1 V |
+| Aluminium et charbon de bois (pile aluminium-air) | 0,7 à 1,2 V |
+| Magnésium et cuivre | 1,5 à 2 V |
+| Fer et cuivre | 0,3 à 0,5 V |
+
+**Le courant dépend de la surface** des métaux et de la qualité de l'électrolyte. Plus c'est grand, plus ça débite.
+
+**Pour plus de tension**, on met plusieurs cellules en série : le cuivre de l'une relié au zinc de la suivante. C'est exactement ce qu'a fait Volta en 1800 avec sa « pile » de disques empilés, qui a donné son nom à toutes les autres.
+
+**La réalité, à connaître avant de commencer :** un citron donne environ 0,9 volt et **moins d'un milliampère**. Un téléphone demande 5 volts et environ un ampère pour se recharger. Il faudrait des milliers de citrons. Une pile de fortune sert à **une LED, une calculatrice, une horloge, un petit signal**, pas à recharger un appareil.
+
+## AGIR
+
+### La pile de pièces (la plus pratique)
+
+Il vous faut : des pièces de cuivre ou cuivrées (les pièces de 1, 2 et 5 centimes d'euro sont de l'acier recouvert de cuivre, ça marche), des rondelles **galvanisées** (grises, en zinc, au rayon visserie), du carton, du sel ou du vinaigre.
+
+1. Découpez des ronds de carton ou de papier absorbant un peu plus petits que les pièces.
+2. Trempez-les dans de l'eau très salée ou du vinaigre, et égouttez-les : **humides, pas dégoulinants**, sinon le liquide relie les cellules entre elles et tout s'arrête.
+3. Empilez : pièce, carton, rondelle, pièce, carton, rondelle… Chaque trio donne environ 0,5 à 0,8 V.
+4. Six à huit étages suffisent pour une LED rouge ; dix à douze pour une blanche.
+5. Le fil du bas touche la première pièce (le plus), celui du haut la dernière rondelle (le moins). La LED se branche **dans le bon sens** : patte longue vers le cuivre. Voir [[TEC-ELN-004]].
+6. Serrez la pile avec un élastique ou dans un morceau de tuyau.
+
+### La pile aluminium-air (celle qui débite le plus)
+
+1. Une feuille de **papier aluminium** à plat.
+2. Par-dessus, un papier absorbant trempé dans de l'eau **saturée de sel**.
+3. Par-dessus, une couche de **charbon de bois écrasé en poudre**, humidifiée de la même eau salée (le charbon actif d'un filtre est le meilleur).
+4. Appuyez un fil de cuivre, une mine de crayon ou une plaque de métal sur le charbon, sans toucher l'aluminium : c'est le plus. L'aluminium est le moins.
+
+Une seule cellule de la taille d'une main peut donner environ un volt et quelques dizaines de milliampères. Deux ou trois en série allument une LED plusieurs heures, jusqu'à ce que l'aluminium soit rongé.
+
+### La pile à fruits ou à légumes
+
+Un clou galvanisé et une pièce ou un fil de cuivre plantés dans un citron, une pomme de terre ou un pot de choucroute, à deux ou trois centimètres l'un de l'autre. Trois ou quatre en série font briller faiblement une LED rouge. Bouillir la pomme de terre avant améliore nettement le résultat.
+
+## ADAPTER
+
+**Vous n'avez pas de multimètre.** Testez chaque cellule sur la langue, comme les électriciens d'autrefois testaient une pile 9 V : un léger picotement dit qu'il y a de la tension. Seulement sur ces petites piles de fortune, jamais sur autre chose. Mieux : voir [[TEC-ENE-008]].
+
+**La LED ne s'allume pas.** Retournez-la. Puis vérifiez qu'aucun liquide ne coule d'une cellule à l'autre. Puis ajoutez des cellules.
+
+**Vous voulez vraiment de l'énergie.** Les piles de fortune ne sont pas la solution. Récupérez des cellules de batterie sur un ordinateur portable ([[SURV-REC-021]]), une trottinette ou un outil sans fil, et rechargez-les au soleil ou avec une dynamo : voir [[SURV-ENE-001]].
+
+**Vous voulez écouter la radio.** Un poste à galène n'a besoin d'aucune pile : l'énergie vient de l'onde elle-même. Voir [[TEC-RAD-001]].
+
+**Les piles de fortune s'épuisent** quand le zinc ou l'aluminium est rongé : remplacez la rondelle ou la feuille, et retrempez les cartons. Elles se reconstruisent à l'infini, tant qu'il y a du métal.
+
+---
+id: TEC-IDE-009
+titre: Les appareils Phenix
+axe: 2
+categorie: Information et Données
+temps: Long
+contexte: 1
+risque: Discret
+materiel: Technique
+priorite: normale
+origine: officielle
+tags: [phenix, appareil, esp32, borne, wifi, carte sd, prototype, documentation, fabrication]
+sources: ["Dépôt du projet Phenix : materiel/phenix-001-v0/LISEZMOI.md, borne-sans-sd.ino, borne.ino, ecran.ino", "Espressif Systems, ESP32-C3 Series Datasheet et documentation arduino-esp32", "Andy Brown, Generic Nokia LCD hacking board (brochage des écrans de téléphones Nokia)"]
+---
+
+::Un appareil Phenix doit pouvoir se construire avec des pièces qu'on trouve partout, se réparer avec un fer à souder, et tenir la bibliothèque entière dans la poche. Tout est ouvert : les plans, le code, les erreurs.::
+
+**Tout ce qui suit est au stade de prototype.** Rien n'est vendu. Les rendus 3D des appareils sont des concepts ; seule la borne WiFi a déjà fonctionné sur un vrai téléphone.
+
+## Les deux appareils
+
+**Phenix 001, le petit.** Un lecteur de poche, pas plus gros qu'une petite télécommande, qui contient toute la bibliothèque sur une carte mémoire et l'affiche sur un petit écran économe. Pièces courantes, boîtier qu'on ouvre avec un tournevis, batterie remplaçable.
+
+**Phenix 002, le grand.** Un appareil plus grand, avec un écran couleur assez large pour lire des cartes. Deux fentes pour cartes mémoire sous une trappe en caoutchouc : il peut **lire la carte d'un Phenix 001, vérifier sa bibliothèque et réparer les fiches abîmées**. Des modules s'y branchent sur des broches : panneau solaire, dynamo, lampe. Et un Phenix cassé doit pouvoir repartir sur un écran de récupération, même celui d'un vieux terminal de paiement.
+
+## Ce qui existe déjà : la borne Phenix
+
+C'est le premier prototype qui marche. Une carte électronique de quelques euros ouvre un réseau WiFi nommé **Phenix**, sans mot de passe. **N'importe quel téléphone qui s'y connecte ouvre toute la bibliothèque**, sans internet, sans rien installer : la page s'affiche d'elle-même, comme le portail WiFi d'un hôtel.
+
+**Les pièces**
+
+| Pièce | Rôle | Prix indicatif |
+|---|---|---|
+| ESP32-C3 « Super Mini » | Le cerveau et le WiFi | 3 à 5 € |
+| Câble USB-C | Alimentation et programmation | déjà chez vous |
+| Batterie externe (powerbank) | Autonomie | déjà chez vous |
+| Module carte micro SD (facultatif) | Pour une bibliothèque plus grosse | 1 à 2 € |
+
+**Deux versions**
+
+- **Sans carte SD** : l'application complète, compressée (moins d'un mégaoctet), est écrite directement dans la mémoire de la carte. Rien à souder. C'est la version qui a fonctionné.
+- **Avec carte SD** : la bibliothèque est sur une carte micro SD en FAT32, préparée sur l'ordinateur. Branchements : CS sur GPIO7, MOSI sur GPIO6, SCK sur GPIO4, MISO sur GPIO5, plus 3,3 V et masse.
+
+**La fabriquer**
+
+1. Installer **Arduino IDE 2**, ajouter les cartes ESP32 d'Espressif, choisir la carte **ESP32C3 Dev Module**.
+2. Dans le menu Outils : **Partition Scheme : Huge APP**, et **USB CDC On Boot : Enabled**.
+3. Ouvrir le programme de la borne, dans le dossier **materiel/phenix-001-v0** du dépôt, et téléverser.
+4. Si le téléversement ne démarre pas : débrancher, **garder le bouton BOOT appuyé**, rebrancher, relâcher, recommencer.
+5. Sur le téléphone : réglages WiFi, réseau **Phenix**. Si la page ne s'ouvre pas seule, taper **192.168.4.1** dans le navigateur.
+
+## Ce qui a été essayé, et ce qu'on en a appris
+
+**L'écran d'un vieux téléphone Nokia** : l'idée était de réutiliser l'écran couleur d'un téléphone mort. Deux obstacles l'ont arrêtée : un connecteur de 24 broches espacées de 0,4 mm, presque impossible à souder sans matériel fin, et un rétroéclairage qui demande environ 13 volts. **Leçon** : pour un appareil que tout le monde doit pouvoir refaire, un module d'écran vendu pour les microcontrôleurs, déjà monté sur sa petite carte, vaut mieux qu'une pièce de récupération exotique. Voir [[TEC-ELN-001]].
+
+**La suite prévue** : un écran couleur de 2,8 pouces avec lecteur de carte SD intégré, ou un écran à **encre électronique** de 2,9 pouces, qui garde sa page sans courant et se lit en plein soleil, voir [[TEC-ELN-003]].
+
+## Les principes qui guident la conception
+
+- **Des pièces qu'on trouve partout**, en ligne comme dans les magasins d'électronique, et qu'on peut remplacer une par une.
+- **Tout est documenté** : schémas, code, liste des pièces, dans le dépôt public. Un appareil dont personne ne connaît l'intérieur ne se répare pas.
+- **La bibliothèque reste lisible sans l'appareil** : ce sont les mêmes fichiers texte que partout ailleurs. Une carte SD sortie d'un Phenix cassé se lit sur n'importe quel ordinateur.
+- **L'énergie d'abord** : un appareil qui doit tenir loin des prises choisit ses composants pour leur consommation avant leur puissance.
+
+Le projet dans son ensemble est présenté dans [[TEC-IDE-008]].
+
+---
+id: TEC-IDE-008
+titre: Le projet Phenix
+axe: 2
+categorie: Information et Données
+temps: Court
+contexte: 2+
+risque: Discret
+materiel: Rien
+priorite: normale
+origine: officielle
+tags: [phenix, projet, bibliotheque, hors ligne, communaute, licence, contribuer]
+sources: ["Dépôt du projet Phenix : README, LICENSE (MIT) et LICENSE-CORPUS (CC BY-SA 4.0)", "Creative Commons, Attribution - Partage dans les Mêmes Conditions 4.0 International", "Site du projet : anthrophobicc.github.io/PhenixProject"]
+---
+
+::Phenix est une bibliothèque du savoir pratique qui marche sans internet, que tout le monde peut lire, corriger et agrandir. Elle ne parie pas sur la fin du monde. Elle parie sur le fait que le savoir doit être là le jour où on en a besoin.::
+
+## Ce que c'est
+
+Phenix rassemble des **fiches** : comment trouver de l'eau, réparer un pneu, soigner une brûlure, lire un disjoncteur, faire une soupe pour vingt avec presque rien. Chaque fiche est un simple **fichier texte**. Le logiciel les range, les relie et les filtre, mais **si Phenix disparaît, les fiches restent lisibles** avec n'importe quel éditeur de texte. C'est le principe qui gouverne tout le reste. Le format d'une fiche est décrit dans [[TEC-IDE-003]].
+
+## Les trois axes
+
+- **Axe 1, la Mémoire** : ce qui s'est passé, et ce que ça nous apprend.
+- **Axe 2, la Technique** : comment une chose fonctionne, avec les chiffres, les plans et les tableaux qui vont avec.
+- **Axe 3, la Survie** : quoi faire, maintenant, quand la situation se dégrade.
+
+Quand un sujet relève de deux axes, on écrit les deux fiches et on les relie. On n'écrit jamais deux fois la même chose.
+
+## Les trois briques
+
+- **Phenix Base**, l'application : sur téléphone, sur ordinateur, ou dans un simple navigateur. Elle fonctionne entièrement hors ligne : fiches, recherche, cartes enregistrées, repères, listes de lecture, inventaire, notes. Vos données restent chez vous.
+- **Phenix Lab**, quand il y a du réseau : proposer une idée ou une fiche entière, voter pour ce qui est utile, commenter, partager une carte ou un calque de repères.
+- **Phenix Hub** : toutes les versions de la bibliothèque. L'officielle, et celles que les communautés publient pour leur langue, leur région ou leur groupe. On choisit celle qu'on lit, on compose la sienne en cochant des axes, des catégories, des fiches, des cartes et des calques, et on la partage.
+
+## Ce qui le distingue
+
+- **Ouvert** : tout le monde peut écrire une fiche, sur n'importe quel sujet utile. Les limites viennent après, pas avant.
+- **Participatif** : on propose, on vote, on corrige, on discute. Sur les sujets pointus, ceux qui savent débattent jusqu'à un consensus.
+- **Pratique** : un savoir qui dit comment **faire** et comment **réparer**, pas seulement comment une chose fonctionne.
+- **Sans compte, sans serveur obligatoire, sans publicité.** La connexion ne sert qu'aux fonctions de partage.
+
+## Les licences
+
+- **Les fiches** sont sous licence **Creative Commons BY-SA 4.0** : vous pouvez les copier, les imprimer, les traduire, les modifier et les redistribuer, même pour vendre un livre, à condition de citer Phenix et de laisser vos modifications sous la même licence.
+- **Le code** de l'application est sous licence **MIT**.
+
+## Contribuer, concrètement
+
+1. **Écrire une fiche** : bouton « + Fiche » dans l'application, puis « Proposer au corpus ». Sans réseau, exportez-la en .md et déposez-la plus tard sur Phenix Lab.
+2. **Voter et commenter** les propositions des autres sur Phenix Lab : c'est ce qui fait remonter les meilleures.
+3. **Traduire** : une fiche traduite garde le même identifiant et devient lisible dans une autre langue.
+4. **Cartographier** : un calque de repères (sources, abris, points de passage) sur votre région, partagé sur Phenix Hub.
+5. **Construire un appareil** : les plans et le code des prototypes sont ouverts, voir [[TEC-IDE-009]].
+
+## Ce qui n'est pas encore là
+
+Le projet est jeune et le dit. Le corpus compte quelques centaines de fiches là où il en vise des milliers. Les fonctions en ligne sont récentes. Les fiches ne sont pas encore signées numériquement. Les appareils sont des prototypes. Tout cela avance fiche après fiche, et plus vite quand on est nombreux.
+
+## Où le trouver
+
+- Le site, l'application en ligne et les téléchargements : **anthrophobicc.github.io/PhenixProject**
+- Le code et les fiches : le dépôt GitHub **PhenixProject**
+- Les nouvelles fiches, au fil des semaines : **@phenixprjct** sur Instagram
+
+Le savoir ne s'éteint pas tant que quelqu'un le garde.
+
+---
+id: TEC-ENE-012
+titre: Les piles
+axe: 2
+categorie: Énergie et Électricité
+temps: Court
+contexte: 1
+risque: Discret
+materiel: Technique
+priorite: normale
+origine: officielle
+tags: [pile, alcaline, lithium, pile bouton, accumulateur, stockage, fuite, energie]
+sources: ["Linden D., Reddy T., Handbook of Batteries, McGraw-Hill, 4e édition", "Energizer et Duracell, fiches techniques des piles alcalines et lithium (capacité selon la décharge, température, durée de stockage)", "Commission électrotechnique internationale, norme CEI 60086 (formats et désignations)", "National Capital Poison Center, recommandations sur l'ingestion de piles bouton"]
+---
+
+::Une pile, c'est une réaction chimique qu'on a mise en pause dans une boîte. On la relance en fermant le circuit, et elle s'arrête quand un des deux ingrédients est épuisé.::
+
+## Pile ou batterie
+
+**Une pile** (on dit aussi pile primaire) se vide une fois. **Un accumulateur**, qu'on appelle couramment batterie, se recharge des centaines de fois. Les batteries ont leur fiche : [[TEC-ENE-004]].
+
+À l'intérieur d'une pile, deux matériaux différents et un électrolyte entre les deux. L'un cède des électrons, l'autre les accepte : les électrons font le tour par le circuit extérieur, et c'est ce courant qu'on utilise. Le principe est si simple qu'on peut en fabriquer une avec deux métaux et du vinaigre, voir [[SURV-ENE-002]].
+
+## Les familles
+
+| Type | Tension | Points forts | Points faibles |
+|---|---|---|---|
+| Saline (zinc-carbone) | 1,5 V | Très bon marché | Faible capacité, fuit facilement |
+| Alcaline | 1,5 V | Le standard, bonne capacité à faible consommation | Perd beaucoup sous forte consommation et au froid, peut fuir |
+| Lithium 1,5 V (format AA, AAA) | 1,5 V | Légère, fonctionne jusqu'à −40 °C, se garde 20 ans | Plus chère |
+| Lithium 3 V (CR2032, CR123A) | 3 V | Longue durée, montres, clés, lampes tactiques | Tension différente : ne remplace pas deux piles de 1,5 V n'importe où |
+| Oxyde d'argent (piles bouton) | 1,55 V | Tension très stable, montres | Petite capacité |
+| Zinc-air (appareils auditifs) | 1,4 V | Très grande capacité pour sa taille | S'active en retirant l'autocollant et s'épuise en quelques semaines ensuite |
+
+## Les formats
+
+| Nom courant | Désignation | Taille |
+|---|---|---|
+| AAA | LR03 | 10,5 × 44,5 mm |
+| AA | LR6 | 14,5 × 50,5 mm |
+| C | LR14 | 26,2 × 50 mm |
+| D | LR20 | 34,2 × 61,5 mm |
+| 9 V | 6LR61 | six petites cellules en série dans un boîtier |
+
+**La capacité n'est pas fixe.** Une pile alcaline AA donne environ 2 500 à 3 000 mAh dans une horloge ou une télécommande, mais moins de la moitié dans un appareil gourmand comme un flash photo ou un jouet à moteur. Pour ces usages, le lithium ou les accumulateurs font beaucoup mieux.
+
+## Garder des piles
+
+- **Durée** : 5 à 10 ans pour une alcaline, 10 à 20 ans pour une lithium, dans de bonnes conditions. La date de péremption est imprimée sur la pile.
+- **Où** : au frais, au sec, à température stable. Le réfrigérateur n'apporte presque rien aux alcalines modernes et la condensation à la sortie peut les abîmer.
+- **Comment** : dans leur emballage ou dans une boîte, les pôles protégés. Une pile 9 V en vrac dans un tiroir peut toucher un objet métallique, chauffer et mettre le feu.
+- **Pas dans les appareils rangés** : une alcaline oubliée dans une lampe finit par fuir et ronger les contacts.
+
+## Les astuces de ceux qui en consomment beaucoup
+
+- **La fuite blanche** sur une pile alcaline est de l'hydroxyde de potassium, une base corrosive. On la nettoie avec un coton-tige trempé dans du **vinaigre ou du jus de citron** (l'acide neutralise la base), puis on frotte les contacts avec une gomme ou une lime fine. Gants et lunettes si c'est beaucoup.
+- **Le test du rebond** : lâchée debout sur une table dure, d'une dizaine de centimètres, une alcaline neuve tombe avec un bruit sourd, une alcaline usée rebondit. C'est approximatif, mais réel : en se déchargeant, l'intérieur de la pile change de consistance.
+- **Ne mélangez jamais** piles neuves et usées, ni deux marques ou deux types dans le même appareil : la plus faible se fait « inverser » par les autres et fuit.
+- **Recharger une alcaline ordinaire** est déconseillé : elle chauffe, fuit ou gonfle. Pour recharger, prenez des accumulateurs NiMH (1,2 V) à faible autodécharge : ils gardent la majeure partie de leur charge pendant des années, et remplacent les alcalines presque partout.
+- **Le froid** vide une alcaline : gardez les piles de rechange dans une poche intérieure, et réchauffez une pile froide contre vous avant de conclure qu'elle est morte.
+- **Une pile bouton avalée par un enfant est une urgence absolue.** En quelques heures, elle brûle l'œsophage. Direction les urgences immédiatement, sans faire vomir. Gardez-les hors de portée, et faites de même avec les télécommandes dont le couvercle s'ouvre facilement.
+
+Les piles usagées se rapportent en magasin : elles contiennent des métaux qui se recyclent.
+
+---
+id: TEC-ENE-011
+titre: Le disjoncteur
+axe: 2
+categorie: Énergie et Électricité
+temps: Court
+contexte: 1
+risque: Discret
+materiel: Technique
+priorite: normale
+origine: officielle
+tags: [disjoncteur, differentiel, fusible, tableau electrique, court-circuit, surcharge, securite]
+sources: ["Norme NF C 15-100, installations électriques à basse tension", "Norme NF EN 60898-1, disjoncteurs pour installations domestiques", "Norme NF EN 61008 et 61009, interrupteurs et disjoncteurs différentiels", "Promotelec, guides de l'installation électrique"]
+---
+
+::Un disjoncteur ne protège pas vos appareils. Il protège vos fils contre le feu, et le différentiel protège votre corps. Quand il saute, il vous dit quelque chose : il faut comprendre quoi avant de le remonter.::
+
+## Ce qu'il surveille
+
+Un fil électrique chauffe quand le courant le traverse. Trop de courant, et il chauffe au point de faire fondre sa gaine et de mettre le feu dans le mur. **Le disjoncteur coupe avant.** Il surveille deux dangers différents, avec deux mécanismes :
+
+- **La surcharge** : trop d'appareils sur le même circuit. Le courant est un peu trop fort, longtemps. Une **lame bimétallique** (deux métaux collés qui ne se dilatent pas pareil) chauffe, se courbe et déclenche la coupure au bout de quelques secondes à quelques minutes.
+- **Le court-circuit** : deux fils qui se touchent. Le courant devient énorme d'un coup. Une **bobine** crée un champ magnétique qui ouvre le contact en quelques millisecondes.
+
+## Lire un disjoncteur
+
+**Le calibre**, en ampères, est inscrit dessus : c'est le courant qu'il laisse passer en permanence. En France, la norme lie le calibre à la section du fil qu'il protège :
+
+| Circuit | Fil | Calibre |
+|---|---|---|
+| Éclairage | 1,5 mm² | 10 A (16 A admis) |
+| Prises ordinaires | 1,5 mm² ou 2,5 mm² | 16 A ou 20 A |
+| Lave-linge, lave-vaisselle, four | 2,5 mm² | 20 A |
+| Plaque de cuisson | 6 mm² | 32 A |
+
+**Jamais un calibre plus fort que ce que le fil supporte.** Remplacer un disjoncteur de 16 A qui saute par un 32 A, c'est retirer la protection : le fil chauffera jusqu'à ce que quelque chose brûle.
+
+**La lettre** devant le calibre (B, C ou D) dit à partir de quand il coupe instantanément : C pour les usages domestiques courants, B pour les longues lignes, D pour les moteurs qui démarrent fort.
+
+## Le différentiel : celui qui sauve les vies
+
+Le courant qui part par la phase doit revenir par le neutre. S'il en manque, c'est qu'il s'échappe ailleurs : par un appareil mouillé, par un fil abîmé, **ou par quelqu'un**. Le **différentiel** compare les deux et coupe dès que la différence atteint son seuil : **30 milliampères** pour ceux qui protègent les personnes, en quelques dizaines de millisecondes. C'est assez rapide pour qu'une électrisation ne devienne pas une électrocution.
+
+- Il a un **bouton de test** : appuyez dessus une fois par mois, il doit couper net.
+- Il existe en **type AC** et **type A** : le type A est obligatoire pour les circuits de plaque de cuisson et de lave-linge, dont l'électronique produit des fuites que le type AC ne voit pas toujours.
+
+**Le disjoncteur de branchement**, près du compteur, coupe toute la maison. Il est souvent aussi différentiel, avec un seuil plus élevé et un léger retard, pour laisser les différentiels de 30 mA agir d'abord.
+
+## Il a sauté : lire le message
+
+- **Il ressaute immédiatement** quand on le remonte : un **court-circuit**. Débranchez tout sur ce circuit, remontez, puis rebranchez un appareil à la fois. Le coupable fait sauter au rebranchement.
+- **Il saute au bout de quelques minutes**, quand tout tourne en même temps : une **surcharge**. Répartissez les appareils sur d'autres circuits.
+- **C'est le différentiel qui saute** : une **fuite**. Cherchez l'eau : une prise extérieure, une salle de bain, un appareil qui a pris l'humidité, un chauffe-eau. Même méthode : tout débrancher, remonter, rebrancher un par un.
+- **Il saute par temps d'orage** : une surtension, ou de l'eau qui s'infiltre quelque part.
+
+## Les astuces d'électricien
+
+- **Ne tenez jamais le levier levé** pour empêcher un disjoncteur de sauter. Les modernes coupent quand même, les anciens non, et c'est comme ça que les incendies commencent.
+- **Un disjoncteur tiède ou qui sent le chaud** a presque toujours une vis de raccordement desserrée. Un mauvais contact chauffe, voir [[TEC-ENE-003]].
+- **Étiquetez votre tableau** le jour où tout va bien. Le jour où il faut couper la cuisine dans le noir, vous n'aurez pas le temps de chercher.
+- **Les vieux fusibles** se remplacent par un fusible du même calibre, jamais par un fil de cuivre ou du papier d'aluminium.
+- **Avant le retour du courant après une longue coupure**, abaissez les circuits des appareils fragiles ou dangereux (radiateurs, four, pompes), et remontez-les un par un : le réseau revient souvent avec des à-coups.
+- **Un groupe électrogène ne se branche jamais sur une prise murale** avec un câble à deux fiches mâles. Il renverrait le courant dans le réseau et peut tuer un technicien qui travaille sur la ligne, à des centaines de mètres. Il faut un inverseur de source, installé par un électricien. Voir [[URG-RES-001]].
+
+---
+id: TEC-ENE-010
+titre: Les lampadaires
+axe: 2
+categorie: Énergie et Électricité
+temps: Court
+contexte: 1
+risque: Discret
+materiel: Technique
+priorite: normale
+origine: officielle
+tags: [lampadaire, eclairage public, sodium, led, cellule photoelectrique, solaire, ville, nuit]
+sources: ["Association française de l'éclairage (AFE), Recommandations relatives à l'éclairage des voies publiques", "Règlement (CE) n° 245/2009 sur l'écoconception des lampes à décharge (fin des lampes à vapeur de mercure en 2015)", "CEREMA, L'éclairage public : guide pour les collectivités", "Arrêté du 27 décembre 2018 relatif à la prévention, à la réduction et à la limitation des nuisances lumineuses"]
+---
+
+::Un lampadaire ne décide rien. Une cellule lui dit qu'il fait nuit, une armoire au coin de la rue lui envoie le courant, et quelqu'un à la mairie a choisi l'heure où il s'éteint.::
+
+## Comment une rue s'allume
+
+**L'armoire de commande.** Les lampadaires ne sont pas branchés un par un sur le réseau. Ils forment des circuits de quelques dizaines de points lumineux, alimentés par une **armoire** métallique grise, souvent posée au pied d'un mur ou d'un transformateur. Elle contient les protections, le compteur et la commande d'allumage.
+
+**La commande** allume et éteint tout le circuit d'un coup :
+
+- soit par une **cellule photoélectrique**, un petit capteur de lumière sur l'armoire ou sur un candélabre, qui déclenche l'allumage quand la lumière du jour tombe sous un seuil ;
+- soit par une **horloge astronomique**, qui calcule chaque jour l'heure du coucher et du lever du soleil pour la commune ;
+- de plus en plus, par une **télégestion** : chaque lampadaire reçoit ses ordres à distance et peut baisser son intensité au milieu de la nuit.
+
+**L'extinction nocturne.** Des milliers de communes en France éteignent une partie de leur éclairage au cœur de la nuit, souvent entre minuit et 5 h, pour économiser l'énergie et limiter la pollution lumineuse. La loi encadre aussi l'orientation et la couleur de la lumière.
+
+## Le poteau
+
+Un candélabre mesure de **4 à 12 mètres** selon la voie : bas dans les rues piétonnes, haut sur les routes. Le mât est un tube d'acier galvanisé ou d'aluminium, creux. **Au pied, une petite trappe** donne accès au boîtier de raccordement et au fusible de ce point lumineux.
+
+## Les lampes, de la plus ancienne à la plus récente
+
+| Lampe | Lumière | Ce qu'il faut savoir |
+|---|---|---|
+| Gaz | Jaune doux | L'éclairage des villes au XIXe siècle. Un allumeur passait chaque soir avec sa perche. |
+| Vapeur de mercure | Blanc bleuté | Interdite à la vente dans l'Union européenne depuis 2015, encore en place dans des coins oubliés. |
+| Sodium basse pression | Orange pur | Très efficace, mais une seule couleur : sous sa lumière, on ne distingue plus le rouge du vert. |
+| Sodium haute pression | Orange doré | La lumière des routes et des villes pendant quarante ans. Met plusieurs minutes à atteindre sa pleine puissance. |
+| Iodures métalliques | Blanc | Places, stades, monuments. |
+| LED | Blanc, plus ou moins chaud | La norme aujourd'hui. Moitié moins d'énergie que le sodium, s'allume instantanément, se règle. |
+
+## Le lampadaire solaire
+
+Sur les parkings, les pistes cyclables et les arrêts isolés, de plus en plus de lampadaires sont **autonomes** : un panneau solaire en haut du mât, une batterie (souvent au lithium fer phosphate) dans le mât ou sous le panneau, un régulateur, une tête LED et un détecteur de présence. Aucun câble ne les relie au réseau. Voir [[TEC-SOLR-001]].
+
+## Ce que savent ceux qui les entretiennent
+
+- **La lumière orange cache les couleurs.** Sous un éclairage au sodium, une carte, un câblage coloré ou une plaie se lisent mal. Une lampe frontale blanche change tout.
+- **Pendant une coupure générale, les lampadaires solaires restent allumés.** C'est souvent le seul point lumineux d'un quartier. Et c'est un ensemble complet et autonome : panneau, batterie, régulateur, lumière LED, qui peut éclairer une pièce ou recharger une petite batterie une fois démonté. Voir [[SURV-ENE-001]].
+- **La trappe au pied du mât est sous tension.** Le câble d'arrivée y est raccordé en 230 volts, parfois plus. Une trappe arrachée après un accident se signale, elle ne s'explore pas.
+- **Une cellule photoélectrique qu'on masque** croit qu'il fait nuit : c'est ainsi que les techniciens testent l'allumage en plein jour. Une cellule couverte de fientes ou mal orientée explique une rue éclairée à midi.
+- **Un lampadaire qui clignote** en fin de vie est presque toujours une lampe au sodium qui s'éteint en chauffant puis se rallume en refroidissant.
+- **L'éclairage attire les insectes**, surtout sous les lumières blanches et bleues. C'est l'une des raisons du passage à des LED plus chaudes, orangées, près des zones naturelles.
+
+---
+id: TEC-ELN-004
+titre: Les LED
+axe: 2
+categorie: Électronique et Numérique
+temps: Court
+contexte: 1
+risque: Discret
+materiel: Technique
+priorite: normale
+origine: officielle
+tags: [led, diode, eclairage, resistance, oled, ampoule, electronique]
+sources: ["Schubert E. F., Light-Emitting Diodes, Cambridge University Press, 2e édition", "Fondation Nobel, Prix Nobel de physique 2014 : diodes électroluminescentes bleues efficaces (Akasaki, Amano, Nakamura)", "US Department of Energy, LED Lighting Facts et rapports sur la durée de vie des lampes LED"]
+---
+
+::Une LED, c'est un morceau de cristal qui s'illumine quand le courant le traverse dans le bon sens. Elle a remplacé l'ampoule à filament en quinze ans, parce qu'elle fait la même lumière avec dix fois moins d'énergie.::
+
+## Ce qui se passe dedans
+
+Une LED (diode électroluminescente) est une **diode** : un composant qui ne laisse passer le courant que dans un sens. Au cœur, deux couches de semi-conducteur se touchent. Quand le courant passe, des électrons tombent d'un niveau d'énergie à un autre en libérant chacun un grain de lumière.
+
+**La couleur dépend du matériau**, pas d'un filtre : le rouge et l'infrarouge sont connus depuis les années 1960, le bleu efficace n'est arrivé que dans les années 1990, ce qui a valu le prix Nobel de physique 2014 à ses inventeurs. **La LED blanche** est une LED bleue recouverte d'une poudre jaune (un phosphore) : le mélange bleu et jaune donne du blanc.
+
+## Les chiffres utiles
+
+**Chaque couleur demande sa tension**, appelée tension de seuil :
+
+| Couleur | Tension de seuil typique |
+|---|---|
+| Infrarouge | 1,2 à 1,5 V |
+| Rouge, orange, jaune | 1,8 à 2,2 V |
+| Verte, bleue, blanche | 2,8 à 3,4 V |
+
+**Une petite LED témoin** de 3 ou 5 mm supporte environ **20 milliampères**. Au-delà, elle chauffe et meurt.
+
+**Le sens compte.** La patte la plus longue est le plus (l'anode). Le côté plat du bord de la LED est le moins (la cathode). Branchée à l'envers, elle ne s'allume pas, et au-delà de quelques volts à l'envers, elle peut griller.
+
+## La règle d'or : toujours limiter le courant
+
+Une LED branchée directement sur une pile trop forte grille en une fraction de seconde : dès qu'elle dépasse sa tension de seuil, elle laisse passer autant de courant qu'on lui en donne. On met donc **une résistance en série**, calculée ainsi :
+
+**R = (tension de la source − tension de la LED) ÷ courant voulu**
+
+Exemple : une LED blanche (3 V) sur une alimentation USB de 5 V, à 20 mA : (5 − 3) ÷ 0,02 = **100 ohms**. En cas de doute, prenez la valeur au-dessus : la LED éclairera un peu moins, et vivra plus longtemps. Voir [[TEC-ENE-002]].
+
+## L'éclairage
+
+- **Rendement** : une ampoule LED produit environ 100 lumens par watt ou plus, contre 10 à 15 pour une ampoule à filament. Pour la même lumière, **dix fois moins d'énergie** : c'est ce qui rend l'éclairage possible sur une petite batterie ou un panneau solaire.
+- **Durée de vie** : les LED elles-mêmes durent des dizaines de milliers d'heures. Dans une ampoule, c'est presque toujours **l'électronique d'alimentation qui lâche d'abord**, à cause de la chaleur. Une ampoule LED enfermée dans un plafonnier étanche vit beaucoup moins longtemps.
+- **La chaleur** est l'ennemie : une LED de puissance doit être collée sur un radiateur métallique.
+
+## Les écrans
+
+- **LCD** : les LED servent de lampe arrière, voir [[TEC-ELN-002]].
+- **OLED** : chaque sous-pixel est une minuscule LED organique qui fait sa propre lumière. Noirs parfaits et contraste infini, mais les pixels s'usent à la longue et une image fixe laissée des mois peut rester marquée.
+- **Écrans géants** des stades et des façades : une mosaïque de LED classiques, visibles en plein soleil.
+
+## Les astuces de bricoleur
+
+- **Tester une LED** : un multimètre en position diode l'allume faiblement. Ou une pile bouton de 3 V, pattes pincées dessus : une LED rouge, verte ou blanche s'allume sans résistance, car la pile ne peut pas fournir assez de courant pour la griller.
+- **Voir l'infrarouge** : la LED d'une télécommande est invisible à l'œil, mais l'appareil photo d'un téléphone la voit clignoter en violet. C'est le test de télécommande le plus rapide qui existe.
+- **Une ampoule LED qui ne s'allume plus** n'a souvent qu'une seule LED morte sur une chaîne montée en série : un point noir brûlé à sa surface la trahit. Ponter cette LED avec un fil suffit parfois à faire repartir les autres. **Attention : ces ampoules fonctionnent directement sur le 230 volts, on n'y touche que débranchées et condensateurs déchargés.**
+- **Tirer la dernière goutte d'une pile usée** : un petit montage appelé « voleur de joules » (un transistor, une résistance, une bobine enroulée sur une petite ferrite) élève la tension d'une pile de 1,5 V à moitié morte pour allumer une LED blanche des heures durant.
+- **Les bandes de LED en 12 V** se coupent tous les trois LED environ, aux marques prévues. Elles se branchent directement sur une batterie de voiture ou de moto, sans résistance à ajouter : elle est déjà sur la bande.
+
+Pour allumer une LED sans réseau, voir [[SURV-ENE-001]] et [[SURV-ENE-002]].
+
+---
+id: TEC-ELN-003
+titre: L'écran à encre électronique
+axe: 2
+categorie: Électronique et Numérique
+temps: Court
+contexte: 1
+risque: Discret
+materiel: Technique
+priorite: normale
+origine: officielle
+parent: TEC-ELN-001
+chapitre: 2
+tags: [encre electronique, e-ink, liseuse, ecran, electrophorese, basse consommation]
+sources: ["Comiskey B., Albert J., Yoshizawa H., Jacobson J., An electrophoretic ink for all-printed reflective electronic displays, Nature, 1998", "E Ink Holdings, fiches techniques des afficheurs Carta, Kaleido et Spectra", "Heikenfeld J. et al., Review Paper: A critical review of the present and future prospects for electronic paper, Journal of the SID, 2011"]
+---
+
+::Une liseuse dont la batterie est morte affiche encore sa dernière page. Un écran qui garde son image sans courant, c'est exactement ce qu'il faut à un appareil qui doit durer.::
+
+## Le principe
+
+L'écran est rempli de **microcapsules** plus fines qu'un cheveu. Chacune contient un liquide transparent et des milliers de **particules de pigment** : des blanches, chargées dans un sens, des noires, chargées dans l'autre.
+
+Des électrodes au-dessus et au-dessous de chaque point créent un champ électrique. Selon son sens, il attire les particules blanches ou les noires vers la surface. Le point devient blanc ou noir. C'est l'**électrophorèse**, le déplacement de particules chargées dans un liquide.
+
+L'invention vient du MIT, à la fin des années 1990 ; la société E Ink l'a industrialisée, et la première liseuse grand public l'a utilisée en 2004.
+
+## Ce qui la rend unique
+
+**Elle est bistable.** Une fois déplacées, les particules restent là où elles sont, sans courant. L'écran ne consomme de l'énergie **que pendant le changement d'image**. Une page affichée pendant une semaine ne coûte rien.
+
+**Elle est réfléchissante.** Comme le papier, elle renvoie la lumière ambiante. Elle se lit parfaitement en plein soleil, sous tous les angles, et fatigue moins les yeux qu'un écran éclairé. Dans le noir, il faut une lumière frontale : une rangée de LED sur le bord qui éclaire la surface par-dessus.
+
+## Ses limites
+
+- **Lente** : une image se change en quelques dixièmes de seconde. Pas de vidéo, des animations saccadées.
+- **Les fantômes** : l'image précédente laisse une trace légère. L'écran se « nettoie » régulièrement en clignotant tout noir puis tout blanc : ce flash est normal.
+- **Le froid** : en dessous de 0 °C environ, le liquide épaissit et les changements d'image deviennent lents ou incomplets. Beaucoup d'afficheurs sont prévus pour fonctionner entre 0 et 50 °C. **L'image déjà affichée, elle, reste.**
+- **La couleur** existe, en deux versions : avec des filtres colorés devant l'écran noir et blanc (couleurs pâles, rapide), ou avec des pigments de plusieurs couleurs dans chaque capsule (couleurs franches, mais un changement d'image prend plusieurs secondes).
+- **Le prix** : à taille égale, plus cher qu'un LCD.
+
+## Où on la trouve
+
+- Les liseuses et certaines tablettes d'écriture.
+- **Les étiquettes de prix électroniques** des supermarchés : chacune est un petit afficheur à encre électronique avec une pile bouton qui dure des années, mis à jour par radio.
+- Les panneaux d'horaires de certains arrêts de bus alimentés par panneau solaire.
+- Les montres et les badges à très longue autonomie.
+
+## Pourquoi c'est l'écran de la survie
+
+Un appareil de lecture qui doit fonctionner des semaines loin de toute prise a trois besoins : consommer presque rien, se lire en plein jour, et **montrer quelque chose même quand sa batterie est vide**. L'encre électronique est la seule technologie qui coche les trois. C'est pour cela qu'elle est envisagée pour les appareils de lecture hors ligne, voir [[TEC-IDE-009]].
+
+## Les astuces
+
+- **Une liseuse morte garde sa dernière page** : si vous y laissez une carte, une liste de fréquences ou une fiche d'urgence avant qu'elle s'éteigne, l'information reste lisible.
+- **Un écran figé à moitié** après un choc de froid se récupère souvent en le réchauffant contre soi, puis en forçant un rafraîchissement complet.
+- **Pour un montage**, les modules à encre électronique de 1,5 à 7,5 pouces pilotés en SPI se trouvent pour une dizaine à quelques dizaines d'euros. Ils demandent d'envoyer l'image entière, puis de laisser l'écran se rafraîchir, souvent 2 à 15 secondes selon le modèle.
+- **Ne laissez pas un écran à encre électronique en plein soleil derrière une vitre** : la chaleur et les ultraviolets finissent par jaunir et abîmer les capsules.
+
+---
+id: TEC-ELN-002
+titre: L'écran à cristaux liquides (LCD)
+axe: 2
+categorie: Électronique et Numérique
+temps: Court
+contexte: 1
+risque: Discret
+materiel: Technique
+priorite: normale
+origine: officielle
+parent: TEC-ELN-001
+chapitre: 1
+tags: [lcd, cristaux liquides, ecran, polariseur, retroeclairage, tft, ips]
+sources: ["Yang D.-K., Wu S.-T., Fundamentals of Liquid Crystal Devices, Wiley, 2e édition", "Chen J., Cranton W., Fihn M. (dir.), Handbook of Visual Display Technology, Springer", "Castellano J., Liquid Gold: The Story of Liquid Crystal Displays and the Creation of an Industry, World Scientific"]
+---
+
+::Un écran LCD ne fait pas de lumière. C'est une lampe, et devant elle, des millions de volets qui s'ouvrent et se ferment. Tout ce qu'on voit, on le voit à travers.::
+
+## Le principe en trois couches
+
+**La lumière d'une lampe** traverse d'abord un **polariseur** : un filtre qui ne laisse passer que la lumière qui vibre dans une seule direction.
+
+**Les cristaux liquides**, pris en sandwich entre deux plaques de verre, ont une propriété étrange : leurs molécules en bâtonnets s'alignent d'elles-mêmes, et en s'alignant en spirale, elles font **tourner** la direction de la lumière qui les traverse. Quand on applique une petite tension, les molécules se redressent et ne la font plus tourner.
+
+**Un second polariseur**, croisé par rapport au premier, ne laisse passer que la lumière qui a tourné.
+
+Résultat : sans tension, la lumière tourne et passe, le point est clair. Avec tension, elle ne tourne plus et bute sur le second filtre, le point est sombre. En réglant la tension, on obtient tous les gris.
+
+**La couleur** vient de minuscules filtres rouges, verts et bleus devant chaque sous-pixel. Un écran LCD couleur laisse passer, au mieux, environ un dixième de la lumière de sa lampe : le reste est absorbé par les filtres et les polariseurs.
+
+## Les familles
+
+- **LCD à segments** : les chiffres d'une calculatrice, d'une montre, d'un thermostat. Pas de lampe, un miroir derrière : ils sont réfléchissants et consomment quelques millionièmes de watt.
+- **Matrice passive** : les vieux écrans monochromes de téléphones et d'appareils. Simples, lents, peu contrastés.
+- **Matrice active (TFT)** : un transistor derrière chaque sous-pixel garde sa tension entre deux passages. C'est l'écran de presque tous les ordinateurs, télévisions et téléphones non OLED.
+- **TN, VA, IPS** : trois façons d'orienter les cristaux. Le TN est rapide et bon marché mais change de couleur dès qu'on le regarde de côté ; l'IPS garde ses couleurs sous tous les angles ; le VA donne les meilleurs noirs.
+
+## La lampe arrière
+
+Les écrans récents sont éclairés par des **LED**, souvent posées sur un bord : une plaque de plastique guide la lumière et la répartit sur toute la surface. Les écrans d'avant 2010 environ utilisaient des **tubes fluorescents** fins (CCFL), qui contiennent un peu de mercure et demandent une haute tension pour s'allumer.
+
+## Ce qui l'abîme
+
+- **La pression** : appuyer fort écrase les cristaux et fait des taches, parfois définitives.
+- **Le froid** : en dessous de −20 °C environ, les cristaux deviennent visqueux, l'image traîne. Ça revient en se réchauffant.
+- **La forte chaleur** : un écran de tableau de bord en plein soleil peut devenir noir. Au-delà d'une certaine température, les cristaux deviennent un liquide ordinaire et perdent leur effet. Ça revient aussi en refroidissant.
+- **Les pixels morts ou bloqués** : un transistor défaillant laisse un point toujours noir ou toujours allumé.
+
+## Les astuces de ceux qui en ont démonté
+
+- **Écran noir, appareil allumé ?** Éclairez l'écran de biais avec une torche, tout près. Si l'image apparaît, faiblement, seule la lampe arrière est morte : l'appareil reste utilisable pour récupérer des données ou lire un réglage.
+- **La lumière d'un LCD est polarisée.** Avec des lunettes de soleil polarisantes, un écran peut devenir noir quand on penche la tête de 90 degrés. Ce n'est pas une panne.
+- **La dalle arrière d'un écran de portable cassé** (le guide de lumière et ses LED) fait un panneau lumineux plat et régulier, idéal pour éclairer une pièce, un plan de travail, ou pour décalquer. Ses LED se branchent souvent en série : il faut leur donner la tension prévue, voir [[TEC-ELN-004]].
+- **Les feuilles de polariseur** se décollent d'un écran mort. Deux feuilles croisées montrent les tensions dans le plastique transparent sous forme d'arcs-en-ciel, et une seule sert de filtre polarisant pour la photo.
+- **Un vieil écran à tubes fluorescents cassé** : ne respirez pas la poussière des tubes brisés, aérez, ramassez sans aspirateur.
+- **Pour un montage**, les petits modules LCD couleur de 2 à 3 pouces pilotés en SPI (contrôleurs ILI9341, ST7789) coûtent quelques euros et sont documentés partout.
+
+---
+id: TEC-ELN-001
+titre: Les écrans
+axe: 2
+categorie: Électronique et Numérique
+temps: Court
+contexte: 1
+risque: Discret
+materiel: Technique
+priorite: normale
+origine: officielle
+sommaire: oui
+parcours: Lisez d'abord cette fiche, qui explique ce qu'ont en commun tous les écrans. Le chapitre sur l'écran à cristaux liquides couvre presque tout ce que vous avez sous la main ; celui sur l'encre électronique explique pourquoi c'est l'écran des appareils qui doivent tenir des semaines sur une pile.
+tags: [ecran, pixel, affichage, resolution, lcd, oled, encre electronique, electronique]
+sources: ["Chen J., Cranton W., Fihn M. (dir.), Handbook of Visual Display Technology, Springer, 2e édition", "Society for Information Display, Display Technology Guide", "E Ink Holdings, documentation technique des afficheurs électrophorétiques"]
+---
+
+::Un écran ne montre pas une image. Il allume, éteint ou masque des millions de petits points assez vite pour que l'œil les prenne pour une image.::
+
+Ce sujet se lit en trois temps : cette fiche, qui explique ce que tous les écrans ont en commun, puis deux chapitres, [[TEC-ELN-002]] sur les cristaux liquides et [[TEC-ELN-003]] sur l'encre électronique. Les LED, qui éclairent la plupart des écrans et en forment certains à elles seules, ont leur propre fiche : [[TEC-ELN-004]].
+
+## Le pixel
+
+Tout écran est une grille de **pixels**. Sur un écran couleur, chaque pixel est fait de trois **sous-pixels**, rouge, vert et bleu. En réglant l'intensité de chacun, on obtient toutes les couleurs : les trois à fond donnent du blanc, les trois éteints du noir.
+
+**La définition** est le nombre de pixels : 1920 × 1080 pour la « Full HD », 3840 × 2160 pour la 4K. **La densité** est le nombre de pixels par pouce (ppp, ou ppi en anglais) : au-delà d'environ 300 ppp à la distance de lecture d'un téléphone, l'œil ne distingue plus les points.
+
+Un même nombre de pixels donne une image fine sur un téléphone et grossière sur un grand téléviseur : c'est la densité qui compte pour la netteté, pas la définition seule.
+
+## Trois façons de faire de la lumière
+
+Tous les écrans se rangent dans l'une de ces familles.
+
+| Famille | Principe | Exemples | Au soleil | Dans le noir |
+|---|---|---|---|---|
+| Émissifs | Chaque point produit sa propre lumière | OLED, LED géantes, anciens tubes cathodiques, plasma | Moyen | Parfait |
+| Transmissifs | Une lampe derrière, des volets devant | Écran LCD d'ordinateur, de télévision, de téléphone | Moyen à mauvais | Bon |
+| Réfléchissants | Pas de lampe : ils renvoient la lumière ambiante, comme le papier | Encre électronique, LCD de calculatrice et de montre | Parfait | Illisible sans éclairage |
+
+**Ce tableau décide de la consommation.** Un écran émissif ou transmissif dépense de l'énergie à chaque seconde où il est allumé, et la lampe arrière est souvent le premier poste de consommation d'un téléphone ou d'un ordinateur. Un écran réfléchissant ne dépense presque rien : une calculatrice à cristaux liquides tourne des années sur une pile bouton, une liseuse des semaines.
+
+## Rafraîchir l'image
+
+Un écran d'ordinateur redessine son image 60 fois par seconde ou plus (60 Hz, 120 Hz). C'est ce qui rend le mouvement fluide. Un écran à encre électronique, lui, ne change l'image que quand on le lui demande, et met une fraction de seconde à le faire : parfait pour une page, inutilisable pour une vidéo.
+
+## Comment un écran reçoit l'image
+
+- **Les grands écrans** reçoivent l'image par un câble vidéo : HDMI, DisplayPort, et plus anciennement VGA (analogique, encore très répandu sur les vieux écrans et projecteurs).
+- **Les petits écrans** des appareils électroniques sont pilotés directement par un petit contrôleur, par une liaison série à quelques fils (SPI, I2C) ou par un bus parallèle. C'est ce qu'on utilise pour construire un appareil soi-même, avec un microcontrôleur, voir [[TEC-IDE-009]].
+- **Le contrôleur** est une puce collée derrière la dalle, qui garde l'image en mémoire et la redessine seule. Chaque modèle a ses commandes : sans sa documentation, un écran récupéré est très difficile à faire fonctionner.
+
+## Ce qu'on apprend en démontant
+
+- **Les écrans de vieux téléphones se réutilisent mal.** Leurs connecteurs ont des broches au pas de 0,4 mm ou moins, leur contrôleur est souvent sans documentation publique, et leur rétroéclairage demande parfois plus de 10 volts. Pour un montage, un module d'écran vendu pour les microcontrôleurs, déjà monté sur une petite carte, coûte quelques euros et fait gagner des jours.
+- **Un écran de portable cassé** contient une dalle lumineuse diffusante, derrière les cristaux liquides : un excellent panneau d'éclairage plat, une fois alimenté. Voir [[TEC-ELN-002]].
+- **Un écran qui reste noir** n'est pas forcément mort : souvent, c'est seulement la lampe arrière qui ne s'allume plus. Éclairez l'écran de biais avec une lampe torche, l'image apparaît.
+- **Les écrans tactiles** sont une couche de plus, collée devant la dalle : on peut casser la vitre tactile d'un téléphone sans toucher l'écran, et inversement.
 `;
 /* Versions anglaises des fiches officielles, même identifiant. Source : traductions/en/. */
 const CORPUS_EN=String.raw`
