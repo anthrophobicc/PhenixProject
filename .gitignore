@@ -16,3 +16,4 @@ src-tauri/gen/
 *.zip
 *.mp4
 sortie-flipper/
+sortie-sd/

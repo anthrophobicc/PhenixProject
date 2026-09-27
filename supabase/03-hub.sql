@@ -28,12 +28,13 @@ create table if not exists public.versions (
   id              uuid primary key default gen_random_uuid(),
   reference       text unique not null default
                   'VER-' || to_char(now(), 'YYYY') || '-' || lpad(nextval('public.numero_version')::text, 3, '0'),
+  genre           text not null default 'version' check (genre in ('version', 'calque', 'carte')),  -- une version de fiches, un calque de repères ou une carte
   nom             text not null check (char_length(nom) between 3 and 80),
   langue          text not null check (char_length(langue) between 2 and 12),
   communaute      text check (char_length(communaute) <= 80),     -- « Communauté chinoise », « Bretagne », « Club de voile »…
   description     text check (char_length(description) <= 1200),
   base            text check (char_length(base) <= 40),            -- version officielle de départ, ex. 2026.09.27
-  nb_fiches       int check (nb_fiches between 1 and 20000),
+  nb_fiches       int check (nb_fiches between 0 and 20000),
   taille          int check (taille between 1 and 26214400),
   fichier         text unique,                                     -- chemin du fichier dans le dossier « versions »
   auteur          text check (char_length(auteur) <= 60),
@@ -45,6 +46,10 @@ create table if not exists public.versions (
   cree_le         timestamptz not null default now(),
   modifie_le      timestamptz not null default now()
 );
+-- Si la table existait déjà sans calques ni cartes.
+alter table public.versions add column if not exists genre text not null default 'version';
+alter table public.versions drop constraint if exists versions_nb_fiches_check;
+alter table public.versions add constraint versions_nb_fiches_check check (nb_fiches between 0 and 20000);
 create index if not exists versions_suivi on public.versions (visible, cree_le desc);
 
 drop trigger if exists t_touch on public.versions;
@@ -70,8 +75,9 @@ begin
   end if;
   select count(*) into n from public.versions where cree_le > now() - interval '1 hour';
   if n >= 30 then raise exception 'Too many versions right now, try again later.'; end if;
-  insert into public.versions (nom, langue, communaute, description, base, nb_fiches, taille, auteur, contact, empreinte)
-  values (trim(p->>'nom'),
+  insert into public.versions (genre, nom, langue, communaute, description, base, nb_fiches, taille, auteur, contact, empreinte)
+  values (case when p->>'genre' in ('calque', 'carte') then p->>'genre' else 'version' end,
+          trim(p->>'nom'),
           lower(trim(p->>'langue')),
           nullif(trim(p->>'communaute'), ''),
           nullif(trim(p->>'description'), ''),
@@ -102,7 +108,7 @@ grant execute on function public.publier_version(jsonb), public.compter_telechar
 create or replace view public.versions_publiques as
   select v.reference, v.nom, v.langue, v.communaute, v.description, v.base, v.nb_fiches, v.taille, v.fichier,
          v.auteur, v.telechargements, v.cree_le, v.modifie_le,
-         coalesce(x.n, 0) as votes
+         coalesce(x.n, 0) as votes, v.genre
   from public.versions v
   left join (select cible, count(*)::int as n from public.votes group by cible) x on x.cible = v.reference
   where v.visible;

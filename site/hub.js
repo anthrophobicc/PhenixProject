@@ -51,9 +51,18 @@ function boutonVote(b, cible, n) {
 async function versions() {
   const zone = document.getElementById("hubVersions");
   let l;
+  const zc = document.getElementById("hubCartes");
   try { l = await PL.versions(); } catch (e) {
+    if (zc) zc.innerHTML = `<p class="dim">${M("Shared maps and layers open very soon.", "Les cartes et calques partagés ouvrent très bientôt.")}</p>`;
     zone.innerHTML = `<div class="lab-vide"><p>${M("Community versions open very soon. You can already prepare yours: start from the official version above.", "Les versions des communautés ouvrent très bientôt. Vous pouvez déjà préparer la vôtre : partez de la version officielle ci-dessus.")}</p></div>`;
     return;
+  }
+  const genre = (v) => v.genre || "version";
+  const objets = l.filter((v) => genre(v) !== "version");
+  l = l.filter((v) => genre(v) === "version");
+  if (zc) {
+    zc.innerHTML = objets.length ? "" : `<div class="lab-vide"><p>${M("No map or layer shared yet. Create yours in the Maps view of Phenix Base.", "Aucune carte ni aucun calque partagé pour l'instant. Créez le vôtre dans la vue Cartes de Phenix Base.")}</p></div>`;
+    for (const v of objets) zc.appendChild(carteVersion(v));
   }
   if (!l.length) {
     zone.innerHTML = `<div class="lab-vide"><p>${M("No community version yet. Yours could be the first: a language, a region, a club, a village.", "Aucune version de communauté pour l'instant. La vôtre peut être la première : une langue, une région, un club, un village.")}</p>
@@ -78,7 +87,7 @@ function carteVersion(v) {
   art.innerHTML = `
     <div class="prop-vote"><button type="button" class="vote" aria-label="${M("Vote", "Voter")}"><span aria-hidden="true">▲</span><b>0</b></button></div>
     <div class="prop-corps">
-      <div class="prop-tete"><span class="tag">${esc(nomLangue(v.langue))}</span>${v.communaute ? `<span class="tag st-com">${esc(v.communaute)}</span>` : ""}</div>
+      <div class="prop-tete">${v.genre === "calque" ? `<span class="tag st-com">${M("Marker layer", "Calque de repères")}</span>` : v.genre === "carte" ? `<span class="tag st-com">${M("Map", "Carte")}</span>` : ""}<span class="tag">${esc(nomLangue(v.langue))}</span>${v.communaute ? `<span class="tag st-com">${esc(v.communaute)}</span>` : ""}</div>
       <h3>${esc(v.nom)}</h3>
       ${v.description ? `<p class="prop-extrait">${esc(v.description)}</p>` : ""}
       <div class="prop-meta small dim">${meta}</div>
@@ -207,14 +216,21 @@ document.getElementById("vFichier").onchange = async (e) => {
   if (f.size > 26214400) { ap.textContent = M("This file is over 25 MB.", "Ce fichier dépasse 25 Mo."); return; }
   try {
     const texte = await f.text(), j = JSON.parse(texte);
-    if (j.type !== "phenix-version" || !Array.isArray(j.fiches) || !j.fiches.length) throw new Error("format");
-    LUE = { texte, j, taille: f.size };
-    ap.textContent = `${j.fiches.length} ${M("sheets", "fiches")} · ${taille(f.size)}`;
+    const genre = j.type === "phenix-calque" && j.calque && Array.isArray(j.calque.pins) ? "calque"
+      : j.type === "phenix-carte" && j.carte && j.carte.box ? "carte"
+      : j.type === "phenix-version" && ((j.fiches || []).length || (j.calques || []).length || (j.cartes || []).length) ? "version" : null;
+    if (!genre) throw new Error("format");
+    const nb = genre === "version" ? (j.fiches || []).length : 0;
+    LUE = { texte, j, taille: f.size, genre, nb };
+    ap.textContent = genre === "calque" ? `${M("Marker layer", "Calque de repères")} · ${j.calque.pins.length} ${M("markers", "repères")} · ${taille(f.size)}`
+      : genre === "carte" ? `${M("Map", "Carte")} · ${taille(f.size)}`
+      : `${nb} ${M("sheets", "fiches")}${(j.calques || []).length ? " · " + j.calques.length + M(" layers", " calques") : ""}${(j.cartes || []).length ? " · " + j.cartes.length + M(" maps", " cartes") : ""} · ${taille(f.size)}`;
+    if (genre !== "version") { const o = j.calque || j.carte; const el = document.getElementById("vNom"); if (el && !el.value && o.nom) el.value = String(o.nom).slice(0, 80); if (!val("vLangue")) document.getElementById("vLangue").value = document.documentElement.lang || "fr"; }
     const remplir = (id, v) => { const el = document.getElementById(id); if (el && !el.value && v) el.value = String(v).slice(0, +el.maxLength || 200); };
     if (!j.officielle) remplir("vNom", j.nom);
     remplir("vLangue", j.langue); remplir("vCommu", j.communaute); remplir("vDesc", j.description);
   } catch (err) {
-    ap.textContent = M("This isn't a Phenix version file. Export yours from Phenix Base › Modules › Phenix Hub › Create my version.", "Ce n'est pas un fichier de version Phenix. Exportez la vôtre depuis Phenix Base › Modules › Phenix Hub › Créer ma version.");
+    ap.textContent = M("This isn't a Phenix version, map or layer file. Export yours from Phenix Base (Phenix Hub › Create my version, or the Maps view).", "Ce n'est pas un fichier de version, de carte ou de calque Phenix. Exportez le vôtre depuis Phenix Base (Phenix Hub › Créer ma version, ou la vue Cartes).");
   }
 };
 document.getElementById("formVersion").onsubmit = async (e) => {
@@ -226,8 +242,8 @@ document.getElementById("formVersion").onsubmit = async (e) => {
   b.disabled = true; b.textContent = M("Sending…", "Envoi…");
   try {
     const r = await PL.publierVersion({
-      nom: val("vNom"), langue: val("vLangue"), communaute: val("vCommu"), description: val("vDesc"),
-      base: String(LUE.j.base || LUE.j.empreinte || "").slice(0, 40), nb_fiches: LUE.j.fiches.length, taille: LUE.taille,
+      genre: LUE.genre, nom: val("vNom"), langue: val("vLangue"), communaute: val("vCommu"), description: val("vDesc"),
+      base: String(LUE.j.base || LUE.j.empreinte || "").slice(0, 40), nb_fiches: LUE.nb, taille: LUE.taille,
       auteur: val("vAuteur"), contact: val("vContact"),
     });
     await PL.deposerVersion(r.fichier, LUE.texte);

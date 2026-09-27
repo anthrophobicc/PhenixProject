@@ -751,6 +751,15 @@ function hub(off) {
     <div id="hubVersions" class="hub-liste"><p class="dim small">…</p></div>
   </section>
 
+  <section class="hub-sec" id="cartes">
+    <div class="hub-barre">
+      ${tx("h2", "hub.c.h", "Maps and marker layers", "Les cartes et les calques de repères")}
+      ${tx("a", "hub.c.pub", "Share yours", "Partager le vôtre", 'class="btn" href="#publier"')}
+    </div>
+    ${tx("p", "hub.c.p", "Offline maps and layers of markers (springs, shelters, dangers, meeting points) made by people for their area. Download one and open it in Phenix Base: it joins your maps. Create yours in the Maps view, then share it from Phenix Lab or here.", "Des cartes hors ligne et des calques de repères (sources, abris, dangers, points de rendez-vous) faits par les gens pour leur coin. Téléchargez-en un et ouvrez-le dans Phenix Base : il rejoint vos cartes. Créez le vôtre dans la vue Cartes, puis partagez-le depuis Phenix Lab ou ici.", 'class="dim"')}
+    <div id="hubCartes" class="hub-liste"><p class="dim small">…</p></div>
+  </section>
+
   <section class="hub-sec" id="fiches">
     <div class="hub-barre">
       ${tx("h2", "hub.f.h", "Sheets written by people", "Les fiches écrites par les gens")}
@@ -770,8 +779,8 @@ function hub(off) {
     </ol>
     <form id="formVersion" autocomplete="off">
       <div class="field">
-        <label for="vFichier">${tx("span", "hub.p.f", "The version file (.json)", "Le fichier de la version (.json)")} <span class="req">*</span></label>
-        ${tx("p", "hub.p.fh", "The file Phenix Base exports with “Create my version”. 25 MB at most.", "Le fichier que Phenix Base exporte avec « Créer ma version ». 25 Mo au plus.", 'class="help"')}
+        <label for="vFichier">${tx("span", "hub.p.f", "The file (.json): a version, a map or a layer", "Le fichier (.json) : une version, une carte ou un calque")} <span class="req">*</span></label>
+        ${tx("p", "hub.p.fh", "The file Phenix Base exports with “Create my version”, or a map or layer exported from the Maps view. 25 MB at most.", "Le fichier que Phenix Base exporte avec « Créer ma version », ou une carte ou un calque exporté depuis la vue Cartes. 25 Mo au plus.", 'class="help"')}
         <input type="file" id="vFichier" accept=".json,application/json" required>
         <p class="help" id="vApercu"></p>
       </div>

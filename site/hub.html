@@ -69,6 +69,15 @@
     <div id="hubVersions" class="hub-liste"><p class="dim small">…</p></div>
   </section>
 
+  <section class="hub-sec" id="cartes">
+    <div class="hub-barre">
+      <h2 data-i18n="hub.c.h">Maps and marker layers</h2>
+      <a class="btn" href="#publier" data-i18n="hub.c.pub">Share yours</a>
+    </div>
+    <p class="dim" data-i18n="hub.c.p">Offline maps and layers of markers (springs, shelters, dangers, meeting points) made by people for their area. Download one and open it in Phenix Base: it joins your maps. Create yours in the Maps view, then share it from Phenix Lab or here.</p>
+    <div id="hubCartes" class="hub-liste"><p class="dim small">…</p></div>
+  </section>
+
   <section class="hub-sec" id="fiches">
     <div class="hub-barre">
       <h2 data-i18n="hub.f.h">Sheets written by people</h2>
@@ -88,8 +97,8 @@
     </ol>
     <form id="formVersion" autocomplete="off">
       <div class="field">
-        <label for="vFichier"><span data-i18n="hub.p.f">The version file (.json)</span> <span class="req">*</span></label>
-        <p class="help" data-i18n="hub.p.fh">The file Phenix Base exports with “Create my version”. 25 MB at most.</p>
+        <label for="vFichier"><span data-i18n="hub.p.f">The file (.json): a version, a map or a layer</span> <span class="req">*</span></label>
+        <p class="help" data-i18n="hub.p.fh">The file Phenix Base exports with “Create my version”, or a map or layer exported from the Maps view. 25 MB at most.</p>
         <input type="file" id="vFichier" accept=".json,application/json" required>
         <p class="help" id="vApercu"></p>
       </div>

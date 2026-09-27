@@ -42,6 +42,10 @@
 .hub-carte h3{margin:4px 0}.hub-carte p{margin:4px 0;color:var(--dim)}
 .hub-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}
 .hub-liste{display:flex;flex-direction:column;gap:12px;margin-top:10px;max-width:760px}
+.hub-sel{border:1px solid var(--hair);border-radius:10px;padding:10px 12px;background:var(--surface);display:flex;flex-direction:column;gap:4px}
+.hub-case{display:flex;gap:8px;align-items:center;font-size:14px;cursor:pointer}.hub-case input{width:auto;margin:0}
+.hub-axe{border-top:1px solid var(--hair);padding-top:6px;margin-top:4px}.hub-cats{padding-left:22px;display:flex;flex-direction:column;gap:2px}
+.hub-selq{margin-top:8px}.hub-selliste{max-height:220px;overflow:auto;display:flex;flex-direction:column;gap:2px;margin-top:4px}
 </style>
 <style>
 /* ===================== PALETTES ===================== */
@@ -20308,7 +20312,7 @@ $("expCarte").onclick=()=>{
 };
 $("impCarte").onclick=()=>$("impCarteF").click();
 $("impCarteF").onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();
-  r.onload=()=>{try{const j=JSON.parse(r.result);if(j.carte){j.carte.importe=Date.now();CARTES.push(j.carte);saveCartes();drawCartes();toast(tr("Carte importée"));}else toast("Fichier non reconnu");}catch(x){toast(tr("Fichier illisible"));}};
+  r.onload=()=>{try{const j=JSON.parse(r.result);if(j.carte&&ajouterCartes([j.carte],f.name))toast(tr("Carte importée"));else toast(tr("Fichier non reconnu"));}catch(x){toast(tr("Fichier illisible"));}};
   r.readAsText(f);};
 
 /* ---- CARTES SUR IMAGE FIXE ----
@@ -20440,7 +20444,7 @@ $("expPins").onclick=()=>{const c=CALQUES[curCalque];
   dl(JSON.stringify({type:"phenix-calque",v:1,calque:c},null,2),c.nom.replace(/\W+/g,"-").toLowerCase()+".calque.json","application/json");toast("Calque exporté");};
 $("impPins").onclick=()=>$("impPinsF").click();
 $("impPinsF").onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();
-  r.onload=()=>{try{const j=JSON.parse(r.result);if(j.calque){CALQUES.push(j.calque);curCalque=CALQUES.length-1;save();drawCalques();drawPins();toast(tr("Calque importé"));}else toast("Fichier non reconnu");}catch(x){toast(tr("Fichier illisible"));}};
+  r.onload=()=>{try{const j=JSON.parse(r.result);if(j.calque&&ajouterCalques([j.calque],f.name))toast(tr("Calque importé"));else toast(tr("Fichier non reconnu"));}catch(x){toast(tr("Fichier illisible"));}};
   r.readAsText(f);};
 $("clrPins").onclick=()=>{if(confirm("Vider ce calque ?")){CALQUES[curCalque].pins=[];save();drawPins();}};
 document.querySelectorAll(".mtab").forEach(t=>t.onclick=()=>{
@@ -20773,8 +20777,8 @@ function importerFichiers(liste){
   jsons.forEach(file=>{const r=new FileReader();
     r.onload=()=>{try{
       const j=JSON.parse(r.result);
-      if(j.carte){j.carte.importe=Date.now();CARTES.push(j.carte);saveCartes();if(map)drawCartes();toast(tr("Carte importée"));}
-      else if(j.calque){CALQUES.push(j.calque);curCalque=CALQUES.length-1;save();if(map){drawCalques();drawPins();}toast(tr("Calque importé"));}
+      if(j.carte){if(ajouterCartes([j.carte],file.name))toast(tr("Carte importée"));else toast(tr("Fichier non reconnu"));}
+      else if(j.calque){if(ajouterCalques([j.calque],file.name))toast(tr("Calque importé"));else toast(tr("Fichier non reconnu"));}
       else if(j.ouvrages){OUVRAGES=OUVRAGES.concat(j.ouvrages);save();toast("Bibliothèque importée");}
       else if(j.type==="phenix-module"||j.modules){MODULES=MODULES.concat(j.modules||[j]);save();toast("Module installé");}
       else if(j.type==="phenix-version"){try{ajouterVersion(lireVersion(j,"fichier"));}catch(e){toast(e.message);}}
@@ -21076,8 +21080,31 @@ function drawLab(){
   <div class="src" style="margin-top:6px">${tr("Pour proposer une fiche entière : écrivez-la avec « + Fiche », puis « Proposer au corpus ».")}</div>
   <div class="lab-barre"><div class="kick" style="margin:0">${tr("Ce que la communauté propose")}</div>
     <div class="lab-tri"><button type="button" data-tri="top" class="${LAB_TRI==="top"?"on":""}">Top</button><button type="button" data-tri="new" class="${LAB_TRI==="new"?"on":""}">${tr("Nouveau")}</button></div></div>
-  <div id="labListe" class="lab-liste"><div class="src">${tr("Connexion…")}</div></div>`;
+  <div id="labListe" class="lab-liste"><div class="src">${tr("Connexion…")}</div></div>
+  <div class="kick" style="margin-top:30px">${tr("Cartes et calques")}</div>
+  <p style="color:var(--dim);max-width:64ch">${tr("Créez une carte hors ligne ou un calque de repères (sources, abris, dangers) dans la vue Cartes, puis partagez-le ici. Une fois vérifié, il apparaît dans Phenix Hub pour tout le monde.")}</p>
+  <div class="hub-actions"><button class="btn" type="button" id="labVersCartes">${tr("Créer une carte ou un calque")}</button></div>
+  ${CALQUES.some(c=>c.pins.length)||CARTES.length?`<form id="labPartage" class="commu-form" style="max-width:680px;margin-top:12px">
+    <select id="lpObjet">${CALQUES.map((c,i)=>c.pins.length?`<option value="calque:${i}">${esc(tr("Calque"))} · ${esc(tr(c.nom))} (${c.pins.length})</option>`:"").join("")}${CARTES.map((c,i)=>`<option value="carte:${i}">${esc(tr("Carte"))} · ${esc(c.nom)}</option>`).join("")}</select>
+    <input id="lpNom" maxlength="80" placeholder="${escA(tr("Nom public, ex : Sources du massif des Bauges"))}">
+    <textarea id="lpDesc" maxlength="1200" placeholder="${escA(tr("Ce qu'il montre, d'où viennent les repères (facultatif)"))}"></textarea>
+    <div class="commu-envoi"><input id="lpAuteur" maxlength="60" placeholder="${escA(tr("Pseudo (facultatif)"))}"><button class="btn primary" type="submit">${tr("Partager sur Phenix Hub")}</button></div>
+    <div id="lpRetour" class="src"></div></form>`:`<div class="src" style="margin-top:8px">${tr("Rien à partager pour l'instant : posez des repères ou enregistrez une carte dans la vue Cartes.")}</div>`}`;
   brancherRetour();
+  $("labVersCartes").onclick=()=>switchView("cartes");
+  if($("labPartage"))$("labPartage").onsubmit=async e=>{e.preventDefault();
+    const [genre,i]=$("lpObjet").value.split(":"),obj=genre==="carte"?CARTES[+i]:CALQUES[+i];if(!obj)return;
+    const nom=$("lpNom").value.trim()||obj.nom;if(nom.length<3){$("lpRetour").textContent=tr("Donnez-lui un nom.");return;}
+    const b=$("labPartage").querySelector("button[type=submit]");b.disabled=true;$("lpRetour").textContent=tr("Envoi…");
+    try{const j=genre==="carte"?{type:"phenix-carte",v:1,carte:{...obj,nom}}:{type:"phenix-calque",v:1,calque:{nom,pins:obj.pins}};
+      const texte=JSON.stringify(j),taille=new Blob([texte]).size;
+      if(taille>26214400)throw new Error(tr("Trop lourd pour Phenix Hub (25 Mo au plus) : retirez une carte, ou enregistrez le fichier."));
+      const r=await EN_LIGNE.publierVersion({genre,nom,langue:LANG,description:$("lpDesc").value.trim(),nb_fiches:0,taille,auteur:$("lpAuteur").value.trim()});
+      await EN_LIGNE.deposerVersion(r.fichier,texte);
+      $("lpRetour").innerHTML=`<span style="color:var(--acc)">${tr("Bien reçu")} · ${tr("Référence")} ${esc(r.reference)}. ${tr("Il apparaît dans Phenix Hub une fois vérifié.")}</span>`;}
+    catch(err){const pasPret=/publier_version|schema cache|does not exist|404/i.test(err.message);
+      $("lpRetour").innerHTML=`<span style="color:var(--warn)">${esc(pasPret?tr("Le partage ouvre très bientôt."):err.message)}</span>`;}
+    b.disabled=false;};
   $("modWrap").querySelectorAll("[data-tri]").forEach(b=>b.onclick=()=>{LAB_TRI=b.dataset.tri;$("modWrap").querySelectorAll("[data-tri]").forEach(x=>x.classList.toggle("on",x===b));afficherLab();});
   $("labIdee").onsubmit=async e=>{
     e.preventDefault();const titre=$("labTitre").value.trim();
@@ -21168,6 +21195,41 @@ function ajouterFiches(l){
   toast(n?n+" "+tr(n>1?"fiches ajoutées":"fiche ajoutée")+(d?" · "+d+" "+tr("déjà là"):""):tr("Déjà dans votre bibliothèque"));
   return n;
 }
+// Un calque ou une carte venus d'ailleurs : des champs connus, des nombres qui en sont, des images qui en sont.
+const CATS_IDS=new Set(CATS_PIN.map(c=>c.id));
+const nombreSur=(v,min,max)=>{const n=+v;return Number.isFinite(n)&&n>=min&&n<=max?n:null;};
+const IMAGE_SURE=/^data:image\/(png|jpeg|webp);base64,[A-Za-z0-9+/=]+$/;
+function calqueExterne(c){
+  if(!c||typeof c!=="object"||!Array.isArray(c.pins))return null;
+  const pins=[];
+  c.pins.slice(0,5000).forEach(p=>{if(!p)return;const lat=nombreSur(p.lat,-1e6,1e6),lng=nombreSur(p.lng,-1e6,1e6);if(lat===null||lng===null)return;
+    pins.push({lat,lng,titre:texteSur(p.titre,120).trim()||tr("Repère"),note:texteSur(p.note,1000),cat:CATS_IDS.has(p.cat)?p.cat:CATS_PIN[0].id,fiche:idSur(p.fiche)});});
+  return {nom:texteSur(c.nom,80).trim()||tr("Calque sans nom"),pins};
+}
+function carteExterne(c){
+  if(!c||typeof c!=="object")return null;
+  const boite=b=>Array.isArray(b)&&b.length===4&&b.every(x=>Number.isFinite(+x))?b.map(Number):null;
+  const z=v=>Math.max(0,Math.min(19,parseInt(v,10)||0));
+  const box=boite(c.box);if(!box)return null;
+  const o={nom:texteSur(c.nom,80).trim()||tr("Carte sans nom"),description:texteSur(c.description,600),type:c.type==="image"?"image":"visuel",
+    box,z0:z(c.z0),z1:z(c.z1),tiles:{},importe:Date.now()};
+  if(Array.isArray(c.zones))o.zones=c.zones.slice(0,300).map(x=>({box:boite(x&&x.box),z0:z(x&&x.z0),z1:z(x&&x.z1)})).filter(x=>x.box);
+  if(c.tiles&&typeof c.tiles==="object")for(const [k,v] of Object.entries(c.tiles))
+    if(/^\d{1,2}\/\d{1,7}\/\d{1,7}$/.test(k)&&typeof v==="string"&&IMAGE_SURE.test(v))o.tiles[k]=v;
+  if(o.type==="image"){if(typeof c.data!=="string"||!IMAGE_SURE.test(c.data))return null;o.data=c.data;o.w=nombreSur(c.w,1,20000)||1000;o.h=nombreSur(c.h,1,20000)||1000;}
+  else if(!Object.keys(o.tiles).length)return null;
+  return o;
+}
+function ajouterCalques(l,source){
+  let n=0;(Array.isArray(l)?l:[]).map(calqueExterne).filter(Boolean).forEach(c=>{CALQUES.push({...c,source:texteSur(source,80)});n++;});
+  if(n){curCalque=CALQUES.length-1;save();if(map){drawCalques();drawPins();}}
+  return n;
+}
+function ajouterCartes(l,source){
+  let n=0;(Array.isArray(l)?l:[]).map(carteExterne).filter(Boolean).forEach(c=>{CARTES.push({...c,source:texteSur(source,80)});n++;});
+  if(n){saveCartes();if(map)drawCartes();}
+  return n;
+}
 // La fiche d'une proposition du Lab. Envoyée depuis l'application, elle garde son en-tête (axe, balises…).
 function propositionEnFiche(p){
   const brut=String(p.contenu||"");
@@ -21179,14 +21241,16 @@ function propositionEnFiche(p){
 // Un fichier « phenix-version » : vérifié, nettoyé, prêt à être lu. Seule une version lue par l'application
 // elle-même sur le site officiel peut se dire officielle.
 function lireVersion(j,source){
-  if(!j||j.type!=="phenix-version"||!Array.isArray(j.fiches))throw new Error(tr("Ce fichier n'est pas une version de Phenix."));
+  if(!j||j.type!=="phenix-version")throw new Error(tr("Ce fichier n'est pas une version de Phenix."));
   const vues=new Set(),fiches=[];
-  j.fiches.forEach(n=>{const f=ficheExterne(n);if(f&&!vues.has(f.id)){vues.add(f.id);fiches.push(f);}});
-  if(!fiches.length)throw new Error(tr("Cette version ne contient aucune fiche."));
+  (Array.isArray(j.fiches)?j.fiches:[]).forEach(n=>{const f=ficheExterne(n);if(f&&!vues.has(f.id)){vues.add(f.id);fiches.push(f);}});
+  const calques=(Array.isArray(j.calques)?j.calques:[]).map(calqueExterne).filter(Boolean);
+  const cartes=(Array.isArray(j.cartes)?j.cartes:[]).map(carteExterne).filter(Boolean);
+  if(!fiches.length&&!calques.length&&!cartes.length)throw new Error(tr("Cette version ne contient aucune fiche."));
   const ref=texteSur(j.reference,40).replace(/[^\w.-]/g,"")||"VER-"+Date.now().toString(36).toUpperCase();
   return {reference:ref,nom:texteSur(j.nom,80).trim()||tr("Version sans nom"),langue:texteSur(j.langue,12),
     communaute:texteSur(j.communaute,80),description:texteSur(j.description,1200),version:texteSur(j.version,20),
-    date:texteSur(j.date,10),officielle:source==="site"&&j.officielle===true,source,ajoutee:Date.now(),nb:fiches.length,fiches};
+    date:texteSur(j.date,10),officielle:source==="site"&&j.officielle===true,source,ajoutee:Date.now(),nb:fiches.length,fiches,calques,cartes};
 }
 const versionActive=()=>VERSIONS.active?VERSIONS.liste.find(v=>v.reference===VERSIONS.active)||null:null;
 // Applique la version choisie : ses textes par-dessus les fiches officielles, ses fiches en plus.
@@ -21213,10 +21277,15 @@ function apresChangement(){
   if($("hubChoix"))peindreChoix();
 }
 function ajouterVersion(v,activer=true){
-  VERSIONS.liste=VERSIONS.liste.filter(x=>x.reference!==v.reference).concat([v]);
-  if(activer)VERSIONS.active=v.reference;
-  apresChangement();
-  toast(tr("Version ajoutée")+" : "+v.nom);
+  // Les calques et les cartes rejoignent ceux de l'utilisateur ; les fiches forment la version qu'on choisit de lire.
+  const nc=ajouterCalques(v.calques,v.nom),nk=ajouterCartes(v.cartes,v.nom);
+  const garde={...v};delete garde.calques;delete garde.cartes;
+  if(garde.fiches&&garde.fiches.length){
+    VERSIONS.liste=VERSIONS.liste.filter(x=>x.reference!==garde.reference).concat([garde]);
+    if(activer)VERSIONS.active=garde.reference;
+    apresChangement();
+  }
+  toast(tr("Version ajoutée")+" : "+v.nom+(nc?" · "+nc+" "+tr("calques"):"")+(nk?" · "+nk+" "+tr("cartes"):""));
 }
 function activerVersion(ref){
   VERSIONS.active=ref||null;
@@ -21276,12 +21345,45 @@ async function versionOfficielleIntegree(){
     nom:LANG==="en"?"Phenix, official version":"Phenix, version officielle",langue:LANG,empreinte:await empreinteApp(),
     date:jourISO(Date.now()),licence:"CC BY-SA 4.0",nb_fiches:fiches.length,fiches};
 }
-// Ma version : ce que je lis maintenant (la version choisie), plus mes fiches si je le veux.
+// Ma version : ce que j'ai coché. Des axes entiers, des catégories, des fiches une à une, des calques, des cartes.
+let SEL_V={tout:true,axes:new Set(),cats:new Set(),fiches:new Set(),calques:new Set(),cartes:new Set()};
+const ficheChoisie=f=>SEL_V.tout||SEL_V.axes.has(f.axe)||SEL_V.cats.has(f.axe+"|"+(f.categorie||""))||SEL_V.fiches.has(f.id);
 async function maVersion(m){
   const v=versionActive(),base=await empreinteApp();
-  const fiches=FICHES.filter(f=>m.perso||f.origine==="officielle"||f.deVersion||f.vo).map(f=>ficheSortie(f));
+  const fiches=FICHES.filter(ficheChoisie).map(f=>ficheSortie(f));
+  const calques=[...SEL_V.calques].map(i=>CALQUES[i]).filter(Boolean).map(c=>({nom:c.nom,pins:c.pins}));
+  const cartes=[...SEL_V.cartes].map(i=>CARTES[i]).filter(Boolean);
   return {type:"phenix-version",format:1,nom:m.nom,langue:m.langue,communaute:m.communaute||"",description:m.description||"",
-    base,depuis:v?v.nom:"officielle",date:jourISO(Date.now()),licence:"CC BY-SA 4.0",nb_fiches:fiches.length,fiches};
+    base,depuis:v?v.nom:"officielle",date:jourISO(Date.now()),licence:"CC BY-SA 4.0",nb_fiches:fiches.length,fiches,calques,cartes};
+}
+function peindreSelection(){
+  const h=$("hubSel");if(!h)return;
+  const compte=()=>{const c=h.querySelector("[data-compte]");if(c)c.textContent=FICHES.filter(ficheChoisie).length+" "+tr("fiches")+" · "+SEL_V.calques.size+" "+tr("calques")+" · "+SEL_V.cartes.size+" "+tr("cartes");};
+  const axes=[...new Set(FICHES.map(f=>f.axe))].sort((a,b)=>a-b);
+  const nomAxe=a=>{const x=tousAxes().find(y=>y.n===a);return tr(x?x.nom:"Axe "+a);};
+  let html=`<div class="src"><b>${tr("Ce que contient ma version")}</b> · <span data-compte></span></div>
+    <label class="hub-case"><input type="checkbox" data-tout ${SEL_V.tout?"checked":""}> ${tr("Toutes les fiches")}</label>`;
+  if(!SEL_V.tout){
+    html+=axes.map(a=>{const cats=[...new Set(FICHES.filter(f=>f.axe===a).map(f=>f.categorie||""))].sort();
+      return `<div class="hub-axe"><label class="hub-case"><input type="checkbox" data-axe="${a}" ${SEL_V.axes.has(a)?"checked":""}> <b>${esc(nomAxe(a))}</b> (${FICHES.filter(f=>f.axe===a).length})</label>
+        <div class="hub-cats">${cats.map(c=>`<label class="hub-case"><input type="checkbox" data-cat="${escA(a+"|"+c)}" ${SEL_V.cats.has(a+"|"+c)?"checked":""}> ${esc(c?tr(c):tr("Sans catégorie"))} (${FICHES.filter(f=>f.axe===a&&(f.categorie||"")===c).length})</label>`).join("")}</div></div>`;}).join("");
+    html+=`<input id="hubSelQ" class="hub-selq" placeholder="${escA(tr("Chercher une fiche à ajouter…"))}"><div id="hubSelListe" class="hub-selliste"></div>`;
+  }
+  html+=`<div class="src" style="margin-top:10px"><b>${tr("Calques de repères")}</b></div>`+(CALQUES.length?CALQUES.map((c,i)=>`<label class="hub-case"><input type="checkbox" data-calque="${i}" ${SEL_V.calques.has(i)?"checked":""}> ${esc(tr(c.nom))} (${c.pins.length} ${tr("repères")})</label>`).join(""):`<div class="src">${tr("Aucun calque pour l'instant : créez-en un dans la vue Cartes.")}</div>`);
+  html+=`<div class="src" style="margin-top:10px"><b>${tr("Cartes")}</b></div>`+(CARTES.length?CARTES.map((c,i)=>`<label class="hub-case"><input type="checkbox" data-carte="${i}" ${SEL_V.cartes.has(i)?"checked":""}> ${esc(c.nom)} (${c.type==="image"?tr("plan"):Object.keys(c.tiles||{}).length+" "+tr("tuiles")})</label>`).join(""):`<div class="src">${tr("Aucune carte pour l'instant : créez-en une dans la vue Cartes.")}</div>`);
+  h.innerHTML=html;compte();
+  const bascule=(ens,val,oui)=>{oui?ens.add(val):ens.delete(val);compte();};
+  h.querySelector("[data-tout]").onchange=e=>{SEL_V.tout=e.target.checked;peindreSelection();};
+  h.querySelectorAll("[data-axe]").forEach(i=>i.onchange=()=>bascule(SEL_V.axes,+i.dataset.axe,i.checked));
+  h.querySelectorAll("[data-cat]").forEach(i=>i.onchange=()=>bascule(SEL_V.cats,i.dataset.cat,i.checked));
+  h.querySelectorAll("[data-calque]").forEach(i=>i.onchange=()=>bascule(SEL_V.calques,+i.dataset.calque,i.checked));
+  h.querySelectorAll("[data-carte]").forEach(i=>i.onchange=()=>bascule(SEL_V.cartes,+i.dataset.carte,i.checked));
+  const q=$("hubSelQ");
+  if(q){const liste=()=>{const t=q.value.trim().toLowerCase();
+      const l=FICHES.filter(f=>!t||(f.titre+" "+f.id).toLowerCase().includes(t)).slice(0,40);
+      $("hubSelListe").innerHTML=l.map(f=>`<label class="hub-case"><input type="checkbox" data-fiche="${escA(f.id)}" ${SEL_V.fiches.has(f.id)?"checked":""}> ${esc(f.titre)} <span class="src">${esc(f.id)}</span></label>`).join("");
+      $("hubSelListe").querySelectorAll("[data-fiche]").forEach(i=>i.onchange=()=>bascule(SEL_V.fiches,i.dataset.fiche,i.checked));};
+    q.oninput=liste;liste();}
 }
 const slugVersion=s=>String(s||"").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"").slice(0,60)||"version";
 // Un fichier du site : sur le site lui-même, à côté de l'application ; ailleurs (ordinateur, fichier ouvert), à son adresse publique.
@@ -21312,29 +21414,36 @@ function drawHub(){
     <div class="commu-envoi"><input id="hvLangue" maxlength="12" placeholder="${escA(tr("Langue, ex : es, zh, pt-BR"))}"><input id="hvCommu" maxlength="80" placeholder="${escA(tr("Communauté (facultatif)"))}"></div>
     <textarea id="hvDesc" maxlength="1200" placeholder="${escA(tr("Ce qu'elle a de particulier (facultatif)"))}"></textarea>
     <div class="commu-envoi"><input id="hvAuteur" maxlength="60" placeholder="${escA(tr("Pseudo (facultatif)"))}"><input id="hvContact" maxlength="120" placeholder="${escA(tr("Contact, privé (facultatif)"))}"></div>
-    <label class="src" style="display:flex;gap:8px;align-items:center"><input type="checkbox" id="hvPerso" checked style="width:auto"> ${tr("Inclure mes fiches personnelles")}</label>
+    <div id="hubSel" class="hub-sel"></div>
     <div class="hub-actions"><button class="btn" type="button" id="hvFichier">${tr("Enregistrer le fichier")}</button><button class="btn primary" type="submit">${tr("Publier sur Phenix Hub")}</button></div>
     <div id="hvRetour" class="src"></div>
   </form>`;
   brancherRetour();
   peindreChoix();
+  peindreSelection();
   $("hubOuvrir").onclick=()=>$("hubOuvrirF").click();
   $("hubOuvrirF").onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();
     r.onload=()=>{try{const j=JSON.parse(r.result);
-      if(j.type==="phenix-fiches")ajouterFiches(j.fiches);else ajouterVersion(lireVersion(j,"fichier"));}
+      if(j.type==="phenix-fiches")ajouterFiches(j.fiches);
+      else if(j.type==="phenix-calque"||j.calque){if(ajouterCalques([j.calque],f.name))toast(tr("Calque importé"));else toast(tr("Fichier non reconnu"));}
+      else if(j.type==="phenix-carte"||j.carte){if(ajouterCartes([j.carte],f.name))toast(tr("Carte importée"));else toast(tr("Fichier non reconnu"));}
+      else ajouterVersion(lireVersion(j,"fichier"));}
       catch(x){toast(x instanceof SyntaxError?tr("Fichier illisible"):x.message);}};
     r.readAsText(f);e.target.value="";};
   $("hubOff").onclick=async()=>{dl(JSON.stringify(await versionOfficielleIntegree()),"phenix-officielle-"+LANG+".json","application/json");toast(tr("Version officielle enregistrée"));};
   const lireForm=()=>({nom:$("hvNom").value.trim(),langue:$("hvLangue").value.trim().toLowerCase(),communaute:$("hvCommu").value.trim(),
-    description:$("hvDesc").value.trim(),auteur:$("hvAuteur").value.trim(),contact:$("hvContact").value.trim(),perso:$("hvPerso").checked});
-  const valide=m=>{if(m.nom.length<3||m.langue.length<2){$("hvRetour").innerHTML=`<span style="color:var(--warn)">${tr("Donnez au moins un nom et une langue.")}</span>`;return false;}return true;};
+    description:$("hvDesc").value.trim(),auteur:$("hvAuteur").value.trim(),contact:$("hvContact").value.trim()});
+  const valide=m=>{if(m.nom.length<3||m.langue.length<2){$("hvRetour").innerHTML=`<span style="color:var(--warn)">${tr("Donnez au moins un nom et une langue.")}</span>`;return false;}
+    if(!FICHES.some(ficheChoisie)&&!SEL_V.calques.size&&!SEL_V.cartes.size){$("hvRetour").innerHTML=`<span style="color:var(--warn)">${tr("Cochez au moins une fiche, un calque ou une carte.")}</span>`;return false;}return true;};
   $("hvFichier").onclick=async()=>{const m=lireForm();if(!valide(m))return;const j=await maVersion(m);
-    dl(JSON.stringify(j),"phenix-"+slugVersion(m.nom)+".json","application/json");$("hvRetour").textContent=j.nb_fiches+" "+tr("fiches")+" · "+tr("fichier enregistré");};
+    dl(JSON.stringify(j),"phenix-"+slugVersion(m.nom)+".json","application/json");$("hvRetour").textContent=j.nb_fiches+" "+tr("fiches")+" · "+j.calques.length+" "+tr("calques")+" · "+j.cartes.length+" "+tr("cartes")+" · "+tr("fichier enregistré");};
   $("hubCreer").onsubmit=async e=>{e.preventDefault();const m=lireForm();if(!valide(m))return;
     const b=$("hubCreer").querySelector("button[type=submit]");b.disabled=true;$("hvRetour").textContent=tr("Envoi…");
     try{const j=await maVersion(m),texte=JSON.stringify(j);
-      const r=await EN_LIGNE.publierVersion({nom:m.nom,langue:m.langue,communaute:m.communaute,description:m.description,base:j.base,
-        nb_fiches:j.nb_fiches,taille:new Blob([texte]).size,auteur:m.auteur,contact:m.contact});
+      const taille=new Blob([texte]).size;
+      if(taille>26214400)throw new Error(tr("Trop lourd pour Phenix Hub (25 Mo au plus) : retirez une carte, ou enregistrez le fichier."));
+      const r=await EN_LIGNE.publierVersion({genre:"version",nom:m.nom,langue:m.langue,communaute:m.communaute,description:m.description,base:j.base,
+        nb_fiches:j.nb_fiches,taille,auteur:m.auteur,contact:m.contact});
       await EN_LIGNE.deposerVersion(r.fichier,texte);
       $("hvRetour").innerHTML=`<span style="color:var(--acc)">${tr("Version reçue")} · ${tr("Référence")} ${esc(r.reference)}. ${tr("Elle apparaît dans Phenix Hub une fois vérifiée.")}</span>`;}
     catch(err){const pasPret=/publier_version|schema cache|does not exist|404/i.test(err.message);
@@ -21355,7 +21464,7 @@ function peindreChoix(){
 }
 async function chargerHub(){
   const h=$("hubEnLigne");if(!h)return;
-  const [cat,vers,props,moi]=await Promise.all([
+  let [cat,vers,props,moi]=await Promise.all([
     siteJSON("hub/catalogue.json").catch(()=>null),
     EN_LIGNE.versions().catch(()=>null),
     EN_LIGNE.publiees().catch(()=>null),
@@ -21364,6 +21473,9 @@ async function chargerHub(){
   if(!cat&&!vers&&!props){h.innerHTML=`<div class="src">${tr("Le Hub en ligne demande une connexion. Tout ce qui est déjà dans l'application marche sans.")}</div>`;return;}
   const off=cat&&cat.officielle,fl=off&&(LANG==="en"?off.en:off.fr),meme=off&&off.empreinte===moi;
   const fiches=(props||[]).filter(p=>p.type==="fiche");
+  const tous=vers||[],genre=v=>v.genre||"version";
+  const calquesC=tous.filter(v=>genre(v)==="calque"),cartesC=tous.filter(v=>genre(v)==="carte");
+  vers=vers&&vers.filter(v=>genre(v)==="version");
   let html="";
   if(off)html+=`<div class="hub-carte off"><div class="lab-corps"><div class="src">${tr("Version officielle en ligne")}</div>
     <h3>Phenix ${esc(off.version)}</h3>
@@ -21377,6 +21489,14 @@ async function chargerHub(){
     <div class="lab-corps"><div class="src">${esc([String(v.langue||"").toUpperCase(),v.communaute].filter(Boolean).join(" · "))}</div><h3>${esc(v.nom)}</h3>
     ${v.description?`<p>${esc(v.description)}</p>`:""}<div class="src">${v.nb_fiches||"?"} ${tr("fiches")} · ${v.telechargements||0} ${tr("téléchargements")} · ${esc(v.auteur||tr("Anonyme"))} · ${dateCourte(new Date(v.cree_le).getTime())}</div>
     <div class="hub-actions"><button class="btn primary" data-vl="${i}">${tr("Lire cette version")}</button><button class="btn" data-vd="${i}">${tr("Enregistrer le fichier")}</button></div></div></div>`).join("");
+  const objets=(liste,titre,vide,attr)=>`<div class="kick" style="margin:10px 0 0">${tr(titre)}</div>`+(vers===null?`<div class="src">${tr("Le partage ouvre très bientôt.")}</div>`
+    :liste.length?liste.map((v,i)=>`<div class="hub-carte"><button class="lab-vote${EN_LIGNE.aVote(v.reference)?" on":""}" data-ov="${v.reference}"><span>▲</span><b>${v.votes||0}</b></button>
+      <div class="lab-corps"><h3>${esc(v.nom)}</h3>${v.description?`<p>${esc(v.description)}</p>`:""}
+      <div class="src">${v.telechargements||0} ${tr("téléchargements")} · ${esc(v.auteur||tr("Anonyme"))} · ${dateCourte(new Date(v.cree_le).getTime())}</div>
+      <div class="hub-actions"><button class="btn primary" ${attr}="${i}">${tr("Ajouter à mes cartes")}</button></div></div></div>`).join("")
+    :`<div class="src">${tr(vide)}</div>`);
+  html+=objets(calquesC,"Calques de repères des communautés","Aucun calque partagé pour l'instant. Partagez le vôtre depuis Phenix Lab.","data-cq");
+  html+=objets(cartesC,"Cartes des communautés","Aucune carte partagée pour l'instant. Partagez la vôtre depuis Phenix Lab.","data-ck");
   html+=`<div class="kick" style="margin:10px 0 0">${tr("Fiches écrites par les gens")}</div>`;
   html+=props===null?`<div class="src">${tr("Demande une connexion.")}</div>`
     :fiches.length?`<div class="src">${fiches.length} ${tr(fiches.length>1?"fiches publiées dans Phenix Lab":"fiche publiée dans Phenix Lab")}. ${tr("L'équipe ne les a pas encore vérifiées : lisez-les avec un œil critique.")}</div>
@@ -21394,6 +21514,12 @@ async function chargerHub(){
     ajouterVersion(lireVersion({...j,reference:v.reference,nom:v.nom,langue:v.langue,communaute:v.communaute},"hub"));EN_LIGNE.compterTelechargement(v.reference);}));
   h.querySelectorAll("[data-vd]").forEach(b=>b.onclick=()=>occupe(b,async()=>{const v=vers[+b.dataset.vd],j=await EN_LIGNE.fichierVersion(v.fichier);
     dl(JSON.stringify(j),"phenix-"+slugVersion(v.nom)+".json","application/json");EN_LIGNE.compterTelechargement(v.reference);}));
+  const importer=(v,j)=>{const n=j.type==="phenix-carte"||j.carte?ajouterCartes([j.carte],v.nom):ajouterCalques([j.calque],v.nom);
+    if(!n)throw new Error(tr("Fichier non reconnu"));toast((j.carte?tr("Carte importée"):tr("Calque importé"))+" : "+v.nom);EN_LIGNE.compterTelechargement(v.reference);};
+  h.querySelectorAll("[data-cq]").forEach(b=>b.onclick=()=>occupe(b,async()=>{const v=calquesC[+b.dataset.cq];importer(v,await EN_LIGNE.fichierVersion(v.fichier));}));
+  h.querySelectorAll("[data-ck]").forEach(b=>b.onclick=()=>occupe(b,async()=>{const v=cartesC[+b.dataset.ck];importer(v,await EN_LIGNE.fichierVersion(v.fichier));}));
+  h.querySelectorAll("[data-ov]").forEach(b=>b.onclick=async()=>{const ref=b.dataset.ov;b.disabled=true;
+    try{const n=await EN_LIGNE.voter(ref,EN_LIGNE.aVote(ref));b.querySelector("b").textContent=n;b.classList.toggle("on",EN_LIGNE.aVote(ref));}catch(x){toast(x.message);}b.disabled=false;});
   if($("hubToutes"))$("hubToutes").onclick=()=>ajouterFiches(fiches.map(propositionEnFiche));
   if($("hubVoirLab"))$("hubVoirLab").onclick=()=>ouvrirModule("lab");
 }
@@ -21427,7 +21553,23 @@ Object.assign(EN,{
 "Aucune fiche publiée pour l'instant. Écrivez la première avec « + Fiche ».":"No sheet published yet. Write the first one with \"+ Sheet\".",
 "Le téléchargement a échoué":"The download failed","Téléchargement…":"Downloading…",
 "Toutes les versions de la bibliothèque : l'officielle, celles des communautés, la vôtre. Choisissez celle que vous lisez.":"Every version of the library: the official one, the communities' ones, yours. Choose the one you read.",
-"Vous lisez":"You're reading","Version officielle":"Official version"
+"Vous lisez":"You're reading","Version officielle":"Official version",
+"calques":"layers","cartes":"maps","Calque sans nom":"Unnamed layer","Carte sans nom":"Unnamed map","Repère":"Marker","repères":"markers","tuiles":"tiles","plan":"plan",
+"Ce que contient ma version":"What my version contains","Toutes les fiches":"All sheets","Sans catégorie":"No category","Chercher une fiche à ajouter…":"Search a sheet to add…",
+"Calques de repères":"Marker layers","Cartes":"Maps","Aucun calque pour l'instant : créez-en un dans la vue Cartes.":"No layer yet: create one in the Maps view.",
+"Aucune carte pour l'instant : créez-en une dans la vue Cartes.":"No map yet: create one in the Maps view.",
+"Cochez au moins une fiche, un calque ou une carte.":"Tick at least one sheet, layer or map.",
+"Trop lourd pour Phenix Hub (25 Mo au plus) : retirez une carte, ou enregistrez le fichier.":"Too heavy for Phenix Hub (25 MB max): remove a map, or save the file.",
+"Calques de repères des communautés":"Community marker layers","Cartes des communautés":"Community maps",
+"Aucun calque partagé pour l'instant. Partagez le vôtre depuis Phenix Lab.":"No shared layer yet. Share yours from Phenix Lab.",
+"Aucune carte partagée pour l'instant. Partagez la vôtre depuis Phenix Lab.":"No shared map yet. Share yours from Phenix Lab.",
+"Ajouter à mes cartes":"Add to my maps","Cartes et calques":"Maps and layers",
+"Créez une carte hors ligne ou un calque de repères (sources, abris, dangers) dans la vue Cartes, puis partagez-le ici. Une fois vérifié, il apparaît dans Phenix Hub pour tout le monde.":"Create an offline map or a marker layer (springs, shelters, dangers) in the Maps view, then share it here. Once checked, it shows up in Phenix Hub for everyone.",
+"Créer une carte ou un calque":"Create a map or a layer","Calque":"Layer","Carte":"Map",
+"Nom public, ex : Sources du massif des Bauges":"Public name, e.g. Springs of the Bauges range",
+"Ce qu'il montre, d'où viennent les repères (facultatif)":"What it shows, where the markers come from (optional)",
+"Bien reçu":"Received","Il apparaît dans Phenix Hub une fois vérifié.":"It shows up in Phenix Hub once checked.","Le partage ouvre très bientôt.":"Sharing opens very soon.",
+"Donnez-lui un nom.":"Give it a name.","Rien à partager pour l'instant : posez des repères ou enregistrez une carte dans la vue Cartes.":"Nothing to share yet: drop markers or save a map in the Maps view."
 });
 
 // Traductions anglaises des modules officiels, de la navigation sur téléphone et du retour au corpus.
