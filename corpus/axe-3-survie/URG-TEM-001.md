@@ -10,7 +10,7 @@ materiel: Rien
 priorite: flash
 origine: officielle
 tags: [urgence, vent, tempete, abri]
-sources: ["Météo-France — vigilance et comportements en cas de tempête", "National Weather Service — tornado and severe wind safety", "OMS — Health impacts of storms"]
+sources: ["Météo-France, vigilance et comportements en cas de tempête", "National Weather Service, tornado and severe wind safety", "OMS, Health impacts of storms"]
 ---
 
 ::Le vent ne blesse presque personne directement. Ce sont les objets qu'il transporte et les structures qu'il arrache.::

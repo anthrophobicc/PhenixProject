@@ -10,7 +10,7 @@ materiel: Technique
 priorite: normale
 origine: officielle
 tags: [chauffage, fumee, monoxyde, habitat]
-sources: ["Santé publique France — intoxications au monoxyde de carbone, bilans annuels", "Centre scientifique et technique du bâtiment — conduits de fumée", "NFPA 211 — Standard for Chimneys, Fireplaces, Vents"]
+sources: ["Santé publique France, intoxications au monoxyde de carbone, bilans annuels", "Centre scientifique et technique du bâtiment, conduits de fumée", "NFPA 211, Standard for Chimneys, Fireplaces, Vents"]
 ---
 
 ::Toute combustion consomme de l'oxygène et produit des gaz. L'un d'eux n'a ni odeur, ni couleur, ni goût, et il endort avant d'alerter.::

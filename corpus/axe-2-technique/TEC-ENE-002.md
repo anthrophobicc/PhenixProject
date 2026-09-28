@@ -10,7 +10,7 @@ materiel: Technique
 priorite: normale
 origine: officielle
 tags: [electricite, circuit, mesure, donnees]
-sources: ["IEC 60050 — Vocabulaire électrotechnique international", "IEC 60364 — Installations électriques basse tension", "INRS — Effets du courant électrique sur le corps humain"]
+sources: ["IEC 60050, Vocabulaire électrotechnique international", "IEC 60364, Installations électriques basse tension", "INRS, Effets du courant électrique sur le corps humain"]
 ---
 
 ::Trois grandeurs, une relation entre elles, deux façons de brancher. Tout le reste de l'électricité en découle.::

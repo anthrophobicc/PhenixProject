@@ -10,7 +10,7 @@ materiel: Récupération
 priorite: normale
 origine: officielle
 tags: [archive, support, papier, gravure, redondance, transmission, memoire]
-sources: ["Bibliothèque nationale de France — conservation des supports, normes de permanence du papier", "ISO 9706 — Papier permanent, exigences", "National Archives — Preservation of records, supports et environnements", "Études sur la longévité comparée des supports numériques et analogiques"]
+sources: ["Bibliothèque nationale de France, conservation des supports, normes de permanence du papier", "ISO 9706, Papier permanent, exigences", "National Archives, Preservation of records, supports et environnements", "Études sur la longévité comparée des supports numériques et analogiques"]
 ---
 
 ::Le savoir ne se perd pas quand personne ne le sait. Il se perd quand personne ne peut plus le lire. Le support décide de ce qui traverse le temps, pas le contenu.::

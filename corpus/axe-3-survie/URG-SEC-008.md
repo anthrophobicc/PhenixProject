@@ -10,7 +10,7 @@ materiel: Rien
 priorite: flash
 origine: officielle
 tags: [triage, urgence, hemorragie, priorite, secours, catastrophe]
-sources: ["Méthode START — Simple Triage and Rapid Treatment, Newport Beach Fire Department", "OTAN / doctrine MARCH pour la prise en charge de multiples blessés", "Recommandations sur le triage préhospitalier en situation de victimes multiples", "Sécurité civile — organisation des secours en nombre"]
+sources: ["Méthode START, Simple Triage and Rapid Treatment, Newport Beach Fire Department", "OTAN / doctrine MARCH pour la prise en charge de multiples blessés", "Recommandations sur le triage préhospitalier en situation de victimes multiples", "Sécurité civile, organisation des secours en nombre"]
 ---
 
 ::Quand il y a plus de blessés que de mains, sauver le plus de monde impose d'abandonner temporairement certains. C'est le geste le plus dur du secourisme, et ne pas le faire tue davantage.::

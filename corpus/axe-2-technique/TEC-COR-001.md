@@ -10,7 +10,7 @@ materiel: Récupération
 priorite: normale
 origine: officielle
 tags: [metaux, corrosion, materiaux, entretien]
-sources: ["NACE International — Corrosion Basics", "ASM International — Handbook of Corrosion", "Centre technique des industries mécaniques — corrosion galvanique"]
+sources: ["NACE International, Corrosion Basics", "ASM International, Handbook of Corrosion", "Centre technique des industries mécaniques, corrosion galvanique"]
 ---
 
 ::Un métal ne rouille pas parce qu'il est vieux. Il rouille parce qu'il retourne à l'état où on l'a trouvé.::

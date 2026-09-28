@@ -10,7 +10,7 @@ materiel: Rien
 priorite: normale
 origine: officielle
 tags: [animaux, danger, prevention, terrain]
-sources: ["Office français de la biodiversité — conduite à tenir face à la faune sauvage", "Interagency Grizzly Bear Committee — bear safety guidelines", "Institut Pasteur — morsures et envenimations", "Centres antipoison — envenimations par serpents en France"]
+sources: ["Office français de la biodiversité, conduite à tenir face à la faune sauvage", "Interagency Grizzly Bear Committee, bear safety guidelines", "Institut Pasteur, morsures et envenimations", "Centres antipoison, envenimations par serpents en France"]
 ---
 
 ::La quasi-totalité des attaques est un accident de rencontre. Se faire entendre évite plus d'ennuis que n'importe quelle arme.::

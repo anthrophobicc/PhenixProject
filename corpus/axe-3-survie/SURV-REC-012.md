@@ -10,7 +10,7 @@ materiel: Récupération
 priorite: normale
 origine: officielle
 tags: [gare, rail, caténaire, isolateur, cuivre, céramique, infrastructure, récupération]
-sources: ["SNCF Réseau — Architecture et composants de l'infrastructure ferroviaire", "Documentation sur l'alimentation électrique des lignes ferroviaires, caténaire et sous-stations", "Retours d'expérience sur la maintenance et les composants des gares"]
+sources: ["SNCF Réseau, Architecture et composants de l'infrastructure ferroviaire", "Documentation sur l'alimentation électrique des lignes ferroviaires, caténaire et sous-stations", "Retours d'expérience sur la maintenance et les composants des gares"]
 ---
 
 ::Une gare est un entrepôt qui s'ignore. Des kilomètres de cuivre au-dessus des voies, des tonnes d'acier dans les rails, de l'énergie stockée dans les armoires techniques, et des isolateurs en céramique que personne ne regarde — jusqu'au jour où chaque composant compte.::

@@ -10,7 +10,7 @@ materiel: Rien
 priorite: normale
 origine: officielle
 tags: [alimentation, plantes, toxique, decision]
-sources: ["Centres antipoison français — rapports annuels d'intoxications par plantes", "Wilderness Medical Society — Practice Guidelines, plant and mushroom poisoning", "US Army Survival Manual FM 21-76 — et les critiques documentées du test de comestibilité universel", "European Association of Poisons Centres — amatoxin poisoning"]
+sources: ["Centres antipoison français, rapports annuels d'intoxications par plantes", "Wilderness Medical Society, Practice Guidelines, plant and mushroom poisoning", "US Army Survival Manual FM 21-76, et les critiques documentées du test de comestibilité universel", "European Association of Poisons Centres, amatoxin poisoning"]
 ---
 
 ::Il n'existe aucun test qui rende un aliment inconnu sûr. Celui qu'on vous a appris ne fonctionne pas, et il tue précisément dans les cas où l'on comptait sur lui.::

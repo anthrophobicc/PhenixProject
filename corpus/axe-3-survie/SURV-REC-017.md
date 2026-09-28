@@ -10,7 +10,7 @@ materiel: Récupération
 priorite: normale
 origine: officielle
 tags: [satellite, panneau solaire, néodyme, hydrazine, espace, MLI, récupération]
-sources: ["ESA — Composition et architecture des satellites en orbite basse", "NASA — Guide de sécurité pour la récupération de débris spatiaux", "Documentation sur les matériaux et systèmes embarqués des satellites de communication et d'observation"]
+sources: ["ESA, Composition et architecture des satellites en orbite basse", "NASA, Guide de sécurité pour la récupération de débris spatiaux", "Documentation sur les matériaux et systèmes embarqués des satellites de communication et d'observation"]
 ---
 
 ::Un satellite tombé est un objet d'exception : panneaux solaires de qualité aérospatiale, aimants de précision, métaux rares — et parfois un réservoir d'hydrazine qui tue au contact. La valeur est immense, le danger aussi.::

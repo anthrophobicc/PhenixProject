@@ -10,7 +10,7 @@ materiel: Rien
 priorite: normale
 origine: officielle
 tags: [conserve, alimentation, recuperation, outil]
-sources: ["USDA Food Safety and Inspection Service — Shelf-stable food safety, dented and swollen cans", "OMS — Botulisme, fiche d'information", "Brevet britannique de Peter Durand (1810) et brevet américain d'Ezra Warner (1858)"]
+sources: ["USDA Food Safety and Inspection Service, Shelf-stable food safety, dented and swollen cans", "OMS, Botulisme, fiche d'information", "Brevet britannique de Peter Durand (1810) et brevet américain d'Ezra Warner (1858)"]
 ---
 
 ::Une boîte de conserve a un point faible : son serti, la bordure repliée du couvercle. Usez-le, et le couvercle se soulève tout seul, sans couteau et sans éclat de métal dans la nourriture.::

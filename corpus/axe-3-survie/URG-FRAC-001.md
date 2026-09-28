@@ -10,7 +10,7 @@ materiel: Récupération
 priorite: flash
 origine: officielle
 tags: [urgence, secourisme, os, immobilisation]
-sources: ["Recommandations Premiers Secours — Ministère de l'Intérieur, France", "Wilderness Medical Society — Practice Guidelines for Basic Wilderness First Aid", "Croix-Rouge française — traumatismes des membres"]
+sources: ["Recommandations Premiers Secours, Ministère de l'Intérieur, France", "Wilderness Medical Society, Practice Guidelines for Basic Wilderness First Aid", "Croix-Rouge française, traumatismes des membres"]
 ---
 
 ::On n'immobilise pas pour soigner. On immobilise pour que rien n'empire pendant le transport.::

@@ -10,7 +10,7 @@ materiel: Technique
 priorite: normale
 origine: officielle
 tags: [recuperation, blinde, char, inventaire, optique, batterie, acier, filtre, munition]
-sources: ["Manuels d'entretien de véhicules blindés, chapitres dépose et dépannage", "UNMAS — Explosive Ordnance Risk Education, principes généraux", "NATO STANAG, principes des systèmes de surpression et de filtration collective", "Documentation technique sur les optiques infrarouges au germanium", "Nations unies — IATG, Directives techniques internationales sur les munitions, divisions de risque"]
+sources: ["Manuels d'entretien de véhicules blindés, chapitres dépose et dépannage", "UNMAS, Explosive Ordnance Risk Education, principes généraux", "NATO STANAG, principes des systèmes de surpression et de filtration collective", "Documentation technique sur les optiques infrarouges au germanium", "Nations unies, IATG, Directives techniques internationales sur les munitions, divisions de risque"]
 ---
 
 ::Un char, c'est trente à soixante tonnes d'acier, d'optique, de cuivre et de mécanique lourde, garées pour toujours à l'endroit où elles sont tombées. Presque tout est récupérable. Une seule chose ne l'est pas.::

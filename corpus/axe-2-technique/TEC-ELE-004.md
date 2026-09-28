@@ -12,7 +12,7 @@ origine: officielle
 parent: TEC-ELE-001
 chapitre: 3
 tags: [elevage, abri, cloture, parasites]
-sources: ["FAO — Housing for smallholder livestock", "INRAE — gestion du pâturage et parasitisme"]
+sources: ["FAO, Housing for smallholder livestock", "INRAE, gestion du pâturage et parasitisme"]
 ---
 
 ::L'abri ne sert pas à réchauffer. Il sert à couper la pluie, le vent et les prédateurs, et il doit rester ventilé.::

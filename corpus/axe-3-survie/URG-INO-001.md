@@ -10,7 +10,7 @@ materiel: Rien
 priorite: flash
 origine: officielle
 tags: [urgence, eau, inondation, evacuation]
-sources: ["Ministère de la Transition écologique — comportements en cas d'inondation", "National Weather Service — flood safety, Turn Around Don't Drown", "OMS — Flooding and communicable diseases"]
+sources: ["Ministère de la Transition écologique, comportements en cas d'inondation", "National Weather Service, flood safety, Turn Around Don't Drown", "OMS, Flooding and communicable diseases"]
 ---
 
 ::Trente centimètres d'eau courante emportent une voiture. Quinze centimètres suffisent à faire tomber un adulte. Ce n'est pas la hauteur qui décide, c'est le courant.::

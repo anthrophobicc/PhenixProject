@@ -12,7 +12,7 @@ origine: officielle
 parent: TEC-ELE-001
 chapitre: 2
 tags: [elevage, alimentation, fourrage]
-sources: ["INRAE — bases de l'alimentation des ruminants", "FAO — Feeding systems for smallholder livestock"]
+sources: ["INRAE, bases de l'alimentation des ruminants", "FAO, Feeding systems for smallholder livestock"]
 ---
 
 ::L'eau est le premier facteur limitant, avant l'aliment. Une privation d'une seule journée fait chuter la production, et c'est l'erreur la plus fréquente.::

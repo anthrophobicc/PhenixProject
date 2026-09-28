@@ -10,7 +10,7 @@ materiel: Rien
 priorite: normale
 origine: officielle
 tags: [botanique, toxique, plantes, sante, donnees]
-sources: ["Centres antipoison et de toxicovigilance — bilans annuels, France", "Bruneton J., Plantes toxiques : végétaux dangereux pour l'homme et les animaux", "Royal Botanic Gardens Kew — poisonous plants database", "European Association of Poisons Centres and Clinical Toxicologists"]
+sources: ["Centres antipoison et de toxicovigilance, bilans annuels, France", "Bruneton J., Plantes toxiques : végétaux dangereux pour l'homme et les animaux", "Royal Botanic Gardens Kew, poisonous plants database", "European Association of Poisons Centres and Clinical Toxicologists"]
 ---
 
 ::On ne retient pas des milliers d'espèces. On retient une dizaine de familles, une poignée de confusions, et trois signaux qui imposent l'arrêt.::

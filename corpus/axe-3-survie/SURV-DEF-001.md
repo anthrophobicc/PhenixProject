@@ -10,7 +10,7 @@ materiel: Récupération
 priorite: normale
 origine: officielle
 tags: [defense, surete, alerte, dissuasion, garde, groupe, confrontation]
-sources: ["CPTED — Crime Prevention Through Environmental Design, principes de prévention situationnelle", "Doctrine de sûreté physique — dissuader, détecter, retarder, répondre", "Cromwell & Olson — Breaking and Entering, entretiens de cambrioleurs sur le choix des cibles", "CICR / UNMAS — Victim-activated devices, données sur les victimes civiles des dispositifs laissés en place", "Katko v. Briney (Iowa, 1971) — jurisprudence de référence sur les dispositifs de défense automatiques"]
+sources: ["CPTED, Crime Prevention Through Environmental Design, principes de prévention situationnelle", "Doctrine de sûreté physique, dissuader, détecter, retarder, répondre", "Cromwell & Olson, Breaking and Entering, entretiens de cambrioleurs sur le choix des cibles", "CICR / UNMAS, Victim-activated devices, données sur les victimes civiles des dispositifs laissés en place", "Katko v. Briney (Iowa, 1971), jurisprudence de référence sur les dispositifs de défense automatiques"]
 ---
 
 ::Un lieu ne se tient pas avec un mur. Il se tient avec quatre choses enchaînées : ne pas donner envie, s'apercevoir à temps, gagner des minutes, et avoir décidé d'avance de ce qu'on fait de ces minutes.::

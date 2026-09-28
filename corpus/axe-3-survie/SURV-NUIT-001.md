@@ -10,7 +10,7 @@ materiel: Rien
 priorite: normale
 origine: officielle
 tags: [nuit, deplacement, discretion, vision]
-sources: ["US Army Field Manual — night operations and night vision", "Travaux sur l'adaptation à l'obscurité, Hecht S. & Mandelbaum J.", "Royal Institute of Navigation — night navigation"]
+sources: ["US Army Field Manual, night operations and night vision", "Travaux sur l'adaptation à l'obscurité, Hecht S. & Mandelbaum J.", "Royal Institute of Navigation, night navigation"]
 ---
 
 ::La nuit ne se combat pas avec une lampe. Elle s'utilise, et il faut d'abord accepter de ne rien voir pendant une demi-heure.::

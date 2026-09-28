@@ -10,7 +10,7 @@ materiel: Rien
 priorite: flash
 origine: officielle
 tags: [urgence, tir, couvert, ricochet, evacuation, secourisme, batiment]
-sources: ["Doctrine publique de réaction à une tuerie de masse — échapper, se cacher, se défendre (ministères de l'Intérieur, DHS, Home Office)", "CICR — Conseils de sécurité aux civils en zone de conflit", "Études balistiques sur la pénétration des matériaux de construction courants", "Retours d'expérience des services de secours sur la prise en charge en zone d'exclusion"]
+sources: ["Doctrine publique de réaction à une tuerie de masse, échapper, se cacher, se défendre (ministères de l'Intérieur, DHS, Home Office)", "CICR, Conseils de sécurité aux civils en zone de conflit", "Études balistiques sur la pénétration des matériaux de construction courants", "Retours d'expérience des services de secours sur la prise en charge en zone d'exclusion"]
 ---
 
 ::Personne ne choisit d'être là. Mais les dix premières secondes se jouent sur trois choses qu'on peut savoir à l'avance : d'où ça vient, ce qui arrête une balle, et par où on sort.::

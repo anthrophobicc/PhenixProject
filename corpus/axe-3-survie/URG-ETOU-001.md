@@ -10,7 +10,7 @@ materiel: Rien
 priorite: flash
 origine: officielle
 tags: [urgence, secourisme, respiration, sante]
-sources: ["European Resuscitation Council — Guidelines 2025, Basic Life Support", "Croix-Rouge française — l'étouffement", "Sapeurs-pompiers de France — obstruction des voies aériennes", "Manuel MSD — compressions abdominales et claques dans le dos"]
+sources: ["European Resuscitation Council, Guidelines 2025, Basic Life Support", "Croix-Rouge française, l'étouffement", "Sapeurs-pompiers de France, obstruction des voies aériennes", "Manuel MSD, compressions abdominales et claques dans le dos"]
 ---
 
 ::Une personne qui tousse s'en sortira seule. Une personne qui ne fait aucun bruit a quelques minutes.::

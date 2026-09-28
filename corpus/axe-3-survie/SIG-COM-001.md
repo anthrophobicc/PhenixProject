@@ -10,7 +10,7 @@ materiel: Récupération
 priorite: flash
 origine: officielle
 tags: [urgence, signal, secours]
-sources: ["Signal de détresse alpin — commissions internationales de secours en montagne", "Codes de détresse sol-air internationaux"]
+sources: ["Signal de détresse alpin, commissions internationales de secours en montagne", "Codes de détresse sol-air internationaux"]
 ---
 
 ::Vous signaler, c'est renoncer à la discrétion. Prenez la décision une fois, et tenez-la.::

@@ -10,7 +10,7 @@ materiel: Technique
 priorite: normale
 origine: officielle
 tags: [masque, filtre, respiration, toxique, protection, decontamination, materiel]
-sources: ["EN 14387 — Filtres anti-gaz et filtres combinés", "EN 143 / EN 149 — Filtres à particules et demi-masques filtrants", "INRS ED 6106 — Les appareils de protection respiratoire", "NIOSH — Respirator Selection Logic", "EN 943 / EN 14605 / EN ISO 13982 — Vêtements de protection chimique, types 1 à 6"]
+sources: ["EN 14387, Filtres anti-gaz et filtres combinés", "EN 143 / EN 149, Filtres à particules et demi-masques filtrants", "INRS ED 6106, Les appareils de protection respiratoire", "NIOSH, Respirator Selection Logic", "EN 943 / EN 14605 / EN ISO 13982, Vêtements de protection chimique, types 1 à 6"]
 ---
 
 ::Un masque ne protège pas parce qu'il est sur votre visage. Il protège parce qu'il est étanche, adapté au produit, et pas encore saturé. Trois conditions, et il en manque presque toujours une.::

@@ -10,7 +10,7 @@ materiel: Technique
 priorite: normale
 origine: officielle
 tags: [bateau, navigation, mer, transport]
-sources: ["Règlement international pour prévenir les abordages en mer, COLREG", "Service hydrographique et océanographique de la marine — signalisation maritime", "Royal Yachting Association — boat handling"]
+sources: ["Règlement international pour prévenir les abordages en mer, COLREG", "Service hydrographique et océanographique de la marine, signalisation maritime", "Royal Yachting Association, boat handling"]
 ---
 
 ::Un bateau n'a pas de freins et le sol bouge. Toute la conduite consiste à anticiper ce qui, sur terre, se corrigerait à la dernière seconde.::

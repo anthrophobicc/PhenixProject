@@ -10,7 +10,7 @@ materiel: Rien
 priorite: normale
 origine: officielle
 tags: [information, rumeur, methode, decision]
-sources: ["Allport G., Postman L., The Psychology of Rumor", "Fédération internationale des Sociétés de la Croix-Rouge — information management in emergencies", "OMS — infodemic management"]
+sources: ["Allport G., Postman L., The Psychology of Rumor", "Fédération internationale des Sociétés de la Croix-Rouge, information management in emergencies", "OMS, infodemic management"]
 ---
 
 ::Dans une crise, l'information manquante est remplacée instantanément. Pas par du silence : par une histoire cohérente et fausse.::

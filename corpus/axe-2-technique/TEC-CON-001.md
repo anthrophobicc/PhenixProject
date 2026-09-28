@@ -10,7 +10,7 @@ materiel: Technique
 priorite: normale
 origine: officielle
 tags: [construction, habitat, structure, humidite]
-sources: ["Eurocode 1 — Actions sur les structures", "CSTB — Guide de la pathologie du bâtiment", "Agence qualité construction — désordres liés à l'humidité"]
+sources: ["Eurocode 1, Actions sur les structures", "CSTB, Guide de la pathologie du bâtiment", "Agence qualité construction, désordres liés à l'humidité"]
 ---
 
 ::Un bâtiment tient par le chemin que prennent les forces jusqu'au sol. Le comprendre, c'est savoir ce qu'on peut toucher et ce qu'on ne peut pas.::

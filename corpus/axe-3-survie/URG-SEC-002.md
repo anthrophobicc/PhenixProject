@@ -10,7 +10,7 @@ materiel: Rien
 priorite: flash
 origine: officielle
 tags: [urgence, noyade, eau, secourisme]
-sources: ["European Resuscitation Council — Guidelines 2025, drowning", "International Life Saving Federation — rescue and resuscitation statements", "SNSM — conduite à tenir face à une noyade"]
+sources: ["European Resuscitation Council, Guidelines 2025, drowning", "International Life Saving Federation, rescue and resuscitation statements", "SNSM, conduite à tenir face à une noyade"]
 ---
 
 ::Une personne qui se noie ne crie pas et ne bat pas des bras. Elle est verticale, silencieuse, et elle disparaît en moins d'une minute.::

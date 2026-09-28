@@ -10,7 +10,7 @@ materiel: Récupération
 priorite: normale
 origine: officielle
 tags: [noeuds, corde, technique, base]
-sources: ["Ashley C., The Ashley Book of Knots", "Cordage Institute — knot efficiency data", "International Guild of Knot Tyers — technical notes"]
+sources: ["Ashley C., The Ashley Book of Knots", "Cordage Institute, knot efficiency data", "International Guild of Knot Tyers, technical notes"]
 ---
 
 ::Cinq nœuds sus par cœur valent mieux que trente reconnus dans un livre. Le critère n'est pas la solidité : c'est de pouvoir le défaire après.::

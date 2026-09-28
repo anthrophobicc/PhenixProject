@@ -10,7 +10,7 @@ materiel: Rien
 priorite: normale
 origine: officielle
 tags: [sante, fievre, infection, surveillance]
-sources: ["OMS — Integrated Management of Childhood Illness, signes de danger", "Haute Autorité de Santé — fièvre de l'adulte", "NICE — Fever in under 5s: assessment and initial management"]
+sources: ["OMS, Integrated Management of Childhood Illness, signes de danger", "Haute Autorité de Santé, fièvre de l'adulte", "NICE, Fever in under 5s: assessment and initial management"]
 ---
 
 ::La fièvre n'est pas la maladie. C'est la réponse. La question utile n'est jamais « combien » mais « avec quoi ».::

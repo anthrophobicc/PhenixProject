@@ -10,7 +10,7 @@ materiel: Rien
 priorite: flash
 origine: officielle
 tags: [eau, urgence, base, sante]
-sources: ["OMS — Directives sur la qualité de l'eau de boisson, 4e édition", "Institut Pasteur — FAQ Santé, eau de boisson", "CDC — Backcountry Water Treatment", "Santé Canada — Avis d'ébullition"]
+sources: ["OMS, Directives sur la qualité de l'eau de boisson, 4e édition", "Institut Pasteur, FAQ Santé, eau de boisson", "CDC, Backcountry Water Treatment", "Santé Canada, Avis d'ébullition"]
 ---
 
 ::Une eau claire n'est pas une eau sûre. La soif tue en trois jours, l'eau mauvaise en un.::

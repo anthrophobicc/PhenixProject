@@ -10,7 +10,7 @@ materiel: Récupération
 priorite: normale
 origine: officielle
 tags: [recuperation, batiment, securite, methode]
-sources: ["INRS — risques liés aux espaces confinés", "Agence qualité construction — pathologies du bâtiment et risques d'effondrement", "Guides de sécurité des sapeurs-pompiers pour la reconnaissance en bâtiment"]
+sources: ["INRS, risques liés aux espaces confinés", "Agence qualité construction, pathologies du bâtiment et risques d'effondrement", "Guides de sécurité des sapeurs-pompiers pour la reconnaissance en bâtiment"]
 ---
 
 ::La ressource la plus rare dans un bâtiment abandonné, ce n'est pas ce qu'on y trouve. C'est le temps qu'on y passe sans être vu ni blessé.::

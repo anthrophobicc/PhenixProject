@@ -10,7 +10,7 @@ materiel: Récupération
 priorite: normale
 origine: officielle
 tags: [corde, fibres, materiaux, donnees]
-sources: ["Cordage Institute — fibre rope technical standards", "USDA Forest Products Laboratory — natural fibres", "Ashley C., The Ashley Book of Knots"]
+sources: ["Cordage Institute, fibre rope technical standards", "USDA Forest Products Laboratory, natural fibres", "Ashley C., The Ashley Book of Knots"]
 ---
 
 ::Sans lien, rien ne tient. La corde est l'objet le plus sous-estimé d'un équipement et le plus difficile à remplacer.::

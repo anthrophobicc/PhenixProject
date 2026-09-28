@@ -10,7 +10,7 @@ materiel: Récupération
 priorite: normale
 origine: officielle
 tags: [vision, lunettes, myopie, presbytie, lentille, pinhole, loupe, oeil]
-sources: ["Cours d'optique physiologique — fonctionnement de l'oeil et amétropies", "OMS — Déficiences visuelles non corrigées dans le monde", "Documentation sur les lunettes sténopéiques et la correction par trou d'épingle"]
+sources: ["Cours d'optique physiologique, fonctionnement de l'oeil et amétropies", "OMS, Déficiences visuelles non corrigées dans le monde", "Documentation sur les lunettes sténopéiques et la correction par trou d'épingle"]
 ---
 
 ::La moitié de l'humanité voit mal sans correction. Quand les lunettes cassent et que l'opticien n'existe plus, comprendre pourquoi on voit flou est le premier pas pour y remédier — et un carton percé d'un trou remplace toutes les lentilles du monde.::

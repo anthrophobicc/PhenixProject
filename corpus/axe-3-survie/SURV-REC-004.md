@@ -10,7 +10,7 @@ materiel: Technique
 priorite: normale
 origine: officielle
 tags: [recuperation, epave, danger, pyrotechnie, munition, aeronef, blindage]
-sources: ["CIMIC / UNMAS — Explosive Ordnance Risk Education, principes généraux", "US Air Force Technical Order 00-105E-9 — Aerospace Emergency Rescue and Mishap Response, dispositifs pyrotechniques de bord", "NFPA 422 — Aircraft Accident Response Guide", "AIEA — Sécurité des sources radioactives de faible activité"]
+sources: ["CIMIC / UNMAS, Explosive Ordnance Risk Education, principes généraux", "US Air Force Technical Order 00-105E-9, Aerospace Emergency Rescue and Mishap Response, dispositifs pyrotechniques de bord", "NFPA 422, Aircraft Accident Response Guide", "AIEA, Sécurité des sources radioactives de faible activité"]
 ---
 
 ::Un véhicule civil transporte des gens. Un engin militaire transporte de l'énergie destructrice, et il est conçu pour qu'elle survive à l'accident. Tout le reste découle de ça.::

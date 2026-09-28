@@ -12,7 +12,7 @@ origine: officielle
 parent: TEC-ELE-001
 chapitre: 4
 tags: [elevage, reproduction, selection]
-sources: ["INRAE — bases de la reproduction des ruminants", "FAO — Animal genetic resources and breeding"]
+sources: ["INRAE, bases de la reproduction des ruminants", "FAO, Animal genetic resources and breeding"]
 ---
 
 ::C'est ce qui distingue un élevage d'une réserve qui s'épuise. Sans reproduction maîtrisée, un troupeau n'est qu'un stock qui décroît.::

@@ -10,7 +10,7 @@ materiel: Rien
 priorite: flash
 origine: officielle
 tags: [urgence, secourisme, sang, sante]
-sources: ["Recommandations Premiers Secours — Ministère de l'Intérieur, France", "Comité international de la Croix-Rouge — premiers secours en milieu isolé", "Stop the Bleed — American College of Surgeons"]
+sources: ["Recommandations Premiers Secours, Ministère de l'Intérieur, France", "Comité international de la Croix-Rouge, premiers secours en milieu isolé", "Stop the Bleed, American College of Surgeons"]
 ---
 
 ::Un adulte a cinq litres de sang. Il peut en perdre deux avant de ne plus revenir. Vous avez le temps d'agir, mais pas celui d'hésiter.::

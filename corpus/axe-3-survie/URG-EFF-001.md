@@ -10,7 +10,7 @@ materiel: Rien
 priorite: flash
 origine: officielle
 tags: [urgence, rupture, eau, methode, organisation]
-sources: ["Fédération internationale des Sociétés de la Croix-Rouge — Public awareness and public education for disaster risk reduction", "Sécurité civile — Se préparer aux situations d'urgence", "OMS — Minimum water quantity needed for domestic use in emergencies"]
+sources: ["Fédération internationale des Sociétés de la Croix-Rouge, Public awareness and public education for disaster risk reduction", "Sécurité civile, Se préparer aux situations d'urgence", "OMS, Minimum water quantity needed for domestic use in emergencies"]
 ---
 
 ::Aucun protocole ne couvre toutes les ruptures. Mais les premières heures se ressemblent presque toujours, et elles décident du reste.::

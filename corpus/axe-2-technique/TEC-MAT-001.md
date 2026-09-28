@@ -10,7 +10,7 @@ materiel: Récupération
 priorite: normale
 origine: officielle
 tags: [bois, materiaux, construction, donnees]
-sources: ["USDA Forest Products Laboratory — Wood Handbook", "FCBA — Guide des essences de bois", "FAO — Wood fuels handbook"]
+sources: ["USDA Forest Products Laboratory, Wood Handbook", "FCBA, Guide des essences de bois", "FAO, Wood fuels handbook"]
 ---
 
 ::Le bois n'est pas une matière homogène. C'est un faisceau de tubes orientés, et tout son comportement découle de cette orientation.::

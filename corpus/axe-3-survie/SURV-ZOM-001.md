@@ -10,7 +10,7 @@ materiel: Récupération
 priorite: normale
 origine: officielle
 tags: [exercice, epidemie, quarantaine, siege, mobilite, abri, groupe]
-sources: ["OMS — Managing epidemics, key facts about major deadly diseases", "Quarantelli E.L. — Sociology of panic, Disaster Research Center", "CDC — Preparedness 101: Zombie Pandemic (support pédagogique)", "HCR/UNHCR — Handbook for Emergencies, standards d'eau et d'assainissement en regroupement"]
+sources: ["OMS, Managing epidemics, key facts about major deadly diseases", "Quarantelli E.L., Sociology of panic, Disaster Research Center", "CDC, Preparedness 101: Zombie Pandemic (support pédagogique)", "HCR/UNHCR, Handbook for Emergencies, standards d'eau et d'assainissement en regroupement"]
 ---
 
 ::Il n'y a pas de zombies. Il y a des épidémies, des foules, des quarantaines et des sièges — et cet exercice sert à les raisonner ensemble, une bonne fois.::

@@ -10,7 +10,7 @@ materiel: Rien
 priorite: flash
 origine: officielle
 tags: [urgence, secourisme, bilan, methode]
-sources: ["European Resuscitation Council — Guidelines 2025, Basic Life Support", "Recommandations Premiers Secours — Ministère de l'Intérieur, France", "Wilderness Medical Society — Practice Guidelines, patient assessment"]
+sources: ["European Resuscitation Council, Guidelines 2025, Basic Life Support", "Recommandations Premiers Secours, Ministère de l'Intérieur, France", "Wilderness Medical Society, Practice Guidelines, patient assessment"]
 ---
 
 ::On ne soigne bien que ce qu'on a vu. Et on ne voit que ce qu'on cherche dans l'ordre.::

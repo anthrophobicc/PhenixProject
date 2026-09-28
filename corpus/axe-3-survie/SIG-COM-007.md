@@ -10,7 +10,7 @@ materiel: Technique
 priorite: normale
 origine: officielle
 tags: [vie privee, donnees, compartimentation, disparition, effacement, telephone]
-sources: ["de Montjoye Y.-A. et al., Unique in the Crowd, Scientific Reports, 2013", "Greenwood F., Missing persons investigations — retours des services de recherche sur les modes de localisation", "CNIL — Droit à l'effacement, droit d'accès et opposition", "Affaire Darwin (Royaume-Uni, 2002-2007), dossier public de fraude par mise en scène de décès"]
+sources: ["de Montjoye Y.-A. et al., Unique in the Crowd, Scientific Reports, 2013", "Greenwood F., Missing persons investigations, retours des services de recherche sur les modes de localisation", "CNIL, Droit à l'effacement, droit d'accès et opposition", "Affaire Darwin (Royaume-Uni, 2002-2007), dossier public de fraude par mise en scène de décès"]
 ---
 
 ::Se retirer marche, et ce n'est pas une affaire de technique. Ceux qui échouent échouent presque tous pour la même raison, et elle est humaine.::

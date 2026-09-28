@@ -10,7 +10,7 @@ materiel: Rien
 priorite: flash
 origine: officielle
 tags: [urgence, secourisme, feu, sante]
-sources: ["Organisation mondiale de la santé — Burns, fiche d'information", "Recommandations Premiers Secours — Ministère de l'Intérieur, France", "British Burn Association — first aid guidance"]
+sources: ["Organisation mondiale de la santé, Burns, fiche d'information", "Recommandations Premiers Secours, Ministère de l'Intérieur, France", "British Burn Association, first aid guidance"]
 ---
 
 ::L'eau froide pendant vingt minutes fait plus pour une brûlure que tout ce que vous pourriez appliquer dessus.::

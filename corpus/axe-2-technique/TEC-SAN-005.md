@@ -10,7 +10,7 @@ materiel: Rien
 priorite: normale
 origine: officielle
 tags: [sante, eau, physiologie, donnees]
-sources: ["OMS — Oral rehydration salts, composition and use", "OMS — The treatment of diarrhoea, a manual for physicians", "European Food Safety Authority — Dietary reference values for water"]
+sources: ["OMS, Oral rehydration salts, composition and use", "OMS, The treatment of diarrhoea, a manual for physicians", "European Food Safety Authority, Dietary reference values for water"]
 ---
 
 ::L'eau perdue ne se remplace pas par l'eau seule. C'est le sel qui décide de savoir si elle reste dans le corps.::

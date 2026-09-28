@@ -10,7 +10,7 @@ materiel: Récupération
 priorite: normale
 origine: officielle
 tags: [recuperation, electronique, batterie, lithium, signal]
-sources: ["Battery University — cellules lithium-ion : décharge profonde, stockage, sécurité", "INRS — Batteries au lithium : risques d'incendie", "iFixit — guides de démontage d'ordinateurs portables"]
+sources: ["Battery University, cellules lithium-ion : décharge profonde, stockage, sécurité", "INRS, Batteries au lithium : risques d'incendie", "iFixit, guides de démontage d'ordinateurs portables"]
 ---
 
 ::Un ordinateur portable mort contient une batterie, des aimants parmi les plus puissants qui existent, un miroir parfait et un écran. À condition de savoir quoi garder, et quoi ne jamais percer.::

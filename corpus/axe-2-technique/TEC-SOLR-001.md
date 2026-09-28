@@ -10,7 +10,7 @@ materiel: Technique
 priorite: normale
 origine: officielle
 tags: [electricite, solaire, energie, autonomie]
-sources: ["IEA Photovoltaic Power Systems Programme — technical reports", "Sandia National Laboratories — Photovoltaic Systems Handbook", "IEC 61215 — qualification des modules photovoltaïques"]
+sources: ["IEA Photovoltaic Power Systems Programme, technical reports", "Sandia National Laboratories, Photovoltaic Systems Handbook", "IEC 61215, qualification des modules photovoltaïques"]
 ---
 
 ::Un panneau solaire ne produit pas de l'électricité quand il fait chaud. Il en produit quand il reçoit de la lumière, et il en produit moins quand il chauffe.::

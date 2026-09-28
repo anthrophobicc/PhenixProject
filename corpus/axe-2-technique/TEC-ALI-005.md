@@ -10,7 +10,7 @@ materiel: Technique
 priorite: normale
 origine: officielle
 tags: [conservation, botulisme, alimentation, securite]
-sources: ["USDA — Complete Guide to Home Canning", "National Center for Home Food Preservation — research-based recommendations", "OMS — Botulism, fiche d'information", "ANSES — avis sur les conserves familiales"]
+sources: ["USDA, Complete Guide to Home Canning", "National Center for Home Food Preservation, research-based recommendations", "OMS, Botulism, fiche d'information", "ANSES, avis sur les conserves familiales"]
 ---
 
 ::C'est la seule technique de conservation dont l'échec ne se voit pas, ne se sent pas et ne se goûte pas.::

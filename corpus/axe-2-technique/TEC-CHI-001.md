@@ -10,7 +10,7 @@ materiel: Récupération
 priorite: normale
 origine: officielle
 tags: [chimie, materiaux, securite, sante]
-sources: ["IUPAC — définitions de l'acidité et de la basicité", "INRS — fiches toxicologiques des acides et bases usuels", "Institut national de recherche et de sécurité — guide des incompatibilités chimiques"]
+sources: ["IUPAC, définitions de l'acidité et de la basicité", "INRS, fiches toxicologiques des acides et bases usuels", "Institut national de recherche et de sécurité, guide des incompatibilités chimiques"]
 ---
 
 ::La question n'est presque jamais « est-ce un acide ». C'est « qu'est-ce que ça attaque, et que se passe-t-il si je le mélange ».::

@@ -10,7 +10,7 @@ materiel: Récupération
 priorite: normale
 origine: officielle
 tags: [protection, gilet, plaque, entretien, stockage, ceramique, aramide]
-sources: ["NIJ Standard 0101.06 — Ballistic Resistance of Body Armor, niveaux et protocoles", "Notices constructeurs, inspection et durée de vie des panneaux souples et des plaques", "Études sur le traumatisme contondant derrière blindage", "Retours d'expérience sur le vieillissement de l'aramide à l'humidité et aux ultraviolets"]
+sources: ["NIJ Standard 0101.06, Ballistic Resistance of Body Armor, niveaux et protocoles", "Notices constructeurs, inspection et durée de vie des panneaux souples et des plaques", "Études sur le traumatisme contondant derrière blindage", "Retours d'expérience sur le vieillissement de l'aramide à l'humidité et aux ultraviolets"]
 ---
 
 ::Oui, ça s'entretient — et mal entretenu, ça ne protège plus sans que rien ne le montre. C'est toute la traîtrise de l'objet.::

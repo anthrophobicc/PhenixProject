@@ -10,7 +10,7 @@ materiel: Récupération
 priorite: normale
 origine: officielle
 tags: [friche, batiment, amiante, plomb, structure, datation, industrie]
-sources: ["INRS — Amiante, repérage avant travaux et matériaux concernés", "ANSES — Expositions au plomb dans l'habitat ancien", "Guides de diagnostic de pathologie du bâtiment, carbonatation et corrosion des armatures", "Code pénal et code civil français, dispositions sur la propriété privée et la violation de domicile"]
+sources: ["INRS, Amiante, repérage avant travaux et matériaux concernés", "ANSES, Expositions au plomb dans l'habitat ancien", "Guides de diagnostic de pathologie du bâtiment, carbonatation et corrosion des armatures", "Code pénal et code civil français, dispositions sur la propriété privée et la violation de domicile"]
 ---
 
 ::Un bâtiment abandonné raconte tout : ce qu'il était, quand il a été bâti, comment il meurt, et ce qui vous tuera dedans. Il suffit de savoir où regarder.::

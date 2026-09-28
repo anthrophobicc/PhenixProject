@@ -10,7 +10,7 @@ materiel: Technique
 priorite: normale
 origine: officielle
 tags: [fil, filage, fuseau, rouet, torsion, fibre, laine, coton, lin]
-sources: ["Barber E., Prehistoric Textiles — fibres et techniques de filage", "Documentation sur le filage au fuseau et au rouet", "Manuels de transformation des fibres textiles brutes"]
+sources: ["Barber E., Prehistoric Textiles, fibres et techniques de filage", "Documentation sur le filage au fuseau et au rouet", "Manuels de transformation des fibres textiles brutes"]
 ---
 
 ::Des fibres courtes et faibles, torsadées ensemble, deviennent un fil long et solide. C'est le principe du filage, et il n'a pas changé depuis dix mille ans. Ce qui a changé, c'est la vitesse — pas la physique.::

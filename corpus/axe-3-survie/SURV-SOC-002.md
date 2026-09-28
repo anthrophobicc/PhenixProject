@@ -10,7 +10,7 @@ materiel: Rien
 priorite: normale
 origine: officielle
 tags: [decision, groupe, consensus, vote, urgence, biais, organisation]
-sources: ["Janis I., Groupthink — Psychological Studies of Policy Decisions", "Ostrom E., Governing the Commons, règles de décision collective durables", "Surowiecki J., The Wisdom of Crowds, conditions de la décision collective", "Retours d'expérience des expéditions et équipages sur la conduite en situation critique"]
+sources: ["Janis I., Groupthink, Psychological Studies of Policy Decisions", "Ostrom E., Governing the Commons, règles de décision collective durables", "Surowiecki J., The Wisdom of Crowds, conditions de la décision collective", "Retours d'expérience des expéditions et équipages sur la conduite en situation critique"]
 ---
 
 ::Un groupe ne décide pas mieux qu'un individu par magie. Il décide mieux à trois conditions précises — et sans elles, il décide bien plus mal, avec l'assurance tranquille du nombre.::

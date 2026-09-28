@@ -10,7 +10,7 @@ materiel: Récupération
 priorite: normale
 origine: officielle
 tags: [munition, explosif, danger, marquage, laiton, caisse, terrain]
-sources: ["UNMAS / IMAS 12.10 — Explosive Ordnance Risk Education, normes internationales", "CICR — Restes explosifs de guerre, études sur les victimes civiles", "Handicap International — Sous-munitions, rapports d'observatoire", "US Army TM 60A-1-1-31, familles de munitions et distances d'évacuation"]
+sources: ["UNMAS / IMAS 12.10, Explosive Ordnance Risk Education, normes internationales", "CICR, Restes explosifs de guerre, études sur les victimes civiles", "Handicap International, Sous-munitions, rapports d'observatoire", "US Army TM 60A-1-1-31, familles de munitions et distances d'évacuation"]
 ---
 
 ::Une munition qui n'a pas explosé n'est pas une munition ratée. C'est une munition armée qui attend, et c'est pour ça qu'elle est plus dangereuse que celle qui a fonctionné.::

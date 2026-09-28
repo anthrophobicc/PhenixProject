@@ -10,7 +10,7 @@ materiel: Rien
 priorite: normale
 origine: officielle
 tags: [sechage, conservation, eau, moisissure, viande, fruit, air]
-sources: ["FAO — Manual for the preparation and sale of dried fruits and vegetables", "Beuchat L., Water activity and microbial stability, Journal of Food Protection", "Institut Pasteur / ANSES — Seuils d'activité de l'eau et croissance microbienne", "USDA — Complete Guide to Home Canning and Drying"]
+sources: ["FAO, Manual for the preparation and sale of dried fruits and vegetables", "Beuchat L., Water activity and microbial stability, Journal of Food Protection", "Institut Pasteur / ANSES, Seuils d'activité de l'eau et croissance microbienne", "USDA, Complete Guide to Home Canning and Drying"]
 ---
 
 ::Ce qui conserve, ce n'est pas l'absence d'eau. C'est l'absence d'eau *disponible* — et la nuance explique pourquoi le miel ne moisit jamais alors qu'il en contient.::

@@ -10,7 +10,7 @@ materiel: Technique
 priorite: normale
 origine: officielle
 tags: [electricite, groupe, batterie, inverseur, retroalimentation, terre, priorite]
-sources: ["NF C 15-100 — Installations électriques à basse tension, dispositions sur les sources de remplacement", "Enedis — Consignes de sécurité sur le raccordement de groupes électrogènes", "Rapports de sécurité électrique sur les accidents de rétro-alimentation", "Documentation constructeurs d'inverseurs de source et d'onduleurs"]
+sources: ["NF C 15-100, Installations électriques à basse tension, dispositions sur les sources de remplacement", "Enedis, Consignes de sécurité sur le raccordement de groupes électrogènes", "Rapports de sécurité électrique sur les accidents de rétro-alimentation", "Documentation constructeurs d'inverseurs de source et d'onduleurs"]
 ---
 
 ::Une seule règle tue dans ce domaine, et elle tue quelqu'un d'autre que vous : on isole avant d'injecter. Tout le reste n'est que dimensionnement.::

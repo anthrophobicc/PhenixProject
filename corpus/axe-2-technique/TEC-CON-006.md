@@ -10,7 +10,7 @@ materiel: Récupération
 priorite: normale
 origine: officielle
 tags: [assainissement, hygiene, eau, habitat]
-sources: ["OMS — Guidelines on sanitation and health", "Sphere Handbook — Water supply, sanitation and hygiene promotion", "OMS/UNICEF — Joint Monitoring Programme, sanitation ladder"]
+sources: ["OMS, Guidelines on sanitation and health", "Sphere Handbook, Water supply, sanitation and hygiene promotion", "OMS/UNICEF, Joint Monitoring Programme, sanitation ladder"]
 ---
 
 ::Séparer les excreta de l'eau et des mains est l'intervention sanitaire la plus efficace jamais mesurée. Elle passe avant le traitement de l'eau.::

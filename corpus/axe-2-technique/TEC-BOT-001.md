@@ -10,7 +10,7 @@ materiel: Rien
 priorite: normale
 origine: officielle
 tags: [botanique, plantes, identification, nature]
-sources: ["Flore de France, Coste H.", "Royal Botanic Gardens Kew — plant identification guidance", "Centres antipoison français — rapports annuels sur les intoxications par plantes"]
+sources: ["Flore de France, Coste H.", "Royal Botanic Gardens Kew, plant identification guidance", "Centres antipoison français, rapports annuels sur les intoxications par plantes"]
 ---
 
 ::Une plante ne s'identifie pas à la ressemblance. Elle s'identifie à des caractères précis, un par un, jusqu'à ce qu'il ne reste qu'une possibilité.::

@@ -10,7 +10,7 @@ materiel: Technique
 priorite: normale
 origine: officielle
 tags: [impression3d, FDM, PLA, ABS, fabrication, couche, modèle, buse]
-sources: ["Documentation technique sur l'impression FDM et SLA", "RepRap Project — imprimantes auto-réplicables", "Guides de paramétrage et de maintenance des imprimantes grand public"]
+sources: ["Documentation technique sur l'impression FDM et SLA", "RepRap Project, imprimantes auto-réplicables", "Guides de paramétrage et de maintenance des imprimantes grand public"]
 ---
 
 ::Une imprimante 3D construit un objet en empilant des couches de matière fondue, une par une, du bas vers le haut. C'est lent, limité et révolutionnaire — parce que la seule machine qui fabrique n'importe quelle forme sans moule, sans outil de coupe et sans savoir-faire manuel.::

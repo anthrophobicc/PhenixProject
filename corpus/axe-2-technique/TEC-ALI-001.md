@@ -10,7 +10,7 @@ materiel: Rien
 priorite: normale
 origine: officielle
 tags: [alimentation, energie, nutrition, donnees]
-sources: ["FAO/OMS/UNU — Human energy requirements, rapport technique", "European Food Safety Authority — Dietary reference values", "FAO — Protein and amino acid requirements in human nutrition"]
+sources: ["FAO/OMS/UNU, Human energy requirements, rapport technique", "European Food Safety Authority, Dietary reference values", "FAO, Protein and amino acid requirements in human nutrition"]
 ---
 
 ::Une ration se calcule, elle ne s'estime pas. L'erreur ne se voit qu'au bout de trois semaines, et elle ne se rattrape pas.::

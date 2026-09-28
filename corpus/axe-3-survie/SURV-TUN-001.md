@@ -10,7 +10,7 @@ materiel: Technique
 priorite: normale
 origine: officielle
 tags: [souterrain, discretion, habitat, chantier, bois, beton, securite]
-sources: ["OSHA — 29 CFR 1926 Subpart P, Excavations", "INRS — documentation sur le blindage des tranchées", "NIOSH — Working in Confined Spaces, criteria document"]
+sources: ["OSHA, 29 CFR 1926 Subpart P, Excavations", "INRS, documentation sur le blindage des tranchées", "NIOSH, Working in Confined Spaces, criteria document"]
 ---
 
 ::La terre ne prévient pas. Elle tient, elle tient, puis elle tombe d'un coup.::

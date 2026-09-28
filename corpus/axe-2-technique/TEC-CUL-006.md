@@ -1,6 +1,6 @@
 ---
 id: TEC-CUL-006
-titre: Rester en forme sans équipement
+titre: L'exercice physique sans équipement
 axe: 2
 categorie: Culture et Loisirs
 temps: Court
@@ -9,41 +9,38 @@ risque: Discret
 materiel: Rien
 priorite: normale
 origine: officielle
-tags: [sport, forme, exercices au poids du corps, methode naturelle, hebert, marche, souplesse, moral]
+tags: [sport, forme, poids du corps, methode naturelle, hebert, parcours du combattant, parkour, marche, oms, moral]
 sources: ["Organisation mondiale de la santé, Lignes directrices sur l'activité physique et la sédentarité, 2020", "Hébert G., L'éducation physique ou l'entraînement complet par la méthode naturelle, 1912"]
 ---
 
-::Au début du XXe siècle, un officier de marine français, Georges Hébert, observe que les peuples qui vivent dehors sont plus forts et plus agiles que les athlètes des stades. Il en tire une méthode sans aucun appareil : marcher, courir, sauter, grimper, se tenir en équilibre, lever, lancer, nager, se défendre. Elle a inspiré les parcours du combattant et le parkour.::
+::Au début du XXe siècle, l'officier de marine français Georges Hébert observe que les peuples qui vivent dehors sont plus forts et plus agiles que les athlètes des stades. Il en tire une méthode sans aucun appareil : marcher, courir, sauter, grimper, se tenir en équilibre, lever, lancer, nager, se défendre. Elle a inspiré les parcours du combattant militaires et, un siècle plus tard, le parkour.::
 
 ## Combien
 
-L'OMS conseille aux adultes **au moins deux heures et demie par semaine** d'activité modérée (marche rapide, vélo, travail physique), plus deux séances de renforcement des muscles. Moins que ça, on perd de la force et du souffle ; en crise, on en a besoin plus que jamais.
+L'Organisation mondiale de la santé recommande aux adultes au moins 150 minutes par semaine d'activité d'intensité modérée (marche rapide, vélo, travail physique), ou 75 minutes d'activité soutenue, et deux séances de renforcement musculaire. La sédentarité est l'un des principaux facteurs de risque de maladies chroniques.
 
-## Une séance sans rien
+## Le poids du corps
 
-Deux à trois tours, une minute de pause entre les exercices :
-
-- **Les squats** : descendre comme pour s'asseoir, dos droit, talons au sol. 10 à 20.
-- **Les pompes** : sur les genoux ou contre un mur pour commencer. 5 à 20.
-- **La planche** : sur les avant-bras, le corps gainé et droit. 20 à 60 secondes.
-- **Les fentes** : un grand pas en avant, genou arrière vers le sol. 10 par jambe.
-- **Les tractions** à une branche, ou le **tirage** allongé sous une table solide.
-- **Monter des marches**, une colline, en portant un sac.
+Le corps sert lui-même de charge. Les exercices de base couvrent l'ensemble des muscles :
+- **Le squat**, flexion des jambes comme pour s'asseoir : cuisses et fessiers.
+- **Les pompes** : poitrine, épaules, bras. Les versions sur les genoux ou contre un mur les rendent accessibles aux débutants.
+- **La planche**, gainage sur les avant-bras : abdominaux et dos.
+- **Les fentes** : jambes et équilibre.
+- **Les tractions** à une barre ou une branche : dos et bras.
+- **La montée de marches ou de pentes**, avec ou sans charge.
 
 ## La méthode naturelle
 
-- **Marcher** longtemps, **courir** un peu, **sauter** un fossé, **grimper** à un arbre ou un mur bas, **ramper**, **porter** un camarade, **se tenir en équilibre** sur un tronc.
-- Sur un parcours dans la nature, en variant, à plusieurs si possible.
+Hébert classait les gestes utiles en dix familles : marcher, courir, sauter, quadrupédie, grimper, équilibre, lever, lancer, se défendre, nager. Elle se pratique sur un parcours dans la nature, en variant les efforts, et reste enseignée dans l'armée française.
 
-## Les règles
+## Les principes d'entraînement
 
-- **Commencer doucement** et augmenter peu à peu : la blessure arrête tout.
-- **S'échauffer** quelques minutes avant, s'étirer doucement après.
-- **Économiser l'énergie** quand on mange trop peu : alors, on marche et on s'étire, on ne s'épuise pas. Voir [[TEC-ALI-023]].
-- **Porter lourd** : jambes fléchies, dos droit. Voir [[TEC-MEC-018]].
+- **La progressivité** : les charges augmentent peu à peu, car la blessure arrête tout.
+- **L'échauffement** prépare les muscles et les articulations.
+- **La dépense et l'apport** : quand la nourriture manque, l'effort intense épuise les réserves ; la marche et les étirements entretiennent sans épuiser. Voir [[TEC-ALI-023]].
 
-## Pourquoi c'est vital
+## Au-delà des muscles
 
-Le corps entraîné porte, marche, résiste au froid et aux maladies. Et l'effort physique est l'un des meilleurs remèdes contre l'angoisse et l'insomnie. Voir [[TEC-SAN-019]] et [[TEC-SAN-023]].
+L'activité physique améliore la résistance au froid et aux infections, le sommeil et l'humeur : elle fait partie des traitements recommandés contre l'anxiété et la dépression légère. Voir [[TEC-SAN-019]] et [[TEC-SAN-023]].
 
-Marcher longtemps : [[SURV-DEP-001]].
+Marcher longtemps : [[SURV-DEP-001]]. Porter lourd : [[TEC-MEC-018]].

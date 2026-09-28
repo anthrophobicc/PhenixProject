@@ -10,7 +10,7 @@ materiel: Rien
 priorite: normale
 origine: officielle
 tags: [alimentation, rendement, cueillette, calories]
-sources: ["FAO/OMS/UNU — Human energy requirements", "Études ethnographiques sur les rendements de subsistance des chasseurs-cueilleurs", "Kelly R., The Lifeways of Hunter-Gatherers"]
+sources: ["FAO/OMS/UNU, Human energy requirements", "Études ethnographiques sur les rendements de subsistance des chasseurs-cueilleurs", "Kelly R., The Lifeways of Hunter-Gatherers"]
 ---
 
 ::La question n'est pas de trouver à manger. C'est de trouver plus de calories que vous n'en dépensez à les chercher.::

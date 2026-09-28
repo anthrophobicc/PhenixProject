@@ -10,7 +10,7 @@ materiel: Rien
 priorite: normale
 origine: officielle
 tags: [sol, agriculture, botanique, eau]
-sources: ["FAO — Guidelines for soil description, 4e édition", "INRAE — Référentiel pédologique", "USDA — Soil texture by feel analysis"]
+sources: ["FAO, Guidelines for soil description, 4e édition", "INRAE, Référentiel pédologique", "USDA, Soil texture by feel analysis"]
 ---
 
 ::Un sol se lit avec les mains en trois minutes. Cette lecture décide de ce qui poussera, de ce qui tiendra debout, et de l'endroit où l'eau se trouve.::

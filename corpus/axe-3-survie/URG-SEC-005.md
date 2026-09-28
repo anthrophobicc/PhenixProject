@@ -10,7 +10,7 @@ materiel: Rien
 priorite: flash
 origine: officielle
 tags: [urgence, coeur, malaise, secourisme]
-sources: ["European Resuscitation Council — Guidelines 2025", "European Society of Cardiology — acute coronary syndromes guidelines", "Recommandations Premiers Secours — Ministère de l'Intérieur, France"]
+sources: ["European Resuscitation Council, Guidelines 2025", "European Society of Cardiology, acute coronary syndromes guidelines", "Recommandations Premiers Secours, Ministère de l'Intérieur, France"]
 ---
 
 ::Une douleur dans la poitrine qui dure plus de quelques minutes et ne cède pas au repos se traite comme un problème cardiaque jusqu'à preuve du contraire.::

@@ -10,7 +10,7 @@ materiel: Rien
 priorite: normale
 origine: officielle
 tags: [rupture, duree, eau, assainissement, organisation, ration, moral]
-sources: ["Sphere Association — Manuel Sphère, standards humanitaires minimums", "HCR/UNHCR — Handbook for Emergencies", "OMS — Minimum water quantity needed for domestic use in emergencies", "MSF — Public health engineering in precarious situations"]
+sources: ["Sphere Association, Manuel Sphère, standards humanitaires minimums", "HCR/UNHCR, Handbook for Emergencies", "OMS, Minimum water quantity needed for domestic use in emergencies", "MSF, Public health engineering in precarious situations"]
 ---
 
 ::Les premières heures se jouent sur les réflexes. Les premières semaines se jouent sur les latrines, le calendrier et la manière dont on se parle.::

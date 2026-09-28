@@ -10,7 +10,7 @@ materiel: Technique
 priorite: normale
 origine: officielle
 tags: [drone, multiroteur, moteur, brushless, batterie, lipo, GPS, caméra, militaire]
-sources: ["Documentation technique sur l'architecture des multiroteurs civils", "Études sur les drones militaires — catégories, systèmes et emploi", "Manuels de pilotage et d'entretien des drones civils"]
+sources: ["Documentation technique sur l'architecture des multiroteurs civils", "Études sur les drones militaires, catégories, systèmes et emploi", "Manuels de pilotage et d'entretien des drones civils"]
 ---
 
 ::Un drone est un robot volant avec des yeux. Quatre hélices, une batterie, un ordinateur qui tient l'équilibre mille fois par seconde, et une caméra qui voit ce que le pilote ne peut pas voir. Comprendre ce qu'il y a dedans, c'est comprendre ce qu'il peut et ce qu'il ne peut pas.::

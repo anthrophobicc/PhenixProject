@@ -10,7 +10,7 @@ materiel: Récupération
 priorite: normale
 origine: officielle
 tags: [outils, affutage, acier, donnees]
-sources: ["ASM International — Heat treating of steel", "Verhoeven J., Metallurgy of Steel for Bladesmiths", "US Forest Service — Axe and crosscut saw manual"]
+sources: ["ASM International, Heat treating of steel", "Verhoeven J., Metallurgy of Steel for Bladesmiths", "US Forest Service, Axe and crosscut saw manual"]
 ---
 
 ::Un tranchant n'est pas une chose pointue. C'est la rencontre de deux surfaces planes, et sa qualité tient à la régularité de cette rencontre.::

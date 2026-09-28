@@ -10,7 +10,7 @@ materiel: Récupération
 priorite: normale
 origine: officielle
 tags: [eau, habitat, base]
-sources: ["OMS — Rainwater harvesting guidance", "FAO — Water harvesting systems"]
+sources: ["OMS, Rainwater harvesting guidance", "FAO, Water harvesting systems"]
 ---
 
 ::La pluie est la seule ressource qui vient à vous. Vous n'avez ni à marcher, ni à vous montrer.::

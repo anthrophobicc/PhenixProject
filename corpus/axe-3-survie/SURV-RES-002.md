@@ -10,7 +10,7 @@ materiel: Récupération
 priorite: normale
 origine: officielle
 tags: [peche, pieges, alimentation, rendement]
-sources: ["FAO — Fishing gear and methods, technical documentation", "Études ethnographiques sur les techniques de piégeage traditionnelles", "Kelly R., The Lifeways of Hunter-Gatherers"]
+sources: ["FAO, Fishing gear and methods, technical documentation", "Études ethnographiques sur les techniques de piégeage traditionnelles", "Kelly R., The Lifeways of Hunter-Gatherers"]
 ---
 
 ::Un dispositif qui travaille pendant que vous dormez rend plus que n'importe quelle poursuite. C'est toute la logique.::

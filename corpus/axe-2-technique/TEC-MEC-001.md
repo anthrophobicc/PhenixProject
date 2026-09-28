@@ -10,7 +10,7 @@ materiel: Technique
 priorite: normale
 origine: officielle
 tags: [assemblage, mecanique, outils, donnees]
-sources: ["Machinery's Handbook — fasteners and joining", "American Welding Society — welding fundamentals", "USDA Forest Products Laboratory — Wood Handbook, chapitre sur les assemblages"]
+sources: ["Machinery's Handbook, fasteners and joining", "American Welding Society, welding fundamentals", "USDA Forest Products Laboratory, Wood Handbook, chapitre sur les assemblages"]
 ---
 
 ::Un assemblage se choisit sur une seule question : est-ce que je veux pouvoir le défaire ?::

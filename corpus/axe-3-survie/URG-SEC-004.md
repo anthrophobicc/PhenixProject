@@ -10,7 +10,7 @@ materiel: Rien
 priorite: flash
 origine: officielle
 tags: [urgence, tete, secourisme, surveillance]
-sources: ["NICE — Head injury: assessment and early management", "Recommandations Premiers Secours — Ministère de l'Intérieur, France", "Wilderness Medical Society — Practice Guidelines, head injury"]
+sources: ["NICE, Head injury: assessment and early management", "Recommandations Premiers Secours, Ministère de l'Intérieur, France", "Wilderness Medical Society, Practice Guidelines, head injury"]
 ---
 
 ::Ce qui tue dans un traumatisme crânien n'arrive presque jamais au moment du choc. Cela arrive dans les heures qui suivent, pendant qu'on croit que c'est passé.::

@@ -10,7 +10,7 @@ materiel: Rien
 priorite: flash
 origine: officielle
 tags: [urgence, air, toxique, fumee, confinement, masque, monoxyde]
-sources: ["INRS ED 6106 — Les appareils de protection respiratoire", "NIOSH — Respirator Selection Logic", "HHS CHEMM — Patient Decontamination Recommendations", "Sécurité civile — Consignes de mise à l'abri lors d'un accident chimique"]
+sources: ["INRS ED 6106, Les appareils de protection respiratoire", "NIOSH, Respirator Selection Logic", "HHS CHEMM, Patient Decontamination Recommendations", "Sécurité civile, Consignes de mise à l'abri lors d'un accident chimique"]
 ---
 
 ::Un filtre ne fabrique pas d'oxygène. C'est la phrase qui tue le plus de monde dans les caves, les silos et les cuves.::

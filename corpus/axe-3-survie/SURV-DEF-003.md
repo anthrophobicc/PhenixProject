@@ -10,7 +10,7 @@ materiel: Rien
 priorite: normale
 origine: officielle
 tags: [terrain, couvert, deplacement, batiment, ville, foret, contenir]
-sources: ["CICR — Conseils de sécurité aux civils en zone de conflit", "Doctrine publique de protection des populations en zone urbaine", "Études de pénétration des matériaux de construction", "Retours d'expérience des organisations humanitaires sur les déplacements en zone contestée"]
+sources: ["CICR, Conseils de sécurité aux civils en zone de conflit", "Doctrine publique de protection des populations en zone urbaine", "Études de pénétration des matériaux de construction", "Retours d'expérience des organisations humanitaires sur les déplacements en zone contestée"]
 ---
 
 ::Le terrain décide avant vous. Il dit où passent les tirs, où la terre protège, et par où on sort. Le lire prend trente secondes et ça se lit de la même façon partout.::

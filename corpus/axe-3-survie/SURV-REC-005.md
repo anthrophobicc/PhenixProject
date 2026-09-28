@@ -10,7 +10,7 @@ materiel: Récupération
 priorite: normale
 origine: officielle
 tags: [recuperation, commerce, stock, alimentation, priorite, hygiene]
-sources: ["FDA / USDA — Food Safety During Power Outage, règle des quatre heures", "ANSES — Conduite à tenir en cas de rupture de la chaîne du froid", "OMS — Five keys to safer food", "INRS — Risques liés au stockage en rayonnages et aux installations frigorifiques à l'ammoniac"]
+sources: ["FDA / USDA, Food Safety During Power Outage, règle des quatre heures", "ANSES, Conduite à tenir en cas de rupture de la chaîne du froid", "OMS, Five keys to safer food", "INRS, Risques liés au stockage en rayonnages et aux installations frigorifiques à l'ammoniac"]
 ---
 
 ::Tout le monde entre par le même rayon et repart avec la même chose. Ce qui compte est derrière la porte marquée « réserve », et personne n'y va.::

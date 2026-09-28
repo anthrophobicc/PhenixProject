@@ -10,7 +10,7 @@ materiel: Technique
 priorite: normale
 origine: officielle
 tags: [chaux, calcaire, mortier, desinfection, cycle, brulure, carbonatation]
-sources: ["Boynton R., Chemistry and Technology of Lime and Limestone", "OMS — Usage de la chaux pour l'assainissement et la désinfection", "Documentation sur les fours à chaux traditionnels et la calcination", "RILEM — Mortiers de chaux, prise et carbonatation"]
+sources: ["Boynton R., Chemistry and Technology of Lime and Limestone", "OMS, Usage de la chaux pour l'assainissement et la désinfection", "Documentation sur les fours à chaux traditionnels et la calcination", "RILEM, Mortiers de chaux, prise et carbonatation"]
 ---
 
 ::La chaux est le produit chimique le plus utile qu'on puisse fabriquer avec une pierre et du feu. Elle lie, elle assainit, elle blanchit — et elle boucle un cycle qui la ramène à la pierre d'origine.::

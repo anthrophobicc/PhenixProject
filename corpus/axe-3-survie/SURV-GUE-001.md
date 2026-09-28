@@ -10,7 +10,7 @@ materiel: Rien
 priorite: flash
 origine: officielle
 tags: [eau, franchissement, deplacement, danger]
-sources: ["Swiftwater rescue — principes de sécurité en eau vive", "Wilderness Medical Society — cold water immersion", "US Army Field Manual — river crossing operations"]
+sources: ["Swiftwater rescue, principes de sécurité en eau vive", "Wilderness Medical Society, cold water immersion", "US Army Field Manual, river crossing operations"]
 ---
 
 ::Un cours d'eau qui vous arrive aux genoux peut vous emporter. Ce n'est pas la profondeur qui décide, c'est le produit de la profondeur par la vitesse.::

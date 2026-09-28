@@ -10,7 +10,7 @@ materiel: Récupération
 priorite: normale
 origine: officielle
 tags: [commissariat, police, gilet, arme, radio, munitions, récupération]
-sources: ["Ministère de l'Intérieur — Dotation des services de police nationale", "Documentation sur les équipements des forces de sécurité intérieure", "Retours d'expérience sur l'organisation matérielle des commissariats et brigades"]
+sources: ["Ministère de l'Intérieur, Dotation des services de police nationale", "Documentation sur les équipements des forces de sécurité intérieure", "Retours d'expérience sur l'organisation matérielle des commissariats et brigades"]
 ---
 
 ::Un commissariat est un arsenal, un poste de communication et une infirmerie dans le même bâtiment. En temps normal, c'est un lieu interdit. Quand l'ordre s'effondre, c'est un des premiers sites à connaître — et un des premiers à être vidé.::

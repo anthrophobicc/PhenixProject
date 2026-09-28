@@ -10,7 +10,7 @@ materiel: Récupération
 priorite: normale
 origine: officielle
 tags: [toiture, etancheite, habitat, construction]
-sources: ["CSTB — règles professionnelles de couverture", "USDA Forest Products Laboratory — roof design and moisture", "Agence qualité construction — désordres liés aux infiltrations"]
+sources: ["CSTB, règles professionnelles de couverture", "USDA Forest Products Laboratory, roof design and moisture", "Agence qualité construction, désordres liés aux infiltrations"]
 ---
 
 ::Une toiture n'est pas étanche. Elle est conçue pour que l'eau glisse plus vite qu'elle ne pénètre, ce qui n'est pas la même chose.::

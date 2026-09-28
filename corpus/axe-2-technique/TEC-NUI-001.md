@@ -10,7 +10,7 @@ materiel: Technique
 priorite: normale
 origine: officielle
 tags: [vision, nuit, optique, recuperation, donnees]
-sources: ["Hecht S., Haig C., Chase A. — The influence of light adaptation on subsequent dark adaptation of the eye", "Night Vision and Electronic Sensors Directorate — technical reports on image intensification", "Documentation technique des capteurs CMOS et filtres infrarouges"]
+sources: ["Hecht S., Haig C., Chase A., The influence of light adaptation on subsequent dark adaptation of the eye", "Night Vision and Electronic Sensors Directorate, technical reports on image intensification", "Documentation technique des capteurs CMOS et filtres infrarouges"]
 ---
 
 ::Trois choses différentes s'appellent « vision nocturne ». Une seule se fabrique avec de la récupération, et ce n'est pas celle qu'on imagine.::

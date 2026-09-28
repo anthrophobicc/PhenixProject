@@ -10,7 +10,7 @@ materiel: Rien
 priorite: normale
 origine: officielle
 tags: [deplacement, marche, pieds, endurance]
-sources: ["US Army Research Institute of Environmental Medicine — load carriage studies", "Wilderness Medical Society — practice guidelines, blister prevention", "Institut national du sport — physiologie de la marche prolongée"]
+sources: ["US Army Research Institute of Environmental Medicine, load carriage studies", "Wilderness Medical Society, practice guidelines, blister prevention", "Institut national du sport, physiologie de la marche prolongée"]
 ---
 
 ::Ce qui arrête un marcheur n'est presque jamais la fatigue. C'est un pied, une articulation, ou une décision prise trop tard.::

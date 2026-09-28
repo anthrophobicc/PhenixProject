@@ -10,7 +10,7 @@ materiel: Récupération
 priorite: flash
 origine: officielle
 tags: [urgence, chaleur, sante, secourisme, eau]
-sources: ["European Resuscitation Council — Guidelines 2025, Special Circumstances in Resuscitation", "Santé publique France — Bulletin épidémiologique hebdomadaire, chaleur et performance sportive, avril 2025", "Korey Stringer Institute — exertional heat stroke, cold water immersion", "Secourisme.net — conduite à tenir face à la chaleur"]
+sources: ["European Resuscitation Council, Guidelines 2025, Special Circumstances in Resuscitation", "Santé publique France, Bulletin épidémiologique hebdomadaire, chaleur et performance sportive, avril 2025", "Korey Stringer Institute, exertional heat stroke, cold water immersion", "Secourisme.net, conduite à tenir face à la chaleur"]
 ---
 
 ::Refroidissez d'abord. Transportez ensuite. Dans cet ordre, et pas dans l'autre.::

@@ -10,7 +10,7 @@ materiel: Récupération
 priorite: normale
 origine: officielle
 tags: [fumage, conservation, phenols, bois, viande, poisson, hydrocarbures]
-sources: ["FAO — Fish smoking, principes et technologies", "Études sur les composés phénoliques de la fumée de bois et leur effet antimicrobien", "ANSES — Hydrocarbures aromatiques polycycliques dans les produits fumés", "USDA — Meat Smoking Guidelines"]
+sources: ["FAO, Fish smoking, principes et technologies", "Études sur les composés phénoliques de la fumée de bois et leur effet antimicrobien", "ANSES, Hydrocarbures aromatiques polycycliques dans les produits fumés", "USDA, Meat Smoking Guidelines"]
 ---
 
 ::La fumée n'est pas un parfum, c'est un dépôt chimique. Elle apporte des conservateurs, une barrière de surface, et un groupe de molécules qu'on préfère éviter.::

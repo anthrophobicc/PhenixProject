@@ -10,7 +10,7 @@ materiel: Rien
 priorite: normale
 origine: officielle
 tags: [lieux, réserve, semences, datacentre, silo, carburant, hôpital, stratégique]
-sources: ["FAO — Reserves mondiales de semences et banques de gènes", "Documentation sur les réserves stratégiques de pétrole et de céréales", "Retours d'expérience sur les sites critiques en situation de crise prolongée"]
+sources: ["FAO, Reserves mondiales de semences et banques de gènes", "Documentation sur les réserves stratégiques de pétrole et de céréales", "Retours d'expérience sur les sites critiques en situation de crise prolongée"]
 ---
 
 ::Certains lieux fixes, répartis dans le monde, concentrent des ressources qui n'existent nulle part ailleurs en telle quantité. Les connaître avant la crise, c'est savoir où aller quand la chaîne d'approvisionnement s'arrête.::

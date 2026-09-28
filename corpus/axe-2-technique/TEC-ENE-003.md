@@ -10,7 +10,7 @@ materiel: Technique
 priorite: normale
 origine: officielle
 tags: [electricite, cable, protection, donnees]
-sources: ["IEC 60364 — Installations électriques basse tension", "NF C 15-100 — Installations électriques basse tension, France", "INRS — prévention du risque électrique"]
+sources: ["IEC 60364, Installations électriques basse tension", "NF C 15-100, Installations électriques basse tension, France", "INRS, prévention du risque électrique"]
 ---
 
 ::Un câble ne protège rien. C'est ce qu'on met devant lui qui décide si une surcharge coupe le courant ou met le feu.::

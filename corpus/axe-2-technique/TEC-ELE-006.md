@@ -12,7 +12,7 @@ origine: officielle
 parent: TEC-ELE-001
 chapitre: 5
 tags: [elevage, sante, parasites, prevention]
-sources: ["FAO — Animal health, smallholder guidelines", "OMS — Zoonoses and the human-animal interface", "INRAE — parasitisme des ruminants au pâturage"]
+sources: ["FAO, Animal health, smallholder guidelines", "OMS, Zoonoses and the human-animal interface", "INRAE, parasitisme des ruminants au pâturage"]
 ---
 
 ::L'essentiel des pertes ne vient pas de maladies spectaculaires. Elles viennent de trois causes ordinaires, et les trois se préviennent par les conditions.::

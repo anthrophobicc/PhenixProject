@@ -10,7 +10,7 @@ materiel: Rien
 priorite: flash
 origine: officielle
 tags: [urgence, feu, fumee, evacuation]
-sources: ["National Fire Protection Association — fire safety data", "Sapeurs-pompiers de France — conduite à tenir en cas d'incendie", "UK Fire Service — smoke inhalation and evacuation guidance"]
+sources: ["National Fire Protection Association, fire safety data", "Sapeurs-pompiers de France, conduite à tenir en cas d'incendie", "UK Fire Service, smoke inhalation and evacuation guidance"]
 ---
 
 ::Les flammes ne sont pas ce qui tue. La fumée arrive avant, monte, et fait perdre connaissance en quelques respirations.::

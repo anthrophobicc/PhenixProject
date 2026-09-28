@@ -10,7 +10,7 @@ materiel: Rien
 priorite: normale
 origine: officielle
 tags: [religion, croyance, rituel, cognition, sacré, groupe, transmission]
-sources: ["Boyer P., Et l'homme créa les dieux — le mécanisme cognitif de la croyance", "Durkheim E., Les formes élémentaires de la vie religieuse", "Atran S., In Gods We Trust — bases évolutionnaires de la religion", "Norenzayan A., Big Gods — rôle des religions dans la coopération à grande échelle"]
+sources: ["Boyer P., Et l'homme créa les dieux, le mécanisme cognitif de la croyance", "Durkheim E., Les formes élémentaires de la vie religieuse", "Atran S., In Gods We Trust, bases évolutionnaires de la religion", "Norenzayan A., Big Gods, rôle des religions dans la coopération à grande échelle"]
 ---
 
 ::Les religions ne sont pas un accident de l'histoire. Elles sont un produit de la cognition humaine — le résultat de la façon dont le cerveau détecte des agents, cherche des causes et construit des groupes. Comprendre le mécanisme, c'est comprendre pourquoi toutes les sociétés humaines en ont produit, indépendamment les unes des autres.::

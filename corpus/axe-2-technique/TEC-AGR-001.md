@@ -10,7 +10,7 @@ materiel: Rien
 priorite: normale
 origine: officielle
 tags: [agriculture, semis, graines, donnees]
-sources: ["FAO — Seeds toolkit, quality seed production", "INRAE — germination et levée, bases physiologiques", "Royal Horticultural Society — sowing guidance"]
+sources: ["FAO, Seeds toolkit, quality seed production", "INRAE, germination et levée, bases physiologiques", "Royal Horticultural Society, sowing guidance"]
 ---
 
 ::Une graine ne pousse pas parce qu'on l'a mise en terre. Elle pousse parce que trois conditions sont réunies, et il suffit qu'une manque.::

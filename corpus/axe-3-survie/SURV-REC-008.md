@@ -10,7 +10,7 @@ materiel: Technique
 priorite: normale
 origine: officielle
 tags: [recuperation, avion, inventaire, radar, oxygene, titane, eolienne, siege ejectable]
-sources: ["US Air Force Technical Order 00-105E-9 — Aerospace Emergency Rescue and Mishap Response", "NFPA 422 — Aircraft Accident Response Guide", "Documentation technique sur les turbines à air dynamique de secours", "Fiches de sécurité hydrazine et oxygène liquide, INRS"]
+sources: ["US Air Force Technical Order 00-105E-9, Aerospace Emergency Rescue and Mishap Response", "NFPA 422, Aircraft Accident Response Guide", "Documentation technique sur les turbines à air dynamique de secours", "Fiches de sécurité hydrazine et oxygène liquide, INRS"]
 ---
 
 ::Un chasseur, c'est un cockpit piégé par conception, entouré de ce qu'une civilisation industrielle sait faire de mieux en alliages, en optique et en électronique.::

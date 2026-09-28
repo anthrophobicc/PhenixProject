@@ -10,7 +10,7 @@ materiel: Technique
 priorite: normale
 origine: officielle
 tags: [carte, orientation, navigation, terrain]
-sources: ["Institut géographique national — lecture de carte et notions de topographie", "Royal Institute of Navigation — land navigation", "US Army Field Manual — map reading and land navigation"]
+sources: ["Institut géographique national, lecture de carte et notions de topographie", "Royal Institute of Navigation, land navigation", "US Army Field Manual, map reading and land navigation"]
 ---
 
 ::Une carte ne sert à rien si vous ne savez pas où vous êtes dessus. Toute la lecture consiste à faire coïncider deux choses : le papier et le paysage.::

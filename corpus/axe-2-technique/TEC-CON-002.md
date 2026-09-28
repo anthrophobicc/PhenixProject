@@ -10,7 +10,7 @@ materiel: Rien
 priorite: normale
 origine: officielle
 tags: [fondation, sol, tassement, gel, argile, drainage, charge]
-sources: ["Eurocode 7 — Calcul géotechnique, principes de portance et de tassement", "BRGM — Retrait-gonflement des sols argileux, cartographie de l'aléa", "DTU 13.11 et 13.12 — Fondations superficielles", "Agence Qualité Construction — Pathologies des fondations"]
+sources: ["Eurocode 7, Calcul géotechnique, principes de portance et de tassement", "BRGM, Retrait-gonflement des sols argileux, cartographie de l'aléa", "DTU 13.11 et 13.12, Fondations superficielles", "Agence Qualité Construction, Pathologies des fondations"]
 ---
 
 ::Un mur ne s'enfonce pas parce qu'il est lourd. Il s'enfonce parce que le sol sous une partie porte moins que sous l'autre — et c'est la différence, pas le tassement, qui fissure.::

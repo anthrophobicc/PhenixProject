@@ -12,7 +12,7 @@ origine: officielle
 sommaire: oui
 parcours: Lisez cette introduction, puis le chapitre sur le choix de l'espèce : les deux décident de tout le reste. Nourrir et Loger se lisent avant de recevoir le premier animal. Reproduire, Santé et Abattre se consultent ensuite, au fil des saisons, dans l'ordre où les questions se posent.
 tags: [elevage, animaux, agriculture, autonomie]
-sources: ["FAO — Livestock production systems, technical guidelines", "FAO — Small-scale poultry production, technical guide", "INRAE — bases de la reproduction et de l'alimentation des ruminants"]
+sources: ["FAO, Livestock production systems, technical guidelines", "FAO, Small-scale poultry production, technical guide", "INRAE, bases de la reproduction et de l'alimentation des ruminants"]
 ---
 
 ::Un animal ne se garde pas, il s'entretient. Ce qu'on met dedans chaque jour décide de ce qu'on en tire, et cela ne se rattrape pas.::

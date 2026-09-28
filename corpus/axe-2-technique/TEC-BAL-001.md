@@ -10,7 +10,7 @@ materiel: Rien
 priorite: normale
 origine: officielle
 tags: [balistique, energie, penetration, ricochet, materiaux, protection, physique]
-sources: ["Normes NIJ 0101.06 et 0108.01 — essais de résistance balistique des matériaux et des blindages", "Études de pénétration des matériaux de construction courants, laboratoires de police scientifique", "Manuels de physique appliquée, trajectoire et traînée aérodynamique", "Travaux sur le ricochet à angle faible sur surfaces dures"]
+sources: ["Normes NIJ 0101.06 et 0108.01, essais de résistance balistique des matériaux et des blindages", "Études de pénétration des matériaux de construction courants, laboratoires de police scientifique", "Manuels de physique appliquée, trajectoire et traînée aérodynamique", "Travaux sur le ricochet à angle faible sur surfaces dures"]
 ---
 
 ::Une balle n'est pas magique. C'est une masse lancée vite, et tout ce qu'elle fait s'explique avec trois grandeurs : sa masse, sa vitesse, et ce qu'elle rencontre.::

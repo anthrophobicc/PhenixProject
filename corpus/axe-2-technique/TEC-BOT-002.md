@@ -10,7 +10,7 @@ materiel: Rien
 priorite: normale
 origine: officielle
 tags: [botanique, familles, identification, donnees]
-sources: ["Angiosperm Phylogeny Group — classification APG IV", "Spichiger R. et al., Botanique systématique des plantes à fleurs", "Royal Botanic Gardens Kew — plant families"]
+sources: ["Angiosperm Phylogeny Group, classification APG IV", "Spichiger R. et al., Botanique systématique des plantes à fleurs", "Royal Botanic Gardens Kew, plant families"]
 ---
 
 ::On ne retient pas des milliers d'espèces. On retient une dizaine de familles, et chacune vous dit d'avance ce que la plante risque d'être.::

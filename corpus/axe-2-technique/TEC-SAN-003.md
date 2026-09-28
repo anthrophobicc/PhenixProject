@@ -10,7 +10,7 @@ materiel: Rien
 priorite: normale
 origine: officielle
 tags: [anatomie, sante, corps, donnees]
-sources: ["Gray's Anatomy for Students, Drake, Vogl, Mitchell", "Netter F., Atlas d'anatomie humaine", "Wilderness Medical Society — Practice Guidelines, patient assessment"]
+sources: ["Gray's Anatomy for Students, Drake, Vogl, Mitchell", "Netter F., Atlas d'anatomie humaine", "Wilderness Medical Society, Practice Guidelines, patient assessment"]
 ---
 
 ::On ne soigne pas ce qu'on ne situe pas. Quelques repères osseux suffisent à savoir ce qui se trouve dessous.::

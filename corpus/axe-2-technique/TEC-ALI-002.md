@@ -10,7 +10,7 @@ materiel: Récupération
 priorite: normale
 origine: officielle
 tags: [fermentation, conservation, alimentation, donnees]
-sources: ["FAO — Fermented fruits and vegetables, a global perspective", "Katz S., The Art of Fermentation", "USDA — Complete Guide to Home Canning, chapitre sur les fermentations"]
+sources: ["FAO, Fermented fruits and vegetables, a global perspective", "Katz S., The Art of Fermentation", "USDA, Complete Guide to Home Canning, chapitre sur les fermentations"]
 ---
 
 ::On n'élimine pas les micro-organismes : on choisit lesquels gagnent. C'est le procédé de conservation le plus sûr sans matériel.::

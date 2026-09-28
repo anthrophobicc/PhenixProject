@@ -10,7 +10,7 @@ materiel: Rien
 priorite: flash
 origine: officielle
 tags: [urgence, intoxication, poison, secourisme]
-sources: ["Centres antipoison et de toxicovigilance — conduite à tenir, France", "European Association of Poisons Centres and Clinical Toxicologists — position papers on gastric decontamination", "OMS — Guidelines for poison control"]
+sources: ["Centres antipoison et de toxicovigilance, conduite à tenir, France", "European Association of Poisons Centres and Clinical Toxicologists, position papers on gastric decontamination", "OMS, Guidelines for poison control"]
 ---
 
 ::Le premier réflexe de tout le monde est de faire vomir. C'est presque toujours la mauvaise décision, et parfois la fatale.::

@@ -10,7 +10,7 @@ materiel: Récupération
 priorite: normale
 origine: officielle
 tags: [mecanique, levier, force, outils]
-sources: ["Archimède, De l'équilibre des figures planes", "Feynman R., The Feynman Lectures on Physics, chapitre sur le travail et l'énergie", "US Army Field Manual — rigging and mechanical advantage"]
+sources: ["Archimède, De l'équilibre des figures planes", "Feynman R., The Feynman Lectures on Physics, chapitre sur le travail et l'énergie", "US Army Field Manual, rigging and mechanical advantage"]
 ---
 
 ::Aucune machine ne crée de la force. Elles échangent toutes de la distance contre de la force, et rien d'autre.::

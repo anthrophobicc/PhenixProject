@@ -12,7 +12,7 @@ origine: officielle
 parent: TEC-ELE-001
 chapitre: 6
 tags: [elevage, abattage, transformation, conservation]
-sources: ["FAO — Manual on simple methods of meat preservation", "FAO — Guidelines for humane handling and slaughter", "USDA — Meat handling and cooling"]
+sources: ["FAO, Manual on simple methods of meat preservation", "FAO, Guidelines for humane handling and slaughter", "USDA, Meat handling and cooling"]
 ---
 
 ::Un animal abattu et non transformé dans la journée est en grande partie perdu. C'est pourquoi l'abattage se prépare avant de se faire.::

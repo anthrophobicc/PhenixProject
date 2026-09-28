@@ -10,7 +10,7 @@ materiel: Rien
 priorite: normale
 origine: officielle
 tags: [grenade, fumigene, incendiaire, reconnaissance, danger, marquage]
-sources: ["UNMAS / IMAS 12.10 — Explosive Ordnance Risk Education", "CICR — Restes explosifs de guerre, reconnaissance et conduite à tenir", "Manuels techniques de familles de munitions, marquages et codes couleur", "Fiches de sécurité phosphore blanc et compositions incendiaires"]
+sources: ["UNMAS / IMAS 12.10, Explosive Ordnance Risk Education", "CICR, Restes explosifs de guerre, reconnaissance et conduite à tenir", "Manuels techniques de familles de munitions, marquages et codes couleur", "Fiches de sécurité phosphore blanc et compositions incendiaires"]
 ---
 
 ::La goupille n'est pas la sécurité. C'est la cuiller. Tant qu'elle est maintenue, rien ne se passe ; dès qu'elle part, le compte a commencé et il ne s'arrête plus.::

@@ -1,49 +1,41 @@
 ---
 id: TEC-AGR-040
-titre: Cultiver sous lumière artificielle
+titre: La culture sous lumière artificielle
 axe: 2
 categorie: Agriculture et Botanique
 temps: Court
 contexte: 1
 risque: Discret
-materiel: Technique
+materiel: Rien
 priorite: normale
 origine: officielle
-tags: [culture en interieur, led, lampes horticoles, hydroponie, methode kratky, jeunes pousses, semis, iss, energie]
+tags: [culture en interieur, led, lampes horticoles, photoperiode, hydroponie, methode kratky, jeunes pousses, semis, iss, energie]
 sources: ["NASA, Veggie plant growth system, première récolte consommée à bord de la Station spatiale internationale, 2015", "Kratky B.A., A suspended pot, non-circulating hydroponic method, Acta Horticulturae, 2004", "Morrow R.C., LED lighting in horticulture, HortScience, 2008"]
 ---
 
-::En 2015, des astronautes de la Station spatiale internationale ont mangé pour la première fois une salade poussée à bord, sous des LED rouges et bleues. Sur Terre, sous une lampe, on fait pousser des herbes, des salades et des jeunes pousses toute l'année, dans une cave ou un appartement. Mais pas des calories : pour cela, il faut le soleil.::
+::En 2015, des astronautes de la Station spatiale internationale ont mangé pour la première fois une salade poussée à bord, sous des LED rouges et bleues. Sous une lampe, herbes, salades et jeunes pousses poussent toute l'année dans une cave ou un appartement. Mais pas les calories : pour nourrir vraiment, il faut la surface et l'énergie du soleil.::
 
-## Ce qui marche
+## La lumière des plantes
 
-- **Les jeunes pousses** et les graines germées. Voir [[TEC-AGR-026]].
-- **Les salades à couper**, les épinards, les blettes jeunes.
-- **Les herbes** : basilic, persil, ciboulette, menthe.
-- **Les plants** à démarrer avant la saison. Voir [[TEC-AGR-024]].
-- **Les tomates cerises et les piments** : possible, mais demande beaucoup de lumière et de temps.
+- **Les plantes utilisent surtout le rouge et le bleu** : le bleu favorise des plants trapus et des feuilles, le rouge la floraison. C'est pourquoi les lampes horticoles ont une lumière rose ; de simples LED blanches puissantes donnent aussi de bons résultats.
+- **La distance** : une vingtaine à une quarantaine de centimètres au-dessus des feuilles. Trop loin, les plants s'étirent ; trop près, ils brûlent.
+- **La durée du jour**, ou photopériode : 14 à 16 heures pour la plupart des légumes feuilles, avec une vraie nuit. Certaines plantes fleurissent selon la longueur des nuits.
 
-## La lumière
+## Ce qui se cultive bien
 
-- **Des LED** : les lampes horticoles, ou de simples LED blanches puissantes, marchent très bien.
-- **À 20 à 40 cm** au-dessus des plantes : trop loin, elles s'étirent ; trop près, elles brûlent.
-- **14 à 16 heures par jour**, avec une prise programmable, et une vraie nuit.
+Les jeunes pousses et graines germées ([[TEC-AGR-026]]), les salades à couper, épinards et blettes jeunes, les herbes aromatiques, et les plants démarrés avant la saison ([[TEC-AGR-024]]). Tomates cerises et piments sont possibles, mais demandent beaucoup de lumière et de temps.
 
-## Sans terre : la méthode Kratky
+## L'hydroponie
 
-Une méthode d'hydroponie sans pompe ni électricité, mise au point à l'université d'Hawaï :
+- **La culture sans terre** : les racines baignent dans une eau enrichie de sels minéraux.
+- **La méthode Kratky**, mise au point à l'université d'Hawaï, fonctionne sans pompe ni électricité : la plante est posée dans un petit pot ajouré, au-dessus d'un bac opaque de solution nutritive. À mesure que l'eau baisse, les racines se partagent entre l'eau et l'air humide, où elles respirent. Une salade pousse ainsi du semis à la récolte sans aucun ajout.
 
-1. **Un bocal ou un bac opaque** rempli d'eau et d'engrais pour hydroponie.
-2. **Un couvercle percé**, un petit pot ajouré rempli de billes d'argile ou de laine de roche, avec la plante.
-3. **Les racines trempent** au début ; à mesure que l'eau baisse, elles poussent dans l'air humide au-dessus et respirent.
-4. **On ne rajoute rien** jusqu'à la récolte pour une salade.
+## Le bilan énergétique
 
-## L'énergie
+Une lampe de 30 W allumée 16 heures consomme environ un demi-kilowattheure par jour. C'est raisonnable pour des semis et des légumes feuilles en hiver, pas pour produire l'alimentation d'une famille. Voir [[TEC-AGR-016]].
 
-Une lampe de 30 W allumée 16 heures consomme environ un demi-kilowattheure par jour. C'est raisonnable pour des semis et des feuilles vertes en hiver, pas pour nourrir une famille. Voir [[TEC-AGR-016]].
+## Les ennuis
 
-## L'hygiène
-
-Aérer (moisissures), ne pas laisser l'eau stagner, surveiller les pucerons et les petites mouches du terreau.
+Moisissures quand l'air ne circule pas, eau stagnante, pucerons et petites mouches du terreau, qui prolifèrent à l'abri de leurs prédateurs naturels.
 
 Cultiver sur un balcon : [[TEC-AGR-025]].

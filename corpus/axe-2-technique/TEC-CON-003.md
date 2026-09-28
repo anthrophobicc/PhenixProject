@@ -10,7 +10,7 @@ materiel: Technique
 priorite: normale
 origine: officielle
 tags: [puits, nappe, eau, cuvelage, effondrement, pompage, gaz]
-sources: ["OMS — Guide de mise en œuvre des puits protégés en milieu rural", "BRGM — Nappes phréatiques et niveaux piézométriques", "Manuels d'hydraulique villageoise, creusement et cuvelage manuels", "Documentation sur les accidents en espace confiné, atmosphères de fond de puits"]
+sources: ["OMS, Guide de mise en œuvre des puits protégés en milieu rural", "BRGM, Nappes phréatiques et niveaux piézométriques", "Manuels d'hydraulique villageoise, creusement et cuvelage manuels", "Documentation sur les accidents en espace confiné, atmosphères de fond de puits"]
 ---
 
 ::Creuser un puits, c'est aller chercher une nappe qui existe déjà. On ne crée pas l'eau, on descend jusqu'à elle et on empêche le trou de se refermer.::

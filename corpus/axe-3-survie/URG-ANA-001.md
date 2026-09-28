@@ -10,7 +10,7 @@ materiel: Technique
 priorite: flash
 origine: officielle
 tags: [urgence, allergie, adrenaline, piqure, aliment, choc]
-sources: ["European Academy of Allergy and Clinical Immunology — Anaphylaxis Guidelines 2021", "World Allergy Organization — Anaphylaxis Guidance", "Resuscitation Council UK — Emergency treatment of anaphylactic reactions", "Études sur les réactions biphasiques et la durée de surveillance"]
+sources: ["European Academy of Allergy and Clinical Immunology, Anaphylaxis Guidelines 2021", "World Allergy Organization, Anaphylaxis Guidance", "Resuscitation Council UK, Emergency treatment of anaphylactic reactions", "Études sur les réactions biphasiques et la durée de surveillance"]
 ---
 
 ::Une allergie grave tue en minutes, et il n'existe qu'un seul traitement. Tout le reste — antihistaminiques, cortisone, attendre de voir — fait partie des causes de décès.::

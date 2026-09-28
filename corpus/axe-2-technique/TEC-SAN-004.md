@@ -10,7 +10,7 @@ materiel: Récupération
 priorite: normale
 origine: officielle
 tags: [sante, hygiene, epidemie, donnees]
-sources: ["OMS — Water, sanitation and hygiene, evidence base", "OMS — Guidelines on hand hygiene in health care", "Centres for Disease Control — Global WASH fast facts"]
+sources: ["OMS, Water, sanitation and hygiene, evidence base", "OMS, Guidelines on hand hygiene in health care", "Centres for Disease Control, Global WASH fast facts"]
 ---
 
 ::Dans tout regroupement humain, ce n'est pas la faim qui tue en premier. C'est ce qui circule entre les mains et la bouche.::

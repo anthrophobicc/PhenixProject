@@ -10,7 +10,7 @@ materiel: Rien
 priorite: normale
 origine: officielle
 tags: [phenix, fiche, documentation, format, contribuer, écrire, méthode]
-sources: ["Documentation interne du projet Phenix — format de fiche et règles de rédaction"]
+sources: ["Documentation interne du projet Phenix, format de fiche et règles de rédaction"]
 ---
 
 ::Phenix n'est pas un livre fermé. C'est un corpus ouvert, et chaque fiche est un fichier texte lisible par n'importe quoi. Si vous savez lire une fiche, vous savez en écrire une — et le corpus grandit.::

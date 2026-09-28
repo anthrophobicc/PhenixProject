@@ -10,7 +10,7 @@ materiel: Technique
 priorite: flash
 origine: officielle
 tags: [urgence, feu, extincteur, recuperation]
-sources: ["NFPA 10 — Standard for Portable Fire Extinguishers", "Normes EN 2 et EN 3 — classes de feux et extincteurs portatifs", "OSHA — Portable fire extinguishers, méthode PASS", "INRS — Prévention des incendies sur le lieu de travail"]
+sources: ["NFPA 10, Standard for Portable Fire Extinguishers", "Normes EN 2 et EN 3, classes de feux et extincteurs portatifs", "OSHA, Portable fire extinguishers, méthode PASS", "INRS, Prévention des incendies sur le lieu de travail"]
 ---
 
 ::Un extincteur se vide en une dizaine de secondes. Il éteint un départ de feu, pas un incendie : tout se joue dans les premières minutes, et sur le bon geste du premier coup.::

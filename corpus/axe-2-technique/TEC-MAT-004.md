@@ -10,7 +10,7 @@ materiel: Technique
 priorite: normale
 origine: officielle
 tags: [textile, coton, laine, lin, tissu, tissage, jean, confection, patron]
-sources: ["Barber E., Prehistoric Textiles — The Development of Cloth", "Documentation sur les fibres textiles et les méthodes de tissage", "Histoire du jean et de la confection industrielle"]
+sources: ["Barber E., Prehistoric Textiles, The Development of Cloth", "Documentation sur les fibres textiles et les méthodes de tissage", "Histoire du jean et de la confection industrielle"]
 ---
 
 ::Le vêtement est la première technologie. Avant l'outil en pierre polie, les peaux cousues ont permis aux humains de survivre là où leur corps nu ne le pouvait pas. Fabriquer un vêtement, c'est transformer une matière en protection — et chaque matière dicte ses règles.::

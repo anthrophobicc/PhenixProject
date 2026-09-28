@@ -10,7 +10,7 @@ materiel: Rien
 priorite: normale
 origine: officielle
 tags: [reseau, electricite, eau, telecom, gaz, egout, infrastructure]
-sources: ["RTE — Bilans électriques et documentation sur l'équilibre offre-demande", "Enedis — Architecture de la distribution publique HTA et BT", "ARCEP — Rapports sur la résilience des réseaux de communication", "Agences de l'eau — Schémas d'alimentation et de distribution"]
+sources: ["RTE, Bilans électriques et documentation sur l'équilibre offre-demande", "Enedis, Architecture de la distribution publique HTA et BT", "ARCEP, Rapports sur la résilience des réseaux de communication", "Agences de l'eau, Schémas d'alimentation et de distribution"]
 ---
 
 ::Tout ce qui sort d'un robinet, d'une prise ou d'une antenne a voyagé le long d'une chaîne que personne ne regarde. Elle a une forme, des goulots, et des endroits précis où elle casse.::

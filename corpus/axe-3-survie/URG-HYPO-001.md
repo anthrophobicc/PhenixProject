@@ -10,7 +10,7 @@ materiel: Rien
 priorite: flash
 origine: officielle
 tags: [urgence, froid, secourisme, sante]
-sources: ["Classification suisse de l'hypothermie — ICAR-MEDCOM (Durrer, Brugger, Syme)", "Pasquier M., Blancher M., Hypothermie accidentelle, Ann. Fr. Med. Urgence, 2019", "SNSM — Conduite à tenir face à une hypothermie", "Recommandations Premiers Secours, édition 2018"]
+sources: ["Classification suisse de l'hypothermie, ICAR-MEDCOM (Durrer, Brugger, Syme)", "Pasquier M., Blancher M., Hypothermie accidentelle, Ann. Fr. Med. Urgence, 2019", "SNSM, Conduite à tenir face à une hypothermie", "Recommandations Premiers Secours, édition 2018"]
 ---
 
 ::Rien ne brûle comme le froid. Appliquez ces instructions et vous survivrez.::

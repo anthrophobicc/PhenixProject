@@ -10,7 +10,7 @@ materiel: Technique
 priorite: normale
 origine: officielle
 tags: [recuperation, helicoptere, inventaire, rotor, huile, treuil, radio, balise]
-sources: ["NFPA 422 — Aircraft Accident Response Guide, chapitre voilures tournantes", "US Army TM 1-1500-204, maintenance des aéronefs à voilure tournante", "Manuels constructeurs, sécurisation au sol des portes et trappes largables", "Documentation technique sur les réservoirs souples auto-obturants et les balises 406 MHz"]
+sources: ["NFPA 422, Aircraft Accident Response Guide, chapitre voilures tournantes", "US Army TM 1-1500-204, maintenance des aéronefs à voilure tournante", "Manuels constructeurs, sécurisation au sol des portes et trappes largables", "Documentation technique sur les réservoirs souples auto-obturants et les balises 406 MHz"]
 ---
 
 ::C'est l'épave aéronautique la plus rentable et la moins piégée. Pas de siège éjectable, pas de verrière explosive, une cabine qui s'ouvre, et des composants lourds à hauteur d'homme.::

@@ -10,7 +10,7 @@ materiel: Technique
 priorite: normale
 origine: officielle
 tags: [radio, communication, information, signal]
-sources: ["Union internationale des télécommunications — Règlement des radiocommunications", "ARRL — The Radio Amateur's Handbook, propagation", "Documentation technique sur la propagation ionosphérique"]
+sources: ["Union internationale des télécommunications, Règlement des radiocommunications", "ARRL, The Radio Amateur's Handbook, propagation", "Documentation technique sur la propagation ionosphérique"]
 ---
 
 ::Ce qui décide de la portée n'est pas la puissance de l'émetteur. C'est la fréquence, et c'est ce que presque personne ne sait.::

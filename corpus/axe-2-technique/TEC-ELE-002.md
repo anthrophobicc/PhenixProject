@@ -1,6 +1,6 @@
 ---
 id: TEC-ELE-002
-titre: Choisir une espèce
+titre: Les espèces d'élevage
 axe: 2
 categorie: Agriculture et Botanique
 temps: Long
@@ -12,7 +12,7 @@ origine: officielle
 parent: TEC-ELE-001
 chapitre: 1
 tags: [elevage, animaux, choix]
-sources: ["FAO — Livestock production systems, technical guidelines", "FAO — Small-scale poultry production"]
+sources: ["FAO, Livestock production systems, technical guidelines", "FAO, Small-scale poultry production"]
 ---
 
 ::Le critère décisif n'est ni la taille ni le rendement. C'est ce que l'animal mange, et ce que vous avez à lui donner.::
@@ -21,7 +21,7 @@ sources: ["FAO — Livestock production systems, technical guidelines", "FAO —
 
 Un animal qui mange ce que vous mangez entre en concurrence avec vous. Un animal qui mange ce que vous ne pouvez pas digérer vous enrichit.
 
-C'est la première question à poser, avant le rendement, avant la taille, avant le prix. En période de pénurie, elle devient la seule qui compte.
+C'est la question qui passe avant le rendement, la taille et le prix, et elle devient décisive en période de pénurie.
 
 ## Les volailles
 
@@ -33,7 +33,7 @@ Leur faiblesse est la prédation : rapaces, renards, chiens errants, rongeurs su
 
 Ils convertissent l'herbe et les végétaux avec une efficacité remarquable et se reproduisent extrêmement vite. Peu de place, peu de bruit, peu d'attention.
 
-Leur limite est nutritionnelle : leur viande est très maigre. Une alimentation reposant uniquement dessus expose au trouble décrit dans [[TEC-ALI-001]], où manger davantage aggrave la situation. Il faut une autre source de graisse à côté.
+Leur limite est nutritionnelle : leur viande est très maigre. Une alimentation reposant uniquement dessus expose au trouble décrit dans [[TEC-ALI-001]], où manger davantage aggrave la situation. Une autre source de graisse est nécessaire à côté.
 
 ## Les chèvres
 
@@ -59,8 +59,6 @@ Lait, travail et fumier en quantité. Un seul animal transforme une exploitation
 
 Mais ils exigent beaucoup de fourrage, un abri, un savoir-faire qui ne s'improvise pas, et leur perte est une catastrophe économique. **C'est le dernier animal à acquérir, jamais le premier.**
 
-## Comment trancher
+## Les critères de choix
 
-Posez les questions dans cet ordre : qu'est-ce qui pousse chez moi et que je ne peux pas manger ; combien de temps puis-je consacrer chaque jour ; quelle clôture puis-je réellement tenir ; que se passe-t-il si l'animal meurt.
-
-La dernière question est la plus utile. **Commencez par une espèce dont la perte ne vous met pas en difficulté**, et montez ensuite. Le reste du parcours suppose ce choix fait : voir [[TEC-ELE-003]] pour l'alimentation.
+Les éleveurs pèsent, dans cet ordre, ce qui pousse sur place et que les humains ne mangent pas, le temps disponible chaque jour, la clôture qu'ils peuvent réellement entretenir, et les conséquences de la perte d'un animal. Les débutants commencent en général par une espèce dont la perte ne met pas la ferme en difficulté, comme les volailles. L'alimentation : [[TEC-ELE-003]].

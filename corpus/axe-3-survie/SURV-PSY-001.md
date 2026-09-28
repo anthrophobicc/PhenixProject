@@ -10,7 +10,7 @@ materiel: Rien
 priorite: normale
 origine: officielle
 tags: [psychologie, moral, duree, sommeil]
-sources: ["Leach J., Survival Psychology", "Programmes de recherche en bases antarctiques — isolated, confined and extreme environments", "NASA — behavioral health and performance in long-duration missions"]
+sources: ["Leach J., Survival Psychology", "Programmes de recherche en bases antarctiques, isolated, confined and extreme environments", "NASA, behavioral health and performance in long-duration missions"]
 ---
 
 ::Ce n'est pas le danger qui casse les gens. C'est l'attente, l'absence de repères, et le sentiment que rien de ce qu'on fait ne change quoi que ce soit.::

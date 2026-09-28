@@ -10,7 +10,7 @@ materiel: Rien
 priorite: normale
 origine: officielle
 tags: [sel, saumure, osmose, conservation, viande, nitrite, botulisme]
-sources: ["FAO — Salting and drying of fish, principes et concentrations", "Beuchat L., Water activity and microbial stability, Journal of Food Protection", "ANSES — Avis sur les nitrites et nitrates dans les produits carnés", "USDA — Principles of Meat Curing"]
+sources: ["FAO, Salting and drying of fish, principes et concentrations", "Beuchat L., Water activity and microbial stability, Journal of Food Protection", "ANSES, Avis sur les nitrites et nitrates dans les produits carnés", "USDA, Principles of Meat Curing"]
 ---
 
 ::Le sel ne tue presque rien. Il déshydrate, et il choisit qui survit. Toute la conservation par le sel tient dans cette distinction.::

@@ -10,7 +10,7 @@ materiel: Rien
 priorite: normale
 origine: officielle
 tags: [morse, signal, communication, code, lumiere, radio, sos]
-sources: ["UIT-R M.1677-1 — Code Morse international", "Code international des signaux — signalisation lumineuse", "COLREG, annexe IV — signaux de détresse", "ARRL — apprentissage du morse, méthodes Koch et Farnsworth"]
+sources: ["UIT-R M.1677-1, Code Morse international", "Code international des signaux, signalisation lumineuse", "COLREG, annexe IV, signaux de détresse", "ARRL, apprentissage du morse, méthodes Koch et Farnsworth"]
 ---
 
 ::Le morse tient sur une page et s'apprend en une soirée. Il passe par tout ce qui s'allume, s'éteint, sonne ou se tape : une lampe, un miroir, un sifflet, un tuyau, un talkie-walkie.::

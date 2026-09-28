@@ -10,7 +10,7 @@ materiel: Rien
 priorite: flash
 origine: officielle
 tags: [urgence, maison, gaz, eau, electricite, fuite]
-sources: ["FEMA, Ready.gov — Utility shut-off and safety", "GRDF — Que faire en cas d'odeur de gaz", "Protection civile — Se préparer aux inondations et aux séismes"]
+sources: ["FEMA, Ready.gov, Utility shut-off and safety", "GRDF, Que faire en cas d'odeur de gaz", "Protection civile, Se préparer aux inondations et aux séismes"]
 ---
 
 ::Trois gestes arrêtent la plupart des catastrophes domestiques : fermer une vanne, basculer un levier, tourner un robinet. Encore faut-il savoir où ils sont avant d'en avoir besoin.::

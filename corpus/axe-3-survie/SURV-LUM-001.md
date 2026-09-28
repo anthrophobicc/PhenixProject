@@ -10,7 +10,7 @@ materiel: Récupération
 priorite: normale
 origine: officielle
 tags: [lumiere, led, pile, batterie, fabrication, recuperation, nuit]
-sources: ["Fiches techniques constructeurs de LED, caractéristiques directes courantes", "INRS — Risques liés aux accumulateurs lithium-ion", "Documentation Leroy Merlin et ADEME sur l'éclairage LED", "Pratiques documentées d'éclairage de secours en milieu isolé"]
+sources: ["Fiches techniques constructeurs de LED, caractéristiques directes courantes", "INRS, Risques liés aux accumulateurs lithium-ion", "Documentation Leroy Merlin et ADEME sur l'éclairage LED", "Pratiques documentées d'éclairage de secours en milieu isolé"]
 ---
 
 ::Une lampe, c'est trois choses : quelque chose qui brille, quelque chose qui pousse le courant, et quelque chose qui coupe. Le reste est de la carrosserie.::

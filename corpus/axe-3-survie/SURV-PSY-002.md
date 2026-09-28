@@ -10,7 +10,7 @@ materiel: Rien
 priorite: flash
 origine: officielle
 tags: [psychologie, decision, stress, groupe]
-sources: ["Leach J., Survival Psychology", "Klein G., Sources of Power: How People Make Decisions", "NASA — human performance under acute stress, technical reports"]
+sources: ["Leach J., Survival Psychology", "Klein G., Sources of Power: How People Make Decisions", "NASA, human performance under acute stress, technical reports"]
 ---
 
 ::Sous stress, ce n'est pas votre courage qui manque. C'est votre capacité à voir ce qui est devant vous.::

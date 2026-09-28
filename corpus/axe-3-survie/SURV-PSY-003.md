@@ -10,7 +10,7 @@ materiel: Rien
 priorite: normale
 origine: officielle
 tags: [groupe, conflit, regles, sanction, vol, exclusion, arbitrage]
-sources: ["Ostrom E., Governing the Commons, règles d'usage et sanctions graduées", "Études sur les bases polaires et les équipages isolés, conflits en confinement prolongé", "HCR — Protection dans les sites de déplacés, violences intracommunautaires", "Travaux de criminologie sur la médiation et la justice réparatrice"]
+sources: ["Ostrom E., Governing the Commons, règles d'usage et sanctions graduées", "Études sur les bases polaires et les équipages isolés, conflits en confinement prolongé", "HCR, Protection dans les sites de déplacés, violences intracommunautaires", "Travaux de criminologie sur la médiation et la justice réparatrice"]
 ---
 
 ::Ce qui défait un groupe ne vient presque jamais de l'extérieur. Ça vient d'une ration mal partagée, d'un outil disparu, et d'une décision que personne n'avait prévu de devoir prendre.::

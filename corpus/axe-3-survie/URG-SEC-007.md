@@ -10,7 +10,7 @@ materiel: Rien
 priorite: flash
 origine: officielle
 tags: [accouchement, naissance, nouveau-ne, hemorragie, cordon, urgence]
-sources: ["OMS — Prise en charge des complications de la grossesse et de l'accouchement, guide pour sages-femmes et médecins", "OMS — Recommandations sur les soins intrapartum pour une expérience positive de l'accouchement", "WHO Essential Newborn Care, séchage, contact peau à peau et clampage du cordon", "Recommandations sur la prévention de l'hémorragie du post-partum"]
+sources: ["OMS, Prise en charge des complications de la grossesse et de l'accouchement, guide pour sages-femmes et médecins", "OMS, Recommandations sur les soins intrapartum pour une expérience positive de l'accouchement", "WHO Essential Newborn Care, séchage, contact peau à peau et clampage du cordon", "Recommandations sur la prévention de l'hémorragie du post-partum"]
 ---
 
 ::Un accouchement n'est pas une opération, c'est un processus qui se déroule seul dans la très grande majorité des cas. Votre rôle est d'accompagner, de réchauffer l'enfant, et de ne pas nuire.::

@@ -10,7 +10,7 @@ materiel: Technique
 priorite: normale
 origine: officielle
 tags: [moteur, mecanique, panne, vehicule, reparation]
-sources: ["Robert Bosch GmbH — Automotive Handbook", "US Army TM 9-8000 — Principles of Automotive Vehicles"]
+sources: ["Robert Bosch GmbH, Automotive Handbook", "US Army TM 9-8000, Principles of Automotive Vehicles"]
 ---
 
 ::Un moteur à essence ne démarre que s'il réunit quatre choses : du carburant, de l'air, une étincelle et de la compression. Quand il refuse, il en manque une. Cherchez laquelle, dans l'ordre.::

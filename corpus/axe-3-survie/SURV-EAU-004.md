@@ -10,7 +10,7 @@ materiel: Récupération
 priorite: normale
 origine: officielle
 tags: [eau, filtration, improvisation, sante]
-sources: ["OMS — Household water treatment and safe storage", "CDC — Making water safe in an emergency", "OMS — Evaluating household water treatment options"]
+sources: ["OMS, Household water treatment and safe storage", "CDC, Making water safe in an emergency", "OMS, Evaluating household water treatment options"]
 ---
 
 ::Un filtre improvisé rend l'eau claire. Il ne la rend pas potable, et confondre les deux est ce qui tue.::

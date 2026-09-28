@@ -10,7 +10,7 @@ materiel: Récupération
 priorite: normale
 origine: officielle
 tags: [alimentation, conservation, autonomie]
-sources: ["FAO — Manual on simple methods of meat preservation", "USDA — Complete Guide to Home Canning", "Institut national de la recherche agronomique — principes de la conservation des aliments"]
+sources: ["FAO, Manual on simple methods of meat preservation", "USDA, Complete Guide to Home Canning", "Institut national de la recherche agronomique, principes de la conservation des aliments"]
 ---
 
 ::Conserver, c'est retirer aux micro-organismes une des quatre choses dont ils ont besoin : l'eau, la chaleur, l'oxygène ou un milieu peu acide.::

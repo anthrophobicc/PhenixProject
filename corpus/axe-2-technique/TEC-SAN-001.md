@@ -10,7 +10,7 @@ materiel: Récupération
 priorite: normale
 origine: officielle
 tags: [sante, plaie, infection, secourisme]
-sources: ["OMS — Prevention and management of wound infection", "Haute Autorité de Santé — prise en charge des plaies aiguës", "NICE — Wound care guidance"]
+sources: ["OMS, Prevention and management of wound infection", "Haute Autorité de Santé, prise en charge des plaies aiguës", "NICE, Wound care guidance"]
 ---
 
 ::Une plaie ne s'infecte pas au moment où elle se produit. Elle s'infecte dans les heures et les jours qui suivent, et c'est là que tout se joue.::

@@ -10,7 +10,7 @@ materiel: Rien
 priorite: flash
 origine: officielle
 tags: [urgence, voiture, eau, noyade]
-sources: ["Gordon Giesbrecht, Université du Manitoba — recherches sur les véhicules immergés, méthode SWOC", "Lifesaving Society Canada — Vehicle submersion", "National Weather Service — Turn Around Don't Drown"]
+sources: ["Gordon Giesbrecht, Université du Manitoba, recherches sur les véhicules immergés, méthode SWOC", "Lifesaving Society Canada, Vehicle submersion", "National Weather Service, Turn Around Don't Drown"]
 ---
 
 ::Une voiture qui tombe à l'eau flotte environ une minute. C'est la seule minute où l'on sort facilement : par la fenêtre, pas par la porte, et sans appeler personne avant.::

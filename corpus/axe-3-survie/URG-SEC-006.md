@@ -10,7 +10,7 @@ materiel: Récupération
 priorite: normale
 origine: officielle
 tags: [secourisme, brancard, portage, rachis, degagement, evacuation]
-sources: ["Recommandations Premiers Secours — dégagements d'urgence et relevage", "Prehospital Trauma Life Support, chapitres sur la mobilisation et l'immobilisation rachidienne", "Manuels de secours en montagne, techniques de portage improvisé", "INRS — Manutention manuelle, limites de charge"]
+sources: ["Recommandations Premiers Secours, dégagements d'urgence et relevage", "Prehospital Trauma Life Support, chapitres sur la mobilisation et l'immobilisation rachidienne", "Manuels de secours en montagne, techniques de portage improvisé", "INRS, Manutention manuelle, limites de charge"]
 ---
 
 ::La première question n'est pas comment transporter. C'est s'il faut le faire. Presque toujours, on fait venir les secours au blessé — et déplacer quelqu'un aggrave plus souvent que ça ne sauve.::

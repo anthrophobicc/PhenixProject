@@ -10,7 +10,7 @@ materiel: Rien
 priorite: flash
 origine: officielle
 tags: [urgence, secourisme, inconscience, respiration]
-sources: ["European Resuscitation Council — Guidelines 2025, Basic Life Support", "Recommandations Premiers Secours — Ministère de l'Intérieur, France", "Croix-Rouge française — la perte de connaissance"]
+sources: ["European Resuscitation Council, Guidelines 2025, Basic Life Support", "Recommandations Premiers Secours, Ministère de l'Intérieur, France", "Croix-Rouge française, la perte de connaissance"]
 ---
 
 ::Une personne inconsciente meurt de sa propre langue et de son propre vomi bien avant de mourir de ce qui l'a fait tomber.::

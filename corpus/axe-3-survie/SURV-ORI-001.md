@@ -10,7 +10,7 @@ materiel: Rien
 priorite: normale
 origine: officielle
 tags: [orientation, terrain, base, nord]
-sources: ["Institut géographique national — notions de navigation terrestre", "Royal Institute of Navigation — natural navigation methods", "Tristan Gooley, The Natural Navigator (méthodes documentées et reproductibles)"]
+sources: ["Institut géographique national, notions de navigation terrestre", "Royal Institute of Navigation, natural navigation methods", "Tristan Gooley, The Natural Navigator (méthodes documentées et reproductibles)"]
 ---
 
 ::Trouver le nord prend cinq minutes. Le garder pendant trois heures, c'est ça le vrai travail.::

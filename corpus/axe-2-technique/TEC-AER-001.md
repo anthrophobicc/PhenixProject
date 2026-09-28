@@ -10,7 +10,7 @@ materiel: Technique
 priorite: normale
 origine: officielle
 tags: [avion, vol, mecanique, transport]
-sources: ["FAA — Pilot's Handbook of Aeronautical Knowledge", "FAA — Airplane Flying Handbook", "Direction générale de l'aviation civile — bases théoriques du pilotage"]
+sources: ["FAA, Pilot's Handbook of Aeronautical Knowledge", "FAA, Airplane Flying Handbook", "Direction générale de l'aviation civile, bases théoriques du pilotage"]
 ---
 
 ::Un avion ne tient pas en l'air par la puissance de son moteur. Il tient par sa vitesse, et c'est une distinction qui sauve.::

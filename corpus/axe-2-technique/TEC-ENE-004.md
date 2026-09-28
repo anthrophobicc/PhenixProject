@@ -10,7 +10,7 @@ materiel: Technique
 priorite: normale
 origine: officielle
 tags: [batterie, energie, stockage, donnees]
-sources: ["IEC 62133 — Safety requirements for secondary cells", "Battery University — technical documentation", "Linden's Handbook of Batteries"]
+sources: ["IEC 62133, Safety requirements for secondary cells", "Battery University, technical documentation", "Linden's Handbook of Batteries"]
 ---
 
 ::Une batterie ne contient pas de l'électricité. Elle contient une réaction chimique qu'on force à l'envers pour la recharger, et cette réaction s'use.::

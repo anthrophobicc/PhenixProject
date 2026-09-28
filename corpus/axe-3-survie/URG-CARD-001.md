@@ -10,7 +10,7 @@ materiel: Rien
 priorite: flash
 origine: officielle
 tags: [urgence, coeur, reanimation, massage, defibrillateur, secourisme]
-sources: ["European Resuscitation Council — Guidelines 2021, Basic Life Support", "American Heart Association — Guidelines for CPR and ECC", "Registres nationaux d'arrêt cardiaque extrahospitalier, taux de survie selon le délai", "Recommandations Premiers Secours, édition en vigueur"]
+sources: ["European Resuscitation Council, Guidelines 2021, Basic Life Support", "American Heart Association, Guidelines for CPR and ECC", "Registres nationaux d'arrêt cardiaque extrahospitalier, taux de survie selon le délai", "Recommandations Premiers Secours, édition en vigueur"]
 ---
 
 ::Le cœur s'arrête, le cerveau tient quelques minutes. Chaque minute sans massage retire environ dix pour cent de chances. C'est le geste le plus rentable qu'un humain puisse apprendre.::

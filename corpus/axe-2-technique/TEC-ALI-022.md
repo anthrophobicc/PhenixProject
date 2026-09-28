@@ -1,21 +1,21 @@
 ---
 id: TEC-ALI-022
-titre: Garder les récoltes en cave, en silo et en terre
+titre: Le stockage des récoltes
 axe: 2
 categorie: Alimentation et Conservation
-temps: Long
+temps: Court
 contexte: 1
 risque: Discret
-materiel: Récupération
+materiel: Rien
 priorite: normale
 origine: officielle
-tags: [cave, silo, stockage, pommes de terre, racines, courges, grain, sac hermetique, ethylene]
+tags: [cave, silo, stockage, pommes de terre, racines, courges, grain, sac hermetique, ethylene, humidite, conservation hivernale]
 sources: ["Bubel M., Bubel N., Root Cellaring, Storey Publishing, 1991", "Purdue University, programme PICS de stockage hermétique des grains", "FAO, pertes après récolte et stockage à la ferme"]
 ---
 
-::Une pomme pourrie dans un cageot, et c'est tout le cageot en deux semaines : le proverbe est exact. Les pommes dégagent aussi un gaz qui fait germer les pommes de terre et rend les carottes amères. Garder une récolte tout l'hiver, c'est une affaire de froid, d'humidité, et de voisinage.::
+::« Une pomme pourrie gâte tout le panier » : le proverbe est exact. Les fruits qui mûrissent dégagent un gaz, l'éthylène, qui accélère le mûrissement des voisins, fait germer les pommes de terre et rend les carottes amères. Garder une récolte tout l'hiver est une affaire de température, d'humidité et de voisinage.::
 
-## Qui aime quoi
+## Les besoins de chaque récolte
 
 | Récolte | Température | Air |
 |---|---|---|
@@ -29,31 +29,23 @@ sources: ["Bubel M., Bubel N., Root Cellaring, Storey Publishing, 1991", "Purdue
 
 ## La cave
 
-- **Sous terre, la température bouge peu** : à un ou deux mètres, elle reste proche de la moyenne de l'année.
-- **Les racines dans du sable humide**, en caisses, sans se toucher.
-- **Les pommes de terre dans le noir** : à la lumière, elles verdissent et deviennent toxiques. On retire le vert.
-- **Les fruits dans une autre pièce** ou au moins loin des légumes.
-- **Une visite par semaine** : on retire tout ce qui s'abîme.
+- **Sous terre, la température varie peu** : à un ou deux mètres, elle reste proche de la moyenne annuelle.
+- **Les légumes racines** se gardent dans du sable humide, en caisses, sans se toucher.
+- **Les pommes de terre** se gardent dans le noir : à la lumière, elles verdissent et produisent de la solanine, une substance toxique.
+- **Les fruits** sont tenus à l'écart des légumes à cause de l'éthylène.
 
 ## Le silo en terre
 
-Sans cave, la vieille méthode :
-
-1. Un lit de paille sur un sol bien drainé.
-2. Les pommes de terre ou les racines en tas conique.
-3. **20 à 30 cm de paille** par-dessus, puis **15 à 20 cm de terre**.
-4. Une **cheminée de paille** au sommet pour laisser sortir l'humidité, protégée de la pluie.
-
-Il tient par des gelées sérieuses. On l'ouvre par un côté, on prend ce qu'il faut, on referme.
+Là où il n'y a pas de cave, les paysans conservaient pommes de terre et racines en tas coniques sur un lit de paille, couverts de 20 à 30 cm de paille puis de 15 à 20 cm de terre, avec une cheminée de paille au sommet pour laisser sortir l'humidité. Un tel silo résiste à des gelées sérieuses.
 
 ## Laisser en terre
 
-Poireaux, carottes, panais, topinambours, choux passent l'hiver dans le potager sous un paillis épais. On récolte au fur et à mesure.
+Poireaux, carottes, panais, topinambours et choux passent l'hiver au potager sous un paillis épais, et se récoltent au fur et à mesure.
 
 ## Le grain
 
-- **Sec** (il casse sous la dent sans s'écraser), dans des récipients **fermés hermétiquement**.
-- **Les sacs hermétiques à triple épaisseur**, utilisés en Afrique pour le niébé et le maïs : privés d'oxygène, les charançons meurent sans produit chimique.
-- Rongeurs et insectes : voir [[TEC-ALI-015]].
+- **Un grain sec**, qui casse sous la dent sans s'écraser, se garde des années dans un récipient fermé.
+- **Les sacs hermétiques à triple épaisseur** diffusés en Afrique par l'université Purdue pour le niébé et le maïs privent les insectes d'oxygène : ils meurent sans aucun produit chimique.
+- **Les pertes après récolte** représentent une part considérable de la production dans les pays chauds, surtout à cause des insectes, des rongeurs et de l'humidité. Voir [[TEC-ALI-015]].
 
-Le froid sans frigo : [[TEC-ALI-011]]. Les réserves : [[TEC-ALI-008]].
+Le froid sans réfrigérateur : [[TEC-ALI-011]]. Les réserves : [[TEC-ALI-008]].

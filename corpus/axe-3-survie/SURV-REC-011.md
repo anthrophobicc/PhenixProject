@@ -10,7 +10,7 @@ materiel: Récupération
 priorite: normale
 origine: officielle
 tags: [outillage, demontage, levier, palan, portage, charge, methode]
-sources: ["Manuels d'atelier et de dépannage, procédures de dépose et de manutention", "INRS — Manutention manuelle, limites de charge et lésions dorsales", "Traités de mécanique appliquée, levier, plan incliné et mouflage", "Documentation ethnographique sur le travois et les moyens de portage sans roue"]
+sources: ["Manuels d'atelier et de dépannage, procédures de dépose et de manutention", "INRS, Manutention manuelle, limites de charge et lésions dorsales", "Traités de mécanique appliquée, levier, plan incliné et mouflage", "Documentation ethnographique sur le travois et les moyens de portage sans roue"]
 ---
 
 ::Détacher une pièce, c'est le problème facile. La sortir du bâtiment, c'est le deuxième. La ramener chez soi, c'est celui qui fait échouer la moitié des récupérations.::

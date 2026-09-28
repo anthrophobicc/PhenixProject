@@ -10,7 +10,7 @@ materiel: Récupération
 priorite: normale
 origine: officielle
 tags: [isolation, chaleur, habitat, donnees]
-sources: ["CSTB — réglementation thermique et pathologies de l'isolation", "USDA Forest Products Laboratory — moisture control in buildings", "Passive House Institute — principes de conception thermique"]
+sources: ["CSTB, réglementation thermique et pathologies de l'isolation", "USDA Forest Products Laboratory, moisture control in buildings", "Passive House Institute, principes de conception thermique"]
 ---
 
 ::Ce qui isole n'est pas la matière, c'est l'air immobile qu'elle emprisonne. Toute l'isolation découle de cette phrase.::
