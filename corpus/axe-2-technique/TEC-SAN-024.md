@@ -1,53 +1,43 @@
 ---
 id: TEC-SAN-024
-titre: Prendre soin d'un mort
+titre: Les soins aux morts
 axe: 2
 categorie: Santé et Chirurgie
 temps: Moyen
 contexte: 2+
 risque: Discret
-materiel: Récupération
+materiel: Rien
 priorite: normale
 origine: officielle
-tags: [deces, mort, corps, rigidite, identification, inhumation, catastrophe, deuil]
+tags: [deces, mort, signes de la mort, rigidite cadaverique, identification, inhumation, catastrophe, epidemie, deuil, rites]
 sources: ["OPS, OMS, CICR, FICR, La gestion des dépouilles mortelles lors de catastrophes : manuel pratique pour les premiers intervenants, 2e édition, 2016", "Code général des collectivités territoriales, article R2213-33 (délais d'inhumation)", "Service-public.fr, démarches après un décès"]
 ---
 
-::Après une catastrophe, la peur des épidémies pousse à enterrer vite, en masse, sans noter qui est qui. C'est une erreur : les morts d'un séisme ou d'une inondation ne donnent pas d'épidémie. Les familles qui ne savent jamais où est leur mort, elles, en souffrent toute leur vie.::
+::Après une catastrophe, la peur des épidémies pousse à enterrer vite, en masse, sans noter qui est qui. Les organisations humanitaires le répètent : les morts d'un séisme ou d'une inondation ne provoquent pas d'épidémie. Les familles qui ne savent jamais où repose leur mort, elles, en souffrent toute leur vie.::
 
-## Constater
+## Les signes de la mort
 
-Pas de respiration, pas de pouls, pas de réaction, les pupilles larges et fixes. En cas de doute, **on commence la réanimation** : voir [[URG-CARD-001]].
+- **Immédiats** : absence de respiration, de pouls et de réaction, pupilles dilatées et fixes. En cas de doute, les secouristes commencent la réanimation. Voir [[URG-CARD-001]].
+- **Plus tardifs, et certains** : la rigidité cadavérique, qui commence par la mâchoire deux à six heures après la mort et disparaît en un à deux jours ; les lividités, des taches violacées du côté du corps posé au sol.
 
-Les signes qui ne trompent pas arrivent ensuite : la **rigidité** (qui commence par la mâchoire en deux à six heures et disparaît après un ou deux jours), les **taches violacées** du côté posé au sol.
+## En temps normal, en France
 
-## En temps normal
+- **Un médecin** constate le décès et signe le certificat.
+- **La déclaration** se fait à la mairie dans les 24 heures, souvent par les pompes funèbres.
+- **L'inhumation ou la crémation** a lieu entre 24 heures et 6 jours après le décès.
 
-- Un **médecin** constate le décès et signe le certificat.
-- La **déclaration** se fait à la mairie dans les 24 heures, souvent par les pompes funèbres.
-- En France, l'inhumation ou la crémation a lieu **entre 24 heures et 6 jours** après le décès.
+## Quand les secours sont débordés
 
-## Quand personne ne viendra
-
-**Préparer le corps**, avec des gants, avant que la rigidité ne s'installe :
-
-1. Fermer les yeux, fermer la bouche avec une bande nouée autour de la tête.
-2. Allonger le corps sur le dos, bras le long du corps, jambes droites.
-3. Le laver si on le souhaite, l'habiller, le couvrir d'un drap.
-4. Le garder **au frais**, à l'écart du soleil.
-
-**Identifier**, toujours : nom, date, lieu, circonstances, notés sur une étiquette attachée au corps **et** sur un registre. Une photo du visage, les objets personnels gardés dans un sac étiqueté.
-
-**Inhumer**
-
-- Une tombe par personne, repérée par une marque durable et reportée sur un plan.
-- Au moins **un mètre et demi de profondeur**, loin des puits, des sources et des cours d'eau.
-- **Jamais de crémation de masse** improvisée : elle empêche toute identification.
+Le manuel de référence de l'OMS, de la Croix-Rouge et de l'Organisation panaméricaine de la santé décrit les principes suivants :
+- **La préparation du corps** : yeux et bouche fermés, corps allongé avant que la rigidité ne s'installe, couvert et gardé au frais.
+- **L'identification avant tout** : nom, date, lieu et circonstances notés sur une étiquette attachée au corps et dans un registre, photographie du visage, objets personnels conservés et étiquetés.
+- **L'inhumation individuelle**, dans une tombe repérée par une marque durable et reportée sur un plan, à au moins un mètre et demi de profondeur et loin des puits, des sources et des cours d'eau.
+- **Pas de crémation de masse improvisée**, qui empêche toute identification ultérieure.
 
 ## Les exceptions
 
-Les personnes mortes du **choléra**, d'**Ebola** ou d'une autre maladie contagieuse : pas de lavage, pas de contact, gants, eau de Javel, et enterrement rapide. Voir [[TEC-SAN-011]].
+Les personnes mortes du choléra, d'Ebola ou d'autres maladies contagieuses restent dangereuses : pas de lavage ni de contact, désinfection à l'eau de Javel, enterrement rapide. Lors de l'épidémie d'Ebola de 2014, les rites funéraires traditionnels de lavage des corps ont été une cause majeure de contamination. Voir [[TEC-SAN-011]].
 
-## Ceux qui restent
+## Le deuil
 
-Laisser la famille voir le corps, dire au revoir, faire un rite, même simple. Ce moment compte des années plus tard. Voir [[TEC-SAN-019]].
+Voir le corps, dire au revoir et accomplir un rite, même simple, aide les proches des années plus tard ; les deuils sans corps sont parmi les plus difficiles. Voir [[TEC-SAN-019]].

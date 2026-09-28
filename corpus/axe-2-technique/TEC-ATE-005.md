@@ -1,6 +1,6 @@
 ---
 id: TEC-ATE-005
-titre: Reconnaître les métaux
+titre: L'identification des métaux
 axe: 2
 categorie: Métal et Atelier
 temps: Court
@@ -40,9 +40,9 @@ sources: ["ASM International, Metals Handbook, Desk Edition", "Guides des ferrai
 
 **La lime**
 
-Une lime qui **glisse sans mordre** : acier trempé (outil, ressort, roulement). Une lime qui mord facilement : acier doux ou métal tendre.
+Une lime qui **glisse sans mordre** signale un acier trempé (outil, ressort, roulement) ; une lime qui mord facilement, un acier doux ou un métal tendre.
 
-## Où trouver les bons aciers
+## Les aciers de récupération
 
 - **Lames de ressort** de voitures et de camions, **limes usées**, **lames de scie** : acier à outil, excellent pour faire des couteaux, des burins, des ciseaux. Voir [[SURV-OUT-001]].
 - **Barres d'armature, cornières, tubes** : acier doux, pour souder et construire.
@@ -51,9 +51,9 @@ Une lime qui **glisse sans mordre** : acier trempé (outil, ressort, roulement).
 
 ## Ce qu'il faut savoir
 
-- **Ne chauffez ni ne soudez l'acier galvanisé** sans aération : les fumées de zinc donnent la « fièvre des fondeurs », des frissons et de la fièvre pendant une journée.
-- **Le plomb** est toxique : jamais pour la vaisselle, ni pour ce qui touche l'eau de boisson, et on se lave les mains après l'avoir manipulé.
+- **L'acier galvanisé** chauffé ou soudé dégage des fumées de zinc qui donnent la « fièvre des fondeurs », des frissons et de la fièvre pendant une journée.
+- **Le plomb** est toxique : il est exclu de la vaisselle et des canalisations d'eau potable, et passe des mains à la bouche.
 - **Le cuivre** est le métal qui a le plus de valeur en récupération : câbles électriques, tuyaux, bobinages de moteurs.
-- **L'aluminium fond vers 660 °C** : un feu de charbon de bois bien ventilé suffit pour le couler dans un moule en sable. Aucune humidité dans le moule ni dans la ferraille : l'eau piégée sous le métal liquide provoque des projections.
+- **L'aluminium fond vers 660 °C**, à la portée d'un feu de charbon de bois bien ventilé. Voir [[TEC-ATE-014]].
 
 La corrosion des métaux : [[TEC-COR-001]].
