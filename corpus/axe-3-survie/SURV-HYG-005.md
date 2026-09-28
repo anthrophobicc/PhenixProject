@@ -39,7 +39,7 @@ Il faut environ **200 g de savon de lessive par personne et par mois**, selon le
 - **Le lierre** : une cinquantaine de feuilles bouillies un quart d'heure dans un litre d'eau donnent une lessive qui mousse un peu. **Toxique à avaler** : bidon étiqueté, hors de portée des enfants.
 - **La saponaire**, plante des bords de chemins, mousse aussi.
 
-**Les poux de corps** : lavage à 60 °C, ou coutures repassées au fer très chaud, ou vêtements enfermés deux semaines dans un sac fermé.
+**Les poux de corps** : lavage à 60 °C, ou coutures repassées au fer très chaud, ou vêtements enfermés deux semaines dans un sac fermé. Voir [[TEC-SAN-021]].
 
 **La laine** : eau froide ou tiède, pas de frottement (elle feutre), séchée à plat.
 
