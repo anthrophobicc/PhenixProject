@@ -32602,6 +32602,344 @@ Un multimètre mesure tension, résistance et continuité, et teste les diodes. 
 ## Pour aller plus loin
 
 Récupérer des composants : [[TEC-ELN-014]]. Souder : [[TEC-ELN-005]]. Lire un circuit : [[TEC-ENE-002]].
+
+---
+id: TEC-IDE-018
+titre: Lire un plan technique
+axe: 2
+categorie: Information et Données
+temps: Court
+contexte: 1
+risque: Discret
+materiel: Rien
+priorite: normale
+origine: officielle
+tags: [plan, dessin technique, vues, coupe, echelle, cotes, projection, geometrie descriptive, monge]
+sources: ["Monge G., Géométrie descriptive, 1799", "Norme ISO 128, dessins techniques : principes généraux de représentation", "Norme ISO 5456-2, projections orthogonales"]
+---
+
+::À la fin du XVIIIe siècle, Gaspard Monge invente une méthode pour dessiner exactement un objet en trois dimensions sur une feuille plate, d'abord pour les fortifications. Elle est restée un temps un secret militaire. Tous les plans du monde, d'une vis à une cathédrale, s'écrivent encore dans cette langue.::
+
+## Les vues
+
+Un objet est dessiné comme si on le regardait **de face, de dessus et de côté**, chaque vue alignée avec les autres.
+
+- En Europe, la vue de dessus se place **sous** la vue de face. Aux États-Unis, **au-dessus**. Un petit symbole de cône dans le cartouche indique la convention utilisée.
+- **La coupe** : on imagine l'objet scié, et on dessine l'intérieur. Les parties coupées sont **hachurées**.
+
+## Les traits
+
+- **Trait continu épais** : les arêtes qu'on voit.
+- **Trait interrompu** (tirets) : les arêtes cachées derrière.
+- **Trait mixte** (trait-point) : les axes, les centres des trous.
+
+## Les cotes
+
+- Les dimensions, avec des flèches. **En mécanique, toujours en millimètres**, même quand l'unité n'est pas écrite.
+- **Les tolérances** (± 0,1) disent de combien on a le droit de s'écarter.
+- **On ne mesure pas un plan à la règle** quand la cote est écrite : c'est la cote qui fait foi.
+
+## L'échelle
+
+- **1:1** grandeur réelle ; **2:1** agrandi deux fois ; **1:50** : 1 cm sur le plan vaut 50 cm en vrai.
+- Les plans de bâtiment sont souvent au **1:100** ou au **1:50**.
+
+## Les plans de bâtiment
+
+- **La vue en plan** : le bâtiment coupé à environ un mètre de hauteur, vu de dessus.
+- **Les portes** : un arc qui montre le sens d'ouverture. **Les fenêtres** : des traits fins dans l'épaisseur des murs.
+- **La flèche du nord**, les symboles électriques (prises, interrupteurs, points lumineux) et de plomberie.
+
+## Le cartouche
+
+Le petit tableau en bas à droite : titre, échelle, unité, auteur, date, version. On le lit **en premier**.
+
+Mesurer et tracer : [[TEC-ATE-002]]. Lire un circuit électrique : [[TEC-ENE-002]]. Lire une carte : [[SURV-ORI-002]].
+
+---
+id: TEC-IDE-017
+titre: Les statistiques qui trompent
+axe: 2
+categorie: Information et Données
+temps: Court
+contexte: 1
+risque: Discret
+materiel: Rien
+priorite: normale
+origine: officielle
+tags: [statistiques, correlation, causalite, risque relatif, faux positifs, biais du survivant, moyenne, mediane, graphiques]
+sources: ["Huff D., How to Lie with Statistics, 1954", "Gigerenzer G., Reckoning with Risk, 2002", "Wald A., A Method of Estimating Plane Vulnerability Based on Damage of Survivors, 1943, réédité par le Center for Naval Analyses, 1980"]
+---
+
+::Pendant la Seconde Guerre mondiale, on voulait blinder les bombardiers là où ceux qui rentraient avaient le plus d'impacts. Le statisticien Abraham Wald a dit l'inverse : il faut blinder là où ils n'en ont pas, parce que les avions touchés à ces endroits-là ne sont jamais rentrés. Les chiffres disent vrai ; c'est la façon de les lire qui ment.::
+
+## Six pièges
+
+**1. Ce qui va ensemble n'est pas cause l'un de l'autre**
+Les ventes de glaces et les noyades montent ensemble. Les glaces ne noient personne : c'est l'été. Chercher toujours la troisième cause.
+
+**2. « Double le risque »**
+Passer de 1 sur 10 000 à 2 sur 10 000, c'est « doubler le risque », et c'est aussi « un cas de plus sur 10 000 ». On demande toujours **le risque de départ**, en nombre de personnes.
+
+**3. Le test fiable à 99 %**
+Une maladie touche 1 personne sur 1 000. On teste 1 000 personnes avec un test qui se trompe 1 fois sur 100 chez les bien portants. Il trouve le malade, et environ **10 faux positifs**. Sur 11 tests positifs, **un seul** est malade. Pour une maladie rare, un test positif doit être vérifié.
+
+**4. Le biais du survivant**
+On ne voit que ceux qui ont réussi, survécu, sont rentrés. Les entreprises qui ont coulé ne donnent pas de conférences.
+
+**5. Moyenne ou médiane**
+Dix personnes gagnent 2 000 euros ; un milliardaire entre dans la pièce, la moyenne explose. **La médiane** (la valeur du milieu) ne bouge pas : elle dit mieux ce que vit la personne ordinaire.
+
+**6. Les graphiques**
+Un axe qui ne commence pas à zéro transforme une petite hausse en falaise. Une période choisie avec soin fait monter ou descendre n'importe quelle courbe.
+
+## Les bonnes questions
+
+- **Sur combien** de personnes ou de cas ?
+- **Comparé à quoi**, à quelle période ?
+- **Qui a payé** l'étude, qui la cite, et pourquoi maintenant ?
+- **En nombres réels**, ça fait combien ?
+
+Reconnaître une fausse information : [[TEC-IDE-010]]. Calculer de tête : [[TEC-IDE-013]].
+
+---
+id: TEC-IDE-016
+titre: Les réseaux sociaux, comment ils choisissent ce qu'on voit
+axe: 2
+categorie: Information et Données
+temps: Court
+contexte: 1
+risque: Discret
+materiel: Rien
+priorite: normale
+origine: officielle
+tags: [reseaux sociaux, algorithme, attention, fausses nouvelles, colere, bulle, notifications, publicite]
+sources: ["Vosoughi S., Roy D., Aral S., The spread of true and false news online, Science, 2018", "Brady W.J. et al., Emotion shapes the diffusion of moralized content in social networks, PNAS, 2017", "Commission européenne, règlement sur les services numériques (DSA), 2022"]
+---
+
+::Une grande étude sur Twitter a montré que les fausses nouvelles se répandaient plus loin, plus vite et plus largement que les vraies. Pas à cause des robots : à cause de nous, parce qu'elles sont plus surprenantes. Un réseau social ne vous montre pas le monde ; il vous montre ce qui vous fera rester.::
+
+## Le principe
+
+- **Le produit, c'est votre attention.** Le réseau gagne de l'argent avec la publicité, donc avec le temps que vous passez.
+- **L'algorithme** choisit, parmi des milliers de messages, ceux qui ont le plus de chances de vous faire réagir : cliquer, commenter, partager, rester.
+- **Ce qui fait réagir le plus** : la surprise, la peur, et surtout **la colère**. Chaque mot d'indignation morale dans un message augmente ses partages.
+- **Il apprend de vous** : ce que vous regardez longtemps, vous en verrez plus. Peu à peu, chacun voit un monde différent.
+
+## Ce que ça change
+
+- Les **opinions extrêmes** paraissent plus répandues qu'elles ne le sont.
+- Les **rumeurs** vont plus vite que leurs démentis. Voir [[SURV-SOC-004]].
+- **Le temps** file : les applications sont conçues pour qu'on ne s'arrête pas.
+
+## Reprendre la main
+
+- **Couper les notifications**, sauf celles des vraies personnes.
+- **Un fil chronologique** quand l'application le propose, plutôt que les « recommandations ».
+- **Suivre des sources variées**, y compris celles avec lesquelles on n'est pas d'accord.
+- **Avant de partager**, vérifier. Voir [[TEC-IDE-010]].
+- **Des limites de temps**, et le téléphone hors de la chambre la nuit. Voir [[TEC-SAN-023]].
+- **Les réglages de confidentialité** : qui voit quoi, ce que le réseau garde.
+
+## En crise
+
+Les réseaux peuvent sauver : informations locales, entraide, « je suis en sécurité ». Ils propagent aussi la panique et les fausses alertes. **Les sources officielles** (préfecture, secours, radio publique) passent en premier. Voir [[SIG-COM-012]].
+
+## Les enfants
+
+Leur cerveau résiste encore moins bien à ces mécanismes : un âge minimum, des règles claires, et en parler avec eux plutôt que tout interdire en secret. Voir [[SURV-PSY-004]].
+
+---
+id: TEC-IDE-015
+titre: Les banques et les distributeurs
+axe: 2
+categorie: Information et Données
+temps: Court
+contexte: 1
+risque: Discret
+materiel: Rien
+priorite: normale
+origine: officielle
+tags: [banque, distributeur, panique bancaire, garantie des depots, controle des capitaux, carte bancaire, opposition, especes]
+sources: ["Banque de France, les moyens de paiement et leur fonctionnement", "Federal Reserve, Review of the Federal Reserve's Supervision and Regulation of Silicon Valley Bank, 2023", "Fonds de garantie des dépôts et de résolution"]
+---
+
+::En mars 2023, les clients de la Silicon Valley Bank ont demandé à retirer 42 milliards de dollars en une seule journée, depuis leur téléphone. La banque a fermé le lendemain. Une banque n'a jamais dans ses coffres l'argent de tous ses clients : elle l'a prêté. Tant que tout le monde ne le réclame pas en même temps, ça marche.::
+
+## Comment une banque fonctionne
+
+- **Votre dépôt** est en réalité un prêt que vous faites à la banque.
+- **Elle en prête la plus grande partie** à d'autres (crédits, entreprises) et n'en garde qu'une petite part disponible.
+- **Si trop de clients retirent en même temps**, elle ne peut pas payer : c'est la **panique bancaire**. Voir [[TEC-IDE-012]].
+- **La garantie** : en France et dans l'Union européenne, **100 000 euros par personne et par banque** sont remboursés si la banque fait faillite.
+
+## Quand ça coince
+
+- **Les distributeurs** ont besoin de courant, de réseau et de camions de convoyage. Dans une crise, ils se vident en quelques heures.
+- **Le contrôle des capitaux** : en 2015, les Grecs ne pouvaient plus retirer que 60 euros par jour et par carte pendant des semaines.
+- **Les paiements par carte** s'arrêtent avec le réseau. Voir [[SURV-CRI-013]].
+
+## Se préparer
+
+- **Un peu de liquide** chez soi, en petites coupures.
+- **Deux comptes dans deux banques différentes**, et deux cartes.
+- **Sur papier** : son IBAN, le numéro de sa banque, le numéro pour faire opposition sur sa carte.
+- **Au-delà de 100 000 euros**, répartir entre plusieurs banques.
+
+## Les arnaques
+
+- **Le faux conseiller** : un appel qui affiche le vrai numéro de la banque, une voix qui connaît votre nom et vous demande de valider une opération « pour la bloquer ». C'est une arnaque. On raccroche et **on rappelle soi-même** le numéro écrit sur sa carte.
+- **Aucune banque** ne demande de codes, de mot de passe ou de validation de paiement par téléphone, SMS ou e-mail.
+
+Ce qui vaut quelque chose quand l'argent ne vaut plus rien : [[SURV-TROC-002]].
+
+---
+id: TEC-ELN-018
+titre: Réparer un écran, une batterie, un connecteur
+axe: 2
+categorie: Électronique et Numérique
+temps: Court
+contexte: 1
+risque: Discret
+materiel: Technique
+priorite: normale
+origine: officielle
+tags: [reparation, telephone, batterie gonflee, ecran casse, port de charge, degat des eaux, riz, repair cafe, indice de reparabilite]
+sources: ["iFixit, guides de réparation", "Ministère de la Transition écologique, indice de réparabilité et indice de durabilité", "Repair Café International Foundation"]
+---
+
+::Un téléphone qui ne charge plus a le plus souvent un port bourré de peluches de poche, tassées au fond par la prise. Un cure-dent en bois, téléphone éteint, et le voilà réparé. Et le riz pour sécher un téléphone mouillé ? Les fabricants eux-mêmes le déconseillent.::
+
+## Avant tout
+
+- **Éteindre** l'appareil.
+- **Débrancher la batterie** dès qu'on l'a ouvert, avant de toucher à quoi que ce soit.
+- **Chercher le guide** du modèle exact : des sites spécialisés les publient pas à pas, gratuitement. En France, l'**indice de réparabilité** affiché en magasin dit si l'appareil se répare facilement.
+
+## Les outils
+
+Tournevis de précision (cruciforme, Torx, et les vis spéciales de certains téléphones), médiators et spatules en plastique, pince fine, ventouse, sèche-cheveux, alcool isopropylique.
+
+## Le port de charge
+
+Éteindre, éclairer, et gratter doucement le fond avec **un cure-dent en bois**, jamais une aiguille en métal. Souvent, c'est tout.
+
+## La batterie
+
+- **Gonflée** (écran qui se soulève, dos bombé) : **on ne s'en sert plus**, on ne la perce pas, on ne la charge pas. Risque d'incendie.
+- **La changer** : chauffer pour ramollir la colle, tirer lentement les languettes adhésives, ou quelques gouttes d'alcool isopropylique sous la batterie. **Jamais d'outil métallique** pour faire levier dessus.
+- Les batteries usées se rapportent en magasin : jamais à la poubelle.
+
+## L'écran
+
+- **La vitre fêlée** mais l'affichage intact : un film de protection limite les dégâts en attendant.
+- **Le remplacement** : on chauffe les bords, on décolle à la ventouse et au médiator, on débranche les **nappes** (des rubans très fragiles) avec délicatesse, en notant tout. On se photographie les étapes.
+
+## Tombé dans l'eau
+
+1. **Éteindre** tout de suite, **ne pas charger**.
+2. Retirer la coque, la carte SIM, essuyer, secouer doucement.
+3. **Laisser sécher** à l'air, ports vers le bas, un ou deux jours, dans un endroit sec et aéré. Pas de riz : il sèche mal et laisse des poussières.
+4. Eau de mer ou sucrée : ouvrir et nettoyer la carte à l'alcool isopropylique, sinon la corrosion finit le travail.
+
+## Se faire aider
+
+Les **Repair Cafés**, nés à Amsterdam en 2009, existent aujourd'hui dans des milliers de villes : des bénévoles réparent avec vous, gratuitement.
+
+Un appareil qui ne s'allume plus : [[TEC-ELN-006]]. Souder : [[TEC-ELN-005]].
+
+---
+id: TEC-ELN-017
+titre: Comment marche un téléphone portable
+axe: 2
+categorie: Électronique et Numérique
+temps: Court
+contexte: 1
+risque: Discret
+materiel: Rien
+priorite: normale
+origine: officielle
+tags: [telephone portable, antenne relais, batterie, mode avion, boussole, fiche medicale, hors ligne, sms]
+sources: ["Cooper M., Cutting the Cord: The Cell Phone Has Transformed Humanity, 2021", "ANFR, fonctionnement des réseaux mobiles et des antennes relais", "Battery University, charge et conservation des batteries lithium-ion"]
+---
+
+::En 1973, Martin Cooper passe le premier appel d'un téléphone portable dans une rue de New York. L'appareil pesait plus d'un kilo et tenait une demi-heure de conversation. Le vôtre est une radio, une lampe, une boussole, un GPS, un appareil photo et une bibliothèque : même sans réseau, il reste l'outil le plus complet de votre poche.::
+
+## Comment il marche
+
+Le téléphone est **une radio** qui parle à l'antenne relais la plus proche, à quelques centaines de mètres ou quelques kilomètres. Quand on bouge, le réseau passe l'appel d'une antenne à l'autre. Les **SMS** voyagent dans un canal de service et passent souvent quand les appels saturent. Voir [[TEC-ELN-009]].
+
+## Tenir la batterie
+
+- **Sans réseau, mode avion** : un téléphone qui cherche une antenne vide sa batterie en quelques heures.
+- **Luminosité au minimum**, économie d'énergie activée, applications en arrière-plan coupées.
+- **Le froid** vide la batterie : le téléphone dans une poche intérieure, contre le corps.
+- **Pour qu'elle dure des années** : éviter de la laisser à 0 % ou à 100 % longtemps, et de la chauffer.
+- **La recharger sans prise** : [[TEC-ENE-014]].
+
+## Ce qui marche sans réseau
+
+- **La boussole** et **le GPS**, avec des cartes téléchargées. Voir [[TEC-ELN-010]].
+- **La lampe**, l'**appareil photo** (photographier ses papiers, une carte, une ordonnance), la **loupe**.
+- **Les livres et encyclopédies** téléchargés. Voir [[TEC-ELN-012]].
+- **Le dictaphone**, les notes, les traductions hors ligne. Voir [[TEC-IDE-014]].
+
+## À régler aujourd'hui
+
+- **La fiche médicale d'urgence**, lisible sans déverrouiller : groupe sanguin, allergies, traitements, personne à prévenir. Les secours la cherchent.
+- **Les contacts importants** aussi sur papier : le jour où le téléphone meurt, on ne connaît plus aucun numéro.
+- **Le code PIN et le code de déverrouillage** notés en lieu sûr.
+
+## Ce qu'il dit de vous
+
+Un téléphone allumé est localisable par l'opérateur et par les applications autorisées. Le mode avion et la localisation coupée limitent ce qu'il révèle.
+
+Réparer un téléphone : [[TEC-ELN-018]].
+
+---
+id: TEC-ELN-016
+titre: Comment marche un ordinateur
+axe: 2
+categorie: Électronique et Numérique
+temps: Court
+contexte: 1
+risque: Discret
+materiel: Rien
+priorite: normale
+origine: officielle
+tags: [ordinateur, processeur, memoire, stockage, binaire, systeme d'exploitation, linux, ssd, apollo]
+sources: ["Petzold C., Code: The Hidden Language of Computer Hardware and Software, 2e édition, 2022", "NASA, Apollo Guidance Computer, caractéristiques techniques"]
+---
+
+::L'ordinateur qui a posé Apollo 11 sur la Lune avait environ 4 kilo-octets de mémoire vive. Un téléphone d'aujourd'hui en a des millions de fois plus. Pourtant, tous les deux font la même chose : suivre une liste d'instructions très simples, très vite, avec des interrupteurs qui ne connaissent que deux positions.::
+
+## Tout est 0 et 1
+
+Un ordinateur est fait de milliards de **transistors**, des interrupteurs qui laissent passer le courant (1) ou non (0). Un **bit** vaut 0 ou 1 ; huit bits font un **octet**, de quoi écrire une lettre. Une photo pèse quelques millions d'octets (Mo), un film quelques milliards (Go). Voir [[TEC-ELN-013]].
+
+## Les organes
+
+- **Le processeur** : il exécute les instructions, des milliards par seconde.
+- **La mémoire vive** : le plan de travail, rapide, **vidé à l'extinction**.
+- **Le stockage** (disque dur ou SSD) : l'armoire, qui garde tout quand c'est éteint.
+- **La carte mère** relie tout ; **l'alimentation** fournit le courant.
+- **Le système d'exploitation** (Windows, macOS, Linux) fait le lien entre l'appareil, les programmes et vous.
+
+## Les pannes courantes
+
+- **Il est devenu lent** : trop de programmes au démarrage, disque plein, ou vieux disque dur. **Remplacer le disque dur par un SSD** rend une seconde jeunesse à la plupart des vieux ordinateurs.
+- **Il chauffe et souffle fort** : poussière dans le ventilateur. Débrancher, ouvrir, souffler.
+- **Il ne démarre plus** : chargeur, batterie, barrettes de mémoire mal enfoncées. Voir [[TEC-ELN-006]].
+
+## Un vieil ordinateur a encore de la valeur
+
+- **Linux**, gratuit, avec une version légère, rend utilisable un ordinateur trop lent sous Windows.
+- Il peut servir de **bibliothèque hors ligne** pour tout un groupe. Voir [[TEC-ELN-011]] et [[TEC-ELN-012]].
+- **La consommation** : un portable consomme 15 à 60 W, une petite carte comme le Raspberry Pi moins de 10 W. Sur un panneau solaire, ça change tout.
+
+## Protéger ce qu'il contient
+
+Sauvegarder : [[TEC-ELN-007]]. Les mots de passe : [[TEC-ELN-008]].
 `;
 /* Versions anglaises des fiches officielles, même identifiant. Source : traductions/en/. */
 const CORPUS_EN=String.raw`
