@@ -32289,6 +32289,319 @@ Poncer autour du trou, flux, une pièce du même métal, et l'étain au fer à s
 - **Jamais** sur un réservoir qui a contenu du carburant.
 
 La soudure à l'arc : [[TEC-ATE-008]].
+
+---
+id: TEC-ENE-025
+titre: Onduleurs et convertisseurs
+axe: 2
+categorie: Énergie et Électricité
+temps: Court
+contexte: 1
+risque: Exposé
+materiel: Technique
+priorite: normale
+origine: officielle
+tags: [onduleur, convertisseur, 12 v, 230 v, sinus pur, pic de demarrage, fusible, retour de tension, usb]
+sources: ["Victron Energy, Wiring Unlimited (câbles, fusibles et convertisseurs)", "NF C 15-100, installations électriques à basse tension", "Enedis, danger du retour de tension sur le réseau"]
+---
+
+::Un convertisseur de 1 000 W branché sur une batterie de 12 V tire près de 90 ampères : de quoi faire fondre un câble trop fin et mettre le feu au coffre. La plupart des incendies d'installations de fortune viennent de là, pas de la batterie elle-même.::
+
+## À quoi ça sert
+
+Les batteries et les panneaux solaires donnent du **courant continu** (12, 24, 48 V). La maison fonctionne en **230 V alternatif**. Le **convertisseur** (souvent appelé onduleur) fait le passage. Voir [[TEC-ENE-016]].
+
+## Choisir
+
+- **Sinus pur** : un courant aussi propre que celui du réseau. Indispensable pour les moteurs (frigo, pompe), les appareils médicaux, certains chargeurs.
+- **Quasi-sinus** : moins cher, il fait chauffer ou grogner les moteurs et abîme certains appareils. Pour des lampes et des outils simples seulement.
+- **La puissance** : la somme de ce qu'on branchera en même temps, plus **le pic de démarrage** des moteurs (un frigo demande trois à sept fois sa puissance pendant une seconde).
+
+## Brancher sans danger
+
+- **Des câbles gros et courts** entre la batterie et le convertisseur : la section dépend de l'intensité, pas de la tension.
+- **Un fusible** au plus près de la batterie, sur le fil positif.
+- **Serrer fort** les cosses : un mauvais contact chauffe.
+- **Aérer** : le convertisseur chauffe.
+- **L'éteindre** quand il ne sert pas : à vide, il consomme quand même.
+
+## Mieux que le convertisseur
+
+Chaque conversion perd de l'énergie. Tout ce qui peut fonctionner **directement en 12 V** (lampes, chargeurs USB, ventilateurs, frigos de camping-car) gaspille moins. Un chargeur USB branché sur 12 V vaut mieux qu'un chargeur 230 V branché sur un convertisseur.
+
+## Deux pièges
+
+- **L'onduleur d'ordinateur** tient quelques minutes, le temps d'éteindre proprement. Pas des heures.
+- **Ne jamais brancher un groupe ou un convertisseur sur une prise de la maison** avec un câble mâle-mâle pour « alimenter le tableau ». Le courant repart sur le réseau et peut électrocuter les techniciens qui réparent la ligne, ou vous. On passe par un inverseur de source posé par un électricien. Voir [[TEC-ENE-013]].
+
+---
+id: TEC-ENE-024
+titre: La micro-hydraulique
+axe: 2
+categorie: Énergie et Électricité
+temps: Long
+contexte: 2+
+risque: Discret
+materiel: Technique
+priorite: normale
+origine: officielle
+tags: [micro-hydraulique, turbine, pelton, moulin, debit, chute, conduite forcee, droit d'eau, electricite]
+sources: ["Harvey A., Micro-Hydro Design Manual: A Guide to Small-Scale Water Power Schemes, Practical Action, 1993", "Holt R., The Mills of Medieval England, 1988", "Code de l'environnement, loi sur l'eau et droits d'eau fondés en titre"]
+---
+
+::En 1086, le grand recensement de l'Angleterre comptait déjà environ 5 600 moulins à eau. Un ruisseau qui descend produit jour et nuit, qu'il y ait du soleil ou du vent. Là où il y a de l'eau et de la pente, c'est la meilleure source d'électricité qui soit pour une maison ou un hameau.::
+
+## Combien ça donne
+
+**La formule de terrain** : puissance en watts ≈ **5 × débit (litres par seconde) × chute (mètres)**.
+
+- 10 litres par seconde qui tombent de 10 mètres : environ **500 W**, en continu.
+- 500 W jour et nuit, c'est **12 kWh par jour** : plus que la consommation d'électricité d'un foyer économe.
+
+La chute compte autant que le débit : un filet d'eau qui tombe de haut vaut une grosse rivière qui coule à plat.
+
+## Mesurer
+
+- **Le débit** d'un petit ruisseau : le temps pour remplir un seau de 10 litres sous une cascade ou un tuyau. Mesurer en été, à l'étiage, pas après la pluie.
+- **La chute** : avec un tuyau transparent plein d'eau (niveau à eau) de proche en proche, ou un altimètre.
+
+## Le montage
+
+1. **Une prise d'eau** avec une grille qui arrête feuilles et cailloux, et un petit bassin de décantation.
+2. **Une conduite forcée** : un tuyau qui descend vers la turbine. Plus il est gros, moins il perd d'énergie par frottement.
+3. **La turbine** : une **Pelton** (des augets frappés par un jet) pour une forte chute et peu d'eau ; une **turbine à flux traversant** pour une chute moyenne ; une hélice ou une roue à aubes pour une faible chute et beaucoup d'eau.
+4. **Une génératrice**, et un **régulateur de charge** qui envoie le surplus vers une résistance (un chauffe-eau par exemple). Voir [[TEC-ENE-017]].
+5. **L'eau retourne** à la rivière, intacte.
+
+## La loi et la rivière
+
+En France, utiliser l'eau d'un cours d'eau demande une **autorisation**, sauf pour les anciens moulins qui ont un droit d'eau historique. La continuité pour les poissons et un débit minimal dans la rivière sont obligatoires. On se renseigne avant de creuser.
+
+## Les vieux moulins
+
+Beaucoup de moulins abandonnés ont encore leur bief, leur canal et leur chute. C'est souvent le meilleur point de départ.
+
+Pomper l'eau avec la rivière elle-même : le bélier, voir [[TEC-CON-018]].
+
+---
+id: TEC-ENE-023
+titre: La petite éolienne
+axe: 2
+categorie: Énergie et Électricité
+temps: Long
+contexte: 2+
+risque: Exposé
+materiel: Technique
+priorite: normale
+origine: officielle
+tags: [eolienne, petit eolien, vent, mat, turbulence, aimants permanents, piggott, tempete, regulateur]
+sources: ["Piggott H., A Wind Turbine Recipe Book, 2014", "Encraft, Warwick Wind Trials Project, rapport final, 2009", "Code de l'urbanisme, éoliennes domestiques et hauteur du mât"]
+---
+
+::Un vent deux fois plus fort donne huit fois plus d'énergie. C'est toute la loi du petit éolien, et c'est pour ça que les éoliennes posées sur les toits des villes, dans un vent faible et tourbillonnant, ne produisent presque rien : une grande étude britannique l'a mesuré. Une éolienne, ça se met haut et loin des obstacles, ou ça ne se met pas.::
+
+## Ce qu'il faut savoir
+
+- **La puissance grimpe comme le cube de la vitesse du vent** : à 10 m/s, il y a huit fois plus d'énergie qu'à 5 m/s.
+- **Elle grimpe comme le carré du diamètre** : une hélice deux fois plus grande capte quatre fois plus.
+- **Aucune éolienne** ne peut récupérer plus de 59 % de l'énergie du vent qui la traverse ; les petites en récupèrent bien moins.
+- **Il faut un vent moyen** d'au moins 4 à 5 m/s sur le site pour que ça vaille la peine.
+
+## Le site décide de tout
+
+- **Au-dessus des obstacles** : le rotor au moins **dix mètres plus haut** que tout arbre ou bâtiment à cent mètres à la ronde.
+- **Loin de la turbulence** : un toit, une maison, une haie créent des tourbillons qui usent la machine et effondrent la production.
+- **Les bons endroits** : côtes, crêtes dégagées, plaines ouvertes.
+
+Dans la plupart des jardins, **des panneaux solaires rapportent plus** pour le même prix. L'éolienne complète bien le solaire l'hiver et la nuit, quand le site est bon. Voir [[TEC-SOLR-001]].
+
+## La construire
+
+Des plans libres, répandus dans le monde entier, décrivent une éolienne de 1 à 4 m de diamètre à **aimants permanents** et pales taillées dans le bois, construite en atelier. Voir [[TEC-ENE-017]].
+
+## Les indispensables
+
+- **Un système de mise en drapeau** (la queue qui pivote et sort l'hélice du vent) ou un frein, pour les tempêtes.
+- **Un régulateur** avec une résistance de délestage : quand la batterie est pleine, le courant part en chaleur au lieu de laisser l'éolienne s'emballer.
+- **Un mât basculant** haubané, qu'on descend au sol pour l'entretien. **On ne grimpe jamais** à un mât d'éolienne par vent.
+
+## La loi
+
+En France, un mât de moins de 12 m ne demande en général pas de permis de construire, sauf en secteur protégé. La mairie et les voisins, eux, ont leur mot à dire sur le bruit.
+
+---
+id: TEC-ENE-022
+titre: Le chauffe-eau solaire
+axe: 2
+categorie: Énergie et Électricité
+temps: Long
+contexte: 1
+risque: Discret
+materiel: Récupération
+priorite: normale
+origine: officielle
+tags: [chauffe-eau solaire, thermosiphon, douche solaire, capteur, eau chaude, gel, legionelle, israel, chypre]
+sources: ["ADEME, le chauffe-eau solaire individuel, guide pratique", "Agence internationale de l'énergie, Solar Heating and Cooling Programme, Solar Heat Worldwide", "Loi israélienne de 1980 sur le chauffe-eau solaire dans les logements neufs"]
+---
+
+::En Israël, depuis 1980, la loi impose un chauffe-eau solaire sur les logements neufs ; à Chypre, presque chaque toit en porte un. Chauffer de l'eau au soleil est la façon la plus simple et la plus rentable d'utiliser son énergie : bien plus efficace, pour cet usage, qu'un panneau électrique. Un tuyau noir au soleil fait déjà l'essentiel.::
+
+## Le principe
+
+Une surface **noire** absorbe le soleil et chauffe l'eau qui circule dedans. Une **vitre** par-dessus garde la chaleur, un **ballon isolé** la stocke. En France, un chauffe-eau solaire couvre souvent **la moitié aux deux tiers** des besoins en eau chaude d'une famille sur l'année, davantage dans le Sud.
+
+## Du plus simple au plus complet
+
+- **La douche solaire** : un sac ou un bidon noir de 20 litres posé au soleil le matin donne une eau à 35-45 °C l'après-midi.
+- **Le serpentin** : un tuyau d'arrosage noir enroulé au soleil, qui se remplit d'eau chaude en quelques heures.
+- **Le ballon au soleil** : un réservoir peint en noir dans une caisse isolée fermée par une vitre. Il chauffe et garde l'eau dans le même objet.
+- **Le thermosiphon** : le capteur en bas, le ballon **plus haut** que lui. L'eau chauffée monte seule vers le ballon, la froide redescend : **aucune pompe, aucune électricité**. C'est le modèle des toits méditerranéens.
+- **La circulation forcée** : une petite pompe (qui peut marcher sur un panneau photovoltaïque) fait circuler le liquide ; le ballon peut être à la cave.
+
+## Les pièges
+
+- **Le gel** : l'eau gèle dans les capteurs et les fait éclater. On met un antigel dans le circuit, ou on vide les capteurs l'hiver. Voir [[TEC-CON-025]].
+- **La surchauffe** l'été : ballon trop petit, capteurs trop grands, l'eau bout. On couvre une partie des capteurs.
+- **Les brûlures** : l'eau peut dépasser 60 °C ; un mitigeur à la sortie.
+- **Les légionelles** : l'eau stockée doit monter de temps en temps au-dessus de 55-60 °C, avec un appoint si le soleil manque. Voir [[TEC-ENE-021]].
+
+## Orienter
+
+Au sud, incliné à peu près à la latitude du lieu (45° en France), sans ombre entre 10 h et 16 h.
+
+Le solaire électrique : [[TEC-SOLR-001]].
+
+---
+id: TEC-ELN-015
+titre: Les moteurs électriques
+axe: 2
+categorie: Électronique et Numérique
+temps: Court
+contexte: 1
+risque: Discret
+materiel: Technique
+priorite: normale
+origine: officielle
+tags: [moteurs electriques, courant continu, balais, sans balais, pas a pas, servomoteur, asynchrone, condensateur de demarrage]
+sources: ["Hughes A., Drury B., Electric Motors and Drives, 5e édition, Newnes, 2019", "Platt C., Make: Electronics, 3e édition, 2021"]
+---
+
+::Un moteur de pompe ou de ventilateur qui ronronne sans tourner a, une fois sur deux, un condensateur de démarrage mort : une pièce à quelques euros, deux fils à changer. Savoir quel moteur on a devant soi, c'est savoir comment le réparer, le commander ou le réutiliser.::
+
+## Les familles
+
+- **À courant continu, à balais** : jouets, essuie-glaces, perceuses sans fil, petits ventilateurs. On inverse les fils, il tourne dans l'autre sens ; on baisse la tension, il ralentit. Ses **balais** en carbone s'usent : étincelles et perte de puissance.
+- **Sans balais** : drones, vélos électriques, ventilateurs d'ordinateur. Plus durables, ils ont besoin d'une petite carte de commande.
+- **Pas à pas** : imprimantes, imprimantes 3D, scanners. Ils tournent par petits crans précis, commandés par une carte.
+- **Servomoteurs** de modélisme : ils vont à une position donnée et la tiennent. Pratiques pour ouvrir une trappe, une vanne.
+- **Asynchrones** (à induction), en 230 V : pompes, ventilateurs, compresseurs, vieux lave-linge. Increvables. En monophasé, ils démarrent grâce à un **condensateur**.
+- **Universels** : aspirateurs, mixeurs, perceuses filaires, meuleuses. Rapides et bruyants, à balais.
+
+## Diagnostiquer
+
+- **Il ronronne sans tourner** : condensateur de démarrage (moteur 230 V) ou roulement bloqué. On essaie de lancer l'axe à la main, **débranché**.
+- **Odeur de brûlé, fumée** : bobinage grillé. On change de moteur.
+- **Beaucoup d'étincelles, perte de puissance** : balais usés.
+- **Il chauffe vite** : surcharge, ventilation bouchée, roulement fatigué.
+
+## Réutiliser
+
+- **En génératrice** : un moteur à aimants qu'on fait tourner produit du courant. Voir [[TEC-ENE-017]].
+- **Moteurs de tapis de course, de lave-linge** : touret à meuler, petit tour, broyeur.
+- **Un moteur d'essuie-glace** : très lent, très fort, en 12 V. Parfait pour une porte de poulailler ou un tournebroche.
+
+Récupérer : [[TEC-ELN-014]]. Engrenages et courroies : [[TEC-MEC-028]].
+
+---
+id: TEC-ELN-014
+titre: Récupérer des composants électroniques
+axe: 2
+categorie: Électronique et Numérique
+temps: Court
+contexte: 1
+risque: Exposé
+materiel: Récupération
+priorite: normale
+origine: officielle
+tags: [recuperation, composants, dessouder, alimentation atx, moteurs pas a pas, condensateurs, detecteur de fumee, laser]
+sources: ["Platt C., Make: Electronics, 3e édition, 2021", "The Restart Project, guides de réparation", "INRS, risques électriques et condensateurs"]
+---
+
+::Une imprimante jetée contient des moteurs de précision, des rails, des courroies, des engrenages et une alimentation. Une vieille alimentation de PC devient une alimentation d'atelier 12 V et 5 V avec un bout de fil. Les poubelles électroniques sont les magasins de pièces de ceux qui savent démonter.::
+
+## Où trouver quoi
+
+- **Alimentation de PC** : 12 V et 5 V costauds. Pour la démarrer hors du PC, on relie le fil vert du gros connecteur à un fil noir.
+- **Imprimantes, scanners, lecteurs de disques** : moteurs pas à pas, rails, courroies, ressorts, engrenages.
+- **Chargeurs et blocs secteur** : de petites alimentations prêtes à l'emploi, étiquette lue.
+- **Ordinateurs portables** : cellules lithium, ventilateurs, écran. Voir [[SURV-REC-033]].
+- **Haut-parleurs** : aimants puissants.
+- **Jouets, perceuses, brosses à dents** : petits moteurs, piles rechargeables, engrenages.
+- **Ampoules LED** : LED et petites alimentations.
+- **Téléphones** : vibreurs, micros, petits écrans.
+
+## Dessouder
+
+- **La pompe à dessouder** : on chauffe la soudure, on aspire.
+- **La tresse** : posée sur la soudure et chauffée, elle boit l'étain.
+- **La coupe** : pour un composant à pattes, couper au ras de la carte est souvent plus rapide.
+- **Le décapeur thermique** chauffe toute une zone : les composants tombent. Aérer, loin du plastique.
+
+Tester chaque pièce au multimètre avant de la réutiliser. Voir [[TEC-ENE-008]].
+
+## Les dangers
+
+- **Les gros condensateurs** (alimentations, micro-ondes, flashs d'appareil photo, téléviseurs) restent chargés : les décharger avec une résistance tenue par des pinces isolées, jamais les doigts. Voir [[SURV-REC-031]].
+- **Les vieux téléviseurs à tube** gardent une très haute tension dans le tube : on ne les ouvre pas.
+- **Les lasers** des lecteurs de disques abîment les yeux : jamais regarder dedans.
+- **Les détecteurs de fumée ioniques** contiennent une petite source radioactive : on ne les démonte pas, on les rapporte.
+- **Les cellules lithium** percées prennent feu. Voir [[SURV-REC-033]].
+- **L'étain au plomb** des vieilles cartes : se laver les mains.
+
+Les composants : [[TEC-ELN-013]].
+
+---
+id: TEC-ELN-013
+titre: Les composants électroniques de base
+axe: 2
+categorie: Électronique et Numérique
+temps: Court
+contexte: 1
+risque: Discret
+materiel: Technique
+priorite: normale
+origine: officielle
+tags: [composants, resistance, condensateur, diode, led, transistor, regulateur, loi d'ohm, circuit]
+sources: ["Horowitz P., Hill W., The Art of Electronics, 3e édition, Cambridge University Press, 2015", "Platt C., Make: Electronics, 3e édition, 2021"]
+---
+
+::Le premier transistor, en 1947, tenait dans une main. La puce d'un téléphone récent en contient une vingtaine de milliards. Mais une carte électronique de radio, de chargeur ou de lampe se lit avec une poignée de composants seulement, et une seule loi.::
+
+## La loi d'Ohm
+
+**Tension = résistance × intensité** (U = R × I). Tout le reste en découle.
+
+**Exemple** : une LED qui demande 2 V et 20 mA, sur une alimentation de 5 V. Il reste 3 V à « perdre » : 3 / 0,02 = **150 ohms**. Sans cette résistance, la LED grille. Voir [[TEC-ELN-004]].
+
+## Les composants
+
+- **La résistance** : freine le courant. Un petit cylindre à bandes de couleur, sans sens de branchement.
+- **Le condensateur** : stocke un peu d'électricité et la rend, lisse les tensions. Les gros **chimiques** (cylindres) ont un sens : la bande marquée « - » va au moins. Branchés à l'envers, ils gonflent ou éclatent. **Les gros condensateurs restent chargés** longtemps après débranchement. Voir [[SURV-REC-031]].
+- **La diode** : laisse passer le courant dans un seul sens (la bague marque la sortie). Quatre diodes en pont transforment l'alternatif en continu.
+- **La LED** : une diode qui éclaire.
+- **Le transistor** : un interrupteur commandé ; un petit courant en commande un gros. La base de toute l'électronique.
+- **Le régulateur de tension** : sort une tension fixe (5 V, 3,3 V) à partir d'une tension plus haute. Trois pattes, très utile pour alimenter un appareil USB.
+- **Le relais** : un interrupteur mécanique commandé par un électroaimant. On l'entend claquer.
+- **Le fusible** : un fil qui fond pour protéger le reste.
+- **Le transformateur** : change la tension de l'alternatif (230 V en 12 V par exemple).
+
+## Tester
+
+Un multimètre mesure tension, résistance et continuité, et teste les diodes. Voir [[TEC-ENE-008]].
+
+## Pour aller plus loin
+
+Récupérer des composants : [[TEC-ELN-014]]. Souder : [[TEC-ELN-005]]. Lire un circuit : [[TEC-ENE-002]].
 `;
 /* Versions anglaises des fiches officielles, même identifiant. Source : traductions/en/. */
 const CORPUS_EN=String.raw`
