@@ -34,7 +34,7 @@ sources: ["Organisation mondiale de la santé, Alimentation du nourrisson et du 
 
 ## Les dangers
 
-- **La fausse route** : raisins entiers, noix, cacahuètes, pop-corn, rondelles de saucisse avant 4 ou 5 ans. Les raisins se coupent en quatre dans la longueur. Voir [[URG-AIR-001]].
+- **La fausse route** : raisins entiers, noix, cacahuètes, pop-corn, rondelles de saucisse avant 4 ou 5 ans. Les raisins se coupent en quatre dans la longueur. Voir [[URG-ETOU-001]].
 - **La déshydratation** : moins de couches mouillées, fontanelle creuse, pas de larmes, bébé mou. Solution de réhydratation, et consulter. Voir [[TEC-SAN-011]].
 
 ## Repérer la dénutrition
