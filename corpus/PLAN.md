@@ -178,7 +178,7 @@ Déjà faites : [x] TEC-CHI-001 Acides, bases et pH · [x] TEC-CHI-002 Fabriquer
 - [x] Affûter tous les outils `P1`
 - [x] Visser, boulonner, fileter `P2`
 - [x] Les outils électriques et leurs dangers `P2`
-- [ ] Monter un établi `P2`
+- [x] Monter un établi `P2`
 
 ### Le métal
 - [x] Reconnaître les métaux `P1`
@@ -187,7 +187,7 @@ Déjà faites : [x] TEC-CHI-001 Acides, bases et pH · [x] TEC-CHI-002 Fabriquer
 - [x] La soudure à l'arc `P2`
 - [x] Le brasage et l'étain `P2`
 - [x] Fondre et couler l'aluminium `P3`
-- [ ] Le tour et la fraiseuse `P3`
+- [x] Le tour et la fraiseuse `P3`
 - [x] Riveter `P3`
 - [x] Travailler la tôle `P3`
 
@@ -256,7 +256,7 @@ Déjà faites : [x] TEC-ENE-001 L'énergie électrique dans les objets · [x] TE
 - [x] Le bois énergie : sécher, stocker, rendement `P2`
 - [x] Le gazogène `P3`
 - [x] Les carburants : durée de conservation, stockage `P2`
-- [ ] L'électricité statique et la foudre `P3`
+- [x] L'électricité statique et la foudre `P3`
 - [x] Économiser l'énergie : ce qui compte vraiment `P2`
 
 ## Culture et Loisirs `nouvelle catégorie`
@@ -359,7 +359,7 @@ Déjà faites : [x] TEC-IDE-001 L'identification · [x] TEC-IDE-002 Le fait reli
 - [x] Les tailles et formats normalisés : conteneurs, palettes, fûts `P3`
 - [x] Les calculs de tête utiles `P2`
 - [x] Lire un plan technique `P2`
-- [ ] Le droit utile au quotidien `P3`
+- [x] Le droit utile au quotidien `P3`
 - [x] Les langues : se faire comprendre sans parler la langue `P2`
 
 ## Mécanique et Transport
@@ -375,7 +375,7 @@ Déjà faites : [x] TEC-MAC-001 Les machines simples · [x] TEC-MEC-001 Assemble
 - [x] Les voyants du tableau de bord `P1`
 - [x] Les freins `P2`
 - [x] Le refroidissement et la surchauffe `P2`
-- [ ] Le diesel et l'essence : ce qui change `P2`
+- [x] Le diesel et l'essence : ce qui change `P2`
 - [x] La voiture électrique `P2`
 - [x] Conduire sur neige, verglas, boue `P1`
 - [x] Sortir d'un enlisement `P1`
@@ -420,7 +420,7 @@ Déjà faites : [x] TEC-SAN-001 L'infection d'une plaie · [x] TEC-SAN-002 La fi
 - [x] La douleur et les antalgiques `P1`
 - [ ] Suturer une plaie `P2`
 - [x] Les injections `P2`
-- [ ] Les perfusions et la réhydratation orale `P1`
+- [x] Les perfusions et la réhydratation orale `P1`
 - [x] Prendre les constantes `P1`
 - [x] Les pansements et les bandages `P1`
 
@@ -700,7 +700,7 @@ Déjà faites : [x] URG-AIR-001 · URG-ANA-001 · URG-CARD-001 · URG-EFF-001 et
 - [x] Évacuation : ce qu'on prend en 10 minutes `P1`
 - [x] Vivre dans un camp de réfugiés `P2`
 - [x] Tempête solaire `P3`
-- [ ] Chute de météorite et impact `P3`
+- [x] Chute de météorite et impact `P3`
 
 ## Secourisme
 
