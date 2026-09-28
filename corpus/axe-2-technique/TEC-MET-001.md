@@ -25,8 +25,8 @@ Ce qui suit dit, métier par métier, **ce qu'ils savent que vous ne savez pas**
 
 - **Infirmier, infirmière** : injections, perfusions, pansements, surveillance d'un malade jour et nuit, repérer quand ça s'aggrave. **Le métier le plus utile au quotidien** dans un groupe, plus encore que le médecin, parce que la plupart des soins sont des soins qui durent.
 - **Médecin** : le diagnostic, le choix du traitement, les gestes techniques.
-- **Sage-femme** : grossesses, accouchements, nouveau-nés. Un savoir qui sauve deux vies à la fois. Voir [[URG-SEC-007]].
-- **Pharmacien** : quel médicament remplace quel autre, les doses, les interactions, ce qui se garde et ce qui se périme.
+- **Sage-femme** : grossesses, accouchements, nouveau-nés. Un savoir qui sauve deux vies à la fois. Voir [[TEC-MET-007]] et [[URG-SEC-007]].
+- **Pharmacien** : quel médicament remplace quel autre, les doses, les interactions, ce qui se garde et ce qui se périme. Voir [[TEC-MET-008]].
 - **Vétérinaire** : chirurgie, anesthésie, antibiotiques, sur des patients qui ne parlent pas. Il sait beaucoup de ce que sait un médecin, et il a l'habitude de faire avec peu.
 - **Dentiste** : une rage de dents rend un adulte inutile en deux jours.
 - **Kinésithérapeute** : immobiliser, rééduquer, soulager un dos.
@@ -37,16 +37,16 @@ Ce qui suit dit, métier par métier, **ce qu'ils savent que vous ne savez pas**
 - **Plombier** : l'eau qui arrive et l'eau qui repart. Sans eux, les maladies arrivent vite. Voir [[TEC-CON-006]].
 - **Électricien** : câbler sans tuer personne, brancher un groupe ou des panneaux solaires correctement. Voir [[TEC-ENE-003]].
 - **Chauffagiste** : poêles, conduits, gaz, et le monoxyde de carbone qui tue les gens qui se chauffent mal.
-- **Maçon, charpentier, couvreur** : un toit étanche avant l'hiver, un mur qui tient. Le couvreur est celui dont on se rend compte qu'il manque à la première pluie.
+- **Maçon, charpentier, couvreur** : un toit étanche avant l'hiver, un mur qui tient. Le couvreur est celui dont on se rend compte qu'il manque à la première pluie. Voir [[TEC-MET-009]].
 - **Mécanicien** : moteurs, pompes, groupes, véhicules. Il est aussi le plus débrouillard avec des pièces qui ne sont pas les bonnes.
-- **Soudeur, métallier, forgeron** : réparer ce qui a cassé, fabriquer ce qu'on ne trouve plus.
+- **Soudeur, métallier, forgeron** : réparer ce qui a cassé, fabriquer ce qu'on ne trouve plus. Voir [[TEC-MET-010]].
 - **Électronicien, réparateur de téléphones et de radios** : faire revivre les appareils, communiquer. Voir [[SIG-COM-002]].
 
 ## Nourrir
 
 - **Agriculteur, maraîcher, éleveur** : produire à manger saison après saison. Le savoir le plus long à acquérir, et celui qu'on regrette le plus de ne pas avoir. Voir [[TEC-AGR-001]] et [[TEC-ELE-001]].
-- **Boulanger** : le levain, le four à bois, du pain pour cent personnes.
-- **Boucher, charcutier** : abattre, découper, saler, fumer, ne rien perdre d'un animal. Voir [[TEC-ELE-007]].
+- **Boulanger** : le levain, le four à bois, du pain pour cent personnes. Voir [[TEC-MET-011]].
+- **Boucher, charcutier** : abattre, découper, saler, fumer, ne rien perdre d'un animal. Voir [[TEC-MET-012]] et [[TEC-ELE-007]].
 - **Meunier, apiculteur, pêcheur, chasseur, cueilleur** : chacun un pan entier de l'alimentation.
 - **Cuisinier de cantine ou d'armée** : nourrir beaucoup de monde, tous les jours, avec ce qu'il y a, sans intoxiquer personne.
 
@@ -60,7 +60,7 @@ Ce qui suit dit, métier par métier, **ce qu'ils savent que vous ne savez pas**
 
 - **Enseignant** : que les enfants continuent d'apprendre, et que les savoirs se transmettent.
 - **Gestionnaire de stock, logisticien, comptable** : savoir ce qu'on a, ce qu'on consomme, et combien de temps ça tiendra.
-- **Radioamateur** : parler loin sans réseau.
+- **Radioamateur** : parler loin sans réseau. Voir [[TEC-MET-013]].
 - **Militaire, gendarme, agent de sécurité** : la garde, la discipline, les situations tendues.
 - **Psychologue, travailleur social, médiateur** : tenir un groupe ensemble quand tout le monde est à bout. Voir [[SURV-PSY-003]].
 
