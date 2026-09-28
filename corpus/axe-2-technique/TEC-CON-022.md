@@ -1,6 +1,6 @@
 ---
 id: TEC-CON-022
-titre: Construire en terre crue
+titre: La construction en terre crue
 axe: 2
 categorie: Construction et Habitat
 temps: Long
@@ -15,9 +15,9 @@ sources: ["Houben H., Guillaud H., CRAterre, Traité de construction en terre, 1
 
 ::Au Yémen, la ville de Shibam dresse depuis le XVIe siècle des tours d'habitation en briques de terre crue de cinq à onze étages. Une grande partie de l'humanité vit encore dans des maisons en terre, et autour de Lyon, des fermes en pisé tiennent depuis des siècles. La terre est gratuite, sous nos pieds, et se remet en terre quand on démolit.::
 
-## Tester sa terre
+## La terre à bâtir
 
-**Le test du bocal** : un bocal à moitié de terre, complété d'eau et d'une pincée de sel, bien secoué, puis laissé reposer un jour. Les couches se déposent : graviers, sable, limon, et l'argile en haut. Pour construire, il faut assez d'argile pour lier, mais pas trop, sinon la terre fissure en séchant. Le mieux est de faire quelques briques d'essai.
+Une terre à bâtir mêle graviers, sable, limon et argile, qui joue le rôle de liant. Il en faut assez pour lier, mais pas trop, sinon la terre fissure en séchant. Le test du bocal (terre et eau secouées puis laissées reposer) montre les proportions : les couches se déposent des plus lourdes aux plus fines, l'argile en dernier. Les bâtisseurs complètent par des briques d'essai.
 
 ## Quatre techniques
 

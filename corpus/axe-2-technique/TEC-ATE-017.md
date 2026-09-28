@@ -1,43 +1,41 @@
 ---
 id: TEC-ATE-017
-titre: Monter un établi
+titre: L'établi
 axe: 2
 categorie: Métal et Atelier
-temps: Long
+temps: Court
 contexte: 1
 risque: Discret
-materiel: Récupération
+materiel: Rien
 priorite: normale
 origine: officielle
-tags: [etabli, atelier, roubo, valet d'etabli, etau, hauteur, stabilite, vieille porte, rangement]
+tags: [etabli, atelier, roubo, valet d'etabli, etau, presse, hauteur, stabilite, menuiserie, ajustage]
 sources: ["Roubo A.-J., L'Art du menuisier, 1769-1775", "Schwarz C., Workbenches: From Design and Theory to Construction and Use, Popular Woodworking Books, 2007"]
 ---
 
-::En 1769, le menuisier parisien André-Jacob Roubo publie un immense traité illustré de son métier. L'établi qu'il y décrit, massif, simple, avec un valet qu'on enfonce d'un coup de maillet dans un trou du plateau, est encore copié par les artisans du monde entier. Un bon établi ne bouge pas quand on tape dessus : c'est tout son secret.::
+::L'établi est la table de travail de l'artisan. En 1769, le menuisier parisien André-Jacob Roubo en décrit un, massif et simple, dans un immense traité illustré de son métier : il est encore copié par les artisans du monde entier. Un bon établi a une qualité avant toutes les autres : il ne bouge pas quand on frappe ou qu'on rabote dessus.::
 
-## Ce qu'il doit être
+## Ce qui fait un bon établi
 
-- **Lourd et rigide** : un plateau épais, des pieds solides, des traverses et des écharpes en diagonale. S'il danse quand on rabote, il ne sert à rien.
-- **À la bonne hauteur** : environ celle de la paume, bras tendus le long du corps, pour le travail du bois (souvent entre 85 et 95 cm). Plus haut pour le travail fin, l'électronique.
-- **Plat** : un plateau dressé, vérifié à la règle.
+- **La masse et la rigidité** : un plateau épais, des pieds solides reliés par des traverses. Un établi léger danse sous le rabot et renvoie l'énergie des coups.
+- **La planéité** : le plateau est dressé et vérifié à la règle, car il sert de référence.
+- **La hauteur** : pour le travail du bois à la main, environ à la hauteur de la paume, bras tendus le long du corps, soit souvent 85 à 95 cm. Le travail fin (horlogerie, électronique) se fait plus haut, près des yeux.
 
-## Avec ce qu'on a
+## Les familles d'établis
 
-- **Le plateau** : des madriers vissés côte à côte, une vieille porte pleine doublée, un plan de travail de cuisine épais.
-- **Les pieds** : bastaings, poutres de récupération, palettes démontées. Voir [[SURV-REC-034]].
-- **Le lester** ou le fixer au mur s'il est trop léger.
+- **L'établi de menuisier** : plateau de bois dur, souvent en hêtre, percé de trous pour les valets et les butées, avec une ou deux presses.
+- **L'établi d'ajusteur**, pour le métal : plateau recouvert de tôle, étau parallèle en acier sur un angle.
+- **L'établi d'électronicien** : surface isolante et antistatique, éclairage fort, loupe, alimentation.
 
 ## Tenir la pièce
 
-- **Un étau** vissé sur le devant, à mâchoires en bois pour ne pas marquer. Pour le métal, un étau d'ajusteur sur un coin.
-- **Le valet** : une tige en crochet qu'on enfonce dans un trou du plateau d'un coup de maillet, et qui plaque la pièce ; un coup sur l'arrière la libère.
-- **Des butées** et des trous alignés pour caler les pièces à raboter.
-- **Des serre-joints**, toujours à portée.
+- **La presse**, ou étau de menuisier, aux mâchoires en bois qui ne marquent pas le bois.
+- **L'étau d'ajusteur** en acier pour le métal.
+- **Le valet** : une tige recourbée qu'on enfonce d'un coup de maillet dans un trou du plateau ; elle se coince en biais et plaque la pièce. Un coup sur l'arrière la libère.
+- **Les butées et les trous alignés**, qui calent une planche à raboter, et les serre-joints.
 
-## Autour
+## L'atelier autour
 
-- **Une lumière** forte, sans ombre sur le plan de travail.
-- **Une prise protégée** par un différentiel. Voir [[TEC-ATE-010]].
-- **Sous le plateau**, une étagère pour les outils lourds ; **au mur**, un panneau où chaque outil a sa place dessinée : on voit tout de suite ce qui manque.
+Un éclairage fort et sans ombre, des prises protégées par un différentiel ([[TEC-ATE-010]]), des outils rangés au mur, chacun à sa place : l'organisation d'un atelier se voit d'abord à son établi.
 
 Les outils à main : [[TEC-ATE-001]]. Les assemblages : [[TEC-ATE-012]].

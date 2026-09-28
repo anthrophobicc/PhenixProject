@@ -1,50 +1,41 @@
 ---
 id: TEC-ATE-013
-titre: Fendre, équarrir, emmancher
+titre: Le bois fendu et équarri
 axe: 2
 categorie: Métal et Atelier
 temps: Court
 contexte: 1
-risque: Exposé
+risque: Discret
 materiel: Rien
 priorite: normale
 origine: officielle
-tags: [fendre, coins, merlin, equarrir, doloire, manche, frene, plane, emmancher, fil du bois]
+tags: [fendre, coins, merlin, equarrir, doloire, hache, manche, frene, plane, emmancher, fil du bois]
 sources: ["Bealer A.W., Old Ways of Working Wood, 1972", "Langsner D., Country Woodcraft, 1978"]
 ---
 
-::Un manche fendu dans un tronc suit le fil du bois de bout en bout : il est bien plus solide qu'un manche scié, où la scie a coupé les fibres en biais. Tremper une hache dans l'eau pour resserrer le fer est un vieux réflexe, et une fausse bonne idée : le bois gonfle, s'écrase, et le fer ballotte encore plus une fois sec.::
+::Avant la scie mécanique, le bois se travaillait surtout à la hache et aux coins. Le bois fendu suit ses propres fibres de bout en bout : un manche fendu dans un tronc est bien plus solide qu'un manche scié, où la lame a coupé les fibres en biais. Les charpentes des cathédrales ont été taillées ainsi, poutre par poutre.::
 
-## Fendre
+## Le fil du bois
 
-- **Lire le bois** : on attaque dans les fentes qui existent déjà au bout de la bûche, en évitant les nœuds.
-- **Un billot** à hauteur de genou, pieds écartés, **jamais une main près du billot**.
-- **Le merlin** pour les bûches, **les coins** et la masse pour les gros troncs : on enfonce un premier coin, puis un second dans la fente qui s'ouvre.
-- **Le bois vert** de beaucoup d'espèces fend mieux que le sec ; le bois gelé, en plein hiver, éclate encore mieux.
+Le bois est fait de fibres alignées dans le sens du tronc. Il se fend facilement le long de ces fibres et casse difficilement en travers. Un objet dont les fibres courent d'un bout à l'autre, sans être coupées, résiste bien mieux aux chocs et à la flexion.
 
-## Équarrir
+## Le fendage
 
-Transformer un tronc rond en poutre carrée, comme les charpentiers d'autrefois :
+- **Le merlin**, une hache lourde à tranchant épais, ouvre les bûches ; **les coins** d'acier ou de bois dur, enfoncés à la masse, ouvrent les gros troncs.
+- **La fente suit les faiblesses** : les fissures qui existent déjà au bout de la bûche, en évitant les nœuds, qui dévient la fente.
+- **Le bois vert** de nombreuses espèces se fend mieux que le sec ; le bois gelé éclate encore plus facilement.
 
-1. Tracer au cordeau les lignes de la poutre sur le tronc calé.
-2. **Entailler** à la hache tous les quinze à vingt centimètres jusqu'au trait, sur toute la longueur.
-3. **Faire sauter** les morceaux entre les entailles.
-4. **Dresser** la face à la doloire (une hache large à un seul biseau).
-5. Retourner, recommencer sur les autres faces.
+## L'équarrissage
 
-## Faire un manche
+- **Transformer un tronc rond en poutre carrée**, comme les charpentiers le faisaient jusqu'au XIXe siècle.
+- **La méthode** : le tronc est tracé au cordeau, entaillé à la hache tous les quinze à vingt centimètres jusqu'au trait, puis les morceaux entre les entailles sautent. La face est ensuite dressée à la doloire, une hache large à un seul biseau.
+- **Les traces de hache** sur les vieilles poutres permettent souvent de dater et d'attribuer une charpente.
 
-- **Le bois** : le **frêne**, souple et résistant aux chocs, est le bois des manches depuis toujours. Sinon acacia, charme, érable. Fil droit, sans nœud.
-- **Fendre** une section, la laisser sécher quelques mois, puis la **mettre en forme** à la plane (une lame à deux poignées qu'on tire vers soi), sur un chevalet à serrer au pied, et finir au racloir.
-- **L'huile de lin** en plusieurs couches : elle protège sans rendre glissant.
+## Les manches
 
-## Emmancher un outil
+- **Le frêne** est le bois des manches depuis toujours : souple et très résistant aux chocs. L'acacia, le charme et l'érable conviennent aussi, à condition d'avoir un fil droit et sans nœud.
+- **La plane**, une lame à deux poignées qu'on tire vers soi sur un chevalet à pédale, met en forme le manche fendu.
+- **L'emmanchement** : le manche entre à force dans l'œil du fer, puis un coin de bois dur, souvent complété d'un coin d'acier, l'écarte à l'intérieur. Un fer qui a du jeu peut s'envoler au premier coup.
+- **Tremper une hache dans l'eau** pour resserrer le fer est une fausse bonne idée : le bois gonfle, s'écrase, et le fer ballotte encore plus une fois sec.
 
-1. Le bout du manche ajusté pour entrer **à force** dans l'œil du fer.
-2. Une **fente** sciée dans le bout du manche.
-3. Un **coin de bois dur** encollé enfoncé dans la fente, puis un **petit coin d'acier** en travers.
-4. Couper ce qui dépasse.
-
-Un fer qui a du jeu est dangereux : il peut s'envoler au premier coup.
-
-Les assemblages : [[TEC-ATE-012]]. Affûter : [[TEC-ATE-004]]. Le bois de chauffage : [[TEC-ENE-019]].
+Les assemblages : [[TEC-ATE-012]]. L'affûtage : [[TEC-ATE-004]]. Le bois de chauffage : [[TEC-ENE-019]].

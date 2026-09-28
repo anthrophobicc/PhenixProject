@@ -1,39 +1,45 @@
 ---
 id: TEC-MAT-016
-titre: Tisser
+titre: Le tissage
 axe: 2
 categorie: Chimie et Matériaux
-temps: Long
+temps: Court
 contexte: 1
 risque: Discret
-materiel: Récupération
+materiel: Rien
 priorite: normale
 origine: officielle
-tags: [tissage, metier a tisser, chaine, trame, cadre, tissage aux cartes, lirette, sangles, jacquard]
+tags: [tissage, metier a tisser, chaine, trame, toile, serge, satin, tissage aux cartes, lirette, jacquard, cartes perforees]
 sources: ["Musée des Tissus de Lyon, le métier Jacquard (1804)", "Barber E.W., Women's Work: The First 20,000 Years, Norton, 1994", "Collingwood P., The Techniques of Tablet Weaving, 1982"]
 ---
 
-::En 1804, à Lyon, Joseph-Marie Jacquard invente un métier à tisser commandé par des cartes perforées : les trous décident quels fils se lèvent. C'est l'ancêtre direct de la programmation des ordinateurs. Mais pour tisser une sangle, un sac ou un tapis, il suffit d'un cadre en bois, de clous et de patience, comme depuis des milliers d'années.::
+::Tisser, c'est croiser deux ensembles de fils à angle droit. En 1804, à Lyon, Joseph-Marie Jacquard invente un métier commandé par des cartes perforées : les trous décident quels fils se lèvent. C'est l'ancêtre direct de la programmation des ordinateurs. Le principe, lui, remonte à la préhistoire.::
 
 ## Le principe
 
-- **La chaîne** : des fils tendus parallèlement sur un cadre.
-- **La trame** : un fil qu'on fait passer **dessus, dessous, dessus, dessous** à travers la chaîne, puis dans l'autre sens au rang suivant.
-- **Tasser** chaque rang contre le précédent avec un peigne ou les doigts.
+- **La chaîne** : des fils tendus parallèlement sur le métier, dans le sens de la longueur.
+- **La trame** : un fil qui passe alternativement dessus et dessous les fils de chaîne, d'un bord à l'autre, puis revient au rang suivant.
+- **Le tassage** : chaque passage de trame est serré contre le précédent avec un peigne. Plus il est serré, plus le tissu est dense.
+- **La lisière** : le bord où la trame fait demi-tour, qui empêche le tissu de s'effilocher.
 
-## Le métier le plus simple
+## Les armures
 
-1. **Un cadre** en bois (un vieux cadre de tableau, quatre tasseaux vissés), avec une rangée de clous en haut et en bas.
-2. **Tendre la chaîne** en zigzag entre les clous, bien serrée, fils régulièrement espacés.
-3. **Une navette** : un bâton plat où l'on enroule la trame.
-4. **Une baguette** glissée dans un rang sur deux de la chaîne et mise de chant ouvre le passage d'un coup : on gagne beaucoup de temps.
+- **La toile** : un fil dessus, un fil dessous. Le tissage le plus simple et le plus solide, celui des draps et des chemises.
+- **Le sergé** : la trame passe sur deux fils ou plus, avec un décalage à chaque rang, ce qui dessine des diagonales. Le jean est un sergé.
+- **Le satin** : de longs flottés qui donnent une surface lisse et brillante, mais plus fragile.
 
-## Les techniques utiles
+## Les métiers
 
-- **Le tissage aux cartes** : des cartes carrées percées aux quatre coins, que l'on fait tourner pour tordre les fils. Il donne des galons et des **sangles** très solides, pratiqué depuis l'âge du fer.
-- **Le métier à sangle** : la chaîne tendue entre un poteau et une ceinture autour de la taille du tisserand. Utilisé des Andes à l'Asie.
-- **La lirette** : des chutes de tissu découpées en bandes servent de trame. On en fait des tapis épais et des couvertures à partir de vieux vêtements. Les sacs plastique découpés en bandes marchent aussi.
+- **Le métier à poids**, dès le Néolithique : la chaîne pend verticalement, tendue par des pierres.
+- **Le métier à sangle**, ou à ceinture : la chaîne est tendue entre un poteau et la taille du tisserand. Il est encore utilisé des Andes à l'Asie du Sud-Est.
+- **Le métier à pédales** : des cadres, les lames, lèvent des groupes de fils à chaque pédale et ouvrent d'un coup le passage de la navette. C'est le métier des tisserands d'Europe.
+- **Le métier Jacquard** commande chaque fil séparément par des cartes perforées, et permet des motifs complexes.
+- **Les métiers industriels** lancent la trame par des jets d'air ou d'eau, à des centaines de passages par minute.
 
-## Ce qu'on fait
+## Des techniques particulières
 
-Sangles, ceintures, bretelles, sacs, tapis, couvertures (en assemblant des bandes), toiles pour réparer. Le fil : [[TEC-AGR-033]]. La laine : [[TEC-MAT-015]]. La couture : [[TEC-MAT-005]].
+- **Le tissage aux cartes** : des cartes carrées percées aux quatre coins, qu'on fait tourner pour tordre les fils. Il donne des galons et des sangles très solides, et se pratique depuis l'âge du fer.
+- **La lirette** : des bandes découpées dans de vieux tissus servent de trame. On en fait des tapis et des couvertures épaisses.
+- **La tapisserie** : la trame, de couleurs différentes, ne va pas d'un bord à l'autre mais dessine le motif zone par zone.
+
+Les fibres et le fil : [[TEC-AGR-033]]. Le tricot : [[TEC-MAT-015]]. La couture : [[TEC-MAT-005]].
