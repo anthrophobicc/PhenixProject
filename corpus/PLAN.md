@@ -165,7 +165,7 @@ Déjà faites : [x] TEC-CHI-001 Acides, bases et pH · [x] TEC-CHI-002 Fabriquer
 - [x] Le béton et le mortier `P1`
 - [x] Le plâtre `P3`
 - [x] Les textiles : laine, coton, synthétiques `P2`
-- [ ] Filer et tisser `P3`
+- [x] Filer et tisser `P3`
 - [x] Tricoter `P3`
 - [x] Les chaussures : réparer, fabriquer `P2`
 
@@ -351,7 +351,7 @@ Déjà faites : [x] TEC-IDE-001 L'identification · [x] TEC-IDE-002 Le fait reli
 - [x] TEC-IDE-009 Les appareils Phenix
 - [x] Le code-barres et le QR code `P3`
 - [x] Le badge et la carte sans contact `P3`
-- [ ] Les radars et la lecture de plaques `P3`
+- [x] Les radars et la lecture de plaques `P3`
 - [x] Les réseaux sociaux : comment ils choisissent ce qu'on voit `P2`
 - [x] Reconnaître une fausse information `P1`
 - [x] Les statistiques qui trompent `P2`
@@ -385,7 +385,7 @@ Déjà faites : [x] TEC-MAC-001 Les machines simples · [x] TEC-MEC-001 Assemble
 - [x] La moto : entretien et dépannage `P2`
 - [x] Le scooter et le vélo électrique `P3`
 - [x] Le tracteur `P3`
-- [ ] Le camion et le permis poids lourd `P3`
+- [x] Le camion et le permis poids lourd `P3`
 - [x] TEC-MEC-012 Le bogie
 - [x] TEC-MEC-013 La voie ferrée
 - [x] Le train : comment il marche `P3`
@@ -479,17 +479,17 @@ Déjà faites : [x] SURV-REC-001 à 022 (bâtiment abandonné, véhicule, épave
 - [x] Récupérer dans un port ⟶ conteneurs, cordages, chantiers navals `P2`
 - [x] Récupérer dans une caserne de pompiers ⟶ ARI, lances, groupes, désincarcération `P2`
 - [x] Récupérer dans une école ⟶ cantine, infirmerie, labo de chimie, bibliothèque `P2`
-- [ ] Récupérer dans une centrale nucléaire ⟶ ce qui se prend dehors, où ne jamais entrer `P3`
-- [ ] Récupérer dans une usine chimique ⟶ ce qui tue sans odeur `P3`
+- [x] Récupérer dans une centrale nucléaire ⟶ ce qui se prend dehors, où ne jamais entrer `P3`
+- [x] Récupérer dans une usine chimique ⟶ ce qui tue sans odeur `P3`
 - [x] Récupérer dans un bunker et un abri ⟶ filtres, ventilation, réserves `P3`
 
 ### Les objets
 - [x] Récupérer sur un camion et un semi-remorque `P2`
-- [ ] Récupérer sur un train et une locomotive `P3`
+- [x] Récupérer sur un train et une locomotive `P3`
 - [x] Récupérer sur un bus `P3`
 - [x] Récupérer sur un camping-car `P2`
 - [x] Récupérer sur un engin de chantier `P3`
-- [ ] Récupérer sur une moto `P2`
+- [x] Récupérer sur une moto `P2`
 - [x] Récupérer sur un réfrigérateur et un congélateur `P2`
 - [x] Récupérer sur une machine à laver `P2`
 - [x] Récupérer sur un micro-ondes ⟶ et le condensateur qui tue `P2`
