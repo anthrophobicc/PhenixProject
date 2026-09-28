@@ -1,47 +1,45 @@
 ---
 id: TEC-CON-013
-titre: Rafraîchir une maison sans climatisation
+titre: La maison fraîche sans climatisation
 axe: 2
 categorie: Construction et Habitat
 temps: Court
 contexte: 1
 risque: Discret
-materiel: Récupération
+materiel: Rien
 priorite: normale
 origine: officielle
-tags: [chaleur, rafraichir, volets, ventilation nocturne, ombre, canicule, maison, evaporation]
+tags: [chaleur, confort d'ete, protections solaires, volets, ventilation nocturne, inertie thermique, evaporation, canicule, ilot de chaleur]
 sources: ["ADEME, Garder son logement frais en été", "CEREMA, confort d'été des bâtiments : protections solaires et ventilation nocturne", "Givoni B., Passive and Low Energy Cooling of Buildings, Wiley"]
 ---
 
-::Une maison se rafraîchit la nuit et se défend le jour. Un volet extérieur fermé arrête la chaleur avant qu'elle entre ; un rideau intérieur la laisse entrer, puis la garde.::
+::Une maison se rafraîchit la nuit et se défend le jour. Un volet extérieur fermé arrête la chaleur avant qu'elle entre ; un rideau intérieur la laisse entrer, puis la garde. Les maisons anciennes des pays chauds, aux murs épais, aux fenêtres petites et aux volets clos l'après-midi, appliquent ces principes depuis des siècles.::
 
-## Le principe
+## D'où vient la chaleur
 
-La chaleur entre de trois façons : **le soleil par les vitres**, **l'air chaud par les ouvertures**, **la chaleur des murs et du toit** chauffés toute la journée. On bloque les trois le jour, et on évacue la nuit.
+- **Le soleil à travers les vitres** : c'est souvent l'apport principal.
+- **L'air chaud** qui entre par les ouvertures.
+- **Les murs et le toit** chauffés toute la journée, qui rayonnent ensuite vers l'intérieur, parfois tard dans la nuit.
+- **Les appareils** : four, plaques, éclairage, appareils en veille.
 
-## Le jour : se défendre
+## Se défendre le jour
 
-- **Protections extérieures d'abord** : volets, stores extérieurs, toiles tendues devant les fenêtres. Elles arrêtent le soleil **avant** la vitre, et sont plusieurs fois plus efficaces qu'un rideau intérieur, qui chauffe derrière la vitre.
-- **Fenêtres fermées** tant que l'air dehors est plus chaud que dedans.
-- **Moins de chaleur à l'intérieur** : pas de four, peu de plaques, lampes LED, appareils débranchés (chargeurs, box, télé en veille chauffent aussi).
-- **Côté sud et ouest** en priorité : c'est là que le soleil tape le plus fort et le plus tard.
+- **Les protections solaires extérieures** (volets, stores, toiles tendues, brise-soleil) arrêtent le soleil avant la vitre. Elles sont plusieurs fois plus efficaces qu'un rideau intérieur, qui chauffe derrière le verre.
+- **Les façades sud et ouest** reçoivent le soleil le plus fort, l'ouest en fin de journée, quand l'air est déjà chaud.
+- **Les fenêtres restent fermées** tant que l'air extérieur est plus chaud que l'intérieur.
 
-## La nuit : évacuer
+## Évacuer la nuit
 
-- **Tout ouvrir dès que l'air dehors est plus frais**, souvent à partir de 22 h jusqu'au petit matin.
-- **Créer un courant d'air** : fenêtres ouvertes sur deux façades opposées, portes intérieures ouvertes. Un ventilateur posé dans une fenêtre, soufflant **vers l'extérieur** dans une pièce et une autre fenêtre ouverte ailleurs, aspire l'air frais à travers toute la maison.
-- **Les murs épais** (pierre, béton) stockent la fraîcheur de la nuit et la rendent le jour : c'est pourquoi les vieilles maisons restent fraîches.
+- **La ventilation nocturne** : dès que l'air extérieur est plus frais, les ouvertures sur deux façades opposées créent un courant d'air qui vide la chaleur accumulée.
+- **L'inertie thermique** : les murs épais en pierre ou en béton stockent la fraîcheur de la nuit et la restituent le jour. C'est pourquoi les vieilles maisons restent fraîches, et pourquoi une maison légère surchauffe vite.
 
-## Rafraîchir par l'eau
+## L'évaporation
 
-- **Un linge humide** tendu devant une fenêtre ouverte ou devant un ventilateur rafraîchit l'air qui passe, surtout par temps sec.
-- **Des bassines d'eau** et des serpillières mouillées au sol, en climat sec.
-- **Le corps d'abord** : c'est souvent plus efficace de rafraîchir les gens que la pièce. Voir [[SURV-CRI-003]].
+L'eau qui s'évapore absorbe de la chaleur : un linge humide devant une fenêtre ouverte ou un ventilateur rafraîchit l'air qui passe, surtout par temps sec. C'est le principe des rafraîchisseurs traditionnels du Moyen-Orient et de l'Inde, et des jarres en terre qui gardent l'eau fraîche.
 
-## À plus long terme
+## Les solutions durables
 
-- **Planter** des arbres à feuilles caduques côté sud et ouest : ombre l'été, soleil l'hiver. Une vigne sur une pergola fait pareil en deux ou trois ans.
-- **Peindre le toit ou les murs en clair** renvoie une grande partie du soleil.
-- **Isoler le toit** : l'isolation qui garde la chaleur l'hiver garde la fraîcheur l'été. Voir [[TEC-CON-005]].
-
-**Le piège** : une pièce sous un toit non isolé devient invivable l'après-midi. On y dort la nuit seulement si on a pu l'aérer, et on vit en bas le jour.
+- **Les arbres à feuilles caduques** au sud et à l'ouest donnent de l'ombre l'été et laissent passer le soleil l'hiver ; une vigne sur une pergola fait de même.
+- **Les couleurs claires** des toits et des murs renvoient une grande partie du rayonnement.
+- **L'isolation du toit** protège de la chaleur l'été comme du froid l'hiver. Voir [[TEC-CON-005]].
+- **En ville**, le béton et l'asphalte forment des îlots de chaleur où la nuit reste chaude, ce qui rend les canicules plus dangereuses. Voir [[SURV-CRI-003]].

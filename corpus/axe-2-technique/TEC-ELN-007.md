@@ -1,56 +1,48 @@
 ---
 id: TEC-ELN-007
-titre: Sauvegarder ses données
+titre: La sauvegarde des données
 axe: 2
 categorie: Électronique et Numérique
 temps: Court
 contexte: 1
 risque: Discret
-materiel: Technique
+materiel: Rien
 priorite: normale
 origine: officielle
-tags: [sauvegarde, donnees, 3-2-1, cle usb, disque dur, cloud, papier, photos, documents]
+tags: [sauvegarde, donnees, regle 3-2-1, disque dur, ssd, cle usb, cloud, papier, restauration, archives]
 sources: ["ANSSI, recommandations de sauvegarde pour les particuliers et les TPE", "US-CERT (CISA), Data Backup Options", "Backblaze, études de fiabilité des disques durs"]
 ---
 
-::Une donnée qui n'existe qu'à un seul endroit n'existe pas vraiment : elle attend de disparaître. Un téléphone volé, un disque qui lâche, un incendie, et dix ans de photos et de papiers s'en vont.::
+::Une donnée qui n'existe qu'à un seul endroit attend de disparaître. Un téléphone volé, un disque qui lâche, un incendie, un rançongiciel, et dix ans de photos et de papiers s'en vont. Les professionnels de l'informatique résument la protection en trois chiffres : 3-2-1.::
 
 ## La règle du 3-2-1
 
-- **3 copies** de ce qui compte ;
-- sur **2 supports** différents (disque, clé, cloud, papier) ;
-- dont **1 ailleurs** que chez vous (chez un proche, au travail, en ligne).
+- **Trois copies** de ce qui compte ;
+- **sur deux supports différents**, pour ne pas dépendre d'une seule technologie ;
+- **dont une ailleurs** que chez soi, pour survivre à un vol ou un incendie.
 
-## Ce qui mérite d'être sauvegardé
+## Ce qui se sauvegarde en priorité
 
-- **Les papiers** : pièces d'identité, permis, titres de propriété, contrats, diplômes, ordonnances, dossiers médicaux. Photographiés ou scannés.
-- **Les photos et vidéos** de famille.
-- **Les contacts** : numéros de téléphone et adresses.
-- **Les accès** : codes de récupération des comptes, liste des comptes importants.
-- **Ce qui fait votre travail**, et votre bibliothèque de connaissances hors ligne, comme celle de Phenix.
+Les papiers (pièces d'identité, titres de propriété, contrats, diplômes, dossiers médicaux, scannés ou photographiés), les photos de famille, les contacts, les codes de récupération des comptes importants, les documents de travail et les bibliothèques de connaissances hors ligne.
 
 ## Les supports et leur durée
 
-| Support | Pour | Méfiance |
+| Support | Usage | Faiblesse |
 |---|---|---|
-| Disque dur externe | Grosses sauvegardes à la maison | Mécanique fragile : une chute le tue |
-| Disque SSD, clé USB, carte SD | Transport, petites copies | Débranchés des années, ils peuvent perdre des données : on les rebranche une fois par an |
-| Stockage en ligne | La copie « ailleurs » | Dépend d'internet et d'une entreprise ; chiffrez ce qui est sensible |
-| **Papier** | L'essentiel vital | Le seul support lisible sans électricité ni appareil |
+| Disque dur externe | Grosses sauvegardes | Mécanique fragile : une chute peut le détruire. Les études de fiabilité montrent quelques pour cent de pannes par an |
+| SSD, clé USB, carte SD | Transport, petites copies | Débranchés pendant des années, surtout au chaud, ils peuvent perdre des données |
+| Stockage en ligne | La copie « ailleurs » | Dépend d'internet et d'une entreprise ; les données sensibles gagnent à être chiffrées |
+| Papier | L'essentiel vital | Le seul support lisible sans électricité ni appareil |
+| Disque optique d'archivage | Longue durée | Lecteurs de plus en plus rares |
 
-## Le minimum papier
+## Le papier, dernier recours
 
-Une enveloppe étanche, chez vous et une copie chez un proche :
+Les services de sécurité civile recommandent de garder sur papier, dans une enveloppe étanche et en double chez un proche : les numéros de téléphone essentiels, les traitements et allergies de chacun, les copies des pièces d'identité, les codes de récupération des comptes principaux et les points de rendez-vous de la famille. Voir [[SURV-CRI-022]].
 
-- **les numéros** de la famille, des proches, du médecin, de l'assurance ;
-- **les traitements** de chacun, leurs doses, les allergies, les groupes sanguins ;
-- **les photocopies** des pièces d'identité ;
-- **les codes de récupération** de vos comptes principaux (messagerie, banque) ;
-- **les adresses** des points de rendez-vous convenus en cas de crise. Voir [[SURV-CRI-004]].
+## Ce qui fait une vraie sauvegarde
 
-## Les astuces
+- **L'automatisation** : les sauvegardes faites « quand on y pense » ne se font pas.
+- **La restauration testée** : une sauvegarde qu'on ne sait pas relire ne vaut rien.
+- **La séparation** : une sauvegarde toujours branchée à l'ordinateur est chiffrée en même temps que lui par un rançongiciel.
 
-- **Programmez une sauvegarde automatique** : celles qu'on fait « quand on y pense » ne se font pas.
-- **Testez une restauration** une fois par an : une sauvegarde qu'on ne sait pas relire ne vaut rien.
-- **Une clé USB dans le sac d'évacuation**, chiffrée, avec les papiers scannés.
-- **Les mots de passe** de tout cela : [[TEC-ELN-008]].
+Les mots de passe : [[TEC-ELN-008]]. L'USB et les clés : [[TEC-ELN-023]].
