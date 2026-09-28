@@ -1,54 +1,46 @@
 ---
 id: TEC-ELN-005
-titre: Souder en électronique
+titre: La soudure à l'étain
 axe: 2
 categorie: Électronique et Numérique
 temps: Court
 contexte: 1
 risque: Discret
-materiel: Technique
+materiel: Rien
 priorite: normale
 origine: officielle
-tags: [soudure, fer a souder, etain, flux, electronique, reparation, dessoudage, cable]
+tags: [soudure, brasage tendre, fer a souder, etain, plomb, flux, soudure froide, dessoudage, rohs, electronique, reparation]
 sources: ["IPC-A-610, Acceptability of Electronic Assemblies (aspect des soudures)", "Adafruit Learning System, Adafruit Guide to Excellent Soldering", "INRS, fumées de soudage à l'étain et flux"]
 ---
 
-::Une bonne soudure se fait en trois secondes : on chauffe les deux pièces, on apporte l'étain sur elles, pas sur le fer, et il coule tout seul. La plupart des soudures ratées l'ont été parce qu'on a fait fondre l'étain sur la panne.::
+::Ce qu'on appelle soudure en électronique est en réalité un brasage : un alliage fondu, l'étain, mouille deux métaux et les relie en refroidissant, sans les faire fondre eux-mêmes. C'est ainsi que sont fixés tous les composants d'un circuit. La plupart des soudures ratées le sont pour une raison simple : l'étain a été fondu sur le fer, et non sur les pièces à relier.::
 
-## Le matériel
+## Comment ça tient
 
-- **Un fer à souder** de 25 à 60 watts, idéalement à température réglable (320 à 370 °C selon l'étain).
-- **De l'étain à âme décapante** (le flux est à l'intérieur du fil) : l'étain au plomb (60/40) fond plus bas et se travaille plus facilement ; l'étain sans plomb demande un peu plus de chaleur.
-- **Une éponge humide** ou de la laine de laiton pour nettoyer la panne.
-- **De la tresse à dessouder** ou une pompe à dessouder.
-- **De la gaine thermorétractable** pour isoler les raccords de fils.
+- **L'étain fondu mouille les métaux chauds et propres** : il s'étale, s'infiltre et forme en refroidissant une couche d'alliage avec le cuivre. Le lien est à la fois mécanique et électrique.
+- **Le flux**, une résine contenue au cœur du fil d'étain, dissout l'oxyde qui recouvre les métaux et empêche l'étain d'accrocher. Sans flux, l'étain roule en boule.
+- **La chaleur doit être dans les pièces** : l'étain fond au contact des pièces chaudes et coule autour d'elles. Fondu sur la panne puis déposé, il se fige sans avoir mouillé.
 
-## Le geste
+## Les alliages
 
-1. **Nettoyez et étamez la panne** : une fine couche d'étain brillant dessus aide la chaleur à passer.
-2. **Posez la panne contre les deux pièces à la fois** (la patte du composant et la pastille du circuit, ou les deux fils).
-3. **Après une à deux secondes, apportez l'étain sur les pièces**, de l'autre côté de la panne : il fond au contact des pièces chaudes et coule autour.
-4. **Retirez l'étain, puis le fer**, sans bouger la pièce pendant que ça refroidit.
+- **L'étain-plomb** (60 % d'étain, 40 % de plomb) fond vers 183 à 190 °C et se travaille facilement.
+- **L'étain sans plomb**, imposé dans l'électronique vendue dans l'Union européenne depuis 2006, fond vers 217 à 220 °C et demande un fer plus chaud.
+- **Le fer** d'électronique fait de 25 à 60 W et travaille en général entre 320 et 370 °C.
 
-**Une bonne soudure** est brillante, lisse, en forme de petit cône ou de volcan, qui épouse la patte. **Une mauvaise** est terne, granuleuse, en boule posée dessus : c'est une soudure froide, qui lâchera.
+## Reconnaître une soudure
 
-## Relier deux fils
+- **Une bonne soudure** est brillante, lisse, en forme de petit cône qui épouse la patte du composant et la pastille.
+- **Une soudure froide** est terne, granuleuse, en boule posée dessus : le lien électrique est mauvais ou intermittent, et elle finit par lâcher. C'est une cause classique de pannes qui vont et viennent.
+- **Un pont** est une goutte d'étain qui relie deux pastilles voisines : un court-circuit.
 
-1. Dénudez 1 cm, enfilez d'abord la gaine thermorétractable sur l'un des fils.
-2. **Étamez chaque fil** séparément.
-3. Torsadez-les ou mettez-les côte à côte, chauffez, ajoutez un peu d'étain.
-4. Faites glisser la gaine sur la soudure et chauffez-la pour qu'elle se resserre.
+## Le dessoudage
 
-## Dessouder
+La tresse à dessouder, un ruban de cuivre imprégné de flux, aspire l'étain fondu par capillarité ; la pompe à dessouder l'aspire d'un coup. L'air chaud chauffe toute une zone pour retirer les composants à nombreuses pattes.
 
-La tresse posée sur la soudure, la panne par-dessus : l'étain fondu remonte dans la tresse par capillarité. Coupez la partie pleine et recommencez.
+## Les risques
 
-## Les astuces
+- **Les fumées de flux** irritent les voies respiratoires : les postes de soudure sont ventilés ou aspirés.
+- **Le plomb** passe par les mains à la bouche : lavage des mains après usage.
+- **Le fer** atteint plus de 300 °C : brûlures et départs de feu sur les câbles et les tables.
 
-- **Aérez** : les fumées de flux irritent les poumons. Travaillez près d'une fenêtre ou avec un petit ventilateur qui les éloigne.
-- **Lavez-vous les mains** après avoir manipulé de l'étain au plomb.
-- **Posez toujours le fer sur son support** : il brûle la main, la table et les câbles.
-- **Sans fer électrique** : une grosse tige de cuivre ou un clou épais chauffé sur un réchaud permet quelques soudures de dépannage sur de gros fils.
-- **Récupérer des composants** sur une carte : chauffez chaque patte et tirez doucement, ou chauffez toute la zone à l'air chaud.
-
-Réparer un câble sans souder : [[SURV-REC-007]]. Le multimètre pour vérifier : [[TEC-ENE-008]].
+Vérifier une soudure : [[TEC-ENE-008]]. Réparer un câble sans souder : [[SURV-REC-007]]. Les composants : [[TEC-ELN-013]].

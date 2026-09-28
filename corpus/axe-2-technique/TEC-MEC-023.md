@@ -1,6 +1,6 @@
 ---
 id: TEC-MEC-023
-titre: Changer une roue
+titre: La crevaison et la roue de secours
 axe: 2
 categorie: Mécanique et Transport
 temps: Court
@@ -9,38 +9,29 @@ risque: Exposé
 materiel: Rien
 priorite: normale
 origine: officielle
-tags: [roue, crevaison, cric, roue de secours, galette, ecrou antivol, kit anti-crevaison, securite routiere]
+tags: [roue, crevaison, cric, roue de secours, galette, kit anti-crevaison, pneu runflat, ecrou antivol, point de levage, securite routiere]
 sources: ["Sécurité routière (France), conduite à tenir en cas de panne ou de crevaison", "Manuels des constructeurs automobiles (points de levage, roue de secours temporaire, kit anti-crevaison)"]
 ---
 
-::Le plus souvent, ce n'est pas la roue qui pose problème : c'est l'écrou antivol dont personne ne sait où est la clé, ou une roue de secours à plat depuis cinq ans. Changer une roue prend vingt minutes, à condition de l'avoir préparé le jour où il ne pleut pas.::
+::Une crevaison se répare de quatre façons selon la voiture : une vraie roue de secours, une roue galette, un kit de mousse et de compresseur, ou rien du tout, pour les pneus capables de rouler à plat. Le blocage le plus fréquent n'est pas technique : c'est une clé d'écrou antivol introuvable, ou une roue de secours à plat depuis des années.::
 
-## D'abord, la sécurité
+## Les solutions de secours
 
-- Se garer **le plus loin possible de la circulation**, sur un sol plat et dur.
-- **Feux de détresse**, **gilet** enfilé avant de sortir, **triangle** à 30 m au moins derrière la voiture.
-- **Sur autoroute** : tout le monde derrière la glissière. Si poser le triangle est dangereux, on ne le pose pas, et on appelle la borne orange ou le 112.
+- **La roue de secours complète** : identique aux autres, elle remplace la roue crevée sans limite.
+- **La roue galette** : étroite et légère, elle est limitée à 80 km/h, le temps de rejoindre un garage.
+- **Le kit anti-crevaison** : une mousse injectée par la valve, puis un compresseur qui regonfle. Il colmate un petit trou dans la bande de roulement, pas un flanc coupé. Beaucoup de voitures récentes n'ont plus que lui, pour gagner du poids.
+- **Le pneu à roulage à plat** (runflat) : ses flancs renforcés portent la voiture sur quelques dizaines de kilomètres à vitesse réduite.
 
-## Changer la roue
+## Le changement de roue
 
-1. **Frein à main serré**, une vitesse engagée (ou P), une cale (pierre, bois) contre la roue opposée.
-2. **Desserrer les écrous d'un quart de tour**, voiture encore au sol, sinon la roue tourne dans le vide. Appui du pied sur la clé si c'est dur.
-3. **Placer le cric au point de levage** : une encoche ou un repère sous le bas de caisse, près de la roue. Ailleurs, on plie la tôle ou la voiture tombe.
-4. **Lever** juste assez pour que la roue décolle, puis un peu plus (la roue gonflée est plus haute que la crevée).
-5. **Retirer les écrous et la roue.** Jamais une main ou une jambe sous la voiture.
-6. **Poser la roue de secours**, visser les écrous **à la main**, en étoile.
-7. **Redescendre**, puis serrer fort, **en étoile**.
-8. **Resserrer** au bout d'une cinquantaine de kilomètres.
+- **Le principe** : les écrous se débloquent d'abord voiture au sol, car une roue levée tourne dans le vide ; la voiture est ensuite levée au cric, sur un point de levage prévu par le constructeur (une encoche sous le bas de caisse, près de la roue), jamais ailleurs, sous peine de plier la tôle ou de faire tomber la voiture.
+- **Le serrage** se fait en étoile, en deux temps : à la main voiture levée, puis au couple voiture au sol. Un contrôle est recommandé après une cinquantaine de kilomètres.
+- **Le calage** : frein à main serré, vitesse engagée, cale contre la roue opposée. Personne ne passe un membre sous une voiture qui ne repose que sur un cric.
+- **L'écrou antivol** ne se démonte qu'avec sa clé spécifique, rangée en principe avec le cric.
 
-## La galette et le kit
+## Le danger, c'est la route
 
-- **La roue galette** (roue de secours étroite) : **80 km/h au maximum**, le temps d'aller au garage.
-- **Le kit anti-crevaison** (mousse et compresseur) : injecter, gonfler, rouler doucement quelques kilomètres pour répartir la mousse, puis garage. Il ne répare pas un flanc coupé.
-
-## À faire aujourd'hui
-
-- **Trouver la clé de l'écrou antivol** et la ranger avec le cric.
-- **Vérifier la pression de la roue de secours** tous les quelques mois.
-- **Essayer une fois**, à la maison, sans stress.
+- **Les accidents sur le bord de la route** sont la vraie menace : les consignes sont de s'éloigner au maximum de la circulation, feux de détresse et gilet avant de sortir, triangle à au moins 30 m quand c'est possible sans risque.
+- **Sur autoroute**, les occupants se mettent à l'abri derrière la glissière et appellent par une borne ou au 112.
 
 Le pneu : [[TEC-MEC-010]]. Réparer un pneu : [[SURV-REC-024]].

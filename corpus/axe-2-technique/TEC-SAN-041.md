@@ -1,51 +1,43 @@
 ---
 id: TEC-SAN-041
-titre: Faire une injection
+titre: Les injections
 axe: 2
 categorie: Santé et Chirurgie
 temps: Court
 contexte: 1
 risque: Discret
-materiel: Technique
+materiel: Rien
 priorite: normale
 origine: officielle
-tags: [injection, sous-cutanee, intramusculaire, insuline, anticoagulant, stylo d'adrenaline, aiguilles, hygiene, collecteur]
+tags: [injection, sous-cutanee, intramusculaire, intraveineuse, insuline, anticoagulant, stylo d'adrenaline, glucagon, aiguilles, hepatites, vih, collecteur]
 sources: ["Organisation mondiale de la santé, WHO best practices for injections and related procedures toolkit, 2010", "ANSM, bon usage des stylos auto-injecteurs d'adrénaline", "Fédération française des diabétiques, techniques d'injection de l'insuline"]
 ---
 
-::Des millions de personnes se piquent elles-mêmes chaque jour : insuline, anticoagulant, traitement de fond. Et le stylo d'adrénaline qui sauve un allergique se plante dans la cuisse à travers le pantalon, par n'importe qui. Une injection faite proprement est un geste simple ; une aiguille partagée transmet le VIH et les hépatites.::
+::Des millions de personnes s'injectent elles-mêmes un traitement chaque jour : insuline, anticoagulant, traitement de fond. Le stylo d'adrénaline qui sauve un allergique se plante dans la cuisse à travers le pantalon, par n'importe qui. À l'inverse, les aiguilles réutilisées ont été l'une des grandes voies de transmission des hépatites et du VIH dans le monde.::
 
-## Les règles pour toutes les injections
+## Les voies d'injection
 
-- **Se laver les mains**, nettoyer la peau et laisser sécher.
-- **Une aiguille neuve à chaque fois**, jamais partagée, jamais remise dans son capuchon à deux mains.
-- **Les aiguilles usagées** dans un collecteur, ou à défaut une bouteille en plastique épais bien fermée et marquée.
-- **Le bon produit, la bonne dose, le bon moment** : on vérifie l'étiquette et la date.
-- **Jamais dans une veine** sans formation : c'est un geste de soignant.
+- **Intradermique** : dans l'épaisseur de la peau. Pour certains tests, comme celui de la tuberculose.
+- **Sous-cutanée** : dans la graisse sous la peau, d'où le produit passe lentement dans le sang. Pour l'insuline, les anticoagulants, beaucoup de vaccins et de traitements de fond. C'est la voie de l'auto-injection.
+- **Intramusculaire** : dans un muscle, où le produit passe plus vite. Pour de nombreux vaccins et pour l'adrénaline d'urgence.
+- **Intraveineuse** : directement dans le sang, avec effet immédiat. C'est un geste de soignant.
 
-## Sous la peau (sous-cutanée)
+## L'injection sous la peau
 
-Pour l'insuline, les anticoagulants, certains traitements.
+- **Les zones** : le ventre à distance du nombril, le haut de la cuisse, l'arrière du bras.
+- **Le geste** : un pli de peau pincé, une aiguille courte enfoncée droite ou un peu inclinée, une injection lente.
+- **La rotation des points d'injection** évite que la graisse se durcisse, ce qui dérègle l'absorption du produit : c'est un problème fréquent chez les diabétiques.
 
-1. **Pincer** un pli de peau : le ventre (à distance du nombril), le haut de la cuisse, l'arrière du bras.
-2. **Piquer** d'un geste franc, bien droit ou un peu incliné selon la longueur de l'aiguille.
-3. **Injecter lentement**, compter quelques secondes, retirer.
-4. **Changer d'endroit** à chaque fois, sinon la peau se durcit et le produit passe mal.
+## Le stylo d'adrénaline
 
-## Le stylo d'adrénaline (dans le muscle)
-
-Pour une allergie grave. Voir [[URG-ANA-001]].
-
-1. **Retirer le bouchon de sécurité.**
-2. **Planter franchement** sur la face extérieure de la cuisse, **à travers les vêtements**.
-3. **Tenir** le temps indiqué sur le stylo (quelques secondes), puis masser.
-4. **Appeler le 15**, allonger la personne (assise si elle respire mal).
-5. **Un deuxième stylo** au bout de 5 à 15 minutes si ça ne s'améliore pas.
+Il est prescrit aux personnes à risque d'allergie grave. Il s'utilise sur la face extérieure de la cuisse, à travers les vêtements, en le maintenant quelques secondes. Un second stylo peut être utilisé au bout de 5 à 15 minutes si l'état ne s'améliore pas, et les secours sont toujours appelés. Voir [[URG-ANA-001]].
 
 ## Le glucagon
 
-Pour un diabétique sous insuline inconscient d'une hypoglycémie : injection ou poudre nasale selon le produit. Voir [[URG-HYPOG-001]] et [[TEC-SAN-017]].
+Il remonte le sucre d'un diabétique sous insuline tombé inconscient d'hypoglycémie, sous forme d'injection ou de poudre nasale. Voir [[URG-HYPOG-001]] et [[TEC-SAN-017]].
 
-## Les signes d'alerte
+## L'hygiène, sans exception
 
-Rougeur qui s'étend, chaleur, douleur qui augmente au point d'injection : infection. Voir [[TEC-SAN-028]].
+- **Une aiguille est à usage unique**, jamais partagée. Les aiguilles et seringues réutilisées transmettent les hépatites B et C et le VIH : l'OMS a lancé des programmes mondiaux pour les supprimer.
+- **Les aiguilles usagées** vont dans un collecteur rigide ; les piqûres accidentelles surviennent surtout quand on remet le capuchon.
+- **Les signes d'infection** au point d'injection : rougeur qui s'étend, chaleur, douleur qui augmente. Voir [[TEC-SAN-028]].

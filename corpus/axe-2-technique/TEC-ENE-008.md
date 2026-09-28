@@ -1,63 +1,44 @@
 ---
 id: TEC-ENE-008
-titre: Mesurer avec un multimètre
+titre: Le multimètre
 axe: 2
 categorie: Énergie et Électricité
 temps: Court
 contexte: 1
 risque: Discret
-materiel: Technique
+materiel: Rien
 priorite: normale
 origine: officielle
-tags: [mesure, electricite, diagnostic, donnees]
-sources: ["IEC 61010 — Safety requirements for electrical measuring equipment", "Fluke Corporation — technical documentation on measurement categories", "INRS — mesurage en électricité"]
+tags: [multimetre, tension, courant, resistance, continuite, diagnostic, recherche de panne, categorie de mesure, calibre]
+sources: ["IEC 61010, Safety requirements for electrical equipment for measurement, control and laboratory use", "Fluke Corporation, documentation technique sur les catégories de mesure", "INRS, mesurage en électricité"]
 ---
 
-::Un multimètre ne répare rien. Il remplace les hypothèses par des faits, ce qui est presque toujours l'étape manquante.::
+::Le multimètre mesure la tension, le courant et la résistance d'un circuit électrique. Il ne répare rien : il remplace les hypothèses par des faits, ce qui est presque toujours l'étape qui manque pour trouver une panne.::
 
-## Les trois mesures qui suffisent
+## Les trois mesures
 
-**La tension.** On mesure entre deux points, l'appareil branché **en parallèle**, circuit sous tension. C'est la mesure la plus courante et la plus sûre. Elle répond à : y a-t-il quelque chose ici, et combien.
+- **La tension**, en volts : l'appareil se branche en parallèle entre deux points, circuit sous tension. C'est la mesure la plus courante et la plus sûre. Elle dit s'il y a du courant disponible, et combien.
+- **La résistance et la continuité** : l'appareil envoie lui-même un petit courant et mesure ce qui revient. Elle se fait hors tension, sur un élément isolé du reste du circuit, sinon on mesure tout le montage à la fois. Elle dit si le courant peut passer par un fil, un fusible, un interrupteur.
+- **Le courant**, en ampères : l'appareil se branche en série, dans le circuit ouvert. C'est la mesure la plus délicate et celle qui détruit le plus de multimètres, car un ampèremètre branché en parallèle crée un court-circuit.
 
-**La continuité et la résistance.** L'appareil envoie lui-même un petit courant et mesure ce qui revient. Elle se fait **impérativement hors tension**, et sur un élément isolé du reste du circuit — sinon on mesure tout le montage en même temps et le résultat n'a aucun sens. Elle répond à : le courant peut-il passer par là.
+## Ce que révèlent les mesures
 
-**Le courant.** L'appareil se branche **en série**, donc il faut ouvrir le circuit et l'insérer dedans. C'est la mesure la plus délicate et celle qui détruit le plus de multimètres : brancher en parallèle alors qu'on est en position ampèremètre crée un court-circuit franc. Elle répond à : combien consomme réellement cet appareil.
+- **Une tension qui s'effondre dès qu'on branche une charge** : source faible ou mauvais contact en série (batterie fatiguée, connexion oxydée, câble trop fin).
+- **Une continuité absente** là où elle devrait être : fil coupé, fusible fondu, interrupteur défaillant. C'est la panne la plus fréquente.
+- **Une continuité présente** là où elle ne devrait pas : court-circuit, isolant percé, humidité.
+- **Une résistance qui augmente en chauffant** : une connexion en train de mourir.
 
-## Ce que chaque mesure révèle
+## La recherche de panne
 
-**Une tension présente mais qui s'effondre dès qu'on branche une charge** signale une source faible ou une résistance en série quelque part — batterie fatiguée, mauvais contact, câble sous-dimensionné.
+La méthode des électriciens vaut pour n'importe quel circuit inconnu : vérifier d'abord la source, puis suivre la tension de proche en proche vers l'appareil. Le point où elle disparaît est l'endroit du défaut. Le fil de retour compte autant que l'aller. Dans la grande majorité des cas, la panne est une interruption ou un mauvais contact : fils, connexions, fusibles, interrupteurs.
 
-**Une continuité absente là où elle devrait être** : fil coupé, fusible fondu, interrupteur défaillant, connexion oxydée. C'est le test qui trouve la panne la plus fréquente.
+## Les pièges de l'appareil
 
-**Une continuité présente là où elle ne devrait pas être** : court-circuit, isolant percé, humidité, brin qui touche la carcasse.
+- **Le sélecteur et les bornes** : la borne des forts courants est séparée ; une pointe oubliée dedans pendant une mesure de tension provoque un court-circuit.
+- **Le calibre** : sur les appareils non automatiques, on part du plus élevé.
+- **Le faux zéro** : une pile usée, un fusible interne fondu ou un cordon coupé affichent zéro, une lecture rassurante et fausse. Les électriciens vérifient leur appareil sur une source connue avant de conclure qu'un circuit est coupé.
+- **La catégorie de mesure** (CAT II, III, IV) indique les surtensions qu'il encaisse sans danger. Un appareil bon marché utilisé sur une installation trop puissante peut éclater.
 
-**Une résistance qui augmente en chauffant** signale une connexion en train de mourir.
+## Ce qu'il ne dit pas
 
-## La méthode de recherche de panne
-
-Elle vaut plus que la connaissance des appareils : elle s'applique à n'importe quel circuit inconnu.
-
-1. **Vérifiez qu'il y a une source.** Mesurez la tension à la source elle-même, avant tout le reste. Une grande partie des pannes s'arrête là.
-2. **Suivez le chemin.** Mesurez la tension de proche en proche, en avançant vers la charge. **Le point où elle disparaît est le point du défaut.** C'est la méthode la plus rapide et elle ne demande aucune connaissance du montage.
-3. **Vérifiez le retour.** Un circuit ne fonctionne que s'il est fermé : un défaut sur le conducteur de retour donne exactement les mêmes symptômes qu'un défaut sur l'aller.
-4. **Isolez avant de conclure.** Débranchez l'élément suspect et mesurez-le seul.
-
-Un principe résume tout : **une panne est presque toujours une interruption ou un contact, jamais un composant mystérieux.** Fils, connexions, fusibles et interrupteurs représentent la grande majorité des défauts.
-
-## Utiliser l'appareil sans le détruire
-
-**Vérifiez la position du sélecteur avant chaque mesure**, et l'emplacement des pointes de touche. La borne des courants forts est séparée : y laisser une pointe pour mesurer une tension provoque un court-circuit.
-
-**Commencez sur le calibre le plus élevé** si l'appareil n'est pas automatique, puis descendez.
-
-**Vérifiez l'appareil sur une source connue** avant de conclure qu'un circuit est hors tension. Une pile usée dans le multimètre, un fusible interne fondu ou un cordon coupé donnent une lecture de zéro parfaitement rassurante et parfaitement fausse. **Tester le testeur est la seule habitude qui protège vraiment.**
-
-**Respectez la catégorie de mesure** indiquée sur l'appareil et les cordons. Elle indique le niveau de surtension qu'il peut encaisser sans danger. Un appareil bon marché utilisé sur une installation qu'il n'est pas prévu pour peut se rompre violemment.
-
-## Ce qu'un multimètre ne dit pas
-
-Il ne dit pas si une batterie a de la capacité : une batterie morte affiche souvent une tension correcte à vide et s'effondre en charge. Il faut mesurer sous charge — voir [[TEC-ENE-004]].
-
-Il ne dit pas si un câble est correctement dimensionné : il ne détecte pas un échauffement futur, seulement une chute de tension actuelle. Voir [[TEC-ENE-003]].
-
-Il ne remplace pas un vérificateur d'absence de tension pour la sécurité. C'est un instrument de diagnostic, pas un dispositif de protection.
+Il ne dit pas si une batterie a encore de la capacité (elle peut afficher une tension correcte à vide et s'effondrer en charge, voir [[TEC-ENE-004]]), ni si un câble chauffera (voir [[TEC-ENE-003]]). Ce n'est pas un vérificateur d'absence de tension, l'instrument de sécurité des électriciens.
