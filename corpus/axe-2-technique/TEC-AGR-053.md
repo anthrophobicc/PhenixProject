@@ -6,40 +6,35 @@ categorie: Agriculture et Botanique
 temps: Court
 contexte: 1
 risque: Exposé
-materiel: Technique
+materiel: Rien
 priorite: normale
 origine: officielle
-tags: [motoculteur, motobineuse, fraise, labour, semelle, chiendent, entretien, securite, homme mort, potager]
+tags: [motoculteur, motobineuse, fraise, prise de force, semelle de labour, chiendent, entretien, securite, homme mort, potager]
 sources: ["Wikipédia, article « Motoculteur »", "MSA (Mutualité sociale agricole), fiches de prévention des risques liés aux machines agricoles"]
 ---
 
-::Un motoculteur ameublit en une heure ce qu'on mettrait des heures à bêcher. Mais une fraise qui tourne ne pardonne pas : elle happe un pied, une manche, un lacet. Et passée trop souvent, elle transforme un bon sol en poudre qui se tasse à la première pluie.::
+::Le motoculteur est un tracteur à deux roues que l'on guide à pied, par deux mancherons. Il travaille en une heure une surface qu'on mettrait des heures à bêcher. Ses fraises rotatives sont aussi à l'origine d'accidents graves, et leur usage répété abîme le sol qu'elles devaient améliorer.::
 
-## Motobineuse ou motoculteur
+## Motobineuse et motoculteur
 
-- **La motobineuse** : les fraises servent à la fois d'outil et de roues. Légère, pour un potager déjà travaillé.
-- **Le motoculteur** : un vrai petit tracteur à deux roues, avec une prise de force. On y attelle une charrue, une fraise arrière, une barre de coupe, une remorque. Plus lourd, bien plus polyvalent.
+- **La motobineuse** : ses fraises servent à la fois d'outil et de roues. Légère, elle travaille les sols déjà cultivés d'un potager.
+- **Le motoculteur** : un vrai tracteur à deux roues, avec une prise de force qui entraîne des outils attelés : charrue, fraise arrière, barre de coupe, broyeur, remorque. Plus lourd et plus polyvalent.
+- **Le moteur** est le plus souvent un petit moteur à essence à quatre temps, parfois diesel sur les gros modèles. Voir [[TEC-MOTH-001]].
 
-## Bien l'utiliser
+## Ce qu'il fait au sol
 
-- **Sur un sol ressuyé**, ni collant ni en croûte sèche.
-- **Une ou deux passes, pas plus.** Trop fraiser détruit la structure du sol et crée juste sous les fraises, vers 15 à 20 cm, une couche tassée où les racines et l'eau ne passent plus. Alterner avec la grelinette. Voir [[TEC-AGR-043]].
-- **Jamais sur le chiendent ou le liseron** : la fraise coupe leurs racines en mille morceaux, et chaque morceau repart. On les arrache d'abord.
-- **Enfouir le compost et les engrais verts** en surface, sans descendre profond. Voir [[TEC-AGR-028]].
+- **Une ou deux passes** émiettent la terre et y mélangent compost ou engrais verts. Voir [[TEC-AGR-028]].
+- **Des passes répétées** pulvérisent la structure du sol et forment, juste sous les fraises vers 15 à 20 cm, une couche tassée, la semelle, que l'eau et les racines traversent mal. Beaucoup de jardiniers alternent avec des outils qui ne retournent pas la terre. Voir [[TEC-AGR-043]].
+- **Sur le chiendent et le liseron**, les fraises coupent les racines en morceaux qui repartent chacun : la machine multiplie ces plantes au lieu de les détruire.
+- **Sur un sol mouillé**, elle le lisse et le compacte.
 
-## Sécurité
+## Les accidents
 
-- **Chaussures de sécurité, pantalon ajusté**, ni écharpe ni cordon qui pend.
-- **Jamais de marche arrière vers soi** dans un coin ou contre un mur : on recule, on trébuche, et les pieds passent sous les fraises.
-- **Le levier d'homme mort**, qui arrête les fraises quand on lâche les mancherons, ne se bloque jamais avec une ficelle.
-- **Moteur arrêté et fil de bougie débranché** avant de dégager une fraise bourrée d'herbe ou de ficelle.
-- **Les enfants et les animaux** restent loin : les fraises projettent des cailloux.
+- **Les fraises happent** pieds, lacets, bas de pantalon et écharpes. Les accidents typiques surviennent en marche arrière, dans un angle ou contre un mur, quand l'utilisateur recule et trébuche.
+- **Le levier d'homme mort** arrête les fraises dès qu'on lâche les mancherons ; le bloquer supprime la principale sécurité.
+- **Le dégagement d'une fraise bourrée** moteur tournant est une autre cause classique de blessure.
+- **Les fraises projettent des cailloux.**
 
-## Entretien
+## L'entretien
 
-- **L'huile moteur** vérifiée avant chaque utilisation, vidangée selon le manuel, souvent toutes les 25 à 50 heures.
-- **Le filtre à air** nettoyé souvent : le travail du sol fait beaucoup de poussière, qui use le moteur.
-- **L'huile de boîte**, la graisse des axes, la bougie.
-- **Pour l'hiver** : vider le carburateur ou faire tourner le moteur jusqu'à ce qu'il cale, avec une essence fraîche ou stabilisée. Une vieille essence qui tourne est la cause numéro un des moteurs qui ne démarrent plus au printemps. Voir [[SURV-REC-019]].
-
-Le moteur à essence : [[TEC-MOTH-001]].
+Huile moteur contrôlée à chaque usage et vidangée selon le constructeur (souvent toutes les 25 à 50 heures), filtre à air nettoyé souvent car le travail du sol soulève beaucoup de poussière, graissage, bougie. Une essence vieillie restée dans le carburateur pendant l'hiver est la première cause des moteurs qui refusent de démarrer au printemps. Voir [[SURV-REC-019]].

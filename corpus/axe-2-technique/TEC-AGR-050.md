@@ -28,12 +28,12 @@ sources: ["Wikipédia, article « Sorgho commun »", "Wikipédia, article « Mil
 - **Le millet commun**, ou panic : un cycle très court, deux à trois mois du semis à la récolte, utile pour une deuxième culture ou après un semis raté.
 - **La sétaire et l'éleusine** : d'autres petits mils, en Asie et en Afrique.
 
-## Cultiver
+## La culture
 
-- **Semer en lignes** espacées de 50 à 75 cm, à 3 à 5 cm de profondeur, puis éclaircir.
-- **Désherber les premières semaines** ; ensuite la plante couvre le sol.
+- **Le semis** se fait en lignes espacées de 50 à 75 cm, à 3 à 5 cm de profondeur, suivi d'un éclaircissage.
+- **Le désherbage** compte surtout les premières semaines ; ensuite la plante couvre le sol.
 - **Les oiseaux sont le premier ennemi** à la maturité : on enferme les épis dans des sacs en papier ou sous un filet.
-- **Récolter** quand le grain est dur, couper les épis, sécher, battre et vanner comme le blé. Voir [[TEC-AGR-009]].
+- **La récolte** a lieu quand le grain est dur : les épis sont coupés, séchés, battus et vannés comme le blé. Voir [[TEC-AGR-009]].
 
 ## Manger
 

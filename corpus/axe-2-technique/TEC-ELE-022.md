@@ -1,49 +1,48 @@
 ---
 id: TEC-ELE-022
-titre: Apprendre quelque chose à un animal
+titre: Le dressage des animaux
 axe: 2
 categorie: Agriculture et Botanique
-temps: Long
+temps: Court
 contexte: 1
 risque: Discret
 materiel: Rien
 priorite: normale
 origine: officielle
-tags: [dressage, education, renforcement positif, clicker, marqueur, faconnage, rappel, chien, cheval, poules, chevres, cochon]
+tags: [dressage, education, conditionnement operant, renforcement positif, clicker, marqueur, faconnage, rappel, chien, cheval, poules, chevres, cochon, skinner]
 sources: ["Pryor K., Don't Shoot the Dog! The New Art of Teaching and Training, 1984", "Skinner B.F., The Behavior of Organisms, 1938", "Breland K., Breland M., The Misbehavior of Organisms, American Psychologist, 1961"]
 ---
 
-::Keller et Marian Breland, deux élèves du psychologue Skinner, ont dressé des milliers d'animaux de plus d'une centaine d'espèces, des poules aux dauphins, avec une seule méthode : marquer l'instant exact où l'animal fait bien, et le récompenser. Une poule apprend ainsi à picorer une cible précise en quelques minutes. Ce qui marche sur une poule marche sur tout ce qui a faim.::
+::Keller et Marian Breland, deux élèves du psychologue Skinner, ont dressé des milliers d'animaux de plus d'une centaine d'espèces, des poules aux dauphins, avec une seule méthode : marquer l'instant exact où l'animal fait ce qu'on attend, et le récompenser. Une poule apprend ainsi à picorer une cible précise en quelques minutes. Le même principe vaut pour tout animal qui a faim.::
 
 ## Le principe
 
-- **Un comportement récompensé revient.** Un comportement qui ne rapporte rien s'éteint peu à peu.
-- **Le moment compte plus que tout** : la récompense doit tomber dans la seconde. Deux secondes trop tard, on récompense ce que l'animal fait à ce moment-là, pas ce qu'on voulait.
-- **D'où le marqueur** : un son bref et toujours identique, un clic ou un « oui ! » sec, qui dit à l'animal « c'est ça » à l'instant précis. La friandise peut suivre quelques secondes après.
+- **Le conditionnement opérant**, décrit par Skinner dans les années 1930 : un comportement suivi d'une récompense revient plus souvent ; un comportement qui ne rapporte rien s'éteint peu à peu.
+- **Le moment est décisif** : la récompense doit tomber dans la seconde. Deux secondes trop tard, c'est ce que fait l'animal à ce moment-là qui est récompensé.
+- **Le marqueur** résout ce problème : un son bref et toujours identique, clic d'un petit boîtier (le clicker) ou mot sec, associé d'abord une vingtaine de fois à une friandise. Il signale ensuite à l'instant précis « c'est ça », et la récompense peut suivre quelques secondes après.
 
-## Charger le marqueur
+## Comment un comportement se construit
 
-Clic, friandise. Clic, friandise. Une vingtaine de fois, sans rien demander. Quand l'animal tourne la tête vers vous au clic, le marqueur est chargé : il annonce la récompense.
+- **La capture** : l'animal fait spontanément le geste (se coucher, venir), qui est aussitôt marqué et récompensé.
+- **Le façonnage** : chaque petit pas dans la bonne direction est récompensé, puis l'exigence augmente. Une chèvre apprend à monter sur une caisse en étant récompensée d'abord pour la regarder, puis pour s'en approcher, puis pour y poser un sabot.
+- **Le signal** (mot, geste, sifflet) n'est associé qu'une fois le comportement fiable.
+- **La généralisation** : un comportement appris à un endroit ne se transfère pas tout seul ailleurs, dans le bruit ou avec d'autres personnes. Il se consolide dans des contextes variés.
 
-## Construire un comportement
+## Ce que montrent les dresseurs
 
-1. **L'attraper** : l'animal le fait tout seul (se coucher, venir), on marque et on récompense.
-2. **Le façonner** : on récompense chaque petit pas dans la bonne direction. Pour apprendre à une chèvre à monter sur une caisse : regarder la caisse, clic ; s'en approcher, clic ; poser un sabot, clic. On monte l'exigence peu à peu.
-3. **Le signal** vient en dernier : quand le comportement est fiable, on ajoute le mot ou le geste juste avant.
-4. **Généraliser** : refaire dans d'autres lieux, avec du bruit, d'autres personnes. Un animal qui obéit à la maison n'obéit pas forcément au champ.
-
-## Les règles
-
-- **Des séances courtes** : cinq à dix minutes, plusieurs fois par jour, et on finit toujours sur une réussite.
+- **Des séances courtes**, de cinq à dix minutes, répétées, et terminées sur une réussite, donnent de meilleurs résultats que de longues séances.
 - **Une seule exigence à la fois.**
-- **Des récompenses minuscules** et vraiment désirées : pour un chien, un bout de fromage vaut mieux que ses croquettes.
-- **La punition coûte cher** : elle supprime un comportement sans en apprendre un autre, et elle apprend surtout à craindre celui qui punit. Mieux vaut empêcher l'erreur et récompenser l'alternative.
-- **L'instinct revient toujours** : les Breland ont vu des cochons dressés à déposer des pièces dans une tirelire se remettre à les fouiller du groin. On ne dresse pas contre la nature d'une espèce, on l'utilise.
+- **La valeur de la récompense** compte : pour un chien, un morceau de fromage motive bien plus que ses croquettes habituelles.
+- **La punition** supprime un comportement sans en apprendre un autre, et associe surtout la peur à celui qui punit. Les dresseurs professionnels préfèrent empêcher l'erreur et récompenser l'alternative.
+- **L'instinct reprend le dessus** : les Breland ont vu des cochons dressés à déposer des pièces dans une tirelire se remettre à les fouiller du groin. Le dressage s'appuie sur la nature de l'espèce, il ne la combat pas.
 
-## Ce qui sert vraiment
+## Le cheval, un cas à part
 
-- **Le rappel** : toutes les bêtes de la ferme peuvent apprendre à venir à un son (un seau secoué, un sifflet). Déplacer un troupeau, rentrer les poules le soir, rattraper un animal échappé devient facile.
-- **Rester immobile pour les soins** : lever un pied, se laisser traire, entrer dans une remorque.
-- **Le cheval** apprend surtout par la pression et son relâchement : c'est le relâchement, à l'instant où il cède, qui le récompense. Voir [[TEC-ELE-014]].
+Le cheval est surtout éduqué par la pression et son relâchement : une pression de la jambe ou des rênes, relâchée à l'instant où il cède. C'est ce relâchement qui le récompense. Voir [[TEC-ELE-014]].
 
-Le chien de troupeau : [[TEC-ELE-024]]. Les corbeaux : [[TEC-ELE-023]]. Les pigeons voyageurs : [[TEC-ELE-025]].
+## Ce qui sert à la ferme
+
+- **Le rappel à un son** (seau secoué, sifflet) permet de déplacer un troupeau, de rentrer les poules le soir, de rattraper un animal échappé.
+- **L'immobilité pour les soins** : lever un pied, se laisser traire, monter dans une remorque.
+
+Le chien de troupeau : [[TEC-ELE-024]]. Le corbeau : [[TEC-ELE-023]]. Le pigeon voyageur : [[TEC-ELE-025]].

@@ -1,6 +1,6 @@
 ---
 id: TEC-AGR-048
-titre: Purins et décoctions de plantes
+titre: Les purins et décoctions de plantes
 axe: 2
 categorie: Agriculture et Botanique
 temps: Court
@@ -9,46 +9,41 @@ risque: Discret
 materiel: Rien
 priorite: normale
 origine: officielle
-tags: [purin d'ortie, consoude, prele, decoction, maceration, infusion, engrais liquide, preparations naturelles, oidium, mildiou]
-sources: ["Bertrand B., Collaert J.-P., Petiot É., Purin d'ortie et compagnie, Éditions de Terran", "Ministère de l'Agriculture, préparations naturelles peu préoccupantes et substances naturelles à usage biostimulant"]
+tags: [purin d'ortie, consoude, prele, decoction, maceration, infusion, engrais liquide, biostimulant, preparations naturelles, oidium, mildiou]
+sources: ["Bertrand B., Collaert J.-P., Petiot É., Purin d'ortie et compagnie, Éditions de Terran", "Ministère de l'Agriculture, préparations naturelles peu préoccupantes et substances naturelles à usage biostimulant", "Bettiol W., Effectiveness of cow's milk against zucchini squash powdery mildew, Crop Protection, 1999"]
 ---
 
-::Un kilo d'orties, dix litres d'eau de pluie, deux semaines d'attente, et l'on obtient un engrais liquide qui fait verdir un potager. Ça sent très fort et ça ne coûte rien. Mais ce n'est ni un insecticide miracle ni un remède à tout : chaque préparation fait une chose, et la fait bien.::
+::Les jardiniers préparent depuis longtemps des liquides à base de plantes pour nourrir ou protéger leurs cultures. Le plus connu, le purin d'ortie, est un engrais azoté obtenu par simple fermentation d'orties dans l'eau. Ces préparations ont des effets réels mais limités : les unes fertilisent, d'autres renforcent, aucune ne soigne tout.::
 
-## Quatre façons de préparer
+## Les quatre modes de préparation
 
-- **Le purin** : plantes hachées dans l'eau, qui fermentent une à deux semaines. On remue chaque jour.
-- **La macération** : un à deux jours dans l'eau froide, sans laisser fermenter.
-- **La décoction** : on laisse tremper un jour, puis on fait bouillir 20 à 30 minutes à couvert. Pour les plantes dures, comme la prêle.
+- **Le purin** : des plantes hachées fermentent dans l'eau une à deux semaines, jusqu'à ce que les bulles cessent. Il sent très fort.
+- **La macération** : un à deux jours dans l'eau froide, sans fermentation.
+- **La décoction** : les plantes trempent, puis bouillent 20 à 30 minutes. Elle convient aux plantes dures, riches en silice, comme la prêle.
 - **L'infusion** : de l'eau bouillante versée sur les plantes, comme une tisane.
 
-Toujours de l'eau de pluie si possible, et un récipient en plastique, en bois ou en grès, jamais en métal.
+Les proportions classiques sont de l'ordre d'un kilo de plantes fraîches pour dix litres d'eau, et les préparations s'emploient diluées.
 
 ## Le purin d'ortie
 
-1. **1 kg d'orties fraîches**, cueillies avant les graines, hachées grossièrement, pour 10 litres d'eau.
-2. **Couvrir sans fermer** et remuer chaque jour. Ça mousse, puis ça sent très fort.
-3. **Prêt quand les bulles cessent**, en une à deux semaines selon la chaleur. Filtrer.
-4. **Stocker** en bidons remplis à ras bord, bouchés, au frais et dans le noir.
-
-**L'utiliser** : dilué à 10 % (1 litre pour 10 litres d'eau) au pied des plantes, comme engrais azoté et coup de fouet au printemps. En pulvérisation sur les feuilles, seulement à 5 %, sinon il les brûle. Pas trop sur les tomates en fruits : trop d'azote donne des feuilles plutôt que des fruits.
+- **Riche en azote**, il stimule la croissance des feuilles : c'est un engrais de printemps. Il s'utilise dilué à environ 10 % au pied, 5 % seulement sur les feuilles, qu'il brûle plus concentré.
+- **Trop d'azote** favorise les feuilles au détriment des fleurs et des fruits.
+- **Son effet contre les pucerons** est faible et mal démontré.
 
 ## La consoude
 
-Même recette que l'ortie. Riche en potassium, elle va aux plantes qui fleurissent et font des fruits : tomates, courges, fruitiers. Diluée à 10 ou 20 %. Ses feuilles fraîches, posées au pied des plantes comme paillis, font aussi un bon engrais lent.
+Préparée comme l'ortie, elle est surtout riche en potassium, utile aux plantes en floraison et en fructification : tomates, courges, fruitiers. Ses feuilles fraîches, posées au pied des plantes, font aussi un engrais lent.
 
 ## La prêle
 
-- **En décoction** : environ 100 à 150 g de prêle séchée (ou dix fois plus en fraîche) pour 10 litres d'eau.
-- **Diluée à 20 %** en pulvérisation, par temps couvert.
-- **Riche en silice**, elle est utilisée en prévention contre les maladies à champignons (mildiou, oïdium, rouille). Elle renforce une plante saine ; elle ne guérit pas une plante malade. Voir [[TEC-AGR-014]].
+Riche en silice, elle s'emploie en décoction diluée, en prévention des maladies à champignons (mildiou, oïdium, rouille). Elle renforce une plante saine ; elle ne guérit pas une plante déjà malade. Voir [[TEC-AGR-014]].
 
-## Ce qui est prouvé, et ce qui l'est moins
+## Le lait
 
-- **L'effet engrais** du purin d'ortie et de consoude est réel.
-- **L'effet répulsif ou insecticide** est faible et mal démontré. Contre les pucerons, un jet d'eau et les auxiliaires font mieux. Voir [[TEC-AGR-044]].
-- **Le lait dilué** (1 volume pour 9 d'eau) a montré en essais une vraie efficacité contre l'oïdium des courgettes.
+Le lait de vache dilué à un volume pour neuf d'eau a montré en essais une vraie efficacité contre l'oïdium des courgettes, sans doute par action directe sur le champignon.
 
-## À savoir
+## Ce qu'en dit la loi
 
-En France, les préparations à base de plantes courantes comme l'ortie et la prêle sont autorisées au jardin. Les pesticides et leurs alternatives : [[TEC-AGR-039]].
+En France, l'ortie, la prêle, la consoude et plusieurs dizaines d'autres plantes figurent sur la liste des substances naturelles à usage biostimulant, dont l'usage au jardin est autorisé.
+
+Les auxiliaires, plus efficaces contre les pucerons : [[TEC-AGR-044]]. Les pesticides et leurs alternatives : [[TEC-AGR-039]].

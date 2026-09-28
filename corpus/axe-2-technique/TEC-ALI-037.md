@@ -1,9 +1,9 @@
 ---
 id: TEC-ALI-037
-titre: Préparer les olives
+titre: L'olive de table
 axe: 2
 categorie: Alimentation et Conservation
-temps: Long
+temps: Court
 contexte: 1
 risque: Discret
 materiel: Rien
@@ -13,33 +13,25 @@ tags: [olives, desamerisation, oleuropeine, olives cassees, saumure, olives noir
 sources: ["Wikipédia, article « Olive de table »", "Wikipédia, article « Olive »", "University of California, Olives: Safe Methods for Home Pickling, publication 8267"]
 ---
 
-::Une olive cueillie sur l'arbre est immangeable : une molécule amère, l'oleuropéine, la rend âcre au point de faire grimacer. Toutes les olives qu'on mange ont été désamérisées, à l'eau, au sel ou à la soude. Chacune de ces méthodes se fait à la maison, avec de la patience.::
+::Une olive cueillie sur l'arbre est immangeable : une molécule amère, l'oleuropéine, la rend âcre au point de faire grimacer. Toutes les olives de table ont été désamérisées, puis conservées en saumure ou au sel. Selon la méthode, la préparation prend de quelques jours à plusieurs mois.::
 
-## À l'eau, la plus simple
+## Vertes, tournantes ou noires
 
-1. **Olives vertes ou qui commencent à tourner**, entaillées de deux ou trois coups de couteau, ou écrasées d'un coup de maillet : ce sont les olives cassées de Provence.
-2. **Les couvrir d'eau froide** et changer l'eau chaque jour.
-3. **Goûter** : au bout d'une à trois semaines, elles ne sont plus que légèrement amères. Les olives cassées vont plus vite, une dizaine de jours.
-4. **Les mettre en saumure** à environ 100 g de sel par litre d'eau, avec fenouil, laurier, écorce d'orange. Prêtes en quelques jours, elles se gardent quelques mois au frais.
+Ce ne sont pas des variétés différentes, mais des stades de maturité : l'olive verte est cueillie avant maturité, la tournante quand elle commence à changer de couleur, la noire à pleine maturité. Certaines olives noires du commerce sont en réalité des olives vertes noircies par oxydation.
 
-## En saumure, par fermentation
+## Les méthodes de désamérisation
 
-Les olives entières dans une saumure à 8 ou 10 % de sel, pendant plusieurs mois. Elles fermentent lentement, comme une choucroute, et perdent leur amertume. C'est la méthode des olives grecques. Voir [[TEC-ALI-002]].
+- **À l'eau** : les olives, entaillées ou écrasées d'un coup de maillet (les olives cassées de Provence), trempent dans l'eau froide changée chaque jour, pendant une à trois semaines, jusqu'à ne plus être que légèrement amères. Elles passent ensuite en saumure aromatisée (fenouil, laurier, écorce d'orange).
+- **En saumure** : les olives entières fermentent plusieurs mois dans une eau salée à 8 à 10 %. Des bactéries lactiques les transforment lentement, comme une choucroute. C'est la méthode des olives grecques. Voir [[TEC-ALI-002]].
+- **Au sel sec** : des olives noires bien mûres, mêlées à beaucoup de gros sel, brassées pendant quatre à six semaines. Elles se rident et s'adoucissent.
+- **À la soude** : une solution d'hydroxyde de sodium, autour de 2 %, pénètre la chair en quelques heures et détruit l'amertume. Les olives sont ensuite rincées plusieurs jours pour éliminer toute trace de soude, puis mises en saumure. C'est la méthode industrielle, rapide ; la soude est corrosive pour la peau et les yeux. Voir [[TEC-CHI-012]].
 
-## Au sel sec, pour les noires
+## Conservation et sécurité
 
-Des olives bien noires et mûres, mêlées à beaucoup de gros sel dans un panier ou un sac de toile qui laisse couler le jus. On brasse chaque jour pendant quatre à six semaines : elles se rident et s'adoucissent. On rince, on sèche, on enrobe d'un peu d'huile.
+- **Le sel et l'acidité** protègent les olives en saumure. Un bocal entamé se garde au frais.
+- **Des olives conservées sous l'huile sans sel ni acidité** offrent un milieu favorable au botulisme. Voir [[TEC-ALI-009]].
+- **Une olive molle, gluante, à l'odeur de pourri** signale une conservation ratée.
 
-## À la soude, la plus rapide
+## L'olive à huile
 
-- **Une lessive de soude** (hydroxyde de sodium) à environ 20 g par litre d'eau pénètre la chair en quelques heures. On vérifie en coupant une olive : quand la chair a changé de couleur presque jusqu'au noyau, c'est fini.
-- **Puis des rinçages** à l'eau claire plusieurs fois par jour pendant plusieurs jours, pour éliminer toute la soude, avant la saumure.
-- **La soude brûle la peau et les yeux** : gants, lunettes, récipient en verre ou en plastique, jamais en aluminium. Voir [[TEC-CHI-012]] et, en cas d'accident, [[URG-SEC-021]].
-
-## Sécurité
-
-- **Une fois le bocal ouvert**, on le garde au frais.
-- **Jamais d'olives maison conservées dans l'huile** sans sel ni acidité : c'est un terrain idéal pour le botulisme. Voir [[TEC-ALI-009]].
-- **Une olive molle, gluante, à l'odeur de pourri** part à la poubelle, tout le bocal avec.
-
-Les plantes à huile : [[TEC-AGR-032]].
+Les mêmes fruits, pressés sans désamérisation, donnent l'huile d'olive ; l'amertume et le piquant d'une huile fraîche viennent en partie de ces mêmes composés. Voir [[TEC-AGR-032]].

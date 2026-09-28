@@ -1,51 +1,50 @@
 ---
 id: TEC-AGR-041
-titre: Faucher à la faux
+titre: La faux
 axe: 2
 categorie: Agriculture et Botanique
 temps: Court
 contexte: 1
 risque: Discret
-materiel: Technique
+materiel: Rien
 priorite: normale
 origine: officielle
-tags: [faux, faucher, battre la faux, enclumette, pierre a faux, coffin, rosee, foin, debroussailler]
+tags: [faux, fauchage, lame forgee, battage, enclumette, pierre a faux, coffin, andain, foin, moisson]
 sources: ["Wikipédia, article « Faux (outil) »", "Wikipédia, article « Fenaison »"]
 ---
 
-::Pendant des siècles, toute l'herbe d'Europe a été coupée à la faux. Bien réglée, battue et affûtée, elle fauche en silence, sans carburant, et une bonne lame dure une vie. Mal préparée, elle arrache l'herbe et casse le dos. Toute la différence tient dans trois gestes : régler, affûter, battre.::
+::Pendant des siècles, toute l'herbe et une grande partie des céréales d'Europe ont été coupées à la faux. L'outil est simple, une lame courbe au bout d'un long manche, mais il repose sur un savoir précis : un tranchant aminci au marteau jusqu'à devenir fin comme une feuille, et un geste qui fait glisser la lame au ras du sol. Bien entretenue, une lame forgée dure une vie.::
 
-## La choisir et la régler
+## Les parties
 
-- **La lame forgée** (type autrichien), fine et souple, se bat et s'affûte pendant des décennies. La lame emboutie bon marché ne se bat pas : on ne peut que l'affûter.
-- **La longueur** : 60 à 70 cm pour l'herbe d'un pré, 40 à 50 cm pour les bords, les talus et les broussailles.
-- **La poignée du bas** se règle à hauteur de hanche, bras tendu le long du corps.
-- **L'angle de la lame** : la pointe et le talon doivent être à la même distance de la poignée du bas. Une pointe trop ouverte arrache, trop fermée elle bourre.
+- **La lame** : longue de 40 à 90 cm. Les lames courtes et épaisses servent aux broussailles et aux talus, les longues et fines à l'herbe des prés.
+- **Le manche**, ou dail, avec deux poignées. Sa longueur et la position des poignées se règlent sur la taille du faucheur.
+- **La bague et le coin** qui fixent la lame au manche, et règlent son angle : la pointe et le talon de la lame sont à égale distance de la poignée du bas.
 
-## Faucher
+## Deux sortes de lames
 
-- **Pieds écartés**, on avance à tout petits pas. Le mouvement vient de la rotation du buste, pas des bras.
-- **La lame reste posée au sol**, talon appuyé : on ne la soulève jamais, on la fait glisser en arc de droite à gauche. L'herbe coupée se dépose en ligne à gauche, l'andain.
-- **Chaque passe avance de quelques centimètres**, jamais plus de 10 : de petites bouchées, coupées net.
-- **À la rosée**, tôt le matin, l'herbe raide et humide se coupe bien mieux qu'en plein soleil.
+- **La lame forgée**, de tradition autrichienne, fine et souple : son tranchant se reforme au marteau des centaines de fois.
+- **La lame emboutie**, découpée dans une tôle : bon marché, elle ne se bat pas et s'use à la pierre.
 
-## Affûter à la pierre
+## Comment elle coupe
 
-- **Toutes les 15 à 30 minutes**, selon l'herbe, avec une pierre à faux mouillée. Elle se porte à la ceinture dans un étui rempli d'eau, le coffin.
-- **Le geste** : faux debout, manche au sol, lame en l'air. La pierre à plat, presque couchée sur la lame, alternativement dessus et dessous, du talon vers la pointe. La main reste derrière le tranchant.
-- **Quand la pierre ne suffit plus** à rendre le fil, il faut battre. Voir [[TEC-ATE-004]].
+- **La lame glisse à plat sur le sol**, talon appuyé, dans un mouvement en arc qui vient de la rotation du buste. Elle tranche l'herbe comme une lame de rasoir, par glissement, plutôt qu'elle ne la frappe.
+- **Chaque passe avance de quelques centimètres**, jamais plus d'une dizaine. L'herbe coupée se dépose d'un côté en une ligne régulière, l'andain.
+- **L'herbe humide et raide de rosée** se coupe mieux que l'herbe sèche : on fauchait traditionnellement à l'aube.
 
-## Battre la faux
+## L'entretien du tranchant
 
-- **Battre**, c'est amincir le tranchant au marteau pour qu'il redevienne fin comme une feuille. Le métal martelé devient aussi plus dur.
-- **On démonte la lame**, on pose le tranchant sur une petite enclume plantée dans un billot, l'enclumette, et on frappe à petits coups réguliers, serrés, sur une bande de 2 à 3 mm le long du fil, du talon à la pointe.
-- **Pour débuter**, une enclumette à guide (deux capuchons qu'on frappe l'un après l'autre) donne un battage régulier sans savoir-faire.
-- **Une fois battue**, on repasse la pierre. Une faux se bat en général après quelques heures de fauche.
+- **L'affûtage à la pierre**, toutes les quinze à trente minutes de travail, redresse le fil. La pierre se porte à la ceinture dans un étui rempli d'eau, le coffin.
+- **Le battage** amincit le tranchant au marteau sur une petite enclume, l'enclumette, sur une bande de deux à trois millimètres. Le métal martelé devient à la fois plus fin et plus dur. Une lame se bat après quelques heures de fauche. Des enclumettes à guide permettent un battage régulier sans grande expérience.
 
-## Sécurité
+## Faux, faucille et machine
 
-- **On porte la faux lame en bas et en arrière**, le tranchant protégé par un fourreau ou un bout de tuyau fendu.
-- **Personne derrière ni à côté** du faucheur. À plusieurs, on fauche décalés, en escalier.
-- **Les cailloux et les piquets** ébrèchent la lame : on repère le terrain avant, et on laisse une marge autour des obstacles.
+- **La faucille**, à lame courte et à une main, coupait les céréales tige par tige, plus lentement mais avec moins de pertes de grain.
+- **La faux** s'est imposée pour le foin, puis pour les céréales, parfois équipée d'une armature qui rassemble les tiges.
+- **La faucheuse mécanique**, tirée par des chevaux au XIXe siècle, puis la barre de coupe du tracteur, l'ont remplacée. La faux reste utilisée pour les petites surfaces, les pentes et les zones sans carburant.
 
-L'herbe coupée devient du foin : [[TEC-AGR-042]]. Pour le grain : [[TEC-AGR-009]].
+## Les risques
+
+La coupure grave vient surtout de la lame portée sans protection ou de l'affûtage : le tranchant d'une faux battue est aussi coupant qu'un rasoir.
+
+Ce que devient l'herbe coupée : [[TEC-AGR-042]]. Le grain : [[TEC-AGR-009]]. L'affûtage en général : [[TEC-ATE-004]].

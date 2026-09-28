@@ -51,25 +51,26 @@ En pratique, une clé USB 2.0 copie autour de 30 Mo par seconde, bien moins que 
 - **Avec Power Delivery**, le chargeur et l'appareil négocient une tension plus haute : jusqu'à 20 V et 5 A (100 W), et 48 V (240 W) depuis 2021. Le chargeur ne monte que si l'appareil le demande : on peut brancher un téléphone sur le chargeur d'un ordinateur.
 - **Au-delà de 3 A**, il faut un câble 5 A qui contient une puce d'identification. Un câble ordinaire plafonne à 60 W.
 
-## Recharger avec presque rien
+## Les sources d'alimentation
 
+- **La tension d'un port USB classique** doit rester entre 4,75 et 5,25 V.
 - **Une batterie externe de 10 000 mAh** stocke environ 37 Wh : à peu près deux recharges de téléphone, une fois les pertes déduites. Voir [[TEC-ENE-004]].
-- **En voiture**, un adaptateur sur l'allume-cigare, moteur tournant pour ne pas vider la batterie. Voir [[TEC-MEC-014]].
-- **Au soleil**, un petit panneau USB pliant, ou un panneau 12 V avec un module qui abaisse à 5 V. Voir [[TEC-SOLR-001]].
-- **Fabriquer une prise USB** : 5 V bien régulés (entre 4,75 et 5,25 V) sur le rouge et le noir. Pour qu'un téléphone Android accepte plus de 0,5 A, on relie entre eux le vert et le blanc côté chargeur : c'est le signal « chargeur dédié » de la norme. Les iPhone attendent d'autres tensions sur ces fils et chargeront lentement. Voir [[TEC-ELN-005]].
+- **Les prises USB de voiture** abaissent le 12 V du véhicule à 5 V. Voir [[TEC-MEC-014]].
+- **Les panneaux solaires USB** pliants délivrent directement du 5 V. Voir [[TEC-SOLR-001]].
+- **Comment un téléphone sait qu'il peut tirer plus de 0,5 A** : selon la norme de charge, un chargeur dédié relie entre eux les fils de données D+ et D−. Les iPhone attendent d'autres tensions sur ces fils, propres à Apple.
 
 ## Les données
 
 - **Un téléphone lit une clé USB** : une clé USB-C, ou un petit adaptateur OTG pour les prises micro-USB. Photos, PDF, et fiches Phenix au format .md, que l'application importe hors ligne.
 - **Le format de la clé** : FAT32 est lu partout mais refuse les fichiers de plus de 4 Go ; exFAT accepte les gros fichiers et se lit sur presque tous les appareils récents ; NTFS pour Windows ; ext4 pour Linux. Pour échanger avec n'importe qui : exFAT. Pour un vieil autoradio : FAT32.
-- **Toujours éjecter avant de retirer** : sinon, les derniers fichiers peuvent être incomplets.
-- **Une clé n'est pas une archive** : sans courant pendant des années, surtout au chaud, la mémoire perd ses données. Deux copies sur deux supports différents. Voir [[TEC-ELN-007]].
+- **L'éjection avant retrait** sert à écrire les dernières données gardées en mémoire tampon ; une clé arrachée en pleine écriture peut perdre des fichiers.
+- **Une clé n'est pas une archive** : sans courant pendant des années, surtout au chaud, la mémoire flash perd ses données. Voir [[TEC-ELN-007]].
 
-## Les pièges
+## Les risques
 
-- **Une clé trouvée ne se branche jamais** : une clé piégée peut se faire passer pour un clavier et taper des commandes en une seconde. D'autres grillent le port.
-- **Les prises USB publiques** des gares et des aéroports peuvent être trafiquées pour lire un téléphone. On charge sur une prise électrique avec son propre chargeur, ou avec un câble « charge seule ».
-- **Reconnaître un câble « charge seule »** : branché à un ordinateur, le téléphone charge mais n'apparaît pas.
-- **Un téléphone qui charge mal**, neuf fois sur dix, a des peluches de poche tassées au fond de sa prise. On les retire doucement avec un cure-dent en bois, jamais en métal. Voir [[TEC-ELN-018]].
+- **Les clés piégées** : une clé peut se faire passer pour un clavier et taper des commandes en une seconde (attaque dite BadUSB). D'autres, les « USB killers », envoient une décharge qui grille le port. Une clé trouvée est l'appât classique.
+- **Les prises USB publiques** des gares et des aéroports peuvent être trafiquées pour lire un téléphone. Un chargeur branché sur une prise électrique, ou un câble sans fils de données, supprime ce risque.
+- **Le câble « charge seule »** n'a pas de fils de données : un téléphone branché à un ordinateur charge mais n'apparaît pas.
+- **Un téléphone qui charge mal** a très souvent des peluches de poche tassées au fond de sa prise, qui empêchent le connecteur d'entrer à fond. Voir [[TEC-ELN-018]].
 
 Comment marche un téléphone : [[TEC-ELN-017]].

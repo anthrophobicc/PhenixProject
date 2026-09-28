@@ -19,7 +19,7 @@ sources: ["Wikipédia, article « Pâturage »", "Voisin A., Productivité de l'
 
 - **Des petites parcelles**, les paddocks, séparées par une clôture électrique mobile. Les animaux restent de un à quelques jours sur chacune, puis passent à la suivante.
 - **L'herbe se repose trois à six semaines** entre deux passages : moins au printemps, quand elle pousse vite, plus en été. André Voisin, agronome français, en a fait la règle en 1957 : laisser à l'herbe le temps de refaire ses réserves.
-- **On entre quand l'herbe atteint 15 à 20 cm** et on sort quand il en reste environ 5 cm. Rasée, elle repart lentement.
+- **Les animaux entrent quand l'herbe atteint 15 à 20 cm** et sortent quand il en reste environ 5 cm. Rasée, elle repart lentement.
 
 ## Pourquoi ça marche
 
@@ -28,7 +28,7 @@ sources: ["Wikipédia, article « Pâturage »", "Voisin A., Productivité de l'
 - **Le fumier est réparti** sur toute la surface, au lieu de s'accumuler près de l'abri.
 - **Un long repos casse le cycle** d'une partie des vers intestinaux, sans les supprimer. Voir [[TEC-ELE-006]].
 
-## Mettre en place
+## L'organisation
 
 - **Le nombre de parcelles** : durée de repos visée divisée par la durée de présence, plus une. Pour 30 jours de repos et 3 jours de présence : 11 parcelles.
 - **L'eau** accessible depuis chaque parcelle : un bac mobile et un tuyau, ou des parcelles disposées autour d'un point d'eau.

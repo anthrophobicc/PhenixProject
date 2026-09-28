@@ -19,7 +19,7 @@ sources: ["Wikipédia, article « Taupe d'Europe »", "Wikipédia, article « Ca
 
 - **La taupe** : des taupinières rondes, régulières, en cratère, la terre sortant au centre. Les plantes ne sont pas mangées, seulement soulevées.
 - **Le campagnol terrestre**, dit rat taupier : des monticules plus plats et allongés, la terre sortant sur le côté. Carottes et betteraves rongées par-dessous, bulbes disparus, jeunes arbres qui se couchent d'un coup, racines coupées net.
-- **Le test** : ouvrir une galerie sur 20 cm à la bêche. Le campagnol la rebouche en quelques heures ; la taupe la laisse souvent ouverte bien plus longtemps.
+- **Le test de la galerie ouverte** : sur 20 cm ouverts à la bêche, le campagnol rebouche en quelques heures ; la taupe laisse souvent l'ouverture bien plus longtemps.
 
 ## La taupe
 

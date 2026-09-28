@@ -1,45 +1,42 @@
 ---
 id: TEC-ELE-020
-titre: Élever des escargots
+titre: L'héliciculture, l'élevage des escargots
 axe: 2
 categorie: Agriculture et Botanique
-temps: Long
+temps: Court
 contexte: 1
 risque: Discret
-materiel: Technique
+materiel: Rien
 priorite: normale
 origine: officielle
 tags: [escargots, heliciculture, petit-gris, gros-gris, helix aspersa, escargot de bourgogne, parc, calcium, jeune, cuisson]
 sources: ["Wikipédia, article « Héliciculture »"]
 ---
 
-::Les escargots transforment des feuilles en protéines sans bruit, sans odeur, sur quelques mètres carrés d'herbe humide. Seul le petit-gris s'élève vraiment bien. Et qu'ils viennent d'un parc ou d'un talus, une règle ne souffre aucune exception : on les fait jeûner avant de les manger.::
+::L'héliciculture est l'élevage des escargots pour la consommation. Sur quelques centaines de mètres carrés d'herbe humide, elle transforme des feuilles en protéines, sans odeur ni bruit. En France, presque tous les élevages produisent une seule espèce, le petit-gris, car l'escargot de Bourgogne s'élève très mal.::
 
-## Quel escargot
+## Les espèces
 
-- **Le petit-gris et le gros-gris** (Helix aspersa) : ce sont eux qu'on élève, et presque tous les élevages français ne font que ceux-là.
-- **L'escargot de Bourgogne** (Helix pomatia) : il grandit lentement, en deux ou trois ans, et s'élève mal. Son ramassage dans la nature est réglementé en France, et interdit dans certains départements.
+- **Le petit-gris et le gros-gris** (Helix aspersa) : croissance rapide, adulte en une saison en parc. Ce sont eux que l'on élève.
+- **L'escargot de Bourgogne** (Helix pomatia) : il met deux à trois ans à devenir adulte et supporte mal l'élevage. Celui qu'on mange est surtout ramassé dans la nature, en Europe de l'Est.
 
-## Le parc
+## Le parc d'élevage
 
-- **Un carré d'herbe** entouré d'un filet ou d'une bâche dont le haut est replié vers l'intérieur en forme de L, pour qu'ils ne puissent pas sortir.
-- **Des plantes qui nourrissent et font de l'ombre** : trèfle, radis fourrager, colza, blettes. Des planches posées au sol leur servent d'abri le jour.
-- **L'humidité** : ils sortent la nuit et par temps humide. En été, on arrose le parc le soir.
-- **Le calcium** : de la craie, des coquilles d'huîtres ou d'œufs broyées. Sans calcaire, pas de coquille.
-- **Un complément** : farine de céréales ou aliment pour escargots, en petite quantité.
-- **Les ennemis** : rats, hérissons, oiseaux, carabes. Un parc bien fermé et surveillé.
+- **Un carré d'herbe clôturé** par un filet ou une bâche repliée vers l'intérieur en forme de L, que les escargots ne franchissent pas.
+- **Des plantes qui nourrissent et abritent** : trèfle, radis fourrager, colza, blettes, avec des planches posées au sol comme abris de jour.
+- **L'humidité** est vitale : les escargots sortent la nuit et par temps humide, et les parcs sont arrosés le soir en été.
+- **Le calcium** (craie, coquilles broyées) est indispensable à la coquille. Un complément de farine ou d'aliment composé accélère la croissance.
+- **Les prédateurs** : rats, hérissons, oiseaux, carabes.
 
 ## Le cycle
 
-- **Au printemps**, les adultes s'accouplent et pondent en terre des œufs par dizaines. Ils éclosent en quelques semaines.
-- **Dans un parc**, on met les jeunes au printemps et on ramasse les adultes à l'automne.
-- **Un escargot adulte** a le bord de sa coquille épaissi et retourné : il est bordé. On ne ramasse pas les autres.
+- **Au printemps**, les escargots, hermaphrodites, s'accouplent puis pondent en terre des dizaines d'œufs, qui éclosent en quelques semaines.
+- **En élevage**, les jeunes sont mis en parc au printemps et les adultes ramassés à l'automne.
+- **Un escargot adulte** a le bord de la coquille épaissi et retourné : on dit qu'il est bordé.
 
-## Avant de les manger
+## De l'escargot à l'assiette
 
-1. **Le jeûne** : une semaine dans une caisse aérée, sans nourriture, pour vider leur intestin. Un escargot sauvage a pu manger des plantes toxiques pour l'homme, qui ne lui font rien.
-2. **Rincer**, puis les plonger 5 minutes dans l'eau bouillante.
-3. **Les sortir de la coquille**, puis les cuire longuement dans un bouillon, au moins une heure et demie.
-4. **Jamais crus ni à peine cuits.**
+- **Le jeûne** d'environ une semaine vide l'intestin. Il est indispensable pour les escargots ramassés dans la nature, qui ont pu manger des plantes toxiques pour l'homme sans en souffrir eux-mêmes.
+- **Après un blanchiment** de quelques minutes, ils sont décoquillés puis cuits longuement dans un bouillon, au moins une heure et demie. On ne les mange jamais crus ni peu cuits.
 
 Les autres petits élevages de protéines : [[TEC-ELE-016]]. Les protéines sans viande : [[TEC-ALI-024]].

@@ -25,12 +25,12 @@ sources: ["Wikipédia, article « Lutte biologique »", "INRAE, Encyclop'Aphid, 
 - **Le hérisson, l'orvet, le crapaud** : les limaces et les escargots.
 - **Les minuscules guêpes parasitoïdes** : elles pondent dans les pucerons, les chenilles ou leurs œufs. Un puceron gonflé et doré, momifié, a été parasité.
 
-## Les attirer
+## Ce qui les attire
 
 - **Des fleurs toute la saison**, surtout de petites fleurs au nectar facile d'accès : fenouil, aneth, carottes laissées en fleur, phacélie, souci. Les syrphes et les petites guêpes adultes se nourrissent de nectar.
 - **Des abris** : une haie ([[TEC-AGR-045]]), un tas de bois ou de pierres, un coin d'herbes hautes jamais tondu, un point d'eau peu profond.
 - **Des nichoirs à mésanges** : un trou de 28 mm pour la mésange bleue, 32 mm pour la charbonnière, posés à 2 ou 3 m de haut, à l'abri du soleil de midi.
-- **Tolérer quelques pucerons** : sans proies, pas de prédateurs. Un carré d'orties couvert de pucerons au printemps nourrit les premières coccinelles de l'année.
+- **Quelques pucerons** : sans proies, pas de prédateurs. Un carré d'orties couvert de pucerons au printemps nourrit les premières coccinelles de l'année.
 
 ## Ce qui les tue
 
@@ -38,7 +38,7 @@ sources: ["Wikipédia, article « Lutte biologique »", "INRAE, Encyclop'Aphid, 
 - **Les granulés anti-limaces au métaldéhyde** empoisonnent aussi les hérissons, les oiseaux et les chiens. Ceux au phosphate ferrique sont bien moins dangereux.
 - **Le jardin trop propre** : sol nu, tout tondu, feuilles mortes ramassées. Les auxiliaires n'ont nulle part où passer l'hiver.
 
-## Les acheter
+## Les auxiliaires du commerce
 
 - **Des larves de coccinelles ou de chrysopes** se commandent et se lâchent sur les foyers de pucerons.
 - **En serre**, une petite guêpe, Encarsia formosa, vient à bout des aleurodes, ces mouches blanches des tomates.

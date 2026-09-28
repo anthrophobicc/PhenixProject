@@ -1,6 +1,6 @@
 ---
 id: TEC-AGR-054
-titre: Partager le matériel, la CUMA
+titre: La CUMA, coopérative de matériel agricole
 axe: 2
 categorie: Agriculture et Botanique
 temps: Long

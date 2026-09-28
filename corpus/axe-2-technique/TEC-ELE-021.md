@@ -30,16 +30,16 @@ sources: ["Wikipédia, article « Race locale »", "FAO, The State of the World'
 - **Porcs** : porc Gascon, porc Basque, Blanc de l'Ouest, élevés en plein air.
 - **Poules** : Gauloise, Marans, Coucou de Rennes, Faverolles, Sussex.
 
-## Choisir
+## Le choix d'une race
 
-- **Prendre ce qui est élevé dans sa région** depuis longtemps : la sélection a déjà été faite par le climat.
+- **Les races élevées dans une région depuis longtemps** y sont les mieux adaptées : la sélection a été faite par le climat.
 - **Les associations et conservatoires de races** vendent des animaux et donnent des conseils.
 - **Pour faire naître sans couveuse**, il faut des poules qui couvent encore : les pondeuses hybrides du commerce ont presque perdu cet instinct. Voir [[TEC-ELE-008]].
 - **Les poulets de chair industriels** grossissent si vite qu'ils ont du mal à marcher au bout de quelques semaines, et ne se reproduisent pas bien : inutiles pour un élevage autonome.
 
 ## Garder une lignée saine
 
-- **Varier les reproducteurs** : changer de mâle tous les deux ou trois ans, ou en échanger avec un voisin.
-- **Noter qui descend de qui** pour éviter les accouplements entre proches. Voir [[TEC-ELE-005]].
+- **Le renouvellement des reproducteurs** : les éleveurs changent de mâle tous les deux ou trois ans, ou en échangent entre voisins.
+- **Le suivi des filiations** évite les accouplements entre proches et la consanguinité. Voir [[TEC-ELE-005]].
 
 Santé du troupeau : [[TEC-ELE-006]].

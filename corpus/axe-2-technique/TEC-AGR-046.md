@@ -17,7 +17,7 @@ sources: ["Wikipédia, article « Permaculture »", "Mollison B., Holmgren D., P
 
 ## Ce qui marche vraiment
 
-- **Observer une année entière** avant de tout planter : où court l'eau quand il pleut, où le gel reste, d'où vient le vent, où tombe le soleil en hiver.
+- **L'observation d'une année entière** avant de planter : où court l'eau quand il pleut, où le gel reste, d'où vient le vent, où tombe le soleil en hiver.
 - **Les zones** : ce qu'on visite chaque jour près de la maison (herbes, salades, poules), ce qu'on visite rarement plus loin (verger, pâture, bois). On économise des kilomètres de pas.
 - **Couvrir le sol en permanence** : paillis ([[TEC-AGR-023]]) et engrais verts ([[TEC-AGR-028]]). Un sol nu se lessive, se tasse et se couvre de mauvaises herbes.
 - **Chaque élément a plusieurs fonctions** : la poule mange les restes et les limaces, gratte, fume, et pond. La haie coupe le vent, nourrit, loge les auxiliaires. Voir [[TEC-AGR-045]].
@@ -35,9 +35,6 @@ sources: ["Wikipédia, article « Permaculture »", "Mollison B., Holmgren D., P
 
 À la ferme du Bec Hellouin, en Normandie, l'INRA et AgroParisTech ont suivi pendant plusieurs années une petite surface cultivée à la main de façon très intensive. Conclusion : une surface réduite, très soignée, peut faire vivre un maraîcher, au prix de beaucoup d'heures de travail et d'un vrai savoir-faire.
 
-## Pour commencer
+## L'ordre habituel
 
-1. Un plan du terrain, avec le soleil, l'eau, le vent et les accès.
-2. Un petit potager près de la porte, bien paillé. Voir [[TEC-AGR-004]].
-3. Quelques arbres fruitiers et une haie dès le premier hiver : ce sont eux qui mettent le plus de temps.
-4. Agrandir seulement ce qui marche.
+Les praticiens commencent par un plan du terrain (soleil, eau, vent, accès), puis un petit potager paillé près de la maison ([[TEC-AGR-004]]), et plantent dès le premier hiver les arbres et les haies, qui mettent le plus de temps à produire. Le reste s'agrandit au fil de ce qui fonctionne.

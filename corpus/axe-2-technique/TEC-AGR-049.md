@@ -1,46 +1,46 @@
 ---
 id: TEC-AGR-049
-titre: Les trognes, des arbres qui repoussent
+titre: La trogne, ou arbre têtard
 axe: 2
 categorie: Agriculture et Botanique
-temps: Long
+temps: Court
 contexte: 1
 risque: Discret
-materiel: Technique
+materiel: Rien
 priorite: normale
 origine: officielle
-tags: [trogne, arbre tetard, emondage, bois de chauffage, fourrage, feuillard, saule, osier, haie bocagere, taillis]
+tags: [trogne, arbre tetard, emondage, bois de chauffage, fourrage, feuillard, saule, osier, haie bocagere, taillis, biodiversite]
 sources: ["Wikipédia, article « Arbre têtard »", "Mansion D., Les trognes, l'arbre paysan aux mille usages, Éditions Ouest-France, 2010"]
 ---
 
-::On les appelle trognes, têtards, ragosses ou truisses : plus de 250 noms en France pour un même arbre, coupé à hauteur d'homme tous les dix ans environ et qui repart de plus belle. Il donne du bois de chauffage sans jamais être abattu, et du fourrage vert quand l'été grille les prés.::
+::Trogne, têtard, ragosse, truisse : plus de 250 noms en France désignent un même arbre, coupé à hauteur d'homme et recoupé tous les dix ans environ, qui repart chaque fois en une couronne de branches. Il a fourni aux campagnes du bois de chauffage et du fourrage pendant des siècles sans jamais être abattu.::
 
-## Le principe
+## Ce que c'est
 
-- **On coupe le tronc d'un jeune arbre** à 1,5 à 3 m de haut. Des bourgeons endormis sous l'écorce se réveillent et forment une couronne de nouvelles branches.
-- **Tous les 5 à 15 ans** selon l'essence, on recoupe toutes ces branches au ras de la tête. Le tronc grossit, se creuse avec l'âge et devient un abri pour les chouettes, les chauves-souris et des insectes rares.
-- **Pourquoi si haut** : les repousses sont hors de portée du bétail. Un taillis coupé au ras du sol serait brouté ; la trogne peut rester au milieu d'un pré.
+- **Un arbre dont le tronc a été coupé** entre 1,5 et 3 m de haut quand il était jeune. Des bourgeons dormants sous l'écorce se réveillent et forment une tête hérissée de rejets.
+- **Tous les 5 à 15 ans** selon l'essence, toutes les branches sont recoupées au ras de la tête. Le tronc grossit, se déforme et se creuse avec l'âge.
+- **La hauteur n'est pas un hasard** : les repousses sont hors de portée du bétail, alors qu'un taillis coupé au ras du sol serait brouté. La trogne peut donc rester au milieu d'un pré.
 
-## Quels arbres
+## Les essences
 
-- **Le saule**, le plus facile : il repart toujours, et ses jeunes rameaux donnent l'osier pour la vannerie.
+- **Le saule** repart toujours ; ses jeunes rameaux donnent l'osier de la vannerie.
 - **Le charme, le chêne, l'érable champêtre, le tilleul, le mûrier, le peuplier noir.**
-- **Le frêne** est le grand arbre à fourrage d'autrefois, mais une maladie venue d'Asie, la chalarose, le décime aujourd'hui.
+- **Le frêne** était le grand arbre à fourrage, mais une maladie venue d'Asie, la chalarose, le décime aujourd'hui.
 
-## Former une trogne
+## Ses usages
 
-1. Choisir un jeune arbre de 8 à 15 cm de diamètre.
-2. **En hiver**, le couper net à la hauteur voulue.
-3. Laisser pousser les rejets. Première récolte au bout de 5 à 10 ans.
+- **Le bois** : perches et bûches coupées en hiver, hors sève. Voir [[TEC-ENE-019]].
+- **Le fourrage**, ou feuillard : des branches feuillues coupées en été et séchées en fagots, que les chèvres et les moutons mangeaient l'hiver. Dans les fermes de montagne, frênes et ormes étaient des prés suspendus.
+- **La faune** : les troncs creux abritent chouettes, chauves-souris et des insectes rares, comme le pique-prune.
 
-## Récolter
+## Le cycle de vie
 
-- **Le bois** : en hiver, hors sève, on coupe toutes les perches d'un coup, au ras de la tête, sans arracher l'écorce du bourrelet. Voir [[TEC-ENE-019]].
-- **Le fourrage, le feuillard** : en été, on coupe des branches feuillues qu'on fait sécher en fagots à l'ombre, pour les chèvres et les moutons en hiver. Frênes et ormes étaient les prés suspendus des fermes de montagne.
-- **Ne jamais oublier une trogne** plus de 20 ou 30 ans : ses branches devenues énormes finissent par faire éclater la tête, et l'arbre meurt.
+- **Une trogne se forme** sur un jeune arbre de 8 à 15 cm de diamètre, coupé en hiver ; la première récolte vient 5 à 10 ans plus tard.
+- **Une trogne abandonnée** plus de 20 ou 30 ans porte des branches devenues énormes, qui finissent par faire éclater la tête : l'arbre meurt. Beaucoup de trognes ont disparu ainsi, ou lors du remembrement.
+- **Entretenue, elle peut vivre plus longtemps** que le même arbre laissé libre.
 
-## Sécurité
+## Le travail
 
-Travail en hauteur, avec des branches sous tension : une échelle attachée à l'arbre ou une plateforme stable, jamais seul, et la tronçonneuse tenue à deux mains, jamais au-dessus des épaules.
+L'émondage se fait en hauteur, sur des branches sous tension : c'était un travail d'hiver, à l'échelle, à la hache puis à la tronçonneuse, et une source classique d'accidents.
 
 Dans une haie : [[TEC-AGR-045]]. Gérer un bois : [[TEC-AGR-035]].

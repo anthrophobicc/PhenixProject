@@ -1,6 +1,6 @@
 ---
 id: TEC-ALI-036
-titre: Conserver les œufs
+titre: La conservation des œufs
 axe: 2
 categorie: Alimentation et Conservation
 temps: Court
@@ -9,35 +9,40 @@ risque: Discret
 materiel: Rien
 priorite: normale
 origine: officielle
-tags: [oeufs, conservation, cuticule, silicate de sodium, eau de chaux, test de fraicheur, salmonelle, oeufs non laves, congelation, reserves]
+tags: [oeufs, conservation, cuticule, silicate de sodium, eau de chaux, chambre a air, test de fraicheur, salmonelle, oeufs non laves, congelation]
 sources: ["Wikipédia, article « Œuf (aliment) »", "Anses, fiche de description de danger biologique transmissible par les aliments : Salmonella spp."]
 ---
 
-::Jusque dans les années 1950, les fermes françaises gardaient les œufs du printemps pour l'hiver, dans des pots en grès remplis de silicate de sodium. Un œuf frais non lavé est protégé par une fine pellicule, la cuticule : c'est elle qui permet de le garder des semaines sans frigo.::
+::Jusque dans les années 1950, les fermes françaises gardaient les œufs du printemps pour l'hiver dans des pots en grès remplis de silicate de sodium. Un œuf frais non lavé est protégé par une fine pellicule, la cuticule, qui bouche les pores de sa coquille : c'est elle qui lui permet de se garder des semaines sans froid.::
 
-## La règle : ne pas laver
+## Comment un œuf se défend
 
-- **La cuticule bouche les pores** de la coquille. La laver l'enlève et ouvre la porte aux bactéries.
-- **Aux États-Unis, les œufs sont lavés** : c'est pour cela qu'ils doivent y être gardés au frigo, alors qu'en Europe on les vend à température ambiante.
-- **Un œuf sale** s'essuie à sec, ou se mange vite.
+- **La coquille** est percée de milliers de pores qui laissent passer l'air.
+- **La cuticule**, une fine couche de protéines déposée à la ponte, les bouche et empêche les bactéries d'entrer. Le lavage l'enlève.
+- **Le blanc** contient des substances antibactériennes, comme le lysozyme.
+- **Avec le temps**, l'œuf perd de l'eau à travers la coquille : la poche d'air, du côté arrondi, grossit, et le blanc devient plus liquide.
 
-## Sans frigo
+## Lavé ou non lavé
 
-- **Au frais, vers 10 à 15 °C**, pointe en bas, loin des odeurs fortes : un œuf frais non lavé se garde trois à quatre semaines, souvent plus. En Europe, la date limite est fixée à 28 jours après la ponte.
-- **Éviter les allers-retours** entre le froid et le chaud : l'eau qui se condense sur la coquille aide les bactéries à entrer.
+- **Aux États-Unis, les œufs sont lavés** avant la vente : leur cuticule est détruite, et ils doivent être gardés au froid.
+- **En Europe, ils ne sont pas lavés** et se vendent à température ambiante. La date limite de consommation est fixée à 28 jours après la ponte.
+- **Un œuf frais non lavé**, gardé au frais vers 10 à 15 °C, se conserve trois à quatre semaines, souvent davantage. Les passages du froid au chaud font condenser de l'eau sur la coquille, ce qui aide les bactéries.
 
-## Pour des mois
+## Les méthodes anciennes, pour plusieurs mois
 
-Toujours avec des œufs très frais, propres, non lavés et sans la moindre fêlure :
-- **Le silicate de sodium**, ou verre soluble : environ un volume pour dix volumes d'eau bouillie refroidie. Les œufs y sont immergés, pot couvert, au frais. Ils se gardent plusieurs mois.
-- **L'eau de chaux** : environ 30 g de chaux éteinte par litre d'eau, même méthode. Plusieurs mois aussi.
-- **L'huile ou la graisse** : chaque œuf enduit d'une fine couche qui bouche les pores, puis rangé au frais. Quelques mois.
-- **La congélation** : cassés, battus avec une pincée de sel ou de sucre (sinon le jaune devient caoutchouteux), congelés en portions.
+- **Le silicate de sodium**, ou verre soluble, dilué environ dix fois dans l'eau : les œufs y sont immergés et se gardent plusieurs mois.
+- **L'eau de chaux**, environ 30 g de chaux éteinte par litre : même principe, même durée.
+- **L'huile ou la graisse** en fine couche sur la coquille, qui en bouche les pores : quelques mois au frais.
+- Ces méthodes ne valent que pour des œufs très frais, propres, non lavés et sans fêlure.
 
-## Vérifier avant de casser
+## Le froid
 
-- **Le test de l'eau** : un œuf frais coule et reste couché. En vieillissant, il se redresse. **Un œuf qui flotte** est vieux : on le casse à part et on le sent.
-- **Toujours casser dans un bol à part** avant de l'ajouter au reste : un œuf gâté se sent immédiatement. Voir [[TEC-ALI-010]].
-- **Un œuf conservé ou fêlé se mange cuit à cœur.** Les personnes fragiles, les femmes enceintes et les jeunes enfants ne mangent jamais d'œuf cru.
+L'œuf entier se congèle mal en coquille, qui éclate. Cassé et battu avec une pincée de sel ou de sucre, il se congèle bien ; sans cela, le jaune devient caoutchouteux.
+
+## La fraîcheur
+
+- **Dans l'eau**, un œuf frais coule et reste couché ; en vieillissant, il se redresse ; un œuf qui flotte est vieux, parce que sa poche d'air a beaucoup grossi. Il n'est pas forcément gâté, mais l'odeur tranche.
+- **Un œuf gâté** se reconnaît immédiatement à l'odeur quand on le casse. Voir [[TEC-ALI-010]].
+- **La salmonelle** se transmet surtout par les œufs fêlés, sales ou crus. Les œufs conservés longtemps se consomment cuits à cœur, et jamais crus pour les femmes enceintes, les jeunes enfants et les personnes fragiles.
 
 Les poules : [[TEC-ELE-008]]. Les réserves : [[TEC-ALI-008]].
