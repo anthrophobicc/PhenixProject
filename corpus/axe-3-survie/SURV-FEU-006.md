@@ -36,7 +36,7 @@ Il pèse environ **un quart** du bois de départ, mais donne une chaleur **plus 
 
 ## Ce qu'on en fait
 
-- **La forge** : le charbon de bois monte le fer au rouge blanc, ce que le bois brut fait mal. Voir [[TEC-ATE-005]].
+- **La forge** : le charbon de bois monte le fer au rouge blanc, ce que le bois brut fait mal. Voir [[TEC-ATE-006]].
 - **La cuisine** sans fumée, sur un brasero ou un barbecue.
 - **Le filtre à eau** : broyé en grains, lavé, il retient les goûts, les odeurs et une partie des produits chimiques. Il ne tue pas les microbes. Voir [[SURV-EAU-004]].
 - **La pile aluminium-air** : [[SURV-ENE-002]].
