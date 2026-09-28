@@ -1,6 +1,6 @@
 ---
 id: TEC-CUL-008
-titre: Chanter à plusieurs
+titre: Le chant collectif
 axe: 2
 categorie: Culture et Loisirs
 temps: Court
@@ -29,14 +29,14 @@ sources: ["Vickhoff B. et al., Music structure determines heart rate variability
 - **Les chants de marche** : couplets simples, rythme des pas. Voir [[SURV-DEP-011]].
 - **Les berceuses** : pour les petits, et pour ceux qui chantent.
 
-## Les règles
+## La transmission
 
-- **Pas besoin de bien chanter.** Le meneur chante fort et simple.
-- **Apprendre par l'oreille**, une phrase à la fois.
-- **Garder** les chants du groupe : les écrire, les apprendre aux enfants. Voir [[TEC-CUL-005]].
+- **Nul besoin de bien chanter** : le meneur chante fort et simple.
+- **L'apprentissage se fait à l'oreille**, une phrase à la fois : c'est ainsi que les chants populaires ont traversé les siècles.
+- **Les chants d'un groupe** se perdent s'ils ne sont ni écrits ni appris aux enfants. Voir [[TEC-CUL-005]].
 
 ## En crise
 
-Dans une cave pendant une alerte, dans une longue marche, autour d'un feu, un chant fait plus pour le moral qu'un long discours. Et le silence reste la règle quand il faut se faire discret. Voir [[SURV-DEP-009]].
+Dans une cave pendant une alerte, dans une longue marche, autour d'un feu, un chant fait souvent plus pour le moral qu'un long discours. Le silence reste la règle quand il faut se faire discret. Voir [[SURV-DEP-009]].
 
 Les instruments de musique : [[TEC-CUL-001]].

@@ -1,45 +1,39 @@
 ---
 id: TEC-ELE-016
-titre: Élever des insectes
+titre: L'élevage d'insectes
 axe: 2
 categorie: Agriculture et Botanique
-temps: Long
+temps: Court
 contexte: 1
 risque: Discret
-materiel: Récupération
+materiel: Rien
 priorite: normale
 origine: officielle
-tags: [insectes, vers de farine, grillons, mouche soldat noire, proteines, poules, poissons, dechets, elevage]
+tags: [insectes, entomoculture, vers de farine, tenebrion, grillons, mouche soldat noire, proteines, poules, poissons, dechets, allergie]
 sources: ["FAO, Edible insects: future prospects for food and feed security, 2013", "EFSA, avis sur la sécurité des larves de ténébrion meunier séchées, 2021", "Dortmans B. et al., Black Soldier Fly Biowaste Processing, Eawag, 2017"]
 ---
 
-::Pour produire un kilo de viande, un bœuf mange environ quatre fois plus qu'un grillon. Des insectes, il suffit d'une caisse, de restes de céréales et de légumes, et de quelques semaines. Ils nourrissent les poules, les poissons, et ceux qui ont surmonté leur dégoût.::
+::Pour produire un kilo de viande, un bœuf consomme plusieurs fois plus de nourriture qu'un élevage de grillons. Selon la FAO, deux milliards de personnes mangent déjà des insectes, surtout en Asie, en Afrique et en Amérique latine. En 2021, l'Union européenne a autorisé la larve de ténébrion, le ver de farine, comme aliment.::
 
-## Les vers de farine
+## Pourquoi les insectes
 
-- **Une caisse** en plastique lisse (ils ne grimpent pas), un couvercle aéré.
-- **Une litière** de son de blé ou de flocons d'avoine, quelques centimètres, qui sert aussi de nourriture.
-- **Des morceaux de légumes** (carotte, pomme de terre) pour l'eau, changés avant qu'ils moisissent.
-- **Le cycle** : larves, nymphes, petits coléoptères noirs qui pondent. Trois à quatre mois à température de maison.
-- **Récolter** les larves au tamis, garder les coléoptères pour la suite.
+- **Ils convertissent très bien leur nourriture** en protéines, parce qu'ils ne dépensent pas d'énergie à garder leur corps chaud.
+- **Ils se nourrissent de restes** : céréales, légumes, déchets de cuisine, fumier pour certains.
+- **Ils demandent peu de place et d'eau**, et produisent en quelques semaines.
 
-## Les grillons
+## Les principales espèces
 
-- **Une caisse ventilée**, au chaud (vers 28 à 30 °C), des boîtes d'œufs en carton pour qu'ils se cachent.
-- **Un bac de terre humide** où ils pondent, déplacé dans une autre caisse pour l'éclosion.
-- **Nourriture** : céréales, légumes, verdure. **De l'eau** sur une éponge humide (ils se noient dans une coupelle).
-- **Six à huit semaines** de l'œuf à l'adulte. Et ils chantent la nuit.
+- **Le ver de farine**, larve du ténébrion meunier : il vit dans du son ou des flocons de céréales, qui lui servent de litière et de nourriture, et tire son eau de morceaux de légumes. Son cycle complet (larve, nymphe, coléoptère adulte qui pond) dure trois à quatre mois à température ambiante. Les bacs aux parois lisses l'empêchent de s'échapper.
+- **Les grillons** : ils demandent de la chaleur, vers 28 à 30 °C, des abris en cartons d'œufs, une terre humide pour pondre et de l'eau sur une éponge, car ils se noient dans une coupelle. Ils passent de l'œuf à l'adulte en six à huit semaines, et chantent la nuit.
+- **La mouche soldat noire** : ses larves dévorent déchets de cuisine, fumier et fruits abîmés, et en fin de croissance quittent d'elles-mêmes le bac pour chercher un endroit sec, ce qui facilite leur récolte. Elles sont une excellente nourriture pour les poules et les poissons. Voir [[TEC-ELE-008]] et [[TEC-ELE-015]].
 
-## La mouche soldat noire
+## La consommation
 
-Ses larves dévorent les déchets de cuisine, le fumier, les fruits abîmés, et en fin de croissance **sortent d'elles-mêmes** du bac par une rampe pour chercher un endroit sec : on les récupère dans un seau. Une excellente nourriture pour les poules et les poissons. Voir [[TEC-ELE-008]] et [[TEC-ELE-015]].
+- **Les insectes se mangent cuits**, grillés, bouillis ou séchés puis réduits en poudre. Un jeûne d'un jour avant la récolte vide leur intestin. Voir [[SURV-RES-007]].
+- **Les personnes allergiques aux crustacés et aux acariens** peuvent réagir aux insectes, dont les protéines sont proches. Voir [[URG-ANA-001]].
 
-## Les manger
+## Les difficultés
 
-- **Toujours cuits**, grillés ou bouillis, ou séchés puis réduits en poudre. Voir [[SURV-RES-007]].
-- **Les allergiques aux crustacés** peuvent réagir. Voir [[URG-ANA-001]].
-- **Une mise à jeun** d'un jour avant la récolte vide leur intestin.
+L'humidité stagnante et les moisissures font mourir les élevages ; les évasions de grillons dans une maison se remarquent longtemps. La production à grande échelle reste plus chère que prévu, et l'acceptation du public en Europe demeure faible.
 
-## Les règles
-
-Propreté, pas de moisissures, pas d'humidité stagnante, et des bacs qui ferment : des grillons échappés dans la maison, on les entend longtemps.
+Les autres petits élevages : [[TEC-ELE-020]]. Les protéines sans viande : [[TEC-ALI-024]].
