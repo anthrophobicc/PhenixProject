@@ -1,46 +1,43 @@
 ---
 id: TEC-AGR-012
-titre: Planter et tailler un arbre fruitier
+titre: L'arbre fruitier
 axe: 2
 categorie: Agriculture et Botanique
-temps: Long
+temps: Court
 contexte: 1
 risque: Discret
 materiel: Rien
 priorite: normale
 origine: officielle
-tags: [arbre fruitier, plantation, taille, pommier, poirier, cerisier, porte-greffe, pollinisation, eclaircissage]
+tags: [arbre fruitier, porte-greffe, pollinisation, plantation, racines nues, bourrelet de greffe, taille, eclaircissage, pommier, poirier, cerisier]
 sources: ["Brickell C., Joyce D., RHS Pruning and Training, Dorling Kindersley", "Société nationale d'horticulture de France, fiches d'arboriculture fruitière"]
 ---
 
-::« À la Sainte-Catherine, tout bois prend racine. » Le 25 novembre, les jardiniers plantaient. Un pommier planté cet hiver donne ses premiers fruits dans trois à cinq ans, puis pendant cinquante. C'est l'investissement le plus rentable d'un jardin.::
+::« À la Sainte-Catherine, tout bois prend racine » : le 25 novembre, les jardiniers plantaient. Un pommier planté en hiver donne ses premiers fruits au bout de trois à cinq ans, puis pendant des décennies. Presque tous les arbres fruitiers vendus sont en réalité deux arbres en un : une variété greffée sur un porte-greffe.::
 
-## Choisir
+## Le porte-greffe
 
-- **Le porte-greffe** décide de la taille de l'arbre : nain (deux mètres, fruits rapides), ou vigoureux (grand arbre, longue vie, fruits plus tardifs).
-- **La pollinisation** : beaucoup de pommiers, de poiriers et de cerisiers ont besoin d'**une autre variété** qui fleurit en même temps à proximité. Pruniers et pêchers se débrouillent souvent seuls.
-- **Des variétés locales**, adaptées au climat et résistantes aux maladies.
+- **Un pépin de pomme donne un pommier, mais presque jamais la même pomme** : chaque graine est un croisement nouveau. Pour reproduire une variété, on la greffe. Voir [[TEC-AGR-013]].
+- **Le porte-greffe**, la partie racinaire, décide de la taille et de la vigueur de l'arbre : nain (deux mètres, fruits rapides, vie plus courte) ou vigoureux (grand arbre, longue vie, fruits plus tardifs).
+- **Le bourrelet de greffe**, la bosse en bas du tronc, doit rester au-dessus du sol : enterré, le greffon fait ses propres racines, et l'arbre perd les qualités du porte-greffe.
 
-**Un pépin de pomme** donne un pommier, mais presque jamais la même pomme. C'est pour ça qu'on greffe. Voir [[TEC-AGR-013]].
+## La pollinisation
 
-## Planter
+Beaucoup de pommiers, de poiriers et de cerisiers ne donnent des fruits qu'avec le pollen d'une autre variété qui fleurit en même temps à proximité. D'autres, comme de nombreux pruniers et pêchers, se fécondent eux-mêmes. Les abeilles assurent le transport du pollen. Voir [[TEC-ELE-010]].
 
-1. **De novembre à mars**, hors gel. Les arbres **à racines nues** sont moins chers et reprennent très bien.
-2. Un trou **large**, pas trop profond. La terre ameublie autour.
-3. **Le bourrelet de greffe** (la bosse en bas du tronc) reste **au-dessus du sol** : enterré, le greffon fait ses propres racines et l'arbre change de nature.
-4. Un tuteur côté vent dominant, un lien souple.
-5. **Arroser copieusement**, même s'il pleut, pour plaquer la terre contre les racines.
+## La plantation
 
-## Tailler
+- **De novembre à mars**, hors gel, quand l'arbre est en repos. Les arbres à racines nues, moins chers, reprennent très bien.
+- **Un trou large plutôt que profond**, un tuteur côté vent dominant, et un arrosage copieux qui plaque la terre contre les racines.
 
-- **Pommiers et poiriers** : en hiver, hors gel.
-- **Cerisiers, pruniers, abricotiers** : en été ou juste après la récolte. Taillés en hiver, ils attrapent des maladies par les plaies.
-- **Toujours enlever** : le bois mort, le bois malade, les branches qui se croisent ou partent vers le centre.
-- **Le but** : un arbre ouvert, où la lumière et l'air entrent partout.
-- **Couper net**, juste au-dessus d'un bourgeon tourné vers l'extérieur, avec un outil bien affûté.
+## La taille
 
-## Éclaircir
+- **Son but** : un arbre ouvert, où la lumière et l'air entrent partout, et un équilibre entre bois et fruits.
+- **Le moment** : en hiver pour les fruits à pépins (pommiers, poiriers) ; en été ou après la récolte pour les fruits à noyau (cerisiers, pruniers, abricotiers), qui attrapent des maladies par les plaies de taille hivernales.
+- **Ce qui s'enlève** : le bois mort ou malade, les branches qui se croisent ou partent vers le centre.
 
-Quand un arbre porte trop, on enlève une partie des jeunes fruits en juin : les autres grossissent mieux, et l'arbre ne s'épuise pas au point de ne rien donner l'année suivante.
+## L'éclaircissage
 
-Les maladies : [[TEC-AGR-014]]. Affûter le sécateur : [[TEC-ATE-004]].
+Un arbre trop chargé s'épuise et ne produit presque rien l'année suivante : c'est l'alternance. En retirant une partie des jeunes fruits en juin, les arboriculteurs obtiennent des fruits plus gros et une récolte régulière.
+
+Les maladies : [[TEC-AGR-014]]. Les arbres qui nourrissent : [[TEC-AGR-030]].

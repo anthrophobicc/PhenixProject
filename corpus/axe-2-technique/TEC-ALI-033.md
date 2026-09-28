@@ -1,6 +1,6 @@
 ---
 id: TEC-ALI-033
-titre: Le pain sans four
+titre: Les pains sans four
 axe: 2
 categorie: Alimentation et Conservation
 temps: Court
@@ -9,35 +9,32 @@ risque: Discret
 materiel: Rien
 priorite: normale
 origine: officielle
-tags: [pain, galettes, chapati, pain sous la cendre, soda bread, cocotte, poele, bannock, pain sur baton]
+tags: [pain, galettes, chapati, tortilla, galette de sarrasin, soda bread, bicarbonate, cocotte, pain sous la cendre, bannock, pain sur baton]
 sources: ["David E., English Bread and Yeast Cookery, 1977", "Alford J., Duguid N., Flatbreads and Flavors: A Baker's Atlas, 1995", "FAO, les céréales dans l'alimentation humaine"]
 ---
 
-::La moitié de l'humanité mange un pain qui n'a jamais vu de four : chapatis indiens, tortillas mexicaines, galettes de sarrasin bretonnes, pains cuits dans la cendre par les nomades du désert. Les trappeurs du Grand Nord cuisaient le leur dans une poêle, les Irlandais faisaient lever le leur au bicarbonate et au babeurre. Un feu, une poêle, de la farine et de l'eau.::
+::Une grande partie de l'humanité mange un pain qui n'a jamais vu de four : chapatis indiens, tortillas mexicaines, galettes de sarrasin bretonnes, pains cuits dans la cendre par les nomades du désert. Le four à pain est une invention coûteuse en bois et en construction ; la galette sur une pierre chaude est bien plus ancienne.::
 
-## Les galettes, sans levain
+## Les galettes sans levain
 
-**Le chapati**
-1. **Deux mesures de farine** (complète de préférence), **une mesure d'eau** environ, une pincée de sel.
-2. **Pétrir** dix minutes, laisser reposer vingt minutes sous un linge.
-3. **Faire des boules**, les étaler très finement.
-4. **Cuire à sec** dans une poêle très chaude, une minute par face, puis les poser un instant au-dessus de la flamme : elles gonflent.
+- **Le chapati** d'Inde et du Pakistan : farine complète, eau et sel, étalés très finement et cuits à sec dans une poêle très chaude, une minute par face. Posé un instant sur la flamme, il gonfle sous l'effet de la vapeur.
+- **La tortilla** d'Amérique centrale : une pâte de maïs traité à la chaux, la nixtamalisation, qui le rend plus nourrissant. Voir [[TEC-AGR-027]].
+- **La galette de sarrasin** de Bretagne : une pâte liquide de farine de sarrasin, d'eau et de sel, étalée sur une plaque de fonte. Voir [[TEC-AGR-034]].
+- **Le pain azyme**, sans levain, des traditions juives et chrétiennes.
 
-**Les tortillas** : avec la pâte de maïs nixtamalisé. Voir [[TEC-AGR-027]].
-**Les galettes de sarrasin** : une pâte liquide de farine de sarrasin, d'eau et de sel, étalée sur une plaque chaude. Voir [[TEC-AGR-034]].
+## Les pains levés sans four
 
-## Le pain levé, sans four
+- **Le soda bread** irlandais, apparu au XIXe siècle avec le bicarbonate : le bicarbonate réagit avec l'acide du babeurre et libère le gaz qui fait lever la pâte, en quelques minutes et sans fermentation.
+- **La cocotte en fonte** fermée, posée sur les braises avec des braises sur le couvercle, reproduit la chaleur enveloppante d'un four : un pain au levain y cuit presque comme au four. Voir [[TEC-ALI-012]].
+- **Le bannock** des trappeurs et des peuples du Grand Nord : une pâte épaisse cuite à la poêle, à couvert.
 
-- **Le pain au bicarbonate** (soda bread) : farine, sel, une cuillère de bicarbonate, et du **babeurre** ou du lait tourné (l'acide fait lever). On mélange vite, on forme une boule, on cuit tout de suite. Voir [[TEC-ALI-018]].
-- **En cocotte** : une cocotte en fonte avec couvercle, posée sur les braises, et des braises aussi sur le couvercle. Un pain au levain y cuit comme au four. Voir [[TEC-ALI-012]].
-- **À la poêle** : une pâte épaisse cuite doucement à couvert, retournée à mi-cuisson.
+## Les pains du feu de camp
 
-## Sous la cendre
+- **Le pain sous la cendre** des nomades du Sahara, la taguella : une galette épaisse enfouie sous la cendre chaude et les braises, puis retournée, sortie et frappée pour faire tomber la cendre.
+- **Le pain sur bâton** : une pâte enroulée en spirale autour d'un bâton, tournée au-dessus des braises.
 
-Sur un feu de bois qui a bien brûlé, on écarte les braises, on pose la galette épaisse sur la cendre chaude, on la recouvre de cendre et de braises. On la retourne, puis on la sort et on la tape pour faire tomber la cendre.
+## Pourquoi ça marche
 
-## Le pain sur bâton
-
-Une pâte enroulée en spirale autour d'un bâton vert écorcé, tournée au-dessus des braises. Les enfants adorent, et ça les occupe au coin du feu.
+La cuisson d'un pain demande surtout une chaleur forte et rapide sur une pâte fine, ou une chaleur enveloppante sur une pâte épaisse : une plaque, une pierre, une poêle ou une cocotte y suffisent.
 
 Du blé au pain : [[TEC-AGR-009]]. Le four : [[TEC-ALI-025]].

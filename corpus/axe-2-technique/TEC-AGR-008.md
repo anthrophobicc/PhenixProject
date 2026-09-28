@@ -1,43 +1,43 @@
 ---
 id: TEC-AGR-008
-titre: Arroser peu et bien
+titre: L'arrosage
 axe: 2
 categorie: Agriculture et Botanique
 temps: Court
 contexte: 1
 risque: Discret
-materiel: Récupération
+materiel: Rien
 priorite: normale
 origine: officielle
-tags: [arrosage, eau, paillage, binage, oyas, goutte a goutte, secheresse, potager]
+tags: [arrosage, eau, racines, evaporation, paillage, binage, oyas, goutte a goutte, secheresse, potager]
 sources: ["FAO, Crop water requirements (Irrigation and Drainage Paper 24)", "Bainbridge D., Buried clay pot irrigation: a little known but very efficient traditional method, Agricultural Water Management, 2001", "Société nationale d'horticulture de France, économiser l'eau au jardin"]
 ---
 
-::Arroser un peu tous les soirs fait des racines paresseuses qui restent en surface et meurent à la première canicule. Arroser beaucoup, rarement, au pied, force les racines à descendre chercher l'eau.::
+::Un peu d'eau tous les soirs fait des racines paresseuses, qui restent en surface et meurent à la première canicule. Beaucoup d'eau, rarement, au pied, force les racines à descendre la chercher. La plus grande partie de l'eau d'un arrosage mal fait s'évapore avant d'avoir servi.::
 
-## Les règles
+## Comment une plante boit
 
-- **Rarement mais en profondeur** : une ou deux fois par semaine, **10 à 20 litres par mètre carré**, plutôt qu'un peu chaque jour. L'eau doit descendre à 20 ou 30 cm.
-- **Au pied, pas sur les feuilles** : l'eau sur les feuilles s'évapore et favorise les maladies (mildiou, oïdium).
-- **Le matin tôt ou le soir** : moins d'évaporation. Le soir attire les limaces ; le matin est le meilleur compromis.
-- **Vérifiez avec le doigt** : si la terre est humide à deux phalanges de profondeur, on n'arrose pas.
-- **Les semis et les jeunes plants** font exception : arrosages légers et fréquents, en pluie fine, tant que les racines sont courtes.
+- **Les racines prennent l'eau** là où elle se trouve : une plante arrosée en surface garde ses racines en surface, là où le sol sèche le plus vite.
+- **Un arrosage profond**, de l'ordre de 10 à 20 litres par mètre carré une ou deux fois par semaine au potager, humidifie le sol sur 20 à 30 cm et entraîne les racines vers le bas.
+- **Les semis et jeunes plants** font exception : leurs racines courtes demandent des arrosages légers et fréquents.
+
+## Où part l'eau
+
+- **L'évaporation** du sol nu, surtout aux heures chaudes et par vent : les jardiniers arrosent tôt le matin ou le soir, le soir favorisant toutefois les limaces.
+- **L'eau sur les feuilles** s'évapore et favorise les maladies à champignons, comme le mildiou et l'oïdium : l'arrosage se fait au pied.
+- **La croûte de surface** qui se forme après la pluie laisse l'eau du sol remonter et s'évaporer. Le dicton des jardiniers le résume : « un binage vaut deux arrosages ».
 
 ## Garder l'eau dans le sol
 
-- **Pailler** : 5 à 10 cm de paille, tontes sèches, feuilles, carton, entre les plants. Le paillage garde l'humidité, empêche les mauvaises herbes, et nourrit le sol en se décomposant.
-- **Biner** : casser la croûte qui se forme en surface après la pluie ou l'arrosage. Le vieux dicton des jardiniers le résume : **un binage vaut deux arrosages**.
-- **Enrichir en compost** : un sol riche en humus retient l'eau comme une éponge. Voir [[TEC-AGR-003]].
+- **Le paillage** de 5 à 10 cm (paille, feuilles, tontes sèches) réduit fortement l'évaporation et nourrit le sol. Voir [[TEC-AGR-023]].
+- **L'humus** retient l'eau comme une éponge : un sol riche en compost en garde bien plus qu'un sol pauvre. Voir [[TEC-AGR-003]].
 
-## Arroser sans y passer ses journées
+## Les techniques économes
 
-- **Les oyas** : des pots en terre cuite non vernis, enterrés jusqu'au col près des plantes et remplis d'eau. L'eau suinte lentement à travers la terre cuite, exactement là où sont les racines. Une méthode vieille de deux mille ans, parmi les plus économes qui existent. Un pot de fleurs en terre, trou bouché, fait l'affaire.
-- **La bouteille percée** : une bouteille en plastique percée de petits trous, enterrée à côté d'un plant, goulot vers le haut.
-- **Le goutte-à-goutte** : un tuyau percé posé sous le paillage, alimenté par un bidon surélevé ou une récupération d'eau de pluie. Voir [[SURV-PLUIE-001]].
+- **Les oyas** : des pots en terre cuite poreuse enterrés jusqu'au col et remplis d'eau, qui suinte lentement là où sont les racines. Cette méthode, pratiquée depuis environ deux mille ans en Chine et en Afrique du Nord, est l'une des plus économes qui existent.
+- **Le goutte-à-goutte** : des tuyaux percés qui délivrent l'eau goutte à goutte au pied des plantes. Développé en Israël dans les années 1960, il a transformé l'agriculture des régions sèches.
+- **La récupération d'eau de pluie** alimente ces systèmes par gravité. Voir [[SURV-PLUIE-001]].
 
 ## En sécheresse
 
-- **Priorité** aux légumes en fruits et aux jeunes plants ; les plantes installées et les arbres tiennent plus longtemps.
-- **L'eau de vaisselle** sans produit, l'eau de cuisson refroidie, l'eau de rinçage des légumes : pour les plantes.
-- **L'ombre** : un voile ou une vieille toile tendue au-dessus des salades aux heures chaudes.
-- **Récoltez tôt le matin**, quand les légumes sont pleins d'eau.
+Les jardiniers donnent la priorité aux légumes en fruits et aux jeunes plants, les arbres et plantes installées tenant plus longtemps ; ils réutilisent les eaux de cuisson ou de rinçage sans produit, et posent un voile d'ombrage aux heures chaudes. Voir [[TEC-AGR-047]].
