@@ -24,7 +24,9 @@ const EXE_SOURCE = path.join(RACINE, "src-tauri", "target", "release", "bundle",
 // Tailles affichées sur le site, relues à chaque construction.
 const mo = (octets) => { const v = (octets / 1e6).toFixed(1); return [v + " MB", v.replace(".", ",") + " Mo"]; };
 const [APP_MB, APP_MO] = mo(fs.statSync(path.join(RACINE, "app", "phenix.html")).size);
-const [EXE_MB, EXE_MO] = mo(fs.existsSync(EXE_SOURCE) ? fs.statSync(EXE_SOURCE).size : 1.7e6);
+// Sans exe compilé sur ce PC, la taille vient de l'installateur déjà publié dans site/dl/.
+const EXE_ACTUEL = [EXE_SOURCE, path.join(SITE, EXE)].find((f) => fs.existsSync(f));
+const [EXE_MB, EXE_MO] = mo(EXE_ACTUEL ? fs.statSync(EXE_ACTUEL).size : 1.7e6);
 
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;");
 
