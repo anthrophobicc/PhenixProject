@@ -1,46 +1,43 @@
 ---
 id: TEC-AGR-025
-titre: Cultiver sur un balcon ou un toit
+titre: Le potager de balcon et de toit
 axe: 2
 categorie: Agriculture et Botanique
 temps: Court
 contexte: 1
 risque: Discret
-materiel: Récupération
+materiel: Rien
 priorite: normale
 origine: officielle
-tags: [balcon, toit, bacs, pots, poids, charge, reserve d'eau, agriculture urbaine, herbes aromatiques]
+tags: [balcon, toit, bacs, pots, poids, charge d'exploitation, reserve d'eau, agriculture urbaine, herbes aromatiques, ferme urbaine]
 sources: ["Norme NF P06-001, charges d'exploitation des bâtiments", "FAO, Growing greener cities (agriculture urbaine)", "Nature Urbaine, ferme urbaine du parc des expositions de Paris, 2020"]
 ---
 
-::À Paris, sur le toit du parc des expositions, une ferme urbaine de plus d'un hectare produit fruits et légumes au milieu des immeubles. Un balcon ne nourrira pas une famille, mais il fournit herbes, salades, tomates cerises et haricots tout l'été. La première question n'est pourtant pas « quoi planter », c'est « combien ça pèse ».::
+::À Paris, sur le toit du parc des expositions, une ferme urbaine de plus d'un hectare produit fruits et légumes au milieu des immeubles. Un balcon ne nourrit pas une famille, mais fournit herbes, salades, tomates cerises et haricots tout l'été. La contrainte principale n'est pas la place, c'est le poids.::
 
-## Le poids d'abord
+## Le poids
 
-- **La terre mouillée** pèse lourd : **un bac de 20 cm de profondeur sur un mètre carré dépasse souvent 300 kg** une fois arrosé.
-- Un balcon d'habitation est prévu, en général, pour environ 350 kg par mètre carré, **personnes comprises**.
-- **Les gros bacs contre le mur** et près des appuis, jamais tous au bout du balcon. Un **terreau léger**, pas de la terre de jardin. Dans le doute, demander au syndic ou à un professionnel, surtout pour un toit.
+- **La terre mouillée pèse lourd** : un bac de 20 cm de profondeur sur un mètre carré dépasse souvent 300 kg une fois arrosé.
+- **Un balcon d'habitation** est calculé en général pour environ 350 kg par mètre carré, personnes comprises.
+- **Les charges se placent** contre le mur et près des appuis ; les terreaux légers remplacent la terre de jardin. Les toits demandent l'avis d'un professionnel.
 
 ## La lumière et le vent
 
-- **Six heures de soleil** pour les tomates, poivrons, fraises, haricots.
-- **Balcon à l'ombre** : salades, blettes, épinards, persil, menthe, ciboulette.
-- **Le vent** dessèche et casse : un filet ou un canisse comme brise-vent, des tuteurs solides.
+- **Six heures de soleil direct** conviennent aux tomates, poivrons, fraises et haricots ; un balcon à l'ombre convient aux salades, blettes, épinards et herbes comme le persil, la menthe et la ciboulette.
+- **Le vent en hauteur** dessèche et casse les plantes : les jardiniers urbains posent des brise-vent et des tuteurs solides.
 
 ## Les contenants
 
-- **Grands** : au moins 20 à 30 litres pour une tomate. Plus il y a de terre, moins on arrose.
-- **Percés** au fond, avec une couche drainante.
-- **Le bac à réserve d'eau** : deux seaux emboîtés, le terreau dans celui du haut, l'eau dans celui du bas, une mèche ou un pot de terreau qui plonge dans la réserve. Arrosage divisé par trois.
-- **Des sacs** pour les pommes de terre, qu'on remplit au fur et à mesure que les tiges montent.
+- **Plus il y a de terre, moins il faut arroser** : une tomate demande au moins 20 à 30 litres.
+- **Le bac à réserve d'eau** stocke l'eau dans un compartiment inférieur, d'où une mèche ou une colonne de terreau la fait remonter par capillarité : il divise l'arrosage par trois environ.
+- **Les sacs de culture** permettent de faire pousser des pommes de terre sur un balcon.
 
-## Ce qui marche le mieux
+## Ce qui réussit le mieux
 
-Herbes aromatiques, salades à couper, radis, blettes, tomates cerises, piments, haricots à rames sur un treillis, fraisiers, petits pois.
+Herbes aromatiques, salades à couper, radis, blettes, tomates cerises, piments, haricots grimpants sur treillis, fraisiers et petits pois.
 
-## L'eau
+## L'agriculture urbaine
 
-- **Arroser le matin**, pailler la surface des bacs. Voir [[TEC-AGR-023]].
-- **Récupérer la pluie** si c'est permis, et l'eau de rinçage des légumes.
+Selon la FAO, des centaines de millions de citadins cultivent un potager en ville dans le monde ; dans certaines villes africaines et asiatiques, l'agriculture urbaine fournit une grande partie des légumes frais consommés.
 
-Un potager sur une petite surface : [[TEC-AGR-004]]. Faire ses plants : [[TEC-AGR-024]].
+Un potager sur une petite surface : [[TEC-AGR-004]]. L'arrosage : [[TEC-AGR-008]]. Le paillage : [[TEC-AGR-023]].

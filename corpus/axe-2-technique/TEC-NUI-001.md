@@ -1,6 +1,6 @@
 ---
 id: TEC-NUI-001
-titre: Voir dans le noir
+titre: La vision nocturne
 axe: 2
 categorie: Énergie et Électricité
 temps: Long
@@ -9,7 +9,7 @@ risque: Discret
 materiel: Technique
 priorite: normale
 origine: officielle
-tags: [vision, nuit, optique, recuperation, donnees]
+tags: [vision nocturne, intensification de lumiere, thermographie, proche infrarouge, capteur, filtre infrarouge, adaptation a l'obscurite, jumelles, pupille]
 sources: ["Hecht S., Haig C., Chase A., The influence of light adaptation on subsequent dark adaptation of the eye", "Night Vision and Electronic Sensors Directorate, technical reports on image intensification", "Documentation technique des capteurs CMOS et filtres infrarouges"]
 ---
 
@@ -19,19 +19,19 @@ sources: ["Hecht S., Haig C., Chase A., The influence of light adaptation on sub
 
 **L'intensification de lumière** amplifie le peu de lumière disponible. Un photon frappe une photocathode, arrache un électron, qui est multiplié dans un tube sous très haute tension, puis reconverti en lumière sur un écran. C'est la technologie des jumelles vertes.
 
-Elle **ne se fabrique pas**. Le tube exige un vide poussé, des matériaux photosensibles spécifiques et une alimentation de plusieurs milliers de volts. Aucune récupération courante ne permet de le reproduire, et il faut le dire clairement plutôt que de laisser espérer.
+Elle **ne se fabrique pas artisanalement** : le tube exige un vide poussé, des matériaux photosensibles spécifiques et une alimentation de plusieurs milliers de volts.
 
 **La thermographie** détecte le rayonnement infrarouge lointain émis par la chaleur des corps. Elle voit dans l'obscurité totale et à travers la fumée. Le capteur est un composant spécialisé qui ne s'improvise pas davantage.
 
-**L'imagerie proche infrarouge** utilise une lumière juste au-delà du visible, invisible à l'œil mais parfaitement captée par les capteurs photographiques ordinaires. **C'est la seule des trois qui soit à votre portée**, et elle demande deux choses : un capteur qui la voit, et une source qui l'éclaire.
+**L'imagerie proche infrarouge** utilise une lumière juste au-delà du visible, invisible à l'œil mais parfaitement captée par les capteurs photographiques ordinaires. **C'est la seule des trois qui puisse se bricoler** avec du matériel courant : elle demande un capteur qui la voit, et une source qui l'éclaire.
 
 ## Pourquoi un appareil photo voit l'infrarouge
 
 Les capteurs des appareils photo et des téléphones sont naturellement sensibles bien au-delà du rouge visible. Cette sensibilité fausserait les couleurs, donc les constructeurs placent devant le capteur un **filtre bloquant l'infrarouge**.
 
-Retirer ce filtre rend l'appareil sensible au proche infrarouge. C'est une opération de démontage délicate mais réelle, pratiquée couramment sur des webcams et de vieux appareils. Une fois le filtre ôté, on place à sa place un filtre inverse — qui bloque le visible et laisse passer l'infrarouge — et l'on obtient une caméra qui ne voit que l'infrarouge.
+Retirer ce filtre rend l'appareil sensible au proche infrarouge. C'est une opération de démontage délicate mais réelle, pratiquée couramment sur des webcams et de vieux appareils. Une fois le filtre ôté, on place à sa place un filtre inverse, qui bloque le visible et laisse passer l'infrarouge, et l'on obtient une caméra qui ne voit que l'infrarouge.
 
-**Un test immédiat**, sans rien démonter : pointez une télécommande vers l'objectif d'un téléphone et appuyez sur une touche. Si vous voyez la diode s'allumer en violet pâle à l'écran alors que vous ne voyez rien à l'œil nu, le capteur reçoit déjà de l'infrarouge. La plupart des caméras frontales, moins bien filtrées, réagissent mieux que les caméras arrière.
+**Une expérience simple le montre** : une télécommande pointée vers l'objectif d'un téléphone apparaît à l'écran comme une diode violet pâle, alors que l'œil nu ne voit rien. La plupart des caméras frontales, moins bien filtrées, réagissent mieux que les caméras arrière.
 
 ## L'éclairage
 
@@ -53,8 +53,6 @@ C'est la partie la plus rentable, et la moins connue.
 
 **Le contraste plutôt que l'intensité.** De nuit, on distingue des formes et des mouvements, pas des détails. Se placer bas pour détacher les silhouettes sur le ciel, éviter d'avoir une source lumineuse dans le champ, et laisser le regard balayer lentement rendent bien plus que n'importe quel appareil.
 
-## Ce qu'on peut réellement construire
+## Les limites d'un système infrarouge improvisé
 
-Un ensemble caméra infrarouge, éclairage infrarouge et petit écran donne une vision nocturne fonctionnelle sur quelques dizaines de mètres, à condition de disposer d'électricité — voir [[TEC-ENE-001]]. C'est encombrant, cela consomme, cela vous rend visible aux autres capteurs, et cela supprime votre adaptation naturelle dès que vous regardez l'écran.
-
-Autrement dit : c'est utile en poste fixe, pour surveiller un accès ou observer un animal. C'est un mauvais choix pour se déplacer, où l'œil adapté reste supérieur.
+Un ensemble caméra infrarouge, éclairage infrarouge et petit écran donne une vision nocturne sur quelques dizaines de mètres, s'il y a de l'électricité (voir [[TEC-ENE-001]]). Il est encombrant, consomme, se voit de tout autre capteur, et l'écran détruit l'adaptation naturelle de l'œil. Il sert en poste fixe, pour surveiller un accès ou observer un animal ; pour se déplacer, l'œil adapté reste supérieur.

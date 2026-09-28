@@ -1,42 +1,42 @@
 ---
 id: TEC-IDE-024
-titre: Donner sa position aux secours
+titre: La localisation et les coordonnées
 axe: 2
 categorie: Information et Données
-temps: Flash
+temps: Court
 contexte: 1
 risque: Discret
 materiel: Rien
 priorite: normale
 origine: officielle
-tags: [position, coordonnees, latitude, longitude, degres decimaux, points repere, autoroute, 112, reperes, balisage]
+tags: [position, coordonnees, latitude, longitude, degres decimaux, degres minutes secondes, points repere, autoroute, 112, localisation avancee, aml]
 sources: ["IGN, systèmes de coordonnées et carroyages des cartes", "Commission européenne, localisation avancée des appels au 112", "Réseau autoroutier français, bornes d'appel d'urgence et points repères"]
 ---
 
-::Une erreur de format dans des coordonnées, et l'hélicoptère cherche à plusieurs kilomètres. Sur l'autoroute, les petits panneaux numérotés au bord de la voie disent aux secours exactement où vous êtes, à cent mètres près. Savoir dire où l'on est, c'est la moitié du secours.::
+::Une erreur de format dans des coordonnées, et un hélicoptère cherche à plusieurs kilomètres. Sur les routes françaises, de petits panneaux numérotés au bord de la voie, les points repères, situent un véhicule à cent mètres près. Pour les secours, savoir où se trouve la victime est souvent la moitié du travail.::
 
-## Les coordonnées
+## Les coordonnées géographiques
 
-- **La latitude** (nord ou sud) puis **la longitude** (est ou ouest).
-- **Deux écritures** qu'on confond souvent :
-  - en **degrés décimaux** : 48,8584 N et 2,2945 E ;
-  - en **degrés, minutes, secondes** : 48° 51' 30" N et 2° 17' 40" E.
-- **On lit les chiffres tels qu'ils s'affichent**, avec l'unité, et on les fait répéter.
-- **La précision** : un degré de latitude fait environ 111 km ; la troisième décimale, une centaine de mètres ; la cinquième, un mètre.
+- **La latitude** mesure la position au nord ou au sud de l'équateur, **la longitude** à l'est ou à l'ouest du méridien de Greenwich. On donne toujours la latitude en premier.
+- **Deux écritures coexistent**, et les confondre est une erreur classique :
+  - les **degrés décimaux** : 48,8584 N et 2,2945 E ;
+  - les **degrés, minutes et secondes** : 48° 51' 30" N et 2° 17' 40" E.
+- **La précision** : un degré de latitude représente environ 111 km ; la troisième décimale, une centaine de mètres ; la cinquième, environ un mètre.
+- **Le GPS du téléphone** calcule sa position sans réseau téléphonique, grâce aux satellites. Voir [[TEC-ELN-010]].
 
-**Le téléphone** affiche ses coordonnées même sans réseau, dans l'application boussole ou de cartes. Voir [[TEC-ELN-010]]. Et beaucoup de téléphones envoient automatiquement leur position quand on appelle le 112.
+## La localisation automatique des appels
 
-## Sans coordonnées
+Dans l'Union européenne, la plupart des smartphones envoient automatiquement leur position aux centres d'urgence lors d'un appel au 112, par un système appelé localisation avancée (AML), bien plus précis que la position approximative donnée par l'antenne.
 
-- **Sur route** : nom de la route, sens de circulation, dernier village ou sortie, **point repère** (les petits panneaux numérotés au bord des routes et autoroutes).
-- **En montagne et en forêt** : nom du sentier, dernier poteau indicateur, altitude, ce qu'on voit (lac, sommet, refuge).
-- **En ville** : rue et numéro, étage, code de la porte, un repère visible.
-- **Décrire** ce qui entoure : pylône, antenne, rivière, couleur d'un bâtiment.
+## Les repères sans coordonnées
 
-## Se faire trouver
+- **Sur route et autoroute** : nom de la route, sens de circulation, dernière sortie ou dernier village, et point repère. Les bornes d'appel d'urgence des autoroutes indiquent automatiquement leur emplacement.
+- **En montagne et en forêt** : nom du sentier, poteau indicateur, altitude, éléments visibles (lac, sommet, refuge).
+- **En ville** : rue, numéro, étage, code d'accès, repère visible.
+- **Les éléments marquants** : pylône, antenne, rivière, couleur d'un bâtiment.
 
-- **Rester où l'on a dit être.**
-- **Se rendre visible** : couleur vive, lumière, miroir, feu. Voir [[SIG-COM-001]] et [[SIG-COM-013]].
-- **Le téléphone** : économiser la batterie après l'appel, le garder allumé. Voir [[TEC-ELN-017]].
+## Être trouvé
+
+Les secours recommandent de rester à l'endroit indiqué, de se rendre visible (couleur vive, lumière, miroir, feu) et de garder le téléphone allumé en économisant sa batterie. Voir [[SIG-COM-001]] et [[SIG-COM-013]].
 
 Lire une carte : [[SURV-ORI-002]]. Perdu : [[URG-PERDU-001]].
