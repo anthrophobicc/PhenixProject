@@ -1,5 +1,5 @@
 // Phenix hors ligne. Généré par outils/construire-site.js, ne pas modifier à la main.
-const CACHE = "phenix-b916704819";
+const CACHE = "phenix-c3314d2cdd";
 const BASE = ["phenix.html", "manifest.webmanifest", "img/icone-192.png", "img/icone-512.png", "img/icone-180.png"];
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(BASE)).then(() => self.skipWaiting()));
