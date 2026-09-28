@@ -1,6 +1,6 @@
 ---
 id: TEC-ALI-010
-titre: Reconnaître un aliment gâté
+titre: Les aliments gâtés
 axe: 2
 categorie: Alimentation et Conservation
 temps: Court
@@ -9,37 +9,33 @@ risque: Discret
 materiel: Rien
 priorite: normale
 origine: officielle
-tags: [aliment gate, moisissure, viande, poisson, oeufs, conserves, intoxication, regle des deux heures]
+tags: [aliment gate, moisissure, zone de danger, regle des deux heures, viande, poisson, oeufs, riz, bacillus cereus, conserves, dates limites]
 sources: ["USDA Food Safety and Inspection Service, Leftovers and Food Safety et The Danger Zone", "ANSES, fiches sur les dangers microbiologiques des aliments", "Agence européenne de sécurité des aliments, Bacillus cereus et intoxications liées au riz"]
 ---
 
-::Le nez détecte les aliments pourris, pas les aliments dangereux. La salmonelle, la listeria et le staphylocoque ne sentent rien. Il faut juger sur le temps et la température, pas seulement sur l'odeur.::
+::Le nez détecte les aliments pourris, pas les aliments dangereux. Les bactéries qui décomposent la nourriture et la font sentir mauvais ne sont pas celles qui rendent malade : salmonelle, listeria et staphylocoque ne sentent rien. Les agences sanitaires jugent un aliment sur le temps et la température, bien plus que sur son odeur.::
 
-## La règle qui compte le plus : le temps chaud
+## La zone de danger
 
-Les bactéries dangereuses se multiplient vite **entre 4 et 60 °C**. Un aliment périssable (viande, poisson, lait, œufs, plats cuisinés, riz et pâtes cuits) resté **plus de deux heures** à température ambiante, **une heure** au-dessus de 32 °C, **se jette**, même s'il a l'air parfait.
+- **Entre 4 et 60 °C**, les bactéries dangereuses se multiplient rapidement, doublant parfois en vingt minutes.
+- **La règle des deux heures** des agences sanitaires : un aliment périssable (viande, poisson, lait, œufs, plats cuisinés, riz et pâtes cuits) resté plus de deux heures à température ambiante, ou une heure au-dessus de 32 °C, est considéré comme dangereux, même s'il paraît parfait.
 
-## Aliment par aliment
+## Les signes par aliment
 
-- **Viande** : odeur aigre ou soufrée, surface gluante, couleur grise ou verdâtre. La viande hachée s'abîme bien plus vite qu'un morceau entier.
-- **Poisson** : odeur d'ammoniac, chair molle qui garde l'empreinte du doigt, yeux ternes et creux, ouïes brunes. Frais, il sent la mer, pas le poisson.
-- **Œufs** : cassez-les un par un dans un bol avant de les mélanger ; une odeur de soufre ne trompe pas. Un œuf qui flotte dans l'eau est vieux (sa poche d'air a grandi), pas forcément mauvais : on le casse et on le sent.
-- **Lait et laitages** : caillé aigre, gonflement du pot, goût amer.
-- **Pain, fruits, fromages frais, confitures** : **une moisissure visible, on jette tout** ; ses filaments ont déjà envahi l'intérieur. Sur un **fromage à pâte dure** ou un salami sec, on peut couper largement, 2 à 3 cm autour.
-- **Riz et pâtes cuits** : une bactérie du riz survit à la cuisson et fabrique une toxine que le réchauffage ne détruit pas. **Refroidissez vite et mangez dans la journée**, ou jetez.
-- **Conserves** : boîte bombée, fuyante, rouillée au niveau des soudures, cabossée sur le joint, ou qui gicle à l'ouverture : on jette sans goûter. Voir [[TEC-ALI-009]].
+- **Viande** : odeur aigre ou soufrée, surface gluante, couleur grise ou verdâtre. La viande hachée s'altère bien plus vite qu'un morceau entier.
+- **Poisson** : odeur d'ammoniac, chair molle qui garde l'empreinte du doigt, yeux ternes et creux, ouïes brunes.
+- **Œufs** : une odeur de soufre à l'ouverture. Voir [[TEC-ALI-036]].
+- **Lait** : caillé aigre, pot gonflé, goût amer.
+- **Moisissures** : sur le pain, les fruits, les fromages frais et les confitures, leurs filaments ont déjà envahi l'intérieur quand elles deviennent visibles, et certaines produisent des toxines. Sur un fromage à pâte dure ou un salami sec, les agences admettent de couper largement autour.
+- **Riz et pâtes cuits** : une bactérie, Bacillus cereus, survit à la cuisson et produit dans le riz tiède une toxine que le réchauffage ne détruit pas.
+- **Conserves** : une boîte bombée, fuyante, rouillée ou déformée au joint, ou qui gicle à l'ouverture, peut contenir la toxine du botulisme. Voir [[TEC-ALI-009]].
 
-## Ce qui ne marche pas
+## Les fausses sécurités
 
-- **Goûter pour voir** : quelques bouchées suffisent pour certaines intoxications.
-- **Cuire plus fort un plat douteux** : certaines toxines résistent à la chaleur.
-- **Se fier à la date seule** : une date limite de consommation (« à consommer jusqu'au ») sur la viande ou le poisson se respecte ; une date de durabilité minimale (« à consommer de préférence avant ») sur les pâtes, le riz ou les conserves, beaucoup moins.
+- **Goûter** : quelques bouchées suffisent pour certaines intoxications.
+- **Recuire** : certaines toxines résistent à la chaleur.
+- **La date seule** : la date limite de consommation (« à consommer jusqu'au ») protège d'un danger sanitaire sur les produits frais ; la date de durabilité minimale (« de préférence avant ») sur les produits secs et les conserves indique une perte de qualité. Voir [[TEC-ALI-020]].
 
-## Les astuces de cuisine collective
+## En cuisine collective
 
-- **Les restes** vont au frais dans les deux heures, en petites boîtes peu profondes qui refroidissent vite, et se mangent dans les trois jours.
-- **Réchauffer à cœur**, jusqu'à ce que ça fume, une seule fois.
-- **Des planches et des couteaux séparés** pour la viande crue et ce qui se mange cru.
-- **Quand plusieurs personnes tombent malades en même temps**, pensez au dernier repas commun, et gardez-en un échantillon au froid si possible.
-
-Une diarrhée qui suit : [[TEC-SAN-011]].
+Les intoxications collectives viennent souvent des grandes quantités refroidies lentement et réchauffées plusieurs fois. Voir [[TEC-ALI-032]] et, pour la diarrhée qui suit, [[TEC-SAN-011]].
