@@ -1,54 +1,43 @@
 ---
 id: TEC-ELN-018
-titre: Réparer un écran, une batterie, un connecteur
+titre: La réparation des téléphones et appareils électroniques
 axe: 2
 categorie: Électronique et Numérique
 temps: Court
 contexte: 1
 risque: Discret
-materiel: Technique
+materiel: Rien
 priorite: normale
 origine: officielle
-tags: [reparation, telephone, batterie gonflee, ecran casse, port de charge, degat des eaux, riz, repair cafe, indice de reparabilite]
+tags: [reparation, telephone, batterie lithium, batterie gonflee, ecran, port de charge, degat des eaux, riz, indice de reparabilite, repair cafe, droit a la reparation]
 sources: ["iFixit, guides de réparation", "Ministère de la Transition écologique, indice de réparabilité et indice de durabilité", "Repair Café International Foundation"]
 ---
 
-::Un téléphone qui ne charge plus a le plus souvent un port bourré de peluches de poche, tassées au fond par la prise. Un cure-dent en bois, téléphone éteint, et le voilà réparé. Et le riz pour sécher un téléphone mouillé ? Les fabricants eux-mêmes le déconseillent.::
+::La panne la plus fréquente d'un téléphone qui ne charge plus n'est pas électronique : c'est une bourre de peluches de poche tassée au fond du port par la prise. Beaucoup d'appareils jetés se réparent en quelques minutes, et la loi pousse désormais les fabricants à les rendre démontables.::
 
-## Avant tout
+## Les pannes les plus courantes
 
-- **Éteindre** l'appareil.
-- **Débrancher la batterie** dès qu'on l'a ouvert, avant de toucher à quoi que ce soit.
-- **Chercher le guide** du modèle exact : des sites spécialisés les publient pas à pas, gratuitement. En France, l'**indice de réparabilité** affiché en magasin dit si l'appareil se répare facilement.
+- **Le port de charge obstrué** : les peluches empêchent la prise d'entrer à fond. Un nettoyage doux avec un objet en bois, appareil éteint, suffit souvent.
+- **La batterie usée** : une batterie au lithium perd de la capacité à chaque cycle et devient souvent le premier point faible au bout de deux ou trois ans.
+- **La batterie gonflée** : les gaz formés à l'intérieur la déforment, soulèvent l'écran ou bombent le dos. Elle présente un risque d'incendie : on ne la perce pas, on ne la charge plus.
+- **L'écran cassé** : la vitre seule, ou l'affichage aussi. Le remplacement passe par le décollage de l'écran et le débranchement de nappes, des rubans de connexion très fragiles.
 
-## Les outils
+## Le démontage
 
-Tournevis de précision (cruciforme, Torx, et les vis spéciales de certains téléphones), médiators et spatules en plastique, pince fine, ventouse, sèche-cheveux, alcool isopropylique.
+- **Les appareils récents sont souvent collés** : la chaleur ramollit la colle, et l'alcool isopropylique décolle les batteries. Les outils métalliques qui font levier sur une batterie peuvent la percer et l'enflammer.
+- **La batterie se débranche** avant toute autre intervention.
+- **Des guides gratuits**, pas à pas et modèle par modèle, sont publiés par des sites spécialisés et des communautés de réparateurs.
 
-## Le port de charge
+## Le téléphone tombé à l'eau
 
-Éteindre, éclairer, et gratter doucement le fond avec **un cure-dent en bois**, jamais une aiguille en métal. Souvent, c'est tout.
+- **Le danger vient du courant** qui passe à travers l'eau et crée des courts-circuits : l'appareil doit être éteint tout de suite et ne pas être chargé.
+- **Le riz** est un mythe : il sèche mal et laisse de la poussière et de l'amidon. Les fabricants recommandent un séchage à l'air, ports vers le bas.
+- **L'eau de mer ou sucrée** laisse des dépôts qui corrodent la carte des jours plus tard : un nettoyage à l'alcool isopropylique la sauve parfois.
 
-## La batterie
+## La loi et la réparation
 
-- **Gonflée** (écran qui se soulève, dos bombé) : **on ne s'en sert plus**, on ne la perce pas, on ne la charge pas. Risque d'incendie.
-- **La changer** : chauffer pour ramollir la colle, tirer lentement les languettes adhésives, ou quelques gouttes d'alcool isopropylique sous la batterie. **Jamais d'outil métallique** pour faire levier dessus.
-- Les batteries usées se rapportent en magasin : jamais à la poubelle.
+- **L'indice de réparabilité**, affiché en France depuis 2021 sur les téléphones, ordinateurs et appareils ménagers, note la facilité de réparation de 1 à 10. Il est complété depuis 2024-2025 par un indice de durabilité pour certains produits.
+- **L'Union européenne** impose progressivement des pièces détachées disponibles pendant plusieurs années et des batteries remplaçables.
+- **Les Repair Cafés**, nés à Amsterdam en 2009, existent aujourd'hui dans des milliers de villes : des bénévoles y réparent gratuitement avec les propriétaires.
 
-## L'écran
-
-- **La vitre fêlée** mais l'affichage intact : un film de protection limite les dégâts en attendant.
-- **Le remplacement** : on chauffe les bords, on décolle à la ventouse et au médiator, on débranche les **nappes** (des rubans très fragiles) avec délicatesse, en notant tout. On se photographie les étapes.
-
-## Tombé dans l'eau
-
-1. **Éteindre** tout de suite, **ne pas charger**.
-2. Retirer la coque, la carte SIM, essuyer, secouer doucement.
-3. **Laisser sécher** à l'air, ports vers le bas, un ou deux jours, dans un endroit sec et aéré. Pas de riz : il sèche mal et laisse des poussières.
-4. Eau de mer ou sucrée : ouvrir et nettoyer la carte à l'alcool isopropylique, sinon la corrosion finit le travail.
-
-## Se faire aider
-
-Les **Repair Cafés**, nés à Amsterdam en 2009, existent aujourd'hui dans des milliers de villes : des bénévoles réparent avec vous, gratuitement.
-
-Un appareil qui ne s'allume plus : [[TEC-ELN-006]]. Souder : [[TEC-ELN-005]].
+Un appareil qui ne s'allume plus : [[TEC-ELN-006]]. La soudure : [[TEC-ELN-005]]. L'USB : [[TEC-ELN-023]].

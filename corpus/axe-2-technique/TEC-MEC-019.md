@@ -1,6 +1,6 @@
 ---
 id: TEC-MEC-019
-titre: Conduire sur la neige et le verglas
+titre: La conduite sur neige et verglas
 axe: 2
 categorie: Mécanique et Transport
 temps: Court
@@ -9,39 +9,35 @@ risque: Exposé
 materiel: Rien
 priorite: normale
 origine: officielle
-tags: [neige, verglas, conduite, hiver, freinage, derapage, chaines, pneus hiver]
+tags: [neige, verglas, verglas noir, adherence, distance de freinage, abs, derapage, pneus hiver, chaines, loi montagne]
 sources: ["Sécurité routière, conduire en hiver", "Code de la route et obligations d'équipement hivernal en zones de montagne (loi Montagne II)", "Automobile Club, techniques de conduite sur routes glissantes"]
 ---
 
-::Sur le verglas, une voiture freine sur une distance jusqu'à dix fois plus longue qu'au sec. Tout ce qu'on fait brusquement, on le paie. On conduit comme s'il y avait un œuf entre le pied et la pédale.::
+::Sur le verglas, une voiture met jusqu'à dix fois plus de distance à s'arrêter qu'au sec. Tout mouvement brusque, au volant, à l'accélérateur ou au frein, fait perdre le peu d'adhérence qui reste. La conduite d'hiver repose sur un seul principe : la progressivité.::
 
-## Avant de partir
+## L'adhérence
 
-- **Pneus hiver** ou toutes saisons marqués du flocon, dès que la température descend sous 7 °C : leur gomme reste souple. **Des chaînes** dans le coffre en montagne, montées une fois à la maison pour savoir faire.
-- **Déneigez tout** : toit, vitres, phares. La neige du toit glisse sur le pare-brise au premier freinage.
-- **Dans la voiture** : couverture, pelle, gants, lampe, eau, de quoi grignoter, téléphone chargé.
+- **Un pneu tient la route par friction.** Sur la neige tassée, elle est plusieurs fois plus faible qu'au sec ; sur la glace, presque nulle.
+- **Les distances de freinage** sont environ trois fois plus longues sur la neige, jusqu'à dix fois sur le verglas.
+- **Le verglas noir** est une fine couche de glace transparente sur la route : elle paraît simplement mouillée, mais on n'entend pas de bruit d'eau sous les pneus.
+- **Les ponts et les zones à l'ombre** gèlent avant le reste de la route, car l'air circule dessous ou le soleil ne les réchauffe pas.
 
-## Rouler
+## L'équipement
 
-- **Doucement et en douceur** : démarrer, tourner, freiner, accélérer, tout avec progressivité.
-- **Démarrer en seconde** (boîte manuelle) : les roues patinent moins.
-- **Multiplier les distances** : au moins trois fois plus qu'au sec sur la neige, bien plus sur le verglas.
-- **Anticiper le freinage**, freiner en ligne droite avant le virage, jamais dedans.
-- **Les ponts et les zones à l'ombre** gèlent en premier, avant la route autour.
-- **Verglas noir** : une route qui paraît simplement mouillée par grand froid, sans bruit d'eau sous les pneus, est peut-être gelée.
+- **Les pneus hiver** ou toutes saisons marqués d'un flocon gardent une gomme souple sous 7 °C, là où un pneu d'été durcit.
+- **Les chaînes et chaussettes à neige** mordent la neige et la glace sur les routes de montagne.
+- **La loi Montagne** impose en France, dans les communes de montagne désignées, des pneus hiver ou des équipements antidérapants dans la voiture du 1er novembre au 31 mars.
 
-## Si ça glisse
+## Les techniques
 
-- **Avec ABS** : freinez fort et tenez la pédale, en regardant et en dirigeant là où vous voulez aller. La pédale vibre, c'est normal.
-- **Sans ABS** : freinez par petites pressions répétées pour que les roues ne se bloquent pas.
-- **L'arrière chasse** : regardez là où vous voulez aller et tournez le volant **dans ce sens**, sans excès, pied levé.
-- **L'avant glisse tout droit en virage** : relâchez l'accélérateur, réduisez un peu l'angle du volant pour que les roues retrouvent de l'adhérence.
+- **Tout est progressif** : démarrer, accélérer, tourner, freiner. Démarrer en seconde réduit le patinage.
+- **Le freinage se fait en ligne droite**, avant le virage.
+- **Avec l'ABS**, le conducteur freine fort et maintient la pédale, qui vibre, tout en dirigeant la voiture. **Sans ABS**, des pressions répétées évitent le blocage des roues.
+- **Quand l'arrière chasse**, le volant se tourne dans le sens où l'on veut aller, sans excès, pied levé : c'est le contre-braquage.
+- **Quand l'avant glisse tout droit**, relâcher l'accélérateur et réduire l'angle du volant rend l'adhérence aux roues avant.
 
 ## Bloqué dans la neige
 
-- **Restez dans la voiture** : elle abrite et se voit. On se perd à quelques mètres dans une tempête de neige.
-- **Dégagez le pot d'échappement** avant de faire tourner le moteur, et faites-le tourner **environ dix minutes par heure**, une fenêtre entrouverte, pour vous chauffer. Voir [[TEC-CON-010]].
-- **Un tissu voyant** à l'antenne ou à la vitre, les feux la nuit quand le moteur tourne.
-- **Bougez** dans l'habitacle pour garder la chaleur, et buvez.
+Les consignes de sécurité civile sont de rester dans la voiture, qui abrite et se voit, de dégager le pot d'échappement avant de faire tourner le moteur (sinon le monoxyde de carbone entre dans l'habitacle, voir [[TEC-CON-010]]), de ne le faire tourner que quelques minutes par heure, et de signaler la voiture par un tissu voyant.
 
 Sortir d'une ornière : [[TEC-MEC-016]]. Le froid qui devient dangereux : [[URG-HYPO-001]].
