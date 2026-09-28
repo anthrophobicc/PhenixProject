@@ -1,55 +1,48 @@
 ---
 id: TEC-ALI-012
-titre: Le pain au levain, sans levure du commerce
+titre: Le levain
 axe: 2
 categorie: Alimentation et Conservation
-temps: Long
+temps: Court
 contexte: 1
 risque: Discret
 materiel: Rien
 priorite: normale
 origine: officielle
-tags: [pain, levain, farine, fermentation, four, cocotte, galette]
+tags: [pain, levain, levures sauvages, bacteries lactiques, fermentation, farine, chef, levain seche, conservation du pain]
 sources: ["Calvel R., Le goût du pain, Éditions Jérôme Villette", "Gänzle M., Enzymatic and bacterial conversions during sourdough fermentation, Food Microbiology, 2014", "Hamelman J., Bread: A Baker's Book of Techniques and Recipes, Wiley"]
 ---
 
-::Le levain, c'est de la farine et de l'eau qu'on laisse vivre. Les levures sauvages qui sont déjà dans la farine et dans l'air font le reste. Avec lui, on fait du pain pour toujours sans jamais acheter de levure.::
+::Le levain est un mélange de farine et d'eau dans lequel vivent des levures sauvages et des bactéries lactiques, venues de la farine elle-même. C'est ainsi que l'humanité a fait lever son pain pendant des millénaires, bien avant la levure de boulanger, apparue au XIXe siècle. Entretenu, un levain vit indéfiniment.::
 
-## Faire naître un levain (5 à 7 jours)
+## Ce qu'il contient
 
-1. **Jour 1** : 50 g de farine (complète ou de seigle, c'est plus rapide) et 50 g d'eau tiède non chlorée, dans un bocal. Mélangez, couvrez d'un linge, laissez à 20-25 °C.
-2. **Jours 2 à 7** : chaque jour, **jetez la moitié** et ajoutez 50 g de farine et 50 g d'eau.
-3. Au bout de quelques jours, il **double de volume** en 4 à 8 heures après le repas, fait des bulles et sent **l'acidulé, la pomme ou le yaourt**. Il est prêt.
+- **Des levures sauvages**, qui produisent le gaz carbonique : il forme les bulles qui font gonfler la pâte.
+- **Des bactéries lactiques**, bien plus nombreuses que les levures, qui produisent des acides : ils donnent au pain son goût acidulé et sa longue conservation.
+- **Un équilibre propre à chaque levain**, selon la farine, l'eau, la température et la façon de le nourrir.
 
-Au début, il peut sentir fort (acétone, fromage) : continuez, les bonnes levures prennent le dessus.
+## Comment il naît
 
-## Le pain de base
+- **En cinq à sept jours** : un peu de farine (le seigle et la farine complète démarrent plus vite) et autant d'eau, rafraîchis chaque jour en retirant une partie et en ajoutant farine et eau neuves, à 20 à 25 °C.
+- **Les premiers jours**, il peut sentir fort (acétone, fromage) ; puis les bons micro-organismes prennent le dessus. Un levain actif double de volume en quelques heures après son repas et sent l'acidulé, la pomme ou le yaourt.
+- **L'eau chlorée** du robinet ralentit le démarrage.
 
-- **500 g de farine**
-- **330 à 350 g d'eau**
-- **100 à 150 g de levain actif** (au moment où il a doublé)
-- **10 g de sel**
+## Le pain au levain
 
-1. Mélangez farine et eau, laissez reposer 30 minutes (la pâte devient plus souple toute seule).
-2. Ajoutez le levain et le sel, pétrissez 10 minutes, ou faites 4 séries de rabats (étirer la pâte et la replier sur elle-même) espacées de 30 minutes.
-3. **Laissez pousser** : 4 à 6 heures à 24 °C, 8 à 12 heures au frais. La pâte gonfle d'environ la moitié.
-4. **Façonnez** une boule serrée, posez-la dans un saladier fariné, laissez encore 1 à 3 heures.
-5. **Cuisez** à four très chaud, 240 °C, 40 à 45 minutes, avec de la vapeur au début (un bol d'eau dans le four). Il est cuit quand le dessous sonne creux.
+- **Une pâte classique** compte environ 500 g de farine, 330 à 350 g d'eau, 100 à 150 g de levain actif et 10 g de sel.
+- **La fermentation est lente** : quatre à six heures à 24 °C, huit à douze heures au frais, puis une seconde pousse après le façonnage.
+- **La cuisson** se fait à four très chaud, vers 240 °C, avec de la vapeur au début, qui permet à la croûte de s'ouvrir. Une cocotte en fonte fermée recrée ces conditions. Voir [[TEC-ALI-025]].
 
-## Sans four
+## Ses qualités
 
-- **Une cocotte en fonte** avec couvercle, posée dans les braises, avec des braises sur le couvercle : le meilleur four de fortune. Voir [[SURV-FEU-003]].
-- **Des galettes** de la même pâte, étalées fines, cuites à la poêle ou sur une pierre chaude.
+- **Il se conserve une semaine et plus**, bien davantage qu'un pain à la levure : l'acidité freine les moisissures.
+- **Il est souvent mieux digéré** : la longue fermentation dégrade une partie de l'amidon et du gluten, et réduit l'acide phytique qui bloque l'absorption de certains minéraux.
+- **Il lève aussi des farines sans blé** (seigle, épeautre, sarrasin en mélange), en donnant des pains plus denses.
 
-## Garder son levain
+## Le garder
 
-- **À température ambiante**, on le nourrit chaque jour. **Au frais**, une fois par semaine.
-- **Le chef** : gardez toujours un morceau de la pâte ou du levain pour la fournée suivante.
-- **Séché** : étalé en couche fine sur un papier, séché à l'air, puis émietté, il se garde des mois dans un bocal. Réhydraté avec un peu d'eau et de farine, il repart en quelques jours. C'est la meilleure assurance, et ça se donne aux voisins.
+- **À température ambiante**, il se nourrit chaque jour ; au froid, une fois par semaine.
+- **Le chef** : un morceau de pâte ou de levain gardé d'une fournée pour la suivante.
+- **Séché** en couche fine puis émietté, il se garde des mois dans un bocal et repart en quelques jours avec de l'eau et de la farine. C'est ainsi qu'il voyage et se donne.
 
-## Les astuces de boulanger
-
-- **Le pain au levain se garde** une semaine et plus, bien plus longtemps qu'un pain à la levure : l'acidité ralentit les moisissures.
-- **Il se digère mieux** : la longue fermentation prédigère une partie de l'amidon et du gluten.
-- **Pas de farine de blé** : le seigle, l'épeautre, le sarrasin (en mélange) et même le maïs donnent des pains plus denses mais nourrissants.
-- **L'eau chlorée** du robinet ralentit le démarrage : laissez-la reposer une nuit à l'air libre, ou faites-la bouillir.
+Le pain sans four : [[TEC-ALI-033]]. Du blé au pain : [[TEC-AGR-009]]. La fermentation : [[TEC-ALI-002]].

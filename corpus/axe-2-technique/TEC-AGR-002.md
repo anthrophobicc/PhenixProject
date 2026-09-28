@@ -1,6 +1,6 @@
 ---
 id: TEC-AGR-002
-titre: Conserver ses semences
+titre: La conservation des semences
 axe: 2
 categorie: Agriculture et Botanique
 temps: Long
@@ -9,8 +9,8 @@ risque: Discret
 materiel: Récupération
 priorite: normale
 origine: officielle
-tags: [semences, agriculture, autonomie, donnees]
-sources: ["FAO — Seeds toolkit, seed quality and storage", "Svalbard Global Seed Vault — protocoles de conservation", "Kew Millennium Seed Bank — seed storage behaviour"]
+tags: [semences, graines, conservation, humidite, froid, germination, hybrides f1, varietes population, pollinisation, banque de semences]
+sources: ["FAO, Seeds toolkit, seed quality and storage", "Svalbard Global Seed Vault, protocoles de conservation", "Kew Millennium Seed Bank, seed storage behaviour"]
 ---
 
 ::Une récolte nourrit une saison. Une semence conservée nourrit toutes les suivantes. C'est la seule différence entre dépendre et durer.::
@@ -29,9 +29,9 @@ Trois facteurs le gouvernent, et deux dominent largement.
 
 Une règle empirique circule chez les conservateurs et résume l'essentiel : **chaque réduction notable de l'humidité, et chaque baisse notable de la température, double approximativement la durée de vie.** Les deux se cumulent.
 
-## Sécher correctement
+## Le séchage
 
-C'est l'étape décisive et la plus bâclée.
+C'est l'étape décisive.
 
 Le séchage se fait **à l'air, à l'ombre, dans un courant d'air**, jamais au soleil direct ni près d'une source de chaleur. Au-delà d'une température modérée, l'embryon est endommagé sans que rien ne se voie : les graines paraissent parfaites et ne lèvent pas.
 
@@ -43,23 +43,23 @@ Un {{dessiccant|Matière qui absorbe l'humidité de l'air ambiant : riz sec, cen
 
 C'est ce qui distingue une réserve d'une collection.
 
-**Prenez la semence sur les meilleurs plants**, pas sur les fruits restants. Vigueur, santé, précocité, résistance : ce sont ces caractères que vous transmettez.
+**La semence se prend sur les meilleurs plants**, pas sur les fruits restants : vigueur, santé, précocité et résistance se transmettent.
 
-**Prenez sur plusieurs plants**, jamais sur un seul. Une population issue d'un individu unique perd sa diversité et sa résistance en quelques générations.
+**Elle se prend sur plusieurs plants**, jamais sur un seul. Une population issue d'un individu unique perd sa diversité et sa résistance en quelques générations.
 
-**Laissez mûrir complètement.** Une graine récoltée avant maturité n'a pas achevé sa constitution : elle lève mal ou pas du tout. Cela impose souvent de sacrifier le produit — un légume mangé au bon stade gustatif n'a pas encore de graine mûre.
+**La maturité complète est indispensable.** Une graine récoltée avant maturité n'a pas achevé sa constitution : elle lève mal ou pas du tout. Cela impose souvent de sacrifier le produit — un légume mangé au bon stade gustatif n'a pas encore de graine mûre.
 
 ## Le piège des hybrides
 
 Beaucoup de semences commerciales sont des hybrides de première génération. Elles sont vigoureuses et homogènes, et **leur descendance ne l'est pas** : la génération suivante est irrégulière et souvent décevante.
 
-Les variétés dites de population ou anciennes, elles, se reproduisent fidèlement. **Ce sont les seules qui permettent une autonomie réelle**, et c'est un critère de choix bien plus important que le rendement affiché.
+Les variétés dites de population ou anciennes, elles, se reproduisent fidèlement : **ce sont les seules qui permettent de produire ses propres semences**.
 
 ## Éviter les croisements
 
 Une plante pollinisée par une variété voisine donne une descendance mélangée.
 
-Deux solutions. **La distance** : séparer les variétés d'une même espèce. **L'isolement** : ensacher les fleurs, ou décaler les floraisons dans le temps.
+Deux solutions existent. **La distance** : séparer les variétés d'une même espèce. **L'isolement** : ensacher les fleurs, ou décaler les floraisons dans le temps.
 
 Les espèces qui s'autofécondent posent peu de problème ; celles qui dépendent du vent ou des insectes en posent beaucoup, et demandent des distances importantes.
 
@@ -67,12 +67,12 @@ Les espèces qui s'autofécondent posent peu de problème ; celles qui dépenden
 
 Sec, froid, obscur, fermé, et **stable**. Les variations d'humidité et de température usent davantage qu'un niveau moyen défavorable constant.
 
-**Étiquetez systématiquement** : espèce, variété, année, provenance. Une réserve non étiquetée devient inutilisable en deux saisons, et c'est l'erreur la plus fréquente.
+**L'étiquetage** (espèce, variété, année, provenance) est indispensable. Une réserve non étiquetée devient inutilisable en deux saisons, et c'est l'erreur la plus fréquente.
 
-**Répartissez en plusieurs lots, en plusieurs endroits.** Un stock unique est un point de rupture unique — même raisonnement que pour l'eau dans [[SURV-PLUIE-001]] et pour les réserves dans [[MEM-AGR-001]].
+**Les conservateurs répartissent les semences en plusieurs lots, en plusieurs endroits** : un stock unique est un point de rupture unique — même raisonnement que pour l'eau dans [[SURV-PLUIE-001]] et pour les réserves dans [[MEM-AGR-001]].
 
-## Vérifier avant de compter dessus
+## Le pouvoir germinatif
 
 Le pouvoir germinatif décline avec les années, et il décline différemment selon les espèces : certaines perdent l'essentiel en un ou deux ans, d'autres restent viables une décennie.
 
-**Testez avant chaque saison.** Une dizaine de graines entre deux papiers humides, au chaud, pendant quelques jours. La proportion qui germe vous dit s'il faut semer plus dense ou renouveler le lot. Cela prend une semaine et évite de perdre une année entière — voir [[TEC-AGR-001]].
+**Le test de germination** : une dizaine de graines entre deux papiers humides, au chaud, pendant quelques jours. La proportion qui germe indique s'il faut semer plus dense ou renouveler le lot, et évite de perdre une saison entière — voir [[TEC-AGR-001]].

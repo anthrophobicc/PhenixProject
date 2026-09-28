@@ -1,52 +1,41 @@
 ---
 id: TEC-MEC-018
-titre: Lever et déplacer une charge lourde
+titre: Le levage et le déplacement des charges lourdes
 axe: 2
 categorie: Mécanique et Transport
 temps: Court
 contexte: 2+
 risque: Exposé
-materiel: Récupération
+materiel: Rien
 priorite: normale
 origine: officielle
-tags: [levier, rouleaux, calage, palan, cric, charge, manutention, sauvetage]
-sources: ["INRS, manutention manuelle de charges (ED 6161)", "FEMA, Urban Search and Rescue : techniques de levage et de calage", "Newton et Archimède, lois du levier (voir la fiche des machines simples)"]
+tags: [levier, calage, croisillons, rouleaux, plan incline, palan, cric, manutention, sauvetage deblaiement, dos]
+sources: ["INRS, manutention manuelle de charges (ED 6161)", "FEMA, Urban Search and Rescue : techniques de levage et de calage", "Archimède, loi du levier"]
 ---
 
-::Les pyramides ont été montées sans moteur. Un levier, des rouleaux, un plan incliné et des cales permettent à deux personnes de déplacer ce qu'aucune ne soulèverait. La seule règle absolue : on ne met jamais une partie de son corps sous une charge qui n'est pas calée.::
+::Les pyramides ont été montées sans moteur. Un levier, des rouleaux, un plan incliné et des cales permettent à deux personnes de déplacer ce qu'aucune ne soulèverait. Les sauveteurs qui dégagent des victimes sous les décombres appliquent une règle absolue : on ne met jamais une partie du corps sous une charge qui n'est pas calée.::
 
-## Le levier
+## Les machines simples
 
-Un levier multiplie la force par le rapport de ses longueurs : avec une barre de 2 m et un appui à 20 cm de la charge, la force est multipliée par environ 9. Une barre à mine, une poutre, un tube d'acier, sur un appui solide (pierre, bille de bois). Voir [[TEC-MAC-001]].
+- **Le levier** multiplie la force par le rapport de ses longueurs : une barre de 2 m posée sur un appui à 20 cm de la charge multiplie la force par environ 9. Voir [[TEC-MAC-001]].
+- **Le plan incliné** échange de la force contre de la distance : plus la rampe est longue, moins il faut pousser.
+- **Le palan** répartit la charge sur plusieurs brins de corde : avec quatre brins porteurs, il faut en théorie quatre fois moins de force, au prix de quatre fois plus de corde tirée.
+- **Les rouleaux** remplacent le frottement par un roulement : trois tubes ou rondins sous la charge, celui qui sort à l'arrière étant replacé devant.
 
-## Lever et caler : la méthode des sauveteurs
+## Lever et caler, la méthode des sauveteurs
 
-C'est ainsi qu'on soulève une dalle, une voiture ou une machine, même pour dégager quelqu'un :
+- **Le principe** : soulever de quelques centimètres avec un levier ou un cric, glisser aussitôt une cale, reposer la charge dessus, reprendre plus haut, et recommencer.
+- **Les cales s'empilent en croisillons**, deux par deux, comme un bûcher en cabane, jamais en pile instable.
+- **Ce qui monte redescend sur des cales**, jamais dans le vide : un cric peut glisser, un levier déraper.
+- **Pour dégager une personne coincée**, les cales restent en place jusqu'à ce qu'elle soit sortie. Voir [[URG-SEC-006]].
+- **Sous une voiture**, un cric seul ne suffit jamais : chandelles, cales de bois dur, ou roue posée à plat sous le bas de caisse.
 
-1. **Soulevez un peu**, avec un levier ou un cric.
-2. **Calez tout de suite** : glissez une cale (planche, morceau de bois dur) sous la charge.
-3. **Reposez sur la cale**, reprenez l'appui plus haut, soulevez encore, calez encore.
-4. **Les cales s'empilent en croisillons**, comme un feu de bois en cabane, deux par deux, jamais en pile instable.
+## La manutention à la main
 
-**Tout ce qui monte descend sur des cales**, jamais dans le vide. Un cric glisse, un levier dérape : la cale est là pour ça.
+- **Le dos se protège** en gardant la charge contre le corps, jambes pliées, dos droit, sans torsion : on déplace les pieds au lieu de tourner le buste.
+- **À plusieurs**, une seule personne donne le signal.
+- **La limite recommandée** pour une personne est de l'ordre de 25 kg ; au-delà, on utilise un chariot, un outil ou un second porteur. Les troubles musculosquelettiques, dont les douleurs de dos liées au port de charges, sont la première cause de maladie professionnelle en France.
 
-## Déplacer
+## Les ressources improvisées
 
-- **Les rouleaux** : trois tubes ou rondins sous la charge, et on reprend celui qui sort à l'arrière pour le remettre devant. Une personne pousse, une autre replace les rouleaux.
-- **Le plan incliné** : une rampe de planches pour monter une charge dans un camion ou sur un mur. Plus elle est longue, moins il faut de force.
-- **Glisser** : une charge sur une plaque de métal, une porte, une bâche épaisse, tirée sur un sol lisse ou mouillé.
-- **Le palan** : chaque brin de corde supplémentaire qui porte la charge divise l'effort. Deux poulies bien montées font déjà un rapport de 2 à 4.
-
-## Porter sans se casser le dos
-
-- **La charge contre le corps**, jambes pliées, dos droit, on se relève avec les jambes.
-- **On ne tourne pas le dos en portant** : on déplace les pieds.
-- **À plusieurs, une seule personne compte** et donne le signal : « à trois, on lève ».
-- **Au-delà de 25 kg** par personne, on cherche un outil, un chariot, un autre porteur.
-
-## Les astuces de ceux qui manipulent du lourd
-
-- **Jamais sous une voiture tenue par un cric** : des chandelles, des cales de bois dur, ou des roues posées à plat sous le bas de caisse.
-- **Un sac de sable, une bouteille d'eau** ou une chambre à air gonflée peuvent servir de coussin de levage de fortune, pour les premiers centimètres.
-- **Une corde enroulée plusieurs fois autour d'un arbre** freine une charge qui descend : la friction retient bien plus que les bras.
-- **Sortir quelqu'un de sous une charge** : lever, caler, dégager, sans jamais retirer les cales avant qu'il soit sorti. Voir [[URG-SEC-006]].
+Une chambre à air gonflée ou un sac peut servir de coussin de levage pour les premiers centimètres ; une corde enroulée plusieurs fois autour d'un arbre freine une charge qui descend, la friction retenant bien plus que les bras.
