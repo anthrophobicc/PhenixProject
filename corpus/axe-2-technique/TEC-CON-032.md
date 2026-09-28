@@ -1,47 +1,46 @@
 ---
 id: TEC-CON-032
-titre: Isoler une maison
+titre: L'isolation d'une maison
 axe: 2
 categorie: Construction et Habitat
 temps: Court
 contexte: 1
 risque: Discret
-materiel: Récupération
+materiel: Rien
 priorite: normale
 origine: officielle
-tags: [isolation, combles, toiture, courants d'air, fenetres, rideaux, laine, paille, humidite, deperditions]
+tags: [isolation, deperditions, combles, toiture, courants d'air, fenetres, laine minerale, ouate de cellulose, laine de bois, paille, humidite, pare-vapeur]
 sources: ["ADEME, isoler sa maison, guide pratique", "CSTB, déperditions thermiques de l'habitat existant"]
 ---
 
-::Dans une maison ancienne sans isolation, environ un quart à un tiers de la chaleur s'échappe par le toit, autant ou presque par les courants d'air. Poser trente centimètres d'isolant sur le plancher du grenier est souvent le travail le plus rentable qui soit, et se fait en un week-end. Le froid entre par le haut et par les fentes avant de passer par les murs.::
+::Dans une maison ancienne sans isolation, un quart à un tiers de la chaleur s'échappe par le toit, et presque autant par les courants d'air. Trente centimètres d'isolant posés sur le plancher du grenier sont souvent le travail le plus rentable d'une rénovation. La chaleur monte et fuit par les fentes avant de traverser les murs.::
 
 ## Où part la chaleur
 
-Dans une maison non isolée, grossièrement :
+Dans une maison non isolée, selon l'ADEME, grossièrement :
 
 - **le toit** : un quart à un tiers ;
-- **les murs** : un quart ;
+- **les murs** : environ un quart ;
 - **les courants d'air** : un cinquième ou plus ;
 - **les fenêtres** : un dixième à un septième ;
 - **le sol** : moins d'un dixième.
 
-## Les priorités
+## Comment un isolant fonctionne
 
-1. **Les combles** : un isolant épais (laine minérale, ouate de cellulose, laine de bois, laine de mouton, paille) posé sur le plancher du grenier.
-2. **Les courants d'air** : joints autour des fenêtres et des portes, boudins en bas des portes, trous de passage de tuyaux bouchés.
-3. **Les fenêtres** : **de lourds rideaux** tirés la nuit, volets fermés ; en dépannage, du **film à bulles** collé à l'eau sur les vitres.
-4. **Les murs et le sol**, plus coûteux, plus tard.
+- **L'air immobile isole très bien** : un isolant est d'abord une matière qui emprisonne de l'air dans des fibres, des bulles ou des flocons.
+- **Son efficacité** se mesure par la résistance thermique, notée R : plus elle est élevée, mieux il isole. Elle augmente avec l'épaisseur.
+- **Les matériaux** : laines minérales (verre, roche), ouate de cellulose (papier recyclé), laine de bois, fibres de chanvre, laine de mouton, liège, paille, et mousses plastiques.
 
-## En crise, avec ce qu'on a
+## Les priorités habituelles
 
-- **Des couvertures, des tapis, des cartons** contre les murs froids de la pièce où l'on vit.
-- **Des bottes de paille** ou de la terre contre les murs extérieurs au nord, comme le faisaient les paysans. Voir [[TEC-CON-029]].
-- **Une seule pièce chauffée**, les autres fermées. Voir [[TEC-CON-012]].
+Les guides de rénovation placent en tête les combles, parce qu'ils sont faciles d'accès et qu'on y perd le plus, puis l'étanchéité à l'air autour des fenêtres, des portes et des passages de tuyaux, puis les fenêtres, et enfin les murs et le sol, plus coûteux. Les volets et les rideaux épais fermés la nuit limitent aussi les pertes par les vitres.
 
 ## Les pièges
 
-- **L'humidité** : un isolant qui mouille ne sert plus à rien et fait moisir. Du côté chaud, on bloque la vapeur ; on garde la maison ventilée. Voir [[TEC-CON-017]].
-- **Ne jamais boucher** les grilles d'aération, surtout avec un poêle ou une chaudière : il leur faut de l'air. Voir [[TEC-CON-010]].
-- **Les laines minérales** grattent et irritent : gants, manches longues, masque, lunettes.
+- **L'humidité** : un isolant mouillé perd presque toute son efficacité et fait moisir la structure. La vapeur d'eau produite dans la maison doit être bloquée côté chaud par un pare-vapeur, ou évacuée par des matériaux qui la laissent passer. Voir [[TEC-CON-017]].
+- **La ventilation** : une maison devenue étanche doit être ventilée ; les grilles d'aération des pièces avec poêle ou chaudière ne se bouchent jamais. Voir [[TEC-CON-010]].
+- **Les laines minérales** irritent la peau, les yeux et les voies respiratoires pendant la pose.
 
-Économiser l'énergie : [[TEC-ENE-021]].
+## Hier et aujourd'hui
+
+Les paysans adossaient des bottes de paille ou de la terre aux murs nord, ou logeaient les bêtes sous l'habitation pour profiter de leur chaleur. Voir [[TEC-CON-029]]. Chauffer une seule pièce : [[TEC-CON-012]]. Économiser l'énergie : [[TEC-ENE-021]].

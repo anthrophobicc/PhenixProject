@@ -1,6 +1,6 @@
 ---
 id: TEC-IDE-013
-titre: Calculer de tête
+titre: Le calcul mental
 axe: 2
 categorie: Information et Données
 temps: Court
@@ -9,39 +9,38 @@ risque: Discret
 materiel: Rien
 priorite: normale
 origine: officielle
-tags: [calcul mental, pourcentages, regle de trois, multiplication, preuve par neuf, estimation]
+tags: [calcul mental, addition, multiplication, pourcentages, regle de trois, estimation, preuve par neuf, table de 9]
 sources: ["Benjamin A., Shermer M., Secrets of Mental Math, 2006", "Dehaene S., La bosse des maths, Odile Jacob, 1997"]
 ---
 
-::Sans calculatrice, la plupart des gens ne savent plus rendre la monnaie, doser un médicament ou partager une réserve. Ce n'est pas une question de don : c'est une douzaine d'astuces, que les commerçants et les artisans utilisaient tous les jours.::
+::Avant les calculatrices, commerçants, artisans et paysans calculaient de tête toute la journée : rendre la monnaie, doser, partager, convertir. Le calcul mental ne repose pas sur un don mais sur une douzaine de procédés qui décomposent les nombres en opérations faciles. Le neuroscientifique Stanislas Dehaene a montré que le sens des quantités est inné ; le calcul exact, lui, s'apprend.::
 
 ## Additionner et soustraire
 
-- **Arrondir puis corriger** : 47 + 38 = 47 + 40 - 2 = 85.
-- **Compter vers le haut**, comme un caissier qui rend la monnaie : 100 - 63 ? De 63 à 70, 7 ; de 70 à 100, 30. Réponse : 37.
+- **Arrondir puis corriger** : 47 + 38 = 47 + 40 − 2 = 85.
+- **Compter vers le haut**, la méthode des caissiers pour rendre la monnaie : de 63 à 100, on compte 7 pour arriver à 70, puis 30 pour arriver à 100, soit 37.
 
 ## Multiplier
 
-- **Par 5** : multiplier par 10, puis diviser par 2. 48 × 5 = 480 / 2 = 240.
-- **Par 25** : multiplier par 100, diviser par 4.
-- **Par 9** : multiplier par 10, enlever le nombre. 9 × 34 = 340 - 34 = 306.
-- **Par 11** (nombre à deux chiffres) : écarter les chiffres et mettre leur somme au milieu. 43 × 11 = 4 (4+3) 3 = 473.
+- **Par 5** : multiplier par 10 puis diviser par 2 (48 × 5 = 480 / 2 = 240). **Par 25** : multiplier par 100 puis diviser par 4.
+- **Par 9** : multiplier par 10 puis retirer le nombre (9 × 34 = 340 − 34 = 306).
+- **Par 11**, pour un nombre à deux chiffres : on écarte les chiffres et on place leur somme au milieu (43 × 11 = 473).
 - **Doubler et diviser par deux** : 16 × 25 = 8 × 50 = 4 × 100 = 400.
-- **La table de 9 sur les doigts** : les dix doigts tendus, pour 9 × 4 on baisse le quatrième doigt ; à gauche 3 doigts, à droite 6 : 36.
+- **La table de 9 sur les doigts** : les dix doigts tendus, pour 9 × 4 on baisse le quatrième ; il reste 3 doigts à gauche et 6 à droite, soit 36.
 
 ## Les pourcentages
 
-- **10 %** : on décale la virgule. **5 %** : la moitié de 10 %. **15 %** = 10 % + 5 %.
-- **L'astuce qui retourne tout** : 8 % de 50, c'est pareil que 50 % de 8, donc 4.
+- **10 %**, c'est déplacer la virgule d'un rang ; 5 %, la moitié ; 15 %, la somme des deux.
+- **Un pourcentage se retourne** : 8 % de 50, c'est 50 % de 8, soit 4.
 
 ## La règle de trois
 
-Pour les recettes, les doses, le carburant : si 4 personnes mangent 1,2 kg, combien pour 7 ? On passe par l'unité : 1,2 / 4 = 0,3 kg par personne, fois 7 = 2,1 kg.
+Elle ramène à l'unité : si 4 personnes consomment 1,2 kg, une personne consomme 0,3 kg, et 7 personnes 2,1 kg. C'est l'outil des recettes, des doses, du carburant et des rations.
 
-## Vérifier
+## Vérifier un résultat
 
-- **Estimer d'abord** : 48 × 21, c'est à peu près 50 × 20 = 1 000. Un résultat de 10 080 est faux.
-- **Divisible par 3 ou par 9** quand la somme des chiffres l'est.
-- **La preuve par neuf**, qu'on apprenait à l'école avant les calculatrices : on réduit chaque nombre à la somme de ses chiffres jusqu'à un seul chiffre (en retirant les 9), on fait la même opération avec ces restes, et on compare avec le reste du résultat. Si ça ne colle pas, il y a une erreur.
+- **L'estimation** : 48 × 21 fait environ 50 × 20 = 1 000 ; un résultat de 10 080 est forcément faux.
+- **La divisibilité** : un nombre est divisible par 3 ou par 9 quand la somme de ses chiffres l'est.
+- **La preuve par neuf**, enseignée à l'école jusqu'aux calculatrices : chaque nombre est réduit à la somme de ses chiffres, jusqu'à un seul chiffre ; la même opération faite sur ces restes doit donner le reste du résultat. Elle détecte la plupart des erreurs, pas toutes.
 
-Les unités : [[TEC-IDE-011]].
+Les unités et les conversions : [[TEC-IDE-011]].

@@ -1,6 +1,6 @@
 ---
 id: TEC-IDE-014
-titre: Se faire comprendre sans parler la langue
+titre: La communication sans langue commune
 axe: 2
 categorie: Information et Données
 temps: Court
@@ -9,37 +9,35 @@ risque: Discret
 materiel: Rien
 priorite: normale
 origine: officielle
-tags: [langue, gestes, dessin, traduction, pictogrammes, etranger, refugies, communication]
+tags: [langue, gestes, dessin, traduction, pictogrammes, chiffres, etranger, refugies, douleur, communication non verbale]
 sources: ["Morris D. et al., Gestures: their origins and distribution, 1979", "Axtell R., Gestures: The Do's and Taboos of Body Language Around the World, 1991", "Wong-Baker FACES Foundation, échelle de la douleur par visages"]
 ---
 
-::Parler plus fort n'a jamais appris une langue à personne. Un carnet, un crayon, les chiffres et une vingtaine de mots suffisent pour manger, se soigner, trouver un chemin et ne pas vexer tout le monde en trois gestes.::
+::Parler plus fort n'a jamais fait comprendre une langue à personne. Les voyageurs, les soignants humanitaires et les réfugiés se font comprendre avec des outils simples : le dessin, les chiffres, les gestes, quelques mots. Mais les gestes eux-mêmes ne sont pas universels, et certains insultent ailleurs ce qu'ils approuvent ici.::
 
-## Les outils qui marchent partout
+## Ce qui passe partout
 
-- **Le dessin** : un carnet et un crayon toujours sur soi. Une maison, un bus, une dent, une carte grossière : tout le monde comprend.
-- **Les chiffres** s'écrivent presque partout pareil. Prix, heures, dates : on les écrit, on ne les dit pas.
-- **Montrer** : l'objet, la photo, la plaque de la rue, l'adresse écrite par quelqu'un du pays.
-- **Les applications de traduction** fonctionnent **sans réseau** si on a téléchargé la langue avant. Certaines traduisent un panneau en le photographiant.
+- **Le dessin** : une maison, un bus, une dent, une carte grossière se comprennent sans mots.
+- **Les chiffres** arabes s'écrivent presque partout de la même façon : prix, heures et dates passent mieux écrits que dits.
+- **Montrer** l'objet, la photo, l'adresse écrite par quelqu'un du pays.
+- **Les pictogrammes** normalisés (toilettes, hôpital, danger, sortie de secours) sont conçus pour être compris dans toutes les langues.
+- **Les applications de traduction** fonctionnent hors ligne quand la langue a été téléchargée avant, et certaines traduisent un panneau photographié.
 
-## Parler
+## Les mots les plus utiles
 
-- **Lentement**, des phrases courtes, des mots simples, sans expressions toutes faites.
-- **Un mot, un geste** : « eau » en mimant de boire.
-- **Les vingt premiers mots à apprendre** : bonjour, merci, pardon, oui, non, eau, manger, docteur, aide, combien, où, toilettes, et les chiffres de un à dix.
+Les guides de voyage et de secours retiennent une vingtaine de mots : bonjour, merci, pardon, oui, non, eau, manger, docteur, aide, combien, où, toilettes, et les chiffres de un à dix. Des phrases courtes, lentes, sans expressions idiomatiques, se comprennent bien mieux.
 
-## Les gestes qui piègent
+## Les gestes qui changent de sens
 
 - **Le pouce levé** est une insulte dans une partie du Moyen-Orient et de l'Afrique de l'Ouest.
-- **Le cercle pouce-index** (« OK ») est grossier au Brésil.
-- **Hocher la tête** veut dire non en Bulgarie.
-- **La main gauche** est considérée comme impure dans une grande partie du monde arabe, de l'Inde et de l'Afrique : on donne et on mange de la main droite.
-- **Appeler quelqu'un** paume vers le haut en repliant le doigt est insultant dans une partie de l'Asie : on appelle paume vers le bas.
-- **Compter sur ses doigts** : en France, trois, c'est le pouce, l'index et le majeur ; dans le monde anglophone, l'index, le majeur et l'annulaire. Dans un film de Tarantino, un espion se trahit exactement comme ça.
+- **Le cercle formé par le pouce et l'index** est grossier au Brésil.
+- **Hocher la tête** signifie non en Bulgarie.
+- **La main gauche** est réservée à l'hygiène intime dans une grande partie du monde arabe, de l'Inde et de l'Afrique : on donne et on mange de la main droite.
+- **Appeler quelqu'un en repliant le doigt**, paume vers le haut, est insultant dans une partie de l'Asie, où l'on appelle paume vers le bas.
+- **Compter sur ses doigts** : en France, trois se montre avec le pouce, l'index et le majeur ; dans le monde anglophone, avec l'index, le majeur et l'annulaire. Dans le film Inglourious Basterds, un espion se trahit exactement ainsi.
 
-## Pour soigner
+## Dans les soins
 
-- Un **dessin du corps** pour montrer où ça fait mal.
-- **L'échelle des visages**, du sourire aux larmes, pour dire combien ça fait mal : comprise par les enfants et par toutes les langues.
+Un dessin du corps permet de montrer où se situe la douleur, et l'échelle des visages, du sourire aux larmes, d'en indiquer l'intensité : elle a été conçue pour les enfants et fonctionne dans toutes les langues.
 
 Se signaler sans parler : [[SIG-COM-001]].
