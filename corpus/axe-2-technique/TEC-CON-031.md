@@ -19,7 +19,7 @@ sources: ["Organisation mondiale de la santé, fiches techniques eau et assainis
 
 - **La géologie et les voisins** : les puits existants, leur profondeur, leur débit en été, sont les meilleurs indices. La mairie, les anciens et les cartes géologiques les connaissent.
 - **Les creux, le bas des pentes, la végétation** qui reste verte l'été. Voir [[SURV-EAU-005]].
-- **Loin des sources de pollution** : au moins 30 mètres des latrines, des fosses, du fumier, et en amont d'eux.
+- **Loin des sources de pollution** : au moins 30 mètres des latrines, des fosses, du fumier, et en amont d'eux. Où placer les latrines : [[SURV-HYG-002]].
 - **Les sourciers** et leurs baguettes n'ont jamais fait mieux que le hasard dans les essais contrôlés.
 
 ## Creuser à la main

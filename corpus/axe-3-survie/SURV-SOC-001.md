@@ -60,3 +60,5 @@ Trois éléments suffisent : un horaire de lever, des repas à heure fixe, et un
 **Le groupe grandit.** Au-delà d'une poignée de personnes, la surveillance mutuelle informelle cesse de fonctionner et il faut des rôles explicites. Ce seuil arrive plus tôt qu'on ne le croit.
 
 **Vous négociez avec un autre groupe.** Une seule voix parle, avec une limite fixée à l'avance. Voir [[SURV-TROC-001]].
+
+**Les toilettes se décident le premier jour** : un endroit fixe, à l'écart de l'eau et de la cuisine, et tout le monde se lave les mains en sortant. Voir [[SURV-HYG-002]].

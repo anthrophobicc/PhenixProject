@@ -56,7 +56,7 @@ Les abris construits selon les normes, comme en Suisse, ont tous les mêmes él�
 - **une porte blindée étanche** et un sas, avec des chicanes : le rayonnement se propage en ligne droite, un coude dans un couloir le coupe ;
 - **une ventilation filtrée** : un ventilateur, souvent à manivelle en secours, aspire l'air par un préfiltre à poussière puis un filtre à charbon actif, et **met l'abri en légère surpression**. La poussière ne rentre pas, même par les fentes ;
 - **des soupapes anti-souffle** sur les entrées et sorties d'air, qui se ferment d'un coup quand l'onde de pression arrive ;
-- **de l'eau** pour deux semaines, des toilettes sèches, des couchettes superposées, de l'éclairage sur batterie, une radio ;
+- **de l'eau** pour deux semaines, des toilettes sèches ([[TEC-CON-014]]), des couchettes superposées, de l'éclairage sur batterie, une radio ;
 - **une sortie de secours** qui ne passe pas par l'escalier principal, souvent un tunnel ou une trappe qui débouche plus loin, hors de la zone des gravats.
 
 **La Suisse** est le seul pays qui garantit par la loi, depuis 1963, une place d'abri à chaque habitant : il y en a plus que d'habitants. La Finlande, la Suède et Israël ont aussi de grands réseaux. En France, il n'existe pas de réseau d'abris pour la population.

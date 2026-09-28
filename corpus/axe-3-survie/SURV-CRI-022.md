@@ -35,7 +35,7 @@ Dans une grande crise, les secours s'occupent d'abord des blessés et des plus m
 - **Les traitements personnels** pour au moins une semaine, les ordonnances.
 - Lunettes de rechange. Voir [[TEC-SAN-043]].
 
-**L'hygiène** : savon, gel, papier toilette, sacs poubelle, protections périodiques, couches, eau de Javel.
+**L'hygiène** : savon, gel, papier toilette, sacs poubelle, protections périodiques, couches, eau de Javel. Un seau à couvercle et des sacs solides font des toilettes si l'eau est coupée : [[SURV-HYG-002]].
 
 **Le reste**
 - **Du liquide** en petites coupures. Voir [[SURV-CRI-013]].

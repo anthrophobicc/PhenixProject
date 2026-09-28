@@ -56,3 +56,5 @@ Le corps perd sa chaleur par quatre voies, et un abri agit sur chacune de maniè
 De là découle le principe unique de tout abri : **ce qui isole, ce n'est pas la matière, c'est l'air immobile qu'elle emprisonne.** Le duvet, la laine, les feuilles mortes, la neige, le carton ondulé, les vêtements superposés fonctionnent tous exactement de la même façon. Comprimez-les et ils ne valent plus rien — c'est pourquoi le duvet écrasé sous votre corps n'isole plus et pourquoi la litière doit être épaisse avant d'être tassée par votre poids.
 
 Une dernière chose, et elle décide souvent de la nuit. **Un abri se construit avant d'en avoir besoin.** La construction demande une à deux heures de jour et d'énergie. Commencer à la tombée du soir, épuisé et transi, donne un abri raté que l'on quitte au milieu de la nuit. La décision de s'arrêter et de construire est presque toujours à prendre plus tôt qu'on ne le souhaite.
+
+**Les toilettes** : à au moins 60 mètres de l'abri et de toute eau, sous le vent. Voir [[SURV-HYG-002]].

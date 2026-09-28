@@ -45,3 +45,5 @@ sources: ["Aldrich D.P., Building Resilience: Social Capital in Post-Disaster Re
 **Fêter** : une naissance, une récolte, un toit refait. Les communautés tiennent aussi par la joie.
 
 Organiser un petit groupe : [[SURV-SOC-001]].
+
+Les latrines et l'eau propre passent avant tout le reste : c'est là que naissent les épidémies. Voir [[SURV-HYG-002]] et [[TEC-CON-006]].

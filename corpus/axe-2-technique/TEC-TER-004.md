@@ -44,3 +44,5 @@ sources: ["Ministère de la Transition écologique, Vigicrues et georisques.gouv
 - **Après**, l'eau laisse la boue, la moisissure et les installations électriques noyées : on ne remet pas le courant avant vérification.
 
 Que faire face à l'inondation : [[URG-INO-001]]. Évacuer : [[SURV-CRI-004]].
+
+Quand les égouts refoulent : [[SURV-HYG-002]].

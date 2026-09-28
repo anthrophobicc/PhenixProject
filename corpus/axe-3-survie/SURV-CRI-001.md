@@ -49,7 +49,7 @@ Sans électricité, tout ce qui en dépend s'arrête en cascade, pas en même te
 
 **L'eau du robinet revient trouble ou marron** : laissez couler, puis faites-la bouillir tant que la mairie n'a pas levé l'alerte. Voir [[URG-EAU-001]].
 
-**Les toilettes ne se vident plus** : un seau d'eau versé d'un coup dans la cuvette suffit à chasser. En rez-de-chaussée ou en sous-sol, si les eaux usées remontent, fermez les couvercles et bouchez les siphons de sol.
+**Les toilettes ne se vident plus** : un seau d'eau versé d'un coup dans la cuvette suffit à chasser. En rez-de-chaussée ou en sous-sol, si les eaux usées remontent, fermez les couvercles et bouchez les siphons de sol. Voir [[SURV-HYG-002]].
 
 **Le courant revient** : ne rebranchez pas tout d'un coup. Pour le congélateur : un aliment qui contient encore des cristaux de glace se recongèle ; ce qui est resté plus de deux heures au-dessus de 4 °C (viande, poisson, laitages, plats cuisinés) se jette.
 

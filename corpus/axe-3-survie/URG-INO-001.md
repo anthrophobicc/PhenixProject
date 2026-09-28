@@ -65,3 +65,5 @@ C'est pourquoi la phase la plus meurtrière d'une inondation, dans de nombreuses
 Les analyses de décès en inondation montrent une constante : la majorité des victimes ont pris la décision de s'engager dans l'eau, souvent en connaissant le risque. L'explication n'est pas l'imprudence mais l'habitude — on connaît la route, on l'a déjà prise, elle paraît familière.
 
 **Une route connue inondée est une route inconnue.** C'est le seul raisonnement qui protège.
+
+Si les égouts refoulent, on ne tire plus la chasse et on passe au seau : [[SURV-HYG-002]].

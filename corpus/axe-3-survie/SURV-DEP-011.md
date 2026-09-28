@@ -48,3 +48,5 @@ sources: ["US Army, FM 21-18 Foot Marches (haltes horaires)", "Fédération fran
 **Dans une foule** : se tenir par la main ou par le sac, se donner un point de rendez-vous visible. Voir [[URG-FOULE-001]].
 
 **En terrain dangereux**, espacer davantage : un seul accident, pas deux. Choisir un itinéraire : [[SURV-DEP-007]].
+
+**À chaque halte**, un coin toilettes à au moins 60 mètres de l'eau et du chemin, en aval du campement. Voir [[SURV-HYG-002]].

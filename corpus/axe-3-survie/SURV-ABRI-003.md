@@ -50,3 +50,5 @@ Deux heures de travail, et on dort au chaud sans feu.
 **L'humidité** : le souffle mouille l'abri et le duvet. Une aération en haut, et on sèche ses affaires dès qu'il y a du soleil.
 
 Dormir au chaud avec peu : [[SURV-ABRI-002]]. L'abri d'urgence : [[SURV-ABRI-001]]. Le grand froid : [[SURV-MIL-001]].
+
+Pour tenir un hiver entier, des toilettes sèches à l'écart de l'abri : [[TEC-CON-014]].

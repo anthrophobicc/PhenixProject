@@ -41,7 +41,7 @@ Les organisations humanitaires se sont fixé des **normes minimales**, les norme
 
 **Se protéger**
 
-- **La nuit**, aller aux latrines à plusieurs, avec une lampe.
+- **La nuit**, aller aux latrines à plusieurs, avec une lampe. Creuser et tenir des latrines : [[SURV-HYG-002]].
 - **Les enfants** ne restent jamais seuls avec des inconnus ; on signale tout abus aux équipes de protection.
 
 ## ADAPTER

@@ -109,3 +109,5 @@ Et il faut le dire franchement : partout, en tout temps, **un dispositif de déf
 **Quelqu'un demande de l'aide.** C'est la situation la plus fréquente, très loin devant l'intrusion, et c'est celle sur laquelle les groupes se déchirent. Décidez la règle avant : à quelle distance on parle, ce qu'on donne, qui décide, et ce qu'on ne fait jamais — comme laisser entrer avant d'avoir décidé collectivement. Une règle connue permet de refuser sans se haïr et d'accepter sans se diviser. Voir [[SURV-TROC-001]] et [[SURV-SOC-001]].
 
 **Vous devez quand même partir.** Alors partez tôt, de nuit, préparé, et sans l'annoncer. Un lieu n'est pas une valeur en soi : c'est de l'eau, un toit, du stock et des gens. Trois de ces quatre choses se déplacent. Voir [[SURV-DEP-001]].
+
+**Les excréments et les déchets** trahissent une présence et attirent les rats : latrines et fosse à déchets à l'écart, recouvertes chaque jour. Voir [[SURV-HYG-002]] et [[SURV-HYG-004]].
