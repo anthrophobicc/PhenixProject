@@ -1,46 +1,44 @@
 ---
 id: TEC-MAT-015
-titre: Tricoter
+titre: Le tricot
 axe: 2
 categorie: Chimie et Matériaux
 temps: Court
 contexte: 1
 risque: Discret
-materiel: Récupération
+materiel: Rien
 priorite: normale
 origine: officielle
-tags: [tricot, laine, chaussettes, detricoter, aiguilles, point mousse, cotes, crochet, recuperation]
+tags: [tricot, laine, mailles, aiguilles, point mousse, jersey, cotes, feutrage, crochet, metier a bas, chaussettes]
 sources: ["Croix-Rouge américaine, campagnes de tricot pour les soldats, 1917-1918", "Rutt R., A History of Hand Knitting, Batsford, 1987", "Zimmermann E., Knitting Without Tears, 1971"]
 ---
 
-::Pendant la Première Guerre mondiale, des millions de femmes, d'enfants et d'hommes ont tricoté des chaussettes, des bonnets et des cache-nez pour les soldats des tranchées : dans l'humidité, des chaussettes de laine sèches étaient une question de survie. Deux bâtons, un vieux pull détricoté, et on refait un bonnet ou des chaussettes.::
+::Le tricot fabrique une étoffe à partir d'un seul fil, en formant des boucles qui passent les unes dans les autres. Pendant la Première Guerre mondiale, des millions de civils ont tricoté des chaussettes et des bonnets pour les soldats des tranchées : dans la boue et l'humidité, des chaussettes de laine sèches évitaient les pieds gelés et pourris.::
 
-## Le matériel
+## Tricot et tissage
 
-- **Des aiguilles** : du commerce, ou deux baguettes de bois poncées, des crayons, des rayons de vélo pour les chaussettes.
-- **De la laine** : neuve, ou **récupérée** en détricotant un vieux pull. On l'enroule en écheveau, on la trempe, on la laisse sécher tendue : elle redevient droite.
+- **Le tissage** croise deux ensembles de fils à angle droit. Le tissu est stable mais peu extensible. Voir [[TEC-MAT-016]].
+- **Le tricot** enchaîne des boucles, les mailles, sur un seul fil. L'étoffe est élastique, épouse le corps et emprisonne l'air : elle tient chaud. C'est pour cela que chaussettes, pulls et sous-vêtements sont tricotés.
+- **Le crochet** forme aussi des boucles, avec un seul crochet au lieu de deux aiguilles.
 
-## Les gestes de base
+## Les mailles et les points
 
-1. **Monter les mailles** : une rangée de boucles sur une aiguille.
-2. **La maille endroit** : piquer l'aiguille libre dans la boucle, par l'avant, enrouler le fil, tirer la nouvelle boucle, laisser tomber l'ancienne.
-3. **La maille envers** : la même chose, en piquant par l'arrière et le fil devant.
-4. **Rabattre** à la fin : passer chaque maille par-dessus la suivante pour fermer le bord.
+- **Deux mailles de base** : la maille endroit et la maille envers. Tous les points en sont des combinaisons.
+- **Le point mousse**, uniquement en mailles endroit : épais, élastique, il ne roule pas sur les bords.
+- **Le jersey**, un rang endroit, un rang envers : lisse d'un côté, c'est le point des pulls et des bas.
+- **Les côtes**, mailles endroit et envers alternées : très élastiques, elles servent aux poignets, aux bords de bonnet, au haut des chaussettes.
+- **Une maille qui s'échappe** file sur toute la hauteur, comme un bas qui file : c'est la contrepartie de l'élasticité.
 
-## Les points utiles
+## La laine
 
-- **Le point mousse** : que des mailles endroit. Épais, élastique, il ne roule pas. Parfait pour débuter : écharpe, couverture.
-- **Les côtes** : une maille endroit, une maille envers, en alternance. Très élastiques : poignets, bords de bonnet, haut de chaussette.
-- **Le jersey** : un rang endroit, un rang envers. Lisse, pour les pulls.
+- **Elle tient chaud même mouillée**, contrairement au coton, parce que ses fibres gardent de l'air et absorbent l'humidité sans paraître mouillées. Voir [[TEC-SAN-027]].
+- **Elle feutre** : chauffée, mouillée et frottée, elle rétrécit et devient une étoffe dense et coupe-vent. On tricote parfois grand exprès pour feutrer ensuite.
+- **Elle se récupère** : un pull détricoté redonne son fil, qui se redresse une fois trempé et séché tendu.
 
-## Ce qu'on fait en premier
+## Dans l'histoire
 
-- **Une écharpe** ou un **bonnet** : droits, simples.
-- **Des chaussettes et des moufles** : plus de technique, mais les plus précieuses. La laine tient chaud même mouillée. Voir [[TEC-SAN-027]].
-- **Des moufles feutrées** : tricotées grandes, puis lavées à l'eau chaude en frottant, elles rétrécissent et deviennent denses et coupe-vent.
+- **Les plus anciennes pièces tricotées connues** sont des chaussettes d'Égypte, datées d'environ un millénaire.
+- **En 1589, l'Anglais William Lee invente le métier à bas**, première machine à tricoter : la bonneterie devient une industrie.
+- **Aujourd'hui**, presque tout le tricot est fait à la machine, mais le tricot à la main reste un savoir qui ne demande que deux aiguilles, ou deux baguettes, et du fil.
 
-## Le crochet
-
-Un seul crochet (un bout de bois taillé suffit) et le même fil : filets, sacs, couvertures, bonnets.
-
-Le vêtement : [[TEC-MAT-004]]. Filer la laine : [[TEC-AGR-033]].
+Le vêtement : [[TEC-MAT-004]]. Les fibres : [[TEC-AGR-033]].

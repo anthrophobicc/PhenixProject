@@ -1,50 +1,44 @@
 ---
 id: TEC-MAT-010
-titre: Tanner une peau
+titre: Le tannage et le cuir
 axe: 2
 categorie: Chimie et Matériaux
-temps: Long
+temps: Court
 contexte: 1
 risque: Discret
-materiel: Récupération
+materiel: Rien
 priorite: normale
 origine: officielle
-tags: [tannage, cuir, peau, ecorce de chene, cervelle, fumage, alun, charbon, megisserie]
+tags: [tannage, cuir, peau, collagene, tanins, ecorce de chene, chrome, alun, megisserie, cervelle, fumage, charbon]
 sources: ["Richards M., Deerskins into Buckskins: How to Tan with Brains, Soap or Eggs, 2e édition, 2004", "Reed R., Ancient Skins, Parchments and Leathers, Seminar Press, 1972", "Organisation mondiale de la santé, maladie du charbon : risques liés aux peaux et aux laines"]
 ---
 
-::Les tanneurs du Moyen Âge travaillaient avec de la chaux, de l'urine et des excréments de chien ou de pigeon. On les installait donc hors des murs, en aval de la rivière. Une peau crue pourrit en quelques jours ; tannée, elle dure des siècles. Entre les deux, beaucoup de travail et un peu d'odeur.::
+::Une peau crue pourrit en quelques jours ou sèche en devenant dure comme du carton. Tannée, elle devient du cuir, souple et imputrescible, qui dure des siècles. Les tanneurs du Moyen Âge travaillaient avec de la chaux, de l'urine et des excréments de chien : on les installait hors des murs, en aval de la rivière.::
 
-## Avant le tannage
+## Ce que fait le tannage
 
-1. **Écharner** : racler toute la graisse et la chair côté intérieur, avec une lame émoussée, la peau tendue sur un rondin.
-2. **Conserver** si on ne tanne pas tout de suite : saler abondamment côté chair, ou sécher la peau tendue à l'ombre.
-3. **Épiler** si on veut du cuir sans poils : tremper quelques jours dans de l'eau de cendre ou de chaux, jusqu'à ce que les poils s'arrachent facilement, puis racler et rincer. **Gants** : c'est caustique.
+- **La peau est surtout faite de collagène**, une protéine en longues fibres. Le tannage lie ces fibres entre elles par des liaisons chimiques stables : les bactéries ne peuvent plus les digérer, et elles ne se recollent plus en séchant.
+- **Le résultat** : un matériau qui ne pourrit pas, qui reste souple et qui résiste à l'eau et à la chaleur, selon le procédé.
 
-## Trois façons de tanner
+## Les étapes
 
-**Aux écorces** (le vrai cuir)
-- Écorces de chêne, de châtaignier ou de sumac broyées, trempées dans l'eau : le jus brun est riche en **tanins**.
-- La peau passe dans des bains **de plus en plus forts**, pendant des semaines à des mois selon l'épaisseur.
-- Résultat : un cuir ferme, qui résiste à l'eau. Semelles, ceintures, harnais, étuis.
+- **La conservation** : une peau fraîche est salée ou séchée si elle n'est pas travaillée tout de suite.
+- **L'écharnage** : on retire la graisse et la chair côté intérieur.
+- **L'épilage** : pour un cuir sans poils, la peau trempe dans un bain alcalin (chaux, eau de cendre) qui détache les poils.
+- **Le tannage** proprement dit, puis **le corroyage** : graissage, étirage et assouplissement qui donnent au cuir sa souplesse finale.
 
-**À la cervelle et à la fumée** (la peau souple des peuples chasseurs)
-- La cervelle de l'animal, écrasée dans l'eau chaude, fait une émulsion grasse. On dit que chaque animal a assez de cervelle pour tanner sa propre peau.
-- La peau y trempe, puis on la **tire et on l'assouplit sans arrêt pendant qu'elle sèche** : c'est ce travail qui la rend souple.
-- On la **fume** ensuite au-dessus d'un feu de bois pourri : elle restera souple même après avoir été mouillée.
+## Les grands procédés
 
-**À l'alun et au sel** (mégisserie)
-- Bains d'alun et de sel : une peau blanche et souple, idéale avec les poils (fourrures).
-- Ce n'est pas un vrai tannage : mouillée longtemps, elle se défait.
+- **Le tannage végétal** : des bains de tanins extraits d'écorces (chêne, châtaignier, mimosa, sumac), de plus en plus concentrés, pendant des semaines ou des mois. Il donne un cuir ferme, qui se patine : semelles, ceintures, sellerie. C'est le tannage traditionnel de l'Europe.
+- **Le tannage au chrome** : inventé au XIXe siècle, rapide (un jour ou deux), il produit aujourd'hui la grande majorité du cuir mondial, souple et résistant à la chaleur. Ses rejets polluent fortement les rivières des pays tanneurs.
+- **Le tannage minéral à l'alun**, ou mégisserie : une peau blanche et souple, utilisée pour les gants et les fourrures. Ce n'est pas un tannage stable : mouillée longtemps, elle se défait.
+- **Le tannage aux graisses** : les peuples chasseurs d'Amérique du Nord tannaient les peaux de cerf avec une émulsion de cervelle, les assouplissaient sans relâche pendant le séchage, puis les fumaient. La fumée fixe le tannage : la peau reste souple même après avoir été mouillée.
 
-## Finir
+## Les risques
 
-Graisser le cuir avec un mélange de suif, d'huile et de cire : il reste souple et repousse l'eau. Voir [[TEC-MAT-012]].
+- **La maladie du charbon** se transmet par les peaux et les laines d'animaux morts de maladie : c'était une maladie professionnelle des tanneurs et des cardeurs.
+- **La chaux et la soude** sont caustiques pour la peau et les yeux. Voir [[TEC-CHI-012]].
 
-## Précautions
+## Le cuir et ses usages
 
-- **Uniquement les peaux d'animaux sains** : le charbon (une maladie grave) se transmet par les peaux et les laines de bêtes mortes de maladie.
-- **Gants** pour la chaux et la cendre, **lavage des mains**.
-- Le tannage industriel au chrome est toxique : il ne se fait pas à la maison.
-
-Vider et dépecer un animal : [[SURV-RES-005]].
+Selon l'épaisseur et le tannage : semelles et harnais, chaussures et sacs, vêtements, gants, reliure. Le cuir se nourrit de graisses et de cires qui le gardent souple et le protègent de l'eau. Voir [[TEC-MAT-012]].

@@ -1,46 +1,42 @@
 ---
 id: TEC-ATE-014
-titre: Fondre et couler l'aluminium
+titre: La fonderie de l'aluminium
 axe: 2
 categorie: Métal et Atelier
-temps: Long
-contexte: 2+
-risque: Exposé
-materiel: Technique
+temps: Court
+contexte: 1
+risque: Discret
+materiel: Rien
 priorite: normale
 origine: officielle
-tags: [fonderie, aluminium, creuset, four a charbon, moule en sable, lingot, vapeur, securite, heroult]
+tags: [fonderie, aluminium, fusion, moulage en sable, cire perdue, creuset, lingot, recyclage, heroult, hall, explosion de vapeur]
 sources: ["Héroult P., brevet du procédé d'électrolyse de l'aluminium, 1886", "Ammen C.W., Metalcasting, McGraw-Hill, 2000", "American Foundry Society, sécurité en fonderie"]
 ---
 
-::Au milieu du XIXe siècle, l'aluminium valait plus cher que l'or, et Napoléon III, raconte-t-on, en faisait servir les couverts à ses invités les plus prestigieux. En 1886, un jeune Français, Paul Héroult, et un Américain, Charles Hall, trouvent chacun de leur côté comment le produire par électricité : il devient le métal le plus banal du monde. Il fond à 660 °C, à la portée d'un four à charbon de bois.::
+::Au milieu du XIXe siècle, l'aluminium valait plus cher que l'or, et Napoléon III, raconte-t-on, en faisait servir les couverts à ses invités les plus prestigieux. En 1886, le Français Paul Héroult et l'Américain Charles Hall découvrent chacun de leur côté comment le produire par électrolyse : il devient le métal le plus banal du monde. Il fond à 660 °C, bien plus bas que le fer, ce qui en fait le métal le plus facile à mouler.::
 
-## Ce qu'il faut
+## Le métal
 
-- **Un four** : un seau métallique garni d'un réfractaire (ciment réfractaire du commerce, ou mélange de plâtre et de sable pour un four d'essai), avec un tuyau d'air sur le côté.
-- **Du charbon de bois** et **un souffleur** (sèche-cheveux, soufflet). Voir [[SURV-FEU-006]].
-- **Un creuset** : un pot en acier épais ou en graphite, et une **pince** qui le tient solidement.
-- **Des moules** : sable de fonderie (sable fin mêlé d'argile, à peine humide), plâtre **parfaitement sec et cuit**, ou moule en acier préchauffé.
-- **De la ferraille d'aluminium** : pièces moulées, profilés, vieux ustensiles. Les canettes donnent surtout des scories.
+- **Léger** : une densité de 2,7, trois fois moins que l'acier.
+- **Il fond à 660 °C**, contre plus de 1 500 °C pour le fer : un feu de charbon de bois bien soufflé suffit à le fondre.
+- **Il ne rouille pas** : une fine couche d'oxyde le protège aussitôt formée. Voir [[TEC-COR-001]].
+- **Les alliages de fonderie** contiennent du silicium, qui rend le métal plus fluide et remplit mieux les moules. Les profilés et les tôles sont d'autres alliages, faits pour être laminés.
 
-## Couler
+## Le moulage
 
-1. **Tout doit être sec** : outils, ferraille, moules, creuset. On préchauffe tout ce qui touchera le métal.
-2. **Fondre** : le charbon rouge vif, le souffleur à fond, le métal fond en quelques dizaines de minutes.
-3. **Écumer** la crasse en surface avec un outil sec et chaud.
-4. **Couler d'un geste régulier**, sans s'arrêter, dans le moule posé sur du sable.
-5. **Laisser refroidir** longuement avant de démouler.
+- **Le moulage en sable** : un modèle est pressé dans un sable fin mêlé d'argile ; retiré, il laisse une empreinte que le métal remplit. C'est la technique la plus ancienne et la plus répandue.
+- **La cire perdue** : un modèle en cire est enrobé de plâtre ou de céramique, puis fondu ; le métal prend sa place. Elle reproduit les détails les plus fins.
+- **Le moule métallique** et **la fonderie sous pression** : l'industrie injecte le métal liquide dans des moules en acier pour produire des millions de pièces identiques.
 
-## Le danger numéro un : l'eau
+## Le recyclage
 
-**Une goutte d'eau sous du métal en fusion se transforme en vapeur d'un coup et projette le métal** : c'est l'accident des fondeurs. Pas de moule humide, pas de ferraille qui contient de l'eau (tubes fermés, canettes pas vides), jamais de coulée au-dessus du béton (il éclate) ni sous la pluie.
+- **Refondre l'aluminium demande environ 5 % de l'énergie** nécessaire pour le produire à partir du minerai : c'est le métal dont le recyclage rapporte le plus.
+- **Les pièces moulées** (carters, jantes, poulies) refondent bien ; les canettes, très fines et recouvertes de vernis, donnent surtout des scories et des fumées.
 
-## L'équipement
+## Les dangers
 
-Chaussures montantes en cuir, **pantalon par-dessus** les chaussures, vêtements en coton ou en laine, gants épais, **visière**, et dehors, pour les fumées des peintures et vernis qui brûlent. Un seau de sable sec à côté, jamais d'eau.
+- **L'eau est le premier danger** : une goutte piégée sous le métal en fusion se vaporise d'un coup et projette le métal. C'est l'accident typique des fondeurs : moules humides, ferraille contenant de l'eau, coulées sur un béton qui éclate.
+- **Les fumées** des peintures, vernis et plastiques brûlés sont toxiques.
+- **Les brûlures** : le métal liquide colle à la peau et aux textiles synthétiques ; les fondeurs portent cuir, laine ou coton, visière et gants épais.
 
-## Ce qu'on en fait
-
-Des **lingots** pour le troc ou pour plus tard, des pièces moulées simples (poignées, poulies, supports), des réparations. Voir [[TEC-MEC-028]].
-
-La forge, pour le fer : [[TEC-ATE-006]].
+La forge, pour le fer : [[TEC-ATE-006]]. Reconnaître les métaux : [[TEC-ATE-005]].

@@ -1,70 +1,44 @@
 ---
 id: TEC-CHI-002
-titre: Fabriquer du savon
+titre: Le savon
 axe: 2
 categorie: Chimie et Matériaux
-temps: Long
+temps: Court
 contexte: 1
 risque: Discret
-materiel: Technique
+materiel: Rien
 priorite: normale
 origine: officielle
-tags: [savon, chimie, hygiene, fabrication]
-sources: ["Bailey's Industrial Oil and Fat Products, chapitre sur la {{saponification|Réaction entre un corps gras et une base forte, qui produit du savon et de la glycérine.}}", "OMS — Guidelines on hand hygiene", "INRS — fiche toxicologique de l'hydroxyde de sodium"]
+tags: [savon, saponification, glycerine, soude, potasse, lessive de cendres, tensioactif, micelle, hygiene, cure]
+sources: ["Bailey's Industrial Oil and Fat Products, chapitre sur la saponification", "OMS, Guidelines on hand hygiene in health care, 2009", "INRS, fiche toxicologique de l'hydroxyde de sodium"]
 ---
 
-::Le savon est la seule molécule qui parle aux deux mondes : une extrémité aime l'eau, l'autre aime la graisse. C'est tout son secret, et c'est ce qui l'a rendu irremplaçable.::
+::Le savon est une molécule à double nature : une extrémité aime l'eau, l'autre aime la graisse. C'est tout son secret. Il ne détruit pas la saleté, il la rend soluble dans l'eau, et c'est ce qui en a fait l'un des plus grands progrès de l'hygiène.::
 
-## Comment ça fonctionne
+## Comment il lave
 
-Une molécule de savon possède une longue chaîne carbonée qui se mêle aux corps gras, et une extrémité ionique qui se mêle à l'eau.
+- **Une molécule de savon** possède une longue chaîne carbonée qui se mêle aux corps gras, et une tête chargée électriquement qui se mêle à l'eau.
+- **Sur une salissure grasse**, les chaînes s'y enfoncent pendant que les têtes restent tournées vers l'eau. Les molécules s'organisent en petites sphères, les micelles, qui enveloppent les gouttelettes de graisse et les rendent transportables par l'eau.
+- **Le rinçage fait donc partie du lavage** : sans lui, la saleté enveloppée reste en place. La durée et le frottement comptent plus que la quantité de savon.
+- **Contre les microbes**, l'effet est double : le détachement mécanique emporte l'essentiel, et l'enveloppe grasse de nombreux virus est directement désorganisée. Voir [[TEC-SAN-004]].
 
-Placée sur une salissure grasse, la chaîne s'y enfonce pendant que l'extrémité reste tournée vers l'eau. Les molécules s'organisent en sphères autour des gouttelettes de graisse, qui se retrouvent enveloppées et deviennent transportables par l'eau. **Le savon ne détruit pas la saleté : il la rend soluble.**
+## La saponification
 
-Deux conséquences pratiques en découlent. **Le rinçage fait partie du geste** : sans lui, la saleté enveloppée reste sur place. Et **la durée et le frottement comptent plus que la quantité** de savon, parce que l'essentiel du travail est mécanique.
+- **Le savon naît de la réaction d'un corps gras avec une base forte.** Elle produit du savon et de la glycérine.
+- **Le corps gras** : graisse animale ou huile végétale. Les graisses solides donnent un savon dur et peu moussant, les huiles liquides un savon plus doux et plus soluble.
+- **La base** : l'hydroxyde de sodium (la soude) donne un savon solide ; l'hydroxyde de potassium (la potasse) un savon mou ou liquide. Voir [[TEC-CHI-012]].
+- **Avant l'industrie chimique**, la base venait des cendres de bois lessivées à l'eau : la lessive de cendres, riche en carbonate de potassium, plus faible et plus variable, qui donnait des savons mous et irréguliers.
 
-Contre les micro-organismes, l'effet est double. Le détachement mécanique emporte l'essentiel, et la structure enveloppée de nombreux virus, faite de lipides, est directement désorganisée. C'est ce qui explique le résultat mesuré du lavage des mains, rappelé dans [[TEC-SAN-004]].
+## Le dosage
 
-## La réaction
+- **Chaque corps gras demande une quantité précise de base.** Trop de base, et il en reste dans le savon fini, qui devient caustique. Trop peu, et le savon reste gras et lave mal.
+- **Les fabricants gardent un léger excès de corps gras**, le surgras, pour garantir qu'aucune base libre ne subsiste.
+- **La cure**, plusieurs semaines de séchage après la fabrication, achève la réaction et évapore l'eau : un savon trop jeune est mou, s'use vite et peut encore contenir de la base libre.
 
-On fabrique du savon en faisant réagir un **corps gras** avec une **base forte**. La réaction s'appelle la saponification et produit deux choses : du savon et de la glycérine.
+## La soude, un produit dangereux
 
-Le corps gras peut être une graisse animale ou une huile végétale. Chacun donne un savon de caractère différent : les graisses solides donnent un savon dur et peu moussant, les huiles liquides un savon plus doux et plus soluble.
+Une base forte attaque les tissus plus profondément qu'un acide de force comparable : elle dissout les graisses de la peau et continue de pénétrer, avec une douleur d'abord sourde. Les projections dans l'œil provoquent des lésions irréversibles en quelques secondes. Sa dissolution dans l'eau dégage beaucoup de chaleur. Voir [[TEC-CHI-001]] et [[URG-BRUL-001]].
 
-La base est classiquement l'hydroxyde de sodium, qui donne un savon solide, ou l'hydroxyde de potassium, qui donne un savon mou ou liquide.
+## Savons et détergents
 
-**Historiquement, cette base se produisait à partir de cendres.** Les cendres de bois dur, lessivées à l'eau, libèrent des carbonates de potassium : on obtient une solution alcaline appelée lessive de cendres. Elle est bien plus faible et plus variable qu'une base commerciale, et elle donne un savon mou, irrégulier, dont il est difficile de garantir la neutralité.
-
-## Le point critique : le dosage
-
-C'est là que tout se joue, et c'est ce qui rend la fabrication exigeante.
-
-Chaque corps gras demande une quantité de base précise pour être entièrement transformé. **Trop de base, et il en reste dans le savon fini : il devient caustique et brûle la peau.** Trop peu, et le savon reste gras, mou, et ne lave pas.
-
-Les fabricants travaillent avec un léger excès de corps gras, précisément pour garantir qu'il ne reste aucune base libre. C'est une marge de sécurité, pas un détail de recette.
-
-Avec une lessive de cendres, dont la concentration est inconnue et variable, ce dosage ne peut pas être calculé : il se cherche par essais, et le résultat doit être testé avant tout usage sur la peau.
-
-## Manipuler la base sans accident
-
-Une base forte est **plus dangereuse qu'un acide de force comparable**, pour la raison expliquée dans [[TEC-CHI-001]] : elle dissout les graisses des tissus et continue de pénétrer en profondeur, avec une douleur initiale trompeusement sourde.
-
-Trois règles. **Protection des yeux avant tout**, car c'est la lésion irréversible la plus rapide. **On verse toujours la base dans l'eau, jamais l'inverse** : la dissolution dégage beaucoup de chaleur et peut projeter le liquide. **En cas de projection, on rince à l'eau très longuement et on ne neutralise pas** — voir [[URG-BRUL-001]].
-
-Travailler dehors ou en local ventilé, avec les mains et les bras couverts.
-
-## Le procédé, dans les grandes lignes
-
-Le corps gras est fondu et amené à une température modérée. La solution de base, refroidie après dissolution, y est incorporée en remuant continuellement.
-
-Le mélange s'épaissit progressivement jusqu'à un point où le mouvement de l'ustensile laisse une trace visible à la surface : c'est le signe que la réaction est engagée. On coule alors dans un moule.
-
-Vient ensuite la **cure**, la phase la plus négligée : plusieurs semaines pendant lesquelles la réaction s'achève et l'eau s'évapore. Un savon utilisé trop tôt est mou, se consomme vite, et peut encore contenir de la base libre. **Le temps de cure n'est pas une finition, c'est une étape de sécurité.**
-
-## À défaut de savon
-
-Rien ne remplace vraiment le savon, mais tout vaut mieux que l'eau seule.
-
-Les **cendres fines** et l'**argile** agissent comme abrasifs et adsorbants, et améliorent nettement le lavage mécanique. Certaines plantes contiennent des saponines, molécules naturellement moussantes, qui produisent un effet lavant réel quoique modeste. Le **sable** frotté sur une plaie ou une peau abîmée est en revanche à éviter.
-
-Et dans tous les cas, ce qui compte est la même chose : de l'eau en quantité, du frottement, et du temps.
+Les détergents de synthèse, apparus au XXe siècle, fonctionnent sur le même principe de molécule à double nature, mais ne forment pas de dépôt avec le calcaire de l'eau dure, contrairement au savon. Certaines plantes, comme la saponaire, contiennent des saponines, des molécules naturellement moussantes au pouvoir lavant réel mais modeste.
