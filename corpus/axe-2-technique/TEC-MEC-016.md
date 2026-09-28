@@ -1,47 +1,43 @@
 ---
 id: TEC-MEC-016
-titre: Sortir d'un enlisement
+titre: L'enlisement d'un véhicule
 axe: 2
 categorie: Mécanique et Transport
 temps: Court
 contexte: 2
 risque: Discret
-materiel: Récupération
+materiel: Rien
 priorite: normale
 origine: officielle
-tags: [enlisement, boue, sable, neige, pneus, degonfler, tractage, 4x4]
+tags: [enlisement, boue, sable, neige, patinage, pression des pneus, degonfler, plaques de desensablement, sangle, anneau de remorquage, 4x4]
 sources: ["Manuels de franchissement tout-terrain (Land Rover Experience, Toyota Land Cruiser Owner's Guide)", "US Army, FM 21-305 Manual for the Wheeled Vehicle Driver", "Retours d'expérience des guides sahariens et des clubs de franchissement"]
 ---
 
-::La première chose qui enlise une voiture, c'est le conducteur qui accélère. Une roue qui patine creuse son propre trou. On lâche l'accélérateur, on sort, on regarde.::
+::La première chose qui enlise une voiture, c'est l'accélérateur. Une roue qui patine creuse son propre trou, et chaque seconde de plus enfonce le véhicule. Les guides sahariens et les moniteurs de franchissement résument leur métier en une phrase : de la douceur, et de la surface.::
 
-## D'abord : arrêter de creuser
+## Pourquoi un véhicule s'enlise
 
-- **Dès que les roues patinent, lâchez l'accélérateur.** Chaque seconde de plus enfonce la voiture.
-- **Redressez les roues** : des roues braquées poussent la boue ou le sable au lieu de rouler dessus.
-- **Sortez regarder** : qu'est-ce qui bloque ? Une roue qui patine dans le vide, le bas de caisse posé, une ornière trop profonde ?
+- **La perte d'adhérence** : dans la boue, le sable mou ou la neige, les roues motrices tournent sans avancer et creusent.
+- **La portance** : un pneu trop gonflé appuie sur une petite surface et s'enfonce dans un sol mou.
+- **Le châssis posé** : quand le bas de caisse repose sur le sol, les roues n'ont plus de poids pour accrocher.
+- **Les roues braquées** poussent la matière devant elles au lieu de rouler dessus.
 
-## Les gestes qui sortent de presque tout
+## Les techniques de dégagement
 
-1. **Dégagez devant les roues motrices**, sur la longueur d'une roue au moins, dans le sens où vous voulez partir, et sous le bas de caisse s'il touche.
-2. **Donnez de l'accroche** sous les roues : tapis de sol, branches, cartons, planches, pierres plates, sable ou gravier, et en hiver de la litière pour chat.
-3. **Dégonflez les pneus** dans le sable ou la boue molle : autour de **1 à 1,2 bar**, la surface de contact s'allonge et la voiture flotte. **Regonflez avant de reprendre la route**, et roulez doucement tant que ce n'est pas fait.
-4. **Repartez en douceur**, en seconde sur une boîte manuelle, pour que les roues tournent lentement.
-5. **Le balancement** : avant, arrière, avant, en douceur, pour profiter de l'élan et agrandir la trace. Pas de coups d'accélérateur.
+- **Le dégagement de la matière** devant les roues motrices et sous le bas de caisse.
+- **L'accroche ajoutée** sous les roues : branches, planches, tapis, pierres plates, graviers, et les plaques de désensablement, l'équipement qui sort le plus de véhicules au monde.
+- **Le dégonflage** dans le sable ou la boue molle, autour de 1 à 1,2 bar : la surface de contact s'allonge et le véhicule « flotte ». Un pneu dégonflé doit être regonflé avant de reprendre la route.
+- **Le départ en douceur**, en seconde sur une boîte manuelle, et le balancement avant-arrière qui élargit la trace.
+- **Le cric et les cales** : la roue soulevée, le trou comblé en dessous. Voir [[TEC-MEC-018]].
 
-## Se faire tirer
+## Le remorquage
 
-- **Accrochez aux anneaux de remorquage** prévus (souvent vissés, rangés avec la roue de secours), jamais au pare-chocs ni à la suspension.
-- **Une sangle** plutôt qu'une chaîne ; une sangle dynamique (qui s'étire) pour un vrai arrachage.
-- **Personne près de la sangle** : une sangle ou un crochet qui cède part comme une fronde. Posez un blouson ou un sac lesté sur le milieu de la sangle pour amortir si elle casse.
-- La voiture tirée **aide en roulant doucement**, au signal convenu.
+- **Les points d'accroche** sont les anneaux de remorquage prévus, souvent vissés et rangés avec la roue de secours, jamais le pare-chocs ou la suspension.
+- **Les sangles**, et surtout les sangles dynamiques qui s'étirent, remplacent avantageusement les chaînes.
+- **Le danger** : une sangle ou un crochet qui cède part comme une fronde et tue chaque année des personnes trop proches ; un blouson ou un sac posé au milieu de la sangle freine le fouet.
 
-## Les astuces de piste
+## Les réflexes des pisteurs
 
-- **Dans le sable**, on s'arrête toujours dans une descente ou sur le plat dur, jamais en montée : on repart plus facilement.
-- **Dans la neige**, les chaînes se montent **avant** d'être bloqué. Entraînez-vous une fois à la maison, au sec.
-- **Un cric et une planche** : on soulève la roue, on comble le trou dessous avec des pierres et des branches, on repose. Lent, mais ça sort de tout. Jamais le corps sous une voiture sur cric. Voir [[TEC-MEC-018]].
-- **Un tapis de désensablement** (plaques rigides) vaut tous les efforts : c'est l'équipement qui sort le plus de voitures au monde.
-- **Seul et bloqué loin de tout** : restez avec la voiture, qui se voit de loin et vous abrite. Voir [[URG-PERDU-001]].
+Dans le sable, ils s'arrêtent sur du plat dur ou en descente, jamais en montée ; en montagne, ils montent les chaînes avant d'être bloqués. Bloqué loin de tout, le véhicule reste le meilleur abri et le plus visible. Voir [[URG-PERDU-001]].
 
-Rouler sur la neige et le verglas sans se retrouver bloqué : [[TEC-MEC-019]].
+La conduite sur neige : [[TEC-MEC-019]].

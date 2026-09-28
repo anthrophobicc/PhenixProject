@@ -1,6 +1,6 @@
 ---
 id: TEC-BOT-001
-titre: Identifier une plante avec méthode
+titre: L'identification des plantes
 axe: 2
 categorie: Agriculture et Botanique
 temps: Court
@@ -9,59 +9,37 @@ risque: Discret
 materiel: Rien
 priorite: normale
 origine: officielle
-tags: [botanique, plantes, identification, nature]
+tags: [botanique, identification, caracteres, feuilles opposees, tige carree, ombelliferes, sosies toxiques, flore, centres antipoison]
 sources: ["Flore de France, Coste H.", "Royal Botanic Gardens Kew, plant identification guidance", "Centres antipoison français, rapports annuels sur les intoxications par plantes"]
 ---
 
-::Une plante ne s'identifie pas à la ressemblance. Elle s'identifie à des caractères précis, un par un, jusqu'à ce qu'il ne reste qu'une possibilité.::
+::Une plante ne s'identifie pas à la ressemblance, mais à des caractères précis, observés un par un, jusqu'à ce qu'il ne reste qu'une possibilité. C'est la méthode des flores botaniques depuis le XVIIIe siècle. L'identification « à l'allure » est la plus naturelle, et c'est elle qui produit les intoxications mortelles.::
 
-L'identification par ressemblance est la méthode la plus naturelle et la plus dangereuse. Le cerveau reconnaît une silhouette générale et conclut ; or les confusions mortelles reposent précisément sur des silhouettes proches.
+## Les caractères
 
-La méthode fiable consiste à **lire des caractères, pas des allures**. Un caractère est une observation qui ne se discute pas : soit les feuilles sont opposées, soit elles sont alternes. Il n'y a pas d'entre-deux.
+Un caractère est une observation qui ne se discute pas : les feuilles sont opposées ou alternes, il n'y a pas d'entre-deux. Six caractères écartent la plupart des confusions :
 
-## Les caractères qui portent
+- **La disposition des feuilles** sur la tige : opposées deux à deux, alternes, en rosette.
+- **Le bord et les nervures des feuilles** : entier, denté, lobé ou découpé ; nervures parallèles ou en réseau.
+- **La section de la tige** : ronde, carrée, creuse ou pleine. Une tige carrée oriente vers quelques familles, comme celle de la menthe.
+- **La structure de la fleur**, en particulier le nombre de pétales, très stable au sein d'une famille.
+- **L'odeur au froissement**, souvent décisive.
+- **Le milieu** : sol, humidité, ombre, altitude éliminent des dizaines de candidats. Voir [[TEC-SOL-001]].
 
-Six suffisent à écarter la quasi-totalité des confusions.
+## Les confusions mortelles
 
-**La disposition des feuilles sur la tige.** Opposées deux à deux, alternées, ou en rosette. C'est le caractère le plus rapide à voir et l'un des plus discriminants.
+- **Les intoxications graves** ne viennent presque jamais d'une plante rare. Elles viennent de couples : une plante comestible et une plante toxique d'allure voisine, qui poussent aux mêmes endroits. Les centres antipoison retrouvent les mêmes confusions chaque année, comme l'ail des ours et le colchique ou le muguet.
+- **Les ombellifères**, aux fleurs blanches en ombrelle plate, réunissent des plantes cultivées très communes (carotte, persil, cerfeuil) et certaines des plus toxiques de la flore tempérée (ciguës, œnanthe).
+- **Le principe des botanistes** : une identification n'est complète que lorsque les sosies toxiques ont été envisagés et que le caractère qui les distingue a été vérifié.
 
-**La forme du bord de la feuille.** Entier, denté, lobé, découpé. Et la nervation : parallèle, ou ramifiée en réseau.
+## La méthode des flores
 
-**La section de la tige.** Ronde, carrée, creuse ou pleine. Une tige carrée oriente immédiatement vers un petit nombre de familles.
+Les flores procèdent par clés de détermination : une suite de choix entre deux caractères opposés, qui mène d'abord à la famille, puis au genre, puis à l'espèce. L'observation porte sur la plante entière (feuilles dessus et dessous, tige, fleur, base, parfois fruit et racine), jamais sur un fragment, et l'aspect d'une même plante change beaucoup selon la saison. Les familles et leurs caractères : [[TEC-BOT-002]].
 
-**La structure de la fleur.** Comptez les pétales, ou les groupes de pétales. Le nombre est un caractère de famille très stable.
+## Les applications d'identification
 
-**L'odeur au froissement.** Elle est souvent décisive et immédiate. Attention toutefois : sentir une plante inconnue en la froissant est acceptable, la goûter ne l'est pas.
+Les applications sur téléphone proposent des noms à partir d'une photo, avec des taux d'erreur non négligeables : elles orientent la recherche, sans remplacer la vérification des caractères, surtout avant de consommer une plante.
 
-**Le milieu.** Une plante pousse où elle peut. Le sol, l'humidité, l'ombre et l'altitude éliminent des dizaines de candidats sans que vous ayez à regarder la plante — c'est pourquoi [[TEC-SOL-001]] fait partie de l'identification autant que la botanique.
+## Ce que rapporte la cueillette
 
-## Le principe des confusions
-
-Les intoxications graves ne viennent presque jamais d'une plante rare et exotique. Elles viennent d'un **couple** : une plante comestible et une plante toxique de la même famille ou d'allure voisine, qui poussent aux mêmes endroits. Les registres des centres antipoison montrent que les mêmes confusions reviennent année après année.
-
-D'où la seule règle qui compte vraiment : **ne cherchez pas à reconnaître ce que vous croyez avoir trouvé, cherchez ce avec quoi cela pourrait être confondu.** Tant que vous n'avez pas identifié le sosie toxique et vérifié le caractère qui les sépare, vous n'avez pas identifié la plante.
-
-Une famille mérite une mention particulière, celle des ombellifères, reconnaissable à ses fleurs blanches en ombelle plate. Elle contient à la fois des plantes cultivées très communes et certaines des plantes les plus toxiques de la flore tempérée, d'aspect proche. C'est la famille où le débutant se trompe, et où l'erreur ne pardonne pas.
-
-## La méthode d'identification
-
-1. **Photographiez ou notez avant de cueillir**, sous plusieurs angles : plante entière, feuille dessus et dessous, tige, fleur, base au sol. Une identification se fait sur l'ensemble, jamais sur un fragment.
-2. **Décrivez les six caractères** l'un après l'autre, par écrit, avant de consulter quoi que ce soit. Décrire d'abord vous empêche de plier votre observation à l'hypothèse.
-3. **Cherchez la famille**, pas l'espèce. La famille se détermine sur des caractères robustes et réduit le champ de plusieurs milliers à quelques dizaines.
-4. **Cherchez ensuite les sosies toxiques** de votre hypothèse, et le caractère précis qui les distingue.
-5. **Vérifiez ce caractère sur votre échantillon.** S'il est absent, ambigu ou impossible à observer, l'identification n'est pas faite.
-6. **Dans le doute, on ne consomme pas.** Ce n'est pas de la prudence, c'est le rapport entre ce que vous gagnez — quelques centaines de calories — et ce que vous risquez.
-
-## Cas particuliers
-
-**Vous voulez une méthode d'ensemble.** Les familles et leurs caractères sont dans [[TEC-BOT-002]].
-
-**Vous voulez apprendre sérieusement.** Commencez par cinq plantes très communes de votre région et apprenez-les à fond, sosies compris, sur une année entière. Cinq plantes connues parfaitement valent mieux que cinquante reconnues approximativement. Une plante change beaucoup d'aspect selon la saison : celle que vous identifiez en fleur est méconnaissable deux mois plus tard.
-
-**Vous cherchez de quoi manger.** Sachez que le rendement est faible. La cueillette de végétaux sauvages fournit peu de calories pour beaucoup de temps de marche, et c'est un appoint en vitamines et en minéraux plutôt qu'une base alimentaire. L'eau et la chaleur passent avant : voir [[URG-EAU-001]] et [[URG-HYPO-001]].
-
-**Vous voulez identifier une plante utile autrement.** Les fibres, les colorants, les bois de feu et les plantes tinctoriales se déterminent avec la même méthode et sans le risque de l'ingestion. C'est un bon terrain d'entraînement — l'écorce de bouleau évoquée dans [[SURV-FEU-001]] s'identifie de manière absolument sûre.
-
-**Vous manipulez des produits pour traiter ou nettoyer.** Les règles d'incompatibilité sont dans [[TEC-CHI-001]].
-
-**Vous conservez ce que vous récoltez.** Le séchage est le procédé qui convient à presque toutes les plantes, et [[TEC-CONS-001]] en donne les conditions.
+La cueillette sauvage apporte surtout des vitamines et des minéraux, peu de calories pour beaucoup de temps passé. Les plantes les plus sûres : [[TEC-BOT-004]]. Les plantes toxiques : [[TEC-BOT-003]].

@@ -1,6 +1,6 @@
 ---
 id: TEC-ALI-016
-titre: Manger assez avec peu
+titre: Les rations et les besoins nutritionnels
 axe: 2
 categorie: Alimentation et Conservation
 temps: Long
@@ -15,7 +15,7 @@ sources: ["PAM, HCR et OMS, Food and Nutrition Needs in Emergencies, 2002 (2 100
 
 ::Nourrir un groupe avec peu, c'est un problème de calories d'abord, de protéines ensuite, et de vitamines toujours. Le reste, c'est du goût, et le goût compte aussi.::
 
-## Ce qu'il faut
+## Les besoins
 
 - **Environ 2 100 kcal par personne et par jour** : c'est le chiffre qu'utilisent les organisations humanitaires pour planifier une ration de survie. Plus pour un travail physique dur ou par grand froid (3 000 et plus), moins pour un enfant.
 - **Des protéines** : environ 10 à 12 % de l'énergie, soit 50 à 70 g par jour pour un adulte.
@@ -42,13 +42,13 @@ Riz, farine, huile et sucre sont presque partout les calories les moins chères 
 - **Des légumes ou des fruits, même peu**, pour les vitamines. Voir [[TEC-ALI-013]].
 - **Les abats et les os** : foie, cœur, bouillon d'os. Nutritifs et souvent dédaignés.
 
-## Répartir quand il n'y a pas assez
+## La répartition en cas de pénurie
 
-- **Les enfants, les femmes enceintes ou qui allaitent, les malades** d'abord : ils sont les premiers touchés et les plus fragiles.
+- **Les enfants, les femmes enceintes ou qui allaitent et les malades** sont prioritaires dans les distributions humanitaires : ils sont les premiers touchés et les plus fragiles.
 - **Ceux qui travaillent dur** ont besoin de plus : c'est aussi l'intérêt du groupe.
-- **Moins d'effort, moins de froid** : chaque degré de chaleur conservé et chaque effort évité économise de la nourriture.
-- **Partager de façon visible et juste**, à heures fixes : la faim ronge d'abord la confiance. Voir [[SURV-SOC-002]].
+- **L'effort et le froid** augmentent les besoins : chaque degré de chaleur conservé et chaque effort évité économise de la nourriture.
+- **Le partage visible et juste**, à heures fixes, préserve la confiance, que la faim ronge en premier. Voir [[SURV-SOC-002]].
 
 ## Ce que le corps encaisse
 
-Un adulte en bonne santé a des réserves pour plusieurs semaines : un kilo de graisse corporelle, c'est environ 7 700 kcal. Manger moins pendant quelque temps affaiblit mais ne tue pas ; **manquer d'eau**, en revanche, tue en quelques jours. Voir [[SURV-EAU-006]]. Après une longue période de privation, on ne reprend pas n'importe comment : [[TEC-ALI-014]].
+Un adulte en bonne santé a des réserves pour plusieurs semaines : un kilo de graisse corporelle, c'est environ 7 700 kcal. Manger moins pendant quelque temps affaiblit mais ne tue pas ; **le manque d'eau**, en revanche, tue en quelques jours. Voir [[SURV-EAU-006]]. La reprise après une longue privation : [[TEC-ALI-014]].

@@ -1,6 +1,6 @@
 ---
 id: TEC-SOL-001
-titre: Lire un sol
+titre: La texture et la lecture des sols
 axe: 2
 categorie: Agriculture et Botanique
 temps: Court
@@ -9,7 +9,7 @@ risque: Discret
 materiel: Rien
 priorite: normale
 origine: officielle
-tags: [sol, agriculture, botanique, eau]
+tags: [sol, texture, sable, limon, argile, matiere organique, structure, test au toucher, fosse pedologique, sources, plantes indicatrices]
 sources: ["FAO, Guidelines for soil description, 4e édition", "INRAE, Référentiel pédologique", "USDA, Soil texture by feel analysis"]
 ---
 
@@ -40,37 +40,36 @@ C'est l'usage le plus immédiat et le moins connu.
 
 Un sol argileux retient l'eau en surface : les mares, les sources de versant et les zones humides s'y forment. Un sol sableux ou caillouteux la laisse filer en profondeur : la surface est sèche même après la pluie.
 
-En pratique, cela signifie qu'**on ne cherche pas l'eau au même endroit selon le sol**, et que le point où un sol perméable repose sur une couche imperméable est très exactement l'endroit où sortent les sources. La règle complète le repérage décrit dans [[URG-EAU-001]] et le choix d'emplacement d'un stockage enterré dans [[SURV-PLUIE-001]].
+En pratique, **l'eau ne se cherche pas au même endroit selon le sol**, et que le point où un sol perméable repose sur une couche imperméable est très exactement l'endroit où sortent les sources. La règle complète le repérage décrit dans [[URG-EAU-001]] et le choix d'emplacement d'un stockage enterré dans [[SURV-PLUIE-001]].
 
 ## Ce que les plantes disent du sol
 
-Certaines plantes ne poussent que dans des conditions précises et signalent donc le sol sans qu'on le touche : un sol acide, calcaire, tassé, gorgé d'eau ou riche en azote portent des cortèges végétaux différents. C'est une lecture rapide et fiable **à condition de raisonner sur un peuplement, jamais sur un individu isolé** — même précaution que pour l'identification décrite dans [[TEC-BOT-001]].
+Certaines plantes ne poussent que dans des conditions précises et signalent donc le sol sans qu'on le touche : un sol acide, calcaire, tassé, gorgé d'eau ou riche en azote portent des cortèges végétaux différents. C'est une lecture rapide et fiable **à condition de raisonner sur un peuplement, jamais sur un individu isolé**, même précaution que pour l'identification décrite dans [[TEC-BOT-001]].
 
 ## Les tests de terrain
 
-**Le test au toucher, trois minutes, sans matériel.**
+**Le test au toucher**, utilisé par les agronomes sur le terrain, prend trois minutes sans matériel :
 
-1. **Prélevez** une poignée à vingt centimètres de profondeur, pas en surface.
-2. **Retirez** cailloux et racines, humidifiez progressivement jusqu'à une consistance de pâte, sans excès d'eau.
-3. **Pressez dans la main.** La boule ne tient pas : sable dominant. Elle tient et se salit peu : équilibré. Elle tient et colle aux doigts : argile dominante.
-4. **Roulez un boudin** sur la paume. Impossible : sable. Court et cassant : équilibré. Long, fin et souple, pliable en anneau sans se rompre : argile dominante.
-5. **Frottez entre les doigts.** Ça crisse : sable. C'est doux comme de la farine : limon. C'est lisse et savonneux : argile.
-6. **Regardez la couleur et sentez.** Foncé et odorant : matière organique présente. Gris bleuté ou taches rouille : le sol est régulièrement gorgé d'eau et manque d'air.
+1. **Une poignée prélevée** à vingt centimètres de profondeur, débarrassée des cailloux et des racines, est humidifiée jusqu'à former une pâte.
+2. **Pressée dans la main**, la boule ne tient pas : sable dominant. Elle tient et se salit peu : équilibré. Elle tient et colle aux doigts : argile dominante.
+3. **Roulée en boudin** sur la paume : impossible : sable. Court et cassant : équilibré. Long, fin et souple, pliable en anneau sans se rompre : argile dominante.
+4. **Frottée entre les doigts**, elle crisse : sable. C'est doux comme de la farine : limon. C'est lisse et savonneux : argile.
+5. **La couleur et l'odeur** : foncé et odorant : matière organique présente. Gris bleuté ou taches rouille : le sol est régulièrement gorgé d'eau et manque d'air.
 
-**La fosse, vingt minutes, décisive avant toute installation.** Creusez cinquante centimètres et regardez la coupe : l'épaisseur de la couche sombre de surface, la profondeur à laquelle la couleur change, la présence de cailloux ou d'une couche compacte. Cette coupe vous dit la profondeur exploitable par les racines et la profondeur de travail possible.
+**La fosse pédologique** : une coupe de cinquante centimètres montre l'épaisseur de la couche sombre de surface, la profondeur à laquelle la couleur change, la présence de cailloux ou d'une couche compacte. Elle indique la profondeur exploitable par les racines.
 
-## Selon l'usage prévu
+## Les usages de cette lecture
 
-**Vous identifiez ce qui pousse là.** Le cortège végétal se lit avec la méthode de [[TEC-BOT-001]].
+**L'identification des plantes** : le cortège végétal se lit avec la méthode de [[TEC-BOT-001]].
 
-**Vous semez.** Profondeur, température du sol et régularité de l'humidité décident de la levée : voir [[TEC-AGR-001]].
+**Le semis** : profondeur, température du sol et régularité de l'humidité décident de la levée : voir [[TEC-AGR-001]].
 
-**Vous élevez des animaux.** Le fumier restitue au sol ce que la récolte lui prend : voir [[TEC-ELE-001]].
+**L'élevage** : le fumier restitue au sol ce que la récolte lui prend : voir [[TEC-ELE-001]].
 
-**Vous voulez cultiver.** Un sol trop sableux se corrige par apport de matière organique, qui lui donne de la rétention. Un sol trop argileux se corrige par la même chose, qui lui donne de la structure. C'est le seul amendement qui améliore les deux extrêmes, et sa fabrication relève de [[TEC-CONS-001]] par la même logique de fermentation.
+**La culture** : un sol trop sableux se corrige par apport de matière organique, qui lui donne de la rétention. Un sol trop argileux se corrige par la même chose, qui lui donne de la structure. C'est le seul amendement qui améliore les deux extrêmes, et sa fabrication relève de [[TEC-CONS-001]] par la même logique de fermentation.
 
-**Vous cherchez de l'eau.** Suivez les changements de végétation et de pente : une rupture nette dans le tapis végétal signale souvent un changement de sol, donc une possible venue d'eau.
+**La recherche d'eau** : une rupture nette dans le tapis végétal signale souvent un changement de sol, donc une possible venue d'eau.
 
-**Vous voulez construire.** Un sol argileux gonfle et se rétracte selon son humidité, ce qui fissure les fondations. Un sol sableux se tasse. Cette contrainte gouverne les choix décrits dans [[TEC-CON-001]].
+**La construction** : un sol argileux gonfle et se rétracte selon son humidité, ce qui fissure les fondations. Un sol sableux se tasse. Cette contrainte gouverne les choix décrits dans [[TEC-CON-001]].
 
-**Vous voulez enterrer quelque chose.** Un sol drainant préserve, un sol argileux gorgé d'eau détruit. Un contenant enterré dans une argile humide subit une pression et une corrosion bien supérieures à ce qu'on imagine.
+**L'enfouissement** : un sol drainant préserve, un sol argileux gorgé d'eau détruit. Un contenant enterré dans une argile humide subit une pression et une corrosion bien supérieures à ce qu'on imagine.
