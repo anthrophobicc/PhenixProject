@@ -1,34 +1,38 @@
 ---
 id: TEC-ATE-009
-titre: Visser, boulonner, fileter
+titre: Les vis, les boulons et les filetages
 axe: 2
 categorie: Métal et Atelier
 temps: Court
 contexte: 1
 risque: Discret
-materiel: Technique
+materiel: Rien
 priorite: normale
 origine: officielle
-tags: [vis, boulons, ecrous, cles, filetage, taraud, filiere, cheville, pozidriv, avant-trou]
+tags: [vis, boulons, ecrous, cles, filetage metrique, pas, taraud, filiere, empreintes, pozidriv, torx, cheville, avant-trou, pas a gauche]
 sources: ["Normes ISO 272 et ISO 4032 (dimensions des écrous et des clés)", "Oberg E. et al., Machinery's Handbook, Industrial Press (filetages)", "USDA Forest Products Laboratory, Wood Handbook (fixations)"]
 ---
 
-::Une empreinte de vis abîmée vient presque toujours d'un tournevis cruciforme ordinaire enfoncé dans une vis Pozidriv, qui porte quatre petits traits en plus. Et la pédale gauche d'un vélo se dévisse dans le sens inverse des autres. En mécanique, la moitié des galères viennent de détails que personne n'a expliqués.::
+::Une empreinte de vis abîmée vient presque toujours d'un tournevis cruciforme ordinaire enfoncé dans une vis Pozidriv, qui porte quatre petits traits en plus. Et la pédale gauche d'un vélo se dévisse dans le sens inverse des autres. En mécanique, beaucoup de galères viennent de détails normalisés que personne n'explique.::
 
-## Les vis
+## Les empreintes
 
-- **Les empreintes** : fente, cruciforme (Phillips), **Pozidriv** (quatre petits traits en plus), Torx (étoile), six pans creux. Le bon embout, à la bonne taille, et **on appuie fort** en tournant.
-- **Dans le bois** : un **avant-trou** du diamètre du corps de la vis (sans le filet) évite de fendre le bois, surtout près des bords. Un peu de savon ou de cire sur le filet, et elle entre toute seule.
-- **La longueur** : environ deux fois et demie à trois fois l'épaisseur de la pièce qu'on fixe.
-- **Dans un mur** : une cheville adaptée au mur (plein, creux, plaque de plâtre).
+- **Fente**, la plus ancienne ; **cruciforme Phillips**, conçue dans les années 1930 pour les chaînes de montage ; **Pozidriv**, reconnaissable à quatre petits traits entre les branches, qui demande son propre embout ; **Torx**, en étoile, qui transmet mieux l'effort ; **six pans creux**.
+- **Un embout inadapté** ou trop petit ressort de l'empreinte et l'abîme : c'est la cause principale des vis « foirées ».
+
+## Les vis à bois
+
+- **L'avant-trou**, du diamètre du corps de la vis sans le filet, évite que le bois se fende, surtout près des bords.
+- **La longueur** usuelle est de deux fois et demie à trois fois l'épaisseur de la pièce fixée.
+- **Dans les murs**, la cheville doit correspondre au matériau : mur plein, brique creuse, plaque de plâtre.
 
 ## Les boulons
 
-- **Une rondelle** sous l'écrou, un **contre-écrou** ou du frein-filet contre les vibrations.
-- **Serrer en étoile** les pièces à plusieurs boulons (roues, couvercles).
-- **Ne pas trop serrer** : un filetage arraché ne se serre plus jamais.
+- **Un boulon** est une vis associée à un écrou ; la rondelle répartit l'effort, le contre-écrou ou le frein-filet empêchent le desserrage par les vibrations.
+- **Le serrage en étoile** des pièces à plusieurs boulons, comme les roues, répartit la pression.
+- **Un serrage excessif** arrache le filetage, qui ne tient alors plus jamais.
 
-**Les clés** pour les boulons métriques courants :
+**Les clés des boulons métriques courants** :
 
 | Boulon | Clé |
 |---|---|
@@ -37,18 +41,14 @@ sources: ["Normes ISO 272 et ISO 4032 (dimensions des écrous et des clés)", "O
 | M10 | 17 mm |
 | M12 | 19 mm |
 
-## Le sens
+## Le filetage
 
-On visse dans le sens des aiguilles d'une montre. **Les exceptions** : la pédale gauche du vélo, certains raccords de gaz, certains écrous de meuleuse. Un écrou qui refuse de bouger : on vérifie le sens avant de forcer.
+- **Le filetage métrique ISO** se désigne par son diamètre et son pas : M8 × 1,25 signifie 8 mm de diamètre et 1,25 mm d'avance par tour.
+- **Le taraud** creuse un filetage dans un trou, **la filière** en taille un sur une tige. Le trou à percer avant de tarauder mesure le diamètre moins le pas : 6,8 mm pour du M8.
+- **Le sens de vissage** est celui des aiguilles d'une montre, sauf pour les pas à gauche : la pédale gauche d'un vélo, certains raccords de gaz, certains écrous de meuleuse, pour que la rotation ne les desserre pas.
 
-## Faire un filetage
+## Les vis cassées
 
-- **Le taraud** creuse un filetage dans un trou ; **la filière** en fait un sur une tige.
-- **La règle** pour le trou à percer avant de tarauder : **diamètre moins le pas**. Pour du M8 (pas de 1,25 mm) : un foret de 6,8 mm.
-- Huiler, tourner d'un demi-tour, revenir d'un quart pour casser le copeau, et ainsi de suite.
-
-## Une vis cassée ou foirée
-
-Un extracteur, une fente sciée pour un tournevis plat, une goutte de colle pour que l'embout accroche, ou percer et retarauder plus gros. Débloquer ce qui est rouillé : [[TEC-MEC-027]].
+Les extracteurs, les fentes sciées pour un tournevis plat, ou le perçage suivi d'un taraudage plus gros récupèrent une vis cassée ou foirée. Le dégrippage : [[TEC-MEC-027]].
 
 Les outils à main : [[TEC-ATE-001]].

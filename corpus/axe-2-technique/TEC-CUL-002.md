@@ -1,46 +1,39 @@
 ---
 id: TEC-CUL-002
-titre: Faire l'école sans école
+titre: L'école en temps de crise
 axe: 2
 categorie: Culture et Loisirs
-temps: Long
+temps: Court
 contexte: 2+
 risque: Discret
 materiel: Rien
 priorite: normale
 origine: officielle
-tags: [ecole, enfants, education, lecture, calcul, apprentissage, crise, groupe]
+tags: [ecole, enfants, education, education en situation d'urgence, lecture, calcul, classe unique, enseignement mutuel, hole in the wall, routine]
 sources: ["UNESCO et INEE, Normes minimales pour l'éducation : préparation, interventions, relèvement", "UNICEF, l'éducation dans les situations d'urgence", "Mitra S., expériences d'apprentissage autonome (Hole in the Wall), 1999-2010"]
 ---
 
-::Une école qui ferme des mois, c'est une génération qui prend du retard pour des années. Il ne faut ni diplôme ni bâtiment pour que des enfants continuent d'apprendre : une heure par jour, un adulte, du papier, et la vie autour comme manuel.::
+::Pendant la pandémie de 2020, plus d'un milliard et demi d'élèves ont été privés d'école, et les études ont mesuré un retard d'apprentissage durable, surtout chez les enfants les plus pauvres. Les organisations humanitaires considèrent désormais l'éducation comme une aide d'urgence, au même titre que l'eau ou les abris : une école qui ferme des mois, c'est une génération qui prend du retard pour des années.::
 
-## L'essentiel, chaque jour
+## Pourquoi l'école compte en crise
 
-- **Lire, écrire, compter** : c'est ce qui se perd le plus vite et ce qui ouvre tout le reste.
-- **Une à deux heures par jour**, le matin, à heure fixe. La régularité compte plus que la durée.
-- **Un cahier par enfant**, qui garde la trace de ce qu'il a appris : il voit qu'il avance.
+- **Les apprentissages fondamentaux**, lire, écrire, compter, se perdent vite quand ils ne sont plus pratiqués.
+- **La routine** d'une classe, même improvisée, protège les enfants : elle donne un but, un cadre et l'idée qu'il y a un après. Voir [[SURV-PSY-004]].
+- **L'école protège** aussi du travail des enfants, des mariages précoces et du recrutement par les groupes armés, selon l'UNICEF.
+- **Les normes internationales de l'INEE** guident depuis 2004 les écoles de camps et les classes temporaires.
 
-## La vie comme manuel
+## Des modèles anciens et efficaces
 
-- **Les mathématiques** : doser la farine du pain, compter les réserves, mesurer un potager, calculer combien de jours tiendra l'eau, convertir des unités. Voir [[TEC-IDE-011]].
-- **Les sciences** : faire germer des graines, observer le ciel, fabriquer une pile, comprendre pourquoi l'eau bout. Voir [[SURV-ENE-002]].
-- **La géographie** : lire une carte, s'orienter au soleil et aux étoiles. Voir [[SURV-ORI-001]].
-- **L'écriture** : tenir le journal du groupe, écrire des lettres aux proches éloignés, recopier des fiches utiles.
-- **La lecture** : à voix haute, le soir, pour tous. Les livres de la maison, de la bibliothèque, les fiches Phenix.
+- **La classe unique** des écoles de village réunissait tous les âges : les grands aidaient les petits, et apprenaient en expliquant.
+- **L'enseignement mutuel**, développé au début du XIXe siècle en Angleterre puis en France, confiait à des élèves avancés l'enseignement de petits groupes, permettant à un seul maître de faire la classe à des centaines d'enfants.
+- **L'apprentissage autonome** : dans l'expérience « Hole in the Wall », le chercheur Sugata Mitra a installé à partir de 1999 des ordinateurs dans des murs de bidonvilles indiens ; des enfants sans aucune leçon ont appris seuls à s'en servir.
 
-## Enseigner en groupe
+## Ce qui fonctionne
 
-- **Les grands apprennent aux petits** : en expliquant, ils apprennent deux fois. C'était la règle des écoles de village à classe unique.
-- **Par niveau, pas par âge** : chacun avance à son rythme.
-- **Chaque adulte enseigne ce qu'il sait** : un mécanicien, une couturière, un ancien instituteur, un jardinier. Voir [[TEC-MET-001]].
-- **Des questions plutôt que des réponses** : « Pourquoi à ton avis ? » fait plus travailler que « c'est comme ça ».
+- **Des séances courtes et régulières**, à heure fixe, plutôt que longues et rares.
+- **Des groupes par niveau** plutôt que par âge.
+- **Les savoirs des adultes présents** : chaque métier devient une leçon. Voir [[TEC-MET-001]].
+- **La vie quotidienne comme manuel** : doser, mesurer, compter les réserves pour les mathématiques ([[TEC-IDE-011]]), faire germer, observer le ciel pour les sciences, tenir le journal du groupe pour l'écriture.
+- **Le jeu et les projets concrets**, qui entretiennent l'envie d'apprendre. Voir [[TEC-CUL-004]].
 
-## Garder l'envie
-
-- **Des jeux** : jeux de calcul, de mots, d'observation, de mémoire. Voir [[TEC-CUL-001]].
-- **Des projets concrets** : construire un four, un cadran solaire, une carte du quartier.
-- **Du dehors** : une grande partie de ce qui s'apprend se fait en marchant.
-- **De la reconnaissance** : on montre, on félicite, on affiche le travail.
-
-Apprendre, c'est aussi une façon pour un enfant de tenir dans une période dure : ça donne un but, une routine, et l'idée qu'il y a un après. Voir [[SURV-PSY-004]].
+Le conte et la transmission orale : [[TEC-CUL-005]].
