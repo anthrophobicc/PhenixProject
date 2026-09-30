@@ -41,8 +41,4 @@ sources: ["SPILF, recommandations sur les infections urinaires communautaires de
 - **S'essuyer d'avant en arrière.**
 - **La canneberge** (cranberry) réduit un peu les récidives chez les femmes qui en font souvent, d'après les études récentes.
 
-## En crise
-
-Le manque d'eau, de toilettes et d'hygiène fait exploser les infections urinaires. Boire, avoir accès à des toilettes propres, se laver avec peu d'eau. Voir [[SURV-HYG-001]] et [[SURV-HYG-003]].
-
-Les antibiotiques : [[TEC-SAN-015]].
+À lire aussi : [[SURV-HYG-001]], [[SURV-HYG-003]], [[TEC-SAN-015]].

@@ -53,7 +53,7 @@ Une odeur douceâtre, une chaleur anormale en charge, une tension qui s'effondre
 
 Un feu de batterie lithium n'a pas besoin d'oxygène extérieur pour se poursuivre : on refroidit massivement à l'eau et l'on éloigne le reste plutôt que de chercher à l'étouffer — voir [[URG-INC-001]].
 
-## En récupération
+## Les blocs de batteries usagés
 
 Les cellules cylindriques standard équipent une grande partie des blocs d'outillage portatif et d'ordinateurs. **Un bloc mort l'est rarement en entier** : c'est presque toujours une ou deux cellules qui font chuter l'ensemble, parce qu'elles sont en série et que la plus faible limite tout le monde, comme l'explique [[TEC-ENE-002]].
 

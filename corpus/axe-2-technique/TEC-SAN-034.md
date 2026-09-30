@@ -32,11 +32,8 @@ sources: ["Organisation mondiale de la santé, Clinical guidelines for withdrawa
 
 **Le tabac** : irritabilité, faim, nervosité, pire les premiers jours, qui s'estompent en quelques semaines. Les substituts nicotiniques doublent les chances de réussir.
 
-## En crise
-
-- **Quand l'approvisionnement s'arrête** (pharmacies fermées, guerre, prison), les sevrages forcés arrivent en masse. Repérer les gros buveurs et les personnes sous traitement dans le groupe, pour les surveiller.
-- **Le stress** fait replonger : routine, sommeil, soutien. Voir [[TEC-SAN-019]].
-
 ## Se faire aider
 
 En France, gratuits et anonymes : **Drogues Info Service** (0 800 23 13 13), **Alcool Info Service** (0 980 980 930), **Tabac Info Service** (39 89).
+
+À lire aussi : [[TEC-SAN-019]].

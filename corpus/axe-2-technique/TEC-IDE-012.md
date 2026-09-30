@@ -45,7 +45,7 @@ C'est le calcul le plus utile de toute une vie financière.
 
 Personne de sérieux ne demande de payer en **cartes cadeaux**, en **cryptomonnaie** ou par **virement urgent**. Un rendement garanti très élevé est un mensonge. La banque ne demande jamais ses codes par téléphone : on raccroche et on rappelle le numéro écrit sur sa carte.
 
-## Dans une crise
+## Le liquide et les pannes de réseau
 
 - **Quand le courant ou le réseau tombe**, les cartes ne marchent plus. Plusieurs pays européens recommandent désormais de garder un peu de liquide chez soi, **en petites coupures** : personne ne rend la monnaie sur 50 euros quand tout est en panne.
 - **Quand la monnaie s'effondre**, ce qui compte, ce sont les biens, les savoir-faire et la confiance. Voir [[SURV-TROC-002]].

@@ -36,7 +36,7 @@ Une voiture électrique consomme environ **15 à 20 kWh aux 100 km**. L'autonomi
 - **Une borne murale** à la maison : trois à cinq fois plus vite.
 - **Les bornes rapides** : de quoi faire plusieurs centaines de kilomètres en une demi-heure.
 
-## En crise
+## La voiture comme source de courant
 
 - **La prise 230 V** (fonction appelée V2L) de certains modèles alimente frigo, lampes, ordinateurs, outils : une batterie de voiture pleine, c'est plusieurs jours de besoins essentiels d'une maison.
 - **Avec des panneaux solaires** à la maison, elle se recharge sans réseau. Voir [[TEC-SOLR-001]].

@@ -36,6 +36,4 @@ sources: ["Code de la route, catégories de permis de conduire (article R221-4)"
 - **Ne jamais se placer à droite d'un camion** qui s'apprête à tourner à droite, à vélo comme à pied.
 - **Si on ne voit pas le chauffeur dans son rétroviseur, il ne vous voit pas.**
 
-## En crise
-
-Un chauffeur poids lourd sait déplacer de la nourriture, de l'eau, du carburant, des blessés, une communauté entière. C'est l'un des savoir-faire les plus précieux d'une évacuation. Voir [[SURV-CRI-004]] et [[SURV-REC-054]].
+À lire aussi : [[SURV-CRI-004]], [[SURV-REC-054]].

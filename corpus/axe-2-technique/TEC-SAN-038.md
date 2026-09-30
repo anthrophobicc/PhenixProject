@@ -39,6 +39,4 @@ sources: ["Réseau national de surveillance aérobiologique (RNSA)", "Stein M.M.
 - **La pénicilline** : beaucoup d'étiquettes « allergique » datent d'une éruption d'enfance due au virus, pas au médicament. Un test en allergologie permet souvent de retrouver ces antibiotiques précieux. Voir [[TEC-SAN-015]].
 - **L'intolérance** (lactose par exemple) n'est pas une allergie : inconfortable, jamais mortelle.
 
-## En crise
-
-Noter ses allergies graves **sur soi** et dans la fiche médicale du téléphone. Voir [[TEC-ELN-017]]. Les piqûres : [[URG-PIQ-001]].
+À lire aussi : [[TEC-ELN-017]], [[URG-PIQ-001]].

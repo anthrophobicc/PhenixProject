@@ -33,8 +33,4 @@ sources: ["GS1, standard EAN-13 et préfixes des organisations nationales", "Den
 - **Avant de payer** : regarder l'adresse du site qui s'ouvre, vérifier qu'aucun autocollant n'a été posé sur le code, et **payer plutôt par l'application officielle** ou le terminal.
 - **Un QR code reçu par courrier ou par message** qui demande de « régulariser » un paiement ou de « mettre à jour » un compte : arnaque presque à coup sûr. Voir [[TEC-IDE-015]].
 
-## En crise
-
-Une imprimante et un générateur de QR code hors ligne permettent d'afficher des textes, des coordonnées ou des contacts que chacun lit avec son téléphone, sans réseau. Voir [[TEC-ELN-017]].
-
-Reconnaître une fausse information : [[TEC-IDE-010]].
+À lire aussi : [[TEC-ELN-017]], [[TEC-IDE-010]].

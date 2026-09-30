@@ -46,7 +46,7 @@ L'invention vient du MIT, à la fin des années 1990 ; la société E Ink l'a in
 - Les panneaux d'horaires de certains arrêts de bus alimentés par panneau solaire.
 - Les montres et les badges à très longue autonomie.
 
-## Pourquoi c'est l'écran de la survie
+## Ses atouts loin d'une prise
 
 Un appareil de lecture qui doit fonctionner des semaines loin de toute prise a trois besoins : consommer presque rien, se lire en plein jour, et **montrer quelque chose même quand sa batterie est vide**. L'encre électronique est la seule technologie qui coche les trois. C'est pour cela qu'elle est envisagée pour les appareils de lecture hors ligne, voir [[TEC-IDE-009]].
 

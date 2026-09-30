@@ -21,16 +21,6 @@ sources: ["Winter G.D., Formation of the scab and the rate of epithelization of 
 2. **Couvrir** : le pansement protège des microbes et garde l'humidité.
 3. **Surveiller et changer** : quand il est traversé, sale, ou tous les un à trois jours.
 
-## Avec ce qu'on a
-
-- **Un tissu en coton propre**, bouilli ou repassé au fer très chaud, fait une compresse.
-- **Les serviettes hygiéniques** : très absorbantes, emballées propres, parfaites sur une plaie qui saigne.
-- **Le film alimentaire** sur une brûlure, **après** l'avoir refroidie à l'eau : il protège sans coller. Voir [[URG-BRUL-001]].
-- **Un peu de vaseline ou de miel** sous la compresse empêche qu'elle colle. Voir [[TEC-BOT-006]].
-- **Du ruban adhésif** découpé en papillons rapproche les bords d'une petite coupure.
-
-**À éviter** : le coton hydrophile directement sur la plaie (ses fibres s'y collent), l'alcool dans la plaie (il abîme la chair), un bandage serré en rond autour d'un membre qui gonfle.
-
 ## Les bandages
 
 - **L'entorse** : bande en huit autour de la cheville ou du poignet, ferme sans serrer.
@@ -43,3 +33,5 @@ sources: ["Winter G.D., Formation of the scab and the rate of epithelization of 
 **Rougeur qui s'étend, chaleur, gonflement, pus, douleur qui augmente au lieu de diminuer, traînée rouge qui remonte le long du membre, fièvre** : la plaie s'infecte. Il faut un avis médical, souvent des antibiotiques. Voir [[TEC-SAN-015]].
 
 La trousse de soins : [[TEC-SAN-008]].
+
+À lire aussi : [[URG-BRUL-001]], [[TEC-BOT-006]].

@@ -49,7 +49,7 @@ Trois précautions couvrent l'essentiel du risque. **Ne pas dormir avec les anim
 
 S'y ajoute une règle qui vaut toujours : **un animal trouvé mort sans qu'on sache de quoi ne se mange pas**, et sa dépouille s'éloigne ou s'enterre profondément.
 
-## Sans médicament
+## La prévention et les soins simples
 
 C'est la situation par défaut dans un élevage autonome, et elle est parfaitement tenable si la prévention est correcte.
 

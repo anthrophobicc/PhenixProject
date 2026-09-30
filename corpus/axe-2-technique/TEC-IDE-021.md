@@ -32,11 +32,4 @@ sources: ["OACI, Document 9303, documents de voyage lisibles à la machine", "AN
 - **Ne jamais envoyer** de copie à quelqu'un qu'on ne peut pas vérifier. Voir [[TEC-IDE-015]].
 - **Perte ou vol** : déclarer tout de suite (en ligne pour une perte, au commissariat ou à la gendarmerie pour un vol), et garder le récépissé.
 
-## En crise
-
-- **Les papiers ouvrent tout** : distribution d'aide, soins, passage d'une frontière, retrouver sa famille. Voir [[SURV-DEP-013]] et [[SURV-CRI-018]].
-- **Les garder sur soi**, dans une pochette étanche.
-- **Des copies** papier et photo, rangées ailleurs, envoyées à un proche de confiance. Voir [[TEC-ELN-007]].
-- **Les papiers des enfants** aussi.
-
-Les codes-barres et QR codes : [[TEC-IDE-019]].
+À lire aussi : [[SURV-DEP-013]], [[SURV-CRI-018]], [[TEC-ELN-007]], [[TEC-IDE-019]].

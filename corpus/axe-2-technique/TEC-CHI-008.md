@@ -37,7 +37,7 @@ sources: ["Organisation mondiale de la santé, Guide to Local Production: WHO-re
 - **Eau oxygénée** : mousse beaucoup, mais abîme les tissus d'une plaie. À éviter dans les plaies ouvertes.
 - **Vinaigre** : nettoie et détartre, **mais ne désinfecte presque pas**.
 
-## Sans rien de tout ça
+## Les alternatives simples
 
 - **Le savon et l'eau** retirent les microbes des mains aussi bien que le gel, et mieux quand les mains sont sales.
 - **L'ébullition** stérilise les instruments : 10 minutes dans l'eau bouillante.

@@ -27,7 +27,7 @@ sources: ["Kiwix, documentation de kiwix-serve", "Internet-in-a-Box, documentati
 - **Des cartes**, des vidéos de formation, des fiches Phenix.
 - **Un partage de fichiers** et une messagerie locale.
 
-## Sans routeur du tout
+## Les réseaux maillés
 
 - **Briar** : une messagerie qui passe par le Bluetooth et le WiFi de téléphone à téléphone, sans serveur ni internet.
 - **Meshtastic** : de petits modules radio LoRa, à quelques dizaines d'euros, qui relaient des messages texte de proche en proche sur plusieurs kilomètres, sans licence.

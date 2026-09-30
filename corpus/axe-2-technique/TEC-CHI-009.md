@@ -44,7 +44,7 @@ Une solution d'**hypochlorite de sodium** dans l'eau. Son pouvoir se mesure en *
 - **La bouteille elle-même s'affaiblit** avec le temps, la chaleur et la lumière : au frais et dans le noir, elle garde l'essentiel de sa force quelques mois. Une vieille Javel se dose plus fort.
 - **Gants et aération** ; rincer à l'eau abondante en cas de projection dans les yeux.
 
-## En fabriquer sans magasin
+## L'électrochloration
 
 Le courant électrique qui traverse de l'**eau très salée** entre deux électrodes en graphite (mines de crayon, électrodes de piles usagées) produit de l'hypochlorite : c'est le principe des petits électrochlorateurs utilisés dans les villages sans approvisionnement. Avec une batterie de 12 volts, quelques heures, en plein air (il se dégage un peu de chlore gazeux), on obtient une solution faible, qu'on dose plus fort et qu'on utilise dans la journée. Sans moyen de mesure, l'odeur de chlore après 30 minutes reste le repère.
 

@@ -58,16 +58,6 @@ Les musées classent tous les instruments du monde en cinq familles, selon ce qu
 - **La guitare électrique**, années 1930 à 1950 : un micro magnétique capte la corde, un amplificateur fait le reste.
 - **Le synthétiseur**, Robert Moog, 1964 : le son fabriqué entièrement par des circuits.
 
-## Fabriquer avec ce qu'on a
-
-Le steel drum est né de bidons, le blues de guitares à une corde clouée sur une planche. **Presque tout peut sonner.**
-
-- **Un sifflet** : un bout de roseau ou de sureau vidé, une encoche en biseau, un bouchon de bois qui laisse une fente. Chaque trou percé ajoute une note.
-- **Une basse à une corde** : une bassine retournée, un manche de balai appuyé sur son bord, une corde tendue du manche au centre de la bassine. On pousse le manche pour tendre la corde et changer la note.
-- **Une guitare boîte** : une boîte en bois ou un bidon pour la caisse, un manche en planche, des cordes de fil de pêche, de frein de vélo ou de fil de fer fin.
-- **Des percussions** : bidons, casseroles, bouteilles remplies d'eau à différents niveaux (plus il y a d'eau, plus c'est aigu quand on les tape).
-- **Un tambour** : une peau ou une chambre à air tendue sur un seau, serrée avec une corde.
-
 ## Les astuces de musiciens
 
 - **Accorder sans accordeur** : une note de référence suffit (un sifflet, une bouteille, en France, la tonalité du téléphone fixe est un la à 440 Hz). Les autres cordes s'accordent entre elles à l'oreille, en comparant deux cordes qui doivent jouer la même note : quand le son « bat » (ondule), elles sont fausses ; quand il devient lisse, c'est juste.

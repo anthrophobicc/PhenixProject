@@ -35,8 +35,4 @@ sources: ["Vickhoff B. et al., Music structure determines heart rate variability
 - **L'apprentissage se fait à l'oreille**, une phrase à la fois : c'est ainsi que les chants populaires ont traversé les siècles.
 - **Les chants d'un groupe** se perdent s'ils ne sont ni écrits ni appris aux enfants. Voir [[TEC-CUL-005]].
 
-## En crise
-
-Dans une cave pendant une alerte, dans une longue marche, autour d'un feu, un chant fait souvent plus pour le moral qu'un long discours. Le silence reste la règle quand il faut se faire discret. Voir [[SURV-DEP-009]].
-
-Les instruments de musique : [[TEC-CUL-001]].
+À lire aussi : [[SURV-DEP-009]], [[TEC-CUL-001]].

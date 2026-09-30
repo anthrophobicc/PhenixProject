@@ -47,7 +47,7 @@ La **paille** nourrit peu mais elle occupe le rumen et sert de litière. Les **f
 
 Le calcul à faire avant l'hiver est simple et rarement fait : combien d'animaux, combien de jours, quelle ration quotidienne. **Un élevage se dimensionne sur le fourrage disponible en février**, pas sur l'herbe de juin.
 
-## Quand il n'y a pas assez
+## En période de pénurie de fourrage
 
 Trois leviers, dans cet ordre.
 

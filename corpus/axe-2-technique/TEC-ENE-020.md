@@ -1,6 +1,6 @@
 ---
 id: TEC-ENE-020
-titre: Stocker et reconnaître les carburants
+titre: Le stockage des carburants
 axe: 2
 categorie: Énergie et Électricité
 temps: Court
@@ -23,7 +23,7 @@ sources: ["INRS, fiches toxicologiques essence et gazole", "NFPA 30, Flammable a
 
 **Le principe** : on stocke et **on tourne**. Le bidon le plus ancien va dans le réservoir, le neuf prend sa place.
 
-## Stocker sans danger
+## Les règles de stockage
 
 - **Des bidons homologués**, pleins aux neuf dixièmes, bien fermés, étiquetés avec la date.
 - **Jamais dans la maison** ni dans un garage qui communique avec elle : dans un abri aéré, à l'ombre, loin de toute flamme et de la chaudière.
@@ -42,7 +42,7 @@ sources: ["INRS, fiches toxicologiques essence et gazole", "NFPA 30, Flammable a
 
 **Jamais à la bouche** : quelques gorgées d'essence dans les poumons donnent une pneumonie grave. Une pompe à main à poire, ou un tuyau à clapet qu'on secoue, coûte quelques euros.
 
-## Quand il n'y en a plus
+## Les carburants de substitution
 
 - **Les vieux diesels** à injection indirecte tolèrent un mélange d'huile végétale filtrée ; les moteurs récents, beaucoup moins.
 - **Le gazogène** : pendant la Seconde Guerre mondiale, des centaines de milliers de véhicules en Europe roulaient au bois ou au charbon de bois. Voir [[SURV-FEU-006]].

@@ -33,8 +33,4 @@ sources: ["Norme ISO/IEC 14443, cartes à puce sans contact", "Banque de France,
 - **Le paiement mobile** : protégé par l'empreinte ou le code du téléphone, souvent plus sûr que la carte.
 - **Le lecteur NFC** du téléphone lit certaines cartes de transport, étiquettes, passeports (avec leur clé).
 
-## En crise
-
-Quand le réseau tombe, beaucoup de terminaux ne peuvent plus valider les paiements. Voir [[SURV-CRI-013]]. Le liquide en petites coupures reste le moyen de paiement qui marche sans rien.
-
-La puce des papiers d'identité : [[TEC-IDE-021]].
+À lire aussi : [[SURV-CRI-013]], [[TEC-IDE-021]].

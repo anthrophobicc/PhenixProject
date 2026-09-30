@@ -40,8 +40,4 @@ sources: ["Levinson M., The Box: How the Shipping Container Made the World Small
 - **Les boulons métriques** et leurs clés. Voir [[TEC-ATE-009]].
 - **Les bouteilles de gaz** et leurs détendeurs. Voir [[TEC-ENE-015]].
 
-## En crise
-
-Choisir des objets aux formats les plus répandus, c'est pouvoir les réparer, les recharger et les échanger. Une lampe à piles AA vaut mieux qu'une lampe à batterie spéciale.
-
-Les unités : [[TEC-IDE-011]].
+À lire aussi : [[TEC-IDE-011]].

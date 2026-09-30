@@ -46,11 +46,4 @@ Affûter, c'est **user deux faces jusqu'à ce qu'elles se rejoignent en une arê
 - **Tronçonneuse** : lime ronde du bon diamètre, voir [[TEC-MEC-017]].
 - **Ciseaux** : seulement le biseau extérieur de chaque lame, à la pierre fine.
 
-## Sans pierre
-
-- **Le cul d'une tasse en céramique** : l'anneau non émaillé dessous est une pierre fine parfaite.
-- **Le haut d'une vitre de voiture**, légèrement baissée.
-- **Un galet de rivière** à grain fin, une brique, le bord d'une marche en béton pour dégrossir.
-- **Une ceinture en cuir** pour finir.
-
-**Tester** : une lame bien affûtée tranche une feuille de papier tenue en l'air sans l'accrocher. La théorie du tranchant : [[TEC-MEC-005]].
+À lire aussi : [[TEC-MEC-005]].

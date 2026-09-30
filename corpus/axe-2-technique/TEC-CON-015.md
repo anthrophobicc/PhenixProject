@@ -36,15 +36,11 @@ Voir aussi [[URG-RES-001]].
 - **Un raccord qui suinte** : resserrez d'un quart de tour, pas plus. Si ça continue, refaites l'étanchéité : ruban de téflon sur un filetage, ou filasse et pâte.
 - **Un siphon qui fuit** : dévissez-le au-dessus d'une bassine, nettoyez, vérifiez le joint, revissez à la main.
 
-## Les dépannages de fortune
-
-- **Un trou d'épingle dans un tuyau** : un morceau de chambre à air serré par deux colliers de serrage, en attendant mieux. Une pâte époxy de réparation sur un tuyau sec. Voir [[SURV-REC-030]].
-- **Un tuyau gelé** : dégelez-le au sèche-cheveux ou avec des chiffons chauds, en partant du robinet ouvert vers le gel. **Jamais de flamme** : le tuyau éclate ou brûle ce qu'il y a derrière.
-- **Un évier bouché** : ventouse d'abord (en bouchant le trop-plein), puis démontage du siphon, puis furet. Les déboucheurs chimiques en dernier, jamais mélangés. Voir [[TEC-CHI-006]].
-
 ## Les astuces de plombier
 
 - **Relevez le compteur le soir et le matin**, sans avoir tiré d'eau : s'il a tourné, il y a une fuite quelque part.
 - **Une tache qui s'agrandit au plafond** : coupez l'eau de l'étage au-dessus tout de suite, puis cherchez.
 - **Avant un départ long**, coupez la vanne générale.
 - **Dans une maison froide en hiver**, vidangez les tuyaux (vanne fermée, robinets ouverts, en bas) pour qu'ils ne gèlent pas. Voir [[TEC-CON-012]].
+
+À lire aussi : [[SURV-REC-030]], [[TEC-CHI-006]].

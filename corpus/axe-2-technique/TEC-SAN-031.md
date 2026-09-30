@@ -1,6 +1,6 @@
 ---
 id: TEC-SAN-031
-titre: Les dents sans dentifrice
+titre: L'hygiène des dents
 axe: 2
 categorie: Santé et Chirurgie
 temps: Court

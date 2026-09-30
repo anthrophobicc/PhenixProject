@@ -37,6 +37,4 @@ sources: ["Inserm, Pesticides et effets sur la santé : nouvelles données, expe
 - **Le savon noir** dilué contre les pucerons, **le lait** contre l'oïdium.
 - **Ramasser à la main** : doryphores, chenilles, limaces.
 
-## En crise
-
-Quand les produits manquent, ceux qui cultivent sans eux depuis longtemps ont une longueur d'avance. Les ravageurs : [[TEC-AGR-010]].
+À lire aussi : [[TEC-AGR-010]].

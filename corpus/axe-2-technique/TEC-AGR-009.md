@@ -38,7 +38,7 @@ sources: ["Arvalis Institut du végétal, fiches techniques du blé tendre", "FA
 - **En fûts ou seaux fermés**, à l'abri des rongeurs et des insectes, au frais. Voir [[TEC-ALI-015]].
 - **Le grain entier se garde des années**, bien plus que la farine, qui rancit en quelques mois : on moud au fur et à mesure.
 
-## Moudre sans moulin électrique
+## La mouture
 
 - **La meule à main** (deux pierres, celle du dessus tourne) : la plus ancienne machine agricole du monde. Un moulin à céréales manuel à meules ou à disques d'acier se trouve encore dans le commerce.
 - **Un moulin à café manuel**, un mortier et son pilon, par petites quantités.

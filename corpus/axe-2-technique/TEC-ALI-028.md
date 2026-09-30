@@ -31,7 +31,7 @@ sources: ["USDA National Center for Home Food Preservation, confitures et gelée
 
 **Une moisissure** sur une confiture : on jette le pot, on ne se contente pas de gratter.
 
-## Sans confiture
+## Les autres conserves au sucre
 
 - **Les gelées** : le jus seul, filtré, cuit avec le sucre.
 - **Les pâtes de fruits** : une purée très réduite, séchée en plaques.

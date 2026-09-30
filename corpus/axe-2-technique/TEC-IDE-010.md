@@ -35,7 +35,7 @@ sources: ["Caulfield M., méthode SIFT (Stop, Investigate, Find, Trace), 2019", 
 - **Une information importante** est reprise par plusieurs médias sérieux ; son absence ailleurs est un signal d'alerte.
 - **L'émotion forte** (colère, peur, satisfaction de voir confirmée son opinion) est justement le moment où l'on vérifie le moins.
 
-## En crise
+## Rumeurs et pénuries
 
 - **Une rumeur de pénurie crée la pénurie** : chacun court acheter, et les rayons se vident vraiment, comme pour le papier toilette au printemps 2020.
 - **Les consignes officielles** passent par les alertes, la radio publique et les comptes vérifiés des autorités. Voir [[SIG-COM-012]].

@@ -37,6 +37,4 @@ sources: ["Organisation mondiale de la santé, géohelminthiases, principaux rep
 - **Laver ou cuire** les légumes, surtout ceux fertilisés avec des excréments. Voir [[TEC-AGR-017]].
 - **Cuire la viande à cœur.** Voir [[TEC-MET-012]].
 
-## En crise
-
-Dans les camps et les abris surpeuplés, les vers se répandent vite : un vermifuge pour tous les enfants deux fois par an est une mesure de santé publique recommandée dans les régions touchées. Voir [[SURV-CRI-018]].
+À lire aussi : [[SURV-CRI-018]].

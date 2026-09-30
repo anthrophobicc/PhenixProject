@@ -37,10 +37,8 @@ sources: ["Vosoughi S., Roy D., Aral S., The spread of true and false news onlin
 - **Des limites de temps**, et le téléphone hors de la chambre la nuit. Voir [[TEC-SAN-023]].
 - **Les réglages de confidentialité** : qui voit quoi, ce que le réseau garde.
 
-## En crise
-
-Les réseaux peuvent sauver : informations locales, entraide, « je suis en sécurité ». Ils propagent aussi la panique et les fausses alertes. **Les sources officielles** (préfecture, secours, radio publique) passent en premier. Voir [[SIG-COM-012]].
-
 ## Les enfants
 
 Leur cerveau résiste encore moins bien à ces mécanismes : un âge minimum, des règles claires, et en parler avec eux plutôt que tout interdire en secret. Voir [[SURV-PSY-004]].
+
+À lire aussi : [[SIG-COM-012]].

@@ -44,8 +44,4 @@ S'entraîner sur des chutes, cordon après cordon, avant de souder quelque chose
 - **Jamais sur un réservoir ou un bidon** qui a contenu du carburant : les vapeurs restantes explosent.
 - **Au sec** : pas de soudure les pieds dans l'eau ni avec des gants mouillés.
 
-## Sans poste
-
-Deux ou trois **batteries de voiture en série** (24 à 36 V), des câbles de démarrage et une pince porte-électrode font un poste de fortune pour une réparation d'urgence. Les batteries chauffent et dégagent de l'hydrogène : par courtes séances, loin des étincelles de l'arc.
-
-Le groupe électrogène : [[TEC-ENE-013]]. Reconnaître les métaux : [[TEC-ATE-005]].
+À lire aussi : [[TEC-ENE-013]], [[TEC-ATE-005]].

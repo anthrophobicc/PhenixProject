@@ -31,8 +31,4 @@ sources: ["Wikipédia, article « Coopérative d'utilisation de matériel agrico
 - **Une caisse** alimentée à chaque utilisation pour les réparations et le remplacement.
 - **Un engagement écrit** sur plusieurs années, le temps de rembourser l'achat.
 
-## En crise
-
-Le modèle vaut pour tout ce qui coûte cher et sert peu : un four à pain collectif, un atelier commun, un pressoir, un moulin, un séchoir. Il vaut aussi pour les savoir-faire : celui qui sait réparer le moteur est aussi précieux que le moteur.
-
-S'organiser à plusieurs : [[SURV-SOC-001]]. Tenir les comptes du groupe : [[SURV-SOC-009]]. Désamorcer un conflit : [[SURV-SOC-003]].
+À lire aussi : [[SURV-SOC-001]], [[SURV-SOC-009]], [[SURV-SOC-003]].

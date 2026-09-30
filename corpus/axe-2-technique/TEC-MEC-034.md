@@ -37,6 +37,4 @@ sources: ["Règlement (UE) n° 168/2013, définition des cycles à pédalage ass
 
 Le même qu'un vélo : pneus, freins (qui travaillent plus, à cause du poids et de la vitesse), chaîne. Voir [[TEC-MEC-004]] et [[TEC-MEC-024]].
 
-## En crise
-
-Sans carburant, un vélo électrique et un petit panneau solaire restent un moyen de se déplacer, de transporter, de partir. Voir [[SURV-DEP-012]] et [[SURV-CRI-014]].
+À lire aussi : [[SURV-DEP-012]], [[SURV-CRI-014]].

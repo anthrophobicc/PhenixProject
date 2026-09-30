@@ -15,7 +15,7 @@ sources: ["ANSM, bon usage du paracétamol et des anti-inflammatoires non stéro
 
 ::Une attelle bien posée sur une jambe cassée soulage plus que n'importe quel comprimé. Contre la douleur, les médicaments ne sont qu'une partie de la réponse, et le plus banal d'entre eux, le paracétamol, est aussi, en France, la première cause de greffe du foie due à un médicament, quand on dépasse la dose.::
 
-## Sans médicament
+## Les moyens non médicamenteux
 
 - **Immobiliser** ce qui est cassé ou foulé. Voir [[URG-FRAC-001]].
 - **Le froid** sur un coup, une entorse, une brûlure récente (les deux premiers jours), jamais la glace directement sur la peau.

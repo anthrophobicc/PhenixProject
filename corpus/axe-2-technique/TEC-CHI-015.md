@@ -23,7 +23,7 @@ Sur un sac d'engrais, trois chiffres : **N-P-K**.
 - **P, le phosphore** : les racines, les fleurs, les graines.
 - **K, le potassium** : la santé de la plante, la qualité des fruits, la résistance à la sécheresse et aux maladies.
 
-## Les sources sans usine
+## Les sources naturelles
 
 - **L'azote** : le fumier, le compost, **l'urine diluée**, les engrais verts de légumineuses. Voir [[TEC-AGR-017]] et [[TEC-AGR-028]].
 - **Le phosphore** : les os broyés ou calcinés, le fumier de volaille, la cendre.

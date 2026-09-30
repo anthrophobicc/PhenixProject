@@ -40,6 +40,4 @@ sources: ["Organisation mondiale de la santé, Rapport mondial sur la vision, 20
 - **Un œil rouge et très douloureux** avec vision floue, halos, maux de tête, nausées : une crise de glaucome.
 - **Une vision double** soudaine, un côté du visage qui tombe : un AVC. Voir [[URG-AVC-001]].
 
-## Avant une crise
-
-Une paire de lunettes de rechange et une copie de l'ordonnance, dans le sac d'évacuation. Voir [[SURV-CRI-004]].
+À lire aussi : [[SURV-CRI-004]].
