@@ -46,3 +46,5 @@ L'œuf entier se congèle mal en coquille, qui éclate. Cassé et battu avec une
 - **La salmonelle** se transmet surtout par les œufs fêlés, sales ou crus. Les œufs conservés longtemps se consomment cuits à cœur, et jamais crus pour les femmes enceintes, les jeunes enfants et les personnes fragiles.
 
 Les poules : [[TEC-ELE-008]]. Les réserves : [[TEC-ALI-008]].
+
+Le faire soi-même, pas à pas : [[SURV-RES-021]].

@@ -44,3 +44,5 @@ sources: ["Organisation mondiale de la santé, fiches techniques eau et assainis
 En France, un puits ou un forage domestique se déclare en mairie, et tout forage de plus de 10 mètres se déclare aussi au titre du Code minier.
 
 Le puits et son entretien : [[TEC-CON-003]].
+
+Le faire soi-même, pas à pas : [[SURV-RES-025]].

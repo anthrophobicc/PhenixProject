@@ -39,3 +39,5 @@ sources: ["USB Implementers Forum, spécifications USB 2.0 et USB Power Delivery
 ## La charge d'une batterie au lithium
 
 Les 80 premiers pour cent se chargent vite ; les derniers ralentissent pour protéger la batterie. En situation de crise, une charge partielle et fréquente est donc plus efficace qu'une charge complète.
+
+Le faire soi-même, pas à pas : [[SURV-ENE-003]].

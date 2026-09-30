@@ -41,3 +41,5 @@ Il remonte le sucre d'un diabétique sous insuline tombé inconscient d'hypoglyc
 - **Une aiguille est à usage unique**, jamais partagée. Les aiguilles et seringues réutilisées transmettent les hépatites B et C et le VIH : l'OMS a lancé des programmes mondiaux pour les supprimer.
 - **Les aiguilles usagées** vont dans un collecteur rigide ; les piqûres accidentelles surviennent surtout quand on remet le capuchon.
 - **Les signes d'infection** au point d'injection : rougeur qui s'étend, chaleur, douleur qui augmente. Voir [[TEC-SAN-028]].
+
+Le faire soi-même, pas à pas : [[SURV-HYG-010]].

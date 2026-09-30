@@ -44,3 +44,5 @@ sources: ["Garsault F.-A. de, L'Art du cordonnier, Descriptions des arts et mét
 Découpées dans la bande de roulement d'un pneu, avec des lanières en chambre à air ou en cuir, elles sont portées par des millions de personnes en Afrique et en Asie et durent des années.
 
 Les pieds : [[SURV-DEP-003]]. Le cuir : [[TEC-MAT-010]].
+
+Le faire soi-même, pas à pas : [[SURV-RES-014]].

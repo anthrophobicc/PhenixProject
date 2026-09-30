@@ -40,3 +40,5 @@ Dans l'Union européenne, la plupart des smartphones envoient automatiquement le
 Les secours recommandent de rester à l'endroit indiqué, de se rendre visible (couleur vive, lumière, miroir, feu) et de garder le téléphone allumé en économisant sa batterie. Voir [[SIG-COM-001]] et [[SIG-COM-013]].
 
 Lire une carte : [[SURV-ORI-002]]. Perdu : [[URG-PERDU-001]].
+
+Le faire soi-même, pas à pas : [[SIG-COM-020]].

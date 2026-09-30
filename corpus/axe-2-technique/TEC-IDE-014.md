@@ -41,3 +41,5 @@ Les guides de voyage et de secours retiennent une vingtaine de mots : bonjour, m
 Un dessin du corps permet de montrer où se situe la douleur, et l'échelle des visages, du sourire aux larmes, d'en indiquer l'intensité : elle a été conçue pour les enfants et fonctionne dans toutes les langues.
 
 Se signaler sans parler : [[SIG-COM-001]].
+
+Le faire soi-même, pas à pas : [[SIG-COM-021]].

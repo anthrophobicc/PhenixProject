@@ -39,3 +39,5 @@ sources: ["USDA Food Safety and Inspection Service, Leftovers and Food Safety et
 ## En cuisine collective
 
 Les intoxications collectives viennent souvent des grandes quantités refroidies lentement et réchauffées plusieurs fois. Voir [[TEC-ALI-032]] et, pour la diarrhée qui suit, [[TEC-SAN-011]].
+
+Le faire soi-même, pas à pas : [[SURV-RES-023]].

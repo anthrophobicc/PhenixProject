@@ -41,3 +41,5 @@ Chez l'enfant, les valeurs normales sont plus élevées : un nourrisson respire 
 - **L'oxymètre de doigt**, peu coûteux et sur piles, donne pouls et saturation, mais se trompe sur des doigts froids ou couverts de vernis.
 
 La fièvre : [[TEC-SAN-002]]. Examiner une victime : [[URG-SEC-001]].
+
+Le faire soi-même, pas à pas : [[SURV-HYG-009]].

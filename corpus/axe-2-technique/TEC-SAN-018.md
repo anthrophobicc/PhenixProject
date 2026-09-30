@@ -49,3 +49,5 @@ La prise en charge intégrée des maladies de l'enfant de l'OMS liste les signes
 - du pus dans les yeux.
 
 Accoucher sans médecin : [[URG-SEC-007]]. Réanimer un bébé : [[URG-SEC-012]]. Nourrir un bébé et un jeune enfant : [[TEC-ALI-021]].
+
+Le faire soi-même, pas à pas : [[SURV-HYG-008]].

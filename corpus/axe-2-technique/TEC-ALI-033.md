@@ -38,3 +38,5 @@ sources: ["David E., English Bread and Yeast Cookery, 1977", "Alford J., Duguid 
 La cuisson d'un pain demande surtout une chaleur forte et rapide sur une pâte fine, ou une chaleur enveloppante sur une pâte épaisse : une plaque, une pierre, une poêle ou une cocotte y suffisent.
 
 Du blé au pain : [[TEC-AGR-009]]. Le four : [[TEC-ALI-025]].
+
+Le faire soi-même, pas à pas : [[SURV-RES-017]].

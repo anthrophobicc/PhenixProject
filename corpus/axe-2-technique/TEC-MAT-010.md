@@ -42,3 +42,5 @@ sources: ["Richards M., Deerskins into Buckskins: How to Tan with Brains, Soap o
 ## Le cuir et ses usages
 
 Selon l'épaisseur et le tannage : semelles et harnais, chaussures et sacs, vêtements, gants, reliure. Le cuir se nourrit de graisses et de cires qui le gardent souple et le protègent de l'eau. Voir [[TEC-MAT-012]].
+
+Le faire soi-même, pas à pas : [[SURV-RES-013]].

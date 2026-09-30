@@ -47,3 +47,5 @@ Les normes humanitaires internationales (manuel Sphère) visent au moins 2 100 k
 Une même louche et un même bol pour tous, des parts servies devant tout le monde et des besoins particuliers annoncés publiquement évitent les soupçons et les conflits. Voir [[SURV-SOC-008]].
 
 La soupe de rien : [[SURV-RES-004]]. Les aliments gâtés : [[TEC-ALI-010]].
+
+Le faire soi-même, pas à pas : [[SURV-RES-022]].

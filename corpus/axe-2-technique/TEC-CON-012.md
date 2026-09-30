@@ -41,3 +41,5 @@ Petite, au centre de la maison, avec peu de murs sur l'extérieur, peu ou pas de
 - **Les canalisations** des pièces non chauffées peuvent geler et éclater. Voir [[TEC-CON-025]].
 
 L'hypothermie : [[URG-HYPO-001]].
+
+Le faire soi-même, pas à pas : [[SURV-ABRI-006]].

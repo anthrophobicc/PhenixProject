@@ -42,3 +42,5 @@ Une base forte attaque les tissus plus profondément qu'un acide de force compar
 ## Savons et détergents
 
 Les détergents de synthèse, apparus au XXe siècle, fonctionnent sur le même principe de molécule à double nature, mais ne forment pas de dépôt avec le calcaire de l'eau dure, contrairement au savon. Certaines plantes, comme la saponaire, contiennent des saponines, des molécules naturellement moussantes au pouvoir lavant réel mais modeste.
+
+Le faire soi-même, pas à pas : [[SURV-RES-012]].

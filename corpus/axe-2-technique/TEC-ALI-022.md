@@ -49,3 +49,5 @@ Poireaux, carottes, panais, topinambours et choux passent l'hiver au potager sou
 - **Les pertes après récolte** représentent une part considérable de la production dans les pays chauds, surtout à cause des insectes, des rongeurs et de l'humidité. Voir [[TEC-ALI-015]].
 
 Le froid sans réfrigérateur : [[TEC-ALI-011]]. Les réserves : [[TEC-ALI-008]].
+
+Le faire soi-même, pas à pas : [[SURV-RES-020]].

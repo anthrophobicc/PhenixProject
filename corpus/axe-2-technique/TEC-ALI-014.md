@@ -40,3 +40,5 @@ L'expérience du Minnesota, menée en 1944-1945 sur des volontaires objecteurs d
 La malnutrition aiguë sévère de l'enfant se traite avec des laits thérapeutiques spéciaux, puis des pâtes nutritives prêtes à l'emploi, sous suivi médical : c'est l'un des traitements les plus délicats de la médecine humanitaire. L'allaitement est maintenu.
 
 Ce que le corps consomme : [[TEC-ALI-001]]. Les carences : [[TEC-ALI-013]]. Le jeûne : [[TEC-ALI-023]].
+
+Le faire soi-même, pas à pas : [[SURV-RES-024]].

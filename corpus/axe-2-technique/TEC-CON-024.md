@@ -41,3 +41,5 @@ Un mur est porteur quand un plancher, une charpente ou un autre mur repose dessu
 - **Les bâtiments qui penchent**, ont perdu un mur ou dont les escaliers sont fissurés sont considérés comme inaccessibles.
 
 Les séismes : [[TEC-TER-003]]. La ville en ruines : [[SURV-MIL-004]]. Le mur en maçonnerie : [[TEC-CON-033]].
+
+Le faire soi-même, pas à pas : [[SURV-ABRI-007]].

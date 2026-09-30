@@ -39,3 +39,5 @@ Le bois est fait de fibres alignées dans le sens du tronc. Il se fend facilemen
 - **Tremper une hache dans l'eau** pour resserrer le fer est une fausse bonne idée : le bois gonfle, s'écrase, et le fer ballotte encore plus une fois sec.
 
 Les assemblages : [[TEC-ATE-012]]. L'affûtage : [[TEC-ATE-004]]. Le bois de chauffage : [[TEC-ENE-019]].
+
+Le faire soi-même, pas à pas : [[SURV-RES-015]].

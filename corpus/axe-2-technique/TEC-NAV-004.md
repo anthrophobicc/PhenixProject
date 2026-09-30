@@ -40,3 +40,5 @@ sources: ["Heyerdahl T., L'Expédition du Kon-Tiki, 1948", "US Army, FM 21-76 Su
 Les radeaux ont transporté les premiers humains vers l'Australie il y a des dizaines de milliers d'années, selon la plupart des chercheurs. En Europe, des trains de bois flottés descendaient les rivières jusqu'aux villes : le bois de chauffage de Paris arrivait ainsi du Morvan, jusqu'au début du XXe siècle.
 
 Le radeau de survie en mer : [[SURV-MIL-003]].
+
+Le faire soi-même, pas à pas : [[SURV-DEP-017]].

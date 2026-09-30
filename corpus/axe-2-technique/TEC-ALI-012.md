@@ -46,3 +46,5 @@ sources: ["Calvel R., Le goût du pain, Éditions Jérôme Villette", "Gänzle M
 - **Séché** en couche fine puis émietté, il se garde des mois dans un bocal et repart en quelques jours avec de l'eau et de la farine. C'est ainsi qu'il voyage et se donne.
 
 Le pain sans four : [[TEC-ALI-033]]. Du blé au pain : [[TEC-AGR-009]]. La fermentation : [[TEC-ALI-002]].
+
+Le faire soi-même, pas à pas : [[SURV-RES-016]].

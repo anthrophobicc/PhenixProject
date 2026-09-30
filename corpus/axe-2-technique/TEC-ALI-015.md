@@ -40,3 +40,5 @@ sources: ["FAO, Manuel de manutention et de stockage des grains dans les petites
 Les feuilles de laurier dans la farine gênent un peu les insectes sans les empêcher. Le chat reste le plus ancien piège à souris, et la raison pour laquelle il a été domestiqué avec les premiers greniers à grain.
 
 Les réserves et leur rotation : [[TEC-ALI-008]]. Garder les récoltes : [[TEC-ALI-022]].
+
+Le faire soi-même, pas à pas : [[SURV-RES-019]].

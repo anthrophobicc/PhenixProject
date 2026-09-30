@@ -42,3 +42,5 @@ Les « foxhole radios » de la Seconde Guerre mondiale remplaçaient le cristal 
 Un long fil tendu en hauteur capte aussi les décharges atmosphériques : les antennes de ce type ne restent pas en place par temps d'orage, et ne passent jamais près d'une ligne électrique.
 
 Les composants électroniques : [[TEC-ELN-013]].
+
+Le faire soi-même, pas à pas : [[SIG-COM-019]].

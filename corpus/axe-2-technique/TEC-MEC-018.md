@@ -39,3 +39,5 @@ sources: ["INRS, manutention manuelle de charges (ED 6161)", "FEMA, Urban Search
 ## Les ressources improvisées
 
 Une chambre à air gonflée ou un sac peut servir de coussin de levage pour les premiers centimètres ; une corde enroulée plusieurs fois autour d'un arbre freine une charge qui descend, la friction retenant bien plus que les bras.
+
+Le faire soi-même, pas à pas : [[SURV-RES-026]].

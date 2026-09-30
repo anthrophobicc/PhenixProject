@@ -41,3 +41,5 @@ sources: ["Manuels de franchissement tout-terrain (Land Rover Experience, Toyota
 Dans le sable, ils s'arrêtent sur du plat dur ou en descente, jamais en montée ; en montagne, ils montent les chaînes avant d'être bloqués. Bloqué loin de tout, le véhicule reste le meilleur abri et le plus visible. Voir [[URG-PERDU-001]].
 
 La conduite sur neige : [[TEC-MEC-019]].
+
+Le faire soi-même, pas à pas : [[SURV-DEP-014]].

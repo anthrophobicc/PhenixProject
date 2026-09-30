@@ -40,3 +40,5 @@ Une source ou un ruisseau reste frais toute l'année. Les maisons de source, fr�
 - **Le froid de l'hiver et de la nuit** suffit à conserver dans une caisse fermée à l'abri des animaux.
 
 Une coupure de courant avec un réfrigérateur plein : [[SURV-CRI-001]].
+
+Le faire soi-même, pas à pas : [[SURV-RES-018]].

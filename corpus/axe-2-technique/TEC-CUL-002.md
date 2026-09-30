@@ -37,3 +37,5 @@ sources: ["UNESCO et INEE, Normes minimales pour l'éducation : préparation, in
 - **Le jeu et les projets concrets**, qui entretiennent l'envie d'apprendre. Voir [[TEC-CUL-004]].
 
 Le conte et la transmission orale : [[TEC-CUL-005]].
+
+Le faire soi-même, pas à pas : [[SURV-SOC-011]].

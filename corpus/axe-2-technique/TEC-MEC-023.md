@@ -35,3 +35,5 @@ sources: ["Sécurité routière (France), conduite à tenir en cas de panne ou d
 - **Sur autoroute**, les occupants se mettent à l'abri derrière la glissière et appellent par une borne ou au 112.
 
 Le pneu : [[TEC-MEC-010]]. Réparer un pneu : [[SURV-REC-024]].
+
+Le faire soi-même, pas à pas : [[SURV-DEP-016]].

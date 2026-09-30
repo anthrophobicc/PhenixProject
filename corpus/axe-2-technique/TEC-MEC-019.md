@@ -41,3 +41,5 @@ sources: ["Sécurité routière, conduire en hiver", "Code de la route et obliga
 Les consignes de sécurité civile sont de rester dans la voiture, qui abrite et se voit, de dégager le pot d'échappement avant de faire tourner le moteur (sinon le monoxyde de carbone entre dans l'habitacle, voir [[TEC-CON-010]]), de ne le faire tourner que quelques minutes par heure, et de signaler la voiture par un tissu voyant.
 
 Sortir d'une ornière : [[TEC-MEC-016]]. Le froid qui devient dangereux : [[URG-HYPO-001]].
+
+Le faire soi-même, pas à pas : [[SURV-DEP-015]].
