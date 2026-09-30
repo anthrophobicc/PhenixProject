@@ -53,7 +53,7 @@ Un acier très dur garde son tranchant et s'ébrèche. Un acier plus tendre s'é
 
 Le traitement thermique décide de tout : chauffer puis refroidir brutalement durcit l'acier mais le rend cassant ; le réchauffer ensuite modérément lui rend de la ténacité en lui retirant un peu de dureté. Un acier récupéré et affûté sans connaître son traitement donnera un résultat imprévisible — c'est la principale difficulté de la récupération, traitée dans [[SURV-REC-002]].
 
-## Reconnaître un outil récupérable
+## L'état d'un outil ancien
 
 Un fil émoussé se refait en quelques minutes. Un fil ébréché demande de reprendre le profil sur plusieurs millimètres. Un fil tordu se redresse. **Une lame fissurée ne se répare pas** : la fissure se propage sous la contrainte.
 

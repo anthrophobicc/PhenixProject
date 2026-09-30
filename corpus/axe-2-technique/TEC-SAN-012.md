@@ -35,7 +35,7 @@ Même en réanimation, une partie des malades meurt. **Sans soins modernes, la m
 - **Après une plaie à risque** chez quelqu'un dont le dernier rappel date de plus de 5 à 10 ans : consulter pour un rappel, et parfois des anticorps (immunoglobulines).
 - **Nettoyer toute plaie** longuement à l'eau et au savon, retirer la terre et les corps étrangers, ne pas refermer une plaie sale. Voir [[URG-SEC-009]].
 
-## Ce qu'il faut savoir en situation difficile
+## Quand le vaccin ou les soins manquent
 
 - **Faites vos rappels maintenant.** Quand les pharmacies sont fermées et les hôpitaux débordés, il est trop tard.
 - **Notez la date de votre dernier rappel** avec vos papiers ; la plupart des gens l'ignorent.

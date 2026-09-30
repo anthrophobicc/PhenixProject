@@ -30,7 +30,7 @@ Les chutes de hauteur sont l'une des premières causes d'accident mortel au trav
 2. **Remonter** la trace vers le haut de la pente.
 3. Planter un clou ou un fil de fer à travers, qui servira de repère dehors.
 
-## La bâche d'urgence
+## Le bâchage provisoire
 
 Après une tempête, la technique utilisée à grande échelle aux États-Unis :
 

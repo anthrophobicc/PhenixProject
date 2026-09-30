@@ -27,14 +27,14 @@ Le téléphone est **une radio** qui parle à l'antenne relais la plus proche, �
 - **Pour qu'elle dure des années** : éviter de la laisser à 0 % ou à 100 % longtemps, et de la chauffer.
 - **La recharger sans prise** : [[TEC-ENE-014]].
 
-## Ce qui marche sans réseau
+## Les fonctions hors réseau
 
 - **La boussole** et **le GPS**, avec des cartes téléchargées. Voir [[TEC-ELN-010]].
 - **La lampe**, l'**appareil photo** (photographier ses papiers, une carte, une ordonnance), la **loupe**.
 - **Les livres et encyclopédies** téléchargés. Voir [[TEC-ELN-012]].
 - **Le dictaphone**, les notes, les traductions hors ligne. Voir [[TEC-IDE-014]].
 
-## À régler aujourd'hui
+## Les réglages utiles
 
 - **La fiche médicale d'urgence**, lisible sans déverrouiller : groupe sanguin, allergies, traitements, personne à prévenir. Les secours la cherchent.
 - **Les contacts importants** aussi sur papier : le jour où le téléphone meurt, on ne connaît plus aucun numéro.

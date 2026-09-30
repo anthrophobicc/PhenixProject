@@ -33,17 +33,13 @@ Dans le petit triangle sous les objets :
 
 Un fer à souder ou un décapeur thermique, et des baguettes **du même plastique** (découpées dans un objet de même code) : on chauffe les deux bords et la baguette, on fait fondre ensemble, on lisse. Ça répare un bidon fendu, une caisse, un seau.
 
-## Récupérer le caoutchouc
+## Le réemploi du caoutchouc
 
 - **Les chambres à air** : bandes élastiques, tendeurs, liens, joints, rustines, sangles, semelles. Voir [[SURV-REC-024]].
 - **Les pneus** : semelles de sandales inusables, protections, bacs de culture.
 - **Les gants et les bottes** percés : pièces, joints, élastiques.
 
 Le caoutchouc vieillit au **soleil**, à la **chaleur** et à l'**ozone** : on le range à l'ombre.
-
-## Recycler soi-même
-
-Des plans libres permettent de construire des broyeurs, des presses et des extrudeuses pour transformer les déchets plastiques en planches, en pièces et en objets. Des ateliers en construisent partout dans le monde.
 
 ## Les dangers
 

@@ -53,7 +53,7 @@ L'air chaud d'un logement contient de la vapeur. En montant, il rencontre la sou
 
 Deux dispositifs le préviennent. Une **barrière** côté chaud, qui empêche la vapeur de monter. Une **ventilation** entre l'isolant et la couverture, qui évacue ce qui est passé quand même. **Isoler sans ventiler transforme une toiture saine en toiture pourrie en quelques saisons** — c'est l'erreur centrale décrite dans [[TEC-CON-001]].
 
-## Réparer et improviser
+## Les réparations
 
 **Réparer une couverture existante** commence par trouver l'entrée d'eau, qui est presque toujours **en amont de la trace visible** : l'eau circule sur la charpente avant de tomber. On cherche donc plus haut que la tache.
 

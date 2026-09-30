@@ -15,7 +15,7 @@ sources: ["Boyer P., Et l'homme créa les dieux, le mécanisme cognitif de la cr
 
 ::Les religions ne sont pas un accident de l'histoire. Elles sont un produit de la cognition humaine — le résultat de la façon dont le cerveau détecte des agents, cherche des causes et construit des groupes. Comprendre le mécanisme, c'est comprendre pourquoi toutes les sociétés humaines en ont produit, indépendamment les unes des autres.::
 
-## COMPRENDRE
+## Comment ça marche
 
 ### Le cerveau fabrique la croyance
 
@@ -52,7 +52,7 @@ Les croyances qui traversent les siècles ne sont pas les plus vraies mais les p
 
 Toutes les religions humaines, indépendamment de leur géographie, contiennent un ou plusieurs de ces éléments : un récit de création, un héros fondateur, une vie après la mort, des règles alimentaires, la sacralisation d'un lieu, et un clergé qui interprète les règles. Ce n'est pas une coïncidence — ce sont les mêmes mécanismes cognitifs et sociaux qui produisent les mêmes structures.
 
-## ADAPTER
+## Les cas particuliers
 
 **Vous voulez comprendre une religion que vous ne connaissez pas.** Cherchez les fonctions : quel groupe tient-elle ensemble ? quel comportement sanctionne-t-elle ? quel récit fondateur raconte-t-elle ? Les réponses varient, la grille ne change pas.
 

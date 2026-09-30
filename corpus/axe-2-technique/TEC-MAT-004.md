@@ -15,7 +15,7 @@ sources: ["Barber E., Prehistoric Textiles, The Development of Cloth", "Document
 
 ::Le vêtement est la première technologie. Avant l'outil en pierre polie, les peaux cousues ont permis aux humains de survivre là où leur corps nu ne le pouvait pas. Fabriquer un vêtement, c'est transformer une matière en protection — et chaque matière dicte ses règles.::
 
-## COMPRENDRE
+## Comment ça marche
 
 ### Les matières et ce qu'elles font
 
@@ -43,7 +43,7 @@ Chaque fibre a un caractère, et le choisir mal ruine le vêtement.
 
 Le jean réunit tout : du coton filé serré en sergé, teint à l'indigo, renforcé de rivets en cuivre aux points de tension — poches, entrejambe. Il a été conçu pour les mineurs de la ruée vers l'or. Un vêtement de travail devenu universel parce que sa construction est la bonne réponse à la contrainte mécanique.
 
-## AGIR
+## En pratique
 
 ### Construire un vêtement
 
@@ -55,7 +55,7 @@ Le jean réunit tout : du coton filé serré en sergé, teint à l'indigo, renfo
 
 **4. Les finitions.** Ourlets (bords repliés et cousus pour ne pas s'effilocher), boutons ou lacets de fermeture, renforts aux points de tension — genoux, coudes, entrejambe, aisselles.
 
-## ADAPTER
+## Les cas particuliers
 
 **Vous n'avez que de la récupération.** Défaire un vêtement trop abîmé pour récupérer le tissu. Les coutures se décousent, les morceaux se repatronent en pièces plus petites. Un manteau d'adulte donne un vêtement d'enfant.
 

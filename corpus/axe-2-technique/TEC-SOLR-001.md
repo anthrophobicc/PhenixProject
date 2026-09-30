@@ -56,7 +56,7 @@ Deux corrections indispensables. Les pertes de la chaîne complète — câbles,
 
 **Sécurité.** Un panneau exposé à la lumière est sous tension en permanence : il n'y a pas d'interrupteur naturel. On le couvre d'un tissu opaque avant d'intervenir. Une batterie au plomb en charge dégage de l'hydrogène, inflammable et explosif en espace confiné : ventilation obligatoire, aucune flamme ni étincelle à proximité.
 
-## Selon le matériel disponible
+## Les configurations
 
 **Vous récupérez du matériel.** Les panneaux de signalisation routière, d'éclairage urbain et de mobilier de jardin sont partout et fonctionnent immédiatement. Vérifiez l'absence de fissure dans le verre : un panneau fissuré laisse entrer l'humidité et perd sa puissance progressivement, sans que rien ne se voie au premier essai.
 

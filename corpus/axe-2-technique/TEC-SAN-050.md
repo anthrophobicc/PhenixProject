@@ -38,7 +38,7 @@ Sinon, c'est très probablement une entorse. Voir [[URG-FRAC-001]] pour une frac
 - **Des exercices d'équilibre** : tenir sur un pied, les yeux ouverts puis fermés, quelques minutes par jour. C'est ce qui évite la rechute.
 - **Une entorse grave** (craquement, gros gonflement immédiat, articulation qui se dérobe) demande un avis médical.
 
-## Sur le terrain
+## Loin des soins
 
 - **Garder la chaussure** si on doit marcher : elle soutient et limite le gonflement.
 - **Un strapping** avec du ruban adhésif large, ou une attelle de fortune.

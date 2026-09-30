@@ -15,7 +15,7 @@ sources: ["OMS, Guide de mise en œuvre des puits protégés en milieu rural", "
 
 ::Creuser un puits, c'est aller chercher une nappe qui existe déjà. On ne crée pas l'eau, on descend jusqu'à elle et on empêche le trou de se refermer.::
 
-## COMPRENDRE
+## Comment ça marche
 
 ### D'où vient l'eau d'un puits
 
@@ -37,7 +37,7 @@ Ils tuent chaque année, et deux sur trois ne se voient pas.
 
 **La noyade et la chute.** Une paroi qui cède noie celui qui est au fond avant qu'on ait le temps de le remonter.
 
-## AGIR
+## En pratique
 
 ### 1. Trouver où creuser
 
@@ -70,7 +70,7 @@ C'est ce qui décide si l'eau reste potable.
 - **Un couvercle**, contre les chutes — d'enfants, d'animaux — et contre les feuilles et la poussière.
 - **Un seul point de puisage** : une pompe scellée, ou un seau attitré qui ne touche jamais le sol. Le seau posé par terre entre deux usages est la première cause de contamination d'un puits sain.
 
-## ADAPTER
+## Les cas particuliers
 
 **Le sol est rocheux.** Le creusement manuel devient très lent, mais la roche fissurée porte l'eau et tient les parois seule. On suit les fissures ; le cuvelage devient inutile en roche saine.
 

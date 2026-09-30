@@ -15,7 +15,7 @@ sources: ["Documentation sur la couture à la main et les points de base", "Manu
 
 ::Coudre, c'est assembler. Deux morceaux de tissu, une aiguille et un fil — le reste n'est que variation. La machine accélère, mais la main fait tout ce que la machine fait, en plus lent et souvent en plus solide.::
 
-## COMPRENDRE
+## Comment ça marche
 
 ### Le principe unique
 
@@ -39,7 +39,7 @@ La machine fait un point que la main ne peut pas faire : le **point noué**. Deu
 
 **Une machine mécanique fonctionne sans électricité.** Les anciennes machines à pédale ou à manivelle sont des technologies complètes et autonomes. Voir [[TEC-MEC-001]].
 
-## AGIR
+## En pratique
 
 ### Coudre à la main
 
@@ -71,7 +71,7 @@ La machine fait un point que la main ne peut pas faire : le **point noué**. Deu
 
 **Réparer un accroc.** Rapprocher les bords, coudre au point arrière serré. Si le trou est grand : poser une pièce de tissu en renfort, coudre tout autour.
 
-## ADAPTER
+## Les cas particuliers
 
 **Pas d'aiguille.** Une épingle de sûreté, une épine d'acacia, un clou fin limé, un os taillé. Le chas se perce ou on attache le fil derrière la tête.
 

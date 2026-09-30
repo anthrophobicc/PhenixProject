@@ -23,7 +23,7 @@ sources: ["Kurlansky M., Salt: A World History, 2002", "Organisation mondiale de
 
 Il ne se périme jamais, s'il reste au sec. Une réserve de sel est aussi une monnaie d'échange. Voir [[SURV-TROC-002]].
 
-## Le tirer de la mer
+## Le sel de mer
 
 L'eau de mer contient environ **35 grammes de sels par litre**, dont la plus grande partie est du sel de cuisine. Dix litres donnent environ 300 grammes.
 

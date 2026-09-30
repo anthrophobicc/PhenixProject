@@ -76,7 +76,7 @@ Le centre antiterroriste américain publie des distances d'évacuation indicativ
 
 **Ce que retiennent ceux qui ont vu :** ce ne sont pas les mètres qui protègent, c'est ce qu'il y a entre vous et la charge. Un mur épais, un talus, un coin de bâtiment. Et **les vitres** : la plupart des blessés d'une explosion urbaine le sont par du verre, parfois à des centaines de mètres. Loin des fenêtres.
 
-## Les astuces de terrain
+## Ce que savent les démineurs
 
 - **Un explosif ancien est plus dangereux qu'un neuf.** Une vieille dynamite « sue » : la nitroglycérine suinte et forme des cristaux ou des gouttes huileuses sur les bâtons ou le carton. À ce stade, un choc suffit. On ne touche plus, on appelle le déminage.
 - **Les panneaux « Coupez vos émetteurs radio »** près des chantiers de tir ne sont pas une blague. Certains détonateurs électriques peuvent être déclenchés par un émetteur puissant tout proche. Talkie-walkie et téléphone éteints à proximité d'un tir.
@@ -84,7 +84,7 @@ Le centre antiterroriste américain publie des distances d'évacuation indicativ
 - **Un fil qui dépasse, une boîte neuve dans un lieu abandonné, un objet qui n'a rien à faire là** : vous ne savez pas, donc vous ne touchez pas. Vous marquez l'endroit, vous vous éloignez par le chemin par lequel vous êtes venu.
 - **Les restes de guerre** tuent encore chaque année des agriculteurs et des promeneurs, en France comme ailleurs. Voir [[SURV-REC-010]].
 
-## Si vous en trouvez
+## La découverte d'un engin explosif
 
 1. Ne touchez pas, ne déplacez pas, ne coupez rien.
 2. Éloignez-vous par où vous êtes venu, et éloignez les autres.

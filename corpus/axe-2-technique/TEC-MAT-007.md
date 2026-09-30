@@ -15,7 +15,7 @@ sources: ["Documentation sur la conception des sacs à dos de randonnée et mili
 
 ::Un sac est un contenant souple qui transfère une charge du sol au corps. La différence entre un bon sac et un mauvais, c'est la répartition — pas le volume.::
 
-## COMPRENDRE
+## Comment ça marche
 
 ### Le problème de la charge portée
 
@@ -29,7 +29,7 @@ Un humain porte confortablement un cinquième de son poids, péniblement un tier
 
 **Le sac de transport / barda.** Sans armature, en toile résistante, avec des points d'attache. Le duffle bag, le sac marin, la musette. Polyvalent, roulable, mais sans confort de portage.
 
-## AGIR
+## En pratique
 
 ### Construire un sac à dos simple
 
@@ -53,7 +53,7 @@ Un humain porte confortablement un cinquième de son poids, péniblement un tier
 
 **Comprimer.** Des sangles de compression plaquent le contenu et empêchent le ballottement qui fatigue et déséquilibre.
 
-## ADAPTER
+## Les cas particuliers
 
 **Vous n'avez pas de tissu résistant.** Plusieurs couches de tissu léger cousues ensemble. Un jean découpé. Un rideau. Une bâche de chantier. La doublure augmente la résistance plus que l'épaisseur du fil.
 

@@ -15,7 +15,7 @@ sources: ["Cours d'optique physiologique, fonctionnement de l'oeil et amétropie
 
 ::La moitié de l'humanité voit mal sans correction. Quand les lunettes cassent et que l'opticien n'existe plus, comprendre pourquoi on voit flou est le premier pas pour y remédier — et un carton percé d'un trou remplace toutes les lentilles du monde.::
 
-## COMPRENDRE
+## Comment ça marche
 
 ### Comment l'oeil voit
 
@@ -35,7 +35,7 @@ L'oeil est un appareil photo biologique. La cornée et le cristallin (deux lenti
 
 Un petit trou dans un matériau opaque ne laisse passer que les rayons lumineux centraux, qui n'ont pas besoin de lentille pour converger. Résultat : l'image est nette quelle que soit l'amétropie — myopie, hypermétropie, presbytie, astigmatisme léger. La contrepartie : le champ est réduit et la luminosité baisse. C'est le principe des lunettes sténopéiques.
 
-## AGIR
+## En pratique
 
 ### Fabriquer des lunettes sténopéiques (pinhole)
 
@@ -63,7 +63,7 @@ Ces lunettes corrigent la vue de lecture et la vision de loin. Elles ne remplace
 
 **Verres correcteurs.** Les verres de lunettes trouvés se testent en regardant un objet à travers à bout de bras : s'il paraît plus petit, c'est un verre de myope (divergent) ; plus gros, c'est un verre de presbyte (convergent). On peut les réutiliser en les montant dans une autre monture ou en les maintenant à la main.
 
-## ADAPTER
+## Les cas particuliers
 
 **Vous portez des lentilles de contact et n'en avez plus.** Les lentilles jetables ne se réutilisent pas longtemps — risque d'infection cornéenne. Passer aux lunettes sténopéiques dès que possible. Voir [[TEC-SAN-001]] pour les risques infectieux.
 

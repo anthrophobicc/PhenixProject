@@ -22,14 +22,6 @@ sources: ["Macfarlane A., Martin G., Glass: A World History, University of Chica
 - **Le pare-brise** est feuilleté : deux verres collés sur un film, il se fend sans tomber.
 - **Le verre dure** : des verres romains ont traversé deux mille ans.
 
-## Couper une bouteille
-
-1. **Rayer** une ligne continue tout autour avec un coupe-verre (un gabarit aide à rester droit).
-2. **Chauffer** la rayure (eau bouillante versée dessus, ou flamme de bougie en tournant), puis **refroidir** d'un coup à l'eau froide. Recommencer : elle se sépare net.
-3. **Poncer** longuement le bord sur du papier de verre mouillé ou une pierre, jusqu'à ce qu'il ne coupe plus.
-
-On en fait des verres, des pots, des lampes, des cloches pour le jardin. Voir [[TEC-AGR-011]].
-
 ## Remplacer une vitre
 
 1. Retirer les morceaux, **avec des gants épais** et des lunettes.
@@ -47,3 +39,5 @@ On en fait des verres, des pots, des lampes, des cloches pour le jardin. Voir [[
 - **Gants et lunettes**, toujours.
 - **Le verre cassé** se ramasse avec un pain de mie ou du ruban adhésif pour les éclats fins, et part dans un carton fermé et marqué : les éboueurs se coupent sur les sacs.
 - **Une coupure profonde** : voir [[URG-HEMO-001]].
+
+À lire aussi : [[TEC-AGR-011]].

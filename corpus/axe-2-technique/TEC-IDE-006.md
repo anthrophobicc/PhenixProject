@@ -49,7 +49,7 @@ Pour aller vite, on saute le code sous un certain montant, **50 euros en France*
 - Soupçon de fraude : achat inhabituel, pays inhabituel. Votre application bancaire le signale souvent.
 - **Pas de réseau.**
 
-## Quand le réseau tombe
+## Le paiement hors ligne
 
 Un terminal a besoin de deux choses : **du courant et une liaison** (ligne fixe, internet, ou carte SIM pour les terminaux mobiles).
 

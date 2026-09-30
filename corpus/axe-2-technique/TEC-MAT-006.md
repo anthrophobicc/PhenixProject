@@ -15,7 +15,7 @@ sources: ["Barber E., Prehistoric Textiles, fibres et techniques de filage", "Do
 
 ::Des fibres courtes et faibles, torsadées ensemble, deviennent un fil long et solide. C'est le principe du filage, et il n'a pas changé depuis dix mille ans. Ce qui a changé, c'est la vitesse — pas la physique.::
 
-## COMPRENDRE
+## Comment ça marche
 
 ### La torsion fait tout
 
@@ -33,7 +33,7 @@ On tord dans un sens — S ou Z, selon que la spirale monte vers la gauche ou ve
 
 **Le teillage (lin).** On casse la tige sèche pour séparer l'écorce fibreuse du bois intérieur. Puis on peigne. Le lin non teillé donne de la filasse grossière ; le lin peigné donne un fil fin.
 
-## AGIR
+## En pratique
 
 ### Filer au fuseau
 
@@ -66,7 +66,7 @@ Un fil de machine doit être fin, régulier, bien tordu et lisse. C'est le fil l
 - Un retordage : deux fils fins tordus ensemble en sens inverse.
 - Un passage à la cire pour lisser la surface et réduire le frottement dans le chas et la canette.
 
-## ADAPTER
+## Les cas particuliers
 
 **Vous n'avez que des fibres grossières.** Un fil grossier ne passe pas dans une machine mais se coud à la main et se tisse. Le fuseau accepte n'importe quelle fibre assez longue pour s'accrocher.
 

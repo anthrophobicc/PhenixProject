@@ -15,7 +15,7 @@ sources: ["Documentation technique sur l'architecture des multiroteurs civils", 
 
 ::Un drone est un robot volant avec des yeux. Quatre hélices, une batterie, un ordinateur qui tient l'équilibre mille fois par seconde, et une caméra qui voit ce que le pilote ne peut pas voir. Comprendre ce qu'il y a dedans, c'est comprendre ce qu'il peut et ce qu'il ne peut pas.::
 
-## COMPRENDRE
+## Comment ça marche
 
 ### Architecture d'un multiroteur
 
@@ -51,7 +51,7 @@ Quatre hélices, dont deux tournent dans un sens et deux dans l'autre — cela a
 
 Un drone civil moderne suit des waypoints GPS, revient au point de décollage si le signal est perdu (return-to-home), évite les obstacles par capteurs. Il n'est pas « autonome » au sens d'une intelligence — il suit un programme. La batterie est le facteur limitant : plus de charge utile = moins d'autonomie, et l'autonomie ne dépasse jamais la capacité de la batterie à fournir du courant.
 
-## AGIR
+## En pratique
 
 ### Principes de pilotage
 
@@ -69,7 +69,7 @@ En mode FPV (First Person View), le pilote porte un masque qui affiche l'image d
 
 **Calibration.** L'IMU et le compas se dérivent. Recalibrer régulièrement (la procédure est dans le contrôleur de vol).
 
-## ADAPTER
+## Les cas particuliers
 
 **Le signal GPS est brouillé ou absent.** Le drone perd la stabilisation de position et dérive au vent. Certains contrôleurs passent en mode altitude seule (baromètre) ou en mode manuel. Sans GPS, pas de return-to-home — le perdre de vue, c'est le perdre.
 

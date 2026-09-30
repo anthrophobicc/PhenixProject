@@ -15,7 +15,7 @@ sources: ["Documentation technique sur l'impression FDM et SLA", "RepRap Project
 
 ::Une imprimante 3D construit un objet en empilant des couches de matière fondue, une par une, du bas vers le haut. C'est lent, limité et révolutionnaire — parce que la seule machine qui fabrique n'importe quelle forme sans moule, sans outil de coupe et sans savoir-faire manuel.::
 
-## COMPRENDRE
+## Comment ça marche
 
 ### Le principe : la fabrication additive
 
@@ -45,7 +45,7 @@ Au lieu de tailler dans un bloc (soustraire) ou de couler dans un moule (former)
 
 **3. L'impression.** Le G-code est envoyé à l'imprimante (carte SD, USB, réseau). L'impression d'une pièce simple prend de quelques minutes à plusieurs heures. Une pièce grande et détaillée peut prendre une journée.
 
-## AGIR
+## En pratique
 
 ### Paramètres essentiels
 
@@ -69,7 +69,7 @@ Au lieu de tailler dans un bloc (soustraire) ou de couler dans un moule (former)
 
 **Sécher le filament.** Le PETG et le nylon absorbent l'humidité de l'air. Un filament humide crépite à l'impression et donne des surfaces bulleuses. Un passage au four (50 degrés, quelques heures) ou un boîtier étanche avec dessiccant règle le problème.
 
-## ADAPTER
+## Les cas particuliers
 
 **Vous imprimez une pièce mécanique.** Orientez-la pour que les couches soient perpendiculaires à la force principale. Les couches sont le point faible : une pièce se casse entre les couches, pas à travers.
 

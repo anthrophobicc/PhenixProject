@@ -28,7 +28,7 @@ sources: ["Banque de France, les moyens de paiement et leur fonctionnement", "Fe
 - **Le contrôle des capitaux** : en 2015, les Grecs ne pouvaient plus retirer que 60 euros par jour et par carte pendant des semaines.
 - **Les paiements par carte** s'arrêtent avec le réseau. Voir [[SURV-CRI-013]].
 
-## Se préparer
+## Les précautions
 
 - **Un peu de liquide** chez soi, en petites coupures.
 - **Deux comptes dans deux banques différentes**, et deux cartes.

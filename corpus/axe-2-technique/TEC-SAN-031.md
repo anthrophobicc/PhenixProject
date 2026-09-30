@@ -19,13 +19,13 @@ sources: ["Organisation mondiale de la santé, Santé bucco-dentaire, principaux
 
 Les bactéries de la plaque mangent le sucre et fabriquent de l'acide, qui ronge l'émail. **Ce qui compte, c'est la fréquence** plus que la quantité : dans les années 1940, une étude suédoise (contestable sur le plan éthique) a montré que les sucreries grignotées entre les repas donnaient bien plus de caries que la même quantité de sucre prise pendant les repas.
 
-## Se brosser sans rien
+## Le brossage
 
 - **La brindille** : un bout de bois tendre et frais (noisetier, saule, réglisse), écorcé, mâché au bout jusqu'à ce qu'il s'effiloche en brosse. On frotte, puis on recoupe le bout le lendemain.
 - **Un tissu propre** enroulé sur le doigt.
 - **Deux fois par jour, deux minutes**, sans oublier le bord des gencives.
 
-## Sans dentifrice
+## Les substituts du dentifrice
 
 - **Rien du tout** : le brossage seul fait déjà l'essentiel.
 - **Le bicarbonate de soude** : un peu sur la brosse mouillée, de temps en temps.

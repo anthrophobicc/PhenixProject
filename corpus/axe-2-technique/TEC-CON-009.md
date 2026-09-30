@@ -61,14 +61,6 @@ Les abris construits selon les normes, comme en Suisse, ont tous les mêmes él�
 
 **La Suisse** est le seul pays qui garantit par la loi, depuis 1963, une place d'abri à chaque habitant : il y en a plus que d'habitants. La Finlande, la Suède et Israël ont aussi de grands réseaux. En France, il n'existe pas de réseau d'abris pour la population.
 
-## Improviser un abri
-
-Des études de l'armée américaine l'ont montré : **un abri de fortune bien fait protège presque aussi bien** qu'un abri construit, pour les retombées.
-
-- **Une cave** : le coin le plus enterré, loin des soupiraux. Empilez tout ce qui est lourd contre les murs et sur le plafond au-dessus de vous : sacs de terre, livres, bidons d'eau, meubles pleins.
-- **Une tranchée couverte** : une tranchée d'un mètre de large, profonde comme vous, couverte de portes ou de planches puis de 60 à 90 cm de terre. C'est l'abri de Kearny, construit en 48 heures par des familles ordinaires lors des essais.
-- **Un immeuble** : le milieu du bâtiment, à mi-hauteur ou au sous-sol, loin du toit (où la poussière se dépose) et loin des murs extérieurs.
-
 ## Les astuces de ceux qui ont étudié la question
 
 - **La poussière est la vraie ennemie.** En entrant, retirez les vêtements extérieurs, mettez-les dans un sac loin de vous, lavez-vous ou essuyez-vous, cheveux compris. Cela retire la plus grande partie de la contamination.

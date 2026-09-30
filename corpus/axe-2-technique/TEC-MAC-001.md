@@ -64,7 +64,7 @@ Elle ne multiplie pas la force au sens strict : elle **supprime le frottement de
 
 **Sécurité, non négociable.** Ne restez jamais sous une charge ni dans l'axe d'une corde tendue — une rupture projette la corde et tout ce qui y est attaché. Calez la charge à chaque étape au lieu de la maintenir par la force. Une charge qui repose sur une cale ne tombe pas quand vous lâchez.
 
-## Selon les moyens
+## Les variantes
 
 **Vous êtes seul.** Privilégiez le levier et le calage progressif : soulever de trois centimètres, caler, recommencer. C'est lent, sûr, et cela permet de déplacer seul des masses considérables.
 

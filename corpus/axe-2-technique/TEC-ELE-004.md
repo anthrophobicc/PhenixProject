@@ -53,10 +53,4 @@ Elle consiste à déplacer régulièrement les animaux d'une parcelle à l'autre
 
 **Le cycle des parasites se casse.** C'est l'effet le plus important. Les larves de parasites internes sont déposées avec les excréments, se développent dans l'herbe, et sont réingérées quelques semaines plus tard. Déplacer les animaux avant la fin de ce cycle interrompt la contamination sans aucun traitement. **C'est de très loin le meilleur outil sanitaire d'un élevage extensif.**
 
-## Quand on n'a presque rien
-
-Un abri se fait avec ce qui coupe la pluie et laisse passer l'air : branchages, tôles récupérées, bâche tendue en appentis. Le principe est le même que pour un abri humain, décrit dans [[SURV-ABRI-001]], sauf qu'on ne cherche pas l'étanchéité à l'air.
-
-Une clôture s'improvise avec des piquets et n'importe quel lien tendu — voir [[TEC-MAT-003]] — ou par des obstacles naturels : haie, talus, cours d'eau. Une clôture imparfaite mais complétée par une surveillance vaut mieux qu'une clôture parfaite sur un seul côté.
-
-La reproduction du troupeau est traitée dans [[TEC-ELE-005]].
+À lire aussi : [[SURV-ABRI-001]], [[TEC-MAT-003]], [[TEC-ELE-005]].

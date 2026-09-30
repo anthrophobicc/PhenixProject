@@ -21,7 +21,7 @@ sources: ["Organisation mondiale de la santé, Rapport mondial sur la vision, 20
 - **Les lunettes de lecture** toutes faites, de +1 à +3,5, se trouvent partout. On essaie celles qui font lire nettement à 30-40 cm.
 - **Une réserve de plusieurs paires** de puissances différentes : pour soi, pour les autres, pour échanger. Voir [[SURV-TROC-002]].
 
-## Sans lunettes
+## Le trou sténopéique et les lunettes de lecture
 
 **Les lunettes à trous** : un carton ou un morceau de plastique opaque percé de petits trous d'épingle, tenu devant les yeux. Ils redonnent une vision nette à presque tous les défauts de vue, au prix d'un champ réduit et d'une image sombre. Pour lire une étiquette, un plan, une ordonnance.
 

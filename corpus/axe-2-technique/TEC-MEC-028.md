@@ -38,7 +38,7 @@ Petit plateau devant et grand pignon derrière : on monte les côtes en pédalan
 - Elles ne glissent pas, et s'allongent en s'usant.
 - **Chaîne de vélo** : mesurée sur 24 maillons, elle doit faire 30,5 cm ; au-delà d'un ou deux millimètres de plus, elle abîme les pignons. On la change.
 
-## Récupérer
+## Les pièces de réemploi
 
 Les vieux vélos, les machines à laver, les imprimantes, les perceuses et les boîtes de vitesses regorgent de roues dentées, de poulies, de courroies et de roulements. Avec eux, on construit des moulins, des pompes, des génératrices. Voir [[TEC-ENE-018]].
 

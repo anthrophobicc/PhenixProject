@@ -36,10 +36,6 @@ Une joue qui gonfle, une gencive avec une bosse de pus, de la fièvre, un mauvai
 - **Dent cassée** : gardez le morceau, rincez à l'eau, protégez l'arête coupante avec de la cire.
 - **Dent définitive arrachée d'un coup** (chute, choc) : tenez-la **par la couronne**, jamais par la racine, rincez-la quelques secondes sans frotter, et **remettez-la dans son trou** tout de suite, en mordant doucement sur un linge. Impossible : conservez-la dans du **lait** ou dans la bouche, contre la joue, et allez chez un dentiste **dans l'heure**. Une dent de lait, on ne la remet pas.
 
-## Extraire, en tout dernier recours
-
-Seulement une dent **déjà très mobile**, qui bouge franchement au doigt : saisie au plus près de la gencive, doigts propres ou pince désinfectée, on la **fait basculer doucement** d'avant en arrière jusqu'à ce qu'elle cède. Puis mordre sur une compresse **30 minutes**, ne pas rincer ni fumer pendant 24 heures. **Jamais sur une dent solide** : on la casse, la racine reste et s'infecte.
-
 ## Prévenir
 
 Brossage deux fois par jour, fil ou bâtonnet entre les dents, peu de sucre entre les repas. Sans dentifrice : brosse humide, un peu de bicarbonate ou de sel. Et **un contrôle chez le dentiste avant une période où il sera loin**.

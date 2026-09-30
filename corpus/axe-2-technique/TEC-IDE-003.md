@@ -15,7 +15,7 @@ sources: ["Documentation interne du projet Phenix, format de fiche et règles de
 
 ::Phenix n'est pas un livre fermé. C'est un corpus ouvert, et chaque fiche est un fichier texte lisible par n'importe quoi. Si vous savez lire une fiche, vous savez en écrire une — et le corpus grandit.::
 
-## COMPRENDRE
+## Comment ça marche
 
 ### Ce qu'est une fiche
 
@@ -71,7 +71,7 @@ Une phrase entre doubles deux-points : celle qu'on retient quand on a oublié le
 - **Sources obligatoires.** Toute affirmation vérifiable doit être traçable.
 - **Pas de backticks ni de dollar-accolade dans le corps.** C'est une contrainte technique du format d'injection.
 
-## AGIR
+## En pratique
 
 ### Écrire votre première fiche
 
@@ -89,7 +89,7 @@ Une phrase entre doubles deux-points : celle qu'on retient quand on a oublié le
 
 **7.** Relire en se demandant : « Si je n'avais que cette fiche et rien d'autre, pourrais-je agir ? » Si non, il manque quelque chose.
 
-## ADAPTER
+## Les cas particuliers
 
 **Vous ne trouvez pas de source.** Si le savoir vient de votre expérience directe, indiquer « origine: terrain » et décrire le contexte. Un retour d'expérience vaut une source quand il est honnête sur ses limites.
 

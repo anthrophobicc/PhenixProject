@@ -61,12 +61,4 @@ La règle est de **maintenir immédiatement la vitesse de meilleur plané en piq
 
 Sans visibilité extérieure, l'oreille interne induit en erreur en quelques dizaines de secondes : la sensation d'être à plat alors qu'on est en virage engagé est une illusion documentée et mortelle. **Dans ce cas, on croit les instruments et non ses sensations.**
 
-## Si vous êtes passager et devez agir
-
-Cette fiche ne remplace pas une formation, et il faut le dire nettement. Mais une situation existe où quelques principes valent mieux que rien : un passager seul aux commandes.
-
-L'ordre est toujours le même. **Voler d'abord** : garder les ailes à plat et le nez à l'horizon, sans gestes brusques. **Naviguer ensuite** : maintenir un cap stable. **Communiquer enfin** : chercher la radio, appeler à l'aide, décrire ce qu'on voit.
-
-Ne touchez à rien tant que l'avion vole correctement. La quasi-totalité des aggravations vient de corrections excessives : les commandes d'un avion demandent des mouvements très faibles, et l'appareil est naturellement stable si on le laisse tranquille.
-
-Les principes moteurs communs à tous les engins sont dans [[TEC-MOTH-001]], et l'usage de la radio dans [[TEC-RAD-001]].
+À lire aussi : [[TEC-MOTH-001]], [[TEC-RAD-001]].

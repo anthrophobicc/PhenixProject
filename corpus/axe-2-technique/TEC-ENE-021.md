@@ -41,7 +41,7 @@ sources: ["ADEME, guides pratiques Réduire sa facture d'électricité et Se cha
 - **Le lave-linge à 30 °C**, le sèche-linge remplacé par un fil.
 - **Un wattmètre** à brancher sur la prise (une quinzaine d'euros) montre ce que chaque appareil consomme vraiment. On a des surprises.
 
-## Quand le réseau est tendu
+## Les jours de tension sur le réseau
 
 En France, le signal **EcoWatt** de RTE prévient à l'avance quand l'électricité risque de manquer. Réduire sa consommation le matin et en début de soirée ces jours-là aide à éviter les coupures pour tout le monde.
 

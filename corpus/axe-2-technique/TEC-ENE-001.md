@@ -38,7 +38,7 @@ Une fois ce calcul acquis, le dimensionnement devient trivial : additionnez vos 
 4. **Écartez toute cellule lithium déformée.** Gonflée, percée, écrasée : elle ne se répare pas, elle ne se teste pas. Elle peut partir en {{emballement thermique|Réaction en chaîne qui s'auto-entretient dans une cellule lithium endommagée, sans besoin d'oxygène extérieur.}}.
 5. **Ne touchez jamais les gros condensateurs d'une alimentation à découpage, d'un micro-ondes ou d'un flash.** Ils conservent une charge capable de tuer plusieurs minutes après le débranchement, parfois beaucoup plus.
 
-## Où trouver quoi
+## Les sources courantes
 
 **Vous cherchez du stockage.** Les cellules lithium cylindriques standard équipent une grande partie des blocs d'outillage portatif et d'ordinateurs. Un bloc mort l'est rarement en entier : c'est presque toujours une ou deux cellules qui font chuter l'ensemble, les autres restant bonnes.
 

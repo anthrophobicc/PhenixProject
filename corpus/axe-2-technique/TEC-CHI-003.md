@@ -15,7 +15,7 @@ sources: ["Boynton R., Chemistry and Technology of Lime and Limestone", "OMS, Us
 
 ::La chaux est le produit chimique le plus utile qu'on puisse fabriquer avec une pierre et du feu. Elle lie, elle assainit, elle blanchit — et elle boucle un cycle qui la ramène à la pierre d'origine.::
 
-## COMPRENDRE
+## Comment ça marche
 
 ### Le cycle, qui explique tout le reste
 
@@ -37,7 +37,7 @@ Trois états, un aller-retour complet. Le comprendre, c'est comprendre tous les 
 
 **La chaux hydraulique** contient des impuretés argileuses qui lui permettent de prendre aussi **sous l'eau et sans air**, plus vite et plus dur. Entre la chaux pure et le ciment. C'est celle des fondations humides et des ouvrages exposés.
 
-## AGIR
+## En pratique
 
 ### Fabriquer
 
@@ -57,7 +57,7 @@ Trois états, un aller-retour complet. Le comprendre, c'est comprendre tous les 
 
 **Traiter un sol.** Mélangée à une terre argileuse, la chaux l'assèche, la stabilise et la rend portante — c'est ainsi qu'on durcit un chemin ou une aire de battage.
 
-## ADAPTER
+## Les cas particuliers
 
 **Vous n'avez pas de calcaire.** Les coquilles — huîtres, moules, escargots — et les coquilles d'œufs sont du carbonate de calcium presque pur. Calcinées de la même façon, elles donnent une excellente chaux. C'est la source des régions sans pierre calcaire.
 

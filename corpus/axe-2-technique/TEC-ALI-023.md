@@ -32,7 +32,7 @@ sources: ["Keys A. et al., The Biology of Human Starvation, University of Minnes
 - **Les infections** qui s'installent, les plaies qui ne guérissent plus.
 - **Chez l'enfant** : il cesse de grandir, puis de jouer. Voir [[TEC-ALI-021]] pour le tour de bras.
 
-## Tenir quand on mange trop peu
+## Quand les apports sont insuffisants
 
 - **Économiser l'énergie** : se reposer aux heures chaudes, se tenir au chaud, ne pas se dépenser pour rien.
 - **Manger un peu, régulièrement**, plutôt que tout d'un coup.

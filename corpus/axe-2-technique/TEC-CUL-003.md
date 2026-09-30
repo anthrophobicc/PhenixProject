@@ -37,7 +37,7 @@ sources: ["Bell R.C., Board and Table Games from Many Civilizations, Dover, 1979
 - **Le cerf-volant** : deux baguettes en croix, un sac plastique tendu, une ficelle, une queue de chiffons.
 - **La marelle** à la craie ou au bâton, la **corde à sauter**, le **ballon** de chiffons serrés.
 
-## Pourquoi c'est sérieux
+## Pourquoi le jeu compte
 
 Dans les caves, les camps, les hivers longs, les jeux tiennent le moral, occupent les enfants, apaisent les tensions et entraînent la tête. Voir [[SURV-PSY-006]].
 
