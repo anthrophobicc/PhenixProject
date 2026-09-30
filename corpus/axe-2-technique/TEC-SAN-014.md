@@ -39,3 +39,5 @@ Une joue qui gonfle, une gencive avec une bosse de pus, de la fièvre, un mauvai
 ## Prévenir
 
 Brossage deux fois par jour, fil ou bâtonnet entre les dents, peu de sucre entre les repas. Sans dentifrice : brosse humide, un peu de bicarbonate ou de sel. Et **un contrôle chez le dentiste avant une période où il sera loin**.
+
+En pratique, avec ce qu'on a : [[SURV-HYG-012]].

@@ -35,3 +35,5 @@ sources: ["Winter G.D., Formation of the scab and the rate of epithelization of 
 La trousse de soins : [[TEC-SAN-008]].
 
 À lire aussi : [[URG-BRUL-001]], [[TEC-BOT-006]].
+
+En pratique, avec ce qu'on a : [[SURV-HYG-011]].

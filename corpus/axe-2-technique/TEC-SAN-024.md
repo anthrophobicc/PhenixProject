@@ -42,4 +42,4 @@ Les personnes mortes du choléra, d'Ebola ou d'autres maladies contagieuses rest
 
 Voir le corps, dire au revoir et accomplir un rite, même simple, aide les proches des années plus tard ; les deuils sans corps sont parmi les plus difficiles. Voir [[TEC-SAN-019]].
 
-Le faire soi-même, pas à pas : [[SURV-HYG-006]].
+En pratique, pas à pas : [[SURV-HYG-006]].

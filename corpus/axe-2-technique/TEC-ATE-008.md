@@ -45,3 +45,5 @@ S'entraîner sur des chutes, cordon après cordon, avant de souder quelque chose
 - **Au sec** : pas de soudure les pieds dans l'eau ni avec des gants mouillés.
 
 À lire aussi : [[TEC-ENE-013]], [[TEC-ATE-005]].
+
+En pratique, avec ce qu'on a : [[SURV-OUT-002]].

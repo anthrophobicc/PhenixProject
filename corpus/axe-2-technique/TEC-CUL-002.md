@@ -38,4 +38,4 @@ sources: ["UNESCO et INEE, Normes minimales pour l'éducation : préparation, in
 
 Le conte et la transmission orale : [[TEC-CUL-005]].
 
-Le faire soi-même, pas à pas : [[SURV-SOC-011]].
+En pratique, pas à pas : [[SURV-SOC-011]].

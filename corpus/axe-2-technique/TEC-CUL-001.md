@@ -64,3 +64,5 @@ Les musées classent tous les instruments du monde en cinq familles, selon ce qu
 - **Les cordes s'usent et sonnent de plus en plus sourd.** Elles se nettoient avec un chiffon sec après chaque usage, et se ravivent un peu en les bouillant, un vieux truc de bassiste.
 - **Le bois bouge avec l'humidité.** Un instrument en bois se range loin d'un poêle et d'un mur humide. Une guitare qui se fend, c'est presque toujours un chauffage trop proche.
 - **Un seul instrument par groupe suffit** pour chanter ensemble. La musique fait passer le temps, calme les enfants, marque les fêtes et les deuils. Voir [[SURV-PSY-001]].
+
+En pratique, avec ce qu'on a : [[SURV-REC-061]].

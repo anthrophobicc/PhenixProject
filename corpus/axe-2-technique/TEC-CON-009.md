@@ -71,3 +71,5 @@ Les abris construits selon les normes, comme en Suisse, ont tous les mêmes él�
 - **Écoutez la radio**, à piles ou à manivelle. Voir [[SIG-COM-002]].
 
 L'air contaminé et les filtres sont dans [[URG-AIR-001]] et [[TEC-SAN-006]].
+
+En pratique, avec ce qu'on a : [[SURV-ABRI-008]].

@@ -43,4 +43,4 @@ sources: ["Fédération internationale du diabète (IDF), Diabetes and disasters
 
 Les associations de diabétiques recommandent une réserve d'au moins un mois (insuline, aiguilles, bandelettes, lecteur et piles, comprimés, glucagon, sucre), une ordonnance papier et une liste écrite des traitements, et que l'entourage sache reconnaître une hypoglycémie.
 
-Le faire soi-même, pas à pas : [[SURV-HYG-007]].
+En pratique, pas à pas : [[SURV-HYG-007]].

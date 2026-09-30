@@ -62,3 +62,5 @@ La règle est de **maintenir immédiatement la vitesse de meilleur plané en piq
 Sans visibilité extérieure, l'oreille interne induit en erreur en quelques dizaines de secondes : la sensation d'être à plat alors qu'on est en virage engagé est une illusion documentée et mortelle. **Dans ce cas, on croit les instruments et non ses sensations.**
 
 À lire aussi : [[TEC-MOTH-001]], [[TEC-RAD-001]].
+
+En pratique, avec ce qu'on a : [[SURV-CRI-024]].

@@ -44,3 +44,5 @@ Voir aussi [[URG-RES-001]].
 - **Dans une maison froide en hiver**, vidangez les tuyaux (vanne fermée, robinets ouverts, en bas) pour qu'ils ne gèlent pas. Voir [[TEC-CON-012]].
 
 À lire aussi : [[SURV-REC-030]], [[TEC-CHI-006]].
+
+En pratique, avec ce qu'on a : [[SURV-REC-060]].

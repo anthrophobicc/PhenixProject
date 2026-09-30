@@ -41,3 +41,5 @@ sources: ["Macfarlane A., Martin G., Glass: A World History, University of Chica
 - **Une coupure profonde** : voir [[URG-HEMO-001]].
 
 À lire aussi : [[TEC-AGR-011]].
+
+En pratique, avec ce qu'on a : [[SURV-REC-062]].

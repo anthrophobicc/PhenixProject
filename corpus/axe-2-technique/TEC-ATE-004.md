@@ -47,3 +47,5 @@ Affûter, c'est **user deux faces jusqu'à ce qu'elles se rejoignent en une arê
 - **Ciseaux** : seulement le biseau extérieur de chaque lame, à la pierre fine.
 
 À lire aussi : [[TEC-MEC-005]].
+
+En pratique, avec ce qu'on a : [[SURV-OUT-002]].
