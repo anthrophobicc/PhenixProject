@@ -117,40 +117,87 @@ def bruite(nom, c1, c2, echelle, rugo=(0.6, 0.9), relief=0.2, detail=8, metal=0.
         l.new(fin.outputs["Fac"], bp.inputs["Height"]); l.new(bp.outputs["Normal"], b.inputs["Normal"])
     return m
 
-# Béton du sol : taches sombres, poussière claire, et des flaques (zones lisses et sombres qui reflètent).
+# Béton du sol : dalles de 4 m avec leurs joints, fissures, taches d'huile et d'humidité, mousse dans les creux, et des
+# flaques (zones lisses et sombres qui reflètent).
 def beton():
     m, n, l, b = nouveau("béton")
-    coord = n.new("ShaderNodeTexCoord")
-    taches = n.new("ShaderNodeTexNoise"); taches.inputs["Scale"].default_value = 0.35; taches.inputs["Detail"].default_value = 10
-    grain = n.new("ShaderNodeTexNoise"); grain.inputs["Scale"].default_value = 60; grain.inputs["Detail"].default_value = 4
-    flaque = n.new("ShaderNodeTexNoise"); flaque.inputs["Scale"].default_value = 0.22; flaque.inputs["Detail"].default_value = 3
-    for t in (taches, grain, flaque): l.new(coord.outputs["Object"], t.inputs["Vector"])
-    rampe = n.new("ShaderNodeValToRGB")
-    e = rampe.color_ramp.elements; e[0].position = 0.3; e[1].position = 0.72
-    e[0].color = (*lin("#2A2A28"), 1); e[1].color = (*lin("#6B6A64"), 1)
-    l.new(taches.outputs["Fac"], rampe.inputs["Fac"])
-    mousse = n.new("ShaderNodeTexNoise"); mousse.inputs["Scale"].default_value = 0.5; mousse.inputs["Detail"].default_value = 8
-    l.new(coord.outputs["Object"], mousse.inputs["Vector"])
-    mm = n.new("ShaderNodeMapRange"); mm.inputs["From Min"].default_value = 0.56; mm.inputs["From Max"].default_value = 0.68
-    l.new(mousse.outputs["Fac"], mm.inputs["Value"])
-    vert = n.new("ShaderNodeMix"); vert.data_type = "RGBA"
-    l.new(mm.outputs["Result"], vert.inputs[0]); l.new(rampe.outputs["Color"], vert.inputs[6])
-    vert.inputs[7].default_value = (*lin("#46532C"), 1)
-    masque = n.new("ShaderNodeMapRange"); masque.inputs["From Min"].default_value = 0.6; masque.inputs["From Max"].default_value = 0.64
-    l.new(flaque.outputs["Fac"], masque.inputs["Value"])
-    mouille = n.new("ShaderNodeMix"); mouille.data_type = "RGBA"
-    l.new(masque.outputs["Result"], mouille.inputs[0]); l.new(vert.outputs[2], mouille.inputs[6])
-    mouille.inputs[7].default_value = (*lin("#1A1B1C"), 1)
-    l.new(mouille.outputs[2], b.inputs["Base Color"])
-    rg = n.new("ShaderNodeMapRange"); rg.inputs["To Min"].default_value = 0.72; rg.inputs["To Max"].default_value = 0.95
-    l.new(grain.outputs["Fac"], rg.inputs["Value"])
-    rf = n.new("ShaderNodeMix"); rf.data_type = "FLOAT"
-    l.new(masque.outputs["Result"], rf.inputs[0]); l.new(rg.outputs["Result"], rf.inputs[2]); rf.inputs[3].default_value = 0.04
-    l.new(rf.outputs[0], b.inputs["Roughness"])
-    bp = n.new("ShaderNodeBump")
-    sec = n.new("ShaderNodeMapRange"); sec.inputs["To Min"].default_value = 0.25; sec.inputs["To Max"].default_value = 0.0
-    l.new(masque.outputs["Result"], sec.inputs["Value"]); l.new(sec.outputs["Result"], bp.inputs["Strength"])
-    l.new(grain.outputs["Fac"], bp.inputs["Height"]); l.new(bp.outputs["Normal"], b.inputs["Normal"])
+    pos = n.new("ShaderNodeNewGeometry").outputs["Position"]
+    def bruit(echelle, detail=6, vec=None):
+        t = n.new("ShaderNodeTexNoise"); t.inputs["Scale"].default_value = echelle; t.inputs["Detail"].default_value = detail
+        l.new(vec or pos, t.inputs["Vector"]); return t
+    def plage(src, a, b_, c=0.0, d=1.0):
+        r = n.new("ShaderNodeMapRange"); r.inputs["From Min"].default_value = a; r.inputs["From Max"].default_value = b_
+        r.inputs["To Min"].default_value = c; r.inputs["To Max"].default_value = d; l.new(src, r.inputs["Value"]); return r.outputs["Result"]
+    def calcul(op, a, b_):
+        k = n.new("ShaderNodeMath"); k.operation = op
+        for i, v in ((0, a), (1, b_)):
+            if isinstance(v, float): k.inputs[i].default_value = v
+            else: l.new(v, k.inputs[i])
+        return k.outputs[0]
+    def melange(fac, c1, c2):
+        mx = n.new("ShaderNodeMix"); mx.data_type = "RGBA"; l.new(fac, mx.inputs[0])
+        for i, c in ((6, c1), (7, c2)):
+            if isinstance(c, str): mx.inputs[i].default_value = (*lin(c), 1)
+            else: l.new(c, mx.inputs[i])
+        return mx.outputs[2]
+    couleur = melange(plage(bruit(0.22, 9).outputs["Fac"], 0.3, 0.75), "#5C5953", "#8F8B83")
+    couleur = melange(plage(bruit(4.0, 4).outputs["Fac"], 0.35, 0.65, 0.0, 0.25), couleur, "#A8A398")       # poussière claire
+    couleur = melange(calcul("MULTIPLY", plage(bruit(0.7, 6).outputs["Fac"], 0.58, 0.7), 0.75), couleur, "#2F2D28")   # huile, humidité
+    mousse = plage(bruit(0.5, 8).outputs["Fac"], 0.58, 0.7)
+    couleur = melange(calcul("MULTIPLY", mousse, 0.8), couleur, "#47532C")
+    brk = n.new("ShaderNodeTexBrick"); brk.offset = 0.0; l.new(pos, brk.inputs["Vector"])
+    brk.inputs["Scale"].default_value = 1.0; brk.inputs["Mortar Size"].default_value = 0.012; brk.inputs["Mortar Smooth"].default_value = 0.4
+    brk.inputs["Brick Width"].default_value = 4.0; brk.inputs["Row Height"].default_value = 4.0
+    deform = n.new("ShaderNodeVectorMath"); deform.operation = "MULTIPLY_ADD"
+    l.new(bruit(1.2, 4).outputs["Color"], deform.inputs[0]); deform.inputs[1].default_value = (0.35, 0.35, 0.35); l.new(pos, deform.inputs[2])
+    vor = n.new("ShaderNodeTexVoronoi"); vor.feature = "DISTANCE_TO_EDGE"; vor.inputs["Scale"].default_value = 0.5
+    l.new(deform.outputs[0], vor.inputs["Vector"])
+    fissure = calcul("MULTIPLY", plage(vor.outputs["Distance"], 0.0, 0.012, 1.0, 0.0), plage(bruit(0.3).outputs["Fac"], 0.44, 0.52))
+    creux = calcul("MAXIMUM", brk.outputs["Fac"], fissure)
+    couleur = melange(creux, couleur, melange(mousse, "#1C1A16", "#3C4824"))
+    flaque = bruit(0.22, 3)
+    masque = plage(flaque.outputs["Fac"], 0.6, 0.64)
+    couleur = melange(masque, couleur, "#1A1B1C")
+    l.new(couleur, b.inputs["Base Color"])
+    rug = calcul("MAXIMUM", plage(bruit(60, 3).outputs["Fac"], 0.3, 0.7, 0.68, 0.92), creux)
+    sec = calcul("SUBTRACT", 1.0, masque)
+    l.new(calcul("ADD", calcul("MULTIPLY", rug, sec), calcul("MULTIPLY", masque, 0.03)), b.inputs["Roughness"])
+    grain = n.new("ShaderNodeBump"); l.new(bruit(70, 4).outputs["Fac"], grain.inputs["Height"])
+    l.new(calcul("MULTIPLY", sec, 0.12), grain.inputs["Strength"])
+    relief = n.new("ShaderNodeBump"); relief.inputs["Distance"].default_value = 0.02
+    l.new(calcul("SUBTRACT", 1.0, creux), relief.inputs["Height"]); l.new(calcul("MULTIPLY", sec, 0.7), relief.inputs["Strength"])
+    l.new(grain.outputs["Normal"], relief.inputs["Normal"]); l.new(relief.outputs["Normal"], b.inputs["Normal"])
+    return m
+
+# Briques : appareil courant, joints en creux, restes d'enduit par plaques, encrassement et humidité en bas du mur.
+def briques(nom):
+    m, n, l, b = nouveau(nom)
+    sep = n.new("ShaderNodeSeparateXYZ"); l.new(n.new("ShaderNodeNewGeometry").outputs["Position"], sep.inputs[0])
+    add = n.new("ShaderNodeMath"); add.operation = "ADD"; l.new(sep.outputs[0], add.inputs[0]); l.new(sep.outputs[1], add.inputs[1])
+    uv = n.new("ShaderNodeCombineXYZ"); l.new(add.outputs[0], uv.inputs[0]); l.new(sep.outputs[2], uv.inputs[1])
+    brk = n.new("ShaderNodeTexBrick"); l.new(uv.outputs[0], brk.inputs["Vector"])
+    for k, v in (("Scale", 1.0), ("Brick Width", 0.23), ("Row Height", 0.076), ("Mortar Size", 0.009), ("Mortar Smooth", 0.25), ("Bias", 0.0)):
+        brk.inputs[k].default_value = v
+    brk.inputs["Color1"].default_value = (*lin("#6A3B2A"), 1); brk.inputs["Color2"].default_value = (*lin("#955A40"), 1)
+    brk.inputs["Mortar"].default_value = (*lin("#77736A"), 1)
+    pl = n.new("ShaderNodeTexNoise"); pl.inputs["Scale"].default_value = 0.4; pl.inputs["Detail"].default_value = 12; pl.inputs["Roughness"].default_value = 0.65
+    l.new(uv.outputs[0], pl.inputs["Vector"])
+    enduit = n.new("ShaderNodeMapRange"); enduit.inputs["From Min"].default_value = 0.52; enduit.inputs["From Max"].default_value = 0.54
+    l.new(pl.outputs["Fac"], enduit.inputs["Value"])
+    mx = n.new("ShaderNodeMix"); mx.data_type = "RGBA"; l.new(enduit.outputs["Result"], mx.inputs[0]); l.new(brk.outputs["Color"], mx.inputs[6])
+    mx.inputs[7].default_value = (*lin("#8C8578"), 1)
+    bas = n.new("ShaderNodeMapRange"); bas.inputs["From Min"].default_value = 0.0; bas.inputs["From Max"].default_value = 2.0
+    bas.inputs["To Min"].default_value = 0.65; bas.inputs["To Max"].default_value = 0.0; l.new(sep.outputs[2], bas.inputs["Value"])
+    sale = n.new("ShaderNodeMix"); sale.data_type = "RGBA"; l.new(bas.outputs["Result"], sale.inputs[0]); l.new(mx.outputs[2], sale.inputs[6])
+    sale.inputs[7].default_value = (*lin("#26221D"), 1)
+    l.new(sale.outputs[2], b.inputs["Base Color"])
+    b.inputs["Roughness"].default_value = 0.88
+    joint = n.new("ShaderNodeMath"); joint.operation = "SUBTRACT"; joint.inputs[0].default_value = 1.0; l.new(brk.outputs["Fac"], joint.inputs[1])
+    hauteur = n.new("ShaderNodeMath"); hauteur.operation = "MAXIMUM"; l.new(joint.outputs[0], hauteur.inputs[0]); l.new(enduit.outputs["Result"], hauteur.inputs[1])
+    fin = n.new("ShaderNodeTexNoise"); fin.inputs["Scale"].default_value = 40; l.new(uv.outputs[0], fin.inputs["Vector"])
+    bp1 = n.new("ShaderNodeBump"); bp1.inputs["Strength"].default_value = 0.15; l.new(fin.outputs["Fac"], bp1.inputs["Height"])
+    bp = n.new("ShaderNodeBump"); bp.inputs["Strength"].default_value = 0.6; bp.inputs["Distance"].default_value = 0.01
+    l.new(hauteur.outputs[0], bp.inputs["Height"]); l.new(bp1.outputs["Normal"], bp.inputs["Normal"]); l.new(bp.outputs["Normal"], b.inputs["Normal"])
     return m
 
 def encre(nom, dossier):
@@ -195,7 +242,7 @@ GRAVURE = principled("gravure", "#3C3B37", 0.7, 0.55)
 LOGO = decalque("logo", os.path.join(ICI, "logo-hd.png"), "#2A2926", 0.7)
 DEL, DEL_B = emissif("témoin vert", "#5CFF8A", 0.0)
 BETON = beton()
-MUR = bruite("mur", "#3A3A38", "#5E5D58", 0.4, relief=0.3)
+MUR = briques("mur")
 TOIT = bruite("toit", "#1E1F20", "#34353A", 0.3)
 ACIER_SALE = bruite("poutres", "#2B2C2E", "#4A4238", 0.8, rugo=(0.45, 0.8), metal=0.7)
 BOIS = bruite("table", "#5A4A3A", "#8C8272", 2.0, rugo=(0.7, 0.95), relief=0.15)  # bois sous une couche de poussière
@@ -385,15 +432,192 @@ chute = bez(arc[-1], arc[-1] + Vector((0, 0, -0.42)), Vector((X_DOS + 0.02, 0.6,
 au_sol = bez(pied, pied + Vector((0.005, 0.05, 0)), bord_av + Vector((0, -0.12, RC)), bord_av + Vector((0, -0.06, RC)), 10)
 tube("câble propre", catmull(table_pts, 16) + arc + chute[1:] + au_sol[1:] + plongee(bord_av, Vector((0, -1, 0)), RC, 0), RC, GAINE_PROPRE, res=4)
 
-# ---------------------------------------------------------------- les centaines de câbles
-# Ils viennent des deux côtés, en nappes propres : chaque câble reste dans son plan (une tranche en y qui lui est
-# propre), donc rien ne se croise. Trois façons d'arriver :
-#  - par le toit : le câble court du mur latéral sous la tôle, au-dessus des fermes, puis se détache et descend en
-#    chaînette jusqu'au sol ;
-#  - par le mur : il part du mur latéral et descend en une longue chaînette ;
-#  - par le sol : il court au sol depuis le pied du mur.
-# Tous finissent au sol, passent le bord de la tranchée et y plongent. Une dizaine de câbles géants, armés comme des
-# câbles sous-marins.
+# ---------------------------------------------------------------- l'entrepôt : murs de briques, brèche, vitres cassées, toit percé
+for nom, a, b, c, pos in [("mur gauche", 0.4, LY, LZ, (-LX / 2, 0, LZ / 2)), ("mur droit", 0.4, LY, LZ, (LX / 2, 0, LZ / 2)),
+                          ("mur avant", LX, 0.4, LZ, (0, -LY / 2, LZ / 2))]:
+    boite(nom, a, b, c, pos, MUR)
+# mur du fond : une brèche dans le bas, puis une rangée de hautes fenêtres
+BR0, BR1, BRH = -8.8, -6.0, 2.3
+boite("fond bas gauche", BR0 + LX / 2, 0.4, 3.2, ((BR0 - LX / 2) / 2, LY / 2, 1.6), MUR)
+boite("fond bas droit", LX / 2 - BR1, 0.4, 3.2, ((BR1 + LX / 2) / 2, LY / 2, 1.6), MUR)
+boite("linteau", BR1 - BR0, 0.4, 3.2 - BRH, ((BR0 + BR1) / 2, LY / 2, (BRH + 3.2) / 2), MUR)
+boite("fond haut", LX, 0.4, 1.2, (0, LY / 2, LZ - 0.6), MUR)
+BRIQUE = bruite("brique", "#6A3B2A", "#9A5E44", 9.0, rugo=(0.75, 0.95), relief=0.3)
+def brique(nom, pos, rz=0.0, rx=0.0):
+    ob = boite(nom, 0.23, 0.11, 0.07, pos, BRIQUE); ob.rotation_euler = (rx, random.uniform(-0.2, 0.2) if rx else 0, rz)
+    return ob
+for k in range(80):   # bords déchiquetés : des briques dépassent dans la brèche
+    z = random.uniform(0, BRH)
+    if k % 3 == 0: brique(f"brique bord g {k}", (BR0 + random.uniform(0.05, 0.5) * (1 - z / BRH * 0.6), LY / 2 + random.uniform(-0.12, 0.12), z))
+    elif k % 3 == 1: brique(f"brique bord d {k}", (BR1 - random.uniform(0.05, 0.5) * (1 - z / BRH * 0.6), LY / 2 + random.uniform(-0.12, 0.12), z))
+    else: brique(f"brique linteau {k}", (random.uniform(BR0, BR1), LY / 2 + random.uniform(-0.12, 0.12), BRH - random.uniform(0.0, 0.35)))
+for k in range(150):  # le tas de briques tombées, des deux côtés de la brèche
+    x = random.gauss((BR0 + BR1) / 2, 1.0); y = LY / 2 + random.gauss(0, 1.1)
+    if abs(y - LY / 2) < 0.22 and not (BR0 < x < BR1): continue
+    brique(f"brique tombée {k}", (x, y, 0.035 + abs(random.gauss(0, 0.12)) * max(0, 1 - abs(x - (BR0 + BR1) / 2) / 2)),
+           random.uniform(0, 6.28), random.choice((0, 0, math.radians(90))))
+for i in range(9):
+    x = -18 + i * 4.5
+    boite(f"trumeau {i}", 1.3, 0.4, 4.6, (x, LY / 2, 3.2 + 2.3), MUR)
+    for j in range(1, 4):  # meneaux des vitres
+        boite(f"meneau {i}-{j}", 0.05, 0.08, 4.6, (x + 0.65 + j * 0.8, LY / 2 - 0.1, 5.5), ACIER_SALE)
+    for j in range(1, 5):
+        boite(f"traverse {i}-{j}", 3.2, 0.08, 0.05, (x + 2.25, LY / 2 - 0.1, 3.2 + j * 0.92), ACIER_SALE)
+
+# vitres : verre sale, beaucoup de carreaux cassés ou absents. Le verre laisse passer l'ombre (le soleil entre).
+def verre():
+    m, n, l, b = nouveau("verre sale")
+    b.inputs["Base Color"].default_value = (*lin("#B4BEB4"), 1); b.inputs["Transmission Weight"].default_value = 1.0
+    b.inputs["IOR"].default_value = 1.5
+    br = n.new("ShaderNodeTexNoise"); br.inputs["Scale"].default_value = 3.0; br.inputs["Detail"].default_value = 8
+    r = n.new("ShaderNodeMapRange"); r.inputs["To Min"].default_value = 0.08; r.inputs["To Max"].default_value = 0.6
+    l.new(br.outputs["Fac"], r.inputs["Value"]); l.new(r.outputs["Result"], b.inputs["Roughness"])
+    lp = n.new("ShaderNodeLightPath"); tr = n.new("ShaderNodeBsdfTransparent"); mx = n.new("ShaderNodeMixShader")
+    l.new(lp.outputs["Is Shadow Ray"], mx.inputs[0]); l.new(b.outputs[0], mx.inputs[1]); l.new(tr.outputs[0], mx.inputs[2])
+    l.new(mx.outputs[0], n["Material Output"].inputs["Surface"])
+    return m
+VERRE = verre()
+YV = LY / 2 - 0.1
+for i in range(9):
+    x = -18 + i * 4.5
+    for c in range(4):
+        for rg in range(5):
+            x0, z0 = x + 0.65 + c * 0.8, 3.2 + rg * 0.92
+            t = random.random()
+            if t < 0.32: continue                                  # carreau absent
+            if t < 0.55:                                           # carreau cassé : il reste un éclat dans un coin
+                cx, cz = random.choice(((x0, z0), (x0 + 0.8, z0), (x0, z0 + 0.92), (x0 + 0.8, z0 + 0.92)))
+                sx, sz = (0.8 if cx == x0 else -0.8), (0.92 if cz == z0 else -0.92)
+                a1, a2, a3 = random.uniform(0.25, 0.9), random.uniform(0.25, 0.9), random.uniform(0.1, 0.45)
+                bm = bmesh.new()
+                bm.faces.new([bm.verts.new(v) for v in ((cx, YV, cz), (cx + sx * a1, YV, cz), (cx + sx * a3, YV, cz + sz * a3 * 1.4), (cx, YV, cz + sz * a2))])
+                me = bpy.data.meshes.new("éclat"); bm.to_mesh(me); bm.free()
+                ob = objet(f"éclat {i}-{c}-{rg}", me, VERRE); ob.modifiers.new("épaisseur", "SOLIDIFY").thickness = 0.005
+            else:
+                boite(f"carreau {i}-{c}-{rg}", 0.79, 0.005, 0.91, (x0 + 0.4, YV, z0 + 0.46), VERRE)
+
+# dehors : de l'herbe, des buissons et des arbres, qu'on voit par la brèche et par les fenêtres
+EXT = bruite("herbe dehors", "#34421E", "#6B6A36", 0.5, rugo=(0.7, 0.95), relief=0.3)
+for nom, x0, x1, y0, y1 in (("dehors fond", -80, 80, LY / 2 + 0.2, 80), ("dehors avant", -80, 80, -80, -LY / 2 - 0.2),
+                            ("dehors gauche", -80, -LX / 2 - 0.2, -LY / 2 - 0.2, LY / 2 + 0.2), ("dehors droit", LX / 2 + 0.2, 80, -LY / 2 - 0.2, LY / 2 + 0.2)):
+    dalle(nom, x0, x1, y0, y1, 0.0, EXT)
+ECORCE = bruite("écorce", "#2E261E", "#4A3E30", 6.0, rugo=(0.8, 1.0), relief=0.5)
+def feuillage():
+    m, n, l, b = nouveau("feuillage")
+    br = n.new("ShaderNodeTexNoise"); br.inputs["Scale"].default_value = 2.0
+    rp = n.new("ShaderNodeValToRGB"); e = rp.color_ramp.elements
+    e[0].color = (*lin("#22381A"), 1); e[1].color = (*lin("#5E7A2E"), 1)
+    l.new(br.outputs["Fac"], rp.inputs["Fac"]); l.new(rp.outputs["Color"], b.inputs["Base Color"])
+    b.inputs["Roughness"].default_value = 0.6; b.inputs["Subsurface Weight"].default_value = 0.2
+    fin = n.new("ShaderNodeTexVoronoi"); fin.inputs["Scale"].default_value = 18
+    bp = n.new("ShaderNodeBump"); bp.inputs["Strength"].default_value = 0.8
+    l.new(fin.outputs["Distance"], bp.inputs["Height"]); l.new(bp.outputs["Normal"], b.inputs["Normal"])
+    return m
+FEUILLAGE = feuillage()
+NUAGES = bpy.data.textures.new("nuages", "CLOUDS"); NUAGES.noise_scale = 0.6
+def masse(nom, centre, rayon):
+    bm = bmesh.new(); bmesh.ops.create_icosphere(bm, subdivisions=3, radius=rayon)
+    me = bpy.data.meshes.new(nom); bm.to_mesh(me); bm.free()
+    ob = objet(nom, me, FEUILLAGE); ob.location = centre; lisser(ob)
+    dp = ob.modifiers.new("relief", "DISPLACE"); dp.texture = NUAGES; dp.strength = rayon * 0.45; dp.texture_coords = "GLOBAL"
+    return ob
+for i in range(16):
+    x, y, h = random.uniform(-32, 32), random.uniform(LY / 2 + 4, LY / 2 + 22), random.uniform(8, 15)
+    bm = bmesh.new(); bmesh.ops.create_cone(bm, cap_ends=True, segments=12, radius1=0.35, radius2=0.12, depth=h * 0.7)
+    me = bpy.data.meshes.new(f"tronc {i}"); bm.to_mesh(me); bm.free()
+    objet(f"tronc {i}", me, ECORCE).location = (x, y, h * 0.35)
+    for k in range(6):
+        masse(f"houppier {i}-{k}", Vector((x + random.uniform(-2, 2), y + random.uniform(-2, 2), h * random.uniform(0.6, 0.95))), random.uniform(1.6, 3.0))
+for i in range(10):   # buissons devant la brèche et le long du mur
+    masse(f"buisson {i}", Vector((random.uniform(-14, 4), LY / 2 + random.uniform(0.8, 3.5), 0.3)), random.uniform(0.5, 1.1))
+
+# toit : tôles ondulées entre les fermes, plusieurs ont disparu (le soleil passe), deux pendent
+def tole():
+    m, n, l, b = nouveau("tôle ondulée")
+    pos = n.new("ShaderNodeNewGeometry").outputs["Position"]
+    onde = n.new("ShaderNodeTexWave"); onde.bands_direction = "X"; onde.inputs["Scale"].default_value = 0.66
+    onde.inputs["Distortion"].default_value = 0.0; l.new(pos, onde.inputs["Vector"])
+    rouille = n.new("ShaderNodeTexNoise"); rouille.inputs["Scale"].default_value = 1.2; rouille.inputs["Detail"].default_value = 10
+    l.new(pos, rouille.inputs["Vector"])
+    rp = n.new("ShaderNodeValToRGB"); e = rp.color_ramp.elements; e[0].position = 0.45; e[1].position = 0.65
+    e[0].color = (*lin("#4E5052"), 1); e[1].color = (*lin("#6A4228"), 1)
+    l.new(rouille.outputs["Fac"], rp.inputs["Fac"]); l.new(rp.outputs["Color"], b.inputs["Base Color"])
+    b.inputs["Metallic"].default_value = 0.6; b.inputs["Roughness"].default_value = 0.7
+    bp = n.new("ShaderNodeBump"); bp.inputs["Strength"].default_value = 0.9
+    l.new(onde.outputs["Fac"], bp.inputs["Height"]); l.new(bp.outputs["Normal"], b.inputs["Normal"])
+    return m
+TOLE = tole()
+TROU_TABLE, TROU_EAU = (-4, 6), (0, 12)   # le soleil tombe sur la table par le premier ; l'eau de pluie passe par le second
+TROUS = {TROU_TABLE, TROU_EAU}
+while len(TROUS) < 11:
+    TROUS.add((random.randrange(-16, 16, 4), random.randrange(-6, 15, 3)))
+for x0 in range(-20, 20, 4):
+    for y0 in range(-15, 15, 3):
+        if (x0, y0) not in TROUS: boite(f"tôle {x0} {y0}", 3.98, 2.98, 0.012, (x0 + 2, y0 + 1.5, LZ + 0.006), TOLE)
+for k, (x0, y0) in enumerate(sorted(TROUS - {TROU_TABLE, TROU_EAU})[:2]):   # tôles qui pendent, accrochées par un bord
+    th = math.radians(random.uniform(35, 65))
+    p = boite(f"tôle pendante {k}", 3.98, 2.98, 0.012, (x0 + 2, y0 + 1.49 * math.cos(th), LZ - 1.49 * math.sin(th)), TOLE)
+    p.rotation_euler.x = -th
+for i in range(9):  # fermes du toit et poteaux
+    y = -12 + i * 3
+    boite(f"ferme {i}", LX, 0.22, 0.5, (0, y, LZ - 0.45), ACIER_SALE)
+    if i % 2 == 0:
+        for x in (-8, 8): boite(f"poteau {i} {x}", 0.32, 0.32, LZ, (x, y, LZ / 2), ACIER_SALE)
+for x in range(-16, 17, 8): boite(f"panne {x}", 0.16, LY, 0.3, (x, 0, LZ - 0.8), ACIER_SALE)
+
+# ---------------------------------------------------------------- les câbles sous-marins
+# De vrais câbles de liaison sous-marine : armure de fils d'acier en hélice, jute goudronnée, ou gaine noire nue. Ils
+# entrent par les trous du toit, sortent du plafond, du mur du fond ou des murs latéraux, descendent de partout en
+# chaînette et convergent vers la tranchée derrière la table, où ils plongent.
+def mat_cable(nom, genre):
+    m, n, l, b = nouveau(nom)
+    sep = n.new("ShaderNodeSeparateXYZ"); l.new(n.new("ShaderNodeTexCoord").outputs["UV"], sep.inputs[0])
+    att = n.new("ShaderNodeAttribute"); att.attribute_type = "OBJECT"; att.attribute_name = "longueur"
+    def calcul(op, *e):
+        k = n.new("ShaderNodeMath"); k.operation = op
+        for i, v in enumerate(e):
+            if isinstance(v, (int, float)): k.inputs[i].default_value = v
+            else: l.new(v, k.inputs[i])
+        return k.outputs[0]
+    fils, pas = {"armé": (24, 0.45), "jute": (12, 0.32), "gaine": (1, 1.0)}[genre]
+    # phase = fils × (tour + longueur parcourue / pas) : des fils enroulés en hélice
+    phase = calcul("MULTIPLY", calcul("MULTIPLY_ADD", calcul("MULTIPLY", sep.outputs[0], att.outputs["Fac"]), 1.0 / pas, sep.outputs[1]), fils)
+    profil = calcul("SINE", calcul("MULTIPLY", calcul("FRACT", phase), math.pi))
+    br = n.new("ShaderNodeTexNoise"); br.inputs["Scale"].default_value = 2.5; br.inputs["Detail"].default_value = 8
+    def mix(fac, c1, c2):
+        mx = n.new("ShaderNodeMix"); mx.data_type = "RGBA"; l.new(fac, mx.inputs[0])
+        for i, c in ((6, c1), (7, c2)):
+            if isinstance(c, str): mx.inputs[i].default_value = (*lin(c), 1)
+            else: l.new(c, mx.inputs[i])
+        return mx.outputs[2]
+    goudron = n.new("ShaderNodeMapRange"); goudron.inputs["From Min"].default_value = 0.42; goudron.inputs["From Max"].default_value = 0.6
+    l.new(br.outputs["Fac"], goudron.inputs["Value"])
+    if genre == "armé":
+        c = mix(goudron.outputs["Result"], "#8C8E8F", "#2B241C")
+        c = mix(calcul("MULTIPLY", calcul("SUBTRACT", 1.0, profil), 0.6), c, "#1A1814")
+        l.new(calcul("SUBTRACT", 0.9, calcul("MULTIPLY", goudron.outputs["Result"], 0.7)), b.inputs["Metallic"])
+        l.new(calcul("ADD", 0.35, calcul("MULTIPLY", goudron.outputs["Result"], 0.4)), b.inputs["Roughness"])
+        force = 0.7
+    elif genre == "jute":
+        c = mix(goudron.outputs["Result"], "#5A4631", "#2A2018")
+        c = mix(calcul("MULTIPLY", calcul("SUBTRACT", 1.0, profil), 0.5), c, "#17120D")
+        b.inputs["Roughness"].default_value = 0.88; force = 0.8
+    else:
+        c = mix(calcul("MULTIPLY", goudron.outputs["Result"], 0.3), "#0C0C0E", "#1E1D1C")
+        b.inputs["Roughness"].default_value = 0.34; b.inputs["Coat Weight"].default_value = 0.25; force = 0.0
+    # poussière déposée sur le dessus
+    nz = n.new("ShaderNodeSeparateXYZ"); l.new(n.new("ShaderNodeNewGeometry").outputs["Normal"], nz.inputs[0])
+    dessus = n.new("ShaderNodeMapRange"); dessus.inputs["From Min"].default_value = 0.4; dessus.inputs["From Max"].default_value = 1.0
+    dessus.inputs["To Max"].default_value = 0.55; l.new(nz.outputs[2], dessus.inputs["Value"])
+    c = mix(calcul("MULTIPLY", dessus.outputs["Result"], br.outputs["Fac"]), c, "#6E6A60")
+    l.new(c, b.inputs["Base Color"])
+    fin = n.new("ShaderNodeTexNoise"); fin.inputs["Scale"].default_value = 90
+    bp1 = n.new("ShaderNodeBump"); bp1.inputs["Strength"].default_value = 0.15; l.new(fin.outputs["Fac"], bp1.inputs["Height"])
+    bp = n.new("ShaderNodeBump"); bp.inputs["Strength"].default_value = force; bp.inputs["Distance"].default_value = 0.004
+    l.new(profil, bp.inputs["Height"]); l.new(bp1.outputs["Normal"], bp.inputs["Normal"]); l.new(bp.outputs["Normal"], b.inputs["Normal"])
+    return m
+CABLES_SM = {g: mat_cable(f"câble {g}", g) for g in ("armé", "jute", "gaine")}
+
 def chainette(Lh, h):   # paramètre a tel que a (ch(Lh / a) - 1) = h
     lo, hi = 0.01, 5000.0
     for _ in range(90):
@@ -402,96 +626,67 @@ def chainette(Lh, h):   # paramètre a tel que a (ch(Lh / a) - 1) = h
         else: hi = a
     return a
 
-def descente(T, d, Lh, h, r, n=48):
+def descente(T, d, Lh, h, n=60):
     # chaînette dont le point bas est T (posé au sol, tangent au sol), qui remonte de h sur Lh à l'opposé de d ;
     # points répartis le long du câble, du haut vers le bas
     a = chainette(Lh, h); s_tot = a * math.sinh(Lh / a)
-    pts = []
-    for i in range(n + 1):
-        x = a * math.asinh((s_tot * (1 - i / n)) / a)
-        pts.append(T - d * x + Vector((0, 0, a * (math.cosh(x / a) - 1))))
-    return pts
+    return [T - d * x + Vector((0, 0, a * (math.cosh(x / a) - 1))) for x in (a * math.asinh(s_tot * (1 - i / n) / a) for i in range(n + 1))]
 
-INTERDIT = [(-12 + 3 * i, 0.12) for i in range(9)] + [(y, 0.3) for y in (-12, -6, 0, 6, 12)]   # fermes, poteaux
-def libre(y, r): return all(abs(y - c) > m + r for c, m in INTERDIT)
+def hor(v): return Vector((v.x, v.y, 0))
+def haut_plafond(p, r):
+    if any(abs(p.y - (-12 + 3 * i)) < 0.11 + r for i in range(9)): return LZ - 0.7 - r     # sous une ferme
+    if any(abs(p.x - x) < 0.08 + r for x in range(-16, 17, 8)): return LZ - 0.95 - r        # sous une panne
+    return LZ + 0.02                                                                        # à travers la tôle
 
-Y0, Y1 = FY - FDY + 0.25, FY + FDY - 0.15
+TROUS_CABLES = sorted(TROUS - {TROU_EAU})
+def ancre():
+    t = random.random()
+    if t < 0.35:   # par un trou du toit, depuis dehors
+        x0, y0 = random.choice(TROUS_CABLES)
+        return Vector((random.uniform(x0 + 0.6, x0 + 3.4), random.uniform(y0 + 0.5, y0 + 2.5), LZ + 2.0)), "trou"
+    if t < 0.72:   # du plafond, au-dessus et derrière la table
+        p = Vector((random.uniform(-11, 11), random.uniform(1.5, 14), 0)); return p, "plafond"
+    if t < 0.88:   # du mur du fond
+        x = random.uniform(-16, 16); z = random.choice((random.uniform(1.2, 2.9), random.uniform(8.0, 8.6)))
+        if BR0 - 0.3 < x < BR1 + 0.3 and z < 3: z = 2.9
+        return Vector((x, LY / 2 - 0.05, z)), "mur"
+    cote = random.choice((-1, 1))
+    return Vector((cote * (LX / 2 - 0.05), random.uniform(-1, 13), random.uniform(3, 8.5))), "mur"
+
+Y0, Y1 = FY - FDY + 0.3, FY + FDY - 0.2
+occupe = {-1: [], 1: []}
+def place_libre(cote, y, r):
+    for k in range(600):
+        for yy in (y + k * 0.01, y - k * 0.01):
+            if Y0 <= yy - r and yy + r <= Y1 and all(abs(yy - a) > r + b_ + 0.015 for a, b_ in occupe[cote]):
+                occupe[cote].append((yy, r)); return yy
+    return None
+
+SOL_Y = []   # aucun câble ne court au sol de bout en bout
 n_cables = 0
-SOL_Y = []   # câbles posés au sol de bout en bout : le décor les évite
-for cote in (-1, 1):   # -1 : gauche, 1 : droite
-    d = Vector((-cote, 0, 0))                      # sens de marche : vers la tranchée
-    rive = FX + cote * FDX                         # bord de la tranchée de ce côté
-    mur = cote * (LX / 2 + 0.2)
-    y = Y0
-    geants = set(random.sample(range(40), 5))
-    for g in range(400):
-        if y > Y1: break
-        geant = g in geants
-        if geant: nb, r0 = 1, random.uniform(0.05, 0.085)
-        else:
-            nb = random.choice((3, 4, 5, 6, 8, 10, 12))
-            r0 = random.uniform(0.008, 0.018) if random.random() < 0.65 else random.uniform(0.018, 0.032)
-        origine = "toit" if geant or random.random() < 0.7 else random.choice(("mur", "sol"))
-        mat = JAUNE if random.random() < 0.06 else random.choice(GAINES)
-        posee = random.uniform(0.4, 2.2)                              # longueur posée au sol avant la tranchée
-        x_haut = rive + cote * max(posee + 1.2, random.uniform(2.2, 8.5))   # où la nappe quitte le toit
-        if abs(abs(x_haut) - 8) < 0.35: x_haut += cote * 0.7          # pas à travers la panne
-        z_mur = random.uniform(2.6, 5.5)
-        for k in range(nb):
-            r = r0 * (random.uniform(0.92, 1.08) if nb > 1 else 1)
-            while y <= Y1 and not libre(y + r, r): y += 0.02
-            if y > Y1: break
-            yk = y + r; y = yk + r * 1.04
-            T = Vector((rive + cote * posee, yk, r))
-            e = Vector((rive, yk, 0))
-            if origine == "toit":
-                z_haut = LZ - 0.195 + r                                # entre le dessus des fermes et la tôle
-                Lh = abs(x_haut - T.x)
-                chute = descente(T, d, Lh, z_haut - r, r)
-                f = min(0.35, Lh * 0.2)                                # arrondi au point où le câble se détache
-                j = next(i for i, p in enumerate(chute) if (p - chute[0]).length > f)
-                coude = [Vector((x_haut + cote * f, yk, z_haut)), Vector((x_haut, yk, z_haut)), chute[j]]
-                arrondi = [coude[0] * (1 - t) ** 2 + coude[1] * (2 * (1 - t) * t) + coude[2] * t * t for t in (i / 8 for i in range(9))]
-                pts = [Vector((mur, yk, z_haut))] + arrondi + chute[j + 1:]
-            elif origine == "mur":
-                pts = descente(T, d, abs(mur - T.x), z_mur, r)
-            else:
-                pts = [Vector((mur, yk, r)), T]; SOL_Y.append(yk)
-            pts += [T.lerp(e + Vector((0, 0, r)), i / 4) for i in range(1, 4)] + plongee(e, -d, r, 0)
-            tube(f"câble {n_cables}", pts, r, mat)
-            n_cables += 1
-        y += 0 if random.random() < 0.35 else random.uniform(0.04, 0.35)   # écart entre deux nappes
+for i in range(int(os.environ.get("CABLES", "75"))):
+    A, origine = ancre()
+    genre = random.choices(("armé", "jute", "gaine"), (0.45, 0.25, 0.3))[0]
+    r = random.uniform(0.022, 0.048) if random.random() < 0.85 else random.uniform(0.06, 0.085)
+    if origine == "plafond": A.z = haut_plafond(A, r)
+    if abs(A.x - FX) < FDX + 1.0: continue                          # pas juste au-dessus de la tranchée
+    cote = 1 if A.x > FX else -1
+    yk = place_libre(cote, min(max(A.y - random.uniform(0.0, 2.5), Y0), Y1), r)
+    if yk is None: continue
+    e = Vector((FX + cote * FDX, yk, 0))
+    vers = (hor(A) - e).normalized()
+    if vers.x * cote < 0.35:                                         # arriverait trop en biais sur le bord
+        occupe[cote].pop(); continue
+    posee = random.uniform(0.3, 1.1)
+    T = e + vers * posee; T.z = r
+    Lh = (hor(A) - hor(T)).length
+    d = -vers
+    pts = descente(T, d, Lh, A.z - r)
+    pts += [T.lerp(e + Vector((0, 0, r)), k / 4) for k in range(1, 4)] + plongee(e, -d, r, 0)
+    ob = tube(f"câble {n_cables}", pts, r, CABLES_SM[genre], res=4 if r > 0.04 else 3)
+    ob["longueur"] = sum((pts[k + 1] - pts[k]).length for k in range(len(pts) - 1))
+    n_cables += 1
 print("câbles :", n_cables)
-
-# ---------------------------------------------------------------- l'entrepôt
-murs =[("mur gauche", 0.4, LY, LZ, (-LX / 2, 0, LZ / 2)), ("mur droit", 0.4, LY, LZ, (LX / 2, 0, LZ / 2)),
-        ("mur avant", LX, 0.4, LZ, (0, -LY / 2, LZ / 2))]
-for nom, a, b, c, pos in murs: boite(nom, a, b, c, pos, MUR)
-# mur du fond : bas plein, puis une rangée de hautes fenêtres sur ciel gris
-boite("fond bas", LX, 0.4, 3.2, (0, LY / 2, 1.6), MUR)
-boite("fond haut", LX, 0.4, 1.2, (0, LY / 2, LZ - 0.6), MUR)
-for i in range(9):
-    x = -18 + i * 4.5
-    boite(f"trumeau {i}", 1.3, 0.4, 4.6, (x, LY / 2, 3.2 + 2.3), MUR)
-    for j in range(1, 4):  # meneaux des vitres
-        boite(f"meneau {i}-{j}", 0.05, 0.08, 4.6, (x + 0.65 + j * 0.8, LY / 2 - 0.1, 5.5), ACIER_SALE)
-    for j in range(1, 5):
-        boite(f"traverse {i}-{j}", 3.2, 0.08, 0.05, (x + 2.25, LY / 2 - 0.1, 3.2 + j * 0.92), ACIER_SALE)
-ciel = plaque("ciel", LX, LZ, CIEL); ciel.visible_shadow = False; ciel.rotation_euler = (math.radians(90), 0, 0); ciel.location = (0, LY / 2 + 1.5, LZ / 2)
-# fenêtres hautes des murs latéraux
-for cote in (-1, 1):
-    ciel_l = plaque(f"ciel latéral {cote}", LY, 2.0, CIEL); ciel_l.visible_shadow = False; ciel_l.rotation_euler = (math.radians(90), 0, math.radians(90))
-    ciel_l.location = (cote * (LX / 2 + 0.3), 0, 7.2)
-    boite(f"jour latéral {cote}", 0.5, LY - 2, 1.6, (cote * LX / 2, 0, 7.2), None).hide_render = True
-toit = plaque("toit", LX, LY, TOIT); toit.location = (0, 0, LZ); toit.rotation_euler = (math.radians(180), 0, 0)
-for i in range(9):  # fermes du toit et poteaux
-    y = -12 + i * 3
-    boite(f"ferme {i}", LX, 0.22, 0.5, (0, y, LZ - 0.45), ACIER_SALE)
-    if i % 2 == 0:
-        for x in (-8, 8): boite(f"poteau {i} {x}", 0.32, 0.32, LZ, (x, y, LZ / 2), ACIER_SALE)
-for x in range(-16, 17, 8): boite(f"panne {x}", 0.16, LY, 0.3, (x, 0, LZ - 0.8), ACIER_SALE)
-# un trou dans le toit, au fond : la lumière et le filet d'eau passent par là
-trou_toit = plaque("trou du toit", 1.4, 1.0, CIEL); trou_toit.visible_shadow = False; trou_toit.location = (3.2, 13.3, LZ + 0.05); trou_toit.rotation_euler = (math.radians(180), 0, 0)
 
 # ---------------------------------------------------------------- la table
 table = pave("plateau", 1.5, 0.8, 0.04, 0.01, 0.004, BOIS, None, 4, 2); table.location = (0.1, 0.05, TZ - 0.02)
@@ -660,6 +855,97 @@ for i in range(420):
     for fc in g.animation_data.action.fcurves:
         for k in fc.keyframe_points: k.interpolation = "LINEAR"
 
+# cailloux et feuilles mortes semés sur le sol (des copies d'une poignée de modèles : léger en mémoire)
+CAILLOU = bruite("caillou", "#56524A", "#8E887C", 5.0, rugo=(0.7, 0.95), relief=0.4)
+def mat_feuille_morte():
+    m, n, l, b = nouveau("feuille morte")
+    br = n.new("ShaderNodeTexNoise"); br.inputs["Scale"].default_value = 30
+    rp = n.new("ShaderNodeValToRGB"); e = rp.color_ramp.elements
+    e[0].color = (*lin("#4A3220"), 1); e[1].color = (*lin("#8E6A36"), 1)
+    l.new(br.outputs["Fac"], rp.inputs["Fac"]); l.new(rp.outputs["Color"], b.inputs["Base Color"])
+    b.inputs["Roughness"].default_value = 0.75
+    return m
+FEUILLE_MORTE = mat_feuille_morte()
+
+def collection(nom, objets):
+    c = bpy.data.collections.new(nom)   # pas liée à la scène : elle ne sert que de modèle
+    for o in objets:
+        sc.collection.objects.unlink(o); c.objects.link(o); o.location = (0, 0, 0)
+    return c
+
+cailloux = []
+for k in range(7):
+    bm = bmesh.new(); bmesh.ops.create_icosphere(bm, subdivisions=2, radius=1.0)
+    for v in bm.verts: v.co *= random.uniform(0.75, 1.2)
+    for v in bm.verts: v.co.z *= random.uniform(0.45, 0.7); v.co.x *= random.uniform(0.8, 1.3)
+    me = bpy.data.meshes.new(f"caillou {k}"); bm.to_mesh(me); bm.free()
+    o = objet(f"caillou {k}", me, CAILLOU); lisser(o); cailloux.append(o)
+COLL_CAILLOUX = collection("cailloux", cailloux)
+feuilles = []
+for k in range(4):
+    # feuille dans le plan YZ (sa normale suit X, l'axe que le semis aligne sur le sol), un peu recroquevillée
+    bm = bmesh.new()
+    contour = [(0.0, 0.0, -0.05), (0.02, 0.35, 0.22), (0.06, 0.75, 0.18), (0.0, 1.0, 0.0), (0.06, 0.75, -0.18), (0.02, 0.35, -0.22)]
+    bm.faces.new([bm.verts.new((x * random.uniform(0.5, 1.5), z, y)) for x, y, z in contour])
+    me = bpy.data.meshes.new(f"feuille morte {k}"); bm.to_mesh(me); bm.free()
+    o = objet(f"feuille morte {k}", me, FEUILLE_MORTE); feuilles.append(o)
+COLL_FEUILLES = collection("feuilles mortes", feuilles)
+
+def semis(nom, x0, x1, y0, y1, nb, coll, taille, alea, aplati):
+    em = dalle(nom, x0, x1, y0, y1, 0.001, None); em.show_instancer_for_render = False
+    st = bpy.data.particles.new(nom); st.type = "HAIR"; st.count = nb; st.hair_length = 0.1
+    st.emit_from = "FACE"; st.distribution = "RAND"; st.use_emit_random = True
+    st.render_type = "COLLECTION"; st.instance_collection = coll; st.use_collection_pick_random = True
+    st.particle_size = taille; st.size_random = alea
+    st.use_rotations = True; st.rotation_mode = "NOR"; st.phase_factor_random = 2.0
+    if not aplati: st.rotation_factor_random = 0.6
+    ps = em.modifiers.new("semis", "PARTICLE_SYSTEM").particle_system; ps.settings = st; ps.seed = random.randint(0, 9999)
+ZONES = [(-LX / 2 + 0.2, LX / 2 - 0.2, -LY / 2 + 0.2, FY - FDY), (-LX / 2 + 0.2, LX / 2 - 0.2, FY + FDY, LY / 2 - 0.2),
+         (-LX / 2 + 0.2, FX - FDX, FY - FDY, FY + FDY), (FX + FDX, LX / 2 - 0.2, FY - FDY, FY + FDY)]
+for i, (x0, x1, y0, y1) in enumerate(ZONES):
+    aire = (x1 - x0) * (y1 - y0)
+    semis(f"gravillons {i}", x0, x1, y0, y1, int(aire * 9), COLL_CAILLOUX, 0.018, 0.8, False)
+    semis(f"feuilles {i}", x0, x1, y0, y1, int(aire * 4), COLL_FEUILLES, 0.06, 0.5, True)
+semis("cailloux du fond", -LX / 2 + 0.2, LX / 2 - 0.2, LY / 2 - 1.6, LY / 2 - 0.2, 1400, COLL_CAILLOUX, 0.05, 0.9, False)
+semis("feuilles du fond", -LX / 2 + 0.2, LX / 2 - 0.2, LY / 2 - 2.5, LY / 2 - 0.2, 2500, COLL_FEUILLES, 0.07, 0.5, True)
+semis("feuilles de la brèche", BR0 - 2.5, BR1 + 2.5, LY / 2 - 4.0, LY / 2 - 0.2, 1500, COLL_FEUILLES, 0.07, 0.5, True)
+
+# néons qui pendent des fermes, certains ne tiennent plus que par une suspente
+CAOUTCHOUC = principled("caoutchouc", "#141414", 0, 0.8)
+DIFFUSEUR = principled("diffuseur", "#C9C4B6", 0, 0.5)
+for i in range(10):
+    yb, xb = random.choice((-3, 0, 3, 6, 9)), random.uniform(-7, 7)
+    zb = LZ - 0.7 - random.uniform(1.0, 2.6)
+    casse = random.random() < 0.4
+    th = math.radians(random.uniform(40, 75)) if casse else 0.0
+    p0 = Vector((xb - 0.6, yb, zb))
+    g = groupe(f"néon {i}", *(p0 + Vector((0.6 * math.cos(th), 0, -0.6 * math.sin(th))))[:2], 0.0)
+    g.location.z = zb - 0.6 * math.sin(th); g.rotation_euler = (0, th, 0)
+    piece(f"néon {i} corps", 1.25, 0.16, 0.06, (0, 0, 0), ACIER_SALE, g)
+    piece(f"néon {i} diffuseur", 1.2, 0.12, 0.02, (0, 0, -0.035), DIFFUSEUR, g)
+    for x in ((-0.6,) if casse else (-0.6, 0.6)):
+        tube(f"suspente {i} {x}", [Vector((xb + x, yb, zb + 0.03)), Vector((xb + x, yb, LZ - 0.7))], 0.003, ACIER_SALE, res=1)
+
+def pneu(nom, pos, rz=0.0, couche=True):
+    bm = bmesh.new(); R, r = 0.32, 0.11
+    anneaux = [[bm.verts.new(((R + r * math.cos(b)) * math.cos(a), (R + r * math.cos(b)) * math.sin(a), r * math.sin(b) * 0.9))
+                for b in (2 * math.pi * j / 12 for j in range(12))] for a in (2 * math.pi * i / 36 for i in range(36))]
+    for i in range(36):
+        for j in range(12):
+            bm.faces.new([anneaux[i][j], anneaux[(i + 1) % 36][j], anneaux[(i + 1) % 36][(j + 1) % 12], anneaux[i][(j + 1) % 12]])
+    me = bpy.data.meshes.new(nom); bm.to_mesh(me); bm.free()
+    o = objet(nom, me, CAOUTCHOUC); lisser(o); o.location = pos; o.rotation_euler = (0 if couche else math.radians(90), 0, rz)
+    return o
+for zone in (PRES_G, PRES_D, FOND_Z, AVANT_G):
+    poser(2, zone, lambda x, y: [pneu(f"pneu {x:.1f} {k}", (x + random.uniform(-0.04, 0.04), y + random.uniform(-0.04, 0.04), 0.1 + k * 0.2))
+                                for k in range(random.randint(1, 5))], 0.5)
+    poser(1, zone, lambda x, y: pneu(f"pneu debout {x:.1f}", (x, y, 0.42), random.uniform(0, 6.28), False), 0.5)
+
+# une échelle appuyée contre le mur du fond, près de la brèche
+g = groupe("échelle", -4.6, LY / 2 - 0.2 - 0.8, 0.0, 0.0, math.radians(-12))
+for sx in (-0.22, 0.22): piece(f"échelle montant {sx}", 0.05, 0.04, 3.6, (sx, 0, 1.8), BOIS_VIEUX, g)
+for k in range(11): piece(f"échelle barreau {k}", 0.44, 0.03, 0.03, (0, 0, 0.3 + k * 0.3), BOIS_VIEUX, g)
+
 # ---------------------------------------------------------------- la verdure : la nature a repris l'entrepôt
 # Touffes d'herbe dans les fissures du béton (au pied des murs, au premier plan, au pied de la table), lierre qui pend
 # devant les fenêtres du fond et sous les fermes, et qui grimpe le long des trumeaux.
@@ -765,13 +1051,23 @@ for i in range(12):   # qui pend sous les fermes, entre les nappes de câbles
 me = bpy.data.meshes.new("feuilles"); bm_f.to_mesh(me); bm_f.free()
 lisser(objet("feuilles", me, FEUILLE))
 
-# ---------------------------------------------------------------- lumière : ciel gris, air poussiéreux
+# ---------------------------------------------------------------- lumière : HDRI, soleil, air poussiéreux
 w = bpy.data.worlds.new("monde"); sc.world = w; w.use_nodes = True
-wn = w.node_tree.nodes
-wn["Background"].inputs["Color"].default_value = (*lin("#8E979C"), 1); wn["Background"].inputs["Strength"].default_value = 0.2
-vol = wn.new("ShaderNodeVolumePrincipled"); vol.inputs["Density"].default_value = float(os.environ.get("BRUME", "0.012"))
-vol.inputs["Color"].default_value = (*lin("#C9CED3"), 1); vol.inputs["Anisotropy"].default_value = 0.6
-w.node_tree.links.new(vol.outputs[0], wn["World Output"].inputs["Volume"])
+wn, wl = w.node_tree.nodes, w.node_tree.links
+# vraie lumière du jour : l'HDRI « forêt » fourni avec Blender (ciel, arbres) et un soleil réel
+env = wn.new("ShaderNodeTexEnvironment")
+env.image = bpy.data.images.load(os.path.join(bpy.utils.system_resource("DATAFILES"), "studiolights", "world", "forest.exr"))
+mp_w = wn.new("ShaderNodeMapping"); wl.new(wn.new("ShaderNodeTexCoord").outputs["Generated"], mp_w.inputs["Vector"])
+mp_w.inputs["Rotation"].default_value = (0, 0, math.radians(float(os.environ.get("HDRI_ROT", "90"))))
+wl.new(mp_w.outputs["Vector"], env.inputs["Vector"]); wl.new(env.outputs["Color"], wn["Background"].inputs["Color"])
+wn["Background"].inputs["Strength"].default_value = float(os.environ.get("HDRI_FORCE", "1.0"))
+# l'air poussiéreux ne remplit que l'intérieur : un brouillard sur tout le monde absorberait le soleil avant qu'il arrive
+air = bpy.data.materials.new("air poussiéreux"); air.use_nodes = True; an = air.node_tree.nodes
+an.remove(an["Principled BSDF"])
+vol = an.new("ShaderNodeVolumePrincipled"); vol.inputs["Density"].default_value = float(os.environ.get("BRUME", "0.008"))
+vol.inputs["Color"].default_value = (*lin("#D8D6CF"), 1); vol.inputs["Anisotropy"].default_value = 0.65
+air.node_tree.links.new(vol.outputs[0], an["Material Output"].inputs["Volume"])
+boite("air", LX - 0.42, LY - 0.42, LZ - 0.02, (0, 0, LZ / 2), air)
 
 def lampe(nom, typ, pos, puissance, couleur, cible=None, taille=1.0, rot=None):
     l = bpy.data.lights.new(nom, typ); l.energy = puissance; l.color = couleur
@@ -784,15 +1080,11 @@ def lampe(nom, typ, pos, puissance, couleur, cible=None, taille=1.0, rot=None):
         c = ob.constraints.new("TRACK_TO"); c.target = v; c.track_axis = "TRACK_NEGATIVE_Z"; c.up_axis = "UP_Y"
     return ob
 GRIS = lin("#D5DCE2")
-# le jour gris qui entre par les fenêtres du fond, rasant, et fait les rayons dans l'air
-soleil = lampe("jour", "SUN", (0, 20, 10), 6.0, lin("#FFE2BC"), rot=(math.radians(62), 0, math.radians(180 + 18)))
-soleil.data.angle = math.radians(8)
-lampe("fenêtres fond", "AREA", (0, 13.5, 5.5), 1800, GRIS, cible=(0, 0, 1), taille=30)
-lampe("fenêtres côté", "AREA", (-18.5, 0, 7.2), 700, GRIS, cible=(0, 0, 1), taille=20)
-lampe("puits de jour", "SPOT", (3.2, 13.3, 8.9), 2500, GRIS, cible=(3.2, 13.3, 0), taille=18)
-# un peu de jour sur la table et le module, venu d'une verrière au-dessus
-lampe("verrière", "AREA", (-1.2, 1.5, 8.5), 900, GRIS, cible=(0.05, 0.05, TZ), taille=2.5)
-lampe("reflet appareil", "AREA", (-0.6, 0.9, 1.6), 18, GRIS, cible=(0.02, 0, TZ), taille=0.8)
+# soleil haut derrière l'entrepôt : il passe par les trous du toit (l'un tombe sur la table) et par les fenêtres,
+# et dessine des rayons dans la poussière en venant vers la caméra
+soleil = lampe("soleil", "SUN", (0, 20, 10), float(os.environ.get("SOLEIL", "4.5")), lin("#FFE7C9"), rot=(math.radians(39), 0, math.radians(195)))
+soleil.data.angle = math.radians(0.8)
+lampe("reflet appareil", "AREA", (-0.6, 0.9, 1.6), 12, GRIS, cible=(0.02, 0, TZ), taille=0.8)
 
 # le témoin vert et l'éclairage de lecture de l'écran s'allument au réveil
 def clef(prise_n, frame, valeur):
