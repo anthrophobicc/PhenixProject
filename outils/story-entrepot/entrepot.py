@@ -129,10 +129,17 @@ def beton():
     e = rampe.color_ramp.elements; e[0].position = 0.3; e[1].position = 0.72
     e[0].color = (*lin("#2A2A28"), 1); e[1].color = (*lin("#6B6A64"), 1)
     l.new(taches.outputs["Fac"], rampe.inputs["Fac"])
+    mousse = n.new("ShaderNodeTexNoise"); mousse.inputs["Scale"].default_value = 0.5; mousse.inputs["Detail"].default_value = 8
+    l.new(coord.outputs["Object"], mousse.inputs["Vector"])
+    mm = n.new("ShaderNodeMapRange"); mm.inputs["From Min"].default_value = 0.56; mm.inputs["From Max"].default_value = 0.68
+    l.new(mousse.outputs["Fac"], mm.inputs["Value"])
+    vert = n.new("ShaderNodeMix"); vert.data_type = "RGBA"
+    l.new(mm.outputs["Result"], vert.inputs[0]); l.new(rampe.outputs["Color"], vert.inputs[6])
+    vert.inputs[7].default_value = (*lin("#46532C"), 1)
     masque = n.new("ShaderNodeMapRange"); masque.inputs["From Min"].default_value = 0.6; masque.inputs["From Max"].default_value = 0.64
     l.new(flaque.outputs["Fac"], masque.inputs["Value"])
     mouille = n.new("ShaderNodeMix"); mouille.data_type = "RGBA"
-    l.new(masque.outputs["Result"], mouille.inputs[0]); l.new(rampe.outputs["Color"], mouille.inputs[6])
+    l.new(masque.outputs["Result"], mouille.inputs[0]); l.new(vert.outputs[2], mouille.inputs[6])
     mouille.inputs[7].default_value = (*lin("#1A1B1C"), 1)
     l.new(mouille.outputs[2], b.inputs["Base Color"])
     rg = n.new("ShaderNodeMapRange"); rg.inputs["To Min"].default_value = 0.72; rg.inputs["To Max"].default_value = 0.95
@@ -310,11 +317,11 @@ rot = pr.rotation_euler.to_matrix()
 SORTIE = Matrix.Translation(pr.location) @ rot.to_4x4() @ Vector((0, -24.8 * MM, 0))
 DIR = (rot @ Vector((0, -1, 0))).normalized()
 
-# ---------------------------------------------------------------- la fosse derrière la table
-# Les centaines de câbles tombent du toit et des murs, courent au sol et plongent tous dans une fosse ouverte derrière la
-# table. Un seul câble propre en ressort, côté table, et monte jusqu'au Phenix.
+# ---------------------------------------------------------------- la tranchée derrière la table
+# Une tranchée ouverte part de derrière la table vers le fond. Les câbles y arrivent des deux côtés et y plongent ;
+# un seul câble propre en ressort, côté table, et monte jusqu'au Phenix.
 LX, LY, LZ = 40, 30, 9
-FX, FY, FDX, FDY = 0.1, 1.6, 1.5, 0.7   # centre et demi-dimensions de la fosse
+FX, FY, FDX, FDY = 0.1, 6.2, 0.5, 5.3   # centre et demi-dimensions de la tranchée
 FOND = -1.3
 PC = Vector((FX, FY, 0))
 
@@ -379,124 +386,81 @@ au_sol = bez(pied, pied + Vector((0.005, 0.05, 0)), bord_av + Vector((0, -0.12, 
 tube("câble propre", catmull(table_pts, 16) + arc + chute[1:] + au_sol[1:] + plongee(bord_av, Vector((0, -1, 0)), RC, 0), RC, GAINE_PROPRE, res=4)
 
 # ---------------------------------------------------------------- les centaines de câbles
-# Des groupes arrivent de tout le tour de la fosse, sauf de devant où la caméra passe. Chaque groupe pend du toit (sous
-# une ferme, une panne ou à travers la tôle), sort d'un mur et retombe, ou court déjà au sol depuis le pied d'un mur.
-# Groupes serrés (câbles collés), espacés, ou en vrac ; une dizaine de câbles géants, armés comme des câbles sous-marins.
-# Au bord de la fosse, ils s'empilent les uns sur les autres avant de plonger.
-# Le tour de la fosse, dans le sens inverse des aiguilles d une montre : bout droit du bord avant, côté droit, fond, côté
-# gauche, bout gauche du bord avant. Le milieu du bord avant, derrière la table, reste au câble propre.
-LIBRE = 0.8
-PERIM = (FDX - LIBRE, 2 * FDY, 2 * FDX, 2 * FDY, FDX - LIBRE)
-def bord(s):
-    s = max(0.02, min(sum(PERIM) - 0.02, s))
-    if s < PERIM[0]: return Vector((FX + LIBRE + s, FY - FDY, 0)), Vector((0, -1, 0))
-    s -= PERIM[0]
-    if s < PERIM[1]: return Vector((FX + FDX, FY - FDY + s, 0)), Vector((1, 0, 0))
-    s -= PERIM[1]
-    if s < PERIM[2]: return Vector((FX + FDX - s, FY + FDY, 0)), Vector((0, 1, 0))
-    s -= PERIM[2]
-    if s < PERIM[3]: return Vector((FX - FDX, FY + FDY - s, 0)), Vector((-1, 0, 0))
-    s -= PERIM[3]
-    return Vector((FX - FDX + s, FY - FDY, 0)), Vector((0, -1, 0))
+# Ils viennent des deux côtés, en nappes propres : chaque câble reste dans son plan (une tranche en y qui lui est
+# propre), donc rien ne se croise. Trois façons d'arriver :
+#  - par le toit : le câble court du mur latéral sous la tôle, au-dessus des fermes, puis se détache et descend en
+#    chaînette jusqu'au sol ;
+#  - par le mur : il part du mur latéral et descend en une longue chaînette ;
+#  - par le sol : il court au sol depuis le pied du mur.
+# Tous finissent au sol, passent le bord de la tranchée et y plongent. Une dizaine de câbles géants, armés comme des
+# câbles sous-marins.
+def chainette(Lh, h):   # paramètre a tel que a (ch(Lh / a) - 1) = h
+    lo, hi = 0.01, 5000.0
+    for _ in range(90):
+        a = (lo * hi) ** 0.5
+        if a * (math.cosh(min(Lh / a, 700)) - 1) > h: lo = a
+        else: hi = a
+    return a
 
-def portee(d):   # distance du centre de la fosse au mur, dans la direction horizontale d
-    t = []
-    if abs(d.x) > 1e-6: t.append(((LX / 2 - 0.2) * (1 if d.x > 0 else -1) - FX) / d.x)
-    if abs(d.y) > 1e-6: t.append(((LY / 2 - 0.2) * (1 if d.y > 0 else -1) - FY) / d.y)
-    return min(t)
+def descente(T, d, Lh, h, r, n=48):
+    # chaînette dont le point bas est T (posé au sol, tangent au sol), qui remonte de h sur Lh à l'opposé de d ;
+    # points répartis le long du câble, du haut vers le bas
+    a = chainette(Lh, h); s_tot = a * math.sinh(Lh / a)
+    pts = []
+    for i in range(n + 1):
+        x = a * math.asinh((s_tot * (1 - i / n)) / a)
+        pts.append(T - d * x + Vector((0, 0, a * (math.cosh(x / a) - 1))))
+    return pts
 
-def haut_plafond(p, r):
-    if any(abs(p.y - (-12 + 3 * i)) < 0.11 + r for i in range(9)): return LZ - 0.7     # pend sous une ferme
-    if any(abs(p.x - x) < 0.08 + r for x in range(-16, 17, 8)): return LZ - 0.95        # sous une panne
-    return LZ + 0.05                                                                    # à travers la tôle
+INTERDIT = [(-12 + 3 * i, 0.12) for i in range(9)] + [(y, 0.3) for y in (-12, -6, 0, 6, 12)]   # fermes, poteaux
+def libre(y, r): return all(abs(y - c) > m + r for c, m in INTERDIT)
 
-hauteur = {}   # empilement au bord de la fosse, par tranche de 1 cm
-def empiler(s, r):
-    tr = range(int((s - r) * 100), int((s + r) * 100) + 1)
-    base = max(hauteur.get(b, 0.0) for b in tr)
-    for b in tr: hauteur[b] = base + 2 * r * 0.92
-    return base
-
-def hor(v): return Vector((v.x, v.y, 0))
-def lisse(t): t = max(0.0, min(1.0, t)); return t * t * (3 - 2 * t)
-
-NG, NGEANTS = int(os.environ.get("GROUPES", "80")), 10
-A0, A1 = -77.0, 257.0
-def angle_de(u):   # trois fois plus de groupes vers le fond, dans le champ de la caméra, que sur les côtés
-    segs = [(A0, 30.0, 1.0), (30.0, 150.0, 3.0), (150.0, A1, 1.0)]
-    x = u * sum((b - a) * w for a, b, w in segs)
-    for a, b, w in segs:
-        if x <= (b - a) * w: return a + x / w
-        x -= (b - a) * w
-    return A1
-geants = set(random.sample(range(NG + NGEANTS), NGEANTS))
-groupes = sorted(((i in geants, (i + random.uniform(0.15, 0.85)) / (NG + NGEANTS)) for i in range(NG + NGEANTS)),
-                 key=lambda g: not g[0])   # les géants d'abord : ils sont en bas de la pile
+Y0, Y1 = FY - FDY + 0.25, FY + FDY - 0.15
 n_cables = 0
-for geant, u in groupes:
-    ang = angle_de(u); a = math.radians(ang); dehors = Vector((math.cos(a), math.sin(a), 0)); d = -dehors
-    lat = Vector((-d.y, d.x, 0))
-    D = portee(dehors)
-    s_c = 0.05 + u * (sum(PERIM) - 0.1)
-    e_c, _ = bord(s_c); t_e = (hor(e_c) - PC).length
-    if geant:
-        origine, style, nb = random.choice(("plafond", "plafond", "mur")), "seul", 1
-        r0 = random.uniform(0.05, 0.09)
-    else:
-        origine = random.choices(("plafond", "mur", "sol"), (0.7, 0.2, 0.1))[0]
-        style = random.choice(("serré", "serré", "espacé", "groupé"))
-        nb = {"serré": random.randint(3, 9), "espacé": random.randint(2, 4), "groupé": random.randint(3, 6)}[style]
-        r0 = random.uniform(0.008, 0.02) if random.random() < 0.7 else random.uniform(0.02, 0.035)
-    rayons = [r0 * (1 if style == "seul" else random.uniform(0.92, 1.08) if style == "serré" else random.uniform(0.7, 1.3)) for _ in range(nb)]
-    o, oe = [0.0], [0.0]   # écart latéral au départ, puis au bord de la fosse (là, tous collés)
-    for k in range(1, nb):
-        paire = rayons[k - 1] + rayons[k]
-        o.append(o[-1] + {"serré": paire * 1.02, "espacé": random.uniform(0.15, 0.55), "groupé": paire * random.uniform(1.1, 3.0)}[style])
-        oe.append(oe[-1] + paire * 1.05)
-    o = [x - o[-1] / 2 for x in o]; oe = [x - oe[-1] / 2 for x in oe]
-    if origine == "plafond":
-        A = PC + dehors * (t_e + 2.2 + (D - t_e - 3.2) * random.random() ** 1.3)
-    else:
-        A = PC + dehors * (D + 0.15)   # le câble sort du mur
-        if origine == "sol": A.z = 0.0
-        elif A.y > LY / 2 - 1: A.z = random.choice((random.uniform(1.0, 3.0), random.uniform(8.0, 8.5)))   # fond : sous ou au-dessus des fenêtres
-        else: A.z = random.uniform(2.5, 8.2)
-    glisse = random.uniform(0.4, 2.2) if origine == "plafond" else random.uniform(2.0, 6.0)
-    ondule = random.uniform(-0.12, 0.12)
-    for k in range(nb):
-        r = rayons[k]
-        s_k = s_c - oe[k]
-        e, n = bord(s_k); lift = empiler(s_k, r)
-        Nk = e + n * (0.3 if n.y < 0 else 0.7)   # devant, on reste derrière la table
-        Ak = A + lat * o[k]
-        reste = (hor(Ak) - hor(Nk)).length
-        g = glisse * (1 if style in ("serré", "seul") else random.uniform(0.75, 1.25))
-        pts = []
-        if origine == "plafond":
-            Ak.z = haut_plafond(Ak, r)
-            g = max(0.3, min(g, reste - 0.8))
-            F = Ak + d * g; F.z = r
-            P2 = F - d * min(g * 0.9, Ak.z * 0.35)
-            pts += bez(Ak, Ak + Vector((0, 0, -Ak.z * 0.5)), P2, F, 40)
-        elif origine == "mur":
-            g = max(1.0, min(g, reste - 0.8))
-            F = Ak + d * g; F.z = r
-            P2 = F - d * min(g * 0.4, 1.4); P2.z = r
-            pts += bez(Ak, Ak + d * (g * 0.35), P2, F, 40)
+SOL_Y = []   # câbles posés au sol de bout en bout : le décor les évite
+for cote in (-1, 1):   # -1 : gauche, 1 : droite
+    d = Vector((-cote, 0, 0))                      # sens de marche : vers la tranchée
+    rive = FX + cote * FDX                         # bord de la tranchée de ce côté
+    mur = cote * (LX / 2 + 0.2)
+    y = Y0
+    geants = set(random.sample(range(40), 5))
+    for g in range(400):
+        if y > Y1: break
+        geant = g in geants
+        if geant: nb, r0 = 1, random.uniform(0.05, 0.085)
         else:
-            F = Ak.copy(); F.z = r; pts.append(F)
-        L = (hor(Nk) - hor(F)).length
-        c1 = F + d * (L * 0.35) + lat * (ondule * L); c2 = Nk + n * (L * 0.35) + lat * (ondule * L * 0.5)
-        ns = max(8, int(L * 6))
-        for j, p in enumerate(bez(F, c1, c2, Nk, ns)):
-            p.z = r + lift * lisse((j / ns - 0.55) / 0.45)
-            if j: pts.append(p)
-        for j in range(1, 6):
-            p = Nk.lerp(e, j / 6); p.z = r + lift; pts.append(p)
-        pts += plongee(e, n, r, lift)
-        mat = JAUNE if (not geant and random.random() < 0.05) else random.choice(GAINES)
-        tube(f"câble {n_cables}", pts, r, mat)
-        n_cables += 1
+            nb = random.choice((3, 4, 5, 6, 8, 10, 12))
+            r0 = random.uniform(0.008, 0.018) if random.random() < 0.65 else random.uniform(0.018, 0.032)
+        origine = "toit" if geant or random.random() < 0.7 else random.choice(("mur", "sol"))
+        mat = JAUNE if random.random() < 0.06 else random.choice(GAINES)
+        posee = random.uniform(0.4, 2.2)                              # longueur posée au sol avant la tranchée
+        x_haut = rive + cote * max(posee + 1.2, random.uniform(2.2, 8.5))   # où la nappe quitte le toit
+        if abs(abs(x_haut) - 8) < 0.35: x_haut += cote * 0.7          # pas à travers la panne
+        z_mur = random.uniform(2.6, 5.5)
+        for k in range(nb):
+            r = r0 * (random.uniform(0.92, 1.08) if nb > 1 else 1)
+            while y <= Y1 and not libre(y + r, r): y += 0.02
+            if y > Y1: break
+            yk = y + r; y = yk + r * 1.04
+            T = Vector((rive + cote * posee, yk, r))
+            e = Vector((rive, yk, 0))
+            if origine == "toit":
+                z_haut = LZ - 0.195 + r                                # entre le dessus des fermes et la tôle
+                Lh = abs(x_haut - T.x)
+                chute = descente(T, d, Lh, z_haut - r, r)
+                f = min(0.35, Lh * 0.2)                                # arrondi au point où le câble se détache
+                j = next(i for i, p in enumerate(chute) if (p - chute[0]).length > f)
+                coude = [Vector((x_haut + cote * f, yk, z_haut)), Vector((x_haut, yk, z_haut)), chute[j]]
+                arrondi = [coude[0] * (1 - t) ** 2 + coude[1] * (2 * (1 - t) * t) + coude[2] * t * t for t in (i / 8 for i in range(9))]
+                pts = [Vector((mur, yk, z_haut))] + arrondi + chute[j + 1:]
+            elif origine == "mur":
+                pts = descente(T, d, abs(mur - T.x), z_mur, r)
+            else:
+                pts = [Vector((mur, yk, r)), T]; SOL_Y.append(yk)
+            pts += [T.lerp(e + Vector((0, 0, r)), i / 4) for i in range(1, 4)] + plongee(e, -d, r, 0)
+            tube(f"câble {n_cables}", pts, r, mat)
+            n_cables += 1
+        y += 0 if random.random() < 0.35 else random.uniform(0.04, 0.35)   # écart entre deux nappes
 print("câbles :", n_cables)
 
 # ---------------------------------------------------------------- l'entrepôt
@@ -513,10 +477,10 @@ for i in range(9):
         boite(f"meneau {i}-{j}", 0.05, 0.08, 4.6, (x + 0.65 + j * 0.8, LY / 2 - 0.1, 5.5), ACIER_SALE)
     for j in range(1, 5):
         boite(f"traverse {i}-{j}", 3.2, 0.08, 0.05, (x + 2.25, LY / 2 - 0.1, 3.2 + j * 0.92), ACIER_SALE)
-ciel = plaque("ciel", LX, LZ, CIEL); ciel.rotation_euler = (math.radians(90), 0, 0); ciel.location = (0, LY / 2 + 1.5, LZ / 2)
+ciel = plaque("ciel", LX, LZ, CIEL); ciel.visible_shadow = False; ciel.rotation_euler = (math.radians(90), 0, 0); ciel.location = (0, LY / 2 + 1.5, LZ / 2)
 # fenêtres hautes des murs latéraux
 for cote in (-1, 1):
-    ciel_l = plaque(f"ciel latéral {cote}", LY, 2.0, CIEL); ciel_l.rotation_euler = (math.radians(90), 0, math.radians(90))
+    ciel_l = plaque(f"ciel latéral {cote}", LY, 2.0, CIEL); ciel_l.visible_shadow = False; ciel_l.rotation_euler = (math.radians(90), 0, math.radians(90))
     ciel_l.location = (cote * (LX / 2 + 0.3), 0, 7.2)
     boite(f"jour latéral {cote}", 0.5, LY - 2, 1.6, (cote * LX / 2, 0, 7.2), None).hide_render = True
 toit = plaque("toit", LX, LY, TOIT); toit.location = (0, 0, LZ); toit.rotation_euler = (math.radians(180), 0, 0)
@@ -527,7 +491,7 @@ for i in range(9):  # fermes du toit et poteaux
         for x in (-8, 8): boite(f"poteau {i} {x}", 0.32, 0.32, LZ, (x, y, LZ / 2), ACIER_SALE)
 for x in range(-16, 17, 8): boite(f"panne {x}", 0.16, LY, 0.3, (x, 0, LZ - 0.8), ACIER_SALE)
 # un trou dans le toit, au fond : la lumière et le filet d'eau passent par là
-trou_toit = plaque("trou du toit", 1.4, 1.0, CIEL); trou_toit.location = (4.2, 11.5, LZ + 0.05); trou_toit.rotation_euler = (math.radians(180), 0, 0)
+trou_toit = plaque("trou du toit", 1.4, 1.0, CIEL); trou_toit.visible_shadow = False; trou_toit.location = (3.2, 13.3, LZ + 0.05); trou_toit.rotation_euler = (math.radians(180), 0, 0)
 
 # ---------------------------------------------------------------- la table
 table = pave("plateau", 1.5, 0.8, 0.04, 0.01, 0.004, BOIS, None, 4, 2); table.location = (0.1, 0.05, TZ - 0.02)
@@ -552,9 +516,9 @@ def eau():
     l.new(bruit.outputs["Fac"], r.inputs["Value"]); l.new(r.outputs["Result"], b.inputs["Alpha"])
     return m, mp
 EAU, EAU_MP = eau()
-filet = bouton("filet d'eau", 0.012, LZ, EAU, None, 0, seg=12); filet.location = (4.2, 11.5, LZ / 2)
+filet = bouton("filet d'eau", 0.012, LZ, EAU, None, 0, seg=12); filet.location = (3.2, 13.3, LZ / 2)
 flaque = bouton("flaque", 1.1, 0.004, principled("eau calme", "#0E1012", 0, 0.02), None, 0, seg=48)
-flaque.location = (4.2, 11.5, 0.002); flaque.scale = (1.0, 0.7, 1.0)
+flaque.location = (3.2, 13.3, 0.002); flaque.scale = (1.0, 0.7, 1.0)
 
 # poussière en suspension, près de la table : de petites particules qui dérivent lentement
 POUSS, _ = emissif("poussière", "#E8E6E0", 1.2)
@@ -568,12 +532,245 @@ for i in range(160):
     for fc in g.animation_data.action.fcurves:
         for k in fc.keyframe_points: k.interpolation = "LINEAR"
 
+# ---------------------------------------------------------------- ce qu'on laisse dans un entrepôt abandonné
+# Fûts rouillés (debout, couchés), palettes empilées, caisses, tuyauterie le long du mur du fond, une chaise près de
+# la table, planches et gravats au sol. Rien entre les nappes de câbles au sol : le décor est devant et au fond.
+ROUILLE = bruite("rouille", "#4A2E1C", "#8A5632", 4.0, rugo=(0.55, 0.9), relief=0.3, metal=0.5)
+FUTS = [bruite("fût bleu", "#2B4058", "#6A4428", 2.5, rugo=(0.4, 0.8), relief=0.2, metal=0.5),
+        bruite("fût rouge", "#5E2620", "#6E4A2E", 2.5, rugo=(0.4, 0.8), relief=0.2, metal=0.5),
+        bruite("fût gris", "#4C4E4C", "#6E5034", 2.5, rugo=(0.4, 0.8), relief=0.2, metal=0.5), ROUILLE]
+BOIS_VIEUX = bruite("bois vieux", "#5E4E3A", "#9A8B70", 3.0, rugo=(0.7, 0.95), relief=0.25)
+GRAVATS = bruite("gravats", "#4A4945", "#7A7870", 6.0, relief=0.4)
+
+def libre_au_sol(x, y, m):   # hors du couloir de la caméra, de la table, de la tranchée et des câbles posés au sol
+    if (-0.8 - m < x < 2.0 + m) and y < 0.8 + m: return False
+    if abs(x - FX) < FDX + 2.6 + m and FY - FDY - 0.3 - m < y < FY + FDY + 0.3 + m: return False
+    return all(abs(y - ys) > m + 0.05 for ys in SOL_Y)
+
+def groupe(nom, x, y, rz, z=0.0, rx=0.0):
+    g = bpy.data.objects.new(nom, None); sc.collection.objects.link(g)
+    g.location = (x, y, z); g.rotation_euler = (rx, 0, rz)
+    return g
+
+def piece(nom, lx, ly, lz, pos, mat, parent):
+    ob = boite(nom, lx, ly, lz, pos, mat); ob.parent = parent
+    return ob
+
+def fut(nom, x, y, couche=False):
+    mat = random.choice(FUTS)
+    g = groupe(nom, x, y, random.uniform(0, 6.28), 0.29 if couche else 0.0, math.radians(90) if couche else 0.0)
+    corps = bouton(nom + " corps", 0.285, 0.88, mat, g, 0.012, seg=40); corps.location = (0, 0, 0.44 if not couche else 0)
+    for dz in (-0.25, 0.0, 0.25, 0.43, -0.43):
+        c = bouton(nom + f" cercle {dz}", 0.293, 0.025, mat, g, 0.004, seg=40)
+        c.location = (0, 0, (0.44 if not couche else 0) + dz)
+
+def palette(nom, x, y, rz, z=0.0):
+    g = groupe(nom, x, y, rz, z)
+    for i in range(5): piece(f"{nom} dessus {i}", 1.2, 0.1, 0.022, (0, -0.35 + i * 0.175, 0.133), BOIS_VIEUX, g)
+    for i in range(3): piece(f"{nom} bloc {i}", 1.2, 0.1, 0.078, (0, -0.35 + i * 0.35, 0.083), BOIS_VIEUX, g)
+    for i in range(3): piece(f"{nom} dessous {i}", 1.2, 0.1, 0.022, (0, -0.35 + i * 0.35, 0.011), BOIS_VIEUX, g)
+
+def pile_palettes(nom, x, y):
+    rz = random.uniform(-0.3, 0.3)
+    for k in range(random.randint(1, 5)):
+        palette(f"{nom} {k}", x + random.uniform(-0.04, 0.04), y + random.uniform(-0.04, 0.04), rz + random.uniform(-0.06, 0.06), k * 0.146)
+
+def caisse(nom, x, y, z=0.0, c=None):
+    c = c or random.uniform(0.5, 0.9)
+    ob = pave(nom, c, c * random.uniform(0.8, 1.0), c * 0.8, 0.01, 0.006, BOIS_VIEUX, None, 3, 2)
+    ob.location = (x, y, z + c * 0.4); ob.rotation_euler.z = random.uniform(0, 6.28)
+    return c
+
+def chaise(nom, x, y, rz):
+    g = groupe(nom, x, y, rz)
+    piece(nom + " assise", 0.42, 0.42, 0.03, (0, 0, 0.45), BOIS_VIEUX, g)
+    for sx in (-1, 1):
+        for sy in (-1, 1): piece(nom + f" pied {sx}{sy}", 0.03, 0.03, 0.45, (sx * 0.19, sy * 0.19, 0.225), BOIS_VIEUX, g)
+        piece(nom + f" montant {sx}", 0.03, 0.03, 0.45, (sx * 0.19, 0.19, 0.69), BOIS_VIEUX, g)
+    for dz in (0.62, 0.82): piece(nom + f" barreau {dz}", 0.4, 0.025, 0.06, (0, 0.19, dz), BOIS_VIEUX, g)
+
+def poser(nb, zone, fabrique, marge):
+    n = 0
+    for _ in range(nb * 30):
+        if n >= nb: break
+        x, y = random.uniform(*zone[0]), random.uniform(*zone[1])
+        if libre_au_sol(x, y, marge): fabrique(x, y); n += 1
+
+AVANT_G, AVANT_D, FOND_Z = ((-7, -1.6), (-9, 0.4)), ((2.8, 8), (-9, 0.4)), ((-17, 17), (11.9, 14.2))
+PRES_G, PRES_D = ((-3.4, -1.4), (-7.5, 0.4)), ((2.4, 4.4), (-7.5, 0.4))   # au bord du cadre, sur le trajet de la caméra
+for zone in (AVANT_G, AVANT_D, FOND_Z, PRES_G, PRES_D):
+    poser(3, zone, lambda x, y: [fut(f"fût {x:.1f}", x + dx, y + dy) for dx, dy in ((0, 0), (0.6, 0.1), (0.3, 0.55))[:random.randint(1, 3)]], 1.0)
+    poser(2, zone, lambda x, y: fut(f"fût couché {x:.1f}", x, y, True), 0.7)
+    poser(2, zone, lambda x, y: pile_palettes(f"palettes {x:.1f}", x, y), 1.0)
+    poser(2, zone, lambda x, y: caisse(f"caisse {x:.1f}", x, y), 0.6)
+poser(3, FOND_Z, lambda x, y: [caisse(f"caisses {x:.1f}", x, y, c=0.8), caisse(f"caisse dessus {x:.1f}", x, y, 0.64, 0.6)], 0.7)
+chaise("chaise", -0.95, -0.15, math.radians(200))
+
+# tuyauterie le long du mur du fond, sous les fenêtres, qui redescend dans le sol aux deux bouts ; descentes d'eau
+for i, (z, r) in enumerate(((2.75, 0.09), (2.45, 0.05), (2.25, 0.035))):
+    yw = LY / 2 - 0.2 - r - 0.08
+    x0, x1 = -17.5 + i * 0.4, 17.5 - i * 0.4
+    tube(f"tuyau {i}", [Vector((x0, yw, 0)), Vector((x0, yw, z - 0.3)), Vector((x0 + 0.3, yw, z)), Vector((x1 - 0.3, yw, z)),
+                        Vector((x1, yw, z - 0.3)), Vector((x1, yw, 0))], r, ROUILLE, res=3)
+    for x in range(-16, 17, 2):   # colliers de fixation
+        coll = bouton(f"collier {i} {x}", r * 1.25, 0.04, ACIER_SALE, None, 0.004, seg=16)
+        coll.rotation_euler = (0, math.radians(90), 0); coll.location = (x + 0.3 * i, yw, z)
+for x in (-13.5, -4.5, 4.5, 13.5):
+    tube(f"descente {x}", [Vector((x, LY / 2 - 0.3, LZ - 0.6)), Vector((x, LY / 2 - 0.3, 0.3)), Vector((x, LY / 2 - 0.55, 0.05))], 0.06, ROUILLE, res=2)
+
+# planches et gravats au sol
+for i in range(40):
+    x, y = random.uniform(-12, 12), random.uniform(-9, 14)
+    if not libre_au_sol(x, y, 0.5): continue
+    pl = boite(f"planche {i}", random.uniform(0.6, 1.8), random.uniform(0.08, 0.16), 0.022, (x, y, 0.011), BOIS_VIEUX)
+    pl.rotation_euler.z = random.uniform(0, 6.28)
+for i in range(160):
+    x, y = random.uniform(-15, 15), random.uniform(-10, 14.3)
+    if not libre_au_sol(x, y, 0.1): continue
+    bm = bmesh.new(); bmesh.ops.create_icosphere(bm, subdivisions=1, radius=1.0)
+    s = random.uniform(0.03, 0.14)
+    for v in bm.verts: v.co *= s * random.uniform(0.7, 1.3); v.co.z *= 0.55
+    me = bpy.data.meshes.new(f"gravat {i}"); bm.to_mesh(me); bm.free()
+    g = objet(f"gravat {i}", me, GRAVATS); g.location = (x, y, s * 0.25); g.rotation_euler.z = random.uniform(0, 6.28)
+
+# moisissure sur les murs : coulures sombres verdâtres qui descendent des fenêtres et du toit
+def moisir(m, couleur, echelle):
+    n, l = m.node_tree.nodes, m.node_tree.links
+    b = n["Principled BSDF"]; lien = b.inputs["Base Color"].links[0]; src = lien.from_socket
+    coord = n.new("ShaderNodeTexCoord"); mp = n.new("ShaderNodeMapping"); mp.inputs["Scale"].default_value = (echelle, echelle, echelle * 0.12)
+    l.new(coord.outputs["Object"], mp.inputs["Vector"])
+    br = n.new("ShaderNodeTexNoise"); br.inputs["Scale"].default_value = 1.0; br.inputs["Detail"].default_value = 6
+    l.new(mp.outputs["Vector"], br.inputs["Vector"])
+    mr = n.new("ShaderNodeMapRange"); mr.inputs["From Min"].default_value = 0.5; mr.inputs["From Max"].default_value = 0.7
+    l.new(br.outputs["Fac"], mr.inputs["Value"])
+    mx = n.new("ShaderNodeMix"); mx.data_type = "RGBA"
+    l.new(mr.outputs["Result"], mx.inputs[0]); l.new(src, mx.inputs[6]); mx.inputs[7].default_value = (*lin(couleur), 1)
+    l.remove(lien); l.new(mx.outputs[2], b.inputs["Base Color"])
+moisir(MUR, "#252B1E", 3.0)
+moisir(TOIT, "#1A1D16", 2.0)
+
+# poussière dans l'air, sur tout le trajet de la caméra
+for i in range(420):
+    bm = bmesh.new(); bmesh.ops.create_icosphere(bm, subdivisions=1, radius=random.uniform(0.0008, 0.0025))
+    me = bpy.data.meshes.new(f"poussière {i}"); bm.to_mesh(me); bm.free()
+    g = objet(f"poussière {i}", me, POUSS)
+    p0 = Vector((random.uniform(-2.5, 3.0), random.uniform(-9.0, 2.0), random.uniform(0.1, 3.5)))
+    g.location = p0; g.keyframe_insert("location", frame=1)
+    g.location = p0 + Vector((random.uniform(-0.12, 0.12), random.uniform(-0.08, 0.08), random.uniform(-0.15, 0.03))); g.keyframe_insert("location", frame=FIN)
+    for fc in g.animation_data.action.fcurves:
+        for k in fc.keyframe_points: k.interpolation = "LINEAR"
+
+# ---------------------------------------------------------------- la verdure : la nature a repris l'entrepôt
+# Touffes d'herbe dans les fissures du béton (au pied des murs, au premier plan, au pied de la table), lierre qui pend
+# devant les fenêtres du fond et sous les fermes, et qui grimpe le long des trumeaux.
+def mat_herbe():
+    m, n, l, b = nouveau("herbe")
+    info = n.new("ShaderNodeHairInfo"); rampe = n.new("ShaderNodeValToRGB"); e = rampe.color_ramp.elements
+    e[0].color = (*lin("#3F5A22"), 1); e[1].color = (*lin("#8C8F48"), 1)
+    l.new(info.outputs["Random"], rampe.inputs["Fac"]); l.new(rampe.outputs["Color"], b.inputs["Base Color"])
+    b.inputs["Roughness"].default_value = 0.55
+    return m
+HERBE = mat_herbe()
+
+def reglages_herbe(nom, longueur, densite):
+    st = bpy.data.particles.new(nom)
+    st.type = "HAIR"; st.hair_length = longueur; st.use_advanced_hair = False
+    st.emit_from = "FACE"; st.distribution = "RAND"; st.use_emit_random = True
+    st.render_type = "PATH"
+    st.child_type = "INTERPOLATED"; st.child_percent = 4; st.rendered_child_count = int(os.environ.get("BRINS", "8"))
+    st.child_length = 0.35; st.child_length_threshold = 0.55
+    st.roughness_endpoint = 0.35 * longueur; st.roughness_2 = 0.01; st.roughness_1 = 0.01; st.child_radius = 0.06; st.clump_factor = 0.4
+    st.root_radius = 1.0; st.tip_radius = 0.0; st.radius_scale = 0.0025; st.use_close_tip = True
+    st.material = 1; st.display_step = 2; st.render_step = 3
+    st["densite"] = densite
+    return st
+HERBE_RASE, HERBE_HAUTE = reglages_herbe("herbe rase", 0.12, 320), reglages_herbe("herbe haute", 0.38, 140)
+
+def touffe(nom, cx, cy, rx, ry, reglages):
+    bm = bmesh.new(); bmesh.ops.create_circle(bm, cap_ends=True, segments=14, radius=1.0)
+    for v in bm.verts:
+        k = random.uniform(0.75, 1.15)   # contour irrégulier
+        v.co.x = cx + v.co.x * rx * k; v.co.y = cy + v.co.y * ry * k; v.co.z = 0.002
+    me = bpy.data.meshes.new(nom); bm.to_mesh(me); bm.free()
+    ob = objet(nom, me, HERBE); ob.show_instancer_for_render = False   # on ne rend que les brins
+    ps = ob.modifiers.new("herbe", "PARTICLE_SYSTEM").particle_system
+    ps.settings = reglages.copy(); ps.seed = random.randint(0, 9999)
+    ps.settings.count = max(20, int(math.pi * rx * ry * reglages["densite"]))
+    return ob
+
+def dans_le_passage(x, y, m):   # couloir de la caméra, table, tranchée
+    return ((-0.6 - m < x < 1.8 + m) and y < 0.6 + m) or (abs(x - FX) < FDX + 2.4 + m and FY - FDY - 0.3 - m < y < FY + FDY + 0.3 + m)
+
+semer = touffe
+for i in range(26):   # au pied du mur du fond, sous les fenêtres : herbes hautes
+    semer(f"touffe fond {i}", random.uniform(-18, 18), LY / 2 - 0.2 - random.uniform(0.2, 0.7), random.uniform(0.4, 1.4), random.uniform(0.2, 0.5), HERBE_HAUTE)
+for i in range(70):   # dans les fissures du sol
+    x, y = random.uniform(-14, 14), random.uniform(-10, 13)
+    rx = random.uniform(0.12, 0.6)
+    if dans_le_passage(x, y, rx): continue
+    semer(f"touffe {i}", x, y, rx, rx * random.uniform(0.3, 0.8), HERBE_HAUTE if random.random() < 0.25 else HERBE_RASE)
+for i, (x, y, rx) in enumerate(((-1.5, -8.6, 0.5), (2.6, -7.9, 0.45), (-1.1, -6.2, 0.35), (2.4, -5.0, 0.4), (-1.6, -3.2, 0.3), (2.3, -2.4, 0.3))):
+    semer(f"touffe premier plan {i}", x, y, rx, rx * 0.6, HERBE_RASE)   # au premier plan, flou au début du plan
+for sx in (-1, 1):
+    for sy in (-1, 1):
+        semer(f"touffe pied {sx}{sy}", 0.1 + sx * 0.7, 0.05 + sy * 0.35, 0.09, 0.07, HERBE_RASE)
+
+# lierre : une tige et des feuilles, toutes les feuilles dans un seul objet
+def mat_feuille():
+    m, n, l, b = nouveau("feuille")
+    coord = n.new("ShaderNodeTexCoord"); bruit = n.new("ShaderNodeTexNoise"); bruit.inputs["Scale"].default_value = 3.0
+    l.new(coord.outputs["Object"], bruit.inputs["Vector"])
+    rampe = n.new("ShaderNodeValToRGB"); e = rampe.color_ramp.elements
+    e[0].color = (*lin("#3C5E22"), 1); e[1].color = (*lin("#86A444"), 1)
+    l.new(bruit.outputs["Fac"], rampe.inputs["Fac"]); l.new(rampe.outputs["Color"], b.inputs["Base Color"])
+    b.inputs["Roughness"].default_value = 0.45
+    tr = n.new("ShaderNodeBsdfTranslucent"); l.new(rampe.outputs["Color"], tr.inputs["Color"])
+    mx = n.new("ShaderNodeMixShader"); mx.inputs[0].default_value = 0.3
+    sortie = n["Material Output"]
+    l.new(b.outputs[0], mx.inputs[1]); l.new(tr.outputs[0], mx.inputs[2]); l.new(mx.outputs[0], sortie.inputs["Surface"])
+    return m
+FEUILLE = mat_feuille()
+TIGE = principled("tige", "#3B3524", 0, 0.7)
+bm_f = bmesh.new()
+def liane(nom, depart, longueur, sens, mur_y=None):
+    # sens : 1 pour une liane qui grimpe, -1 pour une liane qui pend
+    pts, p = [], depart.copy()
+    pas = 0.05; ph = random.uniform(0, 6.28)
+    for i in range(int(longueur / pas) + 1):
+        pts.append(p.copy())
+        p += Vector((0.012 * math.sin(ph + i * 0.35), 0, sens * pas))
+        if mur_y is None: p.y += 0.008 * math.cos(ph + i * 0.27)
+    tube(nom, pts, 0.004, TIGE, res=1)
+    for i, q in enumerate(pts):
+        for _ in range(2 if random.random() < 0.6 else 1):
+            if random.random() < 0.1: continue
+            lg = random.uniform(0.06, 0.12) * (0.6 + 0.4 * min(1, i / 6))
+            phi = random.uniform(0, 2 * math.pi)
+            a = Vector((math.cos(phi), math.sin(phi), 0)) * 0.8 + Vector((0, 0, -0.45))
+            if mur_y is not None and a.y > 0: a.y = -a.y    # côté pièce, pas dans le mur
+            a.normalize()
+            b_ = a.cross(Vector((0, 0, 1)))
+            b_ = b_.normalized() if b_.length > 1e-4 else Vector((1, 0, 0))
+            nrm = a.cross(b_).normalized()
+            w = lg * 0.75
+            vs = [q, q + a * (lg * 0.45) + b_ * (w / 2) + nrm * (lg * 0.08), q + a * lg, q + a * (lg * 0.45) - b_ * (w / 2) + nrm * (lg * 0.08)]
+            bm_f.faces.new([bm_f.verts.new(v) for v in vs])
+for i in range(18):   # devant les fenêtres du fond, du haut des fenêtres vers le bas
+    liane(f"lierre fenêtre {i}", Vector((random.uniform(-18, 18), LY / 2 - 0.28, LZ - 1.2)), random.uniform(1.0, 4.2), -1, LY / 2 - 0.2)
+for i in range(9):    # qui grimpe le long des trumeaux
+    x = -18 + random.randrange(9) * 4.5 + random.uniform(-0.5, 0.5)
+    liane(f"lierre trumeau {i}", Vector((x, LY / 2 - 0.26, 0.0)), random.uniform(1.5, 5.0), 1, LY / 2 - 0.2)
+for i in range(12):   # qui pend sous les fermes, entre les nappes de câbles
+    liane(f"lierre ferme {i}", Vector((random.uniform(-6, 6), random.choice((3, 6, 9)), LZ - 0.72)), random.uniform(1.0, 3.8), -1)
+me = bpy.data.meshes.new("feuilles"); bm_f.to_mesh(me); bm_f.free()
+lisser(objet("feuilles", me, FEUILLE))
+
 # ---------------------------------------------------------------- lumière : ciel gris, air poussiéreux
 w = bpy.data.worlds.new("monde"); sc.world = w; w.use_nodes = True
 wn = w.node_tree.nodes
-wn["Background"].inputs["Color"].default_value = (*lin("#7E878F"), 1); wn["Background"].inputs["Strength"].default_value = 0.12
+wn["Background"].inputs["Color"].default_value = (*lin("#8E979C"), 1); wn["Background"].inputs["Strength"].default_value = 0.2
 vol = wn.new("ShaderNodeVolumePrincipled"); vol.inputs["Density"].default_value = float(os.environ.get("BRUME", "0.012"))
-vol.inputs["Color"].default_value = (*lin("#C9CED3"), 1); vol.inputs["Anisotropy"].default_value = 0.35
+vol.inputs["Color"].default_value = (*lin("#C9CED3"), 1); vol.inputs["Anisotropy"].default_value = 0.6
 w.node_tree.links.new(vol.outputs[0], wn["World Output"].inputs["Volume"])
 
 def lampe(nom, typ, pos, puissance, couleur, cible=None, taille=1.0, rot=None):
@@ -588,11 +785,11 @@ def lampe(nom, typ, pos, puissance, couleur, cible=None, taille=1.0, rot=None):
     return ob
 GRIS = lin("#D5DCE2")
 # le jour gris qui entre par les fenêtres du fond, rasant, et fait les rayons dans l'air
-soleil = lampe("jour", "SUN", (0, 20, 10), 1.6, GRIS, rot=(math.radians(62), 0, math.radians(180 + 18)))
+soleil = lampe("jour", "SUN", (0, 20, 10), 6.0, lin("#FFE2BC"), rot=(math.radians(62), 0, math.radians(180 + 18)))
 soleil.data.angle = math.radians(8)
 lampe("fenêtres fond", "AREA", (0, 13.5, 5.5), 1800, GRIS, cible=(0, 0, 1), taille=30)
 lampe("fenêtres côté", "AREA", (-18.5, 0, 7.2), 700, GRIS, cible=(0, 0, 1), taille=20)
-lampe("puits de jour", "SPOT", (4.2, 11.5, 8.9), 2500, GRIS, cible=(4.2, 11.5, 0), taille=18)
+lampe("puits de jour", "SPOT", (3.2, 13.3, 8.9), 2500, GRIS, cible=(3.2, 13.3, 0), taille=18)
 # un peu de jour sur la table et le module, venu d'une verrière au-dessus
 lampe("verrière", "AREA", (-1.2, 1.5, 8.5), 900, GRIS, cible=(0.05, 0.05, TZ), taille=2.5)
 lampe("reflet appareil", "AREA", (-0.6, 0.9, 1.6), 18, GRIS, cible=(0.02, 0, TZ), taille=0.8)
@@ -665,7 +862,7 @@ sc.render.resolution_percentage = POURCENT
 sc.view_settings.view_transform = "AgX"
 try: sc.view_settings.look = "AgX - Base Contrast"
 except Exception: pass
-sc.view_settings.exposure = float(os.environ.get("EXPO", "0"))
+sc.view_settings.exposure = float(os.environ.get("EXPO", "0.55"))
 sc.render.image_settings.file_format = "JPEG"; sc.render.image_settings.quality = 93
 
 if MODE == "test":
