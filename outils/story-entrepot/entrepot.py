@@ -1,10 +1,11 @@
 # Story « l'entrepôt » : un entrepôt abandonné, gris, poussiéreux ; des centaines de câbles (électricité, réseau, câbles
-# sous-marins) arrivent de partout vers un petit module suspendu, et de là un seul câble propre descend vers un Phenix 001
-# intact posé sur une table ordinaire. Au fond, un filet d'eau de pluie tombe du toit. Quand la caméra s'approche, le Phenix
-# s'allume : démarrage, puis les compteurs de fiches et de cartes du monde entier montent.
+# sous-marins) tombent du toit et des murs, courent au sol et plongent dans une fosse derrière une table ordinaire ; un seul
+# câble propre en ressort et monte vers un Phenix 001 intact posé sur la table. Au fond, un filet d'eau de pluie tombe du
+# toit. Quand la caméra s'approche, le Phenix s'allume : démarrage, puis les compteurs du monde entier montent.
 # Plan unique de 15 s, 1080 × 1920. Concept : l'appareil est un prototype en conception.
-# Usage : blender -b -P entrepot.py -- test <pourcentage> <image,image,...>   (3d/ent-NNNN.jpg)
-#         blender -b -P entrepot.py -- anim <pourcentage>                     (video/rushes-entrepot/fNNNNN.jpg)
+# Usage : blender -b -P entrepot.py -- test <pourcentage> <image,image,...>   (ent-NNNN.jpg)
+#         blender -b -P entrepot.py -- anim <pourcentage>                     (rushes/fNNNNN.jpg)
+# MOTEUR=cycles pour un rendu Cycles sur la carte graphique (par défaut : Eevee).
 import bpy, bmesh, math, os, sys, random
 import numpy as np
 from mathutils import Vector, Matrix
@@ -139,7 +140,9 @@ def beton():
     rf = n.new("ShaderNodeMix"); rf.data_type = "FLOAT"
     l.new(masque.outputs["Result"], rf.inputs[0]); l.new(rg.outputs["Result"], rf.inputs[2]); rf.inputs[3].default_value = 0.04
     l.new(rf.outputs[0], b.inputs["Roughness"])
-    bp = n.new("ShaderNodeBump"); bp.inputs["Strength"].default_value = 0.25
+    bp = n.new("ShaderNodeBump")
+    sec = n.new("ShaderNodeMapRange"); sec.inputs["To Min"].default_value = 0.25; sec.inputs["To Max"].default_value = 0.0
+    l.new(masque.outputs["Result"], sec.inputs["Value"]); l.new(sec.outputs["Result"], bp.inputs["Strength"])
     l.new(grain.outputs["Fac"], bp.inputs["Height"]); l.new(bp.outputs["Normal"], b.inputs["Normal"])
     return m
 
@@ -307,81 +310,197 @@ rot = pr.rotation_euler.to_matrix()
 SORTIE = Matrix.Translation(pr.location) @ rot.to_4x4() @ Vector((0, -24.8 * MM, 0))
 DIR = (rot @ Vector((0, -1, 0))).normalized()
 
-def courbe(nom, pts, rayon, mat, res=12, tangente0=None):
-    cu = bpy.data.curves.new(nom, "CURVE"); cu.dimensions = "3D"
-    cu.bevel_depth = rayon; cu.bevel_resolution = 4 if rayon > 0.01 else 3; cu.resolution_u = res
-    cu.use_fill_caps = True
-    sp = cu.splines.new("BEZIER"); sp.bezier_points.add(len(pts) - 1)
-    for bp, co in zip(sp.bezier_points, pts):
-        bp.co = co; bp.handle_left_type = bp.handle_right_type = "AUTO"
-    if tangente0 is not None:
-        b0 = sp.bezier_points[0]; b0.handle_left_type = b0.handle_right_type = "FREE"
-        d = (Vector(pts[1]) - Vector(pts[0])).length * 0.5
-        b0.handle_right = Vector(pts[0]) + tangente0 * d; b0.handle_left = Vector(pts[0]) - tangente0 * d
+# ---------------------------------------------------------------- la fosse derrière la table
+# Les centaines de câbles tombent du toit et des murs, courent au sol et plongent tous dans une fosse ouverte derrière la
+# table. Un seul câble propre en ressort, côté table, et monte jusqu'au Phenix.
+LX, LY, LZ = 40, 30, 9
+FX, FY, FDX, FDY = 0.1, 1.6, 1.5, 0.7   # centre et demi-dimensions de la fosse
+FOND = -1.3
+PC = Vector((FX, FY, 0))
+
+def dalle(nom, x0, x1, y0, y1, z, mat):
+    bm = bmesh.new(); bm.faces.new([bm.verts.new(c) for c in ((x0, y0, z), (x1, y0, z), (x1, y1, z), (x0, y1, z))])
+    me = bpy.data.meshes.new(nom); bm.to_mesh(me); bm.free()
+    return objet(nom, me, mat)
+
+for nom, x0, x1, y0, y1 in (("sol avant", -LX / 2, LX / 2, -LY / 2, FY - FDY), ("sol arrière", -LX / 2, LX / 2, FY + FDY, LY / 2),
+                            ("sol gauche", -LX / 2, FX - FDX, FY - FDY, FY + FDY), ("sol droit", FX + FDX, LX / 2, FY - FDY, FY + FDY)):
+    dalle(nom, x0, x1, y0, y1, 0.0, BETON)
+dalle("fond de fosse", FX - FDX, FX + FDX, FY - FDY, FY + FDY, FOND, principled("fond de fosse", "#0A0A0A", 0, 0.9))
+EP, HP = 0.15, -FOND - 0.002
+for nom, lx, ly, x, y in (("paroi gauche", EP, 2 * FDY + 2 * EP, FX - FDX - EP / 2, FY), ("paroi droite", EP, 2 * FDY + 2 * EP, FX + FDX + EP / 2, FY),
+                          ("paroi avant", 2 * FDX, EP, FX, FY - FDY - EP / 2), ("paroi arrière", 2 * FDX, EP, FX, FY + FDY + EP / 2)):
+    boite(nom, lx, ly, HP, (x, y, FOND / 2 - 0.001), BETON)
+for nom, lx, ly, x, y in (("cornière g", 0.006, 2 * FDY, FX - FDX + 0.003, FY), ("cornière d", 0.006, 2 * FDY, FX + FDX - 0.003, FY),
+                          ("cornière av", 2 * FDX, 0.006, FX, FY - FDY + 0.003), ("cornière ar", 2 * FDX, 0.006, FX, FY + FDY - 0.003)):
+    boite(nom, lx, ly, 0.08, (x, y, -0.04), ACIER_SALE)
+
+def tube(nom, pts, rayon, mat, res=None):
+    propres = [pts[0]]
+    for p in pts[1:]:
+        if (p - propres[-1]).length > 1e-4: propres.append(p)
+    cu = bpy.data.curves.new(nom, "CURVE"); cu.dimensions = "3D"; cu.twist_mode = "MINIMUM"
+    cu.bevel_depth = rayon; cu.use_fill_caps = True
+    cu.bevel_resolution = res if res is not None else (4 if rayon > 0.06 else 3 if rayon > 0.03 else 2)
+    sp = cu.splines.new("POLY"); sp.points.add(len(propres) - 1); sp.use_smooth = True
+    for p, co in zip(sp.points, propres): p.co = (co.x, co.y, co.z, 1.0)
     return objet(nom, cu, mat)
 
-# ---------------------------------------------------------------- le module suspendu et le câble propre
-HUB = Vector((0.05, 0.35, 3.1))
-module = pave("module", 0.46, 0.46, 0.62, 0.05, 0.02, MODULE); module.location = HUB
-for i, dz in enumerate((-0.2, 0.0, 0.2)):
-    bague = pave(f"bague {i}", 0.5, 0.5, 0.035, 0.06, 0.004, ACIER_SALE); bague.location = HUB + Vector((0, 0, dz))
-temoin_hub = bouton("témoin module", 0.012, 0.01, DEL, None, 0.003); temoin_hub.rotation_euler = (math.radians(90), 0, 0)
-temoin_hub.location = HUB + Vector((0.12, -0.232, -0.12))
-presse = bouton("presse-étoupe", 0.028, 0.06, NICKEL, None, 0.004); presse.location = HUB + Vector((0, 0, -0.34))
+def bez(p0, p1, p2, p3, n):
+    return [p0 * (1 - t) ** 3 + p1 * (3 * (1 - t) ** 2 * t) + p2 * (3 * (1 - t) * t * t) + p3 * t ** 3 for t in (i / n for i in range(n + 1))]
+
+def catmull(pts, n):
+    P = [pts[0] * 2 - pts[1]] + pts + [pts[-1] * 2 - pts[-2]]; out = []
+    for i in range(1, len(P) - 2):
+        p0, p1, p2, p3 = P[i - 1], P[i], P[i + 1], P[i + 2]
+        for j in range(n):
+            t = j / n
+            out.append(0.5 * (2 * p1 + (p2 - p0) * t + (2 * p0 - 5 * p1 + 4 * p2 - p3) * t * t + (3 * p1 - p0 - 3 * p2 + p3) * t ** 3))
+    return out + [pts[-1]]
+
+def plongee(e, n, r, lift, nb=8):
+    # passe par-dessus le bord de la fosse (arc autour de l'arête : les câbles empilés s'enroulent les uns sur les autres)
+    # puis descend le long de la paroi
+    rho = r + lift
+    arc = [e + Vector((0, 0, rho * math.cos(a))) - n * (rho * math.sin(a)) for a in (math.pi / 2 * i / nb for i in range(nb + 1))]
+    return arc + [arc[-1] + Vector((0, 0, FOND + 0.05))]
+
+# ---------------------------------------------------------------- le câble propre : du Phenix, par-dessus le bord arrière de la table, jusqu'à la fosse
 RC = 2.0 * MM
-dessus = Vector((0.13, 0.13, TZ + RC))
-pts = [SORTIE, SORTIE + DIR * 0.045 + Vector((0, 0, RC * 0.3 - (SORTIE.z - TZ - RC))),
-       Vector((0.10, -0.05, TZ + RC)), Vector((0.12, 0.07, TZ + RC)), dessus + Vector((0, 0.03, 0.02)),
-       Vector((0.12, 0.24, TZ + 0.55)), Vector((0.08, 0.33, 1.9)), HUB + Vector((0, 0, -0.38))]
-pts[1].z = TZ + RC
-courbe("câble propre", pts, RC, GAINE_PROPRE, res=24, tangente0=DIR)
+X_DOS = 0.17
+table_pts = [SORTIE, SORTIE + DIR * 0.015, SORTIE + DIR * 0.045, Vector((0.10, -0.075, 0)), Vector((0.135, 0.02, 0)),
+             Vector((0.155, 0.2, 0)), Vector((0.168, 0.38, 0)), Vector((X_DOS, 0.446, 0))]
+for p in table_pts[2:]: p.z = TZ + RC
+coin = Vector((X_DOS, 0.446, TZ - 0.004)); rho = RC + 0.004
+arc = [coin + Vector((0, rho * math.sin(a), rho * math.cos(a))) for a in (math.pi / 2 * i / 8 for i in range(1, 9))]
+pied = Vector((X_DOS + 0.03, 0.72, RC)); bord_av = Vector((FX + 0.15, FY - FDY, 0))
+chute = bez(arc[-1], arc[-1] + Vector((0, 0, -0.42)), Vector((X_DOS + 0.02, 0.6, RC)), pied, 30)
+au_sol = bez(pied, pied + Vector((0.005, 0.05, 0)), bord_av + Vector((0, -0.12, RC)), bord_av + Vector((0, -0.06, RC)), 10)
+tube("câble propre", catmull(table_pts, 16) + arc + chute[1:] + au_sol[1:] + plongee(bord_av, Vector((0, -1, 0)), RC, 0), RC, GAINE_PROPRE, res=4)
 
 # ---------------------------------------------------------------- les centaines de câbles
-# Des faisceaux arrivent de toutes les directions : des murs, des poutres du toit, du sol au loin. Chaque faisceau
-# compte 1 à 8 câbles côte à côte ; une douzaine sont des câbles géants, armés comme des câbles sous-marins.
-def depart():
-    zone = random.random()
-    if zone < 0.55:   # murs
-        cote = random.choice(("g", "d", "f", "a"))
-        if cote in ("g", "d"): return Vector((-19.8 if cote == "g" else 19.8, random.uniform(-13, 13), random.uniform(3.5, 8.6)))
-        return Vector((random.uniform(-18, 18), 14.8 if cote == "f" else -14.8, random.uniform(3.5, 8.6)))
-    if zone < 0.9:    # toit
-        a = random.uniform(0, 2 * math.pi); r = random.uniform(5, 18)
-        return Vector((math.cos(a) * r, math.sin(a) * r * 0.8, 8.9))
-    a = random.uniform(0, 2 * math.pi); r = random.uniform(9, 16)   # sol, au loin
-    return Vector((math.cos(a) * r, math.sin(a) * r * 0.8, 0.0))
+# Des groupes arrivent de tout le tour de la fosse, sauf de devant où la caméra passe. Chaque groupe pend du toit (sous
+# une ferme, une panne ou à travers la tôle), sort d'un mur et retombe, ou court déjà au sol depuis le pied d'un mur.
+# Groupes serrés (câbles collés), espacés, ou en vrac ; une dizaine de câbles géants, armés comme des câbles sous-marins.
+# Au bord de la fosse, ils s'empilent les uns sur les autres avant de plonger.
+# Le tour de la fosse, dans le sens inverse des aiguilles d une montre : bout droit du bord avant, côté droit, fond, côté
+# gauche, bout gauche du bord avant. Le milieu du bord avant, derrière la table, reste au câble propre.
+LIBRE = 0.8
+PERIM = (FDX - LIBRE, 2 * FDY, 2 * FDX, 2 * FDY, FDX - LIBRE)
+def bord(s):
+    s = max(0.02, min(sum(PERIM) - 0.02, s))
+    if s < PERIM[0]: return Vector((FX + LIBRE + s, FY - FDY, 0)), Vector((0, -1, 0))
+    s -= PERIM[0]
+    if s < PERIM[1]: return Vector((FX + FDX, FY - FDY + s, 0)), Vector((1, 0, 0))
+    s -= PERIM[1]
+    if s < PERIM[2]: return Vector((FX + FDX - s, FY + FDY, 0)), Vector((0, 1, 0))
+    s -= PERIM[2]
+    if s < PERIM[3]: return Vector((FX - FDX, FY + FDY - s, 0)), Vector((-1, 0, 0))
+    s -= PERIM[3]
+    return Vector((FX - FDX + s, FY - FDY, 0)), Vector((0, -1, 0))
+
+def portee(d):   # distance du centre de la fosse au mur, dans la direction horizontale d
+    t = []
+    if abs(d.x) > 1e-6: t.append(((LX / 2 - 0.2) * (1 if d.x > 0 else -1) - FX) / d.x)
+    if abs(d.y) > 1e-6: t.append(((LY / 2 - 0.2) * (1 if d.y > 0 else -1) - FY) / d.y)
+    return min(t)
+
+def haut_plafond(p, r):
+    if any(abs(p.y - (-12 + 3 * i)) < 0.11 + r for i in range(9)): return LZ - 0.7     # pend sous une ferme
+    if any(abs(p.x - x) < 0.08 + r for x in range(-16, 17, 8)): return LZ - 0.95        # sous une panne
+    return LZ + 0.05                                                                    # à travers la tôle
+
+hauteur = {}   # empilement au bord de la fosse, par tranche de 1 cm
+def empiler(s, r):
+    tr = range(int((s - r) * 100), int((s + r) * 100) + 1)
+    base = max(hauteur.get(b, 0.0) for b in tr)
+    for b in tr: hauteur[b] = base + 2 * r * 0.92
+    return base
+
+def hor(v): return Vector((v.x, v.y, 0))
+def lisse(t): t = max(0.0, min(1.0, t)); return t * t * (3 - 2 * t)
+
+NG, NGEANTS = int(os.environ.get("GROUPES", "80")), 10
+A0, A1 = -77.0, 257.0
+def angle_de(u):   # trois fois plus de groupes vers le fond, dans le champ de la caméra, que sur les côtés
+    segs = [(A0, 30.0, 1.0), (30.0, 150.0, 3.0), (150.0, A1, 1.0)]
+    x = u * sum((b - a) * w for a, b, w in segs)
+    for a, b, w in segs:
+        if x <= (b - a) * w: return a + x / w
+        x -= (b - a) * w
+    return A1
+geants = set(random.sample(range(NG + NGEANTS), NGEANTS))
+groupes = sorted(((i in geants, (i + random.uniform(0.15, 0.85)) / (NG + NGEANTS)) for i in range(NG + NGEANTS)),
+                 key=lambda g: not g[0])   # les géants d'abord : ils sont en bas de la pile
 n_cables = 0
-for fx in range(52):
-    S = depart()
-    geant = fx < 12
-    nb = 1 if geant else random.choice((1, 2, 3, 3, 4, 5, 6, 8))
-    arrivee = HUB + Vector((random.uniform(-0.2, 0.2), random.uniform(-0.2, 0.2), random.uniform(0.12, 0.31)))
-    lateral = (arrivee - S).cross(Vector((0, 0, 1)))
-    lateral = lateral.normalized() if lateral.length > 1e-6 else Vector((1, 0, 0))
-    long = (arrivee - S).length
-    fleche_v = random.uniform(0.08, 0.2) * long if S.z > 1 else 0.0
+for geant, u in groupes:
+    ang = angle_de(u); a = math.radians(ang); dehors = Vector((math.cos(a), math.sin(a), 0)); d = -dehors
+    lat = Vector((-d.y, d.x, 0))
+    D = portee(dehors)
+    s_c = 0.05 + u * (sum(PERIM) - 0.1)
+    e_c, _ = bord(s_c); t_e = (hor(e_c) - PC).length
+    if geant:
+        origine, style, nb = random.choice(("plafond", "plafond", "mur")), "seul", 1
+        r0 = random.uniform(0.05, 0.09)
+    else:
+        origine = random.choices(("plafond", "mur", "sol"), (0.7, 0.2, 0.1))[0]
+        style = random.choice(("serré", "serré", "espacé", "groupé"))
+        nb = {"serré": random.randint(3, 9), "espacé": random.randint(2, 4), "groupé": random.randint(3, 6)}[style]
+        r0 = random.uniform(0.008, 0.02) if random.random() < 0.7 else random.uniform(0.02, 0.035)
+    rayons = [r0 * (1 if style == "seul" else random.uniform(0.92, 1.08) if style == "serré" else random.uniform(0.7, 1.3)) for _ in range(nb)]
+    o, oe = [0.0], [0.0]   # écart latéral au départ, puis au bord de la fosse (là, tous collés)
+    for k in range(1, nb):
+        paire = rayons[k - 1] + rayons[k]
+        o.append(o[-1] + {"serré": paire * 1.02, "espacé": random.uniform(0.15, 0.55), "groupé": paire * random.uniform(1.1, 3.0)}[style])
+        oe.append(oe[-1] + paire * 1.05)
+    o = [x - o[-1] / 2 for x in o]; oe = [x - oe[-1] / 2 for x in oe]
+    if origine == "plafond":
+        A = PC + dehors * (t_e + 2.2 + (D - t_e - 3.2) * random.random() ** 1.3)
+    else:
+        A = PC + dehors * (D + 0.15)   # le câble sort du mur
+        if origine == "sol": A.z = 0.0
+        elif A.y > LY / 2 - 1: A.z = random.choice((random.uniform(1.0, 3.0), random.uniform(8.0, 8.5)))   # fond : sous ou au-dessus des fenêtres
+        else: A.z = random.uniform(2.5, 8.2)
+    glisse = random.uniform(0.4, 2.2) if origine == "plafond" else random.uniform(2.0, 6.0)
+    ondule = random.uniform(-0.12, 0.12)
     for k in range(nb):
-        r = random.uniform(0.07, 0.13) if geant else random.uniform(0.012, 0.045)
-        dec = lateral * (k - nb / 2) * r * 2.3 + Vector((0, 0, random.uniform(-0.03, 0.03)))
-        s = S + dec
-        milieu = (s + arrivee) / 2 + dec * 0.6
-        milieu.z = max(3.4, min(s.z, arrivee.z) - fleche_v + random.uniform(-0.2, 0.2)) if S.z > 1 else 0.05 + r
-        if S.z <= 1:  # câble qui court au sol puis remonte vers le module
-            pied = arrivee + (s - arrivee).normalized() * 2.5; pied.z = r
-            chemin = [s + Vector((0, 0, r)), (s + pied) / 2 + Vector((0, 0, r - s.z)), pied, arrivee + Vector((0, 0, -0.9)) + dec * 0.3, arrivee]
-            for c in chemin[1:3]: c.z = r
+        r = rayons[k]
+        s_k = s_c - oe[k]
+        e, n = bord(s_k); lift = empiler(s_k, r)
+        Nk = e + n * (0.3 if n.y < 0 else 0.7)   # devant, on reste derrière la table
+        Ak = A + lat * o[k]
+        reste = (hor(Ak) - hor(Nk)).length
+        g = glisse * (1 if style in ("serré", "seul") else random.uniform(0.75, 1.25))
+        pts = []
+        if origine == "plafond":
+            Ak.z = haut_plafond(Ak, r)
+            g = max(0.3, min(g, reste - 0.8))
+            F = Ak + d * g; F.z = r
+            P2 = F - d * min(g * 0.9, Ak.z * 0.35)
+            pts += bez(Ak, Ak + Vector((0, 0, -Ak.z * 0.5)), P2, F, 40)
+        elif origine == "mur":
+            g = max(1.0, min(g, reste - 0.8))
+            F = Ak + d * g; F.z = r
+            P2 = F - d * min(g * 0.4, 1.4); P2.z = r
+            pts += bez(Ak, Ak + d * (g * 0.35), P2, F, 40)
         else:
-            approche = arrivee + (milieu - arrivee).normalized() * 0.6 + Vector((0, 0, 0.25))
-            chemin = [s, milieu, approche, arrivee]
+            F = Ak.copy(); F.z = r; pts.append(F)
+        L = (hor(Nk) - hor(F)).length
+        c1 = F + d * (L * 0.35) + lat * (ondule * L); c2 = Nk + n * (L * 0.35) + lat * (ondule * L * 0.5)
+        ns = max(8, int(L * 6))
+        for j, p in enumerate(bez(F, c1, c2, Nk, ns)):
+            p.z = r + lift * lisse((j / ns - 0.55) / 0.45)
+            if j: pts.append(p)
+        for j in range(1, 6):
+            p = Nk.lerp(e, j / 6); p.z = r + lift; pts.append(p)
+        pts += plongee(e, n, r, lift)
         mat = JAUNE if (not geant and random.random() < 0.05) else random.choice(GAINES)
-        courbe(f"câble {n_cables}", chemin, r, mat, res=16 if geant else 10)
+        tube(f"câble {n_cables}", pts, r, mat)
         n_cables += 1
 print("câbles :", n_cables)
 
 # ---------------------------------------------------------------- l'entrepôt
-LX, LY, LZ = 40, 30, 9
-sol = plaque("sol", LX, LY, BETON)
-murs = [("mur gauche", 0.4, LY, LZ, (-LX / 2, 0, LZ / 2)), ("mur droit", 0.4, LY, LZ, (LX / 2, 0, LZ / 2)),
+murs =[("mur gauche", 0.4, LY, LZ, (-LX / 2, 0, LZ / 2)), ("mur droit", 0.4, LY, LZ, (LX / 2, 0, LZ / 2)),
         ("mur avant", LX, 0.4, LZ, (0, -LY / 2, LZ / 2))]
 for nom, a, b, c, pos in murs: boite(nom, a, b, c, pos, MUR)
 # mur du fond : bas plein, puis une rangée de hautes fenêtres sur ciel gris
@@ -492,8 +611,8 @@ for f, v in ((1, 0.0), (A - 6, 0.0), (A - 5, 0.12), (A - 3, 0.0), (A - 1, 0.12),
     lueur.data.energy = v; lueur.data.keyframe_insert("energy", frame=f)
 
 # ---------------------------------------------------------------- caméra : un seul plan
-# On découvre la toile de câbles vers le module, on descend le long du câble propre, puis on s'approche du Phenix
-# qui se réveille, jusqu'à pouvoir lire son écran.
+# Plan large au ras du sol, de loin : la table, minuscule, et les câbles qui tombent de partout derrière elle. On avance
+# au ras du sol, on monte vers le plateau quand le Phenix se réveille, puis on s'approche jusqu'à lire son écran.
 cam_d = bpy.data.cameras.new("caméra"); cam_d.sensor_fit = "VERTICAL"; cam_d.sensor_height = 36
 cam_d.dof.use_dof = True; cam_d.clip_start = 0.01; cam_d.clip_end = 200
 cam = bpy.data.objects.new("caméra", cam_d); sc.collection.objects.link(cam); sc.camera = cam
@@ -506,9 +625,9 @@ def depuis(cible, az, el, d):
     return cible + d * Vector((math.sin(az) * math.cos(el), -math.cos(az) * math.cos(el), math.sin(el)))
 # (image, position caméra, visée, focale, ouverture)
 CLES = [
-    (1,   Vector((1.6, -5.2, 1.5)), HUB + Vector((0, 0, 0.6)), 20, 5.6),
-    (110, Vector((0.9, -3.3, 1.6)), HUB + Vector((0, 0, -0.3)), 24, 5.6),
-    (200, Vector((0.35, -1.45, 1.35)), Vector((0.06, 0.12, 1.25)), 32, 4.0),
+    (1,   Vector((0.75, -9.6, 0.26)), Vector((0.15, 0.6, 3.7)), 22, 8.0),
+    (120, Vector((0.6, -4.4, 0.34)), Vector((0.12, 0.5, 2.0)), 24, 5.6),
+    (220, Vector((0.38, -1.35, 1.12)), Vector((0.05, 0.05, 0.86)), 32, 4.0),
     (300, depuis(ECRAN, -10, 38, 0.62), ECRAN, 40, 3.2),
     (FIN, depuis(ECRAN, -4, 50, 0.215), ECRAN + Vector((0, 0.002, 0)), 50, 4.5),
 ]
@@ -533,6 +652,14 @@ ee.volumetric_tile_size = os.environ.get("VOL_TUILE", "8")
 ee.volumetric_samples = int(os.environ.get("VOL_ECH", "64"))
 ee.volumetric_end = 60
 ee.use_volumetric_shadows = True
+if os.environ.get("MOTEUR") == "cycles":
+    sc.render.engine = "CYCLES"
+    prefs = bpy.context.preferences.addons["cycles"].preferences
+    prefs.compute_device_type = "CUDA"; prefs.get_devices()
+    for dev in prefs.devices: dev.use = dev.type == "CUDA"
+    cy = sc.cycles; cy.device = "GPU"
+    cy.samples = int(os.environ.get("ECHANTILLONS", "128")); cy.use_denoising = True; cy.denoiser = "OPENIMAGEDENOISE"
+    cy.max_bounces = 6; cy.volume_bounces = 1; cy.volume_step_rate = 4.0
 sc.render.resolution_x, sc.render.resolution_y = 1080, 1920
 sc.render.resolution_percentage = POURCENT
 sc.view_settings.view_transform = "AgX"
