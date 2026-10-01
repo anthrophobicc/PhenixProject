@@ -140,9 +140,9 @@ def beton():
             if isinstance(c, str): mx.inputs[i].default_value = (*lin(c), 1)
             else: l.new(c, mx.inputs[i])
         return mx.outputs[2]
-    couleur = melange(plage(bruit(0.22, 9).outputs["Fac"], 0.3, 0.75), "#5C5953", "#8F8B83")
+    couleur = melange(plage(bruit(0.22, 9).outputs["Fac"], 0.3, 0.75), "#4C4943", "#7C786F")
     couleur = melange(plage(bruit(4.0, 4).outputs["Fac"], 0.35, 0.65, 0.0, 0.25), couleur, "#A8A398")       # poussière claire
-    couleur = melange(calcul("MULTIPLY", plage(bruit(0.7, 6).outputs["Fac"], 0.58, 0.7), 0.75), couleur, "#2F2D28")   # huile, humidité
+    couleur = melange(calcul("MULTIPLY", plage(bruit(0.7, 6).outputs["Fac"], 0.52, 0.68), 0.85), couleur, "#2A2824")   # huile, humidité
     mousse = plage(bruit(0.5, 8).outputs["Fac"], 0.58, 0.7)
     couleur = melange(calcul("MULTIPLY", mousse, 0.8), couleur, "#47532C")
     brk = n.new("ShaderNodeTexBrick"); brk.offset = 0.0; l.new(pos, brk.inputs["Vector"])
@@ -868,9 +868,11 @@ def mat_feuille_morte():
 FEUILLE_MORTE = mat_feuille_morte()
 
 def collection(nom, objets):
-    c = bpy.data.collections.new(nom)   # pas liée à la scène : elle ne sert que de modèle
+    # modèle pour les semis : il doit être dans la scène et visible au rendu, sinon ses copies disparaissent aussi ;
+    # on le range 100 m sous terre (le décalage de la collection ramène les copies au niveau du sol)
+    c = bpy.data.collections.new(nom); sc.collection.children.link(c); c.instance_offset = (0, 0, -100)
     for o in objets:
-        sc.collection.objects.unlink(o); c.objects.link(o); o.location = (0, 0, 0)
+        sc.collection.objects.unlink(o); c.objects.link(o); o.location = (0, 0, -100)
     return c
 
 cailloux = []
@@ -893,7 +895,7 @@ COLL_FEUILLES = collection("feuilles mortes", feuilles)
 
 def semis(nom, x0, x1, y0, y1, nb, coll, taille, alea, aplati):
     em = dalle(nom, x0, x1, y0, y1, 0.001, None); em.show_instancer_for_render = False
-    st = bpy.data.particles.new(nom); st.type = "HAIR"; st.count = nb; st.hair_length = 0.1
+    st = bpy.data.particles.new(nom); st.type = "HAIR"; st.count = nb; st.hair_length = 1.0   # la taille des copies est multipliée par cette longueur
     st.emit_from = "FACE"; st.distribution = "RAND"; st.use_emit_random = True
     st.render_type = "COLLECTION"; st.instance_collection = coll; st.use_collection_pick_random = True
     st.particle_size = taille; st.size_random = alea
@@ -904,8 +906,9 @@ ZONES = [(-LX / 2 + 0.2, LX / 2 - 0.2, -LY / 2 + 0.2, FY - FDY), (-LX / 2 + 0.2,
          (-LX / 2 + 0.2, FX - FDX, FY - FDY, FY + FDY), (FX + FDX, LX / 2 - 0.2, FY - FDY, FY + FDY)]
 for i, (x0, x1, y0, y1) in enumerate(ZONES):
     aire = (x1 - x0) * (y1 - y0)
-    semis(f"gravillons {i}", x0, x1, y0, y1, int(aire * 9), COLL_CAILLOUX, 0.018, 0.8, False)
-    semis(f"feuilles {i}", x0, x1, y0, y1, int(aire * 4), COLL_FEUILLES, 0.06, 0.5, True)
+    semis(f"gravillons {i}", x0, x1, y0, y1, int(aire * 40), COLL_CAILLOUX, 0.022, 0.9, False)
+    semis(f"feuilles {i}", x0, x1, y0, y1, int(aire * 14), COLL_FEUILLES, 0.075, 0.5, True)
+semis("feuilles devant", -4, 5, -10, 0.6, 2500, COLL_FEUILLES, 0.08, 0.5, True)   # sur le trajet de la caméra
 semis("cailloux du fond", -LX / 2 + 0.2, LX / 2 - 0.2, LY / 2 - 1.6, LY / 2 - 0.2, 1400, COLL_CAILLOUX, 0.05, 0.9, False)
 semis("feuilles du fond", -LX / 2 + 0.2, LX / 2 - 0.2, LY / 2 - 2.5, LY / 2 - 0.2, 2500, COLL_FEUILLES, 0.07, 0.5, True)
 semis("feuilles de la brèche", BR0 - 2.5, BR1 + 2.5, LY / 2 - 4.0, LY / 2 - 0.2, 1500, COLL_FEUILLES, 0.07, 0.5, True)
@@ -940,6 +943,18 @@ for zone in (PRES_G, PRES_D, FOND_Z, AVANT_G):
     poser(2, zone, lambda x, y: [pneu(f"pneu {x:.1f} {k}", (x + random.uniform(-0.04, 0.04), y + random.uniform(-0.04, 0.04), 0.1 + k * 0.2))
                                 for k in range(random.randint(1, 5))], 0.5)
     poser(1, zone, lambda x, y: pneu(f"pneu debout {x:.1f}", (x, y, 0.42), random.uniform(0, 6.28), False), 0.5)
+
+# briques et morceaux de béton tombés, jusque sur le trajet de la caméra (en restant sous elle)
+for k in range(140):
+    x, y = random.uniform(-4.5, 5.5), random.uniform(-10, 0.3)
+    if abs(x - 0.7) < 0.35 and y < -8.8: continue
+    if -0.8 < x < 1.1 and -0.4 < y < 0.5: continue   # pas sous la table
+    if random.random() < 0.5: brique(f"brique au sol {k}", (x, y, 0.035), random.uniform(0, 6.28), random.choice((0, 0, math.radians(90))))
+    else:
+        bm = bmesh.new(); bmesh.ops.create_icosphere(bm, subdivisions=1, radius=1.0); t = random.uniform(0.04, 0.12)
+        for v in bm.verts: v.co *= t * random.uniform(0.7, 1.3); v.co.z *= 0.6
+        me = bpy.data.meshes.new(f"bloc {k}"); bm.to_mesh(me); bm.free()
+        o = objet(f"bloc {k}", me, GRAVATS); o.location = (x, y, t * 0.3); o.rotation_euler = (random.uniform(0, 0.5), 0, random.uniform(0, 6.28))
 
 # une échelle appuyée contre le mur du fond, près de la brèche
 g = groupe("échelle", -4.6, LY / 2 - 0.2 - 0.8, 0.0, 0.0, math.radians(-12))
@@ -1149,6 +1164,8 @@ if os.environ.get("MOTEUR") == "cycles":
     cy = sc.cycles; cy.device = "GPU"
     cy.samples = int(os.environ.get("ECHANTILLONS", "128")); cy.use_denoising = True; cy.denoiser = "OPENIMAGEDENOISE"
     cy.max_bounces = 6; cy.volume_bounces = 1; cy.volume_step_rate = 4.0
+    sc.render.use_persistent_data = True   # la scène reste chargée d'une image à l'autre
+    print("Cycles :", [(dev.name, dev.type) for dev in prefs.devices if dev.use])
 sc.render.resolution_x, sc.render.resolution_y = 1080, 1920
 sc.render.resolution_percentage = POURCENT
 sc.view_settings.view_transform = "AgX"
@@ -1157,6 +1174,10 @@ except Exception: pass
 sc.view_settings.exposure = float(os.environ.get("EXPO", "0.55"))
 sc.render.image_settings.file_format = "JPEG"; sc.render.image_settings.quality = 93
 
+if os.environ.get("CAM_TEST"):
+    v = [float(x) for x in os.environ["CAM_TEST"].split(",")]
+    for ad in (cam.animation_data, point.animation_data, cam_d.animation_data): ad.action = None
+    cam.location = v[0:3]; point.location = v[3:6]; cam_d.lens = v[6]; cam_d.dof.use_dof = False
 if MODE == "test":
     for f in [int(x) for x in (args[2] if len(args) > 2 else "1").split(",")]:
         sc.frame_set(f)

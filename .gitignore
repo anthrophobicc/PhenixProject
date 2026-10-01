@@ -18,3 +18,6 @@ src-tauri/gen/
 sortie-flipper/
 sortie-sd/
 outils/portails/
+outils/story-entrepot/rushes/
+outils/story-entrepot/seq-entrepot/
+outils/story-entrepot/ent-*.jpg
