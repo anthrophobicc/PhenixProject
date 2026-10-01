@@ -20,7 +20,7 @@ sc.render.fps = 30
 sc.frame_start, sc.frame_end = 1, len(images)
 sc.render.image_settings.file_format = "FFMPEG"
 ff = sc.render.ffmpeg
-ff.format = "MPEG4"; ff.codec = "H264"; ff.constant_rate_factor = "HIGH"; ff.ffmpeg_preset = "GOOD"; ff.audio_codec = "NONE"
+ff.format = "MPEG4"; ff.codec = "H264"; ff.constant_rate_factor = os.environ.get("QUALITE", "HIGH"); ff.ffmpeg_preset = "GOOD"; ff.audio_codec = "NONE"
 sc.render.filepath = SORTIE
 sc.render.use_file_extension = False
 bpy.ops.render.render(animation=True)
